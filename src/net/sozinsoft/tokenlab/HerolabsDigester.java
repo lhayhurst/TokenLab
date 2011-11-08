@@ -85,7 +85,9 @@ public class HerolabsDigester
             	System.out.println( "Couldn't find " + c.getName() + " in config file!");
             	continue;
         	}
-            Token t = c.asToken( ce );
+            //Token t = c.asToken( ce );
+            PathfinderToken pt = new PathfinderToken( c );
+            Token t = pt.asToken( ce );
 			PersistenceUtil.saveToken(t, ce.getOutputTokenTo(), true );
         }
 	}
