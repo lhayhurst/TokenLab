@@ -16,6 +16,43 @@ public class PathfinderToken {
 
     private static final String CLASS_HP = "ClassHP";
     public static final String MISC_HP = "MiscHP";
+    private static final String AC_ENH_BONUS = "ACEnhBonus";
+    private static final String SIZE_MOD = "SizeMod";
+    private static final String AC_TEMP_BONUS = "ACTempBonus";
+    private static final String AC_MISC_BONUS_2 = "ACMiscBonus2";
+    private static final String AC_MISC_BONUS_1 = "ACMiscBonus1";
+    private static final String AC_FEAT_BONUS = "ACFeatBonus";
+    private static final String AC_CLASS_BONUS = "ACClassBonus";
+    private static final String AC_SHIELD_BONUS = "ACShieldBonus";
+    private static final String AC_ARMOR_BONUS = "ACArmorBonus";
+    private static final String ARMOR_MAX_DEX_BONUS = "ArmorMaxDexBonus";
+    private static final String ARMOR_CHECK_PENALTY = "ArmorCheckPenalty";
+    private static final String MISC_BONUS1 = "MiscBonus1";
+    private static final String MISC_BONUS2 = "MiscBonus2";
+    private static final String RES_TOKEN_LAB_MACRO_SET_MTMACSET = "res/TokenLabMacroSet.mtmacset";
+    private static final String DAMAGE = "Damage";
+    private static final String ENHANCEMENT = "Enhancement";
+    private static final String CLASS_BONUS = "ClassBonus";
+    private static final String FEAT_BONUS = "FeatBonus";
+    private static final String ENH_BONUS = "EnhBonus";
+    private static final String RANKS = "Ranks";
+    private static final String BONUS = "Bonus";
+    private static final String CLASS_SKILL = "ClassSkill";
+    private static final String PATHFINDER = "Pathfinder";
+    private static final String CHARACTER = "Character";
+    private static final String RACE = "Race";
+    private static final String PLAYER = "Player";
+    private static final String ALIGNMENT = "Alignment";
+    private static final String DEITY = "Deity";
+    private static final String CLASS = "Class";
+    private static final String LEVEL = "Level";
+    private static final String GENDER = "Gender";
+    private static final String AGE = "Age";
+    private static final String HEIGHT = "Height";
+    private static final String WEIGHT = "Weight";
+    private static final String SPEED = "Speed";
+    private static final String BASE_ATTACK_BONUS = "BaseAttackBonus";
+    private static final String INIT_MOD = "InitMod";
     private Character _character;
 
     public PathfinderToken( Character character ) {
@@ -37,8 +74,8 @@ public class PathfinderToken {
         setArmorClass(t);
 
 
-        t.setProperty("BaseAttackBonus", _character.getBaseAttackBonus());
-		t.setProperty( "InitMod", Integer.toString( _character.getInitiative().initModifier() ) );
+        t.setProperty(BASE_ATTACK_BONUS, _character.getBaseAttackBonus());
+		t.setProperty(INIT_MOD, Integer.toString( _character.getInitiative().initModifier() ) );
 
         setSavingThrows(t);
         setSkills(t);
@@ -47,19 +84,19 @@ public class PathfinderToken {
     }
 
     private void setCoreProperties(Token t) {
-        t.setPropertyType("Pathfinder");
-        t.setProperty("Character", _character.getName());
-        t.setProperty("Race", _character.getRace());
-        t.setProperty("Player", _character.getPlayerName());
-        t.setProperty("Alignment", _character.getAlignment() );
-        t.setProperty( "Deity", _character.getDeity());
-        t.setProperty("Class", _character.getClassSummaryAbbreviation());
-        t.setProperty("Level", _character.getLevel());
-        t.setProperty( "Gender", _character.getGender());
-        t.setProperty( "Age", _character.getAge());
-        t.setProperty( "Height", _character.getHeight());
-        t.setProperty( "Weight", _character.getWeight());
-        t.setProperty( "Speed", _character.getSpeed() );
+        t.setPropertyType(PATHFINDER);
+        t.setProperty(CHARACTER, _character.getName());
+        t.setProperty(RACE, _character.getRace());
+        t.setProperty(PLAYER, _character.getPlayerName());
+        t.setProperty(ALIGNMENT, _character.getAlignment() );
+        t.setProperty(DEITY, _character.getDeity());
+        t.setProperty(CLASS, _character.getClassSummaryAbbreviation());
+        t.setProperty(LEVEL, _character.getLevel());
+        t.setProperty(GENDER, _character.getGender());
+        t.setProperty(AGE, _character.getAge());
+        t.setProperty(HEIGHT, _character.getHeight());
+        t.setProperty(WEIGHT, _character.getWeight());
+        t.setProperty(SPEED, _character.getSpeed() );
 
         if (_character.isNPC()) {
             t.setType(Token.Type.NPC);
@@ -71,10 +108,10 @@ public class PathfinderToken {
 
     private void setSkills(Token t) {
         for( Character.Skill skill: _character.getSkills().values()) {
-            t.setProperty( skill.skillName + "Ranks", skill.ranks );
-            t.setProperty( skill.skillName + "Bonus", skill.attrBonus);
+            t.setProperty( skill.skillName + RANKS, skill.ranks );
+            t.setProperty( skill.skillName + BONUS, skill.attrBonus);
             if ( skill.isClassSkill == true ) {
-                t.setProperty( skill.skillName + "ClassSkill", "1");
+                t.setProperty( skill.skillName + CLASS_SKILL, "1");
             }
         }
     }
@@ -83,14 +120,14 @@ public class PathfinderToken {
         HashMap<String, Character.Save> saves = _character.getSaves();
         for (String saveName : saves.keySet()) {
             Character.Save s = saves.get(saveName);
-            t.setProperty(s.abbr + "ClassBonus", s.base);
-            t.setProperty(s.abbr + "FeatBonus", s.frommisc);
-            t.setProperty(s.abbr + "EnhBonus", s.fromresist);
-            String miscBonus1 = s.abbr + "MiscBonus1";
+            t.setProperty(s.abbr + CLASS_BONUS, s.base);
+            t.setProperty(s.abbr + FEAT_BONUS, s.frommisc);
+            t.setProperty(s.abbr + ENH_BONUS, s.fromresist);
+            String miscBonus1 = s.abbr + MISC_BONUS1;
             if (t.getProperty(miscBonus1) == null) {
                 t.setProperty(miscBonus1, "0");
             }
-            String miscBonus2 = s.abbr + "MiscBonus2";
+            String miscBonus2 = s.abbr + MISC_BONUS2;
             if (t.getProperty(miscBonus2) == null) {
                 t.setProperty(miscBonus2, "0");
             }
@@ -99,20 +136,19 @@ public class PathfinderToken {
 
     private void setArmorClass(Token t) {
         Character.ArmorClass AC = _character.getArmorClass();
-        t.setProperty("ACArmorBonus", AC.fromarmor);
-        t.setProperty("ACShieldBonus", AC.fromshield);
-        //t.setProperty("DexBonus", AC.fromdexterity);
-        t.setProperty("ACClassBonus", "0"); //TODO: does herolabs ever define this?
-        t.setProperty("ACFeatBonus", AC.fromdodge); //TODO: anything other than dodge here?
-        t.setProperty("ACMiscBonus1", AC.frommisc);
-        t.setProperty("ACMiscBonus2", "0");
-        t.setProperty("ACTempBonus", "0");
-        t.setProperty("SizeMod", AC.fromsize);
+        t.setProperty(AC_ARMOR_BONUS, AC.fromarmor);
+        t.setProperty(AC_SHIELD_BONUS, AC.fromshield);
+        t.setProperty(AC_CLASS_BONUS, "0"); //TODO: does herolabs ever define this?
+        t.setProperty(AC_FEAT_BONUS, AC.fromdodge); //TODO: anything other than dodge here?
+        t.setProperty(AC_MISC_BONUS_1, AC.frommisc);
+        t.setProperty(AC_MISC_BONUS_2, "0");
+        t.setProperty(AC_TEMP_BONUS, "0");
+        t.setProperty(SIZE_MOD, AC.fromsize);
 
         //finally do the enhancement bonus
         int enhancementbonus = Integer.parseInt(AC.fromdeflect) +
                 Integer.parseInt(AC.fromnatural);
-        t.setProperty("ACEnhBonus", Integer.toString(enhancementbonus));
+        t.setProperty(AC_ENH_BONUS, Integer.toString(enhancementbonus));
     }
 
 	private void setHitPoints(Token t) {
@@ -129,27 +165,27 @@ public class PathfinderToken {
         //penalties
         Character.Penalty dexPenalty = _character.getPenalty("Max Dex Bonus"); //penalties.get( "Max Dex Bonus");
         if ( dexPenalty != null ) {
-            t.setProperty( "ArmorMaxDexBonus", dexPenalty.value);
+            t.setProperty(ARMOR_MAX_DEX_BONUS, dexPenalty.value);
         }
         Character.Penalty armorCheckPenalty = _character.getPenalty("Armor Check Penalty");
         if ( armorCheckPenalty != null ) {
-            t.setProperty( "ArmorCheckPenalty", armorCheckPenalty.value);
+            t.setProperty(ARMOR_CHECK_PENALTY, armorCheckPenalty.value);
         }
     }
 
     private void setCharacterAttributes(Token t) {
         for (CharacterAttribute ca : _character.getAttributes().values()) {
             t.setProperty(ca.getName(), ca.getValue());
-            String enhancementProperty = CharacterAttribute.getShortName(ca.getName()) + "Enhancement";
+            String enhancementProperty = CharacterAttribute.getShortName(ca.getName()) + ENHANCEMENT;
             t.setProperty(enhancementProperty, Integer.toString((int) Math.floor(ca.getEnhancementBonus() / 2))); //TODO: this is ugly
-            String damageProperty = CharacterAttribute.getShortName(ca.getName()) + "Damage";
+            String damageProperty = CharacterAttribute.getShortName(ca.getName()) + DAMAGE;
             t.setProperty(damageProperty, "0");
             if (ca.isVoid()) { //void attributes mess up saves, so...
                 String saveShortName = CharacterAttribute.getSaveShortName(ca.getName());
                 if (saveShortName != null) {
-                    String attrib = saveShortName + "MiscBonus1";
+                    String attrib = saveShortName + MISC_BONUS1;
                     t.setProperty(attrib, Integer.toString(ca.getModifiedEnhancementBonus()));
-                    attrib = saveShortName + "MiscBonus2";
+                    attrib = saveShortName + MISC_BONUS2;
                     t.setProperty(attrib, "-1"); //TODO: this is a bit of a hack to work around the PF ruleset.
                 }
             }
@@ -194,7 +230,7 @@ public class PathfinderToken {
 
     private void loadMacros(Token t) throws IOException {
         List<MacroButtonProperties> macroButtonSet = PersistenceUtil.loadMacroSet(
-                new File(this.getClass().getResource("res/TokenLabMacroSet.mtmacset").getFile()));
+                new File(this.getClass().getResource(RES_TOKEN_LAB_MACRO_SET_MTMACSET).getFile()));
         t.getMacroNextIndex(); //TODO: this is a hack to create the underlying macroPropertiesMap hash table
         t.replaceMacroList(macroButtonSet);
 
