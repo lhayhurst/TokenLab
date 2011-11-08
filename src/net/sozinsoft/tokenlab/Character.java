@@ -12,14 +12,17 @@ public class Character {
 	private static final String HEROLABS_PROJECTILE_WEAPON = "Projectile Weapon";
 	private static final String HEROLABS_MELEE_WEAPON = "Melee Weapon";
 	private static final String HEROLABS_WEAPON_OFFHAND = "offhand";
-	private static final String HEROLABS_WEAPON_MAINHAND = "mainhand";
+    private static final String HEROLABS_WEAPON_MAINHAND = "mainhand";
+    private static final String HEROLABS_NPC = "npc";
+    private static final String HEROLABS_CONSTITUTION = "Constitution";
 
-	private String _name;
+    private String _name;
 	private String _race;
 	private String _hitpoints;
 	private String _role;
+
     public boolean isNPC() {
-        return getRole().equals("npc");
+        return getRole().equals(HEROLABS_NPC);
     }
 
 	private final HashMap<String, CharacterAttribute> cattributes = new HashMap<String,CharacterAttribute>();
@@ -31,8 +34,6 @@ public class Character {
 	private String _alignment;
 	private String _gender;
 	private String _age;
-
-
     private String _weight;
 	private String _height;
 	private String _speed;
@@ -254,7 +255,7 @@ public class Character {
 
     public CharacterAttribute getConstitution()
     {
-         return cattributes.get("Constitution");
+         return cattributes.get(HEROLABS_CONSTITUTION);
     }
 
 	
@@ -417,7 +418,8 @@ public class Character {
 	}
 		
 	public class Skill {
-		String skillName;
+        private static final String YES = "yes";
+        String skillName;
 		String value;
 		String attrName;
 		String attrBonus;
@@ -434,10 +436,10 @@ public class Character {
 			this.attrBonus = attrBonus;
 			this.ranks = ranks;
 			this.description = description;
-			if ( classSkill != null && ! classSkill.isEmpty() && classSkill.equals( "yes" ) )  {
+			if ( classSkill != null && ! classSkill.isEmpty() && classSkill.equals(YES) )  {
 				isClassSkill = true;
 			}
-			if ( trainedOnly != null && ! trainedOnly.isEmpty() && trainedOnly.equals( "yes" ) )  {
+			if ( trainedOnly != null && ! trainedOnly.isEmpty() && trainedOnly.equals(YES) )  {
 				useTrainedOnly = true;
 			}
 
