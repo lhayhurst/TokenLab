@@ -17,6 +17,8 @@ class Weapon {
     int numFullAttacks = 0;
     String weaponType;
     String abilityBonus;
+    int hasWeaponFocus = 0;
+    int hasWeaponSpecialization = 0;
 
     private LinkedList<String> attacks = new LinkedList<String>();
 
@@ -32,7 +34,6 @@ class Weapon {
         numFullAttacks = attacks.size();
         this.equipped = equipped;
         this.weaponType = weaponType;
-
     }
 
     public void asGson() {
@@ -43,6 +44,15 @@ class Weapon {
 
     //see http://www.d20pfsrd.com/equipment---final/weapons for how this stuff all works.
     public void inferAbilityBonus( Character c) {
+
+        if ( c.hasWeaponFocus( this.name ) ) {
+            hasWeaponFocus = 1;
+        }
+
+        if ( c.hasWeaponSpecialization( this.name )) {
+            hasWeaponSpecialization = 1;
+        }
+
 		if ( isMeleeWeapon()) {
 			if ( c.hasWeaponFinesseFeat() ) {
                 abilityBonus = "DexBonus";

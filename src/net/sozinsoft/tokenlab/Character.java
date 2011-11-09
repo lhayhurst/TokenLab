@@ -1,7 +1,9 @@
 package net.sozinsoft.tokenlab;
 
+import java.beans.FeatureDescriptor;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.regex.Pattern;
 
 import net.rptools.maptool.model.Token;
 
@@ -15,6 +17,9 @@ public class Character {
     public static final String HEROLABS_WEAPON_TWOHAND = "bothhands";
     public static final String HEROLABS_NPC = "npc";
     public static final String HEROLABS_CONSTITUTION = "Constitution";
+    public static final String HEROLABS_WEAPON_FINESSE_FEAT = "Weapon Finesse";
+    public static final String HEROLABS_WEAPON_FOCUS_FEAT = "Weapon Focus";
+    public static final String HEROLABS_WEAPON_SPECIALIZATION_FEAT = "Weapon Specialization";
 
     private String _name;
 	private String _race;
@@ -181,61 +186,38 @@ public class Character {
     private String _baseAttackBonus;
 
 
-	public Token asToken( Config.ConfigEntry configEntry ) {
-
-		//weapons
-		//setWeaponProperties( HEROLABS_WEAPON_MAINHAND, t);
-		//setWeaponProperties( HEROLABS_WEAPON_OFFHAND, t);
-
-		return null;
-		
-	}
-
-        /*
-	private void setWeaponProperties(String targetWeaponHand, Token t) {
-		Weapon targetWeapon = null;
-		for( Weapon w: this.weapons.values()) {
-			if ( targetWeaponHand.equals(w.equipped) )
-			{
-				targetWeapon = w;
-				break;
-			}
-		}
-		if ( targetWeapon != null ) {
-			String prefix = null;
-			String abilityBonusPropertyName = null;
-			if( targetWeaponHand == HEROLABS_WEAPON_MAINHAND ) {
-				prefix = "Weapon"; //TODO refactor constant to PF  Macro set constants land
-				abilityBonusPropertyName = "WepAbilBonus"; //TODO refactor constant to PF  Macro set constants land
-			}
-			else //offhand
-			{
-				prefix = "Offhand";
-			    abilityBonusPropertyName = "OffhAbilBonus"; //TODO refactor constant to PF  Macro set constants land
-			}
-			setWeaponProperties( t, targetWeapon, prefix, abilityBonusPropertyName );
-		}
-		
-	}
-
-     /*
-	private void setWeaponProperties(Token t, Weapon w, String prefix, String abilityBonusPropertyName) {
-		t.setProperty( prefix + "Name", w.name);
-		t.setProperty( abilityBonusPropertyName, inferAbilityBonus(w)); //TODO: dynamically figure this one out
-		t.setProperty( prefix + "Dice", w.damage.asExpression() );
-		t.setProperty( prefix + "DamageType", w.weaponType);
-		t.setProperty( prefix + "EnhBonus", Integer.toString( w.enhancementBonus) );
-		t.setProperty( prefix + "MiscDmgBonus", Integer.toString( w.damage.getBonusDamage()));
-		t.setProperty( prefix + "MiscAtkBonus", "0" ); //TODO: should this be something?
-		t.setProperty( prefix + "CritsOn", Integer.toString( w.critFloor ) );
-	}  */
-
-
-
 	public boolean hasWeaponFinesseFeat() {
-		return false; //TODO: implement me
+        return _feats.containsKey(HEROLABS_WEAPON_FINESSE_FEAT);
 	}
 
+    public boolean hasWeaponFocus( String weaponName ) {
+        for( String f : this._feats.keySet() ) {
+            if ( hasWeaponFeat( f, HEROLABS_WEAPON_FOCUS_FEAT, weaponName) ) { //TODO - this is a bit of a hack...
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean hasWeaponSpecialization ( String weaponName ) {
+        for( String f : this._feats.keySet() ) {
+            if ( hasWeaponFeat( f, HEROLABS_WEAPON_SPECIALIZATION_FEAT, weaponName )) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean hasWeaponFeat( String feat, String featName, String weaponName ) {
+
+        Pattern regex = Pattern.compile("^.*?(\\w+)$");
+        java.util.regex.Matcher matcher = regex.matcher(weaponName);
+        if (matcher.find()) {
+            String endOfWeaponName = matcher.group(1);
+            return feat.indexOf(featName) >= 0 && feat.indexOf(endOfWeaponName) > 0;
+        }
+        return false;
+    }
     public CharacterAttribute getConstitution()
     {
          return cattributes.get(HEROLABS_CONSTITUTION);
@@ -253,8 +235,35 @@ public class Character {
 		cattributes.put( ca.getName(), copy);
 	}
 	
+    public class Feat {
+        String featName;
+        String useradded;
+        String profgroup;
+        String categorytext;
+        String description;
+        String featCategory;
 
-	
+        public Feat(String featName, String useradded, String profgroup, String categorytext, String description, String featCategory) {
+           this.featName = featName;
+           this.useradded = useradded;
+           this.profgroup = profgroup;
+           this.categorytext = categorytext;
+           this.description = description;
+           this.featCategory = featCategory;
+        }
+    }
+
+    private HashMap<String, Feat> _feats = new HashMap<String, Feat>();
+    public HashMap<String, Feat> getFeats() {
+        return _feats;
+    }
+
+	public void addFeat( String featName, String useradded, String profgroup, String categorytext, String description, String featCategory ) {
+        Feat f;
+        f = new Feat( featName, useradded, profgroup, categorytext, description, featCategory);
+        _feats.put( featName, f );
+    }
+
 
 	private HashMap <String, Weapon> weapons = new HashMap<String, Weapon>();
     public HashMap <String, Weapon> getWeapons() {

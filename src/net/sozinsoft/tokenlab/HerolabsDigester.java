@@ -243,6 +243,16 @@ public class HerolabsDigester
         d.addCallMethod( "document/public/character/deity", "addDeity", 1 );
         d.addCallParam(  "document/public/character/deity", 0, "name" );
 
+        //feats
+        d.addCallMethod( "document/public/character/feats/feat", "addFeat", 6);
+        d.addCallParam( "document/public/character/feats/feat", 0, "name" );
+        d.addCallParam( "document/public/character/feats/feat", 1, "useradded" );
+        d.addCallParam( "document/public/character/feats/feat", 2, "profgroup" );
+        d.addCallParam( "document/public/character/feats/feat", 3, "categorytext" );
+        d.addCallParam( "document/public/character/feats/feat/description",  4 );
+        d.addCallParam( "document/public/character/feats/feat/featcategory", 5   );
+
+
         d.addSetNext( "document/public/character", "addCharacter", "net.rptools.maptool.util.herolabs.Character" );
     	d.parse( xmlSourceFile );
     }

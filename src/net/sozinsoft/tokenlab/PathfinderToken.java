@@ -11,6 +11,7 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
@@ -83,6 +84,9 @@ public class PathfinderToken {
         setSkills(t);
 
         Gson gson = new Gson();
+
+        t.setProperty( "Feats", gson.toJson(_character.getFeats().values()));
+
         for( Weapon w: _character.getWeapons().values()) {
             w.inferAbilityBonus(  _character );
            // System.out.println( gson.toJson( w ));
