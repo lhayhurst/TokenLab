@@ -2,19 +2,19 @@ package net.sozinsoft.tokenlab;
 
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.regex.Pattern;
 
 import net.rptools.maptool.model.Token;
 
 public class Character {
 		
-	private static final String HEROLABS_FIREARM_PROJECTILE_WEAPON = "Firearm, Projectile Weapon";
-	private static final String HEROLABS_PROJECTILE_WEAPON = "Projectile Weapon";
-	private static final String HEROLABS_MELEE_WEAPON = "Melee Weapon";
-	private static final String HEROLABS_WEAPON_OFFHAND = "offhand";
-    private static final String HEROLABS_WEAPON_MAINHAND = "mainhand";
-    private static final String HEROLABS_NPC = "npc";
-    private static final String HEROLABS_CONSTITUTION = "Constitution";
+	public static final String HEROLABS_FIREARM_PROJECTILE_WEAPON = "Firearm, Projectile Weapon";
+	public static final String HEROLABS_PROJECTILE_WEAPON = "Projectile Weapon";
+	public static final String HEROLABS_MELEE_WEAPON = "Melee Weapon";
+	public static final String HEROLABS_WEAPON_OFFHAND = "offhand";
+    public static final String HEROLABS_WEAPON_MAINHAND = "mainhand";
+    public static final String HEROLABS_WEAPON_TWOHAND = "bothhands";
+    public static final String HEROLABS_NPC = "npc";
+    public static final String HEROLABS_CONSTITUTION = "Constitution";
 
     private String _name;
 	private String _race;
@@ -191,7 +191,7 @@ public class Character {
 		
 	}
 
-
+        /*
 	private void setWeaponProperties(String targetWeaponHand, Token t) {
 		Weapon targetWeapon = null;
 		for( Weapon w: this.weapons.values()) {
@@ -218,38 +218,21 @@ public class Character {
 		
 	}
 
-
+     /*
 	private void setWeaponProperties(Token t, Weapon w, String prefix, String abilityBonusPropertyName) {
 		t.setProperty( prefix + "Name", w.name);
 		t.setProperty( abilityBonusPropertyName, inferAbilityBonus(w)); //TODO: dynamically figure this one out
 		t.setProperty( prefix + "Dice", w.damage.asExpression() );
 		t.setProperty( prefix + "DamageType", w.weaponType);
 		t.setProperty( prefix + "EnhBonus", Integer.toString( w.enhancementBonus) );
-		t.setProperty( prefix + "MiscDmgBonus", Integer.toString( w.damage.bonusDamage));
+		t.setProperty( prefix + "MiscDmgBonus", Integer.toString( w.damage.getBonusDamage()));
 		t.setProperty( prefix + "MiscAtkBonus", "0" ); //TODO: should this be something?
 		t.setProperty( prefix + "CritsOn", Integer.toString( w.critFloor ) );
-	}
+	}  */
 
 
-	private String inferAbilityBonus(Weapon w) {
-		if ( w.categorytext.equals(HEROLABS_MELEE_WEAPON)) {
-			if ( ! hasWeaponFinesseFeat() ) {
-				return "StrBonus"; //TODO: check for greatswords/etc, which are 1.5  ...
-			} else {
-				return "DexBonus";
-			}
-		} else if ( w.categorytext.equals(HEROLABS_PROJECTILE_WEAPON)) {
-			return "DexBonus";
-		} else if ( w.categorytext.equals( HEROLABS_FIREARM_PROJECTILE_WEAPON )) {
-			return "IntBonus";
-		}
-		else {
-			System.out.println( "Unable to infer weapon bonus from weapon " + w.name + " with category " + w.categorytext);
-			return "StrBonus"; //TODO: as good as a default as any
-		}
-	}
 
-	private boolean hasWeaponFinesseFeat() {
+	public boolean hasWeaponFinesseFeat() {
 		return false; //TODO: implement me
 	}
 
@@ -270,96 +253,13 @@ public class Character {
 		cattributes.put( ca.getName(), copy);
 	}
 	
-	private class Damage {
-		private int numDamageDice = 1;
-		private int damageDice = 1;
-		private int bonusDamage = 0;
-		
-		public Damage( String expression ) {
-			Pattern regex = Pattern.compile("(\\d+)d*(\\d*)\\+*(\\d*)" );
-			java.util.regex.Matcher matcher = regex.matcher( expression );
-			if ( matcher.matches() )
-			{
-				String ndd = matcher.group(1);
-				String dd  = matcher.group(2);
-				String bd  = matcher.group(3);
-				if ( ndd != null && ! ndd.isEmpty()) {
-					numDamageDice = Integer.parseInt(ndd);
-				}
-				if ( dd != null  && ! dd.isEmpty() ) {
-					damageDice = Integer.parseInt(dd);
-				}
-				if ( bd != null && ! bd.isEmpty()) {
-					bonusDamage = Integer.parseInt( bd );
-				}
-			}
-			else
-			{
-				//TODO: throw exception, invalid damage expression
-			}
-		}
 
-		public String asExpression() {
-			return Integer.toString(this.numDamageDice) + "d" + Integer.toString( this.damageDice );
-			
-		}
-	}
 	
-	class Weapon {
-		String name; 
-		Damage damage;
-		String categorytext;
-		int critFloor;
-		int critMultiplier;
-		int enhancementBonus = 0;
-		String equipped;
-		String weaponType;
-		
-		private LinkedList<String> attacks = new LinkedList<String>();
-		
-		public Weapon (String name, String damage, String categorytext, String crit, 
-			               String attackBonus, String equipped, String weaponType ) {
-			this.name = name; 
-			parseEnhancementBonus( name );
-			this.damage = new Damage( damage );
-			this.categorytext = categorytext;
-			parseCrit(crit);
-			parseAttackBonus( attackBonus );
-			this.equipped = equipped;
-			this.weaponType = weaponType;
-		}
-		
-		//this method is a bit of a hack as herolabs doesn't provide an actual enhancement bonus in its xml
-		//TODO: http://forums.wolflair.com/showthread.php?p=65056&posted=1#post65056 thread asking for it
-		private void parseEnhancementBonus( String name ) {
-			Pattern regex = Pattern.compile( "^\\+(\\d+)" );
-			java.util.regex.Matcher matcher = regex.matcher( name );
-			if ( matcher.find() )
-			{
-				this.enhancementBonus = Integer.parseInt(matcher.group(1));
-			}
-		}
-		private void parseCrit( String crit ) {
-			Pattern regex = Pattern.compile( "^(\\d+).*(\\d+)$" );
-			java.util.regex.Matcher matcher = regex.matcher( crit );
-			if ( matcher.matches() )
-			{	
-				critFloor      = Integer.parseInt( matcher.group(1) );
-				critMultiplier = Integer.parseInt( matcher.group(2) );
-			}
-		}
-		
-		private void parseAttackBonus( String attackBonus ) {
-			Pattern regex = Pattern.compile("\\d+" );
-			java.util.regex.Matcher matcher = regex.matcher( attackBonus );
-			while( matcher.find() ) {
-				String ab = matcher.group();
-				attacks.add(ab);
-			}
-		}
-	}
-	
+
 	private HashMap <String, Weapon> weapons = new HashMap<String, Weapon>();
+    public HashMap <String, Weapon> getWeapons() {
+        return weapons;
+    }
 	public void addWeapon( String name, String damage, String categorytext, String crit, 
 			               String attackBonus, String equipped, String weaponType ) 
 	{

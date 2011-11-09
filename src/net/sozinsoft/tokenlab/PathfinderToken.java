@@ -1,11 +1,13 @@
 package net.sozinsoft.tokenlab;
 
 
+import com.google.gson.Gson;
 import net.rptools.maptool.model.*;
 import net.rptools.maptool.util.PersistenceUtil;
 import net.rptools.maptool.util.TokenUtil;
 
 import javax.imageio.ImageIO;
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -79,6 +81,15 @@ public class PathfinderToken {
 
         setSavingThrows(t);
         setSkills(t);
+
+        Gson gson = new Gson();
+        for( Weapon w: _character.getWeapons().values()) {
+            w.inferAbilityBonus(  _character );
+           // System.out.println( gson.toJson( w ));
+
+        }
+
+        t.setProperty( "WeaponJSON", gson.toJson( _character.getWeapons() ) );
 
         return t;
     }
@@ -231,6 +242,34 @@ public class PathfinderToken {
     private void loadMacros(Token t) throws IOException {
         List<MacroButtonProperties> macroButtonSet = PersistenceUtil.loadMacroSet(
                 new File(this.getClass().getResource(RES_TOKEN_LAB_MACRO_SET_MTMACSET).getFile()));
+
+        MacroButtonProperties attackButton = null;
+        int attackButtonIndex = 0;
+        int numWeapons = _character.getWeapons().size();
+
+        for( MacroButtonProperties mbp : macroButtonSet ) {
+            if ( mbp.getLabel().equals( "Attack - Weapon") )
+            {
+                attackButton = mbp;
+                attackButtonIndex = mbp.getIndex();
+            }
+            else { //rejigger the index
+                if ( mbp.getIndex() > attackButtonIndex ) {
+                    mbp.setIndex( mbp.getIndex() + numWeapons);
+                }
+            }
+        }
+
+        macroButtonSet.remove( attackButton );
+        for( Weapon w : _character.getWeapons().values() ) {
+            MacroButtonProperties newAttack = new MacroButtonProperties(attackButtonIndex, attackButton );
+            String macro = newAttack.getCommand();
+            String newMacro = macro.replace( "SUBSTITUTE_NAME_OF_WEAPON_HERE", w.name);
+            newAttack.setCommand( newMacro );
+            newAttack.setLabel( w.name );
+            macroButtonSet.add( attackButtonIndex++, newAttack );
+        }
+
         t.getMacroNextIndex(); //TODO: this is a hack to create the underlying macroPropertiesMap hash table
         t.replaceMacroList(macroButtonSet);
 
