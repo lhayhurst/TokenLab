@@ -25,10 +25,12 @@ class Weapon {
     int hasWeaponProficiency = 0;
     int hasWeaponFocus = 0;
     int hasWeaponSpecialization = 0;
+    private int twoWeaponFightingPenalty = 0;
     int shieldAttackPenalty = 0;
     String description;
 
     private LinkedList<String> attacks = new LinkedList<String>();
+
 
     public Weapon(String name, String damage, String category, String crit,
                   String attackBonus, String equipped, String weaponType, String description) {
@@ -94,6 +96,8 @@ class Weapon {
             }
         }
 
+        this.twoWeaponFightingPenalty = getTwoWeaponFightingPenalty(c, cache );
+
         setWeaponProficiency(c, weaponEntry);
 
         if ( weaponEntry.isRangedWeapon() ) {
@@ -102,9 +106,6 @@ class Weapon {
 
         if ( weaponEntry.isTwoHandedMeleeWeapon() ) {
              abilityBonus = STR_BONUS;
-        }
-        else if ( weaponEntry.isRangedWeapon()) {
-            abilityBonus = DEX_BONUS;
         }
         else if ( isUnarmedStrike() ) {
             abilityBonus = DEX_BONUS;
@@ -141,6 +142,33 @@ class Weapon {
         }
 	}
 
+    //see http://www.d20pfsrd.com/gamemastering/combat#TOC-Two-Weapon-Fighting for how this works.
+    //TODO: refactor this into a decision table.
+    private int getTwoWeaponFightingPenalty( Character c, WeaponCache cache ) {
+
+        int primaryHandPenalty = -6;
+        int offHandPenalty = -10;
+
+        if( c.offHandWeaponIsLightOrUnarmed(cache) ) {
+            primaryHandPenalty += 2;
+            offHandPenalty += 2;
+        }
+
+        if ( c.hasTwoWeaponFightingFeat() ) {
+            primaryHandPenalty += 2;
+            offHandPenalty += 6;
+        }
+
+        if( this.isWieldedMainhand() ) {
+            return primaryHandPenalty;
+        }
+        else if ( this.isWieldedOffhand() ) {
+            return offHandPenalty;
+        }
+        else {
+            return 0;
+        }
+    }
     private void setWeaponProficiency(Character c, WeaponCache.Entry weaponEntry) {
 
         if ( isUnarmedStrike()  ) {  //All characters are proficient with unarmed strikes
@@ -173,22 +201,22 @@ class Weapon {
                this.description.indexOf(" Natural ") >= 0;
     }
 
-    private boolean isUnarmedStrike() {
+    public boolean isUnarmedStrike() {
         return this.name.equals(Character.HEROLABS_UNARMED_STRIKE);
     }
     private boolean isEquipped() {
         return isWieldedTwoHandedWeapon() || isWieldedMainhand() || isWieldedOffhand();
     }
 
-    private boolean isWieldedMainhand() {
-        return equipped != null && ! equipped.isEmpty() && equipped.equals( Character.HEROLABS_WEAPON_MAINHAND );
+    public boolean isWieldedMainhand() {
+        return equipped != null && ! equipped.isEmpty() && equipped.equals(Character.HEROLABS_WEAPON_MAINHAND);
     }
 
-    private boolean isWieldedOffhand() {
+    public boolean isWieldedOffhand() {
         return equipped != null && ! equipped.isEmpty() && equipped.equals( Character.HEROLABS_WEAPON_OFFHAND );
     }
 
-    private boolean isWieldedTwoHandedWeapon() {
+    public boolean isWieldedTwoHandedWeapon() {
         return equipped != null && ! equipped.isEmpty() && equipped.equals( Character.HEROLABS_WEAPON_TWOHAND );
     }
 
@@ -207,7 +235,7 @@ class Weapon {
     //this method is a bit of a hack as herolabs doesn't provide an actual enhancement bonus in its xml
     //TODO: http://forums.wolflair.com/showthread.php?p=65056&posted=1#post65056 thread asking for it
     private void parseEnhancementBonus(String name) {
-        Pattern regex = Pattern.compile("^\\+(\\d+)");
+        Pattern regex = Pattern.compile("\\+(\\d+)");
         java.util.regex.Matcher matcher = regex.matcher(name);
         if (matcher.find()) {
             this.enhancementBonus = Integer.parseInt(matcher.group(1));

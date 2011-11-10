@@ -30,6 +30,7 @@ public class Character {
     public static final String MARTIAL_WEAPON_PROFICIENCY_ALL_FEAT =
             MARTIAL_WEAPON_PROFICIENCY + " - All";
     public static final String EXOTIC_WEAPON_PROFICIENCY = "Exotic Weapon Proficiency";
+    public static final String TWO_WEAPON_FIGHTING_FEAT = "Two-weapon Fighting";
 
     private String _name;
     private String _race;
@@ -125,6 +126,31 @@ public class Character {
         this._baseAttackBonus = _baseAttackBonus;
     }
 
+    public boolean offHandWeaponIsLightOrUnarmed( WeaponCache cache ) {
+       //get the offhand weapon
+        Weapon offHand = null;
+        for ( Weapon w  : this.getWeapons().values()) {
+            if ( w.isWieldedOffhand() ) {
+               offHand = w;
+               break;
+            }
+        }
+
+        if ( offHand.isUnarmedStrike() ) {
+            return true;
+        }
+
+        WeaponCache.Entry entry = cache.get( offHand.name );
+        if ( entry == null ) {
+            entry = cache.get( offHand.basicName );
+        }
+
+        if ( entry.isLightWeapon() ) {
+            return true;
+        }
+        return false;
+    }
+
 
     private class CharacterClass {
         public String ClassName;
@@ -209,6 +235,10 @@ public class Character {
 
     public boolean hasExoticWeaponProficiency( Weapon w ) {
         return _feats.containsKey(EXOTIC_WEAPON_PROFICIENCY + ": " + w.basicName );
+    }
+
+    public boolean hasTwoWeaponFightingFeat( ) {
+        return _feats.containsKey(TWO_WEAPON_FIGHTING_FEAT);
     }
 
 
