@@ -1,30 +1,39 @@
 package net.sozinsoft.tokenlab;
 
-import com.google.gson.Gson;
-
 import java.util.LinkedList;
 import java.util.regex.Pattern;
 
 class Weapon {
+    public static final String DEX_BONUS = "DexBonus";
+    public static final String STR_BONUS1_5 = "StrBonus1.5";
+    public static final String STR_BONUS = "StrBonus";
+    public static final String INT_BONUS = "IntBonus";
     String name;
+    String basicName;
+    String baseAttackBonus;
     Damage damage;
     String damageDice;
     String category;
     int critFloor;
     int critMultiplier;
     int enhancementBonus = 0;
+    int isMasterwork = 0;
     String equipped;
     int numFullAttacks = 0;
     String weaponType;
     String abilityBonus;
+    int hasWeaponProficiency = 0;
     int hasWeaponFocus = 0;
     int hasWeaponSpecialization = 0;
+    int shieldAttackPenalty = 0;
+    String description;
 
     private LinkedList<String> attacks = new LinkedList<String>();
 
     public Weapon(String name, String damage, String category, String crit,
-                  String attackBonus, String equipped, String weaponType) {
+                  String attackBonus, String equipped, String weaponType, String description) {
         this.name = name;
+        basicName = extractBasicWeaponName(name);
         parseEnhancementBonus(name);
         this.damage = new Damage(damage);
         this.damageDice = this.damage.asExpression();
@@ -34,16 +43,12 @@ class Weapon {
         numFullAttacks = attacks.size();
         this.equipped = equipped;
         this.weaponType = weaponType;
-    }
-
-    public void asGson() {
-        Gson gson = new Gson();
-        System.out.println( gson.toJson( this ));
+        this.description = description;
     }
 
 
     //see http://www.d20pfsrd.com/equipment---final/weapons for how this stuff all works.
-    public void inferAbilityBonus( Character c) {
+    public void inferAbilityBonus(Character c, WeaponCache cache) {
 
         if ( c.hasWeaponFocus( this.name ) ) {
             hasWeaponFocus = 1;
@@ -53,29 +58,109 @@ class Weapon {
             hasWeaponSpecialization = 1;
         }
 
-		if ( isMeleeWeapon()) {
+        if( c.hasWeaponFinesseFeat() && c.hasShieldEquipped() && isWieldedMainhand() ) {
+            System.out.println("You have weapon finesse weapon " +  this.name + " AND a shield equipped; please be advised that " +
+            "a) the shield penalty applies to your attack bonus, and " +
+            "b) the curent state of herolabs xml output doesn't allow method to infer exactly what that " +
+            "penalty is.  Please be an honest chap and edit the shieldAttackProperty of your weapon to be the " +
+            "armor check penalty of your shield in Maptool." );
+        }
+
+        this.baseAttackBonus = c.getBaseAttackBonus();
+
+        //entire section of code is a bit too rules specific for my taste, but the herolabs export leaves something
+        //to be had - for example, if I knew what type of weapon it was (light, heavy, etc) I wouldn't have to do
+        //specific checks on unarmed strike.
+
+        //because of this I am using an export of pfsrd weapons list.
+
+        WeaponCache.Entry weaponEntry = cache.get( this.name );
+
+        if ( weaponEntry == null ) {
+            System.out.println( "Unable to determine information about weapon" + this.name +
+                                ", please file a bug report at githib"); //TODO: handle more gracefully
+            return;
+        }
+
+        setWeaponProficiency(c, weaponEntry);
+
+        if ( weaponEntry.isRangedWeapon() ) {
+            abilityBonus = DEX_BONUS; //ignoring certain wisdom feats now that make this wisdom based...
+        }
+
+        if ( isMeleeWeapon()) {
 			if ( c.hasWeaponFinesseFeat() ) {
-                abilityBonus = "DexBonus";
+                abilityBonus = DEX_BONUS;
             }
             else {
                 if ( isWieldedTwoHandedWeapon() )
                 {
-				    abilityBonus =  "StrBonus1.5";
+				    abilityBonus = STR_BONUS1_5;
+                }
+                else if ( isUnarmedStrike() ) {
+                    abilityBonus = DEX_BONUS;
                 }
                 else {
-                    abilityBonus = "StrBonus";
+                    abilityBonus = STR_BONUS;
                 }
             }
 		} else if (isProjectileWeapon()) {
-			abilityBonus = "DexBonus";
+			abilityBonus = DEX_BONUS;
 		} else if (isFirearm()) {
-			abilityBonus = "IntBonus";
+			abilityBonus = INT_BONUS;
 		}
 		else {
-			System.out.println( "Unable to infer weapon bonus from weapon " + name + " with category " + category);
-			abilityBonus =  "StrBonus"; //TODO: as good as a default as any
+			//System.out.println( "Unable to infer weapon bonus from weapon " + name + " with category " + category);
+			abilityBonus =  STR_BONUS; //TODO: as good as a default as any
 		}
 	}
+
+    private void setWeaponProficiency(Character c, WeaponCache.Entry weaponEntry) {
+
+        if ( isUnarmedStrike()  ) {  //All characters are proficient with unarmed strikes
+            hasWeaponProficiency = 1;
+        }
+        else if ( this.isNaturalAttack() ) {
+            hasWeaponProficiency = 1;
+        }
+        else if ( weaponEntry.isSimpleWeapon() ) {
+            if( c.hasSimpleWeaponProficiency( this) ) {
+                this.hasWeaponProficiency = 1;
+            }
+        } else if ( weaponEntry.isMartialWeapon() ) {
+            if ( c.hasMartialWeaponProficiency(this) ) {
+                this.hasWeaponProficiency = 1;
+            }
+        } else if ( weaponEntry.isExoticWeapon() ) {
+            if ( c.hasExoticWeaponProficiency( this ) ) {
+                this.hasWeaponProficiency = 1;
+            }
+        }
+    }
+
+    private boolean isNaturalAttack() {
+        //TODO: this is kind of a hack, but since it isn't in the herolabs xml, we're
+        //stuck with what we have
+        return this.description!= null &&
+               !this.description.isEmpty() &&
+               this.description.indexOf(" natural ") >= 0 ||
+               this.description.indexOf(" Natural ") >= 0;
+    }
+
+    private boolean isUnarmedStrike() {
+        return this.name.equals(Character.HEROLABS_UNARMED_STRIKE);
+    }
+    private boolean isEquipped() {
+        return isWieldedTwoHandedWeapon() || isWieldedMainhand() || isWieldedOffhand();
+    }
+
+    private boolean isWieldedMainhand() {
+        return equipped != null && ! equipped.isEmpty() && equipped.equals( Character.HEROLABS_WEAPON_MAINHAND );
+    }
+
+    private boolean isWieldedOffhand() {
+        return equipped != null && ! equipped.isEmpty() && equipped.equals( Character.HEROLABS_WEAPON_OFFHAND );
+    }
 
     private boolean isWieldedTwoHandedWeapon() {
         return equipped != null && ! equipped.isEmpty() && equipped.equals( Character.HEROLABS_WEAPON_TWOHAND );
@@ -90,7 +175,7 @@ class Weapon {
     }
 
     private boolean isMeleeWeapon() {
-        return category != null && ! category.isEmpty() && category.equals(Character.HEROLABS_MELEE_WEAPON );
+        return category != null && ! category.isEmpty() && category.indexOf(Character.HEROLABS_MELEE_WEAPON ) == 0;
     }
 
     //this method is a bit of a hack as herolabs doesn't provide an actual enhancement bonus in its xml
@@ -100,6 +185,22 @@ class Weapon {
         java.util.regex.Matcher matcher = regex.matcher(name);
         if (matcher.find()) {
             this.enhancementBonus = Integer.parseInt(matcher.group(1));
+        }
+        else {
+            if ( name.indexOf( "Masterwork") >= 0 ) { //TODO: another hack ... sigh
+                this.isMasterwork = 1;
+            }
+        }
+    }
+
+    private String extractBasicWeaponName( String name ) {
+        Pattern regex = Pattern.compile("^.*?\\s+(\\w+)$");
+        java.util.regex.Matcher matcher = regex.matcher(name);
+        if (matcher.find()) {
+            return matcher.group(1);
+        }
+        else {
+            return name;
         }
     }
 

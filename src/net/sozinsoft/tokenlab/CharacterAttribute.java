@@ -19,29 +19,35 @@ public class CharacterAttribute {
 		return _name;
 	}
 	
-	private String _value;
+	private String _base;
 	
-	public String getValue() {
-		return _value;
+	public String getBase() {
+		return _base;
 	}
-	private String _modifiedValue;
+
+	private String _modifiedBase;
 
 	private int _bonus;
 	
 	public int getBonus() {
 		return _bonus;
 	}
-		
-	public int getEnhancementBonus() {
-		return _bonus;
-	}
 
 	private int _modifiedBonus;
+
 	private String _text;
 
-	public int getModifiedEnhancementBonus() {
+	public int getModifiedBonus() {
 		return _modifiedBonus;
 	}
+
+    public int getEnhancementBonus() {
+        return _modifiedBonus - _bonus;
+    }
+
+    public int getEnhancement() {
+        return Integer.parseInt(_modifiedBase) - Integer.parseInt(_base);
+    }
 
 	public CharacterAttribute() { 
 		
@@ -72,8 +78,8 @@ public class CharacterAttribute {
 
 	public CharacterAttribute(CharacterAttribute ca) {
 		this._name          = ca._name;
-		this._value         = ca._value;
-		this._modifiedValue = ca._modifiedValue;
+		this._base          = ca._base;
+		this._modifiedBase = ca._modifiedBase;
 		this._bonus         = ca._bonus;
 		this._modifiedBonus = ca._modifiedBonus;
 		this._text          = ca._text;
@@ -81,9 +87,9 @@ public class CharacterAttribute {
 
 	//called from digester
 	public void setValue(String value, String modified, String text ) {
-		_value         = value;
+		_base          = value;
 		_text          = text;
-		_modifiedValue = modified;
+		_modifiedBase = modified;
 	}
 
 	//called from digester

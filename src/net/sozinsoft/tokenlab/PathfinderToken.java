@@ -7,11 +7,12 @@ import net.rptools.maptool.util.PersistenceUtil;
 import net.rptools.maptool.util.TokenUtil;
 
 import javax.imageio.ImageIO;
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.awt.*;
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Collection;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 
@@ -32,7 +33,6 @@ public class PathfinderToken {
     private static final String ARMOR_CHECK_PENALTY = "ArmorCheckPenalty";
     private static final String MISC_BONUS1 = "MiscBonus1";
     private static final String MISC_BONUS2 = "MiscBonus2";
-    private static final String RES_TOKEN_LAB_MACRO_SET_MTMACSET = "res/TokenLabMacroSet.mtmacset";
     private static final String DAMAGE = "Damage";
     private static final String ENHANCEMENT = "Enhancement";
     private static final String CLASS_BONUS = "ClassBonus";
@@ -56,10 +56,13 @@ public class PathfinderToken {
     private static final String SPEED = "Speed";
     private static final String BASE_ATTACK_BONUS = "BaseAttackBonus";
     private static final String INIT_MOD = "InitMod";
+    public static final String SUBSTITUTE_NAME_OF_WEAPON_HERE = "SUBSTITUTE_NAME_OF_WEAPON_HERE";
     private Character _character;
+    private WeaponCache _cache;
 
-    public PathfinderToken( Character character ) {
+    public PathfinderToken(Character character, WeaponCache cache) {
         _character = character;
+        _cache     = cache;
     }
 
     public Token asToken( Config.ConfigEntry configEntry ) throws IOException {
@@ -88,7 +91,7 @@ public class PathfinderToken {
         t.setProperty( "Feats", gson.toJson(_character.getFeats().values()));
 
         for( Weapon w: _character.getWeapons().values()) {
-            w.inferAbilityBonus(  _character );
+            w.inferAbilityBonus(  _character, _cache );
            // System.out.println( gson.toJson( w ));
 
         }
@@ -190,16 +193,16 @@ public class PathfinderToken {
 
     private void setCharacterAttributes(Token t) {
         for (CharacterAttribute ca : _character.getAttributes().values()) {
-            t.setProperty(ca.getName(), ca.getValue());
+            t.setProperty(ca.getName(), ca.getBase());
             String enhancementProperty = CharacterAttribute.getShortName(ca.getName()) + ENHANCEMENT;
-            t.setProperty(enhancementProperty, Integer.toString((int) Math.floor(ca.getEnhancementBonus() / 2))); //TODO: this is ugly
+            t.setProperty(enhancementProperty, Integer.toString( ca.getEnhancement() ) );
             String damageProperty = CharacterAttribute.getShortName(ca.getName()) + DAMAGE;
             t.setProperty(damageProperty, "0");
             if (ca.isVoid()) { //void attributes mess up saves, so...
                 String saveShortName = CharacterAttribute.getSaveShortName(ca.getName());
                 if (saveShortName != null) {
                     String attrib = saveShortName + MISC_BONUS1;
-                    t.setProperty(attrib, Integer.toString(ca.getModifiedEnhancementBonus()));
+                    t.setProperty(attrib, Integer.toString(ca.getModifiedBonus()));
                     attrib = saveShortName + MISC_BONUS2;
                     t.setProperty(attrib, "-1"); //TODO: this is a bit of a hack to work around the PF ruleset.
                 }
@@ -242,10 +245,26 @@ public class PathfinderToken {
         return t;
     }
 
+    private static String readFileAsString(String filePath) throws java.io.IOException {
+        byte[] buffer = new byte[(int) new File(filePath).length()];
+        BufferedInputStream f = null;
+        try {
+            f = new BufferedInputStream(new FileInputStream(filePath));
+            f.read(buffer);
+        } finally {
+            if (f != null) try {
+                f.close();
+            } catch (IOException ignored) {
+            }
+        }
+        return new String(buffer);
+    }
 
     private void loadMacros(Token t) throws IOException {
-        List<MacroButtonProperties> macroButtonSet = PersistenceUtil.loadMacroSet(
-                new File(this.getClass().getResource(RES_TOKEN_LAB_MACRO_SET_MTMACSET).getFile()));
+        List<MacroButtonProperties> macroButtonSet = PersistenceUtil.loadMacroSet(  ResourceManager.getMacroSet() );
+
+        URL resource = this.getClass().getResource("res/AttackMacro.txt");
+        String attackMacroText = readFileAsString(resource.getFile() );
 
         MacroButtonProperties attackButton = null;
         int attackButtonIndex = 0;
@@ -267,8 +286,8 @@ public class PathfinderToken {
         macroButtonSet.remove( attackButton );
         for( Weapon w : _character.getWeapons().values() ) {
             MacroButtonProperties newAttack = new MacroButtonProperties(attackButtonIndex, attackButton );
-            String macro = newAttack.getCommand();
-            String newMacro = macro.replace( "SUBSTITUTE_NAME_OF_WEAPON_HERE", w.name);
+            //String macro = newAttack.getCommand();
+            String newMacro = attackMacroText.replace(SUBSTITUTE_NAME_OF_WEAPON_HERE, w.name);
             newAttack.setCommand( newMacro );
             newAttack.setLabel( w.name );
             macroButtonSet.add( attackButtonIndex++, newAttack );

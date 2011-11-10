@@ -68,6 +68,7 @@ public class HerolabsDigester {
 
     private void processCharacters(Config config) throws IOException {
 
+        WeaponCache cache = new WeaponCache( ResourceManager.getWeapons().getAbsolutePath() );
         for (Character c : this.characters) {
             Config.ConfigEntry ce = config.get(c.getName());
 
@@ -76,7 +77,7 @@ public class HerolabsDigester {
                 continue;
             }
 
-            PathfinderToken pt = new PathfinderToken(c);
+            PathfinderToken pt = new PathfinderToken(c, cache);
             Token t = pt.asToken(ce);
             PersistenceUtil.saveToken(t, ce.getOutputTokenTo(), true);
         }
@@ -145,6 +146,14 @@ public class HerolabsDigester {
         //       d.addCallParam( "document/public/character/armorclass", 2, "ac" );
 
 
+        //defenses
+        d.addCallMethod( "document/public/character/defenses/armor", "addArmor", 5);
+        d.addCallParam( "document/public/character/defenses/armor", 0, "name");
+        d.addCallParam( "document/public/character/defenses/armor", 1, "ac");
+        d.addCallParam( "document/public/character/defenses/armor", 2, "equipped");
+        d.addCallParam( "document/public/character/defenses/armor", 3, "natural");
+        d.addCallParam( "document/public/character/defenses/armor", 4, "useradded");
+
         //attributes
         d.addSetNext("document/public/character/attributes/attribute", "addAttribute");
         d.addObjectCreate("document/public/character/attributes", "net.sozinsoft.tokenlab.CharacterAttribute");
@@ -178,9 +187,12 @@ public class HerolabsDigester {
         d.addCallParam("document/public/character/saves/save", 5, "fromattr");
         d.addCallParam("document/public/character/saves/save", 6, "save");
 
+        //basic attack
+       // d.addCallMethod("document/public/character/attack", "addBaseAttack", 1);
+        //d.addCallParam("document/public/character/attack", 0, "baseattack");
 
         //melee weapons
-        d.addCallMethod("document/public/character/melee/weapon", "addWeapon", 7);
+        d.addCallMethod("document/public/character/melee/weapon", "addWeapon", 8);
         d.addCallParam("document/public/character/melee/weapon", 0, "name");
         d.addCallParam("document/public/character/melee/weapon", 1, "damage");
         d.addCallParam("document/public/character/melee/weapon", 2, "categorytext");
@@ -188,10 +200,12 @@ public class HerolabsDigester {
         d.addCallParam("document/public/character/melee/weapon", 4, "attack");
         d.addCallParam("document/public/character/melee/weapon", 5, "equipped");
         d.addCallParam("document/public/character/melee/weapon/weptype", 6);
+        d.addCallParam("document/public/character/melee/weapon/description", 7);
+
 
         //ranged weapons
 
-        d.addCallMethod("document/public/character/ranged/weapon", "addWeapon", 7);
+        d.addCallMethod("document/public/character/ranged/weapon", "addWeapon", 8);
         d.addCallParam("document/public/character/ranged/weapon", 0, "name");
         d.addCallParam("document/public/character/ranged/weapon", 1, "damage");
         d.addCallParam("document/public/character/ranged/weapon", 2, "categorytext");
@@ -199,6 +213,8 @@ public class HerolabsDigester {
         d.addCallParam("document/public/character/ranged/weapon", 4, "attack");
         d.addCallParam("document/public/character/ranged/weapon", 5, "equipped");
         d.addCallParam("document/public/character/ranged/weapon/weptype", 6);
+        d.addCallParam("document/public/character/ranged/weapon/description", 7);
+
 
         //skills
         d.addCallMethod("document/public/character/skills/skill", "addSkill", 8);
