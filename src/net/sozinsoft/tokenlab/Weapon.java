@@ -77,9 +77,21 @@ class Weapon {
         WeaponCache.Entry weaponEntry = cache.get( this.name );
 
         if ( weaponEntry == null ) {
-            System.out.println( "Unable to determine information about weapon" + this.name +
-                                ", please file a bug report at githib"); //TODO: handle more gracefully
-            return;
+            //try to get the generic name
+            weaponEntry = cache.get( this.basicName );
+            if ( weaponEntry == null ) {
+                //special case handling for natural attacks.  sigh.
+                if ( isNaturalAttack()) {
+                    abilityBonus = STR_BONUS;
+                    hasWeaponProficiency = 1;
+                    return;
+                }
+                else {
+                    System.out.println( "Unable to determine information about weapon " + this.name +
+                                        ", please file a bug report at githib"); //TODO: handle more gracefully
+                    return;
+                }
+            }
         }
 
         setWeaponProficiency(c, weaponEntry);
@@ -88,31 +100,45 @@ class Weapon {
             abilityBonus = DEX_BONUS; //ignoring certain wisdom feats now that make this wisdom based...
         }
 
-        if ( isMeleeWeapon()) {
-			if ( c.hasWeaponFinesseFeat() ) {
+        if ( weaponEntry.isTwoHandedMeleeWeapon() ) {
+             abilityBonus = STR_BONUS;
+        }
+        else if ( weaponEntry.isRangedWeapon()) {
+            abilityBonus = DEX_BONUS;
+        }
+        else if ( isUnarmedStrike() ) {
+            abilityBonus = DEX_BONUS;
+        }
+        else if ( weaponEntry.isLightWeapon() ) {
+            if ( c.hasWeaponFinesseFeat()) {
                 abilityBonus = DEX_BONUS;
             }
             else {
-                if ( isWieldedTwoHandedWeapon() )
-                {
-				    abilityBonus = STR_BONUS1_5;
-                }
-                else if ( isUnarmedStrike() ) {
-                    abilityBonus = DEX_BONUS;
+                abilityBonus = STR_BONUS;
+            }
+        }
+        else if ( weaponEntry.isOneHandedMeleeWeapon() ) {
+            if ( c.hasWeaponFinesseFeat()) {
+                //special case for rapier, whip, and spiked chain ... of course :-)
+                if( weaponEntry.isFinessableOneHandedMeleeWeapon() ) {
+                     abilityBonus = DEX_BONUS;
                 }
                 else {
-                    abilityBonus = STR_BONUS;
+                     abilityBonus = STR_BONUS;
                 }
+            } else {
+                abilityBonus = STR_BONUS;
             }
-		} else if (isProjectileWeapon()) {
-			abilityBonus = DEX_BONUS;
-		} else if (isFirearm()) {
-			abilityBonus = INT_BONUS;
-		}
-		else {
-			//System.out.println( "Unable to infer weapon bonus from weapon " + name + " with category " + category);
-			abilityBonus =  STR_BONUS; //TODO: as good as a default as any
-		}
+        }
+        else if ( isFirearm() ) {
+            abilityBonus = INT_BONUS;
+        }
+        else {
+            if ( abilityBonus == null ) {
+                System.out.println("Unable to figure out attack ability bonus for weapon " + this.name +
+                        ", please fill a bug report"); //TODO
+            }
+        }
 	}
 
     private void setWeaponProficiency(Character c, WeaponCache.Entry weaponEntry) {
