@@ -1,0 +1,108 @@
+[h: AttackFlavor = "Insert your flavorful weapon text here!"]
+
+<!-- DO NOT EDIT BELOW THIS LINE -->
+
+[h: Name = "SUBSTITUTE_NAME_OF_WEAPON_HERE"]
+[h: AttackNumber = "SUBSTITUTE_ATTACK_NUMBER_HERE"]
+
+[h: AttackName  = Name]
+[h:Weapon = json.get(weaponJSON, Name)]
+[h:Damage = json.get(Weapon, "damage")]
+[h:Attacks = json.get(Weapon, "attacks")]
+[h:AttackBonus = json.get(Attacks, AttackNumber-1]
+[h: TemporaryAttackModifier = json.get(Weapon, "temporaryAttackModifier"]
+[h: TemporaryDamageModifier = json.get(Weapon, "temporaryDamageModifier"]
+[h: DamageRoll = eval(json.get(Weapon, "damageDice"))]
+[h: WeaponDice = json.get(Weapon, "damageDice") ]
+[h: WeaponDamage = json.get( Damage, "bonusDamage")]
+[h: d20roll = 1d20]
+[h: AttackBonus= AttackBonus + TemporaryAttackModifier]
+[h: CritDamageRoll = eval(json.get(Weapon, "damageDice"))]
+[h: DamageBonus= WeaponDamage + TemporaryDamageModifier ]
+[h: CriticalRoll=1d20]
+[h: WeaponCritsOn=json.get(Weapon, "critFloor")]
+[h: WeaponDamageType=json.get(Weapon, "weaponType")]
+
+
+<table>
+	<tr>
+        <td colspan="2" style="text-align:center;color:#ffffff;background-color:#009900;">
+         <b>Attack!</b></td>
+        <td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;"><p> <b>
+        [r:AttackName]</b> </p></td>
+    </tr>
+	<tr><td colspan="4" style="background-color:#f0f0f0;">
+		<i>[r:AttackFlavor]</i><br />
+		</td>
+	</tr>
+
+	<tr><td colspan="4" style="text-align:center;background-color:#000000;color:#ffffff">Attacks</td></tr>
+
+	<tr><td style="text-align:center;color:#ffffff;background-color:#777777;width:90px;">
+			<span style="text-decoration:underline;">Attack</span>
+			(+[r:AttackBonus])
+		</td>
+		<td colspan="2" style="text-align:center;width:50px;;color:#ffffff;background-color:#0077aa;">
+			vs [r:WeaponAttacksVs]
+		</td>
+
+		<!-- Critical Hit -->
+		[if(d20roll >= WeaponCritsOn), CODE:{
+			<td style="text-align:center;width:90px;color:#ffffff;background-color:#C11B17;">
+			<span style="text-decoration:underline;">Damage</span> (+[r:DamageBonus])
+			</td>
+	    </tr>
+        <tr><td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
+                1d20(<font color='red'>[r:d20roll]</font>)+[r:AttackBonus] = <font color='red'><b>[r:d20roll+AttackBonus]</b></font>
+            </td>
+            <td colspan="2" style="text-align:center;color:#ffffff;background-color:#C11B17;">
+                [r:WeaponDice]([r:DamageRoll])+[r:DamageBonus] = <b>[r:DamageRoll+DamageBonus]</b> [r:WeaponDamageType]
+            </td>
+        </tr>
+        <tr><td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
+                1d20([r:CriticalRoll])+[r:AttackBonus] = <b>[r:CriticalRoll+AttackBonus]</b>
+            </td>
+            <td colspan="2" style="text-align:center;color:#ffffff;background-color:#C11B17;">
+                [r:WeaponDice]([r:CritDamageRoll])+[r:DamageBonus] = <b>[r:CritDamageRoll+DamageBonus]</b> [r:WeaponDamageType]
+            </td>
+        </tr>
+		};{}]
+
+		<!-- Normal Roll -->
+        [if((d20roll < WeaponCritsOn) && (d20roll > 1)), CODE:{
+			<td style="text-align:center;width:90px;color:#ffffff;background-color:#009900;">
+			<span style="text-decoration:underline;">Damage</span> (+[r:DamageBonus])
+			</td>
+	    </tr>
+        <tr><td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
+                1d20([r:d20roll])+[r:AttackBonus] = <b>[r:d20roll+AttackBonus]</b>
+            </td>
+            <td colspan="2" style="text-align:center;color:#ffffff;background-color:#009900;">
+                [r:WeaponDice]([r:DamageRoll])+[r:DamageBonus] = <b>[r:DamageRoll+DamageBonus]</b> [r:WeaponDamageType]
+            </td>
+        </tr>
+		};{}]
+
+		<!-- Crit Fail -->
+		[if((d20roll == 1) && (d20roll < WeaponCritsOn)),CODE:{
+			<td style="text-align:center;width:90px;;color:#ffffff;background-color:#990000;">
+			<b>Critical Fail!</b>
+			</td>
+	    </tr>
+        <tr><td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
+                1d20(<font color='yellow'>[r:d20roll]</font>)+[r:AttackBonus]
+            </td>
+            <td colspan="2" style="text-align:center;color:#ffffff;background-color:#990000;">
+                <font style="color:#FF0000">E</font>
+                <font style="color:#FFff00">P</font>
+                <font style="color:#00ff00">I</font>
+                <font style="color:#00ffff">C</font>
+                <font style="color:#FF00ff">F</font>
+                <font style="color:#FF0000">A</font>
+                <font style="color:#FFff00">I</font>
+                <font style="color:#00ff00">L</font>
+            </td>
+        </tr>
+		};{}]
+
+	</table>
