@@ -1,0 +1,239 @@
+WeaponType	WeaponEffort	Weapon	Finessable	Cost	Dmg (S)	Dmg (M)	Critical	Range	Weight1	Type2	Special	Source
+Simple	Unarmed Attack	Gauntlet	0	2 gp	1d2	1d3	x2	5	1 lb.	B		CRB
+Simple	Unarmed Attack	Unarmed strike	0		1d2	1d3	x2	5		B	nonlethal	CRB
+Simple	Light Melee Weapons	Battle aspergillum	0	5 gp	1d4	1d6	x2	5	4 lb.	B		APG
+Simple	Light Melee Weapons	Brass knuckles	0	1 gp	1d2	1d3	x2	5	1 lb.	B	"monk, see text"	AA
+Simple	Light Melee Weapons	Cestus	0	5 gp	1d3	1d4	19-20/x2	5	1 lb.	B or P	monk	APG
+Simple	Light Melee Weapons	Dagger	0	2 gp	1d3	1d4	19-20/x2	10	1 lb.	P or S		CRB
+Simple	Light Melee Weapons	"Dagger, punching"	0	2 gp	1d3	1d4	x3	5	1 lb.	P		CRB
+Simple	Light Melee Weapons	"Gauntlet, spiked"	0	5 gp	1d3	1d4	x2	5	1 lb.	P		CRB
+Simple	Light Melee Weapons	Hanbo	0	1 gp	1d4	1d6	x2	5	2 lbs.	B	"monk, trip"	AA
+Simple	Light Melee Weapons	"Mace, light"	0	5 gp	1d4	1d6	x2	5	4 lbs.	B		CRB
+Simple	Light Melee Weapons	Sickle	0	6 gp	1d4	1d6	x2	5	2 lbs.	S	trip	CRB
+Simple	Light Melee Weapons	Wooden stake	0		1d3	1d4	x2	10	1 lb.	P		APG
+Simple	One-Handed Melee Weapons	Club	0		1d4	1d6	x2	10	3 lbs.	B		CRB
+Simple	One-Handed Melee Weapons	"Club, mere"	0	2 gp	1d3	1d4	x2	5	2 lbs.	B or P	fragile	AA
+Simple	One-Handed Melee Weapons	Combat scabbard	0	1 gp	1d4	1d6	x2	5	1 lb.	B	"improvised, see text"	AA
+Simple	One-Handed Melee Weapons	"Mace, heavy"	0	12 gp	1d6	1d8	x2	5	8 lbs.	B		CRB
+Simple	One-Handed Melee Weapons	Morningstar	0	8 gp	1d6	1d8	x2	5	6 lbs.	B and P		CRB
+Simple	One-Handed Melee Weapons	Shortspear	0	1 gp	1d4	1d6	x2	5	3 lbs.	P		CRB
+Simple	Two-Handed Melee Weapons	Bayonet	0	5 gp	1d4	1d6	x2	5	1 lb.	P		APG
+Simple	Two-Handed Melee Weapons	Longspear	0	5 gp	1d6	1d8	x3	5	9 lbs.	P	"brace, reach"	CRB
+Simple	Two-Handed Melee Weapons	Quarterstaff	0		1d4/1d4	1d6/1d6	x2	5	4 lbs.	B	"double, monk"	CRB
+Simple	Two-Handed Melee Weapons	Spear	0	2 gp	1d6	1d8	x3	10	6 lbs.	P	brace	CRB
+Simple	Two-Handed Melee Weapons	"Spear, boar"	0	5 gp	1d6	1d8	x2	5	8 lb.	P	"brace, see text"	APG
+Simple	Ranged Weapons	Blowgun	0	2 gp	1	1d2	x2	20	1 lb.	P		CRB
+Simple	Ranged Weapons	"Crossbow, heavy"	0	50 gp	1d8	1d10	19-20/x2	120	8 lbs.	P		CRB
+Simple	Ranged Weapons	"Crossbow, light"	0	35 gp	1d6	1d8	19-20/x2	80	4 lbs.	P		CRB
+Simple	Ranged Weapons	Dart	0	5 sp	1d3	1d4	x2	20	1/2 lb.	P		CRB
+Simple	Ranged Weapons	Javelin	0	1 gp	1d4	1d6	x2	30	2 lbs.	P		CRB
+Simple	Ranged Weapons	Sling	0		1d3	1d4	x2	50		B		CRB
+Simple	Ranged Weapons	Stingchuck	0		1d3	1d4	x2	10	9 lbs.	B		AA
+Simple	Ammunition	"Bolt(s), crossbow (10)"	0	1 gp				5	1 lb.			CRB
+Simple	Ammunition	"Bolt(s), acid (1)"	0	40 gp				5	0.1 lb.			AP15
+Simple	Ammunition	"Bolt(s), Drow poison (1)"	0	100 gp				5	0.1 lb.			AP15
+Simple	Ammunition	"Bolt(s), fire (1)"	0	50 gp				5	0.1 lb.			AP15
+Simple	Ammunition	"Bullet(s), groaning (10)"	0	2 gp				5	5 lbs.			AA
+Simple	Ammunition	"Bullet(s), sling (10)"	0	1 sp				5	5 lbs.			CRB
+Simple	Ammunition	"Bullet(s), smoke (10)"	0	100 gp				5	5 lbs.			PCS
+Simple	Ammunition	"Dart(s), blowgun (10)"	0	5 sp				5	1 lb.			CRB
+Martial	Light Melee Weapons	"Axe, throwing"	0	8 gp	1d4	1d6	x2	10	2 lbs.	S		CRB
+Martial	Light Melee Weapons	Blade boot	0	25 gp	1d3	1d4	x2	5	2 lbs.	P		AA
+Martial	Light Melee Weapons	Butterfly sword	0	20 gp	1d3	1d4	19-20/x2	5	1 lb.	S	monk	UC
+Martial	Light Melee Weapons	Dogslicer	0	8 gp	1d4	1d6	19-20/x2	5	1 lb.	S		ISWG
+Martial	Light Melee Weapons	Gladius	0	15 gp	1d4	1d6	19-20/x2	5	3 lbs.	P or S	performance	UC
+Martial	Light Melee Weapons	"Hammer, light"	0	1 gp	1d3	1d4	x2	20	2 lbs.	B		CRB
+Martial	Light Melee Weapons	Handaxe	0	6 gp	1d4	1d6	x3	5	3 lbs.	S		CRB
+Martial	Light Melee Weapons	Iron brush	0	2 gp	1d2	1d3	x2	10		P		UC
+Martial	Light Melee Weapons	Jutte	0	8 gp	1d4	1d6	x2	5	1 lb.	B	"disarm, monk"	UC
+Martial	Light Melee Weapons	Kerambit	0	2 gp	1d2	1d3	x3	5		S		UC
+Martial	Light Melee Weapons	"Knife, switchblade"	0	5 gp	1d3	1d4	19-20/x2	10	1 lb.	P		AA
+Martial	Light Melee Weapons	Kukri	0	8 gp	1d3	1d4	18-20/x2	5	2 lbs.	S		CRB
+Martial	Light Melee Weapons	Lungchuan tamo	0	5 gp	1d3	1d4	x2	10	1 lb.	P or S	monk	UC
+Martial	Light Melee Weapons	"Pick, light"	0	4 gp	1d3	1d4	x4	5	3 lbs.	P		CRB
+Martial	Light Melee Weapons	Sap	0	1 gp	1d4	1d6	x2	5	2 lbs.	B	nonlethal	CRB
+Martial	Light Melee Weapons	Shang gou	0	6 gp	1d3	1d4	x2	5	1 lb.	S	"disarm or trip (see text), monk"	UC
+Martial	Light Melee Weapons	"Shield, light"	0	special	1d2	1d3	x2	5	special	B		CRB
+Martial	Light Melee Weapons	Spiked armor	0	special	1d4	1d6	x2	5	special	P		CRB
+Martial	Light Melee Weapons	"Spiked shield, light"	0	special	1d3	1d4	x2	5	special	P		CRB
+Martial	Light Melee Weapons	Starknife	0	24 gp	1d3	1d4	x3	20	3 lbs.	P		CRB
+Martial	Light Melee Weapons	Shortsword	0	10 gp	1d4	1d6	19-20/x2	5	2 lbs.	P		CRB
+Martial	Light Melee Weapons	Tonfa	0	1 gp	1d4	1d6	x2	5	1 lb.	B	"blocking, monk"	UC
+Martial	Light Melee Weapons	War razor	0	8 gp	1d3	1d4	19-20/x2	5	1 lb.	S		ISWG
+Martial	Light Melee Weapons	Wushu dart (5)	0	1 gp	1d2	1d3	x2	10		P	monk	UC
+Martial	Light Melee Weapons	Kukri	0	8 gp	1d3	1d4	18-20/x2	5	2 lbs.	S		CRB
+Martial	One-Handed Melee Weapons	Battleaxe	0	10 gp	1d6	1d8	x3	5	6 lbs.	S		CRB
+Martial	One-Handed Melee Weapons	"Broadsword, nine ring"	0	15 gp	1d6	1d8	x3	5	4 lbs.	S	monk	UC
+Martial	One-Handed Melee Weapons	Double chicken saber	0	12 gp	1d4	1d6	19-20/x2	5	3 lbs.	S	"disarm, monk"	UC
+Martial	One-Handed Melee Weapons	Flail	0	8 gp	1d6	1d8	x2	5	5 lbs.	B	"disarm, trip"	CRB
+Martial	One-Handed Melee Weapons	Klar	0	12 gp	1d4	1d6	x2	5	6 lbs.	S		ISWG
+Martial	One-Handed Melee Weapons	Longsword	0	15 gp	1d6	1d8	19-20/x2	5	4 lbs.	S		CRB
+Martial	One-Handed Melee Weapons	"Pick, heavy"	0	8 gp	1d4	1d6	x4	5	6 lbs.	P		CRB
+Martial	One-Handed Melee Weapons	Rapier	1	20 gp	1d4	1d6	18-20/x2	5	2 lbs.	P		CRB
+Martial	One-Handed Melee Weapons	"Scabbard, combat (sharpened)"	0	10 gp	1d4	1d6	18-20/x2	5	1 lb.	S		AA
+Martial	One-Handed Melee Weapons	Scimitar	0	15 gp	1d4	1d6	18-20/x2	5	4 lbs.	S		CRB
+Martial	One-Handed Melee Weapons	Scizore	0	20 gp	1d8	1d10	x2	5	3 lbs.	P		UC
+Martial	One-Handed Melee Weapons	"Shield, heavy"	0	special	1d3	1d4	x2	5	special	B		CRB
+Martial	One-Handed Melee Weapons	Sibat	0	2 gp	1d4	1d6	x3	10	2 lbs.	P or S		UC
+Martial	One-Handed Melee Weapons	"Spiked shield, heavy"	0	special	1d4	1d6	x2	5	special	P		CRB
+Martial	One-Handed Melee Weapons	Sword cane	0	45 gp	1d4	1d6	x2	5	4 lbs.	P		APG
+Martial	One-Handed Melee Weapons	Terbutje	0	5 gp	1d6	1d8	19-20/x2	5	2 lbs.	S	fragile	AA
+Martial	One-Handed Melee Weapons	"Terbutje, steel"	0	20 gp	1d6	1d8	19-20/x2	5	4 lbs.	S		AA
+Martial	One-Handed Melee Weapons	Trident	0	15 gp	1d6	1d8	x2	10	4 lbs.	P	brace	CRB
+Martial	One-Handed Melee Weapons	Warhammer	0	12 gp	1d6	1d8	x3	5	5 lbs.	B		CRB
+Martial	One-Handed Melee Weapons	Scimitar	0	15 gp	1d4	1d6	18-20/x2	5	4 lbs.	S		CRB
+Martial	Two-Handed Melee Weapons	Bardiche	0	13 gp	1d8	1d10	19-20/x2	5	14 lbs.	S	"brace, reach, see text"	APG
+Martial	Two-Handed Melee Weapons	Bec de corbin	0	15 gp	1d8	1d10	x3	5	12 lbs.	B or P	"brace, reach, see text"	APG
+Martial	Two-Handed Melee Weapons	Bill	0	11 gp	1d6	1d8	x3	5	11 lbs.	S	"brace, disarm, reach, see text"	APG
+Martial	Two-Handed Melee Weapons	Earth breaker	0	40 gp	1d10	2d6	x3	5	14 lbs.	B		ISWG
+Martial	Two-Handed Melee Weapons	Falchion	0	75 gp	1d6	2d4	18-20/x2	5	8 lbs.	S		CRB
+Martial	Two-Handed Melee Weapons	"Flail, heavy"	0	15 gp	1d8	1d10	19-20/x2	5	10 lbs.	B	"disarm, trip"	CRB
+Martial	Two-Handed Melee Weapons	Glaive	0	8 gp	1d8	1d10	x3	5	10 lbs.	S	reach	CRB
+Martial	Two-Handed Melee Weapons	Glaive5guisarme	0	12 gp	1d8	1d10	x3	5	10 lbs.	S	"brace, reach, see text"	APG
+Martial	Two-Handed Melee Weapons	Greataxe	0	20 gp	1d10	1d12	x3	5	12 lbs.	S		CRB
+Martial	Two-Handed Melee Weapons	Greatclub	0	5 gp	1d8	1d10	x2	5	8 lbs.	B		CRB
+Martial	Two-Handed Melee Weapons	Greatsword	0	50 gp	1d10	2d6	19-20/x2	5	8 lbs.	S		CRB
+Martial	Two-Handed Melee Weapons	Guisarme	0	9 gp	1d6	2d4	x3	5	12 lbs.	S	"reach, trip"	CRB
+Martial	Two-Handed Melee Weapons	Halberd	0	10 gp	1d8	1d10	x3	5	12 lbs.	P or S	"brace, trip"	CRB
+Martial	Two-Handed Melee Weapons	"Hammer, lucerne"	0	15 gp	1d10	1d12	x2	5	12 lbs.	B or P	"brace, reach, see text"	APG
+Martial	Two-Handed Melee Weapons	Hooked lance	0	3 gp	1d6	1d8	x4	5	10 lbs.	P	"reach, trip"	UC
+Martial	Two-Handed Melee Weapons	Horsechopper	0	10 gp	1d8	1d10	x3	5	12 lbs.	P or S	"reach, trip"	ISWG
+Martial	Two-Handed Melee Weapons	Lance	0	10 gp	1d6	1d8	x3	5	10 lbs.	P	reach	CRB
+Martial	Two-Handed Melee Weapons	Monk�s spade	0	20 gp	1d4/1d4	1d6/1d6	x2	5	12 lbs.	B or P or S	"double, monk"	UC
+Martial	Two-Handed Melee Weapons	Naginata	0	35 gp	1d6	1d8	x4	5	9 lbs.	S	reach	UC
+Martial	Two-Handed Melee Weapons	Nodachi	0	60 gp	1d8	1d10	18-20/x2	5	8 lbs.	S or P	brace	UC
+Martial	Two-Handed Melee Weapons	Ogre hook	0	24 gp	1d8	1d10	x3	5	10 lbs.	P	trip	ISWG
+Martial	Two-Handed Melee Weapons	Pickaxe	0	14 gp	1d6	1d8	x4	5	12 lbs.	P		AP14
+Martial	Two-Handed Melee Weapons	Ranseur	0	10 gp	1d6	2d4	x3	5	12 lbs.	P	"disarm, reach"	CRB
+Martial	Two-Handed Melee Weapons	Sansetsukon	0	8 gp	1d8	1d10	19-20/x2	5	3 lbs.	B	"blocking, disarm, monk"	UC
+Martial	Two-Handed Melee Weapons	Scythe	0	18 gp	1d6	2d4	x4	5	10 lbs.	P or S	trip	CRB
+Martial	Two-Handed Melee Weapons	"Spear, syringe"	0	100 gp	1d6	1d8	x3	20	6 lbs.	P	"brace, see text"	AA
+Martial	Two-Handed Melee Weapons	"Sword, tri-point double-edged"	0	12 gp	1d8	1d10	x3	5	14 lbs.	P	reach	UC
+Martial	Two-Handed Melee Weapons	Tiger fork	0	5 gp	1d6	1d8	x2	5	8 lbs.	P	"brace, monk"	UC
+Martial	Two-Handed Melee Weapons	Greatsword	0	50 gp	1d10	2d6	19-20/x2	5	8 lbs.	S		CRB
+Martial	Ranged Weapons	Ammentum	0		1d4	1d6	x2	50	1 lb.	P	performance	UC
+Martial	Ranged Weapons	Chakram	0	1 gp	1d6	1d8	x2	30	1 lb.	S		APG
+Martial	Ranged Weapons	Hunga munga	0	4 gp	1d4	1d6	x2	15	3 lbs.	P		AA
+Martial	Ranged Weapons	Longbow	0	75 gp	1d6	1d8	x3	100	3 lbs.	P		CRB
+Martial	Ranged Weapons	"Longbow, composite"	0	100 gp	1d6	1d8	x3	110	3 lbs.	P		CRB
+Martial	Ranged Weapons	Pilum	0	5 gp	1d6	1d8	x2	20	4 lbs.	P		APG
+Martial	Ranged Weapons	Poisoned sand tube	0	1 gp	special	special		5	1 lb.			UC
+Martial	Ranged Weapons	Shortbow	0	30 gp	1d4	1d6	x3	60	2 lbs.	P		CRB
+Martial	Ranged Weapons	"Shortbow, composite"	0	75 gp	1d4	1d6	x3	70	2 lbs.	P		CRB
+Martial	Ranged Weapons	Tube arrow shooter	0	3 gp	1d3	1d4	x2	40	1/2 lb.	P		UC
+Martial	Ammunition	"Arrow, Bamboo shaft (10)"	0	1 gp				5	1/2 lb.			UC
+Martial	Ammunition	"Arrow, iron5tipped distance (20)"	0	1 gp				5	4 lbs.			UC
+Martial	Ammunition	"Arrow, whistling (20)"	0	2 gp				5	3 lbs.			UC
+Martial	Ammunition	"Arrow(s), bleeding (1)"	0	360 gp								EoG
+Martial	Ammunition	"Arrow(s), blunt (20)"	0	2 gp				5	3lbs	B		APG
+Martial	Ammunition	"Arrow(s), common (20)"	0	1 gp				5	3 lbs.	P		CRB
+Martial	Ammunition	"Arrow(s), durable (1)"	0	1 gp								EoG
+Martial	Ammunition	"Arrow(s), dye (1)"	0	1 gp					4 lbs.			EoG
+Martial	Ammunition	"Arrow(s), flight (20)"	0	2 gp					3 lbs.	P		APG
+Martial	Ammunition	"Arrow(s), lodestone (1)"	0	10 gp								EoG
+Martial	Ammunition	"Arrow(s), pheromone (1)"	0	15 gp								EoG
+Martial	Ammunition	"Arrow(s), raining (1)"	0	30 gp								EoG
+Martial	Ammunition	"Arrow(s), slow burn (1)"	0	150 gp								EoG
+Martial	Ammunition	"Arrow(s), smoke (1)"	0	10 gp				5		P		APG
+Martial	Ammunition	"Arrow(s), splintercloud (1)"	0	25 gp								EoG
+Martial	Ammunition	"Arrow(s), tanglefoot (1)"	0	20 gp								EoG
+Martial	Ammunition	"Arrow(s), thistle (1)"	0	1 gp				5	0.15 lbs	P		AA
+Martial	Ammunition	"Arrow(s), trip (1)"	0	25 gp								EoG
+Martial	Ammunition	"Arrow(s), whistling (20)"	0	10 gp				5	2 lbs.	P		AA
+Exotic	Light Melee Weapons	Aklys	0	5 gp	1d6	1d8	x2	20	2 lbs.	B	"performance, trip"	UC
+Exotic	Light Melee Weapons	"Axe, knuckle"	0	9 gp	1d4	1d6	x3	5	2 lbs.			
+Exotic	Light Melee Weapons	Barbazu beard	0	25 gp	1d3	1d4	x2	5	5 lbs	S		Cheliax
+Exotic	Light Melee Weapons	Battle poi	0	5 gp	1d3 fire	1d4 fire	x2	5	2 lbs.	fire		AA
+Exotic	Light Melee Weapons	Bich�hwa	0	5 gp	1d3	1d4	19-20/x2	5	2 lbs.	P or S	monk	?
+Exotic	Light Melee Weapons	"Dagger, swordbreaker"	0	10 gp	1d3	1d4	x2	5	3 lbs.	S	"disarm, sunder"	APG
+Exotic	Light Melee Weapons	Dan bong	0	1 sp	1d2	1d3	19-20/x2	10		B	"blocking, monk"	UC
+Exotic	Light Melee Weapons	Emei piercer	0	3 gp	1d2	1d3	19-20/x2	5		P	"monk, see text"	UC
+Exotic	Light Melee Weapons	Fighting fan	0	5 gp	1d3	1d4	x3	5		S or P	"distracting, monk"	UC
+Exotic	Light Melee Weapons	Kama	0	2 gp	1d4	1d6	x2	5	2 lbs.	S	"monk, trip"	CRB
+Exotic	Light Melee Weapons	"Katar, tri5bladed"	0	6 gp	1d3	1d4	x4	5	2 lbs.	P		PCS
+Exotic	Light Melee Weapons	"Knife, butterfly"	0	5 gp	1d3	1d4	19-20/x2	5	1 lb.	P or S		AA
+Exotic	Light Melee Weapons	Madu (leather)	0	40 gp	1d3	1d4	x2	5	5 lbs.	P	performance	UC
+Exotic	Light Melee Weapons	Madu (steel)	0	40 gp	1d3	1d4	x2	5	6 lbs.	P	performance	UC
+Exotic	Light Melee Weapons	"Maulaxe, dwarven"	0	25 gp	1d4	1d6	x3	10	5 lbs.	B or S		AA
+Exotic	Light Melee Weapons	Nunchaku	0	2 gp	1d4	1d6	x2	5	2 lbs.	B	"disarm, monk"	CRB
+Exotic	Light Melee Weapons	Pata	0	14 gp	1d4	1d6	x3	5	3 lbs.	P	performance	UC
+Exotic	Light Melee Weapons	Quadrens	0	8 gp	1d4	1d6	19-20/x2	5	2 lbs.	P	performance	UC
+Exotic	Light Melee Weapons	Rope gauntlet	0	2 sp	1d3	1d4	x2	5	2 lbs.	B (or S)		AA
+Exotic	Light Melee Weapons	Sai	0	1 gp	1d3	1d4	x2	5	1 lb.	B	"disarm, monk"	CRB
+Exotic	Light Melee Weapons	Siangham	0	3 gp	1d4	1d6	x2	5	1 lb.	P	monk	CRB
+Exotic	Light Melee Weapons	Sica	0	10 gp	1d4	1d6	x2	5	2 lbs.	S	performance	UC
+Exotic	Light Melee Weapons	Tekko5kagi (iron claw)	0	2 gp	1d2	1d3	x2	5		P	"disarm, see text"	UC
+Exotic	Light Melee Weapons	Thorn bracer	0	30 gp	1d4	1d6	x2	5	3 lbs.	P		PCS
+Exotic	Light Melee Weapons	Wakizashi	0	35 gp	1d4	1d6	18-20/x2	5	2 lbs.	P or S	deadly	UC
+Exotic	Light Melee Weapons	"Whip, scorpion"	1	5 gp	1d3	1d4	x2	5	3 lbs.	S	"disarm, reach, trip"	UC
+Exotic	One-Handed Melee Weapons	"Axe, hooked"	0	20 gp	1d6	1d8	x3	5	7 lbs.	S	"disarm, performance, trip"	UC
+Exotic	One-Handed Melee Weapons	Falcata	0	18 gp	1d6	1d8	19-20/x3	5	4 lbs.	S		APG
+Exotic	One-Handed Melee Weapons	Flindbar	0	?	1d6	1d8	?	5	?	B	disarm	CMR
+Exotic	One-Handed Melee Weapons	Katana	0	50 gp	1d6	1d8	18-20/x2	5	6 lbs.	S	deadly	UC
+Exotic	One-Handed Melee Weapons	Khopesh	0	20 gp	1d6	1d8	19-20/x2	5	8 lbs.	S	trip	APG
+Exotic	One-Handed Melee Weapons	Nine-section whip	1	8 gp	1d6	1d8	19-20/x2	5	3 lbs.	B	"blocking, distracting, monk, trip"	UC
+Exotic	One-Handed Melee Weapons	Rhoka	0	5 gp	1d6	1d8	18-20/x2	5	6 lbs.	S		AA
+Exotic	One-Handed Melee Weapons	"Sabre, sawtooth"	0	35 gp	1d6	1d8	19-20/x2	5	2 lbs.	S		ISWG
+Exotic	One-Handed Melee Weapons	Shotel	0	30 gp	1d6	1d8	x3	5	3 lbs.	P	performance	UC
+Exotic	One-Handed Melee Weapons	"Sword, Aldori dueling"	0	20 gp	1d6	1d8	19-20/x2	5	3 lbs	S		ISWG
+Exotic	One-Handed Melee Weapons	"Sword, bastard"	0	35 gp	1d8	1d10	19-20/x2	5	6 lbs.	S		CRB
+Exotic	One-Handed Melee Weapons	"Sword, temple"	0	30 gp	1d6	1d8	19-20/x2	5	3 lbs.	S	"monk, trip"	APG
+Exotic	One-Handed Melee Weapons	Urumi	0	30 gp	1d6	1d8	18-20/x2	5	6 lbs.	S		ISWG
+Exotic	One-Handed Melee Weapons	"Waraxe, dwarven"	0	30 gp	1d8	1d10	x3	5	8 lbs. S			CRB
+Exotic	One-Handed Melee Weapons	Whip	1	1 gp	1d2	1d3	x2	5	2 lbs.	S	"disarm, nonlethal, reach, trip"	CRB
+Exotic	One-Handed Melee Weapons	Falcata	0	18 gp	1d6	1d8	19-20/x3	5	4 lbs.	S		APG
+Exotic	 Two-Handed Melee Weapons	"Axe, orc double"	0	60 gp	1d6/1d6	1d8/1d8	x3	5	15 lbs.	S	double	CRB
+Exotic	 Two-Handed Melee Weapons	Battle Ladder	0	20 gp	1d4/1d4	1d6/1d6	x2	5	8 lbs.	B	trip	GoG
+Exotic	 Two-Handed Melee Weapons	Bo staff	0	1 gp	1d4	1d6	x2	5	3 lbs.	B	"blocking, double, monk"	UC
+Exotic	 Two-Handed Melee Weapons	"Chain, spiked"	1	25 gp	1d6	2d4	x2	5	10 lbs.	P	"disarm, trip"	CRB
+Exotic	 Two-Handed Melee Weapons	"Curve blade, elven"	0	80 gp	1d8	1d10	18-20/x2	5	7 lbs.	S		CRB
+Exotic	 Two-Handed Melee Weapons	"Dorn Dergar, dwarven"	0	50 gp	1d8	1d10	x2	5	15 lbs.	B	reach	DoG
+Exotic	 Two-Handed Melee Weapons	Fauchard	0	14 gp	1d8	1d10	18-20/x2	5	10 lbs.	S	"reach, trip"	CHR
+Exotic	 Two-Handed Melee Weapons	"Flail, dire"	0	90 gp	1d6/1d6	1d8/1d8	x2	5	10 lbs.	B	"disarm, double, trip"	CRB
+Exotic	 Two-Handed Melee Weapons	Flailpole	0	15 gp	1d6	1d8	x2	5	10 lbs.	S	"reach, trip"	GoG
+Exotic	 Two-Handed Melee Weapons	Flambard	0	50 gp	1d8	1d10	19-20/x2	5	6 lbs.	S	sunder	AA
+Exotic	 Two-Handed Melee Weapons	Flying blade	0	40 gp	1d10	1d12	x3	5	12 lbs.	S	"performance, reach"	UC
+Exotic	 Two-Handed Melee Weapons	Garrote	0	3 gp	1d4	1d6	x2	5	1 lb.	S	"grapple, see text"	AA
+Exotic	 Two-Handed Melee Weapons	"Hammer, gnome hooked"	0	20 gp	1d6/1d4	1d8/1d6	x3/x4	5	6 lbs.	B or P	"double, trip"	CRB
+Exotic	 Two-Handed Melee Weapons	"Kama, double-chained"	0	8 gp	1d4/1d4	1d6/1d6	x2	5	4 lbs.	S	"double, monk, reach, trip"	UC
+Exotic	 Two-Handed Melee Weapons	"Katana, double walking stick"	0	50 gp	1d4/1d4	1d6/1d6	x3	5	6 lbs.	B	double	UC
+Exotic	 Two-Handed Melee Weapons	Kusarigama (sickle and chain)	0	12 gp	1d2/1d4	1d3/1d6	x2	5	3 lbs.	S or B	"double, monk, reach, trip, grapple"	UC
+Exotic	 Two-Handed Melee Weapons	Kyoketsu shoge	0	6 gp	1d3	1d4	x2	20	1 lb.	S or P	"disarm, grapple, monk, reach"	UC
+Exotic	 Two-Handed Melee Weapons	Mancatcher	0	15 gp	1	1d2	x2	5	10 lbs.	P	"grapple, reach, see text"	APG
+Exotic	 Two-Handed Melee Weapons	Meteor hammer	0	10 gp	1d6	1d8	x2	5	10 lbs.	B	"reach, trip"	UC
+Exotic	 Two-Handed Melee Weapons	Piston maul	0	70 gp	1d8	1d10	x2	5	15 lbs.	B		GoG
+Exotic	 Two-Handed Melee Weapons	Ripsaw glaive	0	30 gp	1d8	1d10	x3	5	12 lbs.	S	"reach, see text"	GoG
+Exotic	 Two-Handed Melee Weapons	"Scarf, bladed"	0	12 gp	1d4	1d6	x2	5	2 lbs.	S	"disarm, trip"	ISWG
+Exotic	 Two-Handed Melee Weapons	"Spear, totem"	0	25 gp	1d8	1d10	x3	10	6 lbs.	P or S		CRB
+Exotic	 Two-Handed Melee Weapons	"Sword, seven-branched"	0	50 gp	1d8	1d10	x3	5	7 lbs.	S	"disarm, monk"	UC
+Exotic	 Two-Handed Melee Weapons	"Sword, Two-bladed"	0	100 gp	1d6/1d6	1d8/1d8	19-20/x2	5	10 lbs.	S	double	CRB
+Exotic	 Two-Handed Melee Weapons	Tetsubo	0	20 gp	1d8	1d10	x4	5	10 lbs.	B		UC
+Exotic	 Two-Handed Melee Weapons	"Urgrosh, dwarven"	0	50 gp	1d6/1d4	1d8/1d6	x3	5	12 lbs.	P or S	"brace, double"	CRB
+Exotic	Ranged Weapons	Bola	0	5 gp	1d3	1d4	x2	10	2 lbs.	B	"nonlethal, trip"	CRB
+Exotic	Ranged Weapons	"Bola, Shoanti"	0	15 gp	1d3	1d4	x2	10	2 lbs.	B and P	trip	ISWG
+Exotic	Ranged Weapons	Boomerang	0	3 gp	1d4	1d6	x2	30	3 lbs.	B		APG
+Exotic	Ranged Weapons	"Bow, thorn"	0	50 gp	1d4	1d6	x3	40	2 lbs.	P		AA
+Exotic	Ranged Weapons	"Chakram, crystal"	0	20 gp	1d4	1d6	18-20/x2	5	2 lbs.	S		CHR
+Exotic	Ranged Weapons	"Crossbow, double"	0	300 gp	1d6	1d8	19-20/x2	80	18 lbs.	P		APG
+Exotic	Ranged Weapons	"Crossbow, hand"	0	100 gp	1d3	1d4	19-20/x2	30	2 lbs.	P		CRB
+Exotic	Ranged Weapons	"Crossbow, launching"	0	75 gp				30	8 lbs.			AA
+Exotic	Ranged Weapons	"Crossbow, repeating"	0	250 gp	1d6	1d8	19-20/x2	80	6 lbs.	P		CRB
+Exotic	Ranged Weapons	"Crossbow, repeating heavy"	0	400 gp	1d8	1d10	19-20/x2	120	12 lbs.	P		CRB
+Exotic	Ranged Weapons	Flask Thrower	0	25 gp				20	4 lbs.			GoG
+Exotic	Ranged Weapons	Lasso	0	1 sp				5	5 lbs.			APG
+Exotic	Ranged Weapons	Net	0	20 gp				10	6 lbs.			CRB
+Exotic	Ranged Weapons	Rope dart	0	1 gp	1d3	1d4	x2	20		P	"blocking, distracting, monk"	UC
+Exotic	Ranged Weapons	"Shield, throwing"	0	+50 gp	1d4	1d6	x2	20		B	"performance, trip"	UC
+Exotic	Ranged Weapons	Shrillshaft javelin	0	35 gp	1d4	1d6	x2	30	3 lbs.	P		GoG
+Exotic	Ranged Weapons	Sling glove	0	5 gp	1d3	1d4	x2	50	2 lbs.	B		AA
+Exotic	Ranged Weapons	"Sling staff, halfling"	0	20 gp	1d6	1d8	x3	80	3 lbs.	B		CRB
+Exotic	Ranged Weapons	"Sling, double"	0	10 gp	1d3	1d4	x2	50	1 lb.	B	"double, see text"	HoG
+Exotic	Ranged Weapons	"Sling, stitched"	0		1d4	1d6	x2	5	1 lb.	B	"disarm, trip"	HoG
+Exotic	Ammunition	"Crossbow bolt(s), heavy/light/hand (10)"	0	1 gp				5	1 lb.			CRB
+Exotic	Ammunition	"Crossbow bolt(s), repeating, heavy/light (5)"	0	1 gp				5	1 lb.			CRB
+Exotic	Ammunition	Little starstones (10)	0	5 cp	1	1		5	2 lbs.	B	nonlethal	HoG
+Exotic	Ammunition	Sharpstones (10)	0	1 gp	1d3	1d4		5	5 lbs.	P or S		HoG
+Exotic	Ammunition	Shuriken (5)	0	1 gp	1	1d2	x2	10	1/2 lb.	P	monk	CRB
+Exotic	Ammunition	Softstones (10)	0	1 sp				5	4 lbs.	B	nonlethal	HoG
+Exotic	Ammunition	Spongestones (10)	0	10 gp				5	2 lbs.	P		HoG
+Exotic	Ammunition	Thorn (20)	0	1 gp				5	1 lb.			HoG 
