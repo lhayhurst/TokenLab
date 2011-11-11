@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Class-Path: commons-beanutils-1.8.3.jar commons-lang-2.6.jar xstream-1
+ .4.1.jar commons-collections-3.2.1.jar commons-digester3-3.1.jar with
+ ay-util.jar xmlpull-1.1.3.1.jar maptool-1.3.b87.jar jide-common-3.2.3
+ .jar json-lib-2.4-jdk15.jar maptool.resource-1.0.b18.jar jide-dock-3.
+ 2.3.jar log4j-1.2.15.jar xpp3_min-1.1.4c.jar rplib-1.0.b132.jar commo
+ ns-jxpath-1.3.jar gson-1.7.1.jar clientserver-1.0.b17.jar commons-log
+ ging-1.1.1.jar commons-io-2.0.1.jar parser-1.1.b24.jar commons-beanut
+ ils-1.8.3.jar commons-lang-2.6.jar xstream-1.4.1.jar commons-collecti
+ ons-3.2.1.jar commons-digester3-3.1.jar withay-util.jar xmlpull-1.1.3
+ .1.jar maptool-1.3.b87.jar jide-common-3.2.3.jar json-lib-2.4-jdk15.j
+ ar maptool.resource-1.0.b18.jar jide-dock-3.2.3.jar log4j-1.2.15.jar 
+ xpp3_min-1.1.4c.jar rplib-1.0.b132.jar commons-jxpath-1.3.jar gson-1.
+ 7.1.jar clientserver-1.0.b17.jar commons-logging-1.1.1.jar commons-io
+ -2.0.1.jar parser-1.1.b24.jar
+Main-Class: net.sozinsoft.tokenlab.HerolabsDigester
+

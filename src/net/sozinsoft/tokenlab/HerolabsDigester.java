@@ -60,6 +60,10 @@ public class HerolabsDigester {
             e.printStackTrace();
             System.exit(-1);
 
+
+        }  finally {
+            ResourceManager.cleanupTmpFiles();
+            System.exit(-1);
         }
 
         System.exit(0);
@@ -68,7 +72,7 @@ public class HerolabsDigester {
 
     private void processCharacters(Config config) throws IOException, SAXException {
 
-        WeaponCache cache = new WeaponCache( ResourceManager.getWeapons().getAbsolutePath() );
+        //WeaponCache cache = new WeaponCache( ResourceManager.getWeapons().getAbsolutePath() );
         for (Character c : this.characters) {
             Config.ConfigEntry ce = config.get(c.getName());
 
@@ -77,7 +81,7 @@ public class HerolabsDigester {
                 continue;
             }
 
-            PathfinderToken pt = new PathfinderToken(c, cache);
+            PathfinderToken pt = new PathfinderToken(c, null);
             Token t = pt.asToken(ce);
             PersistenceUtil.saveToken(t, ce.getOutputTokenTo(), true);
         }
