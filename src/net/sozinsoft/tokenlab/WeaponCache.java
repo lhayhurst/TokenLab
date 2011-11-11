@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class WeaponCache {
 
     public class Entry {
-        String WeaponType;
+
 
         public boolean isSimpleWeapon() {
             return WeaponType.equals( "Simple");
@@ -19,6 +19,10 @@ public class WeaponCache {
 
         public boolean isExoticWeapon() {
             return WeaponType.equals( "Exotic");
+        }
+
+        public boolean isNaturalWeapon() {
+            return WeaponType.equals("Natural");
         }
 
         public boolean isLightWeapon() {
@@ -37,6 +41,7 @@ public class WeaponCache {
             return WeaponEffort.equals("Ranged Weapons");
         }
 
+
         public boolean isAmmunition() {
             return WeaponEffort.equals("Ammunition");
         }
@@ -45,35 +50,16 @@ public class WeaponCache {
             return this.finessable.equals("1");
         }
 
+        String WeaponType;
         String WeaponEffort;
         String Weapon;
         String finessable;
-        String Cost;
-        String DamageSmall;
-        String DamageMedium;
-        String crit;
-        String range;
-        String Weight;
-        String Type;
-        String Special;
-        String Source;
 
-        public Entry(String WeaponType , String WeaponEffort, String Weapon, String finessable, String Cost,
-                     String DamageSmall, String DamageMedium, String crit, String range, String Weight,
-                     String Type , String Special , String Source ) {
+        public Entry(String WeaponType , String WeaponEffort, String Weapon, String finessable ) {
             this.WeaponType = WeaponType;
             this.WeaponEffort = WeaponEffort;
             this.Weapon = Weapon;
             this.finessable = finessable;
-            this.Cost = Cost;
-            this.DamageSmall = DamageSmall;
-            this.DamageMedium = DamageMedium;
-            this.crit = crit;
-            this.range = range;
-            this.Weight = Weight;
-            this.Type = Type;
-            this.Special = Special;
-            this.Source = Source;
         }
     }
 
@@ -92,11 +78,7 @@ public class WeaponCache {
 
         while ((strLine = br.readLine()) != null)   {
             String[] entries = strLine.split("\\t");
-            if( entries[7] == null  ) {
-                continue;
-            }
-            Entry e = new Entry( entries[0], entries[1], entries[2], entries[3], entries[4], entries[5],
-                                 entries[6], entries[7], null, null, null, null, null );
+            Entry e = new Entry( entries[0], entries[1], entries[2], entries[3] );
             cache.put( e.Weapon.toLowerCase(), e );
         }
 

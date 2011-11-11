@@ -136,6 +136,10 @@ public class Character {
             }
         }
 
+        if ( offHand == null ) {
+            return false;
+        }
+
         if ( offHand.isUnarmedStrike() ) {
             return true;
         }

@@ -35,7 +35,6 @@ class Weapon {
     public Weapon(String name, String damage, String category, String crit,
                   String attackBonus, String equipped, String weaponType, String description) {
         this.name = name;
-        basicName = extractBasicWeaponName(name);
         parseEnhancementBonus(name);
         this.damage = new Damage(damage);
         this.damageDice = this.damage.asExpression();
@@ -51,6 +50,8 @@ class Weapon {
 
     //see http://www.d20pfsrd.com/equipment---final/weapons for how this stuff all works.
     public void inferAbilityBonus(Character c, WeaponCache cache) {
+
+        basicName = extractBasicWeaponName(this.name, c );
 
         if ( c.hasWeaponFocus( this.name ) ) {
             hasWeaponFocus = 1;
@@ -83,16 +84,9 @@ class Weapon {
             weaponEntry = cache.get( this.basicName );
             if ( weaponEntry == null ) {
                 //special case handling for natural attacks.  sigh.
-                if ( isNaturalAttack()) {
-                    abilityBonus = STR_BONUS;
-                    hasWeaponProficiency = 1;
-                    return;
-                }
-                else {
-                    System.out.println( "Unable to determine information about weapon " + this.name +
+                System.out.println( "Unable to determine information about weapon " + this.name +
                                         ", please file a bug report at githib"); //TODO: handle more gracefully
-                    return;
-                }
+                return;
             }
         }
 
@@ -118,6 +112,9 @@ class Weapon {
             else {
                 abilityBonus = STR_BONUS;
             }
+        }
+        else if ( weaponEntry.isNaturalWeapon()) {
+            abilityBonus = STR_BONUS;
         }
         else if ( weaponEntry.isOneHandedMeleeWeapon() ) {
             if ( c.hasWeaponFinesseFeat()) {
@@ -175,7 +172,7 @@ class Weapon {
         if ( isUnarmedStrike()  ) {  //All characters are proficient with unarmed strikes
             hasWeaponProficiency = 1;
         }
-        else if ( this.isNaturalAttack() ) {
+        else if ( weaponEntry.isNaturalWeapon() ) {
             hasWeaponProficiency = 1;
         }
         else if ( weaponEntry.isSimpleWeapon() ) {
@@ -191,15 +188,6 @@ class Weapon {
                 this.hasWeaponProficiency = 1;
             }
         }
-    }
-
-    private boolean isNaturalAttack() {
-        //TODO: this is kind of a hack, but since it isn't in the herolabs xml, we're
-        //stuck with what we have
-        return this.description!= null &&
-               !this.description.isEmpty() &&
-               this.description.indexOf(" natural ") >= 0 ||
-               this.description.indexOf(" Natural ") >= 0;
     }
 
     public boolean isUnarmedStrike() {
@@ -248,19 +236,26 @@ class Weapon {
         }
     }
 
-    private String extractBasicWeaponName( String name ) {
+    private String extractBasicWeaponName( String name, Character c ) {
         Pattern regex = Pattern.compile("^.*?\\s+(\\w+)$");
         java.util.regex.Matcher matcher = regex.matcher(name);
         if (matcher.find()) {
             return matcher.group(1);
         }
-        else {  //edge case (UGH): maybe its a composite ranged weapon?
-            regex=Pattern.compile("^.*?\\s+(\\w+),\\s+Composite");
+        regex=Pattern.compile("^.*?\\s+(\\w+),\\s+Composite");   //edge case (UGH): maybe its a composite ranged weapon?
+        matcher = regex.matcher(name);
+        if (matcher.find() ) {
+            return matcher.group(1);
+        }
+        else {  //edge case2 Some sort of natural weapon, like 'Constrict (Ochre Jelly)'
+            String pattern = "^(\\w+)\\s+\\(" + c.getName() + "\\)";
+            regex=Pattern.compile( pattern );
             matcher = regex.matcher(name);
             if (matcher.find() ) {
                 return matcher.group(1);
             }
         }
+
         return name;
     }
 
