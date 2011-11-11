@@ -176,7 +176,7 @@ public class PathfinderToken {
 		int conBonus = con.getBonus();
 		int baseHitpoints = hp - conBonus * level;
 		t.setProperty( CLASS_HP, Integer.toString( baseHitpoints ) );
-		t.setProperty(MISC_HP, Integer.toString( hp - baseHitpoints ) );
+		//t.setProperty(MISC_HP, Integer.toString( hp - baseHitpoints ) );
 	}
 
     private void setPenalties(Token t) {
@@ -292,6 +292,7 @@ public class PathfinderToken {
             newAttack.setLabel( w.name );
             macroButtonSet.add( attackButtonIndex++, newAttack );
         }
+
 
         t.getMacroNextIndex(); //TODO: this is a hack to create the underlying macroPropertiesMap hash table
         t.replaceMacroList(macroButtonSet);

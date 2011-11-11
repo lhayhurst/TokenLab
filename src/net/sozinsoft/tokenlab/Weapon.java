@@ -96,6 +96,7 @@ class Weapon {
             }
         }
 
+
         this.twoWeaponFightingPenalty = getTwoWeaponFightingPenalty(c, cache );
 
         setWeaponProficiency(c, weaponEntry);
@@ -235,7 +236,7 @@ class Weapon {
     //this method is a bit of a hack as herolabs doesn't provide an actual enhancement bonus in its xml
     //TODO: http://forums.wolflair.com/showthread.php?p=65056&posted=1#post65056 thread asking for it
     private void parseEnhancementBonus(String name) {
-        Pattern regex = Pattern.compile("\\+(\\d+)");
+        Pattern regex = Pattern.compile("\\+(\\d+)\\s+");
         java.util.regex.Matcher matcher = regex.matcher(name);
         if (matcher.find()) {
             this.enhancementBonus = Integer.parseInt(matcher.group(1));
@@ -253,9 +254,14 @@ class Weapon {
         if (matcher.find()) {
             return matcher.group(1);
         }
-        else {
-            return name;
+        else {  //edge case (UGH): maybe its a composite ranged weapon?
+            regex=Pattern.compile("^.*?\\s+(\\w+),\\s+Composite");
+            matcher = regex.matcher(name);
+            if (matcher.find() ) {
+                return matcher.group(1);
+            }
         }
+        return name;
     }
 
     private void parseCrit(String crit) {

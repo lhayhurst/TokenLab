@@ -1,0 +1,44 @@
+<config>
+    <token
+      name="Goblin"
+      imageFilePath="C:/Users/lhayhurst/Documents/My Dropbox/PFS Scenarios/pogs/taxonomy/humanoid/monstrous/goblin/goblin_dragon.png"
+      portraitFilePath="C:/Users/lhayhurst/Documents/My Dropbox/PFS Scenarios/Portraits/humanoid/monstrous/goblin/monstrousHumanoid_goblin_dragon.jpg"
+      outputTokenTo="C:/play/gob.rptok">
+    </token>
+    <token
+      name="Attic Whisperer"
+      imageFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Paizo\Art\Pogs\undead\undead_atticwhisperer.png"
+      portraitFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Paizo\Art\Portraits\undead\undead_atticWhisperer.jpg"
+      outputTokenTo="C:/play/atticWhisperer.rptok">
+    </token>
+    <token
+      name="Cael of Herth"
+      imageFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Windy City Pathfinder Society\Pogs\Cael of Herth.png"
+      portraitFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Windy City Pathfinder Society\Pogs\Cael of Herth.png"
+      outputTokenTo="C:/play/Cael.rptok">
+    </token>
+    <token
+      name="Karim"
+      imageFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Paizo\Art\Pogs\humanoid\human\human_dervish.png"
+      portraitFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Paizo\Art\Portraits\humanoid\human\human_dervish3.jpg"
+      outputTokenTo="C:/play/Karim.rptok">
+    </token>
+    <token
+      name="Red Dragon, Old"
+      imageFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Paizo\Art\Pogs\dragon\dragon_red.png"
+      portraitFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Paizo\Art\Portraits\dragon\dragon_red_2.jpg"
+      outputTokenTo="C:/play/redDragon.rptok">
+    </token>
+    <token
+      name="Gralknash Ironmace"
+      imageFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Windy City Pathfinder Society\Pogs\Gralknash.png"
+      portraitFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Windy City Pathfinder Society\Pogs\Gralknash.png"
+      outputTokenTo="C:/play/Gralknash.rptok">
+    </token>
+    <token
+      name="Mitsumoto Kakashi"
+      imageFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Windy City Pathfinder Society\Pogs\Kakashi.png"
+      portraitFilePath="C:\Users\lhayhurst\Documents\My Dropbox\Windy City Pathfinder Society\Pogs\Kakashi.png"
+      outputTokenTo="C:/play/Mitsumoto.rptok">
+    </token>
+</config>
