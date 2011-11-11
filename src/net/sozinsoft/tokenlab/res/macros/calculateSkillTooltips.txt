@@ -1,0 +1,121 @@
+<!-- Set Skill Tooltips and Button Colors -->
+
+[h: setMacroProps("Acrobatics","tooltip=+ "+string(Acrobatics+DexBonus+ArmorCheckPenalty))]
+[h, if(AcrobaticsClassSkill==1), CODE: {[setMacroProps("Acrobatics","color=lightgray")]};{[setMacroProps("Acrobatics","color=white")]}]
+
+[h: setMacroProps("Appraise","tooltip=+ "+string(Appraise+IntBonus))]
+[h, if(AppraiseClassSkill==1), CODE: {[setMacroProps("Appraise","color=lightgray")]};{[setMacroProps("Appraise","color=white")]}]
+
+[h: setMacroProps("Bluff","tooltip=+ "+string(Bluff+ChaBonus))]
+[h, if(BluffClassSkill==1), CODE: {[setMacroProps("Bluff","color=lightgray")]};{[setMacroProps("Bluff","color=white")]}]
+
+[h: setMacroProps("Climb","tooltip=+ "+string(Climb+StrBonus+ArmorCheckPenalty))]
+[h, if(ClimbClassSkill==1), CODE: {[setMacroProps("Climb","color=lightgray")]};{[setMacroProps("Climb","color=white")]}]
+
+[h: setMacroProps("Craft","tooltip=+ "+string(Craft+IntBonus))]
+[h, if(CraftClassSkill==1), CODE: {[setMacroProps("Craft","color=lightgray")]};{[setMacroProps("Craft","color=white")]}]
+
+[h: setMacroProps("Diplomacy","tooltip=+ "+string(Diplomacy+ChaBonus))]
+[h, if(DiplomacyClassSkill==1), CODE: {[setMacroProps("Diplomacy","color=lightgray")]};{[setMacroProps("Diplomacy","color=white")]}]
+
+[h: setMacroProps("Disable Device","tooltip=+ "+string(DisableDevice+DexBonus+ArmorCheckPenalty))]
+[h, if(DisableDeviceClassSkill==1), CODE: {[setMacroProps("Disable Device","color=lightgray")]};{[setMacroProps("Disable Device","color=white")]}]
+
+[h: setMacroProps("Disguise","tooltip=+ "+string(Disguise+ChaBonus))]
+[h, if(DisguiseClassSkill==1), CODE: {[setMacroProps("Disguise","color=lightgray")]};{[setMacroProps("Disguise","color=white")]}]
+
+[h: setMacroProps("Escape Artist","tooltip=+ "+string(EscapeArtist+DexBonus+ArmorCheckPenalty))]
+[h, if(EscapeArtistClassSkill==1), CODE: {[setMacroProps("Escape Artist","color=lightgray")]};{[setMacroProps("Escape Artist","color=white")]}]
+
+[h: setMacroProps("Fly","tooltip=+ "+string(Fly+DexBonus+ArmorCheckPenalty))]
+[h, if(FlyClassSkill==1), CODE: {[setMacroProps("Fly","color=lightgray")]};{[setMacroProps("Fly","color=white")]}]
+
+[h: setMacroProps("Handle Animal","tooltip=+ "+string(HandleAnimal+ChaBonus))]
+[h, if(HandleAnimalClassSkill==1), CODE: {[setMacroProps("Handle Animal","color=lightgray")]};{[setMacroProps("Handle Animal","color=white")]}]
+
+[h: setMacroProps("Heal","tooltip=+ "+string(Heal+WisBonus))]
+[h, if(HealClassSkill==1), CODE: {[setMacroProps("Heal","color=lightgray")]};{[setMacroProps("Heal","color=white")]}]
+
+[h: setMacroProps("Intimidate","tooltip=+ "+string(Intimidate+ChaBonus))]
+[h, if(IntimidateClassSkill==1), CODE: {[setMacroProps("Intimidate","color=lightgray")]};{[setMacroProps("Intimidate","color=white")]}]
+
+[h: setMacroProps("Knowledge Arcana","tooltip=+ "+string(KnowledgeArcana+IntBonus))]
+[h, if(KnowledgeArcanaClassSkill==1), CODE: {[setMacroProps("Knowledge Arcana","color=lightgray")]};{[setMacroProps("Knowledge Arcana","color=white")]}]
+
+[h: setMacroProps("Knowledge Dungeoneering","tooltip=+ "+string(KnowledgeDungeoneering+IntBonus))]
+[h, if(KnowledgeDungeoneeringClassSkill==1), CODE: {[setMacroProps("Knowledge Dungeoneering","color=lightgray")]};{[setMacroProps("Knowledge Dungeoneering","color=white")]}]
+
+[h: setMacroProps("Knowledge Engineering","tooltip=+ "+string(KnowledgeEngineering+IntBonus))]
+[h, if(KnowledgeEngineeringClassSkill==1), CODE: {[setMacroProps("Knowledge Engineering","color=lightgray")]};{[setMacroProps("Knowledge Engineering","color=white")]}]
+
+[h: setMacroProps("Knowledge Geography","tooltip=+ "+string(KnowledgeGeography+IntBonus))]
+[h, if(KnowledgeGeographyClassSkill==1), CODE: {[setMacroProps("Knowledge Geography","color=lightgray")]};{[setMacroProps("Knowledge Geography","color=white")]}]
+
+[h: setMacroProps("Knowledge History","tooltip=+ "+string(KnowledgeHistory+IntBonus))]
+[h, if(KnowledgeHistoryClassSkill==1), CODE: {[setMacroProps("Knowledge History","color=lightgray")]};{[setMacroProps("Knowledge History","color=white")]}]
+
+[h: setMacroProps("Knowledge Local","tooltip=+ "+string(KnowledgeLocal+IntBonus))]
+[h, if(KnowledgeLocalClassSkill==1), CODE: {[setMacroProps("Knowledge Local","color=lightgray")]};{[setMacroProps("Knowledge Local","color=white")]}]
+
+[h: setMacroProps("Knowledge Nature","tooltip=+ "+string(KnowledgeNature+IntBonus))]
+[h, if(KnowledgeNatureClassSkill==1), CODE: {[setMacroProps("Knowledge Nature","color=lightgray")]};{[setMacroProps("Knowledge Nature","color=white")]}]
+
+[h: setMacroProps("Knowledge Nobility","tooltip=+ "+string(KnowledgeNobility+IntBonus))]
+[h, if(KnowledgeNobilityClassSkill==1), CODE: {[setMacroProps("Knowledge Nobility","color=lightgray")]};{[setMacroProps("Knowledge Nobility","color=white")]}]
+
+[h: setMacroProps("Knowledge Planes","tooltip=+ "+string(KnowledgePlanes+IntBonus))]
+[h, if(KnowledgePlanesClassSkill==1), CODE: {[setMacroProps("Knowledge Planes","color=lightgray")]};{[setMacroProps("Knowledge Planes","color=white")]}]
+
+[h: setMacroProps("Knowledge Religion","tooltip=+ "+string(KnowledgeReligion+IntBonus))]
+[h, if(KnowledgeReligionClassSkill==1), CODE: {[setMacroProps("Knowledge Religion","color=lightgray")]};{[setMacroProps("Knowledge Religion","color=white")]}]
+
+[h: setMacroProps("Linguistics","tooltip=+ "+string(Linguistics+IntBonus))]
+[h, if(LinguisticsClassSkill==1), CODE: {[setMacroProps("Linguistics","color=lightgray")]};{[setMacroProps("Linguistics","color=white")]}]
+
+[h: setMacroProps("Perception","tooltip=+ "+string(Perception+WisBonus))]
+[h, if(PerceptionClassSkill==1), CODE: {[setMacroProps("Perception","color=lightgray")]};{[setMacroProps("Perception","color=white")]}]
+
+[h: setMacroProps("Perform","tooltip=+ "+string(Perform+ChaBonus))]
+[h, if(PerformClassSkill==1), CODE: {[setMacroProps("Perform","color=lightgray")]};{[setMacroProps("Perform","color=white")]}]
+
+[h: setMacroProps("Profession","tooltip=+ "+string(Profession+WisBonus))]
+[h, if(ProfessionClassSkill==1), CODE: {[setMacroProps("Profession","color=lightgray")]};{[setMacroProps("Profession","color=white")]}]
+
+[h: setMacroProps("Ride","tooltip=+ "+string(Ride+DexBonus+ArmorCheckPenalty))]
+[h, if(RideClassSkill==1), CODE: {[setMacroProps("Ride","color=lightgray")]};{[setMacroProps("Ride","color=white")]}]
+
+[h: setMacroProps("Sense Motive","tooltip=+ "+string(SenseMotive+WisBonus))]
+[h, if(SenseMotiveClassSkill==1), CODE: {[setMacroProps("Sense Motive","color=lightgray")]};{[setMacroProps("Sense Motive","color=white")]}]
+
+[h: setMacroProps("Sleight of Hand","tooltip=+ "+string(SleightOfHand+DexBonus+ArmorCheckPenalty))]
+[h, if(SleightOfHandClassSkill==1), CODE: {[setMacroProps("Sleight of Hand","color=lightgray")]};{[setMacroProps("Sleight of Hand","color=white")]}]
+
+[h: setMacroProps("Spellcraft","tooltip=+ "+string(Spellcraft+IntBonus))]
+[h, if(SpellcraftClassSkill==1), CODE: {[setMacroProps("Spellcraft","color=lightgray")]};{[setMacroProps("Spellcraft","color=white")]}]
+
+[h: setMacroProps("Stealth","tooltip=+ "+string(Stealth+DexBonus+ArmorCheckPenalty))]
+[h, if(StealthClassSkill==1), CODE: {[setMacroProps("Stealth","color=lightgray")]};{[setMacroProps("Stealth","color=white")]}]
+
+[h: setMacroProps("Survival","tooltip=+ "+string(Survival+WisBonus))]
+[h, if(SurvivalClassSkill==1), CODE: {[setMacroProps("Survival","color=lightgray")]};{[setMacroProps("Survival","color=white")]}]
+
+[h: setMacroProps("Swim","tooltip=+ "+string(Swim+StrBonus+(2*ArmorCheckPenalty)))]
+[h, if(SwimClassSkill==1), CODE: {[setMacroProps("Swim","color=lightgray")]};{[setMacroProps("Swim","color=white")]}]
+
+[h: setMacroProps("Use Magic Device","tooltip=+ "+string(UseMagicDevice+ChaBonus))]
+[h, if(UseMagicDeviceClassSkill==1), CODE: {[setMacroProps("Use Magic Device","color=lightgray")]};{[setMacroProps("Use Magic Device","color=white")]}]
+
+<!-- Misc Skills -->
+
+[h: setMacroProps(MiscSkill1OldName,"label="+MiscSkill1Name)]
+[h: setMacroProps(MiscSkill1OldName,"tooltip=+ "+string(MiscSkill1))]
+[h, if(MiscSkill1ClassSkill==1), CODE: {[setMacroProps(MiscSkill1OldName,"color=lightgray")]};{[setMacroProps(MiscSkill1OldName,"color=white")]}]
+[h: MiscSkill1OldName = MiscSkill1Name]
+[h: setMacroProps(MiscSkill2OldName,"label="+MiscSkill2Name)]
+[h: setMacroProps(MiscSkill2OldName,"tooltip=+ "+string(MiscSkill2))]
+[h, if(MiscSkill2ClassSkill==1), CODE: {[setMacroProps(MiscSkill2OldName,"color=lightgray")]};{[setMacroProps(MiscSkill2OldName,"color=white")]}]
+[h: MiscSkill2OldName = MiscSkill2Name]
+[h: setMacroProps(MiscSkill3OldName,"label="+MiscSkill3Name)]
+[h: setMacroProps(MiscSkill3OldName,"tooltip=+ "+string(MiscSkill3))]
+[h, if(MiscSkill3ClassSkill==1), CODE: {[setMacroProps(MiscSkill3OldName,"color=lightgray")]};{[setMacroProps(MiscSkill3OldName,"color=white")]}]
+[h: MiscSkill3OldName = MiscSkill3Name]

@@ -1,6 +1,6 @@
 package net.sozinsoft.tokenlab;
 
-import java.util.LinkedList;
+import java.util.*;
 import java.util.regex.Pattern;
 
 class Weapon {
@@ -19,8 +19,13 @@ class Weapon {
     int temporaryAttackModifier = 0;
     int temporaryDamageModifier = 0;
 
-    private LinkedList<String> attacks = new LinkedList<String>();
+    private HashMap<Integer, Integer> attacks = new HashMap<Integer,Integer>();
 
+    public List<Integer> sortedAttacks() {
+        List<Integer> v = new ArrayList<Integer>(attacks.keySet());
+        Collections.sort( v );
+        return v;
+    }
 
     public Weapon(String name, String damage, String category, String crit,
                   String attackBonus, String equipped, String weaponType, String description) {
@@ -38,13 +43,6 @@ class Weapon {
 
 
 
-    //see http://www.d20pfsrd.com/gamemastering/combat#TOC-Two-Weapon-Fighting for how this works.
-    //TODO: refactor this into a decision table.
-
-
-
-
-
     private void parseCrit(String crit) {
         Pattern regex = Pattern.compile("^(\\d+).*(\\d+)$");
         java.util.regex.Matcher matcher = regex.matcher(crit);
@@ -57,9 +55,10 @@ class Weapon {
     private void parseAttackBonus(String attackBonus) {
         Pattern regex = Pattern.compile("\\d+");
         java.util.regex.Matcher matcher = regex.matcher(attackBonus);
+        int count = 1;
         while (matcher.find()) {
             String ab = matcher.group();
-            attacks.add(ab);
+            attacks.put(new Integer(count++), Integer.parseInt(ab));
         }
     }
 

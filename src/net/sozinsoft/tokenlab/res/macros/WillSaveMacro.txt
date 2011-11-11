@@ -1,0 +1,12 @@
+<table border='0' cellpadding='0' cellspacing='0' style='width:200px;'>
+	<tr bgcolor='#C35617'>
+		<td>
+			<span style='color:white'><b>Will Save</b></span>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Will Roll:</b> [d20 + Will]
+		</td>
+	</tr>
+</table>

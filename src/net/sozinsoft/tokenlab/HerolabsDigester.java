@@ -66,7 +66,7 @@ public class HerolabsDigester {
     }
 
 
-    private void processCharacters(Config config) throws IOException {
+    private void processCharacters(Config config) throws IOException, SAXException {
 
         WeaponCache cache = new WeaponCache( ResourceManager.getWeapons().getAbsolutePath() );
         for (Character c : this.characters) {

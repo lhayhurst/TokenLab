@@ -1,0 +1,146 @@
+/self
+<h4><font color="#808000">Edited character sheet</font></h4>
+[H: abilScoreList =ABILITY_NAMES]
+[H: abilScoreList = json.toList(abilScoreList)]
+[H: skillList = SKILLS]
+[H: skillList = json.toList(skillList)]
+[H: abilVarList =ABILITY_VARS]
+[H: abilVarList = json.toList(abilVarList)]
+[H: acForceList = abilVarList]
+[H: miscskill1ForceList =abilVarList]
+[H: miscskill2ForceList =abilVarList]
+[H: miscskill3ForceList =abilVarList]
+[h,macro("cStatParser@this"):"Stat="+MiscSkill1AbilBonus]
+[h: miscskill1_def = macro.return]
+[h,macro("cStatParser@this"):"Stat="+MiscSkill2AbilBonus]
+[h: miscskill2_def = macro.return]
+[h,macro("cStatParser@this"):"Stat="+MiscSkill3AbilBonus]
+[h: miscskill3_def = macro.return]
+
+<!-- build skill list -->
+[h:skillText=""]
+[h, foreach(skill,skillList),code:{
+[skillText= listAppend(skillText,"blah | <html><b>"+skill+"</b></html> || LABEL | SPAN=TRUE","##")]
+[skillText= listAppend(skillText,skill+"ClassSkill | " + eval(skill+"ClassSkill")+"| Class Skill | CHECK","##")]
+[skillText= listAppend(skillText,skill+"Ranks | " + eval(skill+"Ranks")+"| Ranks | TEXT | WIDTH=4","##")]
+[skillText= listAppend(skillText,skill+"Bonus | " + eval(skill+"Bonus")+"| Bonus | TEXT | WIDTH=4","##")]
+}]
+
+<!-- Show the dialog box -->
+[H: status = input(
+	"tab0 | Info || TAB",
+    "blah | <html><br></html> | | LABEL | SPAN=TRUE",
+    	"Level | " + Level + " | Character level    | TEXT | WIDTH=4",
+    	"Speed     | " + Speed +  " | Speed (in feet)    | TEXT | WIDTH=4",
+    "blah | <html><br><b>Character Info</b></html> | | LABEL | SPAN=TRUE",
+	"Character | " + Character + " | Character Name | TEXT | WIDTH=30",
+	"Player | " + Player + " | Player Name | TEXT | WIDTH=30",
+	"Race | " + Race + " | Race | TEXT | WIDTH=30",
+	"Alignment | " + Alignment + " | Alignment | TEXT | WIDTH=30",
+	"Deity | " + Deity + " | Deity | TEXT | WIDTH=30",
+	"Occupation | " + Occupation + " | Occupation | TEXT | WIDTH=30",
+	"Languages | " + Languages + " | Languages | TEXT | WIDTH=30",
+	"Gender | " + Gender + " | Gender | TEXT | WIDTH=6",
+	"Height | " + Height + " | Height | TEXT | WIDTH=6",
+	"Weight | " + Weight + " | Weight | TEXT | WIDTH=6",
+	"Age | " + Age + " | Age | TEXT | WIDTH=6",
+
+    "tab1 | Abilities || TAB",
+    "blah | <html><br><b>Strength</b></html> | | LABEL | SPAN=TRUE",
+	"Strength | " + Strength + " | Strength | TEXT | WIDTH=4",
+	"StrEnhancement | " + StrEnhancement + " | Enhancement Bonus | TEXT | WIDTH=4",
+	"StrDamage | " + StrDamage + " | Str Damage | TEXT | WIDTH=4",
+    "blah | <html><br><b>Dexterity</b></html> | | LABEL | SPAN=TRUE",
+    "Dexterity | " + Dexterity + " | Dexterity | TEXT | WIDTH=4",
+	"DexEnhancement | " + DexEnhancement + " | Enhancement Bonus | TEXT | WIDTH=4",
+	"DexDamage | " + DexDamage + " | Dex Damage | TEXT | WIDTH=4",
+    "blah | <html><br><b>Constitution</b></html> | | LABEL | SPAN=TRUE",
+    "Constitution | " + Constitution + " | Constitution | TEXT | WIDTH=4",
+	"ConEnhancement | " + ConEnhancement + " | Enhancement Bonus | TEXT | WIDTH=4",
+	"ConDamage | " + ConDamage + " | Con Damage | TEXT | WIDTH=4",
+    "blah | <html><br><b>Intelligence</b></html> | | LABEL | SPAN=TRUE",
+    "Intelligence | " + Intelligence + " | Intelligence | TEXT | WIDTH=4",
+	"IntEnhancement | " + IntEnhancement + " | Enhancement Bonus | TEXT | WIDTH=4",
+	"IntDamage | " + IntDamage + " | Int Damage | TEXT | WIDTH=4",
+    "blah | <html><br><b>Wisdom</b></html> | | LABEL | SPAN=TRUE",
+    "Wisdom | " + Wisdom + " | Wisdom | TEXT | WIDTH=4",
+	"WisEnhancement | " + WisEnhancement + " | Enhancement Bonus | TEXT | WIDTH=4",
+	"WisDamage | " + WisDamage + " | Wis Damage | TEXT | WIDTH=4",
+    "blah | <html><br><b>Charisma</b></html> | | LABEL | SPAN=TRUE",
+    "Charisma | " + Charisma + " | Charisma | TEXT | WIDTH=4",
+	"ChaEnhancement | " + ChaEnhancement + " | Enhancement Bonus | TEXT | WIDTH=4",
+	"ChaDamage | " + ChaDamage + " | Cha Damage | TEXT | WIDTH=4",
+
+    "tab2 | Stats || TAB",
+    "blah | <html><br><b>Hit points</b></html> | | LABEL | SPAN=TRUE",
+    	"ClassHP | " + ClassHP + " | HP from your classes | TEXT | WIDTH=4",
+    	"MiscHP | " + MiscHP + " | Miscellaneous HP | TEXT | WIDTH=4",
+    "blah | <html><br><b>Base Attack Bonus</b></html> | | LABEL | SPAN=TRUE",
+    	"BaseAttackBonus | " + BaseAttackBonus + " | BAB from all classes | TEXT | WIDTH=4",
+    "blah | <html><br><b>Size Modifier</b></html> | | LABEL | SPAN=TRUE",
+    	"SizeMod | " + SizeMod + " | Size Modifier | TEXT | WIDTH=4",
+    "blah | <html><br><b>Initiative</b> (Do <b>NOT</b> add your Dex bonus)</html> | | LABEL | SPAN=TRUE",
+    	"InitMod | " + InitMod + " | Misc. Initiative bonus | TEXT | WIDTH=4",
+    "blah | <html><br><b>Hero Points</b></html> | | LABEL | SPAN=TRUE",
+    	"HeroPoints | " + HeroPoints + "| Current Hero Points | TEXT | WIDTH=4",
+    "blah | <html><br><b>Feats</b></html> | | LABEL | SPAN=TRUE",
+    	"Feats | " + Feats + "| Feats | TEXT | WIDTH=30",
+
+    "tab3 | Defenses || TAB",
+    "blah  | <html><br><b>AC</b></html> | | LABEL | SPAN=TRUE",
+    	"ACArmorBonus | " + ACArmorBonus + " | Armor Bonus | TEXT | WIDTH=4",
+    	"ACShieldBonus | " + ACShieldBonus + " | Shield Bonus | TEXT | WIDTH=4",
+    	"ArmorMaxDexBonus | " + ArmorMaxDexBonus + " | Max Dex Bonus (Set to Dex Bonus if none) | TEXT | WIDTH=4",
+    	"ACClassBonus | " + ACClassBonus + " | Class Bonus | TEXT | WIDTH=4",
+    	"ACFeatBonus | " + ACFeatBonus + " | Feat Bonus | TEXT | WIDTH=4",
+    	"ACEnhBonus | " + ACEnhBonus + " | Enhancement Bonus | TEXT | WIDTH=4",
+    	"ACMiscBonus1 | " + ACMiscBonus1 + " | Miscellaneous Bonus | TEXT | WIDTH=4",
+    	"ACMiscBonus2 | " +ACMiscBonus2 + " | Miscellaneous Bonus | TEXT | WIDTH=4",
+    "blah  | <html><br><b>Fortitude</b></html> | | LABEL | SPAN=TRUE",
+    	"FortClassBonus | " + FortClassBonus + " | Class Bonus | TEXT | WIDTH=4",
+    	"FortFeatBonus | " + FortFeatBonus + " | Feat Bonus  | TEXT | WIDTH=4",
+    	"FortEnhBonus | " + FortEnhBonus + " | Enhancement Bonus  | TEXT | WIDTH=4",
+    	"FortMiscBonus1 | " + FortMiscBonus1 + " | Miscellaneous Bonus  | TEXT | WIDTH=4",
+    	"FortMiscBonus2 | " + FortMiscBonus2 + " | Miscellaneous Bonus  | TEXT | WIDTH=4",
+    "blah  | <html><br><b>Reflex</b></html> | | LABEL | SPAN=TRUE",
+    	"RefClassBonus | " + RefClassBonus + " | Class Bonus  | TEXT | WIDTH=4",
+    	"RefFeatBonus | " + RefFeatBonus + " | Feat Bonus  | TEXT | WIDTH=4",
+    	"RefEnhBonus | " + RefEnhBonus + " | Enhancement Bonus  | TEXT | WIDTH=4",
+    	"RefMiscBonus1 | " + RefMiscBonus1 + " | Miscellaneous Bonus  | TEXT | WIDTH=4",
+    	"RefMiscBonus2 | " + RefMiscBonus2 + " | Miscellanous Bonus  | TEXT | WIDTH=4",
+    "blah  | <html><br><b>Will</b></html> | | LABEL | SPAN=TRUE",
+    	"WillClassBonus | " + WillClassBonus + " | Class Bonus  | TEXT | WIDTH=4",
+    	"WillFeatBonus | " + WillFeatBonus + " | Feat Bonus  | TEXT | WIDTH=4",
+    	"WillEnhBonus | " + WillEnhBonus + " | Enhancement Bonus  | TEXT | WIDTH=4",
+    	"WillMiscBonus1 | " + WillMiscBonus1 + " | Miscellaneous Bonus  | TEXT | WIDTH=4",
+    	"WillMiscBonus2 | " + WillMiscBonus2 + " | Miscellaneous Bonus  | TEXT | WIDTH=4",
+
+    "tab4 | Skills || TAB",
+    "blah | <html><b>Add together both armor/shield ACPs here:</b></html> | | LABEL | SPAN=TRUE",
+    	"ArmorCheckPenalty | " + ArmorCheckPenalty + " | Armor check penalty | TEXT | WIDTH=4",
+    "blah  | <html><br><b>Skills</b></html> | | LABEL | SPAN=TRUE",
+    	skillText,
+    "blah | <html><b>Misc Skill 1</b></html> || LABEL | SPAN=TRUE",
+	"MiscSkill1Name | " + MiscSkill1Name + " | Skill Name | TEXT | WIDTH=30",
+	"MiscSkill1AbilBonus  | " + miscskill1ForceList  + " | Ability | LIST | SELECT=" + miscskill1_def+" VALUE=STRING",
+     	"MiscSkill1ClassSkill | " + MiscSkill1ClassSkill +"| Class Skill | CHECK",
+     	"MiscSkill1ArmorCheck | " + MiscSkill1ArmorCheck +"| Armor Check Penalty | CHECK",
+    	"MiscSkill1Ranks | " + MiscSkill1Ranks +"| Ranks | TEXT | WIDTH=4",
+    	"MiscSkill1Bonus | " + MiscSkill1Bonus +"| Bonus | TEXT | WIDTH=4",
+    "blah | <html><b>Misc Skill 2</b></html> || LABEL | SPAN=TRUE",
+	"MiscSkill2Name | " + MiscSkill2Name + " | Skill Name | TEXT | WIDTH=30",
+	"MiscSkill2AbilBonus  | " + miscskill2ForceList  + " | Ability | LIST | SELECT=" + miscskill2_def+" VALUE=STRING",
+     	"MiscSkill2ClassSkill | " + MiscSkill2ClassSkill +"| Class Skill | CHECK",
+     	"MiscSkill1ArmorCheck | " + MiscSkill1ArmorCheck +"| Armor Check Penalty | CHECK",
+    	"MiscSkill2Ranks | " + MiscSkill2Ranks +"| Ranks | TEXT | WIDTH=4",
+    	"MiscSkill2Bonus | " + MiscSkill2Bonus +"| Bonus | TEXT | WIDTH=4",
+    "blah | <html><b>Misc Skill 3</b></html> || LABEL | SPAN=TRUE",
+	"MiscSkill3Name | " + MiscSkill3Name + " | Skill Name | TEXT | WIDTH=30",
+	"MiscSkill3AbilBonus  | " + miscskill3ForceList  + " | Ability | LIST | SELECT=" + miscskill3_def+" VALUE=STRING",
+     	"MiscSkill3ClassSkill | " + MiscSkill3ClassSkill +"| Class Skill | CHECK",
+     	"MiscSkill1ArmorCheck | " + MiscSkill1ArmorCheck +"| Armor Check Penalty | CHECK",
+    	"MiscSkill3Ranks | " + MiscSkill3Ranks +"| Ranks | TEXT | WIDTH=4",
+    	"MiscSkill3Bonus | " + MiscSkill3Bonus +"| Bonus | TEXT | WIDTH=4"
+)]
+[MACRO("Calculate Skill Tooltips@this"):"blah="+1]
+[H: abort(status)]

@@ -2,16 +2,16 @@
 
 <!-- DO NOT EDIT BELOW THIS LINE -->
 
-[h: Name = "SUBSTITUTE_NAME_OF_WEAPON_HERE"]
-[h: AttackNumber = "SUBSTITUTE_ATTACK_NUMBER_HERE"]
+[h: Name = "$SUBSTITUTE_NAME_OF_WEAPON_HERE"]
+[h: AttackNumber = "$SUBSTITUTE_ATTACK_NUMBER_HERE"]
 
 [h: AttackName  = Name]
 [h:Weapon = json.get(weaponJSON, Name)]
 [h:Damage = json.get(Weapon, "damage")]
 [h:Attacks = json.get(Weapon, "attacks")]
-[h:AttackBonus = json.get(Attacks, AttackNumber-1]
-[h: TemporaryAttackModifier = json.get(Weapon, "temporaryAttackModifier"]
-[h: TemporaryDamageModifier = json.get(Weapon, "temporaryDamageModifier"]
+[h:AttackBonus = json.get(Attacks, AttackNumber)]
+[h: TemporaryAttackModifier = json.get(Weapon, "temporaryAttackModifier") + AtkTempBonus]
+[h: TemporaryDamageModifier = json.get(Weapon, "temporaryDamageModifier") + DmgTempBonus]
 [h: DamageRoll = eval(json.get(Weapon, "damageDice"))]
 [h: WeaponDice = json.get(Weapon, "damageDice") ]
 [h: WeaponDamage = json.get( Damage, "bonusDamage")]

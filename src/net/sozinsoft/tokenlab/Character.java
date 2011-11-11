@@ -126,34 +126,6 @@ public class Character {
         this._baseAttackBonus = _baseAttackBonus;
     }
 
-    public boolean offHandWeaponIsLightOrUnarmed( WeaponCache cache ) {
-       //get the offhand weapon
-        Weapon offHand = null;
-        for ( Weapon w  : this.getWeapons().values()) {
-            if ( w.isWieldedOffhand() ) {
-               offHand = w;
-               break;
-            }
-        }
-
-        if ( offHand == null ) {
-            return false;
-        }
-
-        if ( offHand.isUnarmedStrike() ) {
-            return true;
-        }
-
-        WeaponCache.Entry entry = cache.get( offHand.name );
-        if ( entry == null ) {
-            entry = cache.get( offHand.basicName );
-        }
-
-        if ( entry.isLightWeapon() ) {
-            return true;
-        }
-        return false;
-    }
 
 
     private class CharacterClass {

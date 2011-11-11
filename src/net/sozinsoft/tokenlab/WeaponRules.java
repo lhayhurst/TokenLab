@@ -25,6 +25,35 @@ public class WeaponRules {
         weapon = w;
     }
 
+    public boolean offHandWeaponIsLightOrUnarmed( Character c, WeaponCache cache ) {
+           //get the offhand weapon
+            Weapon offHand = null;
+            for ( Weapon w  : c.getWeapons().values()) {
+                if ( isWieldedOffhand() ) {
+                   offHand = w;
+                   break;
+                }
+            }
+
+            if ( offHand == null ) {
+                return false;
+            }
+
+            if ( isUnarmedStrike() ) {
+                return true;
+            }
+
+            WeaponCache.Entry entry = cache.get( offHand.name );
+            if ( entry == null ) {
+                entry = cache.get( offHand.basicName );
+            }
+
+            if ( entry.isLightWeapon() ) {
+                return true;
+            }
+            return false;
+        }
+
     private String extractBasicWeaponName( String name, Character c ) {
         Pattern regex = Pattern.compile("^.*?\\s+(\\w+)$");
         java.util.regex.Matcher matcher = regex.matcher(name);
@@ -169,7 +198,7 @@ public class WeaponRules {
         int primaryHandPenalty = -6;
         int offHandPenalty = -10;
 
-        if( c.offHandWeaponIsLightOrUnarmed(cache) ) {
+        if( offHandWeaponIsLightOrUnarmed(c, cache) ) {
             primaryHandPenalty += 2;
             offHandPenalty += 2;
         }

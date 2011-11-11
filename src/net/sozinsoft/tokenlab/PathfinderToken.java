@@ -2,9 +2,14 @@ package net.sozinsoft.tokenlab;
 
 
 import com.google.gson.Gson;
+import net.rptools.maptool.client.MapToolUtil;
+import net.rptools.maptool.client.ui.MacroButtonHotKeyManager;
+import net.rptools.maptool.client.ui.macrobuttons.buttons.MacroButton;
 import net.rptools.maptool.model.*;
 import net.rptools.maptool.util.PersistenceUtil;
 import net.rptools.maptool.util.TokenUtil;
+import org.apache.commons.collections.MapUtils;
+import org.xml.sax.SAXException;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -13,6 +18,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -56,7 +63,7 @@ public class PathfinderToken {
     private static final String SPEED = "Speed";
     private static final String BASE_ATTACK_BONUS = "BaseAttackBonus";
     private static final String INIT_MOD = "InitMod";
-    public static final String SUBSTITUTE_NAME_OF_WEAPON_HERE = "SUBSTITUTE_NAME_OF_WEAPON_HERE";
+    private static MacroDigester macroDigester = null;
     private Character _character;
     private WeaponCache _cache;
 
@@ -65,7 +72,7 @@ public class PathfinderToken {
         _cache     = cache;
     }
 
-    public Token asToken( Config.ConfigEntry configEntry ) throws IOException {
+    public Token asToken( Config.ConfigEntry configEntry ) throws IOException, SAXException {
 
         Token t = createToken(configEntry);
         loadMacros(t);
@@ -89,12 +96,6 @@ public class PathfinderToken {
         Gson gson = new Gson();
 
         t.setProperty( "Feats", gson.toJson(_character.getFeats().values()));
-
-        for( Weapon w: _character.getWeapons().values()) {
-            w.inferAbilityBonus(  _character, _cache );
-           // System.out.println( gson.toJson( w ));
-
-        }
 
         t.setProperty( "WeaponJSON", gson.toJson( _character.getWeapons() ) );
 
@@ -171,7 +172,7 @@ public class PathfinderToken {
 
 	private void setHitPoints(Token t) {
 		CharacterAttribute con = _character.getConstitution();
-		int level = Integer.parseInt( _character.getLevel() );
+		int level = Integer.parseInt(_character.getLevel());
 		int hp = Integer.parseInt( _character.getHitpoints() );
 		int conBonus = con.getBonus();
 		int baseHitpoints = hp - conBonus * level;
@@ -245,57 +246,121 @@ public class PathfinderToken {
         return t;
     }
 
-    private static String readFileAsString(String filePath) throws java.io.IOException {
-        byte[] buffer = new byte[(int) new File(filePath).length()];
-        BufferedInputStream f = null;
-        try {
-            f = new BufferedInputStream(new FileInputStream(filePath));
-            f.read(buffer);
-        } finally {
-            if (f != null) try {
-                f.close();
-            } catch (IOException ignored) {
-            }
-        }
-        return new String(buffer);
-    }
+    private void loadMacros(Token t) throws IOException, SAXException {
 
-    private void loadMacros(Token t) throws IOException {
-        List<MacroButtonProperties> macroButtonSet = PersistenceUtil.loadMacroSet(  ResourceManager.getMacroSet() );
-
-        URL resource = this.getClass().getResource("res/AttackMacro.txt");
-        String attackMacroText = readFileAsString(resource.getFile() );
-
-        MacroButtonProperties attackButton = null;
-        int attackButtonIndex = 0;
-        int numWeapons = _character.getWeapons().size();
-
-        for( MacroButtonProperties mbp : macroButtonSet ) {
-            if ( mbp.getLabel().equals( "Attack - Weapon") )
-            {
-                attackButton = mbp;
-                attackButtonIndex = mbp.getIndex();
-            }
-            else { //rejigger the index
-                if ( mbp.getIndex() > attackButtonIndex ) {
-                    mbp.setIndex( mbp.getIndex() + numWeapons);
-                }
-            }
+        if ( macroDigester == null ) {
+            macroDigester = new MacroDigester( ResourceManager.getMacroConfigFile().getAbsolutePath() );
+            macroDigester.parseConfigFile();
         }
 
-        macroButtonSet.remove( attackButton );
-        for( Weapon w : _character.getWeapons().values() ) {
-            MacroButtonProperties newAttack = new MacroButtonProperties(attackButtonIndex, attackButton );
-            //String macro = newAttack.getCommand();
-            String newMacro = attackMacroText.replace(SUBSTITUTE_NAME_OF_WEAPON_HERE, w.name);
-            newAttack.setCommand( newMacro );
-            newAttack.setLabel( w.name );
-            macroButtonSet.add( attackButtonIndex++, newAttack );
-        }
+        List<MacroButtonProperties> macroButtonSet = new ArrayList<MacroButtonProperties>();
+
+        //do the generic macros first.
+
+
+        int index = 1;
+
+        index = buildGenericMacros(macroButtonSet, index);
+        index = buildPowerMacros(macroButtonSet, index);
+        index = buildSkillMacros(macroButtonSet, index);
+        index = buildSubMacros( macroButtonSet, index );
 
 
         t.getMacroNextIndex(); //TODO: this is a hack to create the underlying macroPropertiesMap hash table
         t.replaceMacroList(macroButtonSet);
 
 	}
+
+    private int buildSubMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
+        HashMap<String, MacroDigester.MacroEntry > submacros = macroDigester.getGroup( "SUBMACROS");
+
+        IMacroReplacer defaultReplacer = new DefaultReplacer();
+        for( MacroDigester.MacroEntry macroEntry : submacros.values()) {
+
+            MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, defaultReplacer );
+            macroButtonSet.add( properties );
+        }
+        return index  ;
+    }
+
+    private int buildSkillMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
+       HashMap<String, MacroDigester.MacroEntry > skillMacros = macroDigester.getGroup( "Skills");
+
+       HashMap<String, Character.Skill> skills = _character.getSkills();
+
+        for (String skillName : skills.keySet() ) {
+            Character.Skill skill  = skills.get(skillName);
+            String attributeName   = skill.attrName;
+            String attribShortName = CharacterAttribute.getShortName( attributeName );
+            SkillReplacer replacer = new SkillReplacer( skillName, attribShortName, attribShortName + "Bonus"  );
+            MacroDigester.MacroEntry macroEntry = skillMacros.get("Skill Check");
+
+            if ( skill.isClassSkill ) {
+                macroEntry.buttonColor = "yellow";
+            }
+            else if ( skill.useTrainedOnly ) {
+                macroEntry.buttonColor = "darkgray";
+            } else {
+                macroEntry.buttonColor = "white";
+            }
+
+            //todo: refactor the below into the replacer interface if I ever do it somewhere else.
+            macroEntry.toolTip = "[r:" + replacer.skillRanks + "]";
+
+            macroEntry.name = skillName;
+            MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, replacer );
+            macroButtonSet.add( properties );
+        }
+        return index;
+
+    }
+
+    private int buildGenericMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
+        HashMap<String, MacroDigester.MacroEntry > genericMacros = macroDigester.getGroup( "Generic");
+        IMacroReplacer defaultReplacer = new DefaultReplacer();
+        for( MacroDigester.MacroEntry macroEntry : genericMacros.values()) {
+
+            MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, defaultReplacer );
+            macroButtonSet.add( properties );
+        }
+        return index;
+    }
+
+    private int buildPowerMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
+        //next do the power macros
+        int sortPrefix = 0;
+        HashMap<String, MacroDigester.MacroEntry > powerMacros = macroDigester.getGroup( "Powers");
+        for( Weapon weapon : this._character.getWeapons().values()) {
+
+            MacroDigester.MacroEntry macroEntry = powerMacros.get( "Standard Attack");
+
+            if ( sortPrefix == 0 ) {
+                sortPrefix = Integer.parseInt(macroEntry.sortPrefix); //bootstrap the sortPrefix
+            } else {
+                ++sortPrefix;
+                macroEntry.sortPrefix = new Integer( sortPrefix ).toString();
+            }
+
+            macroEntry.name = weapon.name;
+            MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++,
+                                                                                    new WeaponNameReplacer( weapon.name, new Integer(1) ) );
+            macroButtonSet.add( properties );
+
+            //and set all the full attack stuff
+
+            if ( weapon.numFullAttacks > 1 ) {
+                for ( Integer attackCount : weapon.sortedAttacks() ) {
+                    MacroDigester.MacroEntry fullAttackMacroEntry = powerMacros.get( "Attack - Full");
+                    ++sortPrefix;
+                    fullAttackMacroEntry.sortPrefix = new Integer( sortPrefix ).toString();
+                    fullAttackMacroEntry.name = attackCount.toString();
+                    MacroButtonProperties faProperties = fullAttackMacroEntry.getMacroButtonProperties( index++,
+                                                                                    new WeaponNameReplacer( weapon.name, attackCount ) );
+                    macroButtonSet.add( faProperties );
+
+                }
+            }
+        }
+        return index;
+    }
 }

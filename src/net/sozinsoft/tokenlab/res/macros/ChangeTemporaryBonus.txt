@@ -1,0 +1,11 @@
+[H: status = input(
+    "blah | <html><b>Temporary Bonuses</b></html> || LABEL | SPAN=TRUE",
+    "TempHP | " + TempHP + " | Temporary HP    | TEXT | WIDTH=4",
+    "AtkTempBonus | " + AtkTempBonus + " | Temporary Attack Bonus | TEXT | WIDTH=4",
+    "DmgTempBonus | " + DmgTempBonus + " | Temporary Damage Bonus | TEXT | WIDTH=4",
+    "ACTempBonus | " + ACTempBonus + " | Temporary AC Bonus | TEXT | WIDTH=4",
+    "FortTempBonus | " + FortTempBonus + "| Temporary Fort Bonus | TEXT | WIDTH=4",
+    "RefTempBonus | " + RefTempBonus + "| Temporary Ref Bonus | TEXT | WIDTH=4",
+    "WillTempBonus | " + WillTempBonus + "| Temporary Will Bonus | TEXT | WIDTH=4"
+)]
+[H: abort(status)]

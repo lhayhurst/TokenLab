@@ -1,0 +1,137 @@
+<span style=font-size:0>
+
+<!-- RECORD THE CHANGE IN HP -->
+[HPChange = ChangeHP]
+
+[HpReport1 = ""]
+[HpReport2 = ""]
+[TempReport1 = ""]
+[TempReport2 = ""]
+[TempLost = ""]
+[TempPlusChange = 0]
+
+<!-- HP CALCULATIONS -->
+<!--SET FLAVOR TEXT AND CURRENT HP -->
+[h,if(HPChange >= 0), CODE:
+{
+	[HpReport1 = "<font color=green>Gained</font> "]
+	[CurrentHP = if(CurrentHP < 0, 0, CurrentHP)]
+	[CurrentHP = min(CurrentHP + HPChange,MaxHP)]
+	[HpReport2 = "<font color=blue>HP</font>!<br />"]
+};
+{
+	[HpReport1 = "<font color=red>Lost</font> "]
+	[HpReport2 = "<font color=blue>HP</font>!<br />"]
+}]
+<!-- IF THE HP CHANGE IS NEGATIVE AND THEY DON'T HAVE TEMP HP -->
+[h,if(HPChange < 0 && TempHP <= 0), CODE:
+{
+	[CurrentHP = max(CurrentHP+HPChange,-10)]
+	[HPChange = abs(HPChange)]
+}]
+<!-- IF THE HP CHANGE IS NEGATIVE AND THEY HAVE TEMP HP, ADD TEMPHP AND CHANGE -->
+[h,if(HPChange < 0 && TempHP > 0), CODE:
+{
+	[TempLost = abs(TempHP)]
+	[TempPlusChange = max(TempHP,0) + HPChange]
+}]
+	<!-- HAVE TEMP HP: IF THE DAMAGE IS MORE THAN THE TEMP HP -->
+	[h,if(HPChange < 0 && TempHP > 0 && TempPlusChange < 0), CODE:
+	{
+		[TempReport1 = "<font color=red>Lost</font> "]
+		[TempLost = "all"]
+		[TempReport2 = "<font color=blue>Temp</font> HP!<br />"]
+		[HpReport1 = "<font color=red>Lost</font>"]
+		[HpReport2 = "HP!<br />"]
+		[CurrentHP = max(min(CurrentHP - abs(TempPlusChange),MaxHP),-10)]
+		[HPChange = abs(TempPlusChange)]
+		[TempHP = 0]
+	}]
+    <!-- HAVE TEMP HP: IF THE DAMAGE IS EQUAL TO THE TEMP HP -->
+	[h,if(HPChange < 0 && TempHP > 0 && TempPlusChange == 0), CODE:
+	{
+        [TempReport1 = "<font color=red>Lost</font> "]
+		[TempLost = "all"]
+		[TempReport2 = "<font color=blue>Temp</font> HP!<br />"]
+		[HpReport1 = ""]
+		[HpReport2 = ""]
+		[HPChange = 0]
+		[TempHP = 0]
+	}]
+	<!-- HAVE TEMP HP: IF THE DAMAGE IS LESS THAN THE TEMP HP -->
+	[h,if(HPChange < 0 && TempHP > 0 && TempPlusChange > 0), CODE:
+	{
+		[TempHP = max(TempHP,0) + HPChange]
+		[TempReport1 = "<font color=red>Lost</font> "]
+		[TempLost = abs(HPChange)]
+		[TempReport2 = "<font color=blue>Temp</font> HP!<br />"]
+		[HpReport1 = ""]
+		[HpReport2 = ""]
+		[HPChange = ""]
+	}]
+
+</span>
+
+<!-- HP DISPLAY -->
+<b>
+[r:TempReport1] [r:TempLost] [r:TempReport2]
+[r:HpReport1] [r:HPChange] [r:HpReport2]
+</b>
+[r: CurrentHP] / [r:MaxHP] HP remaining...
+
+[h: setBar("Health",CurrentHP/MaxHP)]
+[h: text = ""]
+
+<!-- IF THEY ARE ALRIGHT -->
+[h,if(CurrentHP > Bloodied), CODE:
+{
+    [state.Bloodied = 0]
+	[state.Disabled = 0]
+	[state.Dying = 0]
+	[state.Dead = 0]
+}]
+
+<!-- IF THEY DROP TO BLOODIED -->
+[h,if(CurrentHP <= Bloodied && CurrentHP > 0), CODE:
+{
+    [state.Bloodied = 1]
+	[state.Disabled = 0]
+	[state.Dying = 0]
+	[state.Dead = 0]
+	[text = "<br /><b>You are bloodied!</b>"]
+}]
+
+<!-- IF THEY DROP TO DISABLED -->
+[h,if(CurrentHP == 0), CODE:
+{
+    [state.Bloodied = 1]
+	[state.Disabled = 1]
+	[state.Dying = 0]
+	[state.Dead = 0]
+	[CurrentStance = "None"]
+	[text = "<br /><b>You are disabled!</b>"]
+}]
+
+<!-- IF THEY DROP TO DYING -->
+[h,if(CurrentHP < 0 && CurrentHP > -10), CODE:
+{
+    [state.Bloodied = 1]
+	[state.Disabled = 1]
+	[state.Dying = 1]
+	[state.Dead = 0]
+	[CurrentStance = "None"]
+	[text = "<br /><b>You are dying!</b>"]
+}]
+
+<!-- IF THEY DROP TO DEAD -->
+[h,if(CurrentHP <= -10), CODE:
+{
+    [state.Bloodied = 1]
+	[state.Disabled = 1]
+	[state.Dying = 1]
+	[state.Dead = 1]
+	[CurrentStance = "None"]
+	[text = "<br /><b>You have <font color=red>died</font>!</b>"]
+}]
+
+[r:text]

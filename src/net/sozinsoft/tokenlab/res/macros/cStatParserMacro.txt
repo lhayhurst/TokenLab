@@ -1,0 +1,18 @@
+[h: parsed = getStrProp(macro.args,"Stat")]
+[h,SWITCH(parsed):
+case "None": macro.return = 0;
+case "Strength": macro.return = 1;
+case "StrBonus": macro.return = 1;
+case "StrBonus1.5": macro.return = 2;
+case "Constitution": macro.return = 3;
+case "ConBonus": macro.return = 3;
+case "Dexterity": macro.return = 4;
+case "DexBonus": macro.return = 4;
+case "Intelligence": macro.return = 5;
+case "IntBonus": macro.return = 5;
+case "Wisdom": macro.return = 6;
+case "WisBonus": macro.return = 6;
+case "Charisma": macro.return = 7;
+case "ChaBonus": macro.return = 7;
+default: macro.return = 0;
+]
