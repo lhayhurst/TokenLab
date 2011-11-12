@@ -74,6 +74,7 @@ public class HerolabsDigester {
 
         //WeaponCache cache = new WeaponCache( ResourceManager.getWeapons().getAbsolutePath() );
         for (Character c : this.characters) {
+            System.out.println( "Processing character " + c.getName() );
             Config.ConfigEntry ce = config.get(c.getName());
 
             if (ce == null) {
@@ -81,8 +82,10 @@ public class HerolabsDigester {
                 continue;
             }
 
+            System.out.println( "Creating token for character " + c.getName() );
             PathfinderToken pt = new PathfinderToken(c, null);
             Token t = pt.asToken(ce);
+            System.out.println( "Saving maptools token to output directory " + ce.getOutputTokenTo());
             PersistenceUtil.saveToken(t, ce.getOutputTokenTo(), true);
         }
     }
