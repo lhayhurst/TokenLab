@@ -10,11 +10,11 @@ public class SkillReplacer implements IMacroReplacer {
     String attributeBonus;
     String skillRanks;
 
-    public SkillReplacer( String skillName, String attributeShortName, String attributeBonus ) {
+    public SkillReplacer( String skillName, String attributeShortName, String attributeBonus, String skillRanks ) {
         this.skillName = skillName;
         this.attributeShortName = attributeShortName;
         this.attributeBonus = attributeBonus;
-        this.skillRanks = skillName.replaceAll( "\\s|\\(|\\)", "");
+        this.skillRanks = skillRanks;
     }
     public String replace(String target) {
         String one   = target.replaceAll("SKILL_NAME", skillName);

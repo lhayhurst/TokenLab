@@ -12,6 +12,7 @@ import org.apache.commons.collections.MapUtils;
 import org.xml.sax.SAXException;
 
 import javax.imageio.ImageIO;
+import javax.print.DocFlavor;
 import java.awt.*;
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -127,10 +128,11 @@ public class PathfinderToken {
 
     private void setSkills(Token t) {
         for( Character.Skill skill: _character.getSkills().values()) {
-            t.setProperty( skill.skillName + RANKS, skill.ranks );
-            t.setProperty( skill.skillName + BONUS, skill.attrBonus);
+            String mungedSkillName = mungeSkillName( skill.skillName );
+            t.setProperty( mungedSkillName + RANKS, skill.ranks );
+            t.setProperty( mungedSkillName + BONUS, skill.attrBonus);
             if ( skill.isClassSkill == true ) {
-                t.setProperty( skill.skillName + CLASS_SKILL, "1");
+                t.setProperty( mungedSkillName + CLASS_SKILL, "1");
             }
         }
     }
@@ -283,6 +285,10 @@ public class PathfinderToken {
         return index  ;
     }
 
+    private String mungeSkillName( String skillName ) {
+        return skillName.replaceAll( "\\s|\\(|\\)", "");
+    }
+
     private int buildSkillMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
        HashMap<String, MacroDigester.MacroEntry > skillMacros = macroDigester.getGroup( "Skills");
 
@@ -292,7 +298,7 @@ public class PathfinderToken {
             Character.Skill skill  = skills.get(skillName);
             String attributeName   = skill.attrName;
             String attribShortName = CharacterAttribute.getShortName( attributeName );
-            SkillReplacer replacer = new SkillReplacer( skillName, attribShortName, attribShortName + "Bonus"  );
+            SkillReplacer replacer = new SkillReplacer( skillName, attribShortName, attribShortName + "Bonus", mungeSkillName( skillName )  );
             MacroDigester.MacroEntry macroEntry = skillMacros.get("Skill Check");
 
             if ( skill.isClassSkill ) {
@@ -329,7 +335,7 @@ public class PathfinderToken {
     private int buildPowerMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
         //next do the power macros
         int sortPrefix = 0;
-        HashMap<String, MacroDigester.MacroEntry > powerMacros = macroDigester.getGroup( "Powers");
+        HashMap<String, MacroDigester.MacroEntry > powerMacros = macroDigester.getGroup("Powers");
         for( Weapon weapon : this._character.getWeapons().values()) {
 
             MacroDigester.MacroEntry macroEntry = powerMacros.get( "Standard Attack");

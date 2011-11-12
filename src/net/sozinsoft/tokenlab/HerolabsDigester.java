@@ -35,6 +35,8 @@ public class HerolabsDigester {
         String herolabsXMLFile = args[0];
         String configFileName = args[1];
 
+        int exitStatus = 0;
+
         //Process the config file
         Config config = new Config(configFileName);
         try {
@@ -54,16 +56,13 @@ public class HerolabsDigester {
         } catch (org.xml.sax.SAXException se) {
             System.out.println("Error parsing input file:" + se.getMessage());
             se.printStackTrace();
-            System.exit(-1);
+            exitStatus = -1;
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-            System.exit(-1);
-
-
+            exitStatus = -1;
         }  finally {
             ResourceManager.cleanupTmpFiles();
-            System.exit(-1);
         }
 
         System.exit(0);
