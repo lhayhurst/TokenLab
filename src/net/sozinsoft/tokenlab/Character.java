@@ -54,6 +54,10 @@ public class Character {
     private String _height;
     private String _speed;
 
+    public String toString() {
+        return this._name;
+    }
+
     public HashMap<String, CharacterAttribute> getAttributes() {
         return cattributes;
     }

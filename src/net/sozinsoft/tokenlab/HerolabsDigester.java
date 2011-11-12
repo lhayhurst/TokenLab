@@ -21,6 +21,10 @@ public class HerolabsDigester {
 
     private LinkedList<Character> characters = new LinkedList<Character>();
 
+    public LinkedList<Character> getCharacters() {
+        return characters;
+    }
+
     public void addCharacter(Character c) {
         characters.add(c);
     }
@@ -69,28 +73,32 @@ public class HerolabsDigester {
     }
 
 
-    private void processCharacters(Config config) throws IOException, SAXException {
+    public void processCharacters(Config config) throws IOException, SAXException {
 
         //WeaponCache cache = new WeaponCache( ResourceManager.getWeapons().getAbsolutePath() );
         for (Character c : this.characters) {
-            System.out.println( "Processing character " + c.getName() );
-            Config.ConfigEntry ce = config.get(c.getName());
-
-            if (ce == null) {
-                System.out.println("Couldn't find " + c.getName() + " in config file!");
-                continue;
-            }
-
-            System.out.println( "Creating token for character " + c.getName() );
-            PathfinderToken pt = new PathfinderToken(c, null);
-            Token t = pt.asToken(ce);
-            System.out.println( "Saving maptools token to output directory " + ce.getOutputTokenTo());
-            PersistenceUtil.saveToken(t, ce.getOutputTokenTo(), true);
+            processCharacter(config, c);
         }
     }
 
+    public void processCharacter(Config config, Character c) throws IOException, SAXException {
+        System.out.println( "Processing character " + c.getName() );
+        Config.ConfigEntry ce = config.get(c.getName());
 
-    private void parse(File xmlSourceFile) throws IOException, SAXException {
+        if (ce == null) {
+            System.out.println("Couldn't find " + c.getName() + " in config file!");
+            return;
+        }
+
+        System.out.println( "Creating token for character " + c.getName() );
+        PathfinderToken pt = new PathfinderToken(c, null);
+        Token t = pt.asToken(ce);
+        System.out.println( "Saving maptools token to output directory " + ce.getOutputTokenTo());
+        PersistenceUtil.saveToken(t, ce.getOutputTokenTo(), true);
+    }
+
+
+    public void parse(File xmlSourceFile) throws IOException, SAXException {
         // Create a Digester instance
         Digester d = new Digester();
         d.setValidating(false);
