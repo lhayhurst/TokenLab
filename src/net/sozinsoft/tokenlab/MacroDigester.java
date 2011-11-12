@@ -140,7 +140,7 @@ public class MacroDigester {
                     this.group, //group
                     this.sortPrefix, //sortby
                     true,  //autoexecute
-                    true, //includeLabel
+                    false, //includeLabel
                     applyToTokens, //applyToTokens
                     this.fontColor, //fontcolor
                     this.fontSize, //fontSize
