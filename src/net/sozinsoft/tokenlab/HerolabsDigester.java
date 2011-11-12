@@ -65,7 +65,7 @@ public class HerolabsDigester {
             ResourceManager.cleanupTmpFiles();
         }
 
-        System.exit(0);
+        System.exit(exitStatus);
     }
 
 
