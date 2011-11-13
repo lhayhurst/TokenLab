@@ -6,28 +6,29 @@ import org.xml.sax.SAXException;
 
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.filechooser.FileFilter;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.prefs.Preferences;
 
 public class TokenLabUI {
     public static final String HEROLABS_XML_DIR = "HEROLABS_XML_DIR";
-    public static final String CONFIG_DIR = "CONFIG_DIR";
     JButton importButton;
     JToolBar toolbar;
     JList herolabsCharacterList;
     JButton exportAllButton;
     JButton exportSelectedButton;
-
-    JFileChooser configChooser ;
     JFileChooser herolabsXMLChooser ;
 
     JPanel panel;
-    JButton configButton;
-    private JProgressBar progressBar;
+    private JButton configureSelectedButton;
     Config config;
     Preferences prefs;
 
@@ -36,7 +37,11 @@ public class TokenLabUI {
 
             javax.swing.SwingUtilities.invokeLater(new Runnable() {
                 public void run() {
-                    createAndShowGUI();
+                    try {
+                        createAndShowGUI();
+                    } catch (IOException e) {
+                        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    }
                 }
             });
         } finally {
@@ -44,60 +49,60 @@ public class TokenLabUI {
         }
     }
 
-    private static void createAndShowGUI() {
 
-        JFrame frame = new JFrame("TokenLabUI");
+    private static void createAndShowGUI() throws IOException {
 
         TokenLabUI ui = new TokenLabUI();
+        JFrame frame = new ExitFrame( ui.config );
         ui.setDefaults();
-
         frame.setContentPane(ui.panel);
-
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
         frame.pack();
-
         frame.setVisible(true);
     }
 
-    public void setDefaults() {
 
-        prefs = Preferences.userNodeForPackage(this.getClass());
-        configChooser = new JFileChooser( prefs.get( CONFIG_DIR, "" ) );
+
+    public void setDefaults() throws IOException {
+
         herolabsXMLChooser = new JFileChooser( prefs.get( HEROLABS_XML_DIR, "" ) );
 
-        importButton.setEnabled(false);
+
+        importButton.setEnabled(true);
         exportAllButton.setEnabled(false);
         exportSelectedButton.setEnabled(false);
+        configureSelectedButton.setEnabled(false);
 
-        setChooserFileFilter(configChooser);
-        setChooserFileFilter(herolabsXMLChooser);
-;
-        progressBar.setMinimum(0);
-        progressBar.setMaximum(100);
-        progressBar.setValue( 0 );
-        progressBar.setVisible(true);
 
+        setXMLChooserFileFilter(herolabsXMLChooser);
+
+        IconListRenderer listRenderer = new IconListRenderer( config, this );
+        herolabsCharacterList.setCellRenderer(listRenderer);
 
     }
 
-    private void setChooserFileFilter( JFileChooser chooser ) {
+
+
+    private void setXMLChooserFileFilter( JFileChooser chooser  ) {
         chooser.setFileFilter(new FileFilter() {
             @Override
             public boolean accept(File f) {
-                return f.getName().endsWith("xml") || f.isDirectory();
+                return f.isDirectory() || f.getName().endsWith("xml");
             }
 
             @Override
             public String getDescription() {
-                return null;
+                return "Herolabs xml output file";
             }
         });
     }
 
 
-    public TokenLabUI() {
+    public TokenLabUI() throws IOException {
+        prefs = Preferences.userNodeForPackage(this.getClass());
+        config = new Config( prefs );
+
         importButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int returnVal = herolabsXMLChooser.showOpenDialog(null);
@@ -114,35 +119,13 @@ public class TokenLabUI {
                     try {
 
                         dig.parse(xmlFile);
-
-
-                        final int count = dig.getCharacters().size();
-                        progressBar.setValue( 0);
-
-                        int i = 0;
-                        for(Character c : dig.getCharacters() ) {
-                            dig.processCharacter( config,c );
-                            i++;
-
-                            final int percent = i;
-                            try {
-                                SwingUtilities.invokeLater(new Runnable() {
-                                    public void run() {
-                                        progressBar.setValue( ( percent / count ) * 100 );
-                                    }
-                                });
-                                java.lang.Thread.sleep(1000);
-                            } catch (InterruptedException ie) {
-                                ;
-                            }
-                        }
-
                         DefaultListModel model = new DefaultListModel();
+                        herolabsCharacterList.setModel(model);
 
                         for (net.sozinsoft.tokenlab.Character c : dig.getCharacters()) {
                             model.addElement(c);
                         }
-                        herolabsCharacterList.setModel(model);
+
                         herolabsCharacterList.validate();
 
                     } catch (IOException e1) {
@@ -154,45 +137,116 @@ public class TokenLabUI {
             }
 
         });
-        configButton.addActionListener(new ActionListener() {
+
+        configureSelectedButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                                                  int returnVal = configChooser.showOpenDialog(null);
-                        for (int i = 0; i <= 10; i++) {
-      final int percent = i;
-      try {
-        SwingUtilities.invokeLater(new Runnable() {
-          public void run() {
-            progressBar.setValue( percent * 10 );
-          }
+                //get the selected item
+                Object[] selectedValues = herolabsCharacterList.getSelectedValues();
+                for (Object object : selectedValues) {
+
+                    Character character = (Character) object;
+                    Config.ConfigEntry entry = config.get(character.getName());
+                    if (entry == null) {
+                        entry = config.addConfigEntry(character.getName(), null, null, null);
+                    }
+                    ConfigureCharacterDialog dialog = new ConfigureCharacterDialog(herolabsCharacterList, entry, prefs);
+                    dialog.pack();
+                    dialog.setVisible(true);
+
+                }
+            }
         });
-        java.lang.Thread.sleep(1000);
-      } catch (InterruptedException ae) {
-        ;
-      }
-    }
+        herolabsCharacterList.addListSelectionListener(new ListSelectionListener() {
+            public void valueChanged(ListSelectionEvent e) {
+                configureSelectedButton.setEnabled(true);
+            }
+        });
+        exportSelectedButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Object [] selectedValues = herolabsCharacterList.getSelectedValues();
+                HerolabsDigester dig = new HerolabsDigester();
+                boolean success = true;
+                for ( Object object : selectedValues ) {
 
-                if (returnVal == JFileChooser.APPROVE_OPTION) {
-
-                    File mostRecentOutputDirectory = configChooser.getSelectedFile();
-                    prefs.put(CONFIG_DIR, mostRecentOutputDirectory.getAbsolutePath());
-                    File configFile = configChooser.getSelectedFile();
-                    config = new Config(configFile.getAbsolutePath());
-
+                    Character character = (Character) object;
                     try {
-                        config.parseConfigFile();
-                        importButton.setEnabled(true);
+                        dig.processCharacter( config, character );
+
                     } catch (IOException e1) {
-                        e1.printStackTrace();  //todo: create a dialog
+                        success = false;
+                        JOptionPane.showMessageDialog(panel,
+                            "Eek!  Something went wrong: ",
+                            e1.getMessage(),
+                            JOptionPane.ERROR_MESSAGE);
+
                     } catch (SAXException e1) {
-                        e1.printStackTrace();  //same here
+                        success = false;
+                        JOptionPane.showMessageDialog(panel,
+                            "Eek!  Something went wrong: ",
+                            e1.getMessage(),
+                            JOptionPane.ERROR_MESSAGE);
                     }
                 }
-
+                if ( success ) {
+                    JOptionPane.showMessageDialog(panel, "Successfully exported your selected maptools tokens.");
+                }
             }
         });
     }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
+    public class IconListRenderer extends DefaultListCellRenderer {
+
+        public static final String NOTOK = "notok";
+        public static final String OK = "ok";
+        public static final String CHECK_ICON = "res/check.png" ;
+        public static final String X_ICON = "res/button_play_red.png";
+        private Map<Object, Icon> icons = null;
+        private Config config;
+        TokenLabUI ui;
+
+        public IconListRenderer( Config config, TokenLabUI ui ) throws IOException {
+            this.ui = ui;
+            this.config = config;
+            icons = new HashMap<Object, Icon>();
+            icons.put(OK, IconCreator.createImageIcon(CHECK_ICON, OK));
+            icons.put(NOTOK, IconCreator.createImageIcon(X_ICON, NOTOK));
+        }
+
+        @Override
+        public Component getListCellRendererComponent(
+                JList list, Object value, int index,
+                boolean isSelected, boolean cellHasFocus) {
+
+            // Get the renderer component from parent class
+
+            JLabel label =
+                    (JLabel) super.getListCellRendererComponent(list,
+                            value, index, isSelected, cellHasFocus);
+
+            // Get icon to use for the list item value
+            Character character = (Character)value;
+            Config.ConfigEntry ce = config.get( character.getName());
+            Icon icon = null;
+
+            if ( ce == null ) {
+                icon = icons.get(NOTOK);
+                label.setToolTipText( "Press to enter configuration information for this character");
+            } else {
+                if ( ce.isOk() ) {
+                    icon = icons.get(OK);
+                    ui.exportSelectedButton.setEnabled(true);
+                    ui.exportAllButton.setEnabled(true);
+                }
+                else {
+                    icon = icons.get(NOTOK);
+                }
+            }
+            // Set icon to display for value
+
+            label.setIcon(icon);
+            return label;
+        }
+
+
     }
 }

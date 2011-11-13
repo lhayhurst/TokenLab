@@ -1,8 +1,0 @@
-<config>
-    <token
-      name="Ochre Jelly"
-      portraitFilePath="C:\Users\lyle\IdeaProjects\TokenLab\src\net\sozinsoft\tokenlab\res\ooze_ochreJelly_portrait.jpg"
-      imageFilePath="C:\Users\lyle\IdeaProjects\TokenLab\src\net\sozinsoft\tokenlab\res\ochre_jelly_pog.png"
-      outputTokenTo="C:\rptools\xmloutput\OchreJelly.rptok">
-    </token>
-</config>
