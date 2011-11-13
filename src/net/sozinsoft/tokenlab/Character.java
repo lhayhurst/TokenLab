@@ -355,7 +355,7 @@ public class Character {
     public void addWeapon(String name, String damage, String categorytext, String crit,
                           String attackBonus, String equipped, String weaponType, String description) {
         Weapon w = new Weapon(name, damage, categorytext, crit, attackBonus, equipped, weaponType, description);
-        weapons.put(name, w);
+        weapons.put(w.name, w);
     }
 
     public void setArmorClassBasics(String touchAC, String flatFootedAC, String armorClass) {

@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.prefs.Preferences;
 
@@ -33,33 +34,34 @@ public class TokenLabUI {
     Preferences prefs;
 
     public static void main(String[] args) {
-        try {
-
             javax.swing.SwingUtilities.invokeLater(new Runnable() {
                 public void run() {
-                    try {
-                        createAndShowGUI();
-                    } catch (IOException e) {
-                        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                    }
+                    createAndShowGUI();
                 }
             });
-        } finally {
-            ResourceManager.cleanupTmpFiles();
-        }
     }
 
 
-    private static void createAndShowGUI() throws IOException {
+    private static void createAndShowGUI()  {
 
-        TokenLabUI ui = new TokenLabUI();
-        JFrame frame = new ExitFrame( ui.config );
-        ui.setDefaults();
-        frame.setContentPane(ui.panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame frame = null;
+        try {
+            TokenLabUI ui = new TokenLabUI();
+            frame = new ExitFrame( ui.config );
+            Dimension preferredSize = new Dimension( 320, 500 );
+            frame.setPreferredSize( preferredSize );
+            ui.setDefaults();
+            frame.setContentPane(ui.panel);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        frame.pack();
-        frame.setVisible(true);
+            frame.pack();
+            frame.setVisible(true);
+        } catch ( Exception e ) {
+            JOptionPane.showMessageDialog(frame,
+             "Somethind bad happened! " + e.getMessage(),
+             "Fatal error",
+             JOptionPane.ERROR_MESSAGE);
+        }
     }
 
 
@@ -159,39 +161,73 @@ public class TokenLabUI {
         herolabsCharacterList.addListSelectionListener(new ListSelectionListener() {
             public void valueChanged(ListSelectionEvent e) {
                 configureSelectedButton.setEnabled(true);
+                exportSelectedButton.setEnabled(true);
             }
         });
         exportSelectedButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Object [] selectedValues = herolabsCharacterList.getSelectedValues();
-                HerolabsDigester dig = new HerolabsDigester();
-                boolean success = true;
-                for ( Object object : selectedValues ) {
-
-                    Character character = (Character) object;
-                    try {
-                        dig.processCharacter( config, character );
-
-                    } catch (IOException e1) {
-                        success = false;
-                        JOptionPane.showMessageDialog(panel,
-                            "Eek!  Something went wrong: ",
-                            e1.getMessage(),
-                            JOptionPane.ERROR_MESSAGE);
-
-                    } catch (SAXException e1) {
-                        success = false;
-                        JOptionPane.showMessageDialog(panel,
-                            "Eek!  Something went wrong: ",
-                            e1.getMessage(),
-                            JOptionPane.ERROR_MESSAGE);
-                    }
-                }
-                if ( success ) {
-                    JOptionPane.showMessageDialog(panel, "Successfully exported your selected maptools tokens.");
+                Character c = (Character) herolabsCharacterList.getModel().getElementAt(herolabsCharacterList.getSelectedIndex());
+                Config.ConfigEntry ce = config.get(c.getName());
+                if (ce != null && ce.isOk()) {
+                    exportCharacter();
+                } else {
+                    JOptionPane.showMessageDialog(panel, "The character you selected hasn't been configured yet.  Please configure " +
+                            "and try again.", "Export Warning", JOptionPane.WARNING_MESSAGE);
                 }
             }
         });
+        exportAllButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                //first select only valid characters
+                ListModel lm = herolabsCharacterList.getModel();
+                LinkedList<Integer> selectedIndices = new LinkedList<Integer>();
+                for ( int i = 0; i < lm.getSize(); i++ )
+                {
+                    Character c = (Character)lm.getElementAt(i);
+                    Config.ConfigEntry ce = config.get(c.getName());
+                    if ( ce != null && ce.isOk() ) {
+                        selectedIndices.add(i);
+                    }
+                }
+                int[] index = new int[selectedIndices.size()];
+                for ( int i = 0; i < selectedIndices.size(); i++ ) {
+                    index[i] = selectedIndices.get( i );
+                }
+
+                herolabsCharacterList.setSelectedIndices( index );
+                exportCharacter();
+            }
+        });
+    }
+
+    private void exportCharacter() {
+        Object [] selectedValues = herolabsCharacterList.getSelectedValues();
+        HerolabsDigester dig = new HerolabsDigester();
+        boolean success = true;
+        for ( Object object : selectedValues ) {
+
+            Character character = (Character) object;
+            try {
+                dig.processCharacter( config, character );
+
+            } catch (IOException e1) {
+                success = false;
+                JOptionPane.showMessageDialog(panel,
+                        "Eek!  Something went wrong: ",
+                        e1.getMessage(),
+                        JOptionPane.ERROR_MESSAGE);
+
+            } catch (SAXException e1) {
+                success = false;
+                JOptionPane.showMessageDialog(panel,
+                    "Eek!  Something went wrong: ",
+                    e1.getMessage(),
+                    JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        if ( success ) {
+            JOptionPane.showMessageDialog(panel, "Successfully exported your selected Maptools token(s).");
+        }
     }
 
     public class IconListRenderer extends DefaultListCellRenderer {
@@ -234,7 +270,6 @@ public class TokenLabUI {
             } else {
                 if ( ce.isOk() ) {
                     icon = icons.get(OK);
-                    ui.exportSelectedButton.setEnabled(true);
                     ui.exportAllButton.setEnabled(true);
                 }
                 else {

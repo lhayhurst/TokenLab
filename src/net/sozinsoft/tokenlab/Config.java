@@ -125,6 +125,9 @@ public class Config {
 		}
 
 		public void setOutputTokenTo( String path) {
+            if ( path != null && ! path.endsWith(".rptok")) {
+                path = path + ".rptok";
+            }
 			outputTokenTo = path;
 		}
 

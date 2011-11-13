@@ -129,8 +129,11 @@ public class PathfinderToken {
     private void setSkills(Token t) {
         for( Character.Skill skill: _character.getSkills().values()) {
             String mungedSkillName = mungeSkillName( skill.skillName );
+            if ( mungedSkillName.indexOf("Profession") >= 0) {
+                continue; //skipping professions for now, TODO:
+            }
             t.setProperty( mungedSkillName + RANKS, skill.ranks );
-            t.setProperty( mungedSkillName + BONUS, skill.attrBonus);
+            //t.setProperty( mungedSkillName + BONUS, skill.attrBonus);
             if ( skill.isClassSkill == true ) {
                 t.setProperty( mungedSkillName + CLASS_SKILL, "1");
             }
@@ -295,6 +298,10 @@ public class PathfinderToken {
        HashMap<String, Character.Skill> skills = _character.getSkills();
 
         for (String skillName : skills.keySet() ) {
+
+            if ( skillName.indexOf("Profession") >= 0) {
+                continue; //skipping professions for now, TODO:
+            }
             Character.Skill skill  = skills.get(skillName);
             String attributeName   = skill.attrName;
             String attribShortName = CharacterAttribute.getShortName( attributeName );

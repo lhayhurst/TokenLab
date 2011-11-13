@@ -29,7 +29,15 @@ class Weapon {
 
     public Weapon(String name, String damage, String category, String crit,
                   String attackBonus, String equipped, String weaponType, String description) {
-        this.name = name;
+
+
+
+        //sometimes weapon names can look wonky, for example
+        //"+1 Keen Scimitar\n\nThis ability doubles the threat range of a weapon.
+        // Only piercing or slashing"
+        //so, strip out everything after the first newline
+        this.name = name.replaceAll( "\\n.*$", "").replaceAll("\\s+$", "" );
+
         this.damage = new Damage(damage);
         this.damageDice = this.damage.asExpression();
         this.category = category;
