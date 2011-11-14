@@ -122,7 +122,7 @@ public class ConfigureCharacterDialog extends JDialog {
                  int returnVal = imageChooser.showOpenDialog(null);
                  if (returnVal == JFileChooser.APPROVE_OPTION) {
                      File imageFile = imageChooser.getSelectedFile();
-                     prefs.put(IMAGE_DIR, imageFile.getAbsolutePath());
+                     prefs.put(IMAGE_DIR, imageFile.getParent());
                      configEntry.setPortraitFilePath(imageFile.getAbsolutePath());
                      setPortraitImageButton.setEnabled(false);
                      checkToEnableOkButton();
@@ -134,7 +134,7 @@ public class ConfigureCharacterDialog extends JDialog {
                 int returnVal = imageChooser.showOpenDialog(null);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                      File imageFile = imageChooser.getSelectedFile();
-                     prefs.put(IMAGE_DIR, imageFile.getAbsolutePath());
+                     prefs.put(IMAGE_DIR, imageFile.getParent());
                      configEntry.setImageFilePath(imageFile.getAbsolutePath());
                      setPogImageButton.setEnabled(false);
                      checkToEnableOkButton();
@@ -142,11 +142,11 @@ public class ConfigureCharacterDialog extends JDialog {
             }
         });
         setTokenLocationButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)  {
                 int returnVal = tokenOutputChooser.showOpenDialog(null);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                      File tokenFile = tokenOutputChooser.getSelectedFile();
-                     prefs.put(TOKEN_DIR, tokenFile.getAbsolutePath());
+                     prefs.put(TOKEN_DIR, tokenFile.getParent());
                      configEntry.setOutputTokenTo(tokenFile.getAbsolutePath());
                      setTokenLocationButton.setEnabled(false);
                      checkToEnableOkButton();
