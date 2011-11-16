@@ -19,24 +19,24 @@ public class PathfinderToken implements IPathfinderCharacter {
 
     private static final String CLASS_HP = "ClassHP";
     public static final String MISC_HP = "MiscHP";
-    private static final String AC_ENH_BONUS = "ACEnhBonus";
     private static final String SIZE_MOD = "SizeMod";
     private static final String AC_TEMP_BONUS = "ACTempBonus";
     private static final String AC_MISC_BONUS_2 = "ACMiscBonus2";
     private static final String AC_MISC_BONUS_1 = "ACMiscBonus1";
-    private static final String AC_FEAT_BONUS = "ACFeatBonus";
-    private static final String AC_CLASS_BONUS = "ACClassBonus";
+    private static final String AC_FROM_DEFLECT = "ACDeflectBonus";
+    private static final String AC_FROM_DODGE = "ACDodgeBonus";
     private static final String AC_SHIELD_BONUS = "ACShieldBonus";
     private static final String AC_ARMOR_BONUS = "ACArmorBonus";
+    public static  final String AC_FROM_NATURAL = "ACNaturalBonus";
     private static final String ARMOR_MAX_DEX_BONUS = "ArmorMaxDexBonus";
     private static final String ARMOR_CHECK_PENALTY = "ArmorCheckPenalty";
+    private static final String MISC_BONUS = "MiscBonus";
     private static final String MISC_BONUS1 = "MiscBonus1";
     private static final String MISC_BONUS2 = "MiscBonus2";
     private static final String DAMAGE = "Damage";
     private static final String ENHANCEMENT = "Enhancement";
     private static final String CLASS_BONUS = "ClassBonus";
-    private static final String FEAT_BONUS = "FeatBonus";
-    private static final String ENH_BONUS = "EnhBonus";
+    private static final String RESIST_BONUS = "ResistBonus";
     private static final String RANKS = "Ranks";
     private static final String BONUS = "Bonus";
     private static final String CLASS_SKILL = "ClassSkill";
@@ -64,6 +64,9 @@ public class PathfinderToken implements IPathfinderCharacter {
         _character = character;
         setCoreProperties();
         setAbilities();
+        setSavingThrows();
+        setHitpoints();
+        setArmorClass();
     }
 
 
@@ -80,10 +83,11 @@ public class PathfinderToken implements IPathfinderCharacter {
         return attributeAbbreviations.get(ia);
     }
 
+    private HashMap< IAttribute, Attribute > _attributes = new HashMap<IAttribute, Attribute>();
     private void setAbilities() {
 
-
         for( Attribute attribute : _character.getAttributes().getAttribute() ) {
+            _attributes.put( IAttribute.valueOf(attribute.getName() ), attribute );
             _propertyMap.put( attribute.getName(), Integer.parseInt( attribute.getAttrvalue().getBase()) );
             int bonus =       Integer.parseInt( replacePlus( attribute.getAttrbonus().getModified() ) ) -
                               Integer.parseInt( replacePlus( attribute.getAttrbonus().getBase() ) );
@@ -120,8 +124,50 @@ public class PathfinderToken implements IPathfinderCharacter {
 		return value;
 	}
 
+    //armor class
+
+    //AC	[r:10+ACArmorBonus+ACShieldBonus+DexBonus+ACClassBonus+
+    //            ACFeatBonus+ACEnhBonus+ACMiscBonus1+ACMiscBonus2+ACTempBonus+SizeMod]
+    // 10 + AC_ARMOR_BONUS + AC_SHIELD_BONUS + AC_FROM_DEFLECT + AC_FROM_DODGE + AC_FROM_NATURAL +
+    //        SIZE_MOD  + AC_MISC_BONUS_1 + AC_MISC_BONUS_2 + ACTempBonus
+
+    private void setArmorClass() {
+        Armorclass ac = _character.getArmorclass();
+        _propertyMap.put( AC_ARMOR_BONUS, Integer.parseInt( replacePlus( ac.getFromarmor() ) ) );
+        _propertyMap.put( AC_SHIELD_BONUS, ac.getFromshield().length() > 0 ?
+                                           Integer.parseInt( replacePlus( ac.getFromshield() ) ) :
+                                           new Integer( 0 ) );
+        _propertyMap.put( AC_FROM_DEFLECT, ac.getFromdeflect().length() > 0 ?
+                                           Integer.parseInt( replacePlus( ac.getFromdeflect() ) ) :
+                                           new Integer( 0 ) );
+        _propertyMap.put( AC_FROM_DODGE,  ac.getFromdodge().length() > 0 ?
+                                           Integer.parseInt( replacePlus( ac.getFromdodge() ) ) :
+                                           new Integer( 0 ) );
+        _propertyMap.put( AC_FROM_NATURAL, ac.getFromnatural().length() > 0 ?
+                                           Integer.parseInt( replacePlus( ac.getFromnatural() ) ) :
+                                           new Integer( 0 ) );
+        _propertyMap.put( SIZE_MOD,        ac.getFromsize().length() > 0 ?
+                                           Integer.parseInt( replacePlus( ac.getFromsize() ) ) :
+                                           new Integer( 0 ) );
+        _propertyMap.put( AC_MISC_BONUS_1, ac.getFrommisc().length() > 0 ?
+                                           Integer.parseInt( replacePlus( ac.getFrommisc() ) ) :
+                                           new Integer( 0 ) );
+        _propertyMap.put( AC_MISC_BONUS_2, new Integer( 0  ) );
+        _propertyMap.put( AC_TEMP_BONUS,   new Integer( 0 ) );
+
+
+    }
+
+    private void setHitpoints() {
+       Integer level = this.getLevel();
+       int     hp    = Integer.parseInt(_character.getHealth().getHitpoints());
+       int  conBonus = this.getBaseAbilityBonus( IAttribute.Constitution );
+       int  baseHp   = hp - conBonus * level;
+       _propertyMap.put( CLASS_HP, baseHp );
+    }
+
     private void setCoreProperties() {
-       //TODO: // t.setPropertyType(PATHFINDER);
+
         _propertyMap.put( CHARACTER, _character.getName() );
         _propertyMap.put( RACE, _character.getRace().getName());
         _propertyMap.put( ALIGNMENT, _character.getAlignment().getName());
@@ -135,17 +181,20 @@ public class PathfinderToken implements IPathfinderCharacter {
         _propertyMap.put( LEVEL, Integer.parseInt( _character.getClasses().getLevel() ) );
         _propertyMap.put( CLASS, _character.getClasses().getSummaryabbr());
 
-       // t.setProperty(CLASS, _character.getClassSummaryAbbreviation());
-     //   t.setProperty(LEVEL, _character.getClass()
 
 
+    }
 
-        //if (_character.isNPC()) {
-          //  t.setType(Token.Type.NPC);
-        //} else {
-          //  t.setType(Token.Type.PC);
-        //}
-
+    private void setSavingThrows() {
+        for(Save s : _character.getSaves().getSave() ) {
+            _propertyMap.put( s.getAbbr() + CLASS_BONUS, Integer.parseInt( replacePlus( s.getBase() ) ) );
+            _propertyMap.put( s.getAbbr() + RESIST_BONUS, s.getFromresist().length() > 0 ?
+                                                          Integer.parseInt( replacePlus( s.getFromresist() ) ) :
+                                                          new Integer( 0 ) );
+            _propertyMap.put( s.getAbbr() + MISC_BONUS,  s.getFrommisc().length() > 0 ?
+                                                          Integer.parseInt( replacePlus( s.getFrommisc() ) ) :
+                                                          new Integer( 0 ) );
+        }
     }
 
     //IPathfinderCharacter methods
@@ -197,8 +246,17 @@ public class PathfinderToken implements IPathfinderCharacter {
         return (String)getTokenProperties( CLASS );
     }
 
+    public Integer getClassHitpoints() {
+        return (Integer)getTokenProperties( CLASS_HP );
+    }
+
     public Integer getBaseAbilityScore(IAttribute attribute) {
         return (Integer)getTokenProperties(attribute.name() );
+    }
+
+    public Integer getBaseAbilityBonus(IAttribute iattribute) {
+        Attribute attribute = _attributes.get( iattribute );
+        return  Integer.parseInt(replacePlus(attribute.getAttrbonus().getBase()));
     }
 
     public Integer getAbilityEnhancement(IAttribute iattribute) {
@@ -207,6 +265,46 @@ public class PathfinderToken implements IPathfinderCharacter {
 
     public Integer getAbilityDamage(IAttribute attribute) {
         return (Integer)_propertyMap.get(getAttributeDamageKeyName(attribute));
+    }
+
+    public Integer getSavingThrowClassBonus(ISavingThrow ist) {
+        return (Integer)_propertyMap.get( ist.toString() + CLASS_BONUS );
+    }
+
+    public Integer getMiscellaneousSavingThrowBonus(ISavingThrow ist) {
+        return (Integer)_propertyMap.get( ist.toString() + MISC_BONUS );
+    }
+
+    public Integer getResistanceSavingThrowBonus(ISavingThrow ist) {
+        return (Integer)_propertyMap.get( ist.toString() + RESIST_BONUS );
+    }
+
+    public Integer getACArmorBonus() {
+        return (Integer)_propertyMap.get( AC_ARMOR_BONUS );
+    }
+
+    public Integer getACFromShield() {
+        return (Integer)_propertyMap.get( AC_SHIELD_BONUS );
+    }
+
+    public Integer getACFromDeflect() {
+        return (Integer)_propertyMap.get( AC_FROM_DEFLECT );
+    }
+
+    public Integer getACFromDodge() {
+        return (Integer)_propertyMap.get( AC_FROM_DODGE );
+    }
+
+    public Integer getACFromnNatural() {
+        return (Integer)_propertyMap.get( AC_FROM_NATURAL );
+    }
+
+    public Integer getACFromSize() {
+        return (Integer)_propertyMap.get( SIZE_MOD );
+    }
+
+    public Integer getACMisc() {
+        return (Integer)_propertyMap.get( AC_MISC_BONUS_1 );
     }
 
 
@@ -218,22 +316,21 @@ public class PathfinderToken implements IPathfinderCharacter {
 
         _token = createToken(configEntry);
 
-        //loadMacros(_token);
+        loadMacros(_token);
 
-        //setCoreProperties(_token);
+        //set all the token properties.
+        _token.setPropertyType(PATHFINDER);
+        for( String propKey : _propertyMap.keySet() ) {
+            _token.setProperty( propKey, _propertyMap.get( propKey ));
+        }
 
-
-        //setCharacterAttributes(_token);
         //setPenalties(_token);
 
-        //setHitPoints(_token);
-        //setArmorClass(_token);
 
 
         //_token.setProperty(BASE_ATTACK_BONUS, _character.getAttack().getBaseattack());
 		//_token.setProperty(INIT_MOD, Integer.toString(CreateInitModProperty(_character.getInitiative())));
 
-        //setSavingThrows(_token);
         //setSkills(_token);
 
         //Gson gson = new Gson();
@@ -271,55 +368,9 @@ public class PathfinderToken implements IPathfinderCharacter {
         } */
     }
 
-    private void setSavingThrows(Token t) {
-        /*
-        HashMap<String, CharacterOld.Save> saves = _character.getSaves();
-        for (String saveName : saves.keySet()) {
-            CharacterOld.Save s = saves.get(saveName);
-            t.setProperty(s.abbr + CLASS_BONUS, s.base);
-            t.setProperty(s.abbr + FEAT_BONUS, s.frommisc);
-            t.setProperty(s.abbr + ENH_BONUS, s.fromresist);
-            String miscBonus1 = s.abbr + MISC_BONUS1;
-            if (t.getProperty(miscBonus1) == null) {
-                t.setProperty(miscBonus1, "0");
-            }
-            String miscBonus2 = s.abbr + MISC_BONUS2;
-            if (t.getProperty(miscBonus2) == null) {
-                t.setProperty(miscBonus2, "0");
-            }
-        }  */
-    }
 
-    private void setArmorClass(Token t) {
-        /*
-        CharacterOld.ArmorClass AC = _character.getArmorClass();
-        t.setProperty(AC_ARMOR_BONUS, AC.fromarmor);
-        t.setProperty(AC_SHIELD_BONUS, AC.fromshield);
-        t.setProperty(AC_CLASS_BONUS, "0"); //TODO: does herolabs ever define this?
-        t.setProperty(AC_FEAT_BONUS, AC.fromdodge); //TODO: anything other than dodge here?
-        t.setProperty(AC_MISC_BONUS_1, AC.frommisc);
-        t.setProperty(AC_MISC_BONUS_2, "0");
-        t.setProperty(AC_TEMP_BONUS, "0");
-        t.setProperty(SIZE_MOD, AC.fromsize);
 
-        //finally do the enhancement bonus
-        int enhancementbonus = Integer.parseInt(AC.fromdeflect) +
-                Integer.parseInt(AC.fromnatural);
-        t.setProperty(AC_ENH_BONUS, Integer.toString(enhancementbonus));
-        */
-    }
 
-	private void setHitPoints(Token t) {
-        /*
-		CharacterAttribute con = _character.getConstitution();
-		int level = Integer.parseInt(_character.getLevel());
-		int hp = Integer.parseInt( _character.getHitpoints() );
-		int conBonus = con.getBonus();
-		int baseHitpoints = hp - conBonus * level;
-		t.setProperty( CLASS_HP, Integer.toString( baseHitpoints ) );
-		//t.setProperty(MISC_HP, Integer.toString( hp - baseHitpoints ) );
-		*/
-	}
 
     private void setPenalties(Token t) {
         /*
@@ -336,25 +387,6 @@ public class PathfinderToken implements IPathfinderCharacter {
     }
 
 
-    private void setCharacterAttributes(Token t) {
-        /*
-        for (CharacterAttribute ca : _character.getAttributes().values()) {
-            t.setProperty(ca.getName(), ca.getBase());
-            String enhancementProperty = CharacterAttribute.getShortName(ca.getName()) + ENHANCEMENT;
-            t.setProperty(enhancementProperty, Integer.toString( ca.getEnhancement() ) );
-            String damageProperty = CharacterAttribute.getShortName(ca.getName()) + DAMAGE;
-            t.setProperty(damageProperty, "0");
-            if (ca.isVoid()) { //void attributes mess up saves, so...
-                String saveShortName = CharacterAttribute.getSaveShortName(ca.getName());
-                if (saveShortName != null) {
-                    String attrib = saveShortName + MISC_BONUS1;
-                    t.setProperty(attrib, Integer.toString(ca.getModifiedBonus()));
-                    attrib = saveShortName + MISC_BONUS2;
-                    t.setProperty(attrib, "-1"); //TODO: this is a bit of a hack to work around the PF ruleset.
-                }
-            }
-        } */
-    }
 
     private Token createToken(Config.ConfigEntry configEntry) throws IOException {
         Asset tokenImage = null;
@@ -373,16 +405,15 @@ public class PathfinderToken implements IPathfinderCharacter {
 
 
 		//set the token size
-        /*
-        String characterSize = _character.getSize();
+        String characterSize = _character.getSize().getName();
 		if ( characterSize != null && ! characterSize.isEmpty()) {
 			SquareGrid grid = new SquareGrid();
 			for (TokenFootprint footprint : grid.getFootprints()) {
 				if ( characterSize.equals( footprint.getName() ) ) {
-					t.setFootprint( grid, footprint );
+					_token.setFootprint( grid, footprint );
 				}
 			}
-		}  */
+		}
 
         //set the other image assets (portrait, charsheet image)
         Asset portrait = AssetManager.createAsset( new File( configEntry.getPortraitFilePath()) );

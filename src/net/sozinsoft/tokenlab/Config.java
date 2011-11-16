@@ -17,7 +17,6 @@ public class Config {
     private HashMap<String, ConfigEntry> configs;
     private Preferences prefs;
     private String xmlFileLocation;
-	
 	private String configFileName;
 
     public Config( Preferences prefs ) throws IOException {
@@ -31,6 +30,10 @@ public class Config {
         else {
             configs = new HashMap<String, ConfigEntry>();
         }
+    }
+
+    public Config() {
+        configs = new HashMap<String, ConfigEntry>();
     }
 
     public void save() {
@@ -52,10 +55,7 @@ public class Config {
             e.printStackTrace();
         }
     }
-	public Config( String configFileName ) {
-		this.configFileName = configFileName;
-	}
-	
+
 	public ConfigEntry addConfigEntry( String name, String imagePath, String portraitPath, String outputTokenPath ) {
 
         ConfigEntry ce = new ConfigEntry();

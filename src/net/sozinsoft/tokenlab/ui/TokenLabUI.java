@@ -210,7 +210,7 @@ public class TokenLabUI {
 
             CharacterOld character = (CharacterOld) object;
             try {
-                dig.processCharacter( config, character );
+                dig.saveCharacter( config, character );
 
             } catch (IOException e1) {
                 success = false;

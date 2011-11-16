@@ -3,7 +3,6 @@ package net.sozinsoft.tokenlab;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.LinkedList;
 import java.util.List;
 
 import net.sozinsoft.tokenlab.dtd.Character;
@@ -48,11 +47,11 @@ public class HerolabsDigester {
 
         //WeaponCache cache = new WeaponCache( ResourceManager.getWeapons().getAbsolutePath() );
         for (Character c : this.characters) {
-            processCharacter(config, c);
+            saveCharacter(config, c);
         }
     }
 
-    public void processCharacter(Config config, Character c) throws IOException, SAXException {
+    public void saveCharacter(Config config, Character c) throws IOException, SAXException {
         System.out.println( "Processing character " + c.getName() );
         Config.ConfigEntry ce = config.get(c.getName());
 

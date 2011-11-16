@@ -27,41 +27,33 @@ AtkTempBonus
 DmgTempBonus
 SizeMod
 HeroPoints
-*AC:[r:10+ACArmorBonus+ACShieldBonus+DexBonus+ACClassBonus+ACFeatBonus+ACEnhBonus+ACMiscBonus1+ACMiscBonus2+ACTempBonus+SizeMod]
-TouchAC:[r:10+DexBonus+ACClassBonus+ACFeatBonus+ACEnhBonus+ACMiscBonus1+ACMiscBonus2+ACTempBonus+SizeMod]
-FlatFootAC:[r:10+ACArmorBonus+ACShieldBonus+ACClassBonus+ACFeatBonus+ACEnhBonus+ACMiscBonus1+ACMiscBonus2+ACTempBonus+SizeMod]
+*AC:[r:10 +   DexBonus + ACArmorBonus + ACShieldBonus + ACDeflectBonus + ACDodgeBonus + ACNaturalBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
+TouchAC:[r: 10 +   DexBonus + ACDeflectBonus + ACDodgeBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
+FlatFootAC:[r: 10 + ACArmorBonus + ACShieldBonus + ACDeflectBonus + ACNaturalBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
 ACArmorBonus
 ACShieldBonus
-ACClassBonus
-ACFeatBonus
-ACEnhBonus
-ACMiscBonus1
-ACMiscBonus2
+ACDodgeBonus
+ACDeflectBonus
+ACNaturalBonus
+ACMiscBonus1:0
+ACMiscBonus2:0
 ACTempBonus:0
 DamageReduction
 Initiative:[r:DexBonus+InitMod]
 InitMod
-Fortitude (Fort):[r:FortClassBonus+ConBonus+FortFeatBonus+FortEnhBonus+FortMiscBonus1+FortMiscBonus2+FortTempBonus]
+Fortitude (Fort):[r: FortClassBonus + ConBonus + FortResistBonus + FortMiscBonus + FortTempBonus]
 FortClassBonus
-FortFeatBonus
-FortEnhBonus
-FortMiscBonus1
-FortMiscBonus2
-FortTempBonus
-Reflex (Ref):[r:RefClassBonus+DexBonus+RefFeatBonus+RefEnhBonus+RefMiscBonus1+RefMiscBonus2+RefTempBonus]
+FortMiscBonus
+FortTempBonus:0
+Reflex (Ref): [r: RefClassBonus + DexBonus + RefResistBonus +RefMiscBonus + RefTempBonus]
 RefClassBonus
-RefFeatBonus
-RefEnhBonus
-RefMiscBonus1
-RefMiscBonus2
-RefTempBonus
-Will:[r:WillClassBonus+WisBonus+WillFeatBonus+WillEnhBonus+WillMiscBonus1+WillMiscBonus2+WillTempBonus]
+RefMiscBonus
+RefTempBonus:0
+Will: [r: WillClassBonus + WisBonus + WillResistBonus + WillMiscBonus + WillTempBonus]
 WillClassBonus
 WillFeatBonus
-WillEnhBonus
-WillMiscBonus1
-WillMiscBonus2
-WillTempBonus
+WillMiscBonus
+WillTempBonus:0
 *CMB (CMB):[r:BaseAttackBonus+StrBonus-SizeMod]
 *CMD (CMD):[r:10+BaseAttackBonus+StrBonus+DexBonus-SizeMod]
 *Speed
