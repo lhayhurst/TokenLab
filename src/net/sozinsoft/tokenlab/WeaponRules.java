@@ -25,7 +25,7 @@ public class WeaponRules {
         weapon = w;
     }
 
-    public boolean offHandWeaponIsLightOrUnarmed( Character c, WeaponCache cache ) {
+    public boolean offHandWeaponIsLightOrUnarmed( CharacterOld c, WeaponCache cache ) {
            //get the offhand weapon
             Weapon offHand = null;
             for ( Weapon w  : c.getWeapons().values()) {
@@ -54,7 +54,7 @@ public class WeaponRules {
             return false;
         }
 
-    private String extractBasicWeaponName( String name, Character c ) {
+    private String extractBasicWeaponName( String name, CharacterOld c ) {
         Pattern regex = Pattern.compile("^.*?\\s+(\\w+)$");
         java.util.regex.Matcher matcher = regex.matcher(name);
         if (matcher.find()) {
@@ -78,7 +78,7 @@ public class WeaponRules {
     }
 
     //see http://www.d20pfsrd.com/equipment---final/weapons for how this stuff all works.
-    public void inferAbilityBonus(Character c, WeaponCache cache) {
+    public void inferAbilityBonus(CharacterOld c, WeaponCache cache) {
 
 
         basicName = extractBasicWeaponName(weapon.name, c );
@@ -170,7 +170,7 @@ public class WeaponRules {
         }
 	}
 
-    private void setWeaponProficiency(Character c, WeaponCache.Entry weaponEntry) {
+    private void setWeaponProficiency(CharacterOld c, WeaponCache.Entry weaponEntry) {
 
         if ( isUnarmedStrike()  ) {  //All characters are proficient with unarmed strikes
             hasWeaponProficiency = 1;
@@ -193,7 +193,7 @@ public class WeaponRules {
         }
     }
 
-    private int getTwoWeaponFightingPenalty( Character c, WeaponCache cache ) {
+    private int getTwoWeaponFightingPenalty( CharacterOld c, WeaponCache cache ) {
 
         int primaryHandPenalty = -6;
         int offHandPenalty = -10;
@@ -236,34 +236,34 @@ public class WeaponRules {
 
 
 public boolean isUnarmedStrike() {
-        return this.name.equals(Character.HEROLABS_UNARMED_STRIKE);
+        return this.name.equals(CharacterOld.HEROLABS_UNARMED_STRIKE);
     }
     private boolean isEquipped() {
         return isWieldedTwoHandedWeapon() || isWieldedMainhand() || isWieldedOffhand();
     }
 
     public boolean isWieldedMainhand() {
-        return weapon.equipped != null && ! weapon.equipped.isEmpty() && weapon.equals(Character.HEROLABS_WEAPON_MAINHAND);
+        return weapon.equipped != null && ! weapon.equipped.isEmpty() && weapon.equals(CharacterOld.HEROLABS_WEAPON_MAINHAND);
     }
 
     public boolean isWieldedOffhand() {
-        return weapon.equipped != null && ! weapon.equipped.isEmpty() && weapon.equipped.equals( Character.HEROLABS_WEAPON_OFFHAND );
+        return weapon.equipped != null && ! weapon.equipped.isEmpty() && weapon.equipped.equals( CharacterOld.HEROLABS_WEAPON_OFFHAND );
     }
 
     public boolean isWieldedTwoHandedWeapon() {
-        return weapon.equipped != null && ! weapon.equipped.isEmpty() && weapon.equipped.equals( Character.HEROLABS_WEAPON_TWOHAND );
+        return weapon.equipped != null && ! weapon.equipped.isEmpty() && weapon.equipped.equals( CharacterOld.HEROLABS_WEAPON_TWOHAND );
     }
 
     private boolean isFirearm() {
-        return weapon.category != null && ! weapon.category.isEmpty() && weapon.category.equals( Character.HEROLABS_FIREARM_PROJECTILE_WEAPON );
+        return weapon.category != null && ! weapon.category.isEmpty() && weapon.category.equals( CharacterOld.HEROLABS_FIREARM_PROJECTILE_WEAPON );
     }
 
     private boolean isProjectileWeapon() {
-        return weapon.category != null && ! weapon.category.isEmpty() && weapon.category.equals(Character.HEROLABS_PROJECTILE_WEAPON);
+        return weapon.category != null && ! weapon.category.isEmpty() && weapon.category.equals(CharacterOld.HEROLABS_PROJECTILE_WEAPON);
     }
 
     private boolean isMeleeWeapon() {
-        return weapon.category != null && ! weapon.category.isEmpty() && weapon.category.indexOf(Character.HEROLABS_MELEE_WEAPON ) == 0;
+        return weapon.category != null && ! weapon.category.isEmpty() && weapon.category.indexOf(CharacterOld.HEROLABS_MELEE_WEAPON ) == 0;
     }
 
 

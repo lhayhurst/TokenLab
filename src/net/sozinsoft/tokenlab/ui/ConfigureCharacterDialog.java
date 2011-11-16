@@ -1,17 +1,12 @@
 package net.sozinsoft.tokenlab.ui;
 
 import net.sozinsoft.tokenlab.*;
-import net.sozinsoft.tokenlab.Character;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
-import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
-import java.io.IOException;
 import java.util.prefs.Preferences;
-
-import static net.sozinsoft.tokenlab.ui.IconCreator.createImageIcon;
 
 public class ConfigureCharacterDialog extends JDialog {
     public static final String IMAGE_DIR = "IMAGE_DIR";

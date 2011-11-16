@@ -1,13 +1,10 @@
 package net.sozinsoft.tokenlab;
 
-import java.beans.FeatureDescriptor;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.regex.Pattern;
 
-import net.rptools.maptool.model.Token;
-
-public class Character {
+public class CharacterOld {
 
     public static final String HEROLABS_FIREARM_PROJECTILE_WEAPON = "Firearm, Projectile Weapon";
     public static final String HEROLABS_PROJECTILE_WEAPON = "Projectile Weapon";
@@ -196,7 +193,7 @@ public class Character {
 
     private ArmorClass _armorClass;
 
-    public Character.ArmorClass getArmorClass() {
+    public CharacterOld.ArmorClass getArmorClass() {
         return _armorClass;
     }
 
@@ -532,6 +529,135 @@ public class Character {
 
     public void addMovement(String speed) {
         this._speed = speed;
+    }
+
+
+    private HashMap< String, SpellClass > _spellClasses = new HashMap<String, SpellClass>();
+    public void addSpellClass( String name, String spells, String maxSpellLevel,
+                               String level, String used, String unlimited, String maxcasts) {
+
+        SpellClass sc = new SpellClass(name, spells, Integer.parseInt(maxSpellLevel) );
+
+        int iLevel = Integer.parseInt(level);
+        int iUsed  = Integer.parseInt(used);
+        boolean isUnlimited = unlimited != null && unlimited.equals(HEROLABS_BOOLEAN_YES) ? true : false;
+        int maxCasts = maxcasts != null ? Integer.parseInt(maxcasts) : -1;
+        SpellLevel sl = new SpellLevel( iLevel, iUsed,  isUnlimited, maxCasts );
+        sc.addSpellLevel ( sl );
+        _spellClasses.put( sc.spellClassName, sc );
+
+
+    }
+    //spells
+    public class SpellLevel {
+        public int level;
+        public int used;
+        public boolean isUnlimited;
+        public int maxCasts;
+
+        public SpellLevel( int level, int used, boolean isUnlimited, int maxCasts) {
+            this.level = level;
+            this.used = used;
+            this.isUnlimited = isUnlimited;
+            this.maxCasts = maxCasts;
+        }
+    }
+    public class SpellClass {
+        public String spellClassName;
+        public String spellCasterType;
+        public int maxSpellLevel;
+        public HashMap<Integer, SpellLevel> spellLevels = new HashMap<Integer, SpellLevel>();
+
+        public SpellClass(String spellClassName, String spellCasterType, int maxSpellLevel ) {
+            this.spellCasterType = spellCasterType;
+            this.spellClassName = spellClassName;
+            this.maxSpellLevel = maxSpellLevel;
+        }
+
+        public void addSpellLevel( SpellLevel sl ) {
+            spellLevels.put( sl.level, sl );
+
+        }
+    }
+
+    class Spell {
+          String name;
+          int level;
+          int casterlevel;
+          String save;
+          boolean spontaneous;
+          String descriptortext;
+          String subschooltext;
+          String schooltext;
+          String componenttext;
+          int difficultyClass;
+          String resist;
+          String duration;
+          String effect;
+          String area;
+          String target;
+          String range;
+          String casttime;
+          String spellclass;
+          String description;
+
+        public Spell(String name, int level, int casterlevel, String save, boolean spontaneous,
+                     String descriptortext, String subschooltext, String schooltext, String componenttext,
+                     int dc, String resist, String duration, String effect, String area, String target,
+                     String range, String casttime, String spellclass, String description) {
+            this.name = name;
+            this.level = level;
+            this.casterlevel = casterlevel;
+            this.save = save;
+            this.spontaneous = spontaneous;
+            this.descriptortext = descriptortext;
+            this.subschooltext = subschooltext;
+            this.schooltext = schooltext;
+            this.componenttext = componenttext;
+            this.difficultyClass = dc;
+            this.resist = resist;
+            this.duration = duration;
+            this.effect = effect;
+            this.area = area;
+            this.target = target;
+            this.range = range;
+            this.casttime = casttime;
+            this.spellclass = spellclass;
+            this.description = description;
+
+        }
+
+
+    }
+
+    public HashMap<String, Spell> spells = new HashMap<String, Spell>();
+    public void addSpell( String name, String level, String casterlevel, String save, String spontaneous,
+                          String descriptortext, String subschooltext, String schooltext, String componenttext,
+                          String dc,String resist,  String duration, String effect, String area , String target,
+                          String range, String casttime, String spellclass, String description ) throws Exception {
+        boolean isSpontaneous = spontaneous != null && spontaneous.equals(HEROLABS_BOOLEAN_YES);
+        Spell spell = new Spell( name,
+                                 Integer.parseInt(level),
+                                 Integer.parseInt( casterlevel ),
+                                 save,
+                                 isSpontaneous,
+                                 descriptortext,
+                                 subschooltext,
+                                 schooltext,
+                                 componenttext,
+                                 Integer.parseInt(dc),
+                                 resist,
+                                 duration,
+                                 effect,
+                                 area,
+                                 target,
+                                 range,
+                                 casttime,
+                                 spellclass,
+                                 description );
+
+        spells.put( spell.name, spell );
+
     }
 
 

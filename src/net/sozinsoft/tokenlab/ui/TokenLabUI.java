@@ -1,7 +1,9 @@
 package net.sozinsoft.tokenlab.ui;
 
 import net.sozinsoft.tokenlab.*;
-import net.sozinsoft.tokenlab.Character;
+import net.sozinsoft.tokenlab.CharacterOld;
+import net.sozinsoft.tokenlab.dtd.*;
+import net.sozinsoft.tokenlab.dtd.Character;
 import org.xml.sax.SAXException;
 
 
@@ -9,6 +11,7 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.filechooser.FileFilter;
+import javax.xml.bind.JAXBException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -124,16 +127,14 @@ public class TokenLabUI {
                         DefaultListModel model = new DefaultListModel();
                         herolabsCharacterList.setModel(model);
 
-                        for (net.sozinsoft.tokenlab.Character c : dig.getCharacters()) {
+                        for (Character c : dig.getCharacters()) {
                             model.addElement(c);
                         }
 
                         herolabsCharacterList.validate();
 
-                    } catch (IOException e1) {
-                        e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                    } catch (SAXException e1) {
-                        e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    } catch (JAXBException je) {
+                        je.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                     }
                 }
             }
@@ -146,7 +147,7 @@ public class TokenLabUI {
                 Object[] selectedValues = herolabsCharacterList.getSelectedValues();
                 for (Object object : selectedValues) {
 
-                    Character character = (Character) object;
+                    CharacterOld character = (CharacterOld) object;
                     Config.ConfigEntry entry = config.get(character.getName());
                     if (entry == null) {
                         entry = config.addConfigEntry(character.getName(), null, null, null);
@@ -166,7 +167,7 @@ public class TokenLabUI {
         });
         exportSelectedButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Character c = (Character) herolabsCharacterList.getModel().getElementAt(herolabsCharacterList.getSelectedIndex());
+                CharacterOld c = (CharacterOld) herolabsCharacterList.getModel().getElementAt(herolabsCharacterList.getSelectedIndex());
                 Config.ConfigEntry ce = config.get(c.getName());
                 if (ce != null && ce.isOk()) {
                     exportCharacter();
@@ -183,7 +184,7 @@ public class TokenLabUI {
                 LinkedList<Integer> selectedIndices = new LinkedList<Integer>();
                 for ( int i = 0; i < lm.getSize(); i++ )
                 {
-                    Character c = (Character)lm.getElementAt(i);
+                    CharacterOld c = (CharacterOld)lm.getElementAt(i);
                     Config.ConfigEntry ce = config.get(c.getName());
                     if ( ce != null && ce.isOk() ) {
                         selectedIndices.add(i);
@@ -201,12 +202,13 @@ public class TokenLabUI {
     }
 
     private void exportCharacter() {
+     /*
         Object [] selectedValues = herolabsCharacterList.getSelectedValues();
         HerolabsDigester dig = new HerolabsDigester();
         boolean success = true;
         for ( Object object : selectedValues ) {
 
-            Character character = (Character) object;
+            CharacterOld character = (CharacterOld) object;
             try {
                 dig.processCharacter( config, character );
 
@@ -228,6 +230,7 @@ public class TokenLabUI {
         if ( success ) {
             JOptionPane.showMessageDialog(panel, "Successfully exported your selected Maptools token(s).");
         }
+        */
     }
 
     public class IconListRenderer extends DefaultListCellRenderer {
@@ -260,7 +263,7 @@ public class TokenLabUI {
                             value, index, isSelected, cellHasFocus);
 
             // Get icon to use for the list item value
-            Character character = (Character)value;
+            CharacterOld character = (CharacterOld)value;
             Config.ConfigEntry ce = config.get( character.getName());
             Icon icon = null;
 
