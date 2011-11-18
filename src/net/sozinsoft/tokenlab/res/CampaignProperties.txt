@@ -1,6 +1,6 @@
 ----------------|Descriptive|---------------
-*Character:<name>
-*Player:<name>
+*@Character:<name>
+*@Player:<name>
 Race:<race>
 Class:<class(es)>
 Level
@@ -14,20 +14,20 @@ Occupation:<occupation(s)>
 Languages:<language(es)>
 Feats:<feat(s)>
 -------------------|CORE|-------------------
-*Hit Points (HP):[r:CurrentHP][if(TempHP>0),CODE:{(+[r:TempHP])};{}] / [r:MaxHP]
-MaxHP:[r:ClassHP+(ConBonus*Level)+MiscHP]
+*@Hit Points (HP):[r:CurrentHP][if(TempHP>0),CODE:{(+[r:TempHP])};{}] / [r:MaxHP]
+MaxHP:[r:ClassHP+MiscHP]
 CurrentHP:[r:MaxHP]
 HPChange
 ClassHP
 MiscHP
-*TempHP:0
+TempHP:0
 Bloodied:[r:floor(MaxHP/2)]
 BaseAttackBonus
 AtkTempBonus
 DmgTempBonus
 SizeMod
 HeroPoints
-*AC:[r:10 +   DexBonus + ACArmorBonus + ACShieldBonus + ACDeflectBonus + ACDodgeBonus + ACNaturalBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
+*@AC:[r:10 +   DexBonus + ACArmorBonus + ACShieldBonus + ACDeflectBonus + ACDodgeBonus + ACNaturalBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
 TouchAC:[r: 10 +   DexBonus + ACDeflectBonus + ACDodgeBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
 FlatFootAC:[r: 10 + ACArmorBonus + ACShieldBonus + ACDeflectBonus + ACNaturalBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
 ACArmorBonus
@@ -44,22 +44,24 @@ InitMod
 Fortitude (Fort):[r: FortClassBonus + ConBonus + FortResistBonus + FortMiscBonus + FortTempBonus]
 FortClassBonus
 FortMiscBonus
+FortResistBonus
 FortTempBonus:0
-Reflex (Ref): [r: RefClassBonus + DexBonus + RefResistBonus +RefMiscBonus + RefTempBonus]
+Reflex (Ref):[r: RefClassBonus + DexBonus + RefResistBonus +RefMiscBonus + RefTempBonus]
 RefClassBonus
+RefResistBonus
 RefMiscBonus
 RefTempBonus:0
-Will: [r: WillClassBonus + WisBonus + WillResistBonus + WillMiscBonus + WillTempBonus]
+Will:[r: WillClassBonus + WisBonus + WillResistBonus + WillMiscBonus + WillTempBonus]
 WillClassBonus
-WillFeatBonus
+WillResistBonus
 WillMiscBonus
 WillTempBonus:0
-*CMB (CMB):[r:BaseAttackBonus+StrBonus-SizeMod]
-*CMD (CMD):[r:10+BaseAttackBonus+StrBonus+DexBonus-SizeMod]
-*Speed
+*@CMB (CMB):[r:BaseAttackBonus+StrBonus-SizeMod]
+*@CMD (CMD):[r:10+BaseAttackBonus+StrBonus+DexBonus-SizeMod]
+*@Speed
 Elevation
 Description
-*CurrentStance
+*@CurrentStance
 ----------------|ATTRIBUTES|----------------
 Strength (Str):10
 Constitution (Con):10
@@ -245,13 +247,13 @@ MiscSkill3ClassSkill:0
 MiscSkill3Ranks:0
 MiscSkill3Bonus:0
 ------------------|BONUS|-------------------
-StrBonus:[r:floor(((Strength+StrEnhancement-StrDamage)/2)-5)]
+StrBonus:[r: json.get(Strength, "bonusModifier" )  + json.get(Strength, "tempModifier") - json.get(Dexterity, "damage") ]
 StrBonus1.5:[r:floor(StrBonus*1.5)]
-ConBonus:[r:floor(((Constitution+ConEnhancement-ConDamage)/2)-5)]
-DexBonus:[r:min(floor(((Dexterity+DexEnhancement-DexDamage)/2)-5),ArmorMaxDexBonus)]
-IntBonus:[r:floor(((Intelligence+IntEnhancement-IntDamage)/2)-5)]
-WisBonus:[r:floor(((Wisdom+WisEnhancement-WisDamage)/2)-5)]
-ChaBonus:[r:floor(((Charisma+ChaEnhancement-ChaDamage)/2)-5)]
+ConBonus:[r: json.get(Constitution, "bonusModifier" )  + json.get(Constitution, "tempModifier") - json.get(Constitution, "damage") ]
+DexBonus:[r:floor( json.get(Dexterity, "bonusModifier" )  + json.get(Dexterity, "tempModifier")  - json.get(Dexterity, "damage") ), ArmorMaxDexBonus ) ]
+IntBonus:[r: json.get(Intelligence, "bonusModifier" )  + json.get(Intelligence, "tempModifier") - json.get(Intelligence, "damage") ]
+WisBonus:[r: json.get(Wisdom, "bonusModifier" )  + json.get(Wisdom, "tempModifier") - json.get(Wisdom, "damage") ]
+ChaBonus:[r: json.get(Charisma, "bonusModifier" )  + json.get(Charisma, "tempModifier") - json.get(Charisma, "damage") ]
 ----------------|EQUIPMENT|-----------------
 ArmorCheckPenalty
 ArmorMaxDexBonus
@@ -296,7 +298,7 @@ GroupLoot13:<empty>
 GroupLoot14:<empty>
 GroupLoot15:<empty>
 --------------|DO_NOT_EDIT|------------------
-*Conditions:[h:theList = getTokenStates()][r, foreach(item, theList, ""): if(getState(item), item + ", ", "")]
+*@Conditions:[h:theList = getTokenStates()][r, foreach(item, theList, ""): if(getState(item), item + ", ", "")]
 ------------------|OTHER|-------------------:-------------------
 W:'(W)'
 ABILITY_NAMES:["Strength", "Constitution", "Dexterity", "Intelligence", "Wisdom", "Charisma"]

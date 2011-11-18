@@ -81,6 +81,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @Generated(value = "com.sun.tools.internal.xjc.Driver", date = "2011-11-15T04:01:32-06:00", comments = "JAXB RI vJAXB 2.1.10 in JDK 6")
 public class Character {
 
+    public String toString() {
+        return this.getName();
+    }
+
     @XmlAttribute
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @Generated(value = "com.sun.tools.internal.xjc.Driver", date = "2011-11-15T04:01:32-06:00", comments = "JAXB RI vJAXB 2.1.10 in JDK 6")

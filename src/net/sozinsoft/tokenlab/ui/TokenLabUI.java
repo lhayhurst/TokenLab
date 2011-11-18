@@ -147,7 +147,7 @@ public class TokenLabUI {
                 Object[] selectedValues = herolabsCharacterList.getSelectedValues();
                 for (Object object : selectedValues) {
 
-                    CharacterOld character = (CharacterOld) object;
+                    Character character = (Character) object;
                     Config.ConfigEntry entry = config.get(character.getName());
                     if (entry == null) {
                         entry = config.addConfigEntry(character.getName(), null, null, null);
@@ -167,7 +167,7 @@ public class TokenLabUI {
         });
         exportSelectedButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                CharacterOld c = (CharacterOld) herolabsCharacterList.getModel().getElementAt(herolabsCharacterList.getSelectedIndex());
+                Character c = (Character) herolabsCharacterList.getModel().getElementAt(herolabsCharacterList.getSelectedIndex());
                 Config.ConfigEntry ce = config.get(c.getName());
                 if (ce != null && ce.isOk()) {
                     exportCharacter();
@@ -184,7 +184,7 @@ public class TokenLabUI {
                 LinkedList<Integer> selectedIndices = new LinkedList<Integer>();
                 for ( int i = 0; i < lm.getSize(); i++ )
                 {
-                    CharacterOld c = (CharacterOld)lm.getElementAt(i);
+                    Character c = (Character)lm.getElementAt(i);
                     Config.ConfigEntry ce = config.get(c.getName());
                     if ( ce != null && ce.isOk() ) {
                         selectedIndices.add(i);
@@ -202,13 +202,13 @@ public class TokenLabUI {
     }
 
     private void exportCharacter() {
-     /*
+
         Object [] selectedValues = herolabsCharacterList.getSelectedValues();
         HerolabsDigester dig = new HerolabsDigester();
         boolean success = true;
         for ( Object object : selectedValues ) {
 
-            CharacterOld character = (CharacterOld) object;
+            Character character = (Character) object;
             try {
                 dig.saveCharacter( config, character );
 
@@ -230,7 +230,7 @@ public class TokenLabUI {
         if ( success ) {
             JOptionPane.showMessageDialog(panel, "Successfully exported your selected Maptools token(s).");
         }
-        */
+
     }
 
     public class IconListRenderer extends DefaultListCellRenderer {
@@ -263,7 +263,7 @@ public class TokenLabUI {
                             value, index, isSelected, cellHasFocus);
 
             // Get icon to use for the list item value
-            CharacterOld character = (CharacterOld)value;
+            Character character = (Character)value;
             Config.ConfigEntry ce = config.get( character.getName());
             Icon icon = null;
 

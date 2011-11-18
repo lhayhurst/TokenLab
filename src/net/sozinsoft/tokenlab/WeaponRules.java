@@ -16,19 +16,19 @@ public class WeaponRules {
     private String baseAttackBonus;
     private int twoWeaponFightingPenalty = 0;
     private String name;
-    private Weapon weapon;
+    private WeaponImpl weaponImpl;
     private int hasWeaponProficiency = 0;
     private int enhancementBonus = 0;
     private int isMasterwork = 0;
 
-    public WeaponRules( Weapon w ) {
-        weapon = w;
+    public WeaponRules( WeaponImpl w ) {
+        weaponImpl = w;
     }
 
     public boolean offHandWeaponIsLightOrUnarmed( CharacterOld c, WeaponCache cache ) {
-           //get the offhand weapon
-            Weapon offHand = null;
-            for ( Weapon w  : c.getWeapons().values()) {
+           //get the offhand weaponImpl
+            WeaponImpl offHand = null;
+            for ( WeaponImpl w  : c.getWeapons().values()) {
                 if ( isWieldedOffhand() ) {
                    offHand = w;
                    break;
@@ -60,12 +60,12 @@ public class WeaponRules {
         if (matcher.find()) {
             return matcher.group(1);
         }
-        regex=Pattern.compile("^.*?\\s+(\\w+),\\s+Composite");   //edge case (UGH): maybe its a composite ranged weapon?
+        regex=Pattern.compile("^.*?\\s+(\\w+),\\s+Composite");   //edge case (UGH): maybe its a composite ranged weaponImpl?
         matcher = regex.matcher(name);
         if (matcher.find() ) {
             return matcher.group(1);
         }
-        else {  //edge case2 Some sort of natural weapon, like 'Constrict (Ochre Jelly)'
+        else {  //edge case2 Some sort of natural weaponImpl, like 'Constrict (Ochre Jelly)'
             String pattern = "^(\\w+)\\s+\\(" + c.getName() + "\\)";
             regex=Pattern.compile( pattern );
             matcher = regex.matcher(name);
@@ -81,40 +81,40 @@ public class WeaponRules {
     public void inferAbilityBonus(CharacterOld c, WeaponCache cache) {
 
 
-        basicName = extractBasicWeaponName(weapon.name, c );
+        basicName = extractBasicWeaponName(weaponImpl.name, c );
 
-        if ( c.hasWeaponFocus( weapon.name ) ) {
+        if ( c.hasWeaponFocus( weaponImpl.name ) ) {
             hasWeaponFocus = 1;
         }
 
-        if ( c.hasWeaponSpecialization( weapon.name )) {
+        if ( c.hasWeaponSpecialization( weaponImpl.name )) {
             hasWeaponSpecialization = 1;
         }
 
         if( c.hasWeaponFinesseFeat() && c.hasShieldEquipped() && isWieldedMainhand() ) {
-            System.out.println("You have weapon finesse weapon " +  weapon.name + " AND a shield equipped; please be advised that " +
+            System.out.println("You have weaponImpl finesse weaponImpl " +  weaponImpl.name + " AND a shield equipped; please be advised that " +
             "a) the shield penalty applies to your attack bonus, and " +
             "b) the curent state of herolabs xml output doesn't allow method to infer exactly what that " +
-            "penalty is.  Please be an honest chap and edit the shieldAttackProperty of your weapon to be the " +
+            "penalty is.  Please be an honest chap and edit the shieldAttackProperty of your weaponImpl to be the " +
             "armor check penalty of your shield in Maptool." );
         }
 
         this.baseAttackBonus = c.getBaseAttackBonus();
 
         //entire section of code is a bit too rules specific for my taste, but the herolabs export leaves something
-        //to be had - for example, if I knew what type of weapon it was (light, heavy, etc) I wouldn't have to do
+        //to be had - for example, if I knew what type of weaponImpl it was (light, heavy, etc) I wouldn't have to do
         //specific checks on unarmed strike.
 
         //because of this I am using an export of pfsrd weapons list.
 
-        WeaponCache.Entry weaponEntry = cache.get( weapon.name );
+        WeaponCache.Entry weaponEntry = cache.get( weaponImpl.name );
 
         if ( weaponEntry == null ) {
             //try to get the generic name
             weaponEntry = cache.get( this.basicName );
             if ( weaponEntry == null ) {
                 //special case handling for natural attacks.  sigh.
-                System.out.println( "Unable to determine information about weapon " + this.name +
+                System.out.println( "Unable to determine information about weaponImpl " + this.name +
                                         ", please file a bug report at githib"); //TODO: handle more gracefully
                 return;
             }
@@ -164,7 +164,7 @@ public class WeaponRules {
         }
         else {
             if ( abilityBonus == null ) {
-                System.out.println("Unable to figure out attack ability bonus for weapon " + this.name +
+                System.out.println("Unable to figure out attack ability bonus for weaponImpl " + this.name +
                         ", please fill a bug report"); //TODO
             }
         }
@@ -179,15 +179,15 @@ public class WeaponRules {
             hasWeaponProficiency = 1;
         }
         else if ( weaponEntry.isSimpleWeapon() ) {
-            if( c.hasSimpleWeaponProficiency( weapon) ) {
+            if( c.hasSimpleWeaponProficiency(weaponImpl) ) {
                 this.hasWeaponProficiency = 1;
             }
         } else if ( weaponEntry.isMartialWeapon() ) {
-            if ( c.hasMartialWeaponProficiency(weapon) ) {
+            if ( c.hasMartialWeaponProficiency(weaponImpl) ) {
                 this.hasWeaponProficiency = 1;
             }
         } else if ( weaponEntry.isExoticWeapon() ) {
-            if ( c.hasExoticWeaponProficiency( weapon ) ) {
+            if ( c.hasExoticWeaponProficiency(weaponImpl) ) {
                 this.hasWeaponProficiency = 1;
             }
         }
@@ -243,27 +243,27 @@ public boolean isUnarmedStrike() {
     }
 
     public boolean isWieldedMainhand() {
-        return weapon.equipped != null && ! weapon.equipped.isEmpty() && weapon.equals(CharacterOld.HEROLABS_WEAPON_MAINHAND);
+        return weaponImpl.equipped != null && ! weaponImpl.equipped.isEmpty() && weaponImpl.equals(CharacterOld.HEROLABS_WEAPON_MAINHAND);
     }
 
     public boolean isWieldedOffhand() {
-        return weapon.equipped != null && ! weapon.equipped.isEmpty() && weapon.equipped.equals( CharacterOld.HEROLABS_WEAPON_OFFHAND );
+        return weaponImpl.equipped != null && ! weaponImpl.equipped.isEmpty() && weaponImpl.equipped.equals( CharacterOld.HEROLABS_WEAPON_OFFHAND );
     }
 
     public boolean isWieldedTwoHandedWeapon() {
-        return weapon.equipped != null && ! weapon.equipped.isEmpty() && weapon.equipped.equals( CharacterOld.HEROLABS_WEAPON_TWOHAND );
+        return weaponImpl.equipped != null && ! weaponImpl.equipped.isEmpty() && weaponImpl.equipped.equals( CharacterOld.HEROLABS_WEAPON_TWOHAND );
     }
 
     private boolean isFirearm() {
-        return weapon.category != null && ! weapon.category.isEmpty() && weapon.category.equals( CharacterOld.HEROLABS_FIREARM_PROJECTILE_WEAPON );
+        return weaponImpl.category != null && ! weaponImpl.category.isEmpty() && weaponImpl.category.equals( CharacterOld.HEROLABS_FIREARM_PROJECTILE_WEAPON );
     }
 
     private boolean isProjectileWeapon() {
-        return weapon.category != null && ! weapon.category.isEmpty() && weapon.category.equals(CharacterOld.HEROLABS_PROJECTILE_WEAPON);
+        return weaponImpl.category != null && ! weaponImpl.category.isEmpty() && weaponImpl.category.equals(CharacterOld.HEROLABS_PROJECTILE_WEAPON);
     }
 
     private boolean isMeleeWeapon() {
-        return weapon.category != null && ! weapon.category.isEmpty() && weapon.category.indexOf(CharacterOld.HEROLABS_MELEE_WEAPON ) == 0;
+        return weaponImpl.category != null && ! weaponImpl.category.isEmpty() && weaponImpl.category.indexOf(CharacterOld.HEROLABS_MELEE_WEAPON ) == 0;
     }
 
 

@@ -25,8 +25,9 @@ public interface IPathfinderCharacter {
     public enum IAttribute { Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma };
     public enum IAttributeAbbreviated { STR, DEX, CON,  INT, WIS, CHA };
     public Integer getBaseAbilityScore( IAttribute attribute );   //18
-    public Integer getBaseAbilityBonus(IAttribute iattribute); //4
-    public Integer getAbilityEnhancement( IAttribute attribute );
+    public Integer getBaseAbilityModifier(IAttribute iattribute) ;
+    public Integer getBonusAbilityScore( IAttribute attribute );
+    public Integer getBonusAbilityModifier( IAttribute atribute );
     public Integer getAbilityDamage( IAttribute attribute );
 
     //saving throws
@@ -43,6 +44,9 @@ public interface IPathfinderCharacter {
     public Integer getACFromnNatural();
     public Integer getACFromSize();
     public Integer getACMisc();
+
+    //combat maneuvers.
+    public Integer getBaseAttackBonus();
 
 
 }

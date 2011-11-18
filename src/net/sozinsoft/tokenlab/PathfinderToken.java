@@ -1,12 +1,13 @@
 package net.sozinsoft.tokenlab;
 
 
+import com.google.gson.*;
 import net.rptools.maptool.model.*;
 import net.rptools.maptool.util.TokenUtil;
 import net.sozinsoft.tokenlab.dtd.*;
 import net.sozinsoft.tokenlab.dtd.Character;
+import net.sozinsoft.tokenlab.dtd.Weapon;
 import org.xml.sax.SAXException;
-
 import javax.imageio.ImageIO;
 import java.awt.Image;
 import java.io.File;
@@ -18,7 +19,6 @@ import java.util.List;
 public class PathfinderToken implements IPathfinderCharacter {
 
     private static final String CLASS_HP = "ClassHP";
-    public static final String MISC_HP = "MiscHP";
     private static final String SIZE_MOD = "SizeMod";
     private static final String AC_TEMP_BONUS = "ACTempBonus";
     private static final String AC_MISC_BONUS_2 = "ACMiscBonus2";
@@ -31,14 +31,10 @@ public class PathfinderToken implements IPathfinderCharacter {
     private static final String ARMOR_MAX_DEX_BONUS = "ArmorMaxDexBonus";
     private static final String ARMOR_CHECK_PENALTY = "ArmorCheckPenalty";
     private static final String MISC_BONUS = "MiscBonus";
-    private static final String MISC_BONUS1 = "MiscBonus1";
-    private static final String MISC_BONUS2 = "MiscBonus2";
-    private static final String DAMAGE = "Damage";
+    private static final String DAMAGE = "damage";
     private static final String ENHANCEMENT = "Enhancement";
     private static final String CLASS_BONUS = "ClassBonus";
     private static final String RESIST_BONUS = "ResistBonus";
-    private static final String RANKS = "Ranks";
-    private static final String BONUS = "Bonus";
     private static final String CLASS_SKILL = "ClassSkill";
     private static final String PATHFINDER = "Pathfinder";
     private static final String CHARACTER = "Character";
@@ -56,6 +52,14 @@ public class PathfinderToken implements IPathfinderCharacter {
     private static final String BASE_ATTACK_BONUS = "BaseAttackBonus";
     private static final String INIT_MOD = "InitMod";
     private static MacroDigester macroDigester = null;
+    public static final String VALUE = "value";
+    public static final String VALUE_MODIFIER = "valueModifier";
+    public static final String BONUS = "bonus";
+    public static final String BONUS_MODIFIER = "bonusModifier";
+    public static final String TEMP_MODIFIER = "tempModifier";
+    public static final String PROFESSION = "Profession";
+    public static final String YES = "yes";
+    public static final String RANKS = "Ranks";
     private Character _character;
     private Token _token;
     private HashMap<String, Object> _propertyMap = new HashMap<String, Object>();
@@ -67,8 +71,24 @@ public class PathfinderToken implements IPathfinderCharacter {
         setSavingThrows();
         setHitpoints();
         setArmorClass();
+        setSkills();
+        setWeapons();
+
+        _propertyMap.put( BASE_ATTACK_BONUS, Integer.parseInt( replacePlus( _character.getAttack().getBaseattack() ) ) );
     }
 
+    private HashMap<String, WeaponImpl> _weapons = new HashMap<String, WeaponImpl>();
+    private void setWeapons()
+    {
+        for( Weapon weapon: this._character.getMelee().getWeapon() ) {
+
+            WeaponImpl wimpl = new WeaponImpl(weapon.getName(), weapon.getDamage(), weapon.getCategorytext(),
+                    weapon.getCrit(), weapon.getAttack(), weapon.getEquipped(),
+                    weapon.getCategorytext(), weapon.getDescription());
+            _weapons.put( wimpl.name, wimpl);
+
+        }
+    }
 
     private static HashMap<IAttribute, IAttributeAbbreviated > attributeAbbreviations =
             new HashMap<IAttribute, IAttributeAbbreviated>();
@@ -83,57 +103,84 @@ public class PathfinderToken implements IPathfinderCharacter {
         return attributeAbbreviations.get(ia);
     }
 
-    private HashMap< IAttribute, Attribute > _attributes = new HashMap<IAttribute, Attribute>();
+    private HashMap< IAttribute, HashMap<String, Object> > _attributes = new HashMap<IAttribute, HashMap<String, Object>>();
+
     private void setAbilities() {
 
         for( Attribute attribute : _character.getAttributes().getAttribute() ) {
-            _attributes.put( IAttribute.valueOf(attribute.getName() ), attribute );
-            _propertyMap.put( attribute.getName(), Integer.parseInt( attribute.getAttrvalue().getBase()) );
-            int bonus =       Integer.parseInt( replacePlus( attribute.getAttrbonus().getModified() ) ) -
-                              Integer.parseInt( replacePlus( attribute.getAttrbonus().getBase() ) );
-            _propertyMap.put( getAbbreviatedEnhancementBonusName(attribute),
-                              new Integer(bonus ) );
-            int damage = 0; //TODO - is there something I can do here?
-            _propertyMap.put(getAttributeDamageKeyName(attribute), new Integer(damage) );
+            HashMap<String, Object> attribJSON = new HashMap<String, Object>();
+            _attributes.put( IAttribute.valueOf( attribute.getName() ), attribJSON );
+            //_propertyMap.put( attribute.getName(), Integer.parseInt( attribute.getAttrvalue().getBase()) );
+
+            attribJSON.put(VALUE, Integer.parseInt( attribute.getAttrvalue().getBase() ) );
+            attribJSON.put(VALUE_MODIFIER, Integer.parseInt( replacePlus(attribute.getAttrbonus().getBase() ) ) );
+
+            int attrBonusModified = Integer.parseInt( replacePlus( attribute.getAttrvalue().getModified() ) );
+            int attrBonusBase =       Integer.parseInt( replacePlus( attribute.getAttrbonus().getModified() ) );
+
+            if ( attrBonusModified == attrBonusBase ) {
+                attribJSON.put(BONUS, new Integer( 0 ) );
+                attribJSON.put(BONUS_MODIFIER, new Integer( 0 ) );
+              //  _propertyMap.put( getAbbreviatedEnhancementBonusName(attribute),
+                //                  new Integer( 0  ) );
+
+            }
+            else {
+                attribJSON.put( BONUS, new Integer( attrBonusModified ) );
+                attribJSON.put( BONUS_MODIFIER, new Integer( replacePlus( attribute.getAttrbonus().getModified())) );
+
+                //_propertyMap.put( getAbbreviatedEnhancementBonusName(attribute),
+                  //                new Integer( attrBonusModified  ) );
+            }
+            //_propertyMap.put(getAttributeDamageKeyName(attribute), new Integer(damage) );
+            attribJSON.put( DAMAGE, new Integer( 0 ) );
+            attribJSON.put(TEMP_MODIFIER, new Integer( 0 ) );
         }
 
     }
 
-    private static String getAttributeDamageKeyName(Attribute attribute) {
-        return getAbbreviatedEnhancementBonusName( IAttribute.valueOf(attribute.getName()) ).toString() +
-                                                              DAMAGE;
+    public Integer getBaseAbilityScore(IAttribute iattribute) {
+        //return (Integer)getTokenProperties(attribute.name() );
+        HashMap<String, Object> attribute = _attributes.get( iattribute );
+        return  (Integer)attribute.get(VALUE);
     }
 
-    private static String getAttributeDamageKeyName(IAttribute attribute) {
-        return getAbbreviatedEnhancementBonusName( attribute ).toString() + DAMAGE;
+    public Integer getBaseAbilityModifier(IAttribute iattribute) {
+        //return (Integer)getTokenProperties(attribute.name() );
+        HashMap<String, Object> attribute = _attributes.get( iattribute );
+        return  (Integer)attribute.get(VALUE_MODIFIER);
     }
 
-    private static String getAbbreviatedEnhancementBonusName(Attribute attribute) {
-        return getAbbreviatedAttribute(IAttribute.valueOf(attribute.getName())) + ENHANCEMENT;
+
+    public Integer getBonusAbilityScore(IAttribute iattribute) {
+        HashMap<String, Object> attribute = _attributes.get( iattribute );
+        return  (Integer)attribute.get(BONUS);
     }
 
-    private static String getAbbreviatedEnhancementBonusName(IAttribute attribute) {
-        return getAbbreviatedAttribute(attribute)  + ENHANCEMENT;
+    public Integer getBonusAbilityModifier(IAttribute iattribute) {
+        HashMap<String, Object> attribute = _attributes.get( iattribute );
+        return  (Integer)attribute.get(BONUS_MODIFIER);
     }
+
+    public Integer getAbilityDamage(IAttribute iattribute ) {
+        HashMap<String, Object> attribute = _attributes.get( iattribute );
+        return  (Integer)attribute.get(DAMAGE);
+    }
+
 
     private static String replacePlus(String value) {
-		if ( value.charAt(0) == '+') {
+		if ( value != null && value.length() > 0 && value.charAt(0) == '+') {
 			String tmp = value.replace("+", "");
 			return tmp;
 		}
 		return value;
 	}
 
-    //armor class
-
-    //AC	[r:10+ACArmorBonus+ACShieldBonus+DexBonus+ACClassBonus+
-    //            ACFeatBonus+ACEnhBonus+ACMiscBonus1+ACMiscBonus2+ACTempBonus+SizeMod]
-    // 10 + AC_ARMOR_BONUS + AC_SHIELD_BONUS + AC_FROM_DEFLECT + AC_FROM_DODGE + AC_FROM_NATURAL +
-    //        SIZE_MOD  + AC_MISC_BONUS_1 + AC_MISC_BONUS_2 + ACTempBonus
-
     private void setArmorClass() {
         Armorclass ac = _character.getArmorclass();
-        _propertyMap.put( AC_ARMOR_BONUS, Integer.parseInt( replacePlus( ac.getFromarmor() ) ) );
+        _propertyMap.put( AC_ARMOR_BONUS,  ac.getFromarmor().length() > 0 ?
+                                           Integer.parseInt( replacePlus( ac.getFromarmor() ) ) :
+                                           new Integer( 0 ) );
         _propertyMap.put( AC_SHIELD_BONUS, ac.getFromshield().length() > 0 ?
                                            Integer.parseInt( replacePlus( ac.getFromshield() ) ) :
                                            new Integer( 0 ) );
@@ -155,15 +202,19 @@ public class PathfinderToken implements IPathfinderCharacter {
         _propertyMap.put( AC_MISC_BONUS_2, new Integer( 0  ) );
         _propertyMap.put( AC_TEMP_BONUS,   new Integer( 0 ) );
 
-
+        for ( Penalty p : _character.getPenalties().getPenalty() ) {
+            if (p.getName().equals( "Armor Check Penalty") ) {
+                _propertyMap.put( ARMOR_CHECK_PENALTY, Integer.parseInt( p.getValue() ) );
+            }
+            else if ( p.getName().equals( "Max Dex Bonus") ) {
+                _propertyMap.put( ARMOR_MAX_DEX_BONUS, Integer.parseInt(p.getValue()) );
+            }
+        }
     }
 
     private void setHitpoints() {
-       Integer level = this.getLevel();
        int     hp    = Integer.parseInt(_character.getHealth().getHitpoints());
-       int  conBonus = this.getBaseAbilityBonus( IAttribute.Constitution );
-       int  baseHp   = hp - conBonus * level;
-       _propertyMap.put( CLASS_HP, baseHp );
+       _propertyMap.put( CLASS_HP, hp );
     }
 
     private void setCoreProperties() {
@@ -250,22 +301,6 @@ public class PathfinderToken implements IPathfinderCharacter {
         return (Integer)getTokenProperties( CLASS_HP );
     }
 
-    public Integer getBaseAbilityScore(IAttribute attribute) {
-        return (Integer)getTokenProperties(attribute.name() );
-    }
-
-    public Integer getBaseAbilityBonus(IAttribute iattribute) {
-        Attribute attribute = _attributes.get( iattribute );
-        return  Integer.parseInt(replacePlus(attribute.getAttrbonus().getBase()));
-    }
-
-    public Integer getAbilityEnhancement(IAttribute iattribute) {
-        return (Integer)_propertyMap.get( getAbbreviatedEnhancementBonusName(iattribute) );
-    }
-
-    public Integer getAbilityDamage(IAttribute attribute) {
-        return (Integer)_propertyMap.get(getAttributeDamageKeyName(attribute));
-    }
 
     public Integer getSavingThrowClassBonus(ISavingThrow ist) {
         return (Integer)_propertyMap.get( ist.toString() + CLASS_BONUS );
@@ -307,9 +342,19 @@ public class PathfinderToken implements IPathfinderCharacter {
         return (Integer)_propertyMap.get( AC_MISC_BONUS_1 );
     }
 
+    public Integer getBaseAttackBonus() {
+        return (Integer)_propertyMap.get( BASE_ATTACK_BONUS );
+    }
+
 
     private Object getTokenProperties( String key ) {
         return _propertyMap.get(key);
+    }
+
+    private class IntegerSerializer implements JsonSerializer<Integer>  {
+        public JsonElement serialize(Integer integer, java.lang.reflect.Type type, JsonSerializationContext jsonSerializationContext) {
+            return new JsonPrimitive(integer.toString() );
+        }
     }
 
     public Token asToken( Config.ConfigEntry configEntry ) throws IOException, SAXException {
@@ -320,72 +365,45 @@ public class PathfinderToken implements IPathfinderCharacter {
 
         //set all the token properties.
         _token.setPropertyType(PATHFINDER);
-        for( String propKey : _propertyMap.keySet() ) {
-            _token.setProperty( propKey, _propertyMap.get( propKey ));
+
+
+        GsonBuilder gson = new GsonBuilder();
+        gson.registerTypeAdapter( Integer.class, new IntegerSerializer() ) ;
+        Gson gjson = gson.create();
+        for( IAttribute ia : IAttribute.values() ) {
+            String json = gjson.toJson(_attributes.get(ia) );
+            _token.setProperty( ia.toString(), json );
         }
 
-        //setPenalties(_token);
+        for( String propKey : _propertyMap.keySet() ) {
+            _token.setProperty( propKey, _propertyMap.get( propKey ).toString());
+        }
 
 
+     //t.setProperty( "Feats", gson.toJson(_character.getFeats().values()));
 
-        //_token.setProperty(BASE_ATTACK_BONUS, _character.getAttack().getBaseattack());
-		//_token.setProperty(INIT_MOD, Integer.toString(CreateInitModProperty(_character.getInitiative())));
-
-        //setSkills(_token);
-
-        //Gson gson = new Gson();
-
-     //   t.setProperty( "Feats", gson.toJson(_character.getFeats().values()));
-
-      //  t.setProperty( "WeaponJSON", gson.toJson( _character.getWeapons() ) );
+        _token.setProperty("WeaponJSON", gjson.toJson(_weapons));
 
         return _token;
     }
 
-    private static int CreateInitModProperty( Initiative i ) {
-        int itotal = Integer.parseInt(CharacterAttribute.replacePlus(i.getTotal() ) );
-        int imisc = Integer.parseInt(CharacterAttribute.replacePlus(i.getMisctext() ) );
-        int iattr = Integer.parseInt(CharacterAttribute.replacePlus(i.getAttrtext() ) );
-        if (imisc > 0 || iattr > 0) {
-            return itotal - iattr - imisc;
-        } else return 0;
-    }
 
-
-
-    private void setSkills(Token t) {
-        /*
-        for( CharacterOld.Skill skill: _character.getSkills().values()) {
-            String mungedSkillName = mungeSkillName( skill.skillName );
-            if ( mungedSkillName.indexOf("Profession") >= 0) {
+    private void setSkills() {
+        for(  Skill s :  _character.getSkills().getSkill() ) {
+            String mungedSkillName = mungeSkillName( s.getName() );
+            if ( mungedSkillName.indexOf(PROFESSION) >= 0) {
                 continue; //skipping professions for now, TODO:
             }
-            t.setProperty( mungedSkillName + RANKS, skill.ranks );
-            //t.setProperty( mungedSkillName + BONUS, skill.attrBonus);
-            if ( skill.isClassSkill == true ) {
-                t.setProperty( mungedSkillName + CLASS_SKILL, "1");
+            _propertyMap.put(mungedSkillName + RANKS, s.getRanks());
+            if (isClassSkill(s)) {
+                _propertyMap.put(mungedSkillName + CLASS_SKILL, "1");
             }
-        } */
-    }
-
-
-
-
-
-    private void setPenalties(Token t) {
-        /*
-        //penalties
-        CharacterOld.Penalty dexPenalty = _character.getPenalty("Max Dex Bonus"); //penalties.get( "Max Dex Bonus");
-        if ( dexPenalty != null ) {
-            t.setProperty(ARMOR_MAX_DEX_BONUS, dexPenalty.value);
         }
-        CharacterOld.Penalty armorCheckPenalty = _character.getPenalty("Armor Check Penalty");
-        if ( armorCheckPenalty != null ) {
-            t.setProperty(ARMOR_CHECK_PENALTY, armorCheckPenalty.value);
-        }
-        */
-    }
+     }
 
+    private static boolean isClassSkill(Skill s) {
+        return s.getClassskill() != null && s.getClassskill().equals( YES ) == true;
+    }
 
 
     private Token createToken(Config.ConfigEntry configEntry) throws IOException {
@@ -466,26 +484,25 @@ public class PathfinderToken implements IPathfinderCharacter {
     }
 
     private int buildSkillMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
-        /*
+
        HashMap<String, MacroDigester.MacroEntry > skillMacros = macroDigester.getGroup( "Skills");
 
-       HashMap<String, CharacterOld.Skill> skills = _character.getSkills();
+       for ( Skill s : _character.getSkills().getSkill() ) {
 
-        for (String skillName : skills.keySet() ) {
-
+           String skillName = s.getName();
             if ( skillName.indexOf("Profession") >= 0) {
                 continue; //skipping professions for now, TODO:
             }
-            CharacterOld.Skill skill  = skills.get(skillName);
-            String attributeName   = skill.attrName;
+
+            String attributeName   = s.getAttrname();
             String attribShortName = CharacterAttribute.getShortName( attributeName );
             SkillReplacer replacer = new SkillReplacer( skillName, attribShortName, attribShortName + "Bonus", mungeSkillName( skillName )  );
             MacroDigester.MacroEntry macroEntry = skillMacros.get("Skill Check");
 
-            if ( skill.isClassSkill ) {
+            if ( isClassSkill(s) ) {
                 macroEntry.buttonColor = "yellow";
             }
-            else if ( skill.useTrainedOnly ) {
+            else if ( s.getTrainedonly().equals(YES ) ) {
                 macroEntry.buttonColor = "darkgray";
             } else {
                 macroEntry.buttonColor = "white";
@@ -498,7 +515,7 @@ public class PathfinderToken implements IPathfinderCharacter {
             MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, replacer );
             macroButtonSet.add( properties );
         }
-        */
+
         return index;
 
     }
@@ -514,12 +531,14 @@ public class PathfinderToken implements IPathfinderCharacter {
         return index;
     }
 
+
+
     private int buildPowerMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
-        /*
+
         //next do the power macros
         int sortPrefix = 0;
         HashMap<String, MacroDigester.MacroEntry > powerMacros = macroDigester.getGroup("Powers");
-        for( Weapon weapon : this._character.getWeapons().values()) {
+        for( WeaponImpl wimpl : _weapons.values()) {
 
             MacroDigester.MacroEntry macroEntry = powerMacros.get( "Standard Attack");
 
@@ -530,27 +549,29 @@ public class PathfinderToken implements IPathfinderCharacter {
                 macroEntry.sortPrefix = new Integer( sortPrefix ).toString();
             }
 
-            macroEntry.name = weapon.name;
+            macroEntry.name = wimpl.name;
             MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++,
-                                                                                    new WeaponNameReplacer( weapon.name, new Integer(1) ) );
+                                                                                    new WeaponNameReplacer( wimpl.name, new Integer(1) ) );
             macroButtonSet.add( properties );
 
             //and set all the full attack stuff
 
-            if ( weapon.numFullAttacks > 1 ) {
-                for ( Integer attackCount : weapon.sortedAttacks() ) {
+            if ( wimpl.numFullAttacks > 1 ) {
+                for ( Integer attackCount : wimpl.sortedAttacks() ) {
                     MacroDigester.MacroEntry fullAttackMacroEntry = powerMacros.get( "Attack - Full");
                     ++sortPrefix;
                     fullAttackMacroEntry.sortPrefix = new Integer( sortPrefix ).toString();
                     fullAttackMacroEntry.name = attackCount.toString();
                     MacroButtonProperties faProperties = fullAttackMacroEntry.getMacroButtonProperties( index++,
-                                                                                    new WeaponNameReplacer( weapon.name, attackCount ) );
+                                                                                    new WeaponNameReplacer( wimpl.name, attackCount ) );
                     macroButtonSet.add( faProperties );
 
                 }
             }
         }
-        */
+
         return index;
     }
+
+
 }

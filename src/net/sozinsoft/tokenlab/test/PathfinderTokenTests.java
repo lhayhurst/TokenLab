@@ -35,7 +35,7 @@ public class PathfinderTokenTests {
 
         PathfinderToken ptok = new PathfinderToken( dss );
         assertEquals("Derrak Stoneskull", ptok.getName());
-        assertEquals( 214, ptok.getClassHitpoints().intValue()); //274 - (3*20)
+        assertEquals( 274, ptok.getClassHitpoints().intValue());
         assertEquals("Dwarf", ptok.getRace() );
         assertEquals("Neutral Evil", ptok.getAlignment() );
         assertEquals( "Rovagug", ptok.getDeity());
@@ -63,6 +63,15 @@ public class PathfinderTokenTests {
 	}
 
     @Test
+    public void testCombat() throws  JAXBException {
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+        Character dss = characters.get(0);
+
+        PathfinderToken ptok = new PathfinderToken( dss );
+        assertEquals( 20, ptok.getBaseAttackBonus().intValue() );
+    }
+
+    @Test
     public void testAbilities() throws JAXBException {
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
@@ -71,29 +80,40 @@ public class PathfinderTokenTests {
         PathfinderToken ptok = new PathfinderToken( dss );
 
         assertEquals( 20, ptok.getBaseAbilityScore( IPathfinderCharacter.IAttribute.Strength ).intValue() );
-        assertEquals( 3,  ptok.getAbilityEnhancement(IPathfinderCharacter.IAttribute.Strength).intValue());
+        assertEquals( 5, ptok.getBaseAbilityModifier( IPathfinderCharacter.IAttribute.Strength ).intValue() );
+        assertEquals( 26,  ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Strength).intValue());
+        assertEquals( 8,  ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Strength).intValue());
         assertEquals( 0, ptok.getAbilityDamage( IPathfinderCharacter.IAttribute.Strength).intValue() );
 
-        assertEquals( 13, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Dexterity).intValue() );
-        assertEquals( 0,  ptok.getAbilityEnhancement(IPathfinderCharacter.IAttribute.Dexterity).intValue());
+        assertEquals( 13, ptok.getBaseAbilityScore( IPathfinderCharacter.IAttribute.Dexterity ).intValue() );
+        assertEquals( 1, ptok.getBaseAbilityModifier( IPathfinderCharacter.IAttribute.Dexterity ).intValue() );
+        assertEquals( 13,  ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Dexterity).intValue());
+        assertEquals( 1,  ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Dexterity).intValue());
         assertEquals( 0, ptok.getAbilityDamage( IPathfinderCharacter.IAttribute.Dexterity).intValue() );
 
-        assertEquals( 16, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Constitution ).intValue() );
-        assertEquals( 3,  ptok.getAbilityEnhancement(IPathfinderCharacter.IAttribute.Constitution).intValue());
-        assertEquals( 0, ptok.getAbilityDamage(IPathfinderCharacter.IAttribute.Constitution).intValue() );
+        assertEquals( 16, ptok.getBaseAbilityScore( IPathfinderCharacter.IAttribute.Constitution ).intValue() );
+        assertEquals( 3, ptok.getBaseAbilityModifier( IPathfinderCharacter.IAttribute.Constitution ).intValue() );
+        assertEquals( 22,  ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Constitution).intValue());
+        assertEquals( 6,  ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Constitution).intValue());
+        assertEquals( 0, ptok.getAbilityDamage( IPathfinderCharacter.IAttribute.Constitution).intValue() );
 
-        assertEquals( 10, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Intelligence ).intValue() );
-        assertEquals( 0,  ptok.getAbilityEnhancement(IPathfinderCharacter.IAttribute.Intelligence).intValue());
-        assertEquals( 0, ptok.getAbilityDamage(IPathfinderCharacter.IAttribute.Intelligence).intValue() );
+        assertEquals( 14, ptok.getBaseAbilityScore( IPathfinderCharacter.IAttribute.Wisdom ).intValue() );
+        assertEquals( 2, ptok.getBaseAbilityModifier( IPathfinderCharacter.IAttribute.Wisdom ).intValue() );
+        assertEquals( 14,  ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Wisdom).intValue());
+        assertEquals( 2,  ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Wisdom).intValue());
+        assertEquals( 0, ptok.getAbilityDamage( IPathfinderCharacter.IAttribute.Wisdom).intValue() );
 
-        assertEquals( 14, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Wisdom ).intValue() );
-        assertEquals( 0,  ptok.getAbilityEnhancement(IPathfinderCharacter.IAttribute.Wisdom).intValue());
-        assertEquals( 0, ptok.getAbilityDamage(IPathfinderCharacter.IAttribute.Wisdom).intValue() );
+        assertEquals( 10, ptok.getBaseAbilityScore( IPathfinderCharacter.IAttribute.Intelligence ).intValue() );
+        assertEquals( 0, ptok.getBaseAbilityModifier( IPathfinderCharacter.IAttribute.Intelligence ).intValue() );
+        assertEquals( 10,  ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Intelligence).intValue());
+        assertEquals( 0,  ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Intelligence).intValue());
+        assertEquals( 0, ptok.getAbilityDamage( IPathfinderCharacter.IAttribute.Intelligence).intValue() );
 
-        assertEquals( 6, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Charisma ).intValue() );
-        assertEquals( 0,  ptok.getAbilityEnhancement(IPathfinderCharacter.IAttribute.Charisma).intValue());
-        assertEquals( 0, ptok.getAbilityDamage(IPathfinderCharacter.IAttribute.Charisma).intValue() );
-
+        assertEquals( 6, ptok.getBaseAbilityScore( IPathfinderCharacter.IAttribute.Charisma ).intValue() );
+        assertEquals( -2, ptok.getBaseAbilityModifier( IPathfinderCharacter.IAttribute.Charisma ).intValue() );
+        assertEquals( 6,  ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Charisma).intValue());
+        assertEquals( -2,  ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Charisma).intValue());
+        assertEquals( 0, ptok.getAbilityDamage( IPathfinderCharacter.IAttribute.Charisma).intValue() );
     }
 
     @Test

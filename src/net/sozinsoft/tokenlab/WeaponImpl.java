@@ -3,7 +3,7 @@ package net.sozinsoft.tokenlab;
 import java.util.*;
 import java.util.regex.Pattern;
 
-class Weapon {
+class WeaponImpl {
 
     String name;
     String basicName;
@@ -27,16 +27,20 @@ class Weapon {
         return v;
     }
 
-    public Weapon(String name, String damage, String category, String crit,
-                  String attackBonus, String equipped, String weaponType, String description) {
+    public WeaponImpl(String name, String damage, String category, String crit,
+                      String attackBonus, String equipped, String weaponType, String description) {
 
 
 
         //sometimes weapon names can look wonky, for example
-        //"+1 Keen Scimitar\n\nThis ability doubles the threat range of a weapon.
+        //"+1 Adamantine Keen Scimitar, elven Adamantine:\n\nThis ability doubles the threat range of a weapon.
         // Only piercing or slashing"
         //so, strip out everything after the first newline
-        this.name = name.replaceAll( "\\n.*$", "").replaceAll("\\s+$", "" );
+        //and then the first comma
+        this.name = name.replaceAll( "\\n.*$", "");
+        this.name = this.name.replaceAll("\\s+$", "" );
+        this.name = this.name.replaceAll(",\\s+.*$", "");
+
 
         this.damage = new Damage(damage);
         this.damageDice = this.damage.asExpression();

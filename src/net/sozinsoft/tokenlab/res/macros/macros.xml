@@ -44,22 +44,22 @@
            minWidth="323"
            applyToSelectedTokens="1"
            file="res/macros/ExtendedRestMacro.txt"/>
-    <macro name="Fortitude Save"
+    <macro name="Fort Save"
            group="Generic"
            sortPrefix="7"
            buttonColor="orange"
            fontColor="black"
            fontSize="1.00em"
-           minWidth="99"
+           minWidth="70"
            applyToSelectedTokens="1"
            file="res/macros/FortitudeSaveMacro.txt"/>
-    <macro name="Reflex Save"
+    <macro name="Ref Save"
                group="Generic"
                sortPrefix="8"
                buttonColor="orange"
                fontColor="black"
                fontSize="1.00em"
-               minWidth="99"
+               minWidth="70"
                applyToSelectedTokens="1"
                file="res/macros/ReflexSaveMacro.txt"/>
     <macro name="Will Save"
@@ -68,7 +68,7 @@
                buttonColor="orange"
                fontColor="black"
                fontSize="1.00em"
-               minWidth="99"
+               minWidth="70"
                applyToSelectedTokens="1"
                file="res/macros/WillSaveMacro.txt"/>
     <macro name="CMB Roll"
@@ -77,7 +77,7 @@
                buttonColor="orange"
                fontColor="black"
                fontSize="1.00em"
-               minWidth="99"
+               minWidth="70"
                applyToSelectedTokens="1"
                file="res/macros/CMBMacro.txt"/>
 

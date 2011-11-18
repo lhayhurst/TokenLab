@@ -6,27 +6,27 @@ import java.util.regex.Pattern;
 
 public class CharacterOld {
 
-    public static final String HEROLABS_FIREARM_PROJECTILE_WEAPON = "Firearm, Projectile Weapon";
-    public static final String HEROLABS_PROJECTILE_WEAPON = "Projectile Weapon";
-    public static final String HEROLABS_MELEE_WEAPON = "Melee Weapon";
+    public static final String HEROLABS_FIREARM_PROJECTILE_WEAPON = "Firearm, Projectile WeaponImpl";
+    public static final String HEROLABS_PROJECTILE_WEAPON = "Projectile WeaponImpl";
+    public static final String HEROLABS_MELEE_WEAPON = "Melee WeaponImpl";
     public static final String HEROLABS_WEAPON_OFFHAND = "offhand";
     public static final String HEROLABS_WEAPON_MAINHAND = "mainhand";
     public static final String HEROLABS_WEAPON_TWOHAND = "bothhands";
     public static final String HEROLABS_NPC = "npc";
     public static final String HEROLABS_CONSTITUTION = "Constitution";
-    public static final String HEROLABS_WEAPON_FINESSE_FEAT = "Weapon Finesse";
-    public static final String HEROLABS_WEAPON_FOCUS_FEAT = "Weapon Focus";
-    public static final String HEROLABS_WEAPON_SPECIALIZATION_FEAT = "Weapon Specialization";
+    public static final String HEROLABS_WEAPON_FINESSE_FEAT = "WeaponImpl Finesse";
+    public static final String HEROLABS_WEAPON_FOCUS_FEAT = "WeaponImpl Focus";
+    public static final String HEROLABS_WEAPON_SPECIALIZATION_FEAT = "WeaponImpl Specialization";
     public static final String HEROLABS_BOOLEAN_YES = "yes";
     public static final String HEROLABS_UNARMED_STRIKE = "Unarmed Strike";
 
-    public static final String SIMPLE_WEAPON_PROFICIENCY = "Simple Weapon Proficiency";
+    public static final String SIMPLE_WEAPON_PROFICIENCY = "Simple WeaponImpl Proficiency";
     public static final String HEROLABS_SIMPLE_WEAPON_PROFICIENCY_ALL_FEAT =
             SIMPLE_WEAPON_PROFICIENCY + " - All";
-    public static final String MARTIAL_WEAPON_PROFICIENCY = "Martial Weapon Proficiency";
+    public static final String MARTIAL_WEAPON_PROFICIENCY = "Martial WeaponImpl Proficiency";
     public static final String MARTIAL_WEAPON_PROFICIENCY_ALL_FEAT =
             MARTIAL_WEAPON_PROFICIENCY + " - All";
-    public static final String EXOTIC_WEAPON_PROFICIENCY = "Exotic Weapon Proficiency";
+    public static final String EXOTIC_WEAPON_PROFICIENCY = "Exotic WeaponImpl Proficiency";
     public static final String TWO_WEAPON_FIGHTING_FEAT = "Two-weapon Fighting";
 
     private String _name;
@@ -200,17 +200,17 @@ public class CharacterOld {
     private String _baseAttackBonus;
 
 
-    public boolean hasSimpleWeaponProficiency( Weapon w) {
+    public boolean hasSimpleWeaponProficiency( WeaponImpl w) {
         return _feats.containsKey(HEROLABS_SIMPLE_WEAPON_PROFICIENCY_ALL_FEAT) ||
                _feats.containsKey(SIMPLE_WEAPON_PROFICIENCY + ": " + w.basicName );
     }
 
-    public boolean hasMartialWeaponProficiency( Weapon w ) {
+    public boolean hasMartialWeaponProficiency( WeaponImpl w ) {
         return _feats.containsKey(MARTIAL_WEAPON_PROFICIENCY_ALL_FEAT) ||
                _feats.containsKey(MARTIAL_WEAPON_PROFICIENCY + ": " + w.basicName );
     }
 
-    public boolean hasExoticWeaponProficiency( Weapon w ) {
+    public boolean hasExoticWeaponProficiency( WeaponImpl w ) {
         return _feats.containsKey(EXOTIC_WEAPON_PROFICIENCY + ": " + w.basicName );
     }
 
@@ -342,16 +342,16 @@ public class CharacterOld {
         return false;
     }
 
-    private HashMap<String, Weapon> weapons = new HashMap<String, Weapon>();
+    private HashMap<String, WeaponImpl> weapons = new HashMap<String, WeaponImpl>();
 
-    public HashMap<String, Weapon> getWeapons() {
+    public HashMap<String, WeaponImpl> getWeapons() {
         return weapons;
     }
 
 
     public void addWeapon(String name, String damage, String categorytext, String crit,
                           String attackBonus, String equipped, String weaponType, String description) {
-        Weapon w = new Weapon(name, damage, categorytext, crit, attackBonus, equipped, weaponType, description);
+        WeaponImpl w = new WeaponImpl(name, damage, categorytext, crit, attackBonus, equipped, weaponType, description);
         weapons.put(w.name, w);
     }
 
