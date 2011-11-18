@@ -1,8 +1,6 @@
 package net.sozinsoft.tokenlab.ui;
 
 import net.sozinsoft.tokenlab.*;
-import net.sozinsoft.tokenlab.CharacterOld;
-import net.sozinsoft.tokenlab.dtd.*;
 import net.sozinsoft.tokenlab.dtd.Character;
 import org.xml.sax.SAXException;
 

@@ -33,7 +33,7 @@ public class MacroDigester {
         d.push( this );
 
         /* they look like this:
-         <macro name="CharacterOld Sheet"
+         <macro name="Character Sheet"
            group="Generic"
            sortPrefix="1"
            buttonColor="black"
