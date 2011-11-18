@@ -3,6 +3,6 @@
         <td><span style='color:white'><b>SKILL_NAME Check</b></span></td>
     </tr>
     <tr>
-        <td><b> At-Will &#149; ATTRIBUTE_SHORT_NAME </b><br> <b>Roll:</b>[g:d20 + SKILL_RANKS + ATTRIBUTE_BONUS]
+        <td><b> At-Will &#149; ATTRIBUTE_SHORT_NAME </b><br> <b>Roll:</b>[r:d20 + SKILL_RANKS + ATTRIBUTE_BONUS]
     </td>
 </tr></table>

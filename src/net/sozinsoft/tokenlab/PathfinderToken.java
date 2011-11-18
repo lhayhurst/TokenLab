@@ -504,21 +504,28 @@ public class PathfinderToken implements IPathfinderCharacter {
             SkillReplacer replacer = new SkillReplacer( skillName, attribShortName, attribShortName + "Bonus", mungeSkillName( skillName )  );
             MacroDigester.MacroEntry macroEntry = skillMacros.get("Skill Check");
 
+           boolean disableButton = false;
+
             if ( isClassSkill(s) ) {
                 macroEntry.buttonColor = "yellow";
             }
             else if ( s.getTrainedonly().equals(YES ) ) {
                 macroEntry.buttonColor = "darkgray";
+                if ( s.getRanks().length() == 0 || s.getRanks().equals("0")) {
+                    disableButton = true;
+                }
+
             } else {
                 macroEntry.buttonColor = "white";
             }
 
             //todo: refactor the below into the replacer interface if I ever do it somewhere else.
-            macroEntry.toolTip = "[r:" + replacer.skillRanks + "]";
-
-            macroEntry.name = skillName;
-            MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, replacer );
-            macroButtonSet.add( properties );
+            if ( ! disableButton ) {
+                macroEntry.toolTip = "[r:" + replacer.skillRanks + "]";
+                macroEntry.name = skillName;
+                MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, replacer );
+                macroButtonSet.add( properties );
+            }
         }
 
         return index;

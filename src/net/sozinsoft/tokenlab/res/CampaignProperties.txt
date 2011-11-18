@@ -27,9 +27,10 @@ AtkTempBonus
 DmgTempBonus
 SizeMod
 HeroPoints
-*@AC:[r:10 +   DexBonus + ACArmorBonus + ACShieldBonus + ACDeflectBonus + ACDodgeBonus + ACNaturalBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
+AC1:[r:10 +   DexBonus + ACArmorBonus + ACShieldBonus + ACDeflectBonus + ACDodgeBonus + ACNaturalBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
 TouchAC:[r: 10 +   DexBonus + ACDeflectBonus + ACDodgeBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
 FlatFootAC:[r: 10 + ACArmorBonus + ACShieldBonus + ACDeflectBonus + ACNaturalBonus + SizeMod + ACMiscBonus1 + ACMiscBonus2 + ACTempBonus ]
+*@AC:[r: AC1 + "/" + TouchAC + " Tch / " + FlatFootAC + "Fl" ]
 ACArmorBonus
 ACShieldBonus
 ACDodgeBonus

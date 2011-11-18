@@ -224,7 +224,7 @@ public class TokenLabUI {
 
             } catch (IOException io) {
                 success = false;
-                errorDialog( io.getMessage(), "Something bad happened:\\n\\n" + io.getStackTrace() ));
+                errorDialog( io.getMessage(), "Something bad happened:\\n\\n" + io.getStackTrace() );
 
             } catch (SAXException saxe) {
                 success = false;
