@@ -61,7 +61,7 @@ public class TokenLabUI {
             frame.setVisible(true);
         } catch ( Exception e ) {
             JOptionPane.showMessageDialog(frame,
-             "Somethind bad happened! " + e.getMessage(),
+             "Something bad happened! " + e.getMessage(),
              "Fatal error",
              JOptionPane.ERROR_MESSAGE);
         }
@@ -118,6 +118,12 @@ public class TokenLabUI {
                     prefs.put(HEROLABS_XML_DIR, mostRecentOutputDirectory.getAbsolutePath());
 
                     File xmlFile = herolabsXMLChooser.getSelectedFile();
+
+                    if ( ! xmlFile.exists() ) {
+                        errorDialog("File not found", "File " + xmlFile + " does not exists, please select accept valid file\",");
+                        return;
+                    }
+
                     HerolabsDigester dig = new HerolabsDigester();
 
 
@@ -201,6 +207,10 @@ public class TokenLabUI {
         });
     }
 
+    private void errorDialog(String title, String error) {
+        JOptionPane.showMessageDialog(panel, error, title, JOptionPane.ERROR_MESSAGE);
+    }
+
     private void exportCharacter() {
 
         Object [] selectedValues = herolabsCharacterList.getSelectedValues();
@@ -210,21 +220,19 @@ public class TokenLabUI {
 
             Character character = (Character) object;
             try {
-                dig.saveCharacter( config, character );
+                dig.saveCharacter(config, character);
 
-            } catch (IOException e1) {
+            } catch (IOException io) {
                 success = false;
-                JOptionPane.showMessageDialog(panel,
-                        "Eek!  Something went wrong: ",
-                        e1.getMessage(),
-                        JOptionPane.ERROR_MESSAGE);
+                errorDialog( io.getMessage(), "Something bad happened:\\n\\n" + io.getStackTrace() ));
 
-            } catch (SAXException e1) {
+            } catch (SAXException saxe) {
                 success = false;
-                JOptionPane.showMessageDialog(panel,
-                    "Eek!  Something went wrong: ",
-                    e1.getMessage(),
-                    JOptionPane.ERROR_MESSAGE);
+                errorDialog( saxe.getMessage(), "Something bad happened:\\n\\n" + saxe.getStackTrace() );
+            }
+            catch (Exception e ) {
+                success = false;
+                errorDialog( e.getMessage(), "Something bad happened:\\n\\n" + e.getStackTrace() );
             }
         }
         if ( success ) {

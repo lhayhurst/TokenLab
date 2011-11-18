@@ -223,7 +223,7 @@ public class PathfinderToken implements IPathfinderCharacter {
         _propertyMap.put( RACE, _character.getRace().getName());
         _propertyMap.put( ALIGNMENT, _character.getAlignment().getName());
         _propertyMap.put( PLAYER, _character.getPlayername());
-        _propertyMap.put( DEITY, _character.getDeity().getName() );
+        _propertyMap.put( DEITY, _character.getDeity().getName() == null ? "" :  _character.getDeity().getName() );
         _propertyMap.put( GENDER, _character.getPersonal().getGender());
         _propertyMap.put( AGE, Integer.parseInt(_character.getPersonal().getAge()) );
         _propertyMap.put( HEIGHT, _character.getPersonal().getCharheight().getText());
@@ -238,7 +238,9 @@ public class PathfinderToken implements IPathfinderCharacter {
 
     private void setSavingThrows() {
         for(Save s : _character.getSaves().getSave() ) {
-            _propertyMap.put( s.getAbbr() + CLASS_BONUS, Integer.parseInt( replacePlus( s.getBase() ) ) );
+            _propertyMap.put( s.getAbbr() + CLASS_BONUS,  s.getBase().length() > 0 ?
+                                                          Integer.parseInt( replacePlus( s.getBase() ) ) :
+                                                          new Integer( 0 ) );
             _propertyMap.put( s.getAbbr() + RESIST_BONUS, s.getFromresist().length() > 0 ?
                                                           Integer.parseInt( replacePlus( s.getFromresist() ) ) :
                                                           new Integer( 0 ) );
@@ -376,6 +378,9 @@ public class PathfinderToken implements IPathfinderCharacter {
         }
 
         for( String propKey : _propertyMap.keySet() ) {
+            if ( _propertyMap.get(propKey) == null ) {
+                int i = 0;
+            }
             _token.setProperty( propKey, _propertyMap.get( propKey ).toString());
         }
 
