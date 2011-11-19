@@ -3,14 +3,14 @@ package net.sozinsoft.tokenlab;
 import java.util.*;
 import java.util.regex.Pattern;
 
-class WeaponImpl {
+public class WeaponImpl {
 
     String name;
     String basicName;
     Damage damage;
     String damageDice;
     String category;
-    int critFloor;
+    int critFloor = 100;
     int critMultiplier;
     String equipped;
     int numFullAttacks = 0;
@@ -28,7 +28,7 @@ class WeaponImpl {
     }
 
     public WeaponImpl(String name, String damage, String category, String crit,
-                      String attackBonus, String equipped, String weaponType, String description) {
+                      String attackBonus, String equipped, String weaponType, String description) throws Exception {
 
 
 
@@ -74,41 +74,5 @@ class WeaponImpl {
         }
     }
 
-    public class Damage {
-		private int numDamageDice = 1;
-		private int damageDice = 1;
-		private int bonusDamage = 0;
 
-        public int getBonusDamage() {
-            return bonusDamage;
-        }
-
-        public String asExpression() {
-            return Integer.toString(numDamageDice) + "d" + Integer.toString(damageDice);
-        }
-
-		public Damage( String expression ) {
-			Pattern regex = Pattern.compile("(\\d+)d*(\\d*)\\+*(\\d*)" );
-			java.util.regex.Matcher matcher = regex.matcher( expression );
-			if ( matcher.matches() )
-			{
-				String ndd = matcher.group(1);
-				String dd  = matcher.group(2);
-				String bd  = matcher.group(3);
-				if ( ndd != null && ! ndd.isEmpty()) {
-					numDamageDice = Integer.parseInt(ndd);
-				}
-				if ( dd != null  && ! dd.isEmpty() ) {
-					damageDice = Integer.parseInt(dd);
-				}
-				if ( bd != null && ! bd.isEmpty()) {
-					bonusDamage = Integer.parseInt( bd );
-				}
-			}
-			else
-			{
-				//TODO: throw exception, invalid damage expression
-			}
-		}
-	}
 }

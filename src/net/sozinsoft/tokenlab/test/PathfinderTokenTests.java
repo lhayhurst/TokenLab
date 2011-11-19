@@ -1,16 +1,14 @@
 package net.sozinsoft.tokenlab.test;
 
 import net.rptools.maptool.model.Token;
-import net.sozinsoft.tokenlab.Config;
-import net.sozinsoft.tokenlab.HerolabsDigester;
-import net.sozinsoft.tokenlab.IPathfinderCharacter;
+import net.sozinsoft.tokenlab.*;
 import net.sozinsoft.tokenlab.dtd.Character;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import net.sozinsoft.tokenlab.PathfinderToken;
 import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
@@ -28,7 +26,38 @@ public class PathfinderTokenTests {
     }
 
     @Test
-	public void testBasic() throws JAXBException {
+    public void testDamageRegex() {
+        Damage d = null;
+        try {
+            d = new Damage("6");
+            assertEquals(0, d.getNumDamageDice());
+            assertEquals(0, d.getDamageDice());
+            assertEquals(6, d.getBonusDamage());
+            d = new Damage("1d6");
+            assertEquals(1, d.getNumDamageDice());
+            assertEquals(6, d.getDamageDice());
+            assertEquals(0, d.getBonusDamage());
+            d = new Damage("2d8+3");
+            assertEquals(2, d.getNumDamageDice());
+            assertEquals(8, d.getDamageDice());
+            assertEquals(3, d.getBonusDamage());
+            d = new Damage("12d10+3 Acid");
+            assertEquals(12, d.getNumDamageDice());
+            assertEquals(10, d.getDamageDice());
+            assertEquals(3, d.getBonusDamage());
+            assertEquals("Acid", d.getDamageType());
+            d = new Damage("1d3-1");
+            assertEquals(1, d.getNumDamageDice());
+            assertEquals(3, d.getDamageDice());
+            assertEquals(-1, d.getBonusDamage());
+
+        } catch (Exception e) {
+            assertFalse(true);
+        }
+    }
+
+    @Test
+	public void testBasic() throws Exception {
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
         Character dss = characters.get(0);
@@ -63,7 +92,7 @@ public class PathfinderTokenTests {
 	}
 
     @Test
-    public void testCombat() throws  JAXBException {
+    public void testCombat() throws Exception {
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
         Character dss = characters.get(0);
 
@@ -72,7 +101,7 @@ public class PathfinderTokenTests {
     }
 
     @Test
-    public void testAbilities() throws JAXBException {
+    public void testAbilities() throws Exception {
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
         Character dss = characters.get(0);
@@ -117,7 +146,7 @@ public class PathfinderTokenTests {
     }
 
     @Test
-    public void testSaves() throws JAXBException {
+    public void testSaves() throws Exception {
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
         Character dss = characters.get(0);
 
@@ -141,7 +170,7 @@ public class PathfinderTokenTests {
 
 
     @Test
-    public void testAC() throws JAXBException {
+    public void testAC() throws Exception {
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
         Character dss = characters.get(0);
@@ -172,7 +201,7 @@ public class PathfinderTokenTests {
     }
 
     @Test
-    public void testTokenCreation() throws IOException, SAXException {
+    public void testTokenCreation() throws Exception, SAXException {
         Config config = new Config();
         config.addConfigEntry( "Derrak Stoneskull", "src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png",
                                "src/net/sozinsoft/tokenlab/test/img/derrakStoneskullPortrait.jpg",

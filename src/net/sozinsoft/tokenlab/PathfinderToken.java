@@ -64,7 +64,7 @@ public class PathfinderToken implements IPathfinderCharacter {
     private Token _token;
     private HashMap<String, Object> _propertyMap = new HashMap<String, Object>();
 
-    public PathfinderToken(Character character ) {
+    public PathfinderToken(Character character ) throws Exception {
         _character = character;
         setCoreProperties();
         setAbilities();
@@ -78,8 +78,7 @@ public class PathfinderToken implements IPathfinderCharacter {
     }
 
     private HashMap<String, WeaponImpl> _weapons = new HashMap<String, WeaponImpl>();
-    private void setWeapons()
-    {
+    private void setWeapons() throws Exception {
         for( Weapon weapon: this._character.getMelee().getWeapon() ) {
 
             WeaponImpl wimpl = new WeaponImpl(weapon.getName(), weapon.getDamage(), weapon.getCategorytext(),
@@ -88,6 +87,16 @@ public class PathfinderToken implements IPathfinderCharacter {
             _weapons.put( wimpl.name, wimpl);
 
         }
+
+        for( Weapon weapon: this._character.getRanged().getWeapon() ) {
+
+            WeaponImpl wimpl = new WeaponImpl(weapon.getName(), weapon.getDamage(), weapon.getCategorytext(),
+                    weapon.getCrit(), weapon.getAttack(), weapon.getEquipped(),
+                    weapon.getCategorytext(), weapon.getDescription());
+            _weapons.put( wimpl.name, wimpl);
+
+        }
+
     }
 
     private static HashMap<IAttribute, IAttributeAbbreviated > attributeAbbreviations =

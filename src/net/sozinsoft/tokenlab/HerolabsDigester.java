@@ -43,7 +43,7 @@ public class HerolabsDigester {
     }
 
 
-    public void processCharacters(Config config) throws IOException, SAXException {
+    public void processCharacters(Config config) throws Exception {
 
         //WeaponCache cache = new WeaponCache( ResourceManager.getWeapons().getAbsolutePath() );
         for (Character c : this.characters) {
@@ -51,7 +51,7 @@ public class HerolabsDigester {
         }
     }
 
-    public void saveCharacter(Config config, Character c) throws IOException, SAXException {
+    public void saveCharacter(Config config, Character c) throws Exception {
         System.out.println( "Processing character " + c.getName() );
         Config.ConfigEntry ce = config.get(c.getName());
 
