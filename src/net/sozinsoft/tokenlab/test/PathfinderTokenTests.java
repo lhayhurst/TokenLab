@@ -5,16 +5,17 @@ import net.sozinsoft.tokenlab.*;
 import net.sozinsoft.tokenlab.dtd.Character;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
+
+import static org.junit.Assert.*;
 
 public class PathfinderTokenTests {
 
@@ -168,6 +169,44 @@ public class PathfinderTokenTests {
 
     }
 
+    @Test
+    public void testSpells() throws Exception {
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+        Character dss = characters.get(1);
+
+        PathfinderToken echean = new PathfinderToken( dss );
+        assertEquals( "Echean Ansolandi", echean.getName() );
+        echean.setSpells();
+        HashMap< String, HashMap< String, PFSRDSpell >> spells = echean.getSpells();
+        assertNotNull(spells);
+        Set<String> keys = spells.keySet();
+        assertEquals( 1, keys.size() );
+        HashMap<String, PFSRDSpell> wizardSpells = spells.get( "Wizard");
+        assertNotNull( wizardSpells );
+        PFSRDSpell arcaneMark = wizardSpells.get( "Arcane Mark");
+        assertNotNull( arcaneMark );
+        assertEquals( "universal", arcaneMark.school );
+        PFSRDSpell treasureMap = wizardSpells.get("Create Treasure Map");
+        assertNotNull( treasureMap);
+        assertEquals( treasureMap.name, "Create Treasure Map");
+
+        dss = characters.get(2);
+        PathfinderToken inaris = new PathfinderToken( dss );
+        assertEquals( "Inaris Jerveel", inaris.getName() );
+        inaris.setSpells();
+        spells = inaris.getSpells();
+        assertNotNull(spells);
+        keys = spells.keySet();
+        assertEquals( 1, keys.size() );
+        HashMap<String, PFSRDSpell> clericSpells = spells.get( "Cleric");
+        assertNotNull( clericSpells );
+        PFSRDSpell bane = clericSpells.get("Bane");
+        assertEquals( "20", bane.casterLevel);
+        assertEquals( "20", bane.spellDC);
+        assertEquals( "Bane", bane.name);
+
+
+    }
 
     @Test
     public void testAC() throws Exception {

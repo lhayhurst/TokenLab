@@ -10,6 +10,7 @@ public class ResourceManager {
     static final String RES_TOKEN_LAB_MACRO_SET_MTMACSET = "res/TokenLabMacroSet.mtmacset";
     static final String WEAPONS_CACHE                    = "res/Weapons.txt";
     static final String WEAPONS_MACRO                    = "res/AttackMacroBasic.txt";
+    static final String PFSRD_SPELLS                     = "res/spell_full.txt";
 
     static LinkedList<File> _tmpFiles = new LinkedList<File>();
 
@@ -49,6 +50,11 @@ public class ResourceManager {
     public static File getWeapons() throws IOException {
          return getResouceByName(WEAPONS_CACHE);
     }
+
+    public static File getSpells() throws IOException {
+        return getResouceByName( PFSRD_SPELLS );
+    }
+
 
      public static File getWeaponMacro() throws IOException {
          return getResouceByName(WEAPONS_MACRO);

@@ -255,15 +255,17 @@ DexBonus:[r:floor( json.get(Dexterity, "bonusModifier" )  + json.get(Dexterity, 
 IntBonus:[r: json.get(Intelligence, "bonusModifier" )  + json.get(Intelligence, "tempModifier") - json.get(Intelligence, "damage") ]
 WisBonus:[r: json.get(Wisdom, "bonusModifier" )  + json.get(Wisdom, "tempModifier") - json.get(Wisdom, "damage") ]
 ChaBonus:[r: json.get(Charisma, "bonusModifier" )  + json.get(Charisma, "tempModifier") - json.get(Charisma, "damage") ]
-----------------|EQUIPMENT|-----------------
+----------------|Powers|-----------------
+SpellJSON
+WeaponJSON
 ArmorCheckPenalty
 ArmorMaxDexBonus
-WeaponJSON
 WeaponSpecialization:[r:2*WeaponSpecializationChecked]
 WeaponFocus:[r:1*WeaponFocusChecked]
 WeaponProficiency:[r:4*(WeaponProficiencyChecked-1)]
 WeaponAttacksVs:AC
 WeaponTargets:One Foe within my reach
+----------------|EQUIPMENT|-----------------
 Platinum
 Gold
 Silver

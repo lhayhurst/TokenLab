@@ -60,9 +60,21 @@ public class PathfinderToken implements IPathfinderCharacter {
     public static final String PROFESSION = "Profession";
     public static final String YES = "yes";
     public static final String RANKS = "Ranks";
+    public static final String WEAPON_JSON = "WeaponJSON";
+    public static final String SPELLS_JSON = "SpellJSON";
     private Character _character;
     private Token _token;
     private HashMap<String, Object> _propertyMap = new HashMap<String, Object>();
+    private static SpellDB _pfSRDSpells;
+
+    static {
+        try {
+            _pfSRDSpells = new SpellDB( ResourceManager.getSpells().getAbsolutePath() );
+        }
+        catch ( IOException ioe ) {
+            ; //TODO: how to handle properly?
+        }
+    }
 
     public PathfinderToken(Character character ) throws Exception {
         _character = character;
@@ -73,6 +85,7 @@ public class PathfinderToken implements IPathfinderCharacter {
         setArmorClass();
         setSkills();
         setWeapons();
+        setSpells();
 
         _propertyMap.put( BASE_ATTACK_BONUS, Integer.parseInt( replacePlus( _character.getAttack().getBaseattack() ) ) );
     }
@@ -97,6 +110,53 @@ public class PathfinderToken implements IPathfinderCharacter {
 
         }
 
+    }
+
+    private HashMap< String, HashMap< String, PFSRDSpell >> _spells = new HashMap<String, HashMap<String, PFSRDSpell>>();
+    public  HashMap< String, HashMap< String, PFSRDSpell >> getSpells() {
+        return _spells;
+    }
+
+    public void setSpells() {
+
+        //this is a map of Class -> Spell -> Spell Details
+
+        for(Spellclass sc : _character.getSpellclasses().getSpellclass() ) {
+            HashMap< String, PFSRDSpell > classSpells = _spells.get( sc.getName() );
+            if ( classSpells == null ) {
+                classSpells = new HashMap<String, PFSRDSpell>();
+                _spells.put( sc.getName(), classSpells );
+            }
+            if ( sc.getSpells().equals("Spellbook") ) {
+                for ( Spell s : _character.getSpellbook().getSpell() ) {
+                    putSpell(classSpells, s);
+                }
+            }
+            else if ( sc.getSpells().equals("Memorized")) {
+                for ( Spell s : _character.getSpellsmemorized().getSpell() ) {
+                    putSpell( classSpells, s );
+                }
+            }
+            else if ( sc.getSpells().equals("Spontaneous")) {
+                for ( Spell s: _character.getSpellsknown().getSpell()) {
+                    putSpell( classSpells, s );
+                }
+            }
+            else {
+                System.out.println("Unknown spell class " + sc.getSpells() );
+            }
+        }
+
+    }
+
+    private void putSpell(HashMap<String, PFSRDSpell> classSpells, Spell s) {
+        PFSRDSpell pfsrdSpell =  _pfSRDSpells.getSpell( s.getName() );
+        if ( s == null || pfsrdSpell == null ) {
+            return;  //TODO: has to be a better way to react to this.
+        }
+        pfsrdSpell.spellDC = s.getDc() != null && s.getDc().length() > 0 ? s.getDc() : "";
+        pfsrdSpell.casterLevel = s.getCasterlevel() != null && s.getCasterlevel().length() > 0 ? s.getCasterlevel() : "";
+        classSpells.put( s.getName(), pfsrdSpell );
     }
 
     private static HashMap<IAttribute, IAttributeAbbreviated > attributeAbbreviations =
@@ -378,6 +438,7 @@ public class PathfinderToken implements IPathfinderCharacter {
         _token.setPropertyType(PATHFINDER);
 
 
+        //do the attributes
         GsonBuilder gson = new GsonBuilder();
         gson.registerTypeAdapter( Integer.class, new IntegerSerializer() ) ;
         Gson gjson = gson.create();
@@ -396,7 +457,8 @@ public class PathfinderToken implements IPathfinderCharacter {
 
      //t.setProperty( "Feats", gson.toJson(_character.getFeats().values()));
 
-        _token.setProperty("WeaponJSON", gjson.toJson(_weapons));
+        _token.setProperty(WEAPON_JSON, gjson.toJson(_weapons));
+        _token.setProperty(SPELLS_JSON, gjson.toJson(_spells));
 
         return _token;
     }
