@@ -1,0 +1,7 @@
+[h: AbilityJSON = macro.args]
+<br>
+[FOREACH ( ability, AbilityJSON, "<br>" ), CODE: {
+  <b><font size="5" color="#1B00A1">[r:ability]</font></b> : [r: json.get( json.get( abilityJSON, ability), "description") ]
+  <br>
+}
+]

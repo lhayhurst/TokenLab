@@ -12,9 +12,7 @@ import javax.imageio.ImageIO;
 import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class PathfinderToken implements IPathfinderCharacter {
 
@@ -62,19 +60,26 @@ public class PathfinderToken implements IPathfinderCharacter {
     public static final String RANKS = "Ranks";
     public static final String WEAPON_JSON = "WeaponJSON";
     public static final String SPELLS_JSON = "SpellJSON";
+    public static final String FEATS_JSON = "FeatJSON";
+    public static final String SPELLBOOK = "Spellbook";
+    public static final String MEMORIZED = "Memorized";
+    public static final String SPONTANEOUS = "Spontaneous";
+    public static final String SPECIAL_ABILITIES_JSON = "SpecialAbilitiesJSON";
+    public static final String SENSES = "Senses";
+    public static final String AURAS = "Auras";
+    public static final String HEALTH = "Health";
+    public static final String DAMAGE_REDUCTION = "Damage Reduction";
+    public static final String DEFENSIVE = "Defensive";
+    public static final String IMMUNITIES = "Immunities";
+    public static final String WEAKNESSES = "Weaknesses";
+    public static final String MOVEMENT = "Movement";
+    public static final String SKILL_ABILITIES = "Skill Abilities";
+    public static final String ATTACK = "Attack";
+    public static final String SPELL_LIKE = "Spell-like";
+    public static final String OTHER = "Other";
     private Character _character;
     private Token _token;
     private HashMap<String, Object> _propertyMap = new HashMap<String, Object>();
-    private static SpellDB _pfSRDSpells;
-
-    static {
-        try {
-            _pfSRDSpells = new SpellDB( ResourceManager.getSpells().getAbsolutePath() );
-        }
-        catch ( IOException ioe ) {
-            ; //TODO: how to handle properly?
-        }
-    }
 
     public PathfinderToken(Character character ) throws Exception {
         _character = character;
@@ -86,6 +91,8 @@ public class PathfinderToken implements IPathfinderCharacter {
         setSkills();
         setWeapons();
         setSpells();
+        setFeats();
+        setSpecialAbilities();
 
         _propertyMap.put( BASE_ATTACK_BONUS, Integer.parseInt( replacePlus( _character.getAttack().getBaseattack() ) ) );
     }
@@ -112,52 +119,119 @@ public class PathfinderToken implements IPathfinderCharacter {
 
     }
 
-    private HashMap< String, HashMap< String, PFSRDSpell >> _spells = new HashMap<String, HashMap<String, PFSRDSpell>>();
-    public  HashMap< String, HashMap< String, PFSRDSpell >> getSpells() {
-        return _spells;
+    public HashMap<String, PFSRDSpell> getSpellsByClass( String className) {
+
+        ClassSpells cs = _spells.get(className);
+        HashMap<String, PFSRDSpell > ret = cs.getAllSpells();
+        return ret;
     }
+
+    public SortedMap< Integer, HashMap<String, PFSRDSpell>> getSpellsByClassAndLevel( String className ) {
+        ClassSpells cs = _spells.get(className);
+        SortedMap<Integer, HashMap<String, PFSRDSpell >> ret = cs.getAllSpellsByLevel();
+        return ret;
+    }
+
+
+    private HashMap< String, Feat > _feats = new HashMap<String, Feat>();
+    public HashMap< String, Feat > getFeats() {
+        return _feats;
+    }
+    public void setFeats() {
+        for( Feat f : _character.getFeats().getFeat() ) {
+            _feats.put( f.getName(), f );
+        }
+    }
+
+    private SortedMap< String, TreeMap<String, Special >> _specials = new TreeMap<String, TreeMap<String, Special>>();
+
+    public  SortedMap< String, TreeMap<String, Special >> getSpecialAbilities() {
+        return _specials;
+    }
+    public void setSpecial( String specialName, Special special ) {
+        TreeMap< String, Special > smap = _specials.get( specialName );
+        if ( smap == null ) {
+            smap = new TreeMap<String, Special>();
+            _specials.put( specialName, smap );
+        }
+        smap.put( special.getName(), special );
+    }
+    public void setSpecialAbilities() {
+
+        for ( Special s: _character.getSenses().getSpecial() ) {
+            setSpecial(SENSES, s );
+        }
+        for( Special s: _character.getAuras().getSpecial() ) {
+            setSpecial(AURAS, s );
+        }
+        for( Special s: _character.getHealth().getSpecial() ) {
+            setSpecial(HEALTH, s );
+        }
+        for( Special s: _character.getDamagereduction().getSpecial()) {
+            setSpecial(DAMAGE_REDUCTION, s );
+        }
+        for( Special s: _character.getDefensive().getSpecial()) {
+            setSpecial(DEFENSIVE, s );
+        }
+        for( Special s: _character.getImmunities().getSpecial() ) {
+            setSpecial(IMMUNITIES, s );
+        }
+        for( Special s: _character.getWeaknesses().getSpecial() ) {
+            setSpecial(WEAKNESSES, s );
+        }
+        for( Special s: _character.getMovement().getSpecial()) {
+            setSpecial(MOVEMENT, s );
+        }
+        for( Special s: _character.getSkillabilities().getSpecial()) {
+            setSpecial(SKILL_ABILITIES, s );
+        }
+        for( Special s: _character.getAttack().getSpecial() ) {
+            setSpecial(ATTACK, s );
+        }
+        for( Special s: _character.getSpelllike().getSpecial() ) {
+            setSpecial(SPELL_LIKE, s );
+        }
+        for( Special s: _character.getOtherspecials().getSpecial()) {
+            setSpecial(OTHER, s );
+        }
+    }
+
+    private HashMap<String, ClassSpells > _spells= new HashMap<String, ClassSpells>();
 
     public void setSpells() {
 
-        //this is a map of Class -> Spell -> Spell Details
-
         for(Spellclass sc : _character.getSpellclasses().getSpellclass() ) {
-            HashMap< String, PFSRDSpell > classSpells = _spells.get( sc.getName() );
-            if ( classSpells == null ) {
-                classSpells = new HashMap<String, PFSRDSpell>();
-                _spells.put( sc.getName(), classSpells );
+            ClassSpells cs = null;
+            if ( _spells.containsKey(sc.getName())) {
+                cs = _spells.get(sc.getName());
             }
-            if ( sc.getSpells().equals("Spellbook") ) {
+            else {
+                cs = new ClassSpells(sc.getName());
+                _spells.put( sc.getName(), cs );
+            }
+
+            if ( sc.getSpells().equals(SPELLBOOK) ) {
                 for ( Spell s : _character.getSpellbook().getSpell() ) {
-                    putSpell(classSpells, s);
+                    cs.addSpell(s);
                 }
             }
-            else if ( sc.getSpells().equals("Memorized")) {
+            else if ( sc.getSpells().equals(MEMORIZED)) {
                 for ( Spell s : _character.getSpellsmemorized().getSpell() ) {
-                    putSpell( classSpells, s );
+                    cs.addSpell(s);
                 }
             }
-            else if ( sc.getSpells().equals("Spontaneous")) {
+            else if ( sc.getSpells().equals(SPONTANEOUS)) {
                 for ( Spell s: _character.getSpellsknown().getSpell()) {
-                    putSpell( classSpells, s );
+                    cs.addSpell(s);
                 }
             }
             else {
                 System.out.println("Unknown spell class " + sc.getSpells() );
             }
         }
-
     }
 
-    private void putSpell(HashMap<String, PFSRDSpell> classSpells, Spell s) {
-        PFSRDSpell pfsrdSpell =  _pfSRDSpells.getSpell( s.getName() );
-        if ( s == null || pfsrdSpell == null ) {
-            return;  //TODO: has to be a better way to react to this.
-        }
-        pfsrdSpell.spellDC = s.getDc() != null && s.getDc().length() > 0 ? s.getDc() : "";
-        pfsrdSpell.casterLevel = s.getCasterlevel() != null && s.getCasterlevel().length() > 0 ? s.getCasterlevel() : "";
-        classSpells.put( s.getName(), pfsrdSpell );
-    }
+
 
     private static HashMap<IAttribute, IAttributeAbbreviated > attributeAbbreviations =
             new HashMap<IAttribute, IAttributeAbbreviated>();
@@ -455,10 +529,20 @@ public class PathfinderToken implements IPathfinderCharacter {
         }
 
 
-     //t.setProperty( "Feats", gson.toJson(_character.getFeats().values()));
+        _token.setProperty( FEATS_JSON, gjson.toJson(_feats ) );
 
         _token.setProperty(WEAPON_JSON, gjson.toJson(_weapons));
-        _token.setProperty(SPELLS_JSON, gjson.toJson(_spells));
+
+        //set the spells.  this needs to basically happen by class.
+        HashMap< String, SortedMap< Integer, HashMap<String, PFSRDSpell>>> characterSpells =
+                new HashMap<String, SortedMap<Integer, HashMap<String, PFSRDSpell>>>();
+        for(Spellclass sc : _character.getSpellclasses().getSpellclass() ) {
+            SortedMap< Integer, HashMap<String, PFSRDSpell>> spellsByLevel = this.getSpellsByClassAndLevel( sc.getName() );
+            characterSpells.put( sc.getName(), spellsByLevel );
+        }
+        _token.setProperty(SPELLS_JSON, gjson.toJson(characterSpells));
+
+        _token.setProperty(SPECIAL_ABILITIES_JSON, gjson.toJson( _specials ));
 
         return _token;
     }
@@ -533,9 +617,10 @@ public class PathfinderToken implements IPathfinderCharacter {
         int index = 1;
 
         index = buildGenericMacros(macroButtonSet, index);
-        index = buildPowerMacros(macroButtonSet, index);
+        index = buildWeaponMacros(macroButtonSet, index);
+        index = buildSpecialAbilityMacros(macroButtonSet, index);
         index = buildSkillMacros(macroButtonSet, index);
-        index = buildSubMacros( macroButtonSet, index );
+        buildSubMacros( macroButtonSet, index );
 
 
         t.getMacroNextIndex(); //TODO: this is a hack to create the underlying macroPropertiesMap hash table
@@ -556,6 +641,9 @@ public class PathfinderToken implements IPathfinderCharacter {
     }
 
     private String mungeSkillName( String skillName ) {
+        if ( skillName.indexOf("Alchemy") > 0 ) {
+            int i = 0;
+        }
         return skillName.replaceAll( "\\s|\\(|\\)", "");
     }
 
@@ -604,7 +692,17 @@ public class PathfinderToken implements IPathfinderCharacter {
     }
 
     private int buildGenericMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
-        HashMap<String, MacroDigester.MacroEntry > genericMacros = macroDigester.getGroup( "Generic");
+        index = buildMacros(macroButtonSet, "Generic", index);
+        return index;
+    }
+
+    private int buildSpecialAbilityMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
+        index = buildMacros(macroButtonSet, "Special Abilities", index);
+        return index;
+    }
+
+    private int buildMacros(List<MacroButtonProperties> macroButtonSet, String groupName, int index) throws IOException {
+        HashMap<String, MacroDigester.MacroEntry > genericMacros = macroDigester.getGroup( groupName );
         IMacroReplacer defaultReplacer = new DefaultReplacer();
         for( MacroDigester.MacroEntry macroEntry : genericMacros.values()) {
 
@@ -615,8 +713,7 @@ public class PathfinderToken implements IPathfinderCharacter {
     }
 
 
-
-    private int buildPowerMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
+    private int buildWeaponMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
 
         //next do the power macros
         int sortPrefix = 0;

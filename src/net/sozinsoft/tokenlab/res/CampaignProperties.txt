@@ -99,6 +99,10 @@ Climb:[r:ClimbRanks+ClimbBonus+(floor(ClimbRanks/(ClimbRanks-0.1)))*(3*ClimbClas
 ClimbRanks:0
 ClimbBonus:0
 ClimbClassSkill:0
+CraftAlchemy: [r:CraftAlchemyRanks+CraftAlchemyBonus+(floor(CraftAlchemyRanks/(CraftAlchemyRanks-0.1)))*(3*CraftAlchemyClassSkill)]
+CraftAlchemyRanks:0
+CraftAlchemyBonus:0
+CraftAlchemyClassSkill:0
 Craft:[r:CraftRanks+CraftBonus+(floor(CraftRanks/(CraftRanks-0.1)))*(3*CraftClassSkill)]
 CraftRanks:0
 CraftBonus:0
@@ -258,6 +262,8 @@ ChaBonus:[r: json.get(Charisma, "bonusModifier" )  + json.get(Charisma, "tempMod
 ----------------|Powers|-----------------
 SpellJSON
 WeaponJSON
+FeatJSON
+SpecialAbilitiesJSON
 ArmorCheckPenalty
 ArmorMaxDexBonus
 WeaponSpecialization:[r:2*WeaponSpecializationChecked]

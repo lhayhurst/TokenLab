@@ -101,9 +101,27 @@
                applyToSelectedTokens="0"
                file="res/macros/AttackMacroBasic.txt"/>
 
+    <macro name="Feats"
+               group="Special Abilities"
+               sortPrefix="200"
+               buttonColor="navy"
+               fontColor="white"
+               fontSize="1.00em"
+               minWidth="30"
+               applyToSelectedTokens="1"
+               file="res/macros/FeatsMacro.txt"/>
+    <macro name="Abilities"
+               group="Special Abilities"
+               sortPrefix="201"
+               buttonColor="navy"
+               fontColor="white"
+               fontSize="1.00em"
+               minWidth="37"
+               applyToSelectedTokens="1"
+               file="res/macros/AbilitiesMacro.txt"/>
     <macro name="Skill Check"
                group="Skills"
-               sortPrefix="200"
+               sortPrefix="300"
                buttonColor="lightgray"
                fontColor="black"
                fontSize="1.00em"
@@ -113,11 +131,18 @@
 
     <macro name="cStatParser"
                group="SUBMACROS"
-               sortPrefix="300"
+               sortPrefix="400"
                buttonColor="darkgray"
                fontColor="black"
                fontSize="0.90em"
                applyToSelectedTokens="0"
                file="res/macros/cStatParserMacro.txt"/>
-
+     <macro name="abil"
+               group="SUBMACROS"
+               sortPrefix="401"
+               buttonColor="darkgray"
+               fontColor="black"
+               fontSize="0.90em"
+               applyToSelectedTokens="0"
+               file="res/macros/abil.txt"/>
 </macros>
