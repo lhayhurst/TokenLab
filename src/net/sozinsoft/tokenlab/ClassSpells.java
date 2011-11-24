@@ -54,7 +54,11 @@ public class ClassSpells {
         HashMap<String, PFSRDSpell> ret = new HashMap<String, PFSRDSpell>();
         for( SpellsByLevel sbl : _spellsByLevel.values()) {
             for( PFSRDSpell spell : sbl.getSpells() ) {
-                ret.put( spell.name, spell );
+                String key = spell.name;
+                if ( key.indexOf(",") > 0 ) {
+                    key = key.replaceAll( ",", "" );
+                }
+                ret.put( key, spell );
             }
         }
         return ret;
@@ -66,7 +70,13 @@ public class ClassSpells {
             SpellsByLevel sbl = _spellsByLevel.get( level );
             HashMap<String, PFSRDSpell> levelSpells = new HashMap<String, PFSRDSpell>();
             for( PFSRDSpell spell : sbl.getSpells() ) {
-                levelSpells.put( spell.name, spell  );
+                String key = spell.name;
+                if ( key.indexOf(",") > 0 ) {
+                    key = key.replaceAll( ",", "" );
+                    spell.name = spell.name.replaceAll(",", ""); //TODO: this is a hack to work around maptools json processing abilities.
+                    //commas mess things up :-(
+                }
+                levelSpells.put( key, spell  );
             }
             ret.put( level, levelSpells);
         }

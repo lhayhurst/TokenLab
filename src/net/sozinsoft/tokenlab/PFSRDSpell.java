@@ -21,9 +21,9 @@ public class PFSRDSpell {
     public String saving_throw;
     public String spell_resistence;
     public String description;
-    public String description_formated;
+    //public String description_formated;
     public String source;
-    public String full_text;
+   // public String full_text;
     public String verbal;
     public String somatic;
     public String material;
@@ -57,8 +57,11 @@ public class PFSRDSpell {
         name = a[0]; school = a[1]; subschool = a[2]; descriptor = a[3]; spell_level = a[4]; casting_time = a[5];
         components = a[6]; costly_components = a[7]; range = a[8]; area = a[9]; effect = a[10];
         targets = a[11]; duration = a[12]; dismissible = a[13]; shapeable = a[14]; saving_throw = a[15];
-        spell_resistence = a[16]; description = a[17]; description_formated = a[18]; source = a[19];
-        full_text = a[20]; verbal = a[21]; somatic = a[22]; material = a[23]; focus = a[24]; divine_focus = a[25]; sor = a[26];
+        spell_resistence = a[16]; description = a[17];
+        //description_formated = a[18];
+        source = a[19];
+        //full_text = a[20];
+        verbal = a[21]; somatic = a[22]; material = a[23]; focus = a[24]; divine_focus = a[25]; sor = a[26];
         wiz = a[27]; cleric = a[28]; druid = a[29]; ranger = a[30]; bard = a[31]; paladin = a[32]; alchemist = a[33];
         summoner = a[34]; witch =a[35]; inquisitor = a[36]; oracle = a[37]; antipaladin = a[38]; magus = a[39];
         deity = a[40]; SLA_Level = a[41]; domain = a[42]; short_description = a[43];

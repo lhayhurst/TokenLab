@@ -534,13 +534,14 @@ public class PathfinderToken implements IPathfinderCharacter {
         _token.setProperty(WEAPON_JSON, gjson.toJson(_weapons));
 
         //set the spells.  this needs to basically happen by class.
+        /* TODO: disabled for now
         HashMap< String, SortedMap< Integer, HashMap<String, PFSRDSpell>>> characterSpells =
                 new HashMap<String, SortedMap<Integer, HashMap<String, PFSRDSpell>>>();
         for(Spellclass sc : _character.getSpellclasses().getSpellclass() ) {
             SortedMap< Integer, HashMap<String, PFSRDSpell>> spellsByLevel = this.getSpellsByClassAndLevel( sc.getName() );
             characterSpells.put( sc.getName(), spellsByLevel );
         }
-        _token.setProperty(SPELLS_JSON, gjson.toJson(characterSpells));
+        _token.setProperty(SPELLS_JSON, gjson.toJson(characterSpells));   */
 
         _token.setProperty(SPECIAL_ABILITIES_JSON, gjson.toJson( _specials ));
 
