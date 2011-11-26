@@ -1,6 +1,10 @@
 package net.sozinsoft.tokenlab;
 
 
+import com.google.gson.JsonObject;
+
+import java.util.HashMap;
+
 public class PFSRDSpell {
 
     public String name;
@@ -21,9 +25,9 @@ public class PFSRDSpell {
     public String saving_throw;
     public String spell_resistence;
     public String description;
-    //public String description_formated;
+    public String description_formated;
     public String source;
-   // public String full_text;
+    public String full_text;
     public String verbal;
     public String somatic;
     public String material;
@@ -58,9 +62,9 @@ public class PFSRDSpell {
         components = a[6]; costly_components = a[7]; range = a[8]; area = a[9]; effect = a[10];
         targets = a[11]; duration = a[12]; dismissible = a[13]; shapeable = a[14]; saving_throw = a[15];
         spell_resistence = a[16]; description = a[17];
-        //description_formated = a[18];
+        description_formated = a[18];
         source = a[19];
-        //full_text = a[20];
+        full_text = a[20];
         verbal = a[21]; somatic = a[22]; material = a[23]; focus = a[24]; divine_focus = a[25]; sor = a[26];
         wiz = a[27]; cleric = a[28]; druid = a[29]; ranger = a[30]; bard = a[31]; paladin = a[32]; alchemist = a[33];
         summoner = a[34]; witch =a[35]; inquisitor = a[36]; oracle = a[37]; antipaladin = a[38]; magus = a[39];
@@ -68,5 +72,34 @@ public class PFSRDSpell {
 
         short_description = short_description.replace( "�", "");
 
+    }
+
+    public JsonObject jsonFields() {
+        JsonObject ret = new JsonObject();
+
+        ret.addProperty("name", name );
+        ret.addProperty("shortDescription", short_description);
+        ret.addProperty("description", description);
+        ret.addProperty( "spellDC", spellDC);
+        ret.addProperty( "casterLevel", casterLevel);
+
+        String school = this.school.length() > 0 ? this.school : "";
+        if ( subschool.length() > 0 ) {
+            school = school + " (" + subschool + " )";
+        }
+        if ( descriptor.length() > 0 ) {
+            school = school + " [" + descriptor + "]";
+        }
+        ret.addProperty( "school", school );
+
+        ret.addProperty( "spellLevel", spell_level);
+        ret.addProperty( "castingTime", casting_time );
+        ret.addProperty( "components", components);
+        ret.addProperty( "range", range);
+        ret.addProperty( "effect", effect );
+        ret.addProperty( "duration", duration );
+        ret.addProperty("savingThrow", saving_throw);
+        ret.addProperty("spellResistance", spell_resistence);
+        return ret;
     }
 }

@@ -1,0 +1,9 @@
+
+[h:Spells = json.get( macro.args, "spells")]
+[h: Spellnames = json.fields( Spells )]
+[FOREACH( spellname, SpellNames, "<br>" ), CODE: {
+   [h:Spell = json.get( Spells, spellname )]
+   [h: args = json.set( "{}", "spell", Spell )]
+   [h:callback = "spell3@token"]
+   <b><font size="5" >[r:macrolink( spellname,  callback, "none", args)]</font></b>: <font size="4"> [r:json.get(Spell, "shortDescription") ]
+}]</font>

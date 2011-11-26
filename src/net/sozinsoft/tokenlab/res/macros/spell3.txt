@@ -1,0 +1,21 @@
+[frame("Spells"): {
+<table>
+<tr><td>[r:macroLink("Spells", "Spells@token")]</td></tr>
+</table>
+
+[h: Spell=json.get(macro.args, "spell")]
+<h2>[r:json.get(Spell, "name")]</h2>
+<b>School</b> [r:json.get(Spell,"school")]<br>
+<b>Level</b> [r:json.get(Spell, "spellLevel")]<br>
+<b>Casting Time</b> [r:json.get(Spell, "castingTime")]<br>
+<b>Components</b> [r:json.get(Spell, "components")]<br>
+<b>Range</b> [r:json.get(Spell, "range")]<br>
+<b>Effect</b> [r:json.get(Spell, "effect")]<br>
+<b>Duration</b> [r:json.get(Spell, "duration")]<br>
+<b>Saving Throw</b> [r:json.get(Spell, "savingThrow")]
+<b>Spell Resistance</b> [r:json.get(Spell, "spellResistance")]<br><br>
+[r:json.get(Spell, "description")]
+}]
+
+
+

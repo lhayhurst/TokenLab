@@ -502,6 +502,12 @@ public class PathfinderToken implements IPathfinderCharacter {
         }
     }
 
+    private class SpellSerializer implements JsonSerializer<PFSRDSpell> {
+       public JsonElement serialize(PFSRDSpell spell, java.lang.reflect.Type type, JsonSerializationContext jsonSerializationContext) {
+            return spell.jsonFields();
+        }
+    }
+
     public Token asToken( Config.ConfigEntry configEntry ) throws IOException, SAXException {
 
         _token = createToken(configEntry);
@@ -515,6 +521,7 @@ public class PathfinderToken implements IPathfinderCharacter {
         //do the attributes
         GsonBuilder gson = new GsonBuilder();
         gson.registerTypeAdapter( Integer.class, new IntegerSerializer() ) ;
+        gson.registerTypeAdapter( PFSRDSpell.class, new SpellSerializer());
         Gson gjson = gson.create();
         for( IAttribute ia : IAttribute.values() ) {
             String json = gjson.toJson(_attributes.get(ia) );
@@ -534,14 +541,15 @@ public class PathfinderToken implements IPathfinderCharacter {
         _token.setProperty(WEAPON_JSON, gjson.toJson(_weapons));
 
         //set the spells.  this needs to basically happen by class.
-        /* TODO: disabled for now
+
         HashMap< String, SortedMap< Integer, HashMap<String, PFSRDSpell>>> characterSpells =
                 new HashMap<String, SortedMap<Integer, HashMap<String, PFSRDSpell>>>();
         for(Spellclass sc : _character.getSpellclasses().getSpellclass() ) {
             SortedMap< Integer, HashMap<String, PFSRDSpell>> spellsByLevel = this.getSpellsByClassAndLevel( sc.getName() );
             characterSpells.put( sc.getName(), spellsByLevel );
         }
-        _token.setProperty(SPELLS_JSON, gjson.toJson(characterSpells));   */
+
+        _token.setProperty(SPELLS_JSON, gjson.toJson(characterSpells));
 
         _token.setProperty(SPECIAL_ABILITIES_JSON, gjson.toJson( _specials ));
 
@@ -635,6 +643,13 @@ public class PathfinderToken implements IPathfinderCharacter {
         IMacroReplacer defaultReplacer = new DefaultReplacer();
         for( MacroDigester.MacroEntry macroEntry : submacros.values()) {
 
+            //this is kind of a hack.
+            if ( macroEntry.name.indexOf("spell") == 0 ) {
+                if (isSpellCaster()) {
+                    continue;
+                }
+            }
+
             MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, defaultReplacer );
             macroButtonSet.add( properties );
         }
@@ -642,9 +657,6 @@ public class PathfinderToken implements IPathfinderCharacter {
     }
 
     private String mungeSkillName( String skillName ) {
-        if ( skillName.indexOf("Alchemy") > 0 ) {
-            int i = 0;
-        }
         return skillName.replaceAll( "\\s|\\(|\\)", "");
     }
 
@@ -655,7 +667,7 @@ public class PathfinderToken implements IPathfinderCharacter {
        for ( Skill s : _character.getSkills().getSkill() ) {
 
            String skillName = s.getName();
-            if ( skillName.indexOf("Profession") >= 0) {
+            if ( skillName.indexOf("Profession") >= 0 || skillName.indexOf("Perform") >= 0 ) {
                 continue; //skipping professions for now, TODO:
             }
 
@@ -707,10 +719,22 @@ public class PathfinderToken implements IPathfinderCharacter {
         IMacroReplacer defaultReplacer = new DefaultReplacer();
         for( MacroDigester.MacroEntry macroEntry : genericMacros.values()) {
 
+            //kind of a small hack, special for spells
+            //if the character doesn't have spells, don't bother creating a spell button
+            //TODO: probably a smoother way to do this
+            if ( macroEntry.name.equals("Spells") ) {
+                if (isSpellCaster()) {
+                    continue;
+                }
+            }
             MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, defaultReplacer );
             macroButtonSet.add( properties );
         }
         return index;
+    }
+
+    private boolean isSpellCaster() {
+        return _character.getSpellclasses().getSpellclass().size() == 0;
     }
 
 

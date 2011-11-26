@@ -1,0 +1,9 @@
+
+[h: className = json.get(macro.args, "className")]
+[h: SpellLevels = json.get(macro.args, "spellLevels")]
+[FOREACH (spellLevel, SpellLevels, "<br>"), CODE: {
+   <font size="5" color="#7D0202">[r: spellLevel]</font><br>
+    [h: Spells =     json.get( json.get( SpellJSON, className ), spellLevel )]
+    [h: macroArgs = json.set("{}", "spells", Spells)]
+    [MACRO("spell2@this"): macroArgs]
+}]

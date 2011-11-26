@@ -101,6 +101,7 @@
                applyToSelectedTokens="0"
                file="res/macros/AttackMacroBasic.txt"/>
 
+
     <macro name="Feats"
                group="Special Abilities"
                sortPrefix="200"
@@ -110,6 +111,7 @@
                minWidth="30"
                applyToSelectedTokens="1"
                file="res/macros/FeatsMacro.txt"/>
+
     <macro name="Abilities"
                group="Special Abilities"
                sortPrefix="201"
@@ -119,6 +121,17 @@
                minWidth="37"
                applyToSelectedTokens="1"
                file="res/macros/AbilitiesMacro.txt"/>
+
+    <macro name="Spells"
+               group="Special Abilities"
+               sortPrefix="202"
+               buttonColor="navy"
+               fontColor="white"
+               fontSize="1.00em"
+               minWidth="30"
+               applyToSelectedTokens="1"
+               file="res/macros/SpellMacro.txt"/>
+
     <macro name="Skill Check"
                group="Skills"
                sortPrefix="300"
@@ -145,4 +158,28 @@
                fontSize="0.90em"
                applyToSelectedTokens="0"
                file="res/macros/abil.txt"/>
+     <macro name="spell1"
+               group="SUBMACROS"
+               sortPrefix="401"
+               buttonColor="darkgray"
+               fontColor="black"
+               fontSize="0.90em"
+               applyToSelectedTokens="0"
+               file="res/macros/spell1.txt"/>
+     <macro name="spell2"
+               group="SUBMACROS"
+               sortPrefix="401"
+               buttonColor="darkgray"
+               fontColor="black"
+               fontSize="0.90em"
+               applyToSelectedTokens="0"
+               file="res/macros/spell2.txt"/>
+     <macro name="spell3"
+               group="SUBMACROS"
+               sortPrefix="401"
+               buttonColor="darkgray"
+               fontColor="black"
+               fontSize="0.90em"
+               applyToSelectedTokens="0"
+               file="res/macros/spell3.txt"/>
 </macros>

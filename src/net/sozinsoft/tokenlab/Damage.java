@@ -44,7 +44,13 @@ public class Damage {
 
         Matcher matcher = bonusDamageOnly.matcher(expression); //"6"
 
-        if (matcher.matches() ) {
+        if ( expression.startsWith("--") ) {
+            //there are some herolabs exports that contain this odd string for damage
+            //for example, the advanced wasp swarm.
+            //assume  this means just zero damage.
+            ;
+        }
+        else if (matcher.matches() ) {
             bonusDamage = Integer.parseInt( matcher.group(0));
         }
         else { //1d6

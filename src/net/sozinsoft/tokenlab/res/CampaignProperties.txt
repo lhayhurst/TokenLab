@@ -261,6 +261,7 @@ WisBonus:[r: json.get(Wisdom, "bonusModifier" )  + json.get(Wisdom, "tempModifie
 ChaBonus:[r: json.get(Charisma, "bonusModifier" )  + json.get(Charisma, "tempModifier") - json.get(Charisma, "damage") ]
 ----------------|Powers|-----------------
 SpellJSON
+SpellHTMLCache
 WeaponJSON
 FeatJSON
 SpecialAbilitiesJSON

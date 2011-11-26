@@ -1,10 +1,12 @@
 [frame("Spells"): {
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css">
-<title>Abilities</title>
+<title>Spells</title>
 </head>
 <body>
+<table>
+<tr><td>[r:macroLink("Spells", "Spells@token")]</td></tr>
+</table>
 [h: SpellClasses = json.fields(SpellJSON)]
 [FOREACH (className, SpellClasses, "<br>"), CODE: {
     <b><font size="6" color="#7D0202">[r: className]</font></b><br>
@@ -12,28 +14,10 @@
     [h: macroArgs = json.set("{}", "className", className, "spellLevels", SpellLevels ) ]
     [MACRO("spell1@this"): macroArgs ]
 }]
-
 </body>
 </html>
 }]
 
 
 
-[h: className = json.get(macro.args, "className")]
-[h: SpellLevels = json.get(macro.args, "spellLevels")]
-[FOREACH (spellLevel, SpellLevels, "<br>"), CODE: {
-   <font size="5" color="#7D0202">[r: spellLevel]</font><br>
-    [h: Spells =     json.get( json.get( SpellJSON, className ), spellLevel )]
-    [h: macroArgs = json.set("{}", "spells", Spells)]
-    [MACRO("spell2@this"): macroArgs]
-}]
 
-
-[h:Spells = json.get( macro.args, "spells")]
-[h: Spellnames = json.fields( Spells )]
-[FOREACH( spellname, SpellNames, "<br>" ), CODE: {
-   [h:Spell = json.get( Spells, spellname )]
-   [h: args = json.set( "{}", "spell", Spell )]
-   [h:callback = "spell4@this"]
-   <b><font size="5" >[r:macrolink( spellname,  callback, "none", args)]</font></b>: <font size="4"> [r:json.get(Spell, "short_description") ]
-}]</font>
