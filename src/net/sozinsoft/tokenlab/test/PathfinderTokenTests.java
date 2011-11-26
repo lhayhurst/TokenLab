@@ -271,6 +271,31 @@ public class PathfinderTokenTests {
     }
 
     @Test
+    public void testMultiClassPC() throws Exception {
+        dig = new HerolabsDigester();
+        dig.parse( new File( "src/net/sozinsoft/tokenlab/test/xml/Fortune_Teller.xml") );
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+        Character dss = characters.get(0);
+        PathfinderToken ft = new PathfinderToken( dss );
+        assertEquals("Fortune Teller", ft.getName());
+
+        //first check his classes
+        HashMap<String, PFSRDSpell> sorcererSpells = ft.getSpellsByClass("Sorcerer");
+        assertNotNull( sorcererSpells);
+        assertTrue( sorcererSpells.containsKey("Mage Armor"));
+        PFSRDSpell ma = sorcererSpells.get("Mage Armor");
+        assertEquals( "3", ma.casterLevel);
+
+        HashMap<String, PFSRDSpell> bardSpells = ft.getSpellsByClass("Bard");
+        assertNotNull( bardSpells );
+        assertTrue( bardSpells.containsKey("Silent Image"));
+        PFSRDSpell si = bardSpells.get("Silent Image");
+        assertEquals( "Silent Image", si.name );
+
+
+    }
+
+    @Test
     public void testAC() throws Exception {
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
