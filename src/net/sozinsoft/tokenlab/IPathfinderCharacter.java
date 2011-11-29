@@ -48,5 +48,8 @@ public interface IPathfinderCharacter {
     //combat maneuvers.
     public Integer getBaseAttackBonus();
 
+    public String getVision();
+
+
 
 }

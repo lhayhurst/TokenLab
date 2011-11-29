@@ -202,6 +202,35 @@ public class PathfinderTokenTests {
     }
 
     @Test
+    public void testVision() throws Exception {
+        dig = new HerolabsDigester();
+        dig.parse( new File( "src/net/sozinsoft/tokenlab/test/xml/vision_monsters.xml") );
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+
+        Character dss = characters.get(0);
+        PathfinderToken bernard = new PathfinderToken( dss );
+        assertEquals("Bernard the Guard", bernard.getName());
+        assertEquals( PathfinderToken.MT_NORMAL_VISION, bernard.getVision());
+
+        dss = characters.get(1);
+        PathfinderToken wwt = new PathfinderToken( dss );
+        assertEquals("Purple Worm", wwt.getName());
+        assertEquals( PathfinderToken.MT_DARKVISION, wwt.getVision());
+
+        dss = characters.get(2);
+        PathfinderToken shark = new PathfinderToken( dss );
+        assertEquals("Shark", shark.getName());
+        assertEquals( PathfinderToken.MT_BLINDSIGHT, shark.getVision());
+
+        dss = characters.get(3);
+        PathfinderToken tendrilicos = new PathfinderToken( dss );
+        assertEquals("Tendriculos", tendrilicos.getName());
+        assertEquals( PathfinderToken.MT_LOWLIGHT_VISION, tendrilicos.getVision());
+
+
+    }
+
+    @Test
     public void testSpells() throws Exception {
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
         Character dss = characters.get(1);

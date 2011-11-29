@@ -77,6 +77,10 @@ public class PathfinderToken implements IPathfinderCharacter {
     public static final String ATTACK = "Attack";
     public static final String SPELL_LIKE = "Spell-like";
     public static final String OTHER = "Other";
+
+
+
+
     private Character _character;
     private Token _token;
     private HashMap<String, Object> _propertyMap = new HashMap<String, Object>();
@@ -93,6 +97,7 @@ public class PathfinderToken implements IPathfinderCharacter {
         setSpells();
         setFeats();
         setSpecialAbilities();
+        setVision();
 
         _propertyMap.put( BASE_ATTACK_BONUS, Integer.parseInt( replacePlus( _character.getAttack().getBaseattack() ) ) );
     }
@@ -156,6 +161,54 @@ public class PathfinderToken implements IPathfinderCharacter {
         }
         smap.put( special.getName(), special );
     }
+
+
+    //A word on the below.
+    //because MT only allows one type of vision, the vision Array is done in relative priority order
+    //ie Darkvision trumps blindsense trumps low light trumps ...
+    private String _vision;
+    public static final String HEROLABS_DARKVISION = "Darkvision";
+    public static final String MT_DARKVISION = HEROLABS_DARKVISION;
+    public static final String HEROLABS_LOWLIGHT_VISION = "Low-Light Vision";
+    public static final String MT_LOWLIGHT_VISION = "Lowlight";
+    public static final String MT_NORMAL_VISION = "Normal";
+    public static final String HEROLABS_BLINDSIGHT = "Blindsight";
+    public static final String MT_BLINDSIGHT = HEROLABS_BLINDSIGHT;
+    public static final String HEROLABS_BLINDSENSE = "Blindsense"; //MAPTOOLS doesn't differentiate
+    public static final String HEROLABS_TREMORSENSE = "Tremorsense";
+    public static final String MT_TREMORSENSE = HEROLABS_TREMORSENSE;
+    public static String[] visionArray = new String[5];
+    public static final HashMap<String, String > visionMap = new HashMap<String, String>();
+    static {
+        visionArray[0] = HEROLABS_DARKVISION;
+        visionArray[1] = HEROLABS_BLINDSIGHT;
+        visionArray[2] = HEROLABS_BLINDSENSE;
+        visionArray[3] = HEROLABS_LOWLIGHT_VISION;
+        visionArray[4] = HEROLABS_TREMORSENSE;
+        visionMap.put( HEROLABS_DARKVISION, MT_DARKVISION);
+        visionMap.put( HEROLABS_LOWLIGHT_VISION, MT_LOWLIGHT_VISION);
+        visionMap.put( HEROLABS_BLINDSIGHT, MT_BLINDSIGHT);
+        visionMap.put( HEROLABS_BLINDSENSE, MT_BLINDSIGHT );
+        visionMap.put( HEROLABS_TREMORSENSE, MT_TREMORSENSE);
+    }
+
+    public void setVision() {
+        //Low-Light Vision
+        //DarkVision
+        _vision = MT_NORMAL_VISION;
+
+        outerloop: for( String visionType : visionArray ) {
+            innerloop: for( Special s : _character.getSenses().getSpecial() ) {
+                if ( s.getName().indexOf(visionType) >= 0 ) {
+                    _vision = visionMap.get( visionType);
+                    break outerloop;
+                }
+            }
+        }
+
+
+    }
+
     public void setSpecialAbilities() {
 
         for ( Special s: _character.getSenses().getSpecial() ) {
@@ -491,6 +544,10 @@ public class PathfinderToken implements IPathfinderCharacter {
         return (Integer)_propertyMap.get( BASE_ATTACK_BONUS );
     }
 
+    public String getVision() {
+        return _vision;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
 
     private Object getTokenProperties( String key ) {
         return _propertyMap.get(key);
@@ -552,6 +609,10 @@ public class PathfinderToken implements IPathfinderCharacter {
         _token.setProperty(SPELLS_JSON, gjson.toJson(characterSpells));
 
         _token.setProperty(SPECIAL_ABILITIES_JSON, gjson.toJson( _specials ));
+
+        //vision
+        _token.setHasSight(true);
+        _token.setSightType( _vision );
 
         return _token;
     }
