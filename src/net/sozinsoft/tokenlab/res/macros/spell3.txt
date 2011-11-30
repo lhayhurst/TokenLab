@@ -4,7 +4,7 @@
 </table>
 
 [h: Spell=json.get(macro.args, "spell")]
-<h2>[r:json.get(Spell, "name")]</h2>
+<h2>[r:json.get(Spell, "name")] </h2>
 <b>School</b> [r:json.get(Spell,"school")]<br>
 <b>Level</b> [r:json.get(Spell, "spellLevel")]<br>
 <b>Casting Time</b> [r:json.get(Spell, "castingTime")]<br>
@@ -13,9 +13,13 @@
 <b>Effect</b> [r:json.get(Spell, "effect")]<br>
 <b>Duration</b> [r:json.get(Spell, "duration")]<br>
 <b>Saving Throw</b> [r:json.get(Spell, "savingThrow")]
-<b>Spell Resistance</b> [r:json.get(Spell, "spellResistance")]<br><br>
+<b>Spell Resistance</b> [r:json.get(Spell, "spellResistance")]<br>
+<b>DC</b> [r:json.get(Spell, "spellDC")],  <b>CL</b> [r:json.get(Spell, "casterLevel")] <br><br>
 [r:json.get(Spell, "description")]
 }]
+
+
+
 
 
 

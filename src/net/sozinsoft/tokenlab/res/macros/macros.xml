@@ -109,7 +109,7 @@
                fontColor="white"
                fontSize="1.00em"
                minWidth="30"
-               applyToSelectedTokens="1"
+               applyToSelectedTokens="0"
                file="res/macros/FeatsMacro.txt"/>
 
     <macro name="Abilities"
@@ -119,7 +119,7 @@
                fontColor="white"
                fontSize="1.00em"
                minWidth="37"
-               applyToSelectedTokens="1"
+               applyToSelectedTokens="0"
                file="res/macros/AbilitiesMacro.txt"/>
 
     <macro name="Spells"
@@ -129,7 +129,7 @@
                fontColor="white"
                fontSize="1.00em"
                minWidth="30"
-               applyToSelectedTokens="1"
+               applyToSelectedTokens="0"
                file="res/macros/SpellMacro.txt"/>
 
     <macro name="Skill Check"
