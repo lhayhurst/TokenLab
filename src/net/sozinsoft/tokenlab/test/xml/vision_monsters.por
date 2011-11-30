@@ -5,7 +5,7 @@
 <portfolio herocount="5" activehero="2">
 <tactical combatturn="0"/>
 <notes/>
-<hero playername="" nextpick="664" nextcontainer="4" heroindex="2" herosummary="Human Wiz 13 &#150; CR 14" heroname="Worm That Walks" batchindex="556" userbatch="431" enmassebatch="39" nexttrade="25" nexttransact="25" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="background">
+<hero playername="" nextpick="650" nextcontainer="4" heroindex="2" herosummary="Human Wiz 13 &#150; CR 14" heroname="Worm That Walks" batchindex="556" userbatch="431" enmassebatch="39" nexttrade="25" nexttransact="25" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="spellcast">
 <statblock>Although this robed wizard stands and moves like a man, his body is a writhing mass of squirming, slippery worms.
 --------------------
 WORM THAT WALKS	CR 14
@@ -2306,6 +2306,16 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<needsource source="OutSkills"/>
+<needsource source="OutValid"/>
+<needsource source="OutputOpt"/>
+<needsource source="PCHeader"/>
+<needsource source="PaizoBlog"/>
+<needsource source="UMFamil"/>
+<needsource source="UMHeader"/>
+<needsource source="WebTraits"/>
+<needsource source="XPMedium"/>
+<needsource source="XPTrack"/>
 <needsource source="BestHeader"/>
 <needsource source="Bestiary2"/>
 <needsource source="CSHeader"/>
@@ -2317,19 +2327,10 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="MiscHeader"/>
 <needsource source="OutAmmo"/>
 <needsource source="OutImage"/>
-<needsource source="OutSkills"/>
-<needsource source="OutValid"/>
-<needsource source="OutputOpt"/>
-<needsource source="PaizoBlog"/>
-<needsource source="UMFamil"/>
-<needsource source="UMHeader"/>
-<needsource source="WebTraits"/>
-<needsource source="XPMedium"/>
-<needsource source="XPTrack"/>
 <needsource source="APGFamil"/>
 <needsource source="APGHeader"/>
 </hero>
-<hero playername="" nextpick="506" nextcontainer="3" heroindex="3" herosummary="Purple Worm &#150; CR 12" heroname="Purple Worm" batchindex="437" userbatch="431" enmassebatch="39" nexttrade="1" nexttransact="1" poolcount="28" activemode="1" isally="no" hasacted="no" focustab="background">
+<hero playername="" nextpick="499" nextcontainer="3" heroindex="3" herosummary="Purple Worm &#150; CR 12" heroname="Purple Worm" batchindex="437" userbatch="431" enmassebatch="39" nexttrade="1" nexttransact="1" poolcount="28" activemode="1" isally="no" hasacted="no" focustab="background">
 <statblock>This enormous worm is covered with dark purple plates of chitinous armor. Its giant, tooth-filled mouth is the size of an ox.
 --------------------
 PURPLE WORM	CR 12
@@ -4137,7 +4138,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APGFamil"/>
 <needsource source="APGHeader"/>
 </hero>
-<hero playername="" nextpick="508" nextcontainer="3" heroindex="5" herosummary="Tendriculos &#150; CR 6" heroname="Tendriculos" batchindex="439" userbatch="431" enmassebatch="39" nexttrade="1" nexttransact="1" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="background">
+<hero playername="" nextpick="501" nextcontainer="3" heroindex="5" herosummary="Tendriculos &#150; CR 6" heroname="Tendriculos" batchindex="439" userbatch="431" enmassebatch="39" nexttrade="1" nexttransact="1" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="background">
 <statblock>This plant&apos;s thick trunk is capped by a crown of wide leaves, whipping vines, mushrooms, and a ravenous purple maw.
 --------------------
 TENDRICULOS	CR 6
@@ -5887,7 +5888,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APGFamil"/>
 <needsource source="APGHeader"/>
 </hero>
-<hero playername="" nextpick="518" nextcontainer="3" heroindex="10" herosummary="Human &#150; CR 1/2" heroname="Bernard the Guard" batchindex="434" userbatch="430" enmassebatch="39" nexttrade="1" nexttransact="1" poolcount="35" activemode="1" hasacted="no" focustab="background">
+<hero playername="" nextpick="502" nextcontainer="3" heroindex="10" herosummary="Human &#150; CR 1/2" heroname="Bernard the Guard" batchindex="434" userbatch="430" enmassebatch="39" nexttrade="1" nexttransact="1" poolcount="35" activemode="1" hasacted="no" focustab="background">
 <statblock>BERNARD THE GUARD	CR 1/2
 Male Human
 Medium Humanoid (Human)
@@ -5986,9 +5987,10 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="Speed" index="7" batchindex="7" bootstrap="yes" default="yes">
 <reference bootindex="7"/>
 </pick>
-<pick thing="Totals" index="1" batchindex="1" uniqueness="unique" fieldcount="7" bootstrap="yes">
+<pick thing="Totals" index="1" batchindex="1" uniqueness="unique" fieldcount="8" bootstrap="yes">
 <reference/>
-<field id="tGenChoice"></field>
+<field id="tGen" user="-999."></field>
+<field id="tGenChoice" menuthing="creaPick" ispick="yes" menuusage="hero" cacheindex="74"></field>
 <field id="acType" menuthing="typNPC"></field>
 <field id="tMaskCopy"></field>
 <field id="tFavCl"></field>
@@ -7694,7 +7696,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APG"/>
 <needsource source="APGHeader"/>
 </hero>
-<hero playername="" nextpick="493" nextcontainer="3" heroindex="12" herosummary="Shark &#150; CR 2" heroname="Shark" batchindex="438" userbatch="432" enmassebatch="39" nexttrade="1" nexttransact="1" poolcount="28" activemode="1" isally="no" hasacted="no" focustab="background">
+<hero playername="" nextpick="492" nextcontainer="3" heroindex="12" herosummary="Shark &#150; CR 2" heroname="Shark" batchindex="438" userbatch="432" enmassebatch="39" nexttrade="1" nexttransact="1" poolcount="28" activemode="1" isally="no" hasacted="no" focustab="background">
 <statblock>This blue shark&apos;s fins slice through the water, its black eyes rolling and its gaping jaws showing countless teeth.
 --------------------
 SHARK	CR 2
@@ -9412,7 +9414,17 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usagepool id="TotalSP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<needsource source="CoreDeity"/>
+<needsource source="FireEmerg"/>
+<needsource source="Firearm"/>
+<needsource source="GMG"/>
+<needsource source="MiscHeader"/>
+<needsource source="OutAmmo"/>
+<needsource source="OutImage"/>
+<needsource source="OutSkills"/>
+<needsource source="OutValid"/>
 <needsource source="OutputOpt"/>
+<needsource source="PCHeader"/>
 <needsource source="PaizoBlog"/>
 <needsource source="UMFamil"/>
 <needsource source="UMHeader"/>
@@ -9423,15 +9435,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="Bestiary1"/>
 <needsource source="CSHeader"/>
 <needsource source="CSWorldGui"/>
-<needsource source="CoreDeity"/>
-<needsource source="FireEmerg"/>
-<needsource source="Firearm"/>
-<needsource source="GMG"/>
-<needsource source="MiscHeader"/>
-<needsource source="OutAmmo"/>
-<needsource source="OutImage"/>
-<needsource source="OutSkills"/>
-<needsource source="OutValid"/>
 <needsource source="APGFamil"/>
 <needsource source="APGHeader"/>
 </hero>

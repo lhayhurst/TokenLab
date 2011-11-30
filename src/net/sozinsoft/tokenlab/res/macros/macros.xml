@@ -112,9 +112,19 @@
                applyToSelectedTokens="0"
                file="res/macros/FeatsMacro.txt"/>
 
-    <macro name="Abilities"
+    <macro name="Traits"
                group="Special Abilities"
                sortPrefix="201"
+               buttonColor="navy"
+               fontColor="white"
+               fontSize="1.00em"
+               minWidth="30"
+               applyToSelectedTokens="0"
+               file="res/macros/TraitsMacro.txt"/>
+
+    <macro name="Abilities"
+               group="Special Abilities"
+               sortPrefix="202"
                buttonColor="navy"
                fontColor="white"
                fontSize="1.00em"
@@ -124,7 +134,7 @@
 
     <macro name="Spells"
                group="Special Abilities"
-               sortPrefix="202"
+               sortPrefix="203"
                buttonColor="navy"
                fontColor="white"
                fontSize="1.00em"

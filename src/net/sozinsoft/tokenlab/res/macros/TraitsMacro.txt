@@ -1,0 +1,19 @@
+[frame("Traits"): {
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css">
+<title>Traits</title>
+</head>
+<body>
+<h1><u>[r:getProperty("Character")] Traits </u></h1>
+[h: TraitNames = json.fields(TraitsJSON)]
+<br>
+[FOREACH ( name, TraitNames, "<br>"), CODE:
+    {
+        <b><font size="5" color="#1B00A1">[r: name]</font></b>: <font size=4> [r: json.get( json.get( TraitsJSON, name ), "description") ]</font><br>
+    }
+]
+</body>
+</html>
+}]
+

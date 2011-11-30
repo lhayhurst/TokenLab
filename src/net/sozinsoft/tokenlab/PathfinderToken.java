@@ -77,8 +77,7 @@ public class PathfinderToken implements IPathfinderCharacter {
     public static final String ATTACK = "Attack";
     public static final String SPELL_LIKE = "Spell-like";
     public static final String OTHER = "Other";
-
-
+    public static final String TRAITS_JSON = "TraitsJSON";
 
 
     private Character _character;
@@ -98,6 +97,7 @@ public class PathfinderToken implements IPathfinderCharacter {
         setFeats();
         setSpecialAbilities();
         setVision();
+        setInitiative();
 
         _propertyMap.put( BASE_ATTACK_BONUS, Integer.parseInt( replacePlus( _character.getAttack().getBaseattack() ) ) );
     }
@@ -139,12 +139,17 @@ public class PathfinderToken implements IPathfinderCharacter {
 
 
     private HashMap< String, Feat > _feats = new HashMap<String, Feat>();
+    private HashMap< String, Trait> _traits = new HashMap<String, Trait>();
     public HashMap< String, Feat > getFeats() {
         return _feats;
     }
     public void setFeats() {
         for( Feat f : _character.getFeats().getFeat() ) {
-            _feats.put( f.getName(), f );
+            //replace newlines with html breaks for nicer printing
+            _feats.put(f.getName().replaceAll(",", ""), f);
+        }
+        for ( Trait t : _character.getTraits().getTrait()) {
+            _traits.put( t.getName().replaceAll(",", ""), t );
         }
     }
 
@@ -168,6 +173,16 @@ public class PathfinderToken implements IPathfinderCharacter {
         _vision = v.getVision();
     }
 
+    private String _initMod;
+    public void setInitiative() {
+        String total    = replacePlus(_character.getInitiative().getTotal());
+        String fromAttr = replacePlus(_character.getInitiative().getAttrtext());
+        int iTotal      = Integer.parseInt(total);
+        int iFromAttr   = Integer.parseInt(fromAttr);
+        int iMod        = iTotal - iFromAttr;
+        _initMod        = new Integer(iMod).toString();
+
+    }
 
     public void setSpecialAbilities() {
 
@@ -534,6 +549,14 @@ public class PathfinderToken implements IPathfinderCharacter {
         //set all the token properties.
         _token.setPropertyType(PATHFINDER);
 
+        //PC or NPC
+        if ( _character.getRole().equals("npc") ) {
+            _token.setType(Token.Type.NPC);
+        }
+        else {
+            _token.setType( Token.Type.PC );
+        }
+
 
         //do the attributes
         GsonBuilder gson = new GsonBuilder();
@@ -555,6 +578,8 @@ public class PathfinderToken implements IPathfinderCharacter {
 
         _token.setProperty( FEATS_JSON, gjson.toJson(_feats ) );
 
+        _token.setProperty(TRAITS_JSON, gjson.toJson( _traits ));
+
         _token.setProperty(WEAPON_JSON, gjson.toJson(_weapons));
 
         //set the spells.  this needs to basically happen by class.
@@ -569,6 +594,9 @@ public class PathfinderToken implements IPathfinderCharacter {
         _token.setProperty(SPELLS_JSON, gjson.toJson(characterSpells));
 
         _token.setProperty(SPECIAL_ABILITIES_JSON, gjson.toJson( _specials ));
+
+        //init mod
+        _token.setProperty(INIT_MOD, _initMod );
 
         //vision
         _token.setHasSight(true);

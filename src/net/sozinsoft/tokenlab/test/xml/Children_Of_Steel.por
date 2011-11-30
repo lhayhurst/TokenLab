@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <document signature="Hero Lab Portfolio">
 <product major="3" minor="8" patch="1" build="267"/>
-<game folder="pathfinder" game="Pathfinder Roleplaying Game" major="6" minor="8"/>
+<game folder="pathfinder" game="Pathfinder Roleplaying Game" major="6" minor="9"/>
 <portfolio herocount="4" activehero="2">
 <tactical combatturn="0"/>
 <notes/>
-<hero playername="" nextpick="610" nextcontainer="5" heroindex="2" herosummary="Dwarf Ftr 20 &#150; CR 19" heroname="Derrak Stoneskull" batchindex="494" userbatch="430" enmassebatch="39" nexttrade="21" nexttransact="21" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="weapons">
+<hero playername="" nextpick="609" nextcontainer="5" heroindex="2" herosummary="Dwarf Ftr 20 &#150; CR 19" heroname="Derrak Stoneskull" batchindex="495" userbatch="430" enmassebatch="39" nexttrade="21" nexttransact="21" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="feats">
 <statblock>DERRAK STONESKULL	CR 19
 Male Dwarf Fighter (Weapon Master) 20
 NE Medium Humanoid (Dwarf)
-Init +1; Senses Darkvision (60 feet); Perception +17
+Init +3; Senses Darkvision (60 feet); Perception +17
 --------------------
 DEFENSE
 --------------------
@@ -33,7 +33,8 @@ STATISTICS
 Str 20/26,  Dex 13,  Con 16/22,  Int 10,  Wis 14,  Cha 6
 Base Atk +20; CMB +28 (+32 Sundering); CMD 42 (47 vs. Disarm49 vs. Sunder)
 Feats Critical Focus, Dodge, Exotic Weapon Proficiency: Curve blade, elven, Furious Focus, Greater Sunder, Greater Vital Strike, Greater Weapon Focus: Curve blade, elven, Greater Weapon Specialization: Curve blade, elven, Improved Critical: Curve blade, elven, Improved Sunder, Improved Vital Strike, Iron Will, Lightning Reflexes, Power Attack -6/+12, Slaying Sprint, Staggering Critical (DC 30), Stunning Critical (DC 30), Toughness +20, Vital Strike, Weapon Focus: Curve blade, elven, Weapon Specialization: Curve blade, elven
-Skills Acrobatics -4, Appraise +5, Climb +3, Escape Artist -4, Fly -4, Intimidate +11, Knowledge (Dungeoneering) +8, Perception +17, Ride -4, Sense Motive +7, Stealth -4, Swim +3
+Traits Poverty-Stricken, Reactionary
+Skills Acrobatics -4, Appraise +5, Climb +3, Escape Artist -4, Fly -4, Intimidate +11, Knowledge (Dungeoneering) +8, Perception +17, Ride -4, Sense Motive +7, Stealth -4, Survival +3, Swim +3
 Languages Common, Dwarven
 SQ Greed, Hardy +2, Hatred, Slow and Steady, Stability, Stonecunning +2, Weapon Guard +5: Curve blade, elven (Ex), Weapon Mastery: Curve blade, elven (Ex)
 Combat Gear +5 Adamantine Curve blade, elven
@@ -77,7 +78,7 @@ Despite his abilities, Derrak has died several times in the course of his advent
 
 Hero Lab&#174; and the Hero Lab logo are Registered Trademarks of LWD Technology, Inc. Free download at http://www.wolflair.com
 Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishing, LLC&#174;, and are used under license.</statblock>
-<container index="0" chosencount="3" pickcount="582">
+<container index="0" chosencount="3" pickcount="584">
 <notes/>
 <chosen source="bgDeity" pickindex="480"/>
 <chosen source="bgRace" pickindex="575"/>
@@ -149,7 +150,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference/>
 <field id="tGen" user="-999."></field>
 <field id="tGenChoice" menuthing="creaPick" ispick="yes" menuusage="hero" cacheindex="74"></field>
-<field id="acType" menuthing="typNPC"></field>
+<field id="acType" menuthing="typHero"></field>
 <field id="tMaskCopy" piece="1"></field>
 <field id="tStartGP" user="5170."></field>
 <field id="tFavCl"></field>
@@ -1692,6 +1693,14 @@ Despite his abilities, Derrak has died several times in the course of his advent
 <pick thing="tpVermin" index="364" batchindex="317" refcount="0" default="yes">
 <chain index="318"/>
 </pick>
+<pick thing="trPoverty" index="602" batchindex="495" uniqueness="useronce" refcount="0" fieldcount="2" source="trTable" secondary="yes" default="yes">
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="trReaction" index="601" batchindex="494" uniqueness="useronce" refcount="0" fieldcount="2" source="trTable" secondary="yes" default="yes">
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
 <pick thing="typOoze" index="349" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference pickindex="348" batchindex="313" bootindex="1"/>
 <field id="usrChosen1"></field>
@@ -2376,18 +2385,6 @@ Despite his abilities, Derrak has died several times in the course of his advent
 </usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<needsource source="OutAmmo"/>
-<needsource source="OutImage"/>
-<needsource source="OutSkills"/>
-<needsource source="OutValid"/>
-<needsource source="OutputOpt"/>
-<needsource source="PaizoBlog"/>
-<needsource source="UMFamil"/>
-<needsource source="UMHeader"/>
-<needsource source="WebTraits"/>
-<needsource source="XPMedium"/>
-<needsource source="XPTrack"/>
-<needsource source="APGHeader"/>
 <needsource source="CSHeader"/>
 <needsource source="CSISMagic"/>
 <needsource source="CSRival"/>
@@ -2397,10 +2394,23 @@ Despite his abilities, Derrak has died several times in the course of his advent
 <needsource source="Firearm"/>
 <needsource source="GMG"/>
 <needsource source="MiscHeader"/>
+<needsource source="OutAmmo"/>
+<needsource source="OutImage"/>
+<needsource source="OutSkills"/>
+<needsource source="OutValid"/>
+<needsource source="OutputOpt"/>
+<needsource source="PCHeader"/>
+<needsource source="PaizoBlog"/>
+<needsource source="UMFamil"/>
+<needsource source="UMHeader"/>
+<needsource source="WebTraits"/>
+<needsource source="XPMedium"/>
+<needsource source="XPTrack"/>
+<needsource source="APGHeader"/>
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="690" nextcontainer="7" heroindex="3" herosummary="Elf Wiz 20 &#150; CR 19" heroname="Echean Ansolandi" batchindex="606" userbatch="430" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no">
+<hero playername="" nextpick="686" nextcontainer="7" heroindex="3" herosummary="Elf Wiz 20 &#150; CR 19" heroname="Echean Ansolandi" batchindex="606" userbatch="430" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no">
 <statblock>ECHEAN ANSOLANDI	CR 19
 Male Elf Wizard 20
 NE Medium Humanoid (Elf)
@@ -4789,7 +4799,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="641" nextcontainer="5" heroindex="4" herosummary="Human Clr 20 &#150; CR 19" heroname="Inaris Jerveel" batchindex="551" userbatch="430" enmassebatch="39" nexttrade="17" nexttransact="17" poolcount="35" activemode="1" hasacted="no">
+<hero playername="" nextpick="639" nextcontainer="5" heroindex="4" herosummary="Human Clr 20 &#150; CR 19" heroname="Inaris Jerveel" batchindex="551" userbatch="430" enmassebatch="39" nexttrade="17" nexttransact="17" poolcount="35" activemode="1" hasacted="no">
 <statblock>INARIS JERVEEL	CR 19
 Female Human Cleric 20
 CN Medium Humanoid (Human)
@@ -7096,7 +7106,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="591" nextcontainer="5" heroindex="5" herosummary="Halfling Rog 20 &#150; CR 19" heroname="Wotywina Turncoin" batchindex="494" userbatch="430" enmassebatch="39" nexttrade="9" nexttransact="9" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="basics">
+<hero playername="" nextpick="589" nextcontainer="5" heroindex="5" herosummary="Halfling Rog 20 &#150; CR 19" heroname="Wotywina Turncoin" batchindex="494" userbatch="430" enmassebatch="39" nexttrade="9" nexttransact="9" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="basics">
 <statblock>WOTYWINA TURNCOIN	CR 19
 Female Halfling Rogue 20
 CE Small Humanoid (Halfling)

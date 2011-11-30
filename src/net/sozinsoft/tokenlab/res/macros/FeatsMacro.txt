@@ -5,14 +5,15 @@
 <title>Feats</title>
 </head>
 <body>
+<h1><u>[r:getProperty("Character")] Feats </u></h1>
 [h: FeatNames = json.fields(FeatJSON)]
-<br>
 <br>
 [FOREACH ( name, FeatNames, "<br>"), CODE:
     {
-    <b><font size="5" color="#1B00A1">[r: name]</font></b>: <font size=4> [r: json.get( json.get( FeatJSON, name ), "description") ]</font><br>
+        <b><font size="5" color="#1B00A1">[r: name]</font></b>: <font size=4> [r: json.get( json.get( FeatJSON, name ), "description") ]</font><br>
     }
 ]
 </body>
 </html>
 }]
+
