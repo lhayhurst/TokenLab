@@ -162,52 +162,12 @@ public class PathfinderToken implements IPathfinderCharacter {
         smap.put( special.getName(), special );
     }
 
-
-    //A word on the below.
-    //because MT only allows one type of vision, the vision Array is done in relative priority order
-    //ie Darkvision trumps blindsense trumps low light trumps ...
     private String _vision;
-    public static final String HEROLABS_DARKVISION = "Darkvision";
-    public static final String MT_DARKVISION = HEROLABS_DARKVISION;
-    public static final String HEROLABS_LOWLIGHT_VISION = "Low-Light Vision";
-    public static final String MT_LOWLIGHT_VISION = "Lowlight";
-    public static final String MT_NORMAL_VISION = "Normal";
-    public static final String HEROLABS_BLINDSIGHT = "Blindsight";
-    public static final String MT_BLINDSIGHT = HEROLABS_BLINDSIGHT;
-    public static final String HEROLABS_BLINDSENSE = "Blindsense"; //MAPTOOLS doesn't differentiate
-    public static final String HEROLABS_TREMORSENSE = "Tremorsense";
-    public static final String MT_TREMORSENSE = HEROLABS_TREMORSENSE;
-    public static String[] visionArray = new String[5];
-    public static final HashMap<String, String > visionMap = new HashMap<String, String>();
-    static {
-        visionArray[0] = HEROLABS_DARKVISION;
-        visionArray[1] = HEROLABS_BLINDSIGHT;
-        visionArray[2] = HEROLABS_BLINDSENSE;
-        visionArray[3] = HEROLABS_LOWLIGHT_VISION;
-        visionArray[4] = HEROLABS_TREMORSENSE;
-        visionMap.put( HEROLABS_DARKVISION, MT_DARKVISION);
-        visionMap.put( HEROLABS_LOWLIGHT_VISION, MT_LOWLIGHT_VISION);
-        visionMap.put( HEROLABS_BLINDSIGHT, MT_BLINDSIGHT);
-        visionMap.put( HEROLABS_BLINDSENSE, MT_BLINDSIGHT );
-        visionMap.put( HEROLABS_TREMORSENSE, MT_TREMORSENSE);
-    }
-
     public void setVision() {
-        //Low-Light Vision
-        //DarkVision
-        _vision = MT_NORMAL_VISION;
-
-        outerloop: for( String visionType : visionArray ) {
-            innerloop: for( Special s : _character.getSenses().getSpecial() ) {
-                if ( s.getName().indexOf(visionType) >= 0 ) {
-                    _vision = visionMap.get( visionType);
-                    break outerloop;
-                }
-            }
-        }
-
-
+        Vision v = new Vision( _character.getSenses().getSpecial() );
+        _vision = v.getVision();
     }
+
 
     public void setSpecialAbilities() {
 
