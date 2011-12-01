@@ -78,6 +78,7 @@ public class PathfinderToken implements IPathfinderCharacter {
     public static final String SPELL_LIKE = "Spell-like";
     public static final String OTHER = "Other";
     public static final String TRAITS_JSON = "TraitsJSON";
+    public static final String SKILLS_JSON = "SkillsJSON";
 
 
     private Character _character;
@@ -569,9 +570,6 @@ public class PathfinderToken implements IPathfinderCharacter {
         }
 
         for( String propKey : _propertyMap.keySet() ) {
-            if ( _propertyMap.get(propKey) == null ) {
-                int i = 0;
-            }
             _token.setProperty( propKey, _propertyMap.get( propKey ).toString());
         }
 
@@ -581,6 +579,8 @@ public class PathfinderToken implements IPathfinderCharacter {
         _token.setProperty(TRAITS_JSON, gjson.toJson( _traits ));
 
         _token.setProperty(WEAPON_JSON, gjson.toJson(_weapons));
+
+        _token.setProperty(SKILLS_JSON, gjson.toJson(_skills));
 
         //set the spells.  this needs to basically happen by class.
 
@@ -606,18 +606,27 @@ public class PathfinderToken implements IPathfinderCharacter {
     }
 
 
+    private HashMap<String, HashMap<String, String >> _skills = new HashMap<String, HashMap<String, String>>() ;
+
     private void setSkills() {
         for(  Skill s :  _character.getSkills().getSkill() ) {
             String mungedSkillName = mungeSkillName( s.getName() );
-            if ( mungedSkillName.indexOf(PROFESSION) >= 0) {
-                continue; //skipping professions for now, TODO:
-            }
-            _propertyMap.put(mungedSkillName + RANKS, s.getRanks());
-            if (isClassSkill(s)) {
-                _propertyMap.put(mungedSkillName + CLASS_SKILL, "1");
-            }
+            HashMap<String, String> skillMap = new HashMap<String, String>();
+            skillMap.put( "value", s.getValue());
+            skillMap.put( "ranks", s.getRanks() );
+            skillMap.put( "description", s.getDescription());
+            skillMap.put( "skillBonus", "0" );
+            skillMap.put( "attrBonus", s.getAttrbonus());
+            skillMap.put( "attrName", s.getAttrname());
+            skillMap.put( "classSkill", s.getClassskill() != null && s.getClassskill().equals(YES) ? "1" : "0");
+            skillMap.put( "armorCheckPenalty", s.getArmorcheck() != null && s.getArmorcheck().equals(YES) ? "1" : "0");
+            skillMap.put( "useTrainedOnly", s.getTrainedonly() != null && s.getTrainedonly().equals(YES) ? "1" : "0" );
+            skillMap.put( "usable", s.getUsable() != null && s.getUsable().equals(YES) ? "1" : "0" );
+            skillMap.put( "tools", s.getTools()  != null && s.getTools().equals(YES) ? "1" : "0" );
+            _skills.put( mungedSkillName, skillMap );
         }
-     }
+    }
+
 
     private static boolean isClassSkill(Skill s) {
         return s.getClassskill() != null && s.getClassskill().equals( YES ) == true;
@@ -716,13 +725,11 @@ public class PathfinderToken implements IPathfinderCharacter {
        for ( Skill s : _character.getSkills().getSkill() ) {
 
            String skillName = s.getName();
-            if ( skillName.indexOf("Profession") >= 0 || skillName.indexOf("Perform") >= 0 ) {
-                continue; //skipping professions for now, TODO:
-            }
+           String mungedSkillName = mungeSkillName( skillName);
 
             String attributeName   = s.getAttrname();
             String attribShortName = CharacterAttribute.getShortName( attributeName );
-            SkillReplacer replacer = new SkillReplacer( skillName, attribShortName, attribShortName + "Bonus", mungeSkillName( skillName )  );
+            SkillReplacer replacer = new SkillReplacer( mungedSkillName, attribShortName  );
             MacroDigester.MacroEntry macroEntry = skillMacros.get("Skill Check");
 
            boolean disableButton = false;
@@ -742,7 +749,7 @@ public class PathfinderToken implements IPathfinderCharacter {
 
             //todo: refactor the below into the replacer interface if I ever do it somewhere else.
             if ( ! disableButton ) {
-                macroEntry.toolTip = "[r:" + replacer.skillRanks + "]";
+                macroEntry.toolTip = "[r:" + s.getRanks() + "]";
                 macroEntry.name = skillName;
                 MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, replacer );
                 macroButtonSet.add( properties );

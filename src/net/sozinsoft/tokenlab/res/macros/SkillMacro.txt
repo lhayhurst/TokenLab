@@ -3,6 +3,8 @@
         <td><span style='color:white'><b>SKILL_NAME Check</b></span></td>
     </tr>
     <tr>
-        <td><b> At-Will &#149; ATTRIBUTE_SHORT_NAME </b><br> <b>Roll:</b>[r:d20 + SKILL_RANKS + ATTRIBUTE_BONUS]
+        [h: d20Roll = d20]
+        [h: SkillBonusValue = json.get( json.get(SkillsJSON, "SKILL_NAME"), "value" ) )]
+        <td><b> At-Will &#149; ATTRIBUTE_SHORT_NAME </b><br><b>[r: d20Roll + SkillBonusValue]</b> =  Roll <b>([r:d20Roll])</b> + Bonus <b>([r:SkillBonusValue])</b>
     </td>
 </tr></table>

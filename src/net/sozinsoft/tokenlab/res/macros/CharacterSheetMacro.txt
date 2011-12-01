@@ -2,29 +2,9 @@
 <h4><font color="#808000">Edited character sheet</font></h4>
 [H: abilScoreList =ABILITY_NAMES]
 [H: abilScoreList = json.toList(abilScoreList)]
-[H: skillList = SKILLS]
-[H: skillList = json.toList(skillList)]
 [H: abilVarList =ABILITY_VARS]
 [H: abilVarList = json.toList(abilVarList)]
 [H: acForceList = abilVarList]
-[H: miscskill1ForceList =abilVarList]
-[H: miscskill2ForceList =abilVarList]
-[H: miscskill3ForceList =abilVarList]
-[h,macro("cStatParser@this"):"Stat="+MiscSkill1AbilBonus]
-[h: miscskill1_def = macro.return]
-[h,macro("cStatParser@this"):"Stat="+MiscSkill2AbilBonus]
-[h: miscskill2_def = macro.return]
-[h,macro("cStatParser@this"):"Stat="+MiscSkill3AbilBonus]
-[h: miscskill3_def = macro.return]
-
-<!-- build skill list -->
-[h:skillText=""]
-[h, foreach(skill,skillList),code:{
-[skillText= listAppend(skillText,"blah | <html><b>"+skill+"</b></html> || LABEL | SPAN=TRUE","##")]
-[skillText= listAppend(skillText,skill+"ClassSkill | " + eval(skill+"ClassSkill")+"| Class Skill | CHECK","##")]
-[skillText= listAppend(skillText,skill+"Ranks | " + eval(skill+"Ranks")+"| Ranks | TEXT | WIDTH=4","##")]
-[skillText= listAppend(skillText,skill+"Bonus | " + eval(skill+"Bonus")+"| Bonus | TEXT | WIDTH=4","##")]
-}]
 
 <!-- Show the dialog box -->
 [H: status = input(
@@ -79,32 +59,6 @@
     "blah  | <html><br><b>Will</b></html> | | LABEL | SPAN=TRUE",
     	"WillClassBonus | " + WillClassBonus + " | Class Bonus | TEXT | WIDTH=4",
     	"WillResistBonus | " + WillResistBonus + " | Feat Resistance Bonus  | TEXT | WIDTH=4",
-    	"WillMiscBonus | " + WillMiscBonus + " | Miscellaneous Bonus  | TEXT | WIDTH=4",
-"tab4 | Skills || TAB",
-    "blah | <html><b>Add together both armor/shield ACPs here:</b></html> | | LABEL | SPAN=TRUE",
-    	"ArmorCheckPenalty | " + ArmorCheckPenalty + " | Armor check penalty | TEXT | WIDTH=4",
-    "blah  | <html><br><b>Skills</b></html> | | LABEL | SPAN=TRUE",
-    	skillText,
-    "blah | <html><b>Misc Skill 1</b></html> || LABEL | SPAN=TRUE",
-	"MiscSkill1Name | " + MiscSkill1Name + " | Skill Name | TEXT | WIDTH=30",
-	"MiscSkill1AbilBonus  | " + miscskill1ForceList  + " | Ability | LIST | SELECT=" + miscskill1_def+" VALUE=STRING",
-     	"MiscSkill1ClassSkill | " + MiscSkill1ClassSkill +"| Class Skill | CHECK",
-     	"MiscSkill1ArmorCheck | " + MiscSkill1ArmorCheck +"| Armor Check Penalty | CHECK",
-    	"MiscSkill1Ranks | " + MiscSkill1Ranks +"| Ranks | TEXT | WIDTH=4",
-    	"MiscSkill1Bonus | " + MiscSkill1Bonus +"| Bonus | TEXT | WIDTH=4",
-    "blah | <html><b>Misc Skill 2</b></html> || LABEL | SPAN=TRUE",
-	"MiscSkill2Name | " + MiscSkill2Name + " | Skill Name | TEXT | WIDTH=30",
-	"MiscSkill2AbilBonus  | " + miscskill2ForceList  + " | Ability | LIST | SELECT=" + miscskill2_def+" VALUE=STRING",
-     	"MiscSkill2ClassSkill | " + MiscSkill2ClassSkill +"| Class Skill | CHECK",
-     	"MiscSkill1ArmorCheck | " + MiscSkill1ArmorCheck +"| Armor Check Penalty | CHECK",
-    	"MiscSkill2Ranks | " + MiscSkill2Ranks +"| Ranks | TEXT | WIDTH=4",
-    	"MiscSkill2Bonus | " + MiscSkill2Bonus +"| Bonus | TEXT | WIDTH=4",
-    "blah | <html><b>Misc Skill 3</b></html> || LABEL | SPAN=TRUE",
-	"MiscSkill3Name | " + MiscSkill3Name + " | Skill Name | TEXT | WIDTH=30",
-	"MiscSkill3AbilBonus  | " + miscskill3ForceList  + " | Ability | LIST | SELECT=" + miscskill3_def+" VALUE=STRING",
-     	"MiscSkill3ClassSkill | " + MiscSkill3ClassSkill +"| Class Skill | CHECK",
-     	"MiscSkill1ArmorCheck | " + MiscSkill1ArmorCheck +"| Armor Check Penalty | CHECK",
-    	"MiscSkill3Ranks | " + MiscSkill3Ranks +"| Ranks | TEXT | WIDTH=4",
-    	"MiscSkill3Bonus | " + MiscSkill3Bonus +"| Bonus | TEXT | WIDTH=4"
+    	"WillMiscBonus | " + WillMiscBonus + " | Miscellaneous Bonus  | TEXT | WIDTH=4"
 )]
 [H: abort(status)]
