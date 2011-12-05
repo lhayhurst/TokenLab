@@ -1,0 +1,12 @@
+----------------|Descriptive|---------------
+*@Character:<name>
+*@Player:<name>
+Race:<race>
+*@Class:<class(es)>
+Level
+Gender:<gender>
+Height:0'0"
+Weight:0 lb
+Age
+Alignment:<alignment>
+Deity:<deity>

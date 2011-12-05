@@ -3,7 +3,9 @@ package net.sozinsoft.tokenlab;
 
 import java.util.HashMap;
 
-public interface IPathfinderCharacter {
+//this class should only contain attributes that are common to both d20 and Pathfinder characters.
+
+public interface ICharacter {
 
     //background and personal
     public String getName();
@@ -18,6 +20,7 @@ public interface IPathfinderCharacter {
     public Integer getSpeed();
     public Integer getLevel();
     public String getClassAbbreviation(); //example: 'Ftr 18/Rog 2'
+    public String getSize();
 
     //hp
     public Integer getClassHitpoints();
