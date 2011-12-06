@@ -444,16 +444,16 @@ public class PathfinderTokenTests {
         Config config = new Config();
         config.addConfigEntry("Derrak Stoneskull", "src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/derrakStoneskullPortrait.jpg",
-                "src/net/sozinsoft/tokenlab/test/tokens/derrakStoneSkull.rptok");
+                "src/net/sozinsoft/tokenlab/test/tokens/");
         config.addConfigEntry("Echean Ansolandi", "src/net/sozinsoft/tokenlab/test/img/echeanPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/echeanPortrait.jpg",
-                "src/net/sozinsoft/tokenlab/test/tokens/echean.rptok");
+                "src/net/sozinsoft/tokenlab/test/tokens/");
         config.addConfigEntry("Inaris Jerveel", "src/net/sozinsoft/tokenlab/test/img/inarisJarveelPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/inarisJarveelPortrait.jpg",
-                "src/net/sozinsoft/tokenlab/test/tokens/inarisJarveel.rptok");
+                "src/net/sozinsoft/tokenlab/test/tokens/");
         config.addConfigEntry("Wotywina Turncoin", "src/net/sozinsoft/tokenlab/test/img/wotywinaTurncoinPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/wotywinaTurncoinPortrait.jpg",
-                "src/net/sozinsoft/tokenlab/test/tokens/wotywinaTurncoin.rptok");
+                "src/net/sozinsoft/tokenlab/test/tokens/");
 
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();

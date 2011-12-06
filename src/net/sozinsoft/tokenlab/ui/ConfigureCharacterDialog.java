@@ -4,6 +4,7 @@ import net.sozinsoft.tokenlab.*;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
+import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import java.util.prefs.Preferences;
@@ -21,6 +22,7 @@ public class ConfigureCharacterDialog extends JDialog {
     private final Preferences prefs;
     private JFileChooser imageChooser;
     private JFileChooser tokenOutputChooser;
+    private FileDialog tokenOutputDialog;
     private JList targetList;
 
 
@@ -73,7 +75,7 @@ public class ConfigureCharacterDialog extends JDialog {
     }
 
 
-    public ConfigureCharacterDialog( JList targetList, Config.ConfigEntry config, final Preferences prefs ) {
+    public ConfigureCharacterDialog( JList targetList, final Config.ConfigEntry config, final Preferences prefs ) {
         this.configEntry = config;
         this.targetList = targetList;
         this.prefs  = prefs;
@@ -138,14 +140,23 @@ public class ConfigureCharacterDialog extends JDialog {
         });
         setTokenLocationButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)  {
-                int returnVal = tokenOutputChooser.showOpenDialog(null);
-                if (returnVal == JFileChooser.APPROVE_OPTION) {
-                     File tokenFile = tokenOutputChooser.getSelectedFile();
-                     prefs.put(TOKEN_DIR, tokenFile.getParent());
-                     configEntry.setOutputTokenTo(tokenFile.getAbsolutePath());
-                     setTokenLocationButton.setEnabled(false);
-                     checkToEnableOkButton();
-                 }
+
+                JFrame frame = new JFrame();
+                System.setProperty("apple.awt.fileDialogForDirectories", "true");
+                FileDialog dialog = new FileDialog(frame, "Save Token As", FileDialog.SAVE);
+
+                dialog.setFile(config.getTokenFileName());
+                dialog.setDirectory(config.getTokenFileDirectory());
+
+                dialog.setVisible(true);
+
+                if (dialog.getFile() != null) {
+                    configEntry.setTokenFileName(dialog.getFile());
+                    configEntry.setTokenFileDirectory(dialog.getDirectory());
+                    prefs.put(TOKEN_DIR, configEntry.getTokenFileDirectory());
+                    setTokenLocationButton.setEnabled(false);
+                    checkToEnableOkButton();
+                }
             }
         });
     }

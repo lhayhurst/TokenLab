@@ -5,6 +5,6 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES />
-    <jarDirectory url="file://$PROJECT_DIR$/src/net/sozinsoft/tokenlab/res" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/src/net/sozinsoft/tokenlab/res" recursive="true" />
   </library>
 </component>

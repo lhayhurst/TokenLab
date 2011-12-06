@@ -1,12 +1,9 @@
 package net.sozinsoft.tokenlab;
 
-import java.beans.XMLDecoder;
-import java.beans.XMLEncoder;
 import java.io.*;
 import java.util.HashMap;
 import java.util.prefs.Preferences;
 
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 import com.thoughtworks.xstream.XStream;
 import org.apache.commons.digester3.Digester;
 import org.xml.sax.SAXException;
@@ -17,6 +14,7 @@ public class Config {
     private HashMap<String, ConfigEntry> configs;
     private Preferences prefs;
     private String xmlFileLocation;
+    private String outputTokenDirectory;
 	private String configFileName;
 
     public Config( Preferences prefs ) throws IOException {
@@ -56,13 +54,20 @@ public class Config {
         }
     }
 
-	public ConfigEntry addConfigEntry( String name, String imagePath, String portraitPath, String outputTokenPath ) {
+    /**
+     * Add an empty ConfigEntry other than the character's name.
+     */
+    public ConfigEntry addConfigEntry( String name) {
+        return addConfigEntry(name, null, null, null);
+    }
 
+	public ConfigEntry addConfigEntry( String name, String imagePath, String portraitPath, String tokenFileDirectory ) {
         ConfigEntry ce = new ConfigEntry();
-        ce.setCharacterName( name );
+        ce.setCharacterName(name);
         ce.setImageFilePath(imagePath);
         ce.setPortraitFilePath(portraitPath);
-        ce.setOutputTokenTo(outputTokenPath);
+        ce.setTokenFileDirectory(tokenFileDirectory);
+        ce.resetDefaultTokenFilename();
 		configs.put( name, ce);
         return ce;
 	}
@@ -80,23 +85,34 @@ public class Config {
         d.parse( new File( configFileName ) );
 	}
 
-	public class ConfigEntry {
+    public String getOutputTokenDirectory() {
+        return outputTokenDirectory;
+    }
+
+    public void setOutputTokenDirectory(String outputTokenDirectory) {
+        this.outputTokenDirectory = outputTokenDirectory;
+    }
+
+    public class ConfigEntry {
 		
     	private String CharacterName;
     	private String imageFilePath;
     	private String portraitFilePath;
-    	private String outputTokenTo;
+        private String tokenFileName;
+        private String tokenFileDirectory;
 
         public ConfigEntry() {
 
         }
+
     	//public ConfigEntry( String name, String imagePath, String portraitPath, String outputTokenPath ) {
     	//	this.CharacterName    = name;
     	//	this.imageFilePath    = imagePath;
     	//	this.portraitFilePath = portraitPath;
     	//	this.outputTokenTo    = outputTokenPath;
     	//}
-		public String getCharacterName() {
+
+        public String getCharacterName() {
 			return CharacterName;
 		}
 
@@ -121,19 +137,53 @@ public class Config {
 		}
 
 		public String getOutputTokenTo() {
-			return outputTokenTo;
-		}
-
-		public void setOutputTokenTo( String path) {
-            if ( path != null && ! path.endsWith(".rptok")) {
-                path = path + ".rptok";
+            if (tokenFileDirectory != null && tokenFileName != null) {
+                return new File(getTokenFileDirectory(), getTokenFileName()).toString();
             }
-			outputTokenTo = path;
+
+            return null;
 		}
 
         public boolean isOk() {
-            return outputTokenTo != null && imageFilePath != null;
+            return getOutputTokenTo() != null && imageFilePath != null;
+        }
 
+        public String getTokenFileName() {
+            if (tokenFileName == null) {
+                tokenFileName = generateDefaultTokenFileName();
+            }
+
+            return tokenFileName;
+        }
+
+        private String generateDefaultTokenFileName() {
+            if (CharacterName == null || CharacterName.length() == 0) {
+                return null;
+            }
+
+            String filename = CharacterName.replaceAll("[ ,'.]", "");
+
+            return filename + ".rptok";
+        }
+
+        public void setTokenFileName(String tokenFileName) {
+            if ( tokenFileName != null && ! tokenFileName.endsWith(".rptok")) {
+                tokenFileName = tokenFileName + ".rptok";
+            }
+
+            this.tokenFileName = tokenFileName;
+        }
+
+        public String getTokenFileDirectory() {
+            return tokenFileDirectory;
+        }
+
+        public void setTokenFileDirectory(String tokenFileDirectory) {
+            this.tokenFileDirectory = tokenFileDirectory;
+        }
+
+        public void resetDefaultTokenFilename() {
+            setTokenFileName(generateDefaultTokenFileName());
         }
     }
 

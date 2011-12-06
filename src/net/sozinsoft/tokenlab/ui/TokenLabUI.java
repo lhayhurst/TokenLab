@@ -124,7 +124,6 @@ public class TokenLabUI {
 
                     HerolabsDigester dig = new HerolabsDigester();
 
-
                     try {
 
                         dig.parse(xmlFile);
@@ -154,7 +153,7 @@ public class TokenLabUI {
                     Character character = (Character) object;
                     Config.ConfigEntry entry = config.get(character.getName());
                     if (entry == null) {
-                        entry = config.addConfigEntry(character.getName(), null, null, null);
+                        entry = config.addConfigEntry(character.getName());
                     }
                     ConfigureCharacterDialog dialog = new ConfigureCharacterDialog(herolabsCharacterList, entry, prefs);
                     dialog.pack();
