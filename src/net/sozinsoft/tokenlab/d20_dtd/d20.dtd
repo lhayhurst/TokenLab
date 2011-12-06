@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD for Hero Lab custom output for the d20 System -->
+<!ELEMENT document ((public))>
+
+<!ELEMENT public ((program, localization, character+))>
+
+<!ELEMENT program ((programinfo, version))>
+<!ATTLIST program
+	name CDATA #REQUIRED
+	url CDATA #REQUIRED
+>
+
+<!ELEMENT programinfo (#PCDATA)>
+
+<!ELEMENT version EMPTY>
+<!ATTLIST version
+	version CDATA #REQUIRED
+	build CDATA #IMPLIED
+	primary CDATA #IMPLIED
+	secondary CDATA #IMPLIED
+	tertiary CDATA #IMPLIED
+>
+
+<!ELEMENT localization EMPTY>
+<!ATTLIST localization
+	language CDATA #REQUIRED
+	units CDATA #REQUIRED
+>
+
+<!ELEMENT character ((race, alignment, templates, size, deity, classes, senses, auras, health, xp, money, personal, languages, attributes, saves, defensive, damagereduction, immunities, resistances, weaknesses, armorclass, penalties, initiative, movement, encumbrance, skills, skillabilities, feats, traits, flaws, skilltricks, attack, melee, ranged, defenses, magicitems, gear, otherspecials, spellsknown, spellsmemorized, spellbook, spellclasses, journals, images?, validation, settings, npc?, minions))>
+<!ATTLIST character
+	active (yes | no) "no"
+	name CDATA #REQUIRED
+	playername CDATA #REQUIRED
+	nature CDATA #FIXED "normal"
+	role (pc | npc) "pc"
+	relationship (ally | enemy) "ally"
+	type CDATA "Hero"
+>
+
+<!ELEMENT race EMPTY>
+<!ATTLIST race
+	name CDATA #REQUIRED
+>
+
+<!ELEMENT alignment EMPTY>
+<!ATTLIST alignment
+	name CDATA #REQUIRED
+>
+
+<!ELEMENT templates EMPTY>
+<!ATTLIST templates
+	summary CDATA #REQUIRED
+>
+
+<!ELEMENT size ((space, reach))>
+<!ATTLIST size
+	name CDATA #REQUIRED
+>
+
+<!ELEMENT space EMPTY>
+<!ATTLIST space
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT reach EMPTY>
+<!ATTLIST reach
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT deity EMPTY>
+<!ATTLIST deity
+	name CDATA #IMPLIED
+>
+
+<!ELEMENT classes ((class*))>
+<!ATTLIST classes
+	level CDATA #REQUIRED
+	summary CDATA #REQUIRED
+	summaryabbr CDATA #REQUIRED
+>
+<!ELEMENT class ((arcanespellfailure?))>
+<!ATTLIST class
+	level CDATA #REQUIRED
+	name CDATA #REQUIRED
+	spells CDATA #IMPLIED
+	casterlevel CDATA #IMPLIED
+	castersource CDATA #IMPLIED
+>
+
+<!ELEMENT arcanespellfailure EMPTY>
+<!ATTLIST arcanespellfailure
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT senses ((special*))>
+<!ELEMENT special ((description, specsource*))>
+<!ATTLIST special
+	name CDATA #REQUIRED
+	sourcetext CDATA #IMPLIED
+	type CDATA #IMPLIED
+>
+
+<!ELEMENT description (#PCDATA)>
+
+<!ELEMENT specsource (#PCDATA)>
+
+<!ELEMENT auras ((special*))>
+
+<!ELEMENT health ((special*))>
+<!ATTLIST health
+	currenthp CDATA #REQUIRED
+	damage CDATA #REQUIRED
+	hitdice CDATA #REQUIRED
+	hitpoints CDATA #REQUIRED
+	nonlethal CDATA #REQUIRED
+>
+
+<!ELEMENT xp EMPTY>
+<!ATTLIST xp
+	total CDATA #REQUIRED
+>
+
+<!ELEMENT money EMPTY>
+<!ATTLIST money
+	cp CDATA #REQUIRED
+	gp CDATA #REQUIRED
+	pp CDATA #REQUIRED
+	sp CDATA #REQUIRED
+	total CDATA #REQUIRED
+>
+
+<!ELEMENT personal ((description, charheight, charweight))>
+<!ATTLIST personal
+	age CDATA #IMPLIED
+	eyes CDATA #IMPLIED
+	gender (Male | Female) #REQUIRED
+	hair CDATA #IMPLIED
+	skin CDATA #IMPLIED
+>
+
+<!ELEMENT charheight EMPTY>
+<!ATTLIST charheight
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT charweight EMPTY>
+<!ATTLIST charweight
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT languages ((language*))>
+<!ELEMENT language EMPTY>
+<!ATTLIST language
+	name CDATA #REQUIRED
+	useradded (yes | no) "yes"
+>
+
+<!ELEMENT attributes ((attribute+))>
+<!ELEMENT attribute ((attrvalue, attrbonus))>
+<!ATTLIST attribute
+	name CDATA #REQUIRED
+>
+
+<!ELEMENT attrvalue EMPTY>
+<!ATTLIST attrvalue
+	text CDATA #REQUIRED
+	base CDATA #REQUIRED
+	modified CDATA #REQUIRED
+>
+
+<!ELEMENT attrbonus EMPTY>
+<!ATTLIST attrbonus
+	text CDATA #REQUIRED
+	base CDATA #REQUIRED
+	modified CDATA #REQUIRED
+>
+
+<!ELEMENT saves ((save+))>
+<!ELEMENT save EMPTY>
+<!ATTLIST save
+	name CDATA #REQUIRED
+	abbr CDATA #REQUIRED
+	save CDATA #REQUIRED
+	base CDATA #REQUIRED
+	fromattr CDATA #IMPLIED
+	frommisc CDATA #IMPLIED
+	fromresist CDATA #IMPLIED
+>
+
+<!ELEMENT defensive ((special*))>
+
+<!ELEMENT damagereduction ((special*))>
+
+<!ELEMENT immunities ((special*))>
+
+<!ELEMENT resistances ((special*))>
+
+<!ELEMENT weaknesses ((special*))>
+
+<!ELEMENT armorclass EMPTY>
+<!ATTLIST armorclass
+	ac CDATA #REQUIRED
+	flatfooted CDATA #REQUIRED
+	touch CDATA #REQUIRED
+	fromarmor CDATA #IMPLIED
+	fromdeflect CDATA #IMPLIED
+	fromdexterity CDATA #IMPLIED
+	fromdodge CDATA #IMPLIED
+	frommisc CDATA #IMPLIED
+	fromnatural CDATA #IMPLIED
+	fromshield CDATA #IMPLIED
+	fromsize CDATA #IMPLIED
+>
+
+<!ELEMENT penalties ((penalty+))>
+
+<!ELEMENT penalty EMPTY>
+<!ATTLIST penalty
+	name CDATA #REQUIRED
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT initiative EMPTY>
+<!ATTLIST initiative
+	total CDATA #REQUIRED
+	attrtext CDATA #REQUIRED
+	misctext CDATA #REQUIRED
+	attrname CDATA #REQUIRED
+>
+
+<!ELEMENT movement ((speed, basespeed, special*))>
+
+<!ELEMENT speed EMPTY>
+<!ATTLIST speed
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT basespeed EMPTY>
+<!ATTLIST basespeed
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT encumbrance EMPTY>
+<!ATTLIST encumbrance
+	carried CDATA #REQUIRED
+	heavy CDATA #REQUIRED
+	level CDATA #REQUIRED
+	light CDATA #REQUIRED
+	medium CDATA #REQUIRED
+>
+
+<!ELEMENT skills ((skill*))>
+<!ELEMENT skill ((description))>
+<!ATTLIST skill
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED
+	attrbonus CDATA #IMPLIED
+	attrname CDATA #IMPLIED
+	armorcheck (yes | no) "no"
+	classskill (yes | no) "no"
+	trainedonly (yes | no) "no"
+	usable (yes | no) "no"
+>
+
+<!ELEMENT skillabilities ((special*))>
+
+<!ELEMENT feats ((feat*))>
+<!ELEMENT feat ((description, featcategory*))>
+<!ATTLIST feat
+	name CDATA #REQUIRED
+	categorytext CDATA #IMPLIED
+	profgroup (yes | no) "no"
+	useradded (yes | no) "yes"
+>
+
+<!ELEMENT featcategory (#PCDATA)>
+
+<!ELEMENT traits ((trait*))>
+<!ELEMENT trait ((description, traitcategory*))>
+<!ATTLIST trait
+	name CDATA #REQUIRED
+	categorytext CDATA #IMPLIED
+	useradded (yes | no) "yes"
+>
+
+<!ELEMENT traitcategory (#PCDATA)>
+
+<!ELEMENT flaws ((flaw*))>
+<!ELEMENT flaw ((description))>
+<!ATTLIST flaw
+	name CDATA #REQUIRED
+	useradded (yes | no) "yes"
+>
+
+<!ELEMENT skilltricks ((skilltrick*))>
+<!ELEMENT skilltrick ((description))>
+<!ATTLIST skilltrick
+	name CDATA #REQUIRED
+	useradded (yes | no) "yes"
+>
+
+<!ELEMENT attack ((special*))>
+<!ATTLIST attack
+	attackbonus CDATA #REQUIRED
+	baseattack CDATA #REQUIRED
+	meleeattack CDATA #REQUIRED
+	rangedattack CDATA #REQUIRED
+>
+
+<!ELEMENT melee ((weapon*))>
+<!ELEMENT weapon ((rangedattack?, weight?, cost?, description, itemslot?, itempower*, wepcategory*, weptype*))>
+<!ATTLIST weapon
+	name CDATA #REQUIRED
+	attack CDATA #REQUIRED
+	damage CDATA #REQUIRED
+	crit CDATA #REQUIRED
+	categorytext CDATA #IMPLIED
+	typetext CDATA #IMPLIED
+	size CDATA #IMPLIED
+	equipped (double | bothhands | mainhand | offhand | no) "no"
+	useradded (yes | no) "yes"
+	quantity CDATA "1"
+>
+
+<!ELEMENT weight EMPTY>
+<!ATTLIST weight
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT cost EMPTY>
+<!ATTLIST cost
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT rangedattack EMPTY>
+<!ATTLIST rangedattack
+	attack CDATA #REQUIRED
+	rangeinctext CDATA #REQUIRED
+	rangeincvalue CDATA #REQUIRED
+>
+
+<!ELEMENT itemslot (#PCDATA)>
+
+<!ELEMENT itempower ((description))>
+<!ATTLIST itempower
+	name CDATA #REQUIRED
+	pricebonusvalue CDATA #REQUIRED
+	pricebonustext CDATA #REQUIRED
+	pricecashvalue CDATA #REQUIRED
+	pricecashtext CDATA #REQUIRED
+>
+
+<!ELEMENT wepcategory (#PCDATA)>
+
+<!ELEMENT weptype (#PCDATA)>
+
+<!ELEMENT ranged ((weapon*))>
+
+<!ELEMENT defenses ((armor*))>
+<!ELEMENT armor ((weight?, cost?, description, itemslot?, itempower*))>
+<!ATTLIST armor
+	name CDATA #REQUIRED
+	ac CDATA #REQUIRED
+	equipped (yes | no) "no"
+	natural (yes | no) "no"
+	useradded (yes | no) "yes"
+	quantity CDATA "1"
+>
+
+<!ELEMENT magicitems ((item*))>
+<!ELEMENT item ((weight?, cost?, description, itemslot?, itempower*))>
+<!ATTLIST item
+	name CDATA #REQUIRED
+	useradded (yes | no) "yes"
+	quantity CDATA "1"
+>
+
+<!ELEMENT gear ((item*))>
+
+<!ELEMENT otherspecials ((special*))>
+
+<!ELEMENT spellsknown ((spell*))>
+<!ELEMENT spell ((description, spellcomp*, spellschool*, spellsubschool*))>
+<!ATTLIST spell
+	name CDATA #REQUIRED
+	level CDATA #REQUIRED
+	castsleft CDATA #IMPLIED
+	casttime CDATA #IMPLIED
+	class CDATA #IMPLIED
+	componenttext CDATA #IMPLIED
+	duration CDATA #IMPLIED
+	range CDATA #IMPLIED
+	resist CDATA #IMPLIED
+	save CDATA #IMPLIED
+	schooltext CDATA #IMPLIED
+	subschooltext CDATA #IMPLIED
+	useradded (yes | no) "yes"
+	spontaneous (yes | no) "no"
+>
+
+<!ELEMENT spellcomp (#PCDATA)>
+
+<!ELEMENT spellschool (#PCDATA)>
+
+<!ELEMENT spellsubschool (#PCDATA)>
+
+<!ELEMENT spellsmemorized ((spell*))>
+
+<!ELEMENT spellbook ((spell*))>
+
+<!ELEMENT spellclasses ((spellclass*))>
+<!ELEMENT spellclass ((spelllevel*))>
+<!ATTLIST spellclass
+	name CDATA #REQUIRED
+	maxspelllevel CDATA #REQUIRED
+	spells CDATA #REQUIRED
+>
+
+<!ELEMENT spelllevel EMPTY>
+<!ATTLIST spelllevel
+	level CDATA #REQUIRED
+	maxcasts CDATA "0"
+	used CDATA "0"
+	unlimited (yes | no) "no"
+>
+
+<!ELEMENT journals ((journal*))>
+<!ELEMENT journal ((description))>
+<!ATTLIST journal
+	name CDATA #IMPLIED
+	cp CDATA #IMPLIED
+	gamedate CDATA #IMPLIED
+	gp CDATA #IMPLIED
+	pp CDATA #IMPLIED
+	realdate CDATA #IMPLIED
+	sp CDATA #IMPLIED
+	xp CDATA #IMPLIED
+>
+
+<!ELEMENT images ((image*))>
+<!ELEMENT image EMPTY>
+<!ATTLIST image
+	filename CDATA #REQUIRED
+>
+
+<!ELEMENT validation ((report, validmessage*))>
+
+<!ELEMENT report (#PCDATA)>
+
+<!ELEMENT validmessage (#PCDATA)>
+
+<!ELEMENT settings EMPTY>
+<!ATTLIST settings
+	summary CDATA #REQUIRED
+>
+
+<!ELEMENT npc ((description, basics, tactics, ecology, additional))>
+<!ELEMENT basics ((npcinfo*))>
+<!ELEMENT tactics ((npcinfo*))>
+<!ELEMENT ecology ((npcinfo*))>
+<!ELEMENT additional ((npcinfo*))>
+<!ELEMENT npcinfo (#PCDATA)>
+<!ATTLIST npcinfo
+	name CDATA #REQUIRED
+>
+
+<!ELEMENT minions ((character*))>

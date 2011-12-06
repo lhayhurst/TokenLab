@@ -1,0 +1,124 @@
+2c2
+< <!-- DTD for Hero Lab custom output for the d20 System -->
+---
+> <!-- DTD for Hero Lab custom output for the Pathfinder Roleplaying Game -->
+30c30
+< <!ELEMENT character ((race, alignment, templates, size, deity, classes, senses, auras, health, xp, money, personal, languages, attributes, saves, defensive, damagereduction, immunities, resistances, weaknesses, armorclass, penalties, initiative, movement, encumbrance, skills, skillabilities, feats, traits, flaws, skilltricks, attack, melee, ranged, defenses, magicitems, gear, otherspecials, spellsknown, spellsmemorized, spellbook, spellclasses, journals, images?, validation, settings, npc?, minions))>
+---
+> <!ELEMENT character ((pathfindersociety?, race, alignment, templates, size, deity, classes, factions, types, subtypes, heropoints, senses, auras, favoredclasses, health, xp, money, personal, languages, attributes, saves, defensive, damagereduction, immunities, resistances, weaknesses, armorclass, penalties, maneuvers, initiative, movement, encumbrance, skills, skillabilities, feats, traits, flaws, skilltricks, animaltricks, attack, melee, ranged, defenses, magicitems, gear, spelllike, trackedresources, otherspecials, spellsknown, spellsmemorized, spellbook, spellclasses, journals, images?, validation, settings, npc?, minions))>
+40a41,45
+> <!ELEMENT pathfindersociety EMPTY>
+> <!ATTLIST pathfindersociety
+> 	playernum CDATA #REQUIRED
+> 	characternum CDATA #REQUIRED
+> >
+42a48
+> 	racetext CDATA #REQUIRED
+43a50
+> 	ethnicity CDATA #REQUIRED
+98a106,132
+> <!ELEMENT factions ((faction*))>
+> <!ELEMENT faction EMPTY>
+> <!ATTLIST faction
+> 	name CDATA #REQUIRED
+> 	tpa CDATA #REQUIRED
+> 	cpa CDATA #REQUIRED
+> >
+> 
+> <!ELEMENT types ((type*))>
+> <!ELEMENT type EMPTY>
+> <!ATTLIST type
+> 	name CDATA #REQUIRED
+> 	active (yes | no) "no"
+> >
+> 
+> <!ELEMENT subtypes ((subtype*))>
+> <!ELEMENT subtype EMPTY>
+> <!ATTLIST subtype
+> 	name CDATA #REQUIRED
+> >
+> 
+> <!ELEMENT heropoints EMPTY>
+> <!ATTLIST heropoints
+> 	enabled (yes | no) "yes"
+> 	total CDATA #REQUIRED
+> >
+> 
+102a137
+> 	shortname CDATA #REQUIRED
+112a148,153
+> <!ELEMENT favoredclasses ((favoredclass*))>
+> <!ELEMENT favoredclass EMPTY>
+> <!ATTLIST favoredclass
+> 	name CDATA #REQUIRED
+> >
+> 
+133a175
+> 	valuables CDATA #REQUIRED
+229a272,286
+> <!ELEMENT maneuvers ((maneuvertype+))>
+> <!ATTLIST maneuvers
+> 	cmb CDATA #REQUIRED
+> 	cmd CDATA #REQUIRED
+> 	cmdflatfooted CDATA #REQUIRED
+> >
+> 
+> <!ELEMENT maneuvertype EMPTY>
+> <!ATTLIST maneuvertype
+> 	name CDATA #REQUIRED
+> 	bonus CDATA #REQUIRED
+> 	cmb CDATA #REQUIRED
+> 	cmd CDATA #REQUIRED
+> >
+> 
+254a312
+> 	encumstr CDATA #REQUIRED
+265a324
+> 	ranks CDATA #REQUIRED
+267a327
+> 	tools (uses | needs) #IMPLIED
+310a371,377
+> <!ELEMENT animaltricks ((animaltrick*))>
+> <!ELEMENT animaltrick ((description))>
+> <!ATTLIST animaltrick
+> 	name CDATA #REQUIRED
+> 	useradded (yes | no) "yes"
+> >
+> 
+390a458,470
+> <!ELEMENT spelllike ((special*))>
+> 
+> <!ELEMENT trackedresources ((trackedresource*))>
+> <!ELEMENT trackedresource EMPTY>
+> <!ATTLIST trackedresource
+> 	name CDATA #REQUIRED
+> 	text CDATA #REQUIRED
+> 	used CDATA #REQUIRED
+> 	left CDATA #REQUIRED
+> 	min CDATA #REQUIRED
+> 	max CDATA #REQUIRED
+> >
+> 
+394c474
+< <!ELEMENT spell ((description, spellcomp*, spellschool*, spellsubschool*))>
+---
+> <!ELEMENT spell ((description, spellcomp*, spellschool*, spellsubschool*, spelldescript*))>
+397a478,479
+> 	area CDATA #IMPLIED
+> 	casterlevel CDATA #REQUIRED
+401a484,485
+> 	dc CDATA #IMPLIED
+> 	descriptor CDATA #IMPLIED
+402a487
+> 	effect CDATA #IMPLIED
+407a493,494
+> 	descriptortext CDATA #IMPLIED
+> 	target CDATA #IMPLIED
+409a497
+> 	unlimited (yes | no) "no"
+417a506,507
+> <!ELEMENT spelldescript (#PCDATA)>
+> 
+445a536,537
+> 	prestigeaward CDATA #IMPLIED
+> 	prestigespend CDATA #IMPLIED

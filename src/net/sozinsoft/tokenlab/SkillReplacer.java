@@ -7,20 +7,15 @@ public class SkillReplacer implements IMacroReplacer {
 
     String skillName;
     String attributeShortName;
-    String attributeBonus;
-    String skillRanks;
 
-    public SkillReplacer( String skillName, String attributeShortName, String attributeBonus, String skillRanks ) {
+    public SkillReplacer( String skillName, String attributeShortName ) {
         this.skillName = skillName;
         this.attributeShortName = attributeShortName;
-        this.attributeBonus = attributeBonus;
-        this.skillRanks = skillRanks;
+
     }
     public String replace(String target) {
         String one   = target.replaceAll("SKILL_NAME", skillName);
         String two   = one.replaceAll("ATTRIBUTE_SHORT_NAME", attributeShortName);
-        String three = two.replace( "SKILL_RANKS", skillRanks );
-        String four =  three.replace( "ATTRIBUTE_BONUS", attributeBonus );
-        return four;
+        return two;
     }
 }

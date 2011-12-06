@@ -18,11 +18,11 @@ import static org.junit.Assert.*;
 
 public class PathfinderTokenTests {
 
-    HerolabsDigester dig;
+    HeroLabPathfinderDigester dig;
 
     @Before
     public void setUp() throws JAXBException {
-        dig = new HerolabsDigester();
+        dig = new HeroLabPathfinderDigester();
         dig.parse(new File("src/net/sozinsoft/tokenlab/test/xml/Children_Of_Steel.xml"));
     }
 
@@ -109,41 +109,41 @@ public class PathfinderTokenTests {
 
         PathfinderToken ptok = new PathfinderToken(dss);
 
-        assertEquals(20, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Strength).intValue());
-        assertEquals(5, ptok.getBaseAbilityModifier(IPathfinderCharacter.IAttribute.Strength).intValue());
-        assertEquals(26, ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Strength).intValue());
-        assertEquals(8, ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Strength).intValue());
-        assertEquals(0, ptok.getAbilityDamage(IPathfinderCharacter.IAttribute.Strength).intValue());
+        assertEquals(20, ptok.getBaseAbilityScore(ICharacter.IAttribute.Strength).intValue());
+        assertEquals(5, ptok.getBaseAbilityModifier(ICharacter.IAttribute.Strength).intValue());
+        assertEquals(26, ptok.getBonusAbilityScore(ICharacter.IAttribute.Strength).intValue());
+        assertEquals(8, ptok.getBonusAbilityModifier(ICharacter.IAttribute.Strength).intValue());
+        assertEquals(0, ptok.getAbilityDamage(ICharacter.IAttribute.Strength).intValue());
 
-        assertEquals(13, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Dexterity).intValue());
-        assertEquals(1, ptok.getBaseAbilityModifier(IPathfinderCharacter.IAttribute.Dexterity).intValue());
-        assertEquals(13, ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Dexterity).intValue());
-        assertEquals(1, ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Dexterity).intValue());
-        assertEquals(0, ptok.getAbilityDamage(IPathfinderCharacter.IAttribute.Dexterity).intValue());
+        assertEquals(13, ptok.getBaseAbilityScore(ICharacter.IAttribute.Dexterity).intValue());
+        assertEquals(1, ptok.getBaseAbilityModifier(ICharacter.IAttribute.Dexterity).intValue());
+        assertEquals(13, ptok.getBonusAbilityScore(ICharacter.IAttribute.Dexterity).intValue());
+        assertEquals(1, ptok.getBonusAbilityModifier(ICharacter.IAttribute.Dexterity).intValue());
+        assertEquals(0, ptok.getAbilityDamage(ICharacter.IAttribute.Dexterity).intValue());
 
-        assertEquals(16, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Constitution).intValue());
-        assertEquals(3, ptok.getBaseAbilityModifier(IPathfinderCharacter.IAttribute.Constitution).intValue());
-        assertEquals(22, ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Constitution).intValue());
-        assertEquals(6, ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Constitution).intValue());
-        assertEquals(0, ptok.getAbilityDamage(IPathfinderCharacter.IAttribute.Constitution).intValue());
+        assertEquals(16, ptok.getBaseAbilityScore(ICharacter.IAttribute.Constitution).intValue());
+        assertEquals(3, ptok.getBaseAbilityModifier(ICharacter.IAttribute.Constitution).intValue());
+        assertEquals(22, ptok.getBonusAbilityScore(ICharacter.IAttribute.Constitution).intValue());
+        assertEquals(6, ptok.getBonusAbilityModifier(ICharacter.IAttribute.Constitution).intValue());
+        assertEquals(0, ptok.getAbilityDamage(ICharacter.IAttribute.Constitution).intValue());
 
-        assertEquals(14, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Wisdom).intValue());
-        assertEquals(2, ptok.getBaseAbilityModifier(IPathfinderCharacter.IAttribute.Wisdom).intValue());
-        assertEquals(14, ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Wisdom).intValue());
-        assertEquals(2, ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Wisdom).intValue());
-        assertEquals(0, ptok.getAbilityDamage(IPathfinderCharacter.IAttribute.Wisdom).intValue());
+        assertEquals(14, ptok.getBaseAbilityScore(ICharacter.IAttribute.Wisdom).intValue());
+        assertEquals(2, ptok.getBaseAbilityModifier(ICharacter.IAttribute.Wisdom).intValue());
+        assertEquals(14, ptok.getBonusAbilityScore(ICharacter.IAttribute.Wisdom).intValue());
+        assertEquals(2, ptok.getBonusAbilityModifier(ICharacter.IAttribute.Wisdom).intValue());
+        assertEquals(0, ptok.getAbilityDamage(ICharacter.IAttribute.Wisdom).intValue());
 
-        assertEquals(10, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Intelligence).intValue());
-        assertEquals(0, ptok.getBaseAbilityModifier(IPathfinderCharacter.IAttribute.Intelligence).intValue());
-        assertEquals(10, ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Intelligence).intValue());
-        assertEquals(0, ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Intelligence).intValue());
-        assertEquals(0, ptok.getAbilityDamage(IPathfinderCharacter.IAttribute.Intelligence).intValue());
+        assertEquals(10, ptok.getBaseAbilityScore(ICharacter.IAttribute.Intelligence).intValue());
+        assertEquals(0, ptok.getBaseAbilityModifier(ICharacter.IAttribute.Intelligence).intValue());
+        assertEquals(10, ptok.getBonusAbilityScore(ICharacter.IAttribute.Intelligence).intValue());
+        assertEquals(0, ptok.getBonusAbilityModifier(ICharacter.IAttribute.Intelligence).intValue());
+        assertEquals(0, ptok.getAbilityDamage(ICharacter.IAttribute.Intelligence).intValue());
 
-        assertEquals(6, ptok.getBaseAbilityScore(IPathfinderCharacter.IAttribute.Charisma).intValue());
-        assertEquals(-2, ptok.getBaseAbilityModifier(IPathfinderCharacter.IAttribute.Charisma).intValue());
-        assertEquals(6, ptok.getBonusAbilityScore(IPathfinderCharacter.IAttribute.Charisma).intValue());
-        assertEquals(-2, ptok.getBonusAbilityModifier(IPathfinderCharacter.IAttribute.Charisma).intValue());
-        assertEquals(0, ptok.getAbilityDamage(IPathfinderCharacter.IAttribute.Charisma).intValue());
+        assertEquals(6, ptok.getBaseAbilityScore(ICharacter.IAttribute.Charisma).intValue());
+        assertEquals(-2, ptok.getBaseAbilityModifier(ICharacter.IAttribute.Charisma).intValue());
+        assertEquals(6, ptok.getBonusAbilityScore(ICharacter.IAttribute.Charisma).intValue());
+        assertEquals(-2, ptok.getBonusAbilityModifier(ICharacter.IAttribute.Charisma).intValue());
+        assertEquals(0, ptok.getAbilityDamage(ICharacter.IAttribute.Charisma).intValue());
     }
 
     @Test
@@ -155,17 +155,17 @@ public class PathfinderTokenTests {
 
         //Derrak Stoneskull
         //fort
-        assertEquals(12, ptok.getSavingThrowClassBonus(IPathfinderCharacter.ISavingThrow.Fort).intValue());
-        assertEquals(4, ptok.getResistanceSavingThrowBonus(IPathfinderCharacter.ISavingThrow.Fort).intValue());
-        assertEquals(0, ptok.getMiscellaneousSavingThrowBonus(IPathfinderCharacter.ISavingThrow.Fort).intValue());
+        assertEquals(12, ptok.getSavingThrowClassBonus(ICharacter.ISavingThrow.Fort).intValue());
+        assertEquals(4, ptok.getResistanceSavingThrowBonus(ICharacter.ISavingThrow.Fort).intValue());
+        assertEquals(0, ptok.getMiscellaneousSavingThrowBonus(ICharacter.ISavingThrow.Fort).intValue());
 
-        assertEquals(6, ptok.getSavingThrowClassBonus(IPathfinderCharacter.ISavingThrow.Ref).intValue());
-        assertEquals(4, ptok.getResistanceSavingThrowBonus(IPathfinderCharacter.ISavingThrow.Ref).intValue());
-        assertEquals(2, ptok.getMiscellaneousSavingThrowBonus(IPathfinderCharacter.ISavingThrow.Ref).intValue());
+        assertEquals(6, ptok.getSavingThrowClassBonus(ICharacter.ISavingThrow.Ref).intValue());
+        assertEquals(4, ptok.getResistanceSavingThrowBonus(ICharacter.ISavingThrow.Ref).intValue());
+        assertEquals(2, ptok.getMiscellaneousSavingThrowBonus(ICharacter.ISavingThrow.Ref).intValue());
 
-        assertEquals(6, ptok.getSavingThrowClassBonus(IPathfinderCharacter.ISavingThrow.Will).intValue());
-        assertEquals(4, ptok.getResistanceSavingThrowBonus(IPathfinderCharacter.ISavingThrow.Will).intValue());
-        assertEquals(2, ptok.getMiscellaneousSavingThrowBonus(IPathfinderCharacter.ISavingThrow.Will).intValue());
+        assertEquals(6, ptok.getSavingThrowClassBonus(ICharacter.ISavingThrow.Will).intValue());
+        assertEquals(4, ptok.getResistanceSavingThrowBonus(ICharacter.ISavingThrow.Will).intValue());
+        assertEquals(2, ptok.getMiscellaneousSavingThrowBonus(ICharacter.ISavingThrow.Will).intValue());
 
     }
 
@@ -203,7 +203,7 @@ public class PathfinderTokenTests {
 
     @Test
     public void testVisionExternal() throws Exception {
-        dig = new HerolabsDigester();
+        dig = new HeroLabPathfinderDigester();
         dig.parse(new File("src/net/sozinsoft/tokenlab/test/xml/vision_monsters.xml"));
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
 
@@ -385,7 +385,7 @@ public class PathfinderTokenTests {
 
     @Test
     public void testMultiClassPC() throws Exception {
-        dig = new HerolabsDigester();
+        dig = new HeroLabPathfinderDigester();
         dig.parse(new File("src/net/sozinsoft/tokenlab/test/xml/Fortune_Teller.xml"));
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
         Character dss = characters.get(0);
@@ -440,7 +440,7 @@ public class PathfinderTokenTests {
     }
 
     @Test
-    public void testTokenCreation() throws Exception, SAXException {
+    public void testPathfinderTokenCreation() throws Exception, SAXException {
         Config config = new Config();
         config.addConfigEntry("Derrak Stoneskull", "src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/derrakStoneskullPortrait.jpg",
@@ -457,10 +457,7 @@ public class PathfinderTokenTests {
 
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
-        HerolabsDigester dig = new HerolabsDigester();
         for (Character c : characters) {
-            PathfinderToken pt = new PathfinderToken(c);
-            Token token = pt.asToken(config.get(c.getName()));
             dig.saveCharacter(config, c);
         }
     }

@@ -3,18 +3,15 @@ package net.sozinsoft.tokenlab;
 
 import com.google.gson.*;
 import net.rptools.maptool.model.*;
-import net.rptools.maptool.util.TokenUtil;
 import net.sozinsoft.tokenlab.dtd.*;
 import net.sozinsoft.tokenlab.dtd.Character;
 import net.sozinsoft.tokenlab.dtd.Weapon;
 import org.xml.sax.SAXException;
-import javax.imageio.ImageIO;
-import java.awt.Image;
-import java.io.File;
+
 import java.io.IOException;
 import java.util.*;
 
-public class PathfinderToken implements IPathfinderCharacter {
+public class PathfinderToken implements ICharacter, ITokenizable {
 
     private static final String CLASS_HP = "ClassHP";
     private static final String SIZE_MOD = "SizeMod";
@@ -35,18 +32,9 @@ public class PathfinderToken implements IPathfinderCharacter {
     private static final String RESIST_BONUS = "ResistBonus";
     private static final String CLASS_SKILL = "ClassSkill";
     private static final String PATHFINDER = "Pathfinder";
-    private static final String CHARACTER = "Character";
-    private static final String RACE = "Race";
-    private static final String PLAYER = "Player";
-    private static final String ALIGNMENT = "Alignment";
-    private static final String DEITY = "Deity";
-    private static final String CLASS = "Class";
-    private static final String LEVEL = "Level";
-    private static final String GENDER = "Gender";
-    private static final String AGE = "Age";
-    private static final String HEIGHT = "Height";
-    private static final String WEIGHT = "Weight";
-    private static final String SPEED = "Speed";
+
+
+
     private static final String BASE_ATTACK_BONUS = "BaseAttackBonus";
     private static final String INIT_MOD = "InitMod";
     private static MacroDigester macroDigester = null;
@@ -78,15 +66,18 @@ public class PathfinderToken implements IPathfinderCharacter {
     public static final String SPELL_LIKE = "Spell-like";
     public static final String OTHER = "Other";
     public static final String TRAITS_JSON = "TraitsJSON";
+    public static final String SKILLS_JSON = "SkillsJSON";
 
 
     private Character _character;
-    private Token _token;
+    private TokenLabToken _token;
     private HashMap<String, Object> _propertyMap = new HashMap<String, Object>();
 
     public PathfinderToken(Character character ) throws Exception {
+        _token = new TokenLabToken();
         _character = character;
-        setCoreProperties();
+        _token.setCommonProperties( this, _propertyMap );
+
         setAbilities();
         setSavingThrows();
         setHitpoints();
@@ -388,24 +379,7 @@ public class PathfinderToken implements IPathfinderCharacter {
        _propertyMap.put( CLASS_HP, hp );
     }
 
-    private void setCoreProperties() {
 
-        _propertyMap.put( CHARACTER, _character.getName() );
-        _propertyMap.put( RACE, _character.getRace().getName());
-        _propertyMap.put( ALIGNMENT, _character.getAlignment().getName());
-        _propertyMap.put( PLAYER, _character.getPlayername());
-        _propertyMap.put( DEITY, _character.getDeity().getName() == null ? "" :  _character.getDeity().getName() );
-        _propertyMap.put( GENDER, _character.getPersonal().getGender());
-        _propertyMap.put( AGE, Integer.parseInt(_character.getPersonal().getAge()) );
-        _propertyMap.put( HEIGHT, _character.getPersonal().getCharheight().getText());
-        _propertyMap.put( WEIGHT, _character.getPersonal().getCharweight().getText() );
-        _propertyMap.put( SPEED, Integer.parseInt( _character.getMovement().getSpeed().getValue() ) );
-        _propertyMap.put( LEVEL, Integer.parseInt( _character.getClasses().getLevel() ) );
-        _propertyMap.put( CLASS, _character.getClasses().getSummaryabbr());
-
-
-
-    }
 
     private void setSavingThrows() {
         for(Save s : _character.getSaves().getSave() ) {
@@ -421,53 +395,58 @@ public class PathfinderToken implements IPathfinderCharacter {
         }
     }
 
-    //IPathfinderCharacter methods
+    //ICharacter methods
     public String getName() {
-        return (String)getTokenProperties( CHARACTER );
+        return _character.getName();
     }
 
     public String getPlayer() {
-        return (String)getTokenProperties( PLAYER );
+        return _character.getPlayername();
     }
 
     public String getRace() {
-        return (String)getTokenProperties( RACE );
+        return _character.getRace().getName();
     }
 
     public String getAlignment() {
-        return (String)getTokenProperties( ALIGNMENT );
+        return _character.getAlignment().getName();
     }
 
     public String getDeity() {
-        return (String)getTokenProperties( DEITY );
+        return _character.getDeity().getName();
     }
 
     public String getGender() {
-        return (String)getTokenProperties( GENDER );
+        return _character.getPersonal().getGender();
     }
 
     public Integer getAge() {
-        return (Integer)getTokenProperties( AGE );
+        return Integer.parseInt(_character.getPersonal().getAge());
     }
 
     public String getHeight() {
-        return (String)getTokenProperties( HEIGHT );
+        return _character.getPersonal().getCharheight().getText(); //bug in herolabs output here - it has the weight as the value
     }
 
     public String getWeight() {
-        return (String)getTokenProperties( WEIGHT );
+        return _character.getPersonal().getCharweight().getText();
+
     }
 
     public Integer getSpeed() {
-        return (Integer)getTokenProperties( SPEED );
+        return Integer.parseInt(_character.getMovement().getSpeed().getValue());
     }
 
     public Integer getLevel() {
-        return (Integer)getTokenProperties( LEVEL );
+        return Integer.parseInt( _character.getClasses().getLevel() ) ;
     }
 
     public String getClassAbbreviation() {
-        return (String)getTokenProperties( CLASS );
+        return _character.getClasses().getSummaryabbr();
+    }
+
+    public String getSize() {
+        return _character.getSize().getName();
     }
 
     public Integer getClassHitpoints() {
@@ -540,21 +519,22 @@ public class PathfinderToken implements IPathfinderCharacter {
         }
     }
 
-    public Token asToken( Config.ConfigEntry configEntry ) throws IOException, SAXException {
+    public Token asToken( Config.ConfigEntry configEntry ) throws Exception {
 
-        _token = createToken(configEntry);
+        _token.createToken( this, configEntry );
+        _token.setCommonProperties( (ICharacter)this, _propertyMap );
 
-        loadMacros(_token);
+        loadMacros(_token.getToken());
 
         //set all the token properties.
-        _token.setPropertyType(PATHFINDER);
+        _token.getToken().setPropertyType(PATHFINDER);
 
         //PC or NPC
         if ( _character.getRole().equals("npc") ) {
-            _token.setType(Token.Type.NPC);
+            _token.getToken().setType(Token.Type.NPC);
         }
         else {
-            _token.setType( Token.Type.PC );
+            _token.getToken().setType(Token.Type.PC);
         }
 
 
@@ -565,22 +545,21 @@ public class PathfinderToken implements IPathfinderCharacter {
         Gson gjson = gson.create();
         for( IAttribute ia : IAttribute.values() ) {
             String json = gjson.toJson(_attributes.get(ia) );
-            _token.setProperty( ia.toString(), json );
+            _token.getToken().setProperty(ia.toString(), json);
         }
 
         for( String propKey : _propertyMap.keySet() ) {
-            if ( _propertyMap.get(propKey) == null ) {
-                int i = 0;
-            }
-            _token.setProperty( propKey, _propertyMap.get( propKey ).toString());
+            _token.getToken().setProperty(propKey, _propertyMap.get(propKey).toString());
         }
 
 
-        _token.setProperty( FEATS_JSON, gjson.toJson(_feats ) );
+        _token.getToken().setProperty(FEATS_JSON, gjson.toJson(_feats));
 
-        _token.setProperty(TRAITS_JSON, gjson.toJson( _traits ));
+        _token.getToken().setProperty(TRAITS_JSON, gjson.toJson(_traits));
 
-        _token.setProperty(WEAPON_JSON, gjson.toJson(_weapons));
+        _token.getToken().setProperty(WEAPON_JSON, gjson.toJson(_weapons));
+
+        _token.getToken().setProperty(SKILLS_JSON, gjson.toJson(_skills));
 
         //set the spells.  this needs to basically happen by class.
 
@@ -591,74 +570,49 @@ public class PathfinderToken implements IPathfinderCharacter {
             characterSpells.put( sc.getName(), spellsByLevel );
         }
 
-        _token.setProperty(SPELLS_JSON, gjson.toJson(characterSpells));
+        _token.getToken().setProperty(SPELLS_JSON, gjson.toJson(characterSpells));
 
-        _token.setProperty(SPECIAL_ABILITIES_JSON, gjson.toJson( _specials ));
+        _token.getToken().setProperty(SPECIAL_ABILITIES_JSON, gjson.toJson(_specials));
 
         //init mod
-        _token.setProperty(INIT_MOD, _initMod );
+        _token.getToken().setProperty(INIT_MOD, _initMod);
 
         //vision
-        _token.setHasSight(true);
-        _token.setSightType( _vision );
+        _token.getToken().setHasSight(true);
+        _token.getToken().setSightType(_vision);
 
-        return _token;
+        return _token.getToken();
     }
 
+
+    private HashMap<String, HashMap<String, String >> _skills = new HashMap<String, HashMap<String, String>>() ;
 
     private void setSkills() {
         for(  Skill s :  _character.getSkills().getSkill() ) {
             String mungedSkillName = mungeSkillName( s.getName() );
-            if ( mungedSkillName.indexOf(PROFESSION) >= 0) {
-                continue; //skipping professions for now, TODO:
-            }
-            _propertyMap.put(mungedSkillName + RANKS, s.getRanks());
-            if (isClassSkill(s)) {
-                _propertyMap.put(mungedSkillName + CLASS_SKILL, "1");
-            }
+            HashMap<String, String> skillMap = new HashMap<String, String>();
+            skillMap.put( "value", s.getValue());
+            skillMap.put( "ranks", s.getRanks() );
+            skillMap.put( "description", s.getDescription());
+            skillMap.put( "skillBonus", "0" );
+            skillMap.put( "attrBonus", s.getAttrbonus());
+            skillMap.put( "attrName", s.getAttrname());
+            skillMap.put( "classSkill", s.getClassskill() != null && s.getClassskill().equals(YES) ? "1" : "0");
+            skillMap.put( "armorCheckPenalty", s.getArmorcheck() != null && s.getArmorcheck().equals(YES) ? "1" : "0");
+            skillMap.put( "useTrainedOnly", s.getTrainedonly() != null && s.getTrainedonly().equals(YES) ? "1" : "0" );
+            skillMap.put( "usable", s.getUsable() != null && s.getUsable().equals(YES) ? "1" : "0" );
+            skillMap.put( "tools", s.getTools()  != null && s.getTools().equals(YES) ? "1" : "0" );
+            _skills.put( mungedSkillName, skillMap );
         }
-     }
+    }
+
 
     private static boolean isClassSkill(Skill s) {
         return s.getClassskill() != null && s.getClassskill().equals( YES ) == true;
     }
 
 
-    private Token createToken(Config.ConfigEntry configEntry) throws IOException {
-        Asset tokenImage = null;
-        File file = new File( configEntry.getImageFilePath());
-        tokenImage = AssetManager.createAsset(file);
-        AssetManager.putAsset( tokenImage );
-        _token = new Token( _character.getName(), tokenImage.getId());
 
-
-        _token.setImageAsset(tokenImage.getName());
-        _token.setImageAsset(tokenImage.getName(), tokenImage.getId());
-
-        //set the image shape
-        Image image = ImageIO.read(file);
-        _token.setShape(TokenUtil.guessTokenType(image));
-
-
-		//set the token size
-        String characterSize = _character.getSize().getName();
-		if ( characterSize != null && ! characterSize.isEmpty()) {
-			SquareGrid grid = new SquareGrid();
-			for (TokenFootprint footprint : grid.getFootprints()) {
-				if ( characterSize.equals( footprint.getName() ) ) {
-					_token.setFootprint( grid, footprint );
-				}
-			}
-		}
-
-        //set the other image assets (portrait, charsheet image)
-        Asset portrait = AssetManager.createAsset( new File( configEntry.getPortraitFilePath()) );
-        AssetManager.putAsset(portrait);
-        _token.setPortraitImage(portrait.getId());
-        _token.setCharsheetImage(portrait.getId());
-
-        return _token;
-    }
 
     private void loadMacros(Token t) throws IOException, SAXException {
 
@@ -716,13 +670,11 @@ public class PathfinderToken implements IPathfinderCharacter {
        for ( Skill s : _character.getSkills().getSkill() ) {
 
            String skillName = s.getName();
-            if ( skillName.indexOf("Profession") >= 0 || skillName.indexOf("Perform") >= 0 ) {
-                continue; //skipping professions for now, TODO:
-            }
+           String mungedSkillName = mungeSkillName( skillName);
 
             String attributeName   = s.getAttrname();
             String attribShortName = CharacterAttribute.getShortName( attributeName );
-            SkillReplacer replacer = new SkillReplacer( skillName, attribShortName, attribShortName + "Bonus", mungeSkillName( skillName )  );
+            SkillReplacer replacer = new SkillReplacer( mungedSkillName, attribShortName  );
             MacroDigester.MacroEntry macroEntry = skillMacros.get("Skill Check");
 
            boolean disableButton = false;
@@ -742,7 +694,7 @@ public class PathfinderToken implements IPathfinderCharacter {
 
             //todo: refactor the below into the replacer interface if I ever do it somewhere else.
             if ( ! disableButton ) {
-                macroEntry.toolTip = "[r:" + replacer.skillRanks + "]";
+                macroEntry.toolTip = "[r:" + s.getRanks() + "]";
                 macroEntry.name = skillName;
                 MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, replacer );
                 macroButtonSet.add( properties );

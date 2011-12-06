@@ -122,7 +122,8 @@ public class TokenLabUI {
                         return;
                     }
 
-                    HerolabsDigester dig = new HerolabsDigester();
+                    HeroLabPathfinderDigester dig = new HeroLabPathfinderDigester();
+
 
                     try {
 
@@ -211,7 +212,7 @@ public class TokenLabUI {
     private void exportCharacter() {
 
         Object [] selectedValues = herolabsCharacterList.getSelectedValues();
-        HerolabsDigester dig = new HerolabsDigester();
+        HeroLabPathfinderDigester dig = new HeroLabPathfinderDigester();
         boolean success = true;
         for ( Object object : selectedValues ) {
 
