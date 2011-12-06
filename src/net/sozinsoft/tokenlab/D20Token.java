@@ -83,7 +83,11 @@ public class D20Token implements ITokenizable, ICharacter {
     }
 
     public Integer getClassHitpoints() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return Integer.parseInt( _character.getHealth().getHitpoints() );
+    }
+
+    public Integer getBaseAttackBonus() {
+        return Integer.parseInt( StringUtils.replacePlus( _character.getAttack().getBaseattack() ) );
     }
 
     public Integer getBaseAbilityScore(IAttribute attribute) {
@@ -143,10 +147,6 @@ public class D20Token implements ITokenizable, ICharacter {
     }
 
     public Integer getACMisc() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    public Integer getBaseAttackBonus() {
         return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 

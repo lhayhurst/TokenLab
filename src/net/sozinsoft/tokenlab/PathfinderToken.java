@@ -13,7 +13,7 @@ import java.util.*;
 
 public class PathfinderToken implements ICharacter, ITokenizable {
 
-    private static final String CLASS_HP = "ClassHP";
+
     private static final String SIZE_MOD = "SizeMod";
     private static final String AC_TEMP_BONUS = "ACTempBonus";
     private static final String AC_MISC_BONUS_2 = "ACMiscBonus2";
@@ -35,7 +35,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
 
 
-    private static final String BASE_ATTACK_BONUS = "BaseAttackBonus";
+
     private static final String INIT_MOD = "InitMod";
     private static MacroDigester macroDigester = null;
     public static final String VALUE = "value";
@@ -80,7 +80,6 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
         setAbilities();
         setSavingThrows();
-        setHitpoints();
         setArmorClass();
         setSkills();
         setWeapons();
@@ -89,8 +88,6 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         setSpecialAbilities();
         setVision();
         setInitiative();
-
-        _propertyMap.put( BASE_ATTACK_BONUS, Integer.parseInt( replacePlus( _character.getAttack().getBaseattack() ) ) );
     }
 
     private HashMap<String, WeaponImpl> _weapons = new HashMap<String, WeaponImpl>();
@@ -166,8 +163,8 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
     private String _initMod;
     public void setInitiative() {
-        String total    = replacePlus(_character.getInitiative().getTotal());
-        String fromAttr = replacePlus(_character.getInitiative().getAttrtext());
+        String total    = StringUtils.replacePlus(_character.getInitiative().getTotal());
+        String fromAttr = StringUtils.replacePlus(_character.getInitiative().getAttrtext());
         int iTotal      = Integer.parseInt(total);
         int iFromAttr   = Integer.parseInt(fromAttr);
         int iMod        = iTotal - iFromAttr;
@@ -275,10 +272,10 @@ public class PathfinderToken implements ICharacter, ITokenizable {
             //_propertyMap.put( attribute.getName(), Integer.parseInt( attribute.getAttrvalue().getBase()) );
 
             attribJSON.put(VALUE, Integer.parseInt( attribute.getAttrvalue().getBase() ) );
-            attribJSON.put(VALUE_MODIFIER, Integer.parseInt( replacePlus(attribute.getAttrbonus().getBase() ) ) );
+            attribJSON.put(VALUE_MODIFIER, Integer.parseInt( StringUtils.replacePlus(attribute.getAttrbonus().getBase() ) ) );
 
-            int attrBonusModified = Integer.parseInt( replacePlus( attribute.getAttrvalue().getModified() ) );
-            int attrBonusBase =       Integer.parseInt( replacePlus( attribute.getAttrbonus().getModified() ) );
+            int attrBonusModified = Integer.parseInt( StringUtils.replacePlus( attribute.getAttrvalue().getModified() ) );
+            int attrBonusBase =       Integer.parseInt( StringUtils.replacePlus( attribute.getAttrbonus().getModified() ) );
 
             if ( attrBonusModified == attrBonusBase ) {
                 attribJSON.put(BONUS, new Integer( 0 ) );
@@ -289,7 +286,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
             }
             else {
                 attribJSON.put( BONUS, new Integer( attrBonusModified ) );
-                attribJSON.put( BONUS_MODIFIER, new Integer( replacePlus( attribute.getAttrbonus().getModified())) );
+                attribJSON.put( BONUS_MODIFIER, new Integer( StringUtils.replacePlus( attribute.getAttrbonus().getModified())) );
 
                 //_propertyMap.put( getAbbreviatedEnhancementBonusName(attribute),
                   //                new Integer( attrBonusModified  ) );
@@ -330,36 +327,28 @@ public class PathfinderToken implements ICharacter, ITokenizable {
     }
 
 
-    private static String replacePlus(String value) {
-		if ( value != null && value.length() > 0 && value.charAt(0) == '+') {
-			String tmp = value.replace("+", "");
-			return tmp;
-		}
-		return value;
-	}
-
     private void setArmorClass() {
         Armorclass ac = _character.getArmorclass();
         _propertyMap.put( AC_ARMOR_BONUS,  ac.getFromarmor().length() > 0 ?
-                                           Integer.parseInt( replacePlus( ac.getFromarmor() ) ) :
+                                           Integer.parseInt( StringUtils.replacePlus( ac.getFromarmor() ) ) :
                                            new Integer( 0 ) );
         _propertyMap.put( AC_SHIELD_BONUS, ac.getFromshield().length() > 0 ?
-                                           Integer.parseInt( replacePlus( ac.getFromshield() ) ) :
+                                           Integer.parseInt( StringUtils.replacePlus( ac.getFromshield() ) ) :
                                            new Integer( 0 ) );
         _propertyMap.put( AC_FROM_DEFLECT, ac.getFromdeflect().length() > 0 ?
-                                           Integer.parseInt( replacePlus( ac.getFromdeflect() ) ) :
+                                           Integer.parseInt( StringUtils.replacePlus( ac.getFromdeflect() ) ) :
                                            new Integer( 0 ) );
         _propertyMap.put( AC_FROM_DODGE,  ac.getFromdodge().length() > 0 ?
-                                           Integer.parseInt( replacePlus( ac.getFromdodge() ) ) :
+                                           Integer.parseInt( StringUtils.replacePlus( ac.getFromdodge() ) ) :
                                            new Integer( 0 ) );
         _propertyMap.put( AC_FROM_NATURAL, ac.getFromnatural().length() > 0 ?
-                                           Integer.parseInt( replacePlus( ac.getFromnatural() ) ) :
+                                           Integer.parseInt( StringUtils.replacePlus( ac.getFromnatural() ) ) :
                                            new Integer( 0 ) );
         _propertyMap.put( SIZE_MOD,        ac.getFromsize().length() > 0 ?
-                                           Integer.parseInt( replacePlus( ac.getFromsize() ) ) :
+                                           Integer.parseInt( StringUtils.replacePlus( ac.getFromsize() ) ) :
                                            new Integer( 0 ) );
         _propertyMap.put( AC_MISC_BONUS_1, ac.getFrommisc().length() > 0 ?
-                                           Integer.parseInt( replacePlus( ac.getFrommisc() ) ) :
+                                           Integer.parseInt( StringUtils.replacePlus( ac.getFrommisc() ) ) :
                                            new Integer( 0 ) );
         _propertyMap.put( AC_MISC_BONUS_2, new Integer( 0  ) );
         _propertyMap.put( AC_TEMP_BONUS,   new Integer( 0 ) );
@@ -374,23 +363,20 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         }
     }
 
-    private void setHitpoints() {
-       int     hp    = Integer.parseInt(_character.getHealth().getHitpoints());
-       _propertyMap.put( CLASS_HP, hp );
-    }
+
 
 
 
     private void setSavingThrows() {
         for(Save s : _character.getSaves().getSave() ) {
             _propertyMap.put( s.getAbbr() + CLASS_BONUS,  s.getBase().length() > 0 ?
-                                                          Integer.parseInt( replacePlus( s.getBase() ) ) :
+                                                          Integer.parseInt( StringUtils.replacePlus( s.getBase() ) ) :
                                                           new Integer( 0 ) );
             _propertyMap.put( s.getAbbr() + RESIST_BONUS, s.getFromresist().length() > 0 ?
-                                                          Integer.parseInt( replacePlus( s.getFromresist() ) ) :
+                                                          Integer.parseInt( StringUtils.replacePlus( s.getFromresist() ) ) :
                                                           new Integer( 0 ) );
             _propertyMap.put( s.getAbbr() + MISC_BONUS,  s.getFrommisc().length() > 0 ?
-                                                          Integer.parseInt( replacePlus( s.getFrommisc() ) ) :
+                                                          Integer.parseInt( StringUtils.replacePlus( s.getFrommisc() ) ) :
                                                           new Integer( 0 ) );
         }
     }
@@ -450,7 +436,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
     }
 
     public Integer getClassHitpoints() {
-        return (Integer)getTokenProperties( CLASS_HP );
+        return Integer.parseInt( _character.getHealth().getHitpoints() );
     }
 
 
@@ -495,7 +481,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
     }
 
     public Integer getBaseAttackBonus() {
-        return (Integer)_propertyMap.get( BASE_ATTACK_BONUS );
+        return Integer.parseInt( StringUtils.replacePlus( _character.getAttack().getBaseattack() ) );
     }
 
     public String getVision() {
