@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,13 +62,13 @@ public class ConfigTests {
         entry.setTokenFileName(entry.getTokenFileName()); // Should just set it to the default
         assertEquals("JacenSalem.rptok", entry.getTokenFileName());
         entry.setTokenFileDirectory("/dev/null");
-        assertEquals("/dev/null/JacenSalem.rptok", entry.getOutputTokenTo());
+        assertEquals( File.separator +  "dev" + File.separator + "null" + File.separator + "JacenSalem.rptok", entry.getOutputTokenTo());
 
         entry.setTokenFileDirectory("/dev/null/");
-        assertEquals("/dev/null/JacenSalem.rptok", entry.getOutputTokenTo());
+        assertEquals( File.separator +  "dev" + File.separator + "null" + File.separator + "JacenSalem.rptok", entry.getOutputTokenTo());
 
         entry.setTokenFileName("JurRevicious");
-        assertEquals("/dev/null/JurRevicious.rptok", entry.getOutputTokenTo());
+        assertEquals(File.separator +  "dev" + File.separator + "null" + File.separator + "JurRevicious.rptok", entry.getOutputTokenTo());
     }
 
     @Test
