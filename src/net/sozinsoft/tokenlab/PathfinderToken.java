@@ -67,6 +67,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
     public static final String OTHER = "Other";
     public static final String TRAITS_JSON = "TraitsJSON";
     public static final String SKILLS_JSON = "SkillsJSON";
+    public static final String RESOURCES_JSON = "ResourcesJSON";
 
 
     private Character _character;
@@ -88,6 +89,22 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         setSpecialAbilities();
         setVision();
         setInitiative();
+        setTrackedResources();
+    }
+
+    private HashMap<String, HashMap<String, Object >> _trackedResources = new HashMap<String, HashMap<String, Object>>();
+    private void setTrackedResources() {
+        for( Trackedresource tr : _character.getTrackedresources().getTrackedresource() ) {
+            String trName = StringUtils.removeCommas(tr.getName());
+            int min  = Integer.parseInt( tr.getMin() );
+            int max  = Integer.parseInt( tr.getMax() );
+            int used = Integer.parseInt( tr.getUsed() );
+            HashMap<String, Object> trMap = new HashMap<String, Object>();
+            trMap.put( "min", min);
+            trMap.put( "max", max );
+            trMap.put( "used", used );
+            _trackedResources.put( trName, trMap );
+        }
     }
 
     private HashMap<String, WeaponImpl> _weapons = new HashMap<String, WeaponImpl>();
@@ -168,7 +185,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         int iTotal      = Integer.parseInt(total);
         int iFromAttr   = Integer.parseInt(fromAttr);
         int iMod        = iTotal - iFromAttr;
-        _initMod        = new Integer(iMod).toString();
+        _initMod        = Integer.toString(iMod);
 
     }
 
@@ -213,6 +230,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
     }
 
     private HashMap<String, ClassSpells > _spells= new HashMap<String, ClassSpells>();
+    private HashMap<String, HashMap<String, Object>> _trackedSpells = new HashMap<String, HashMap<String, Object>>();
 
     public void setSpells() {
 
@@ -547,6 +565,8 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
         _token.getToken().setProperty(SKILLS_JSON, gjson.toJson(_skills));
 
+        _token.getToken().setProperty(RESOURCES_JSON, gjson.toJson(_trackedResources ));
+
         //set the spells.  this needs to basically happen by class.
 
         HashMap< String, SortedMap< Integer, HashMap<String, PFSRDSpell>>> characterSpells =
@@ -566,6 +586,9 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         //vision
         _token.getToken().setHasSight(true);
         _token.getToken().setSightType(_vision);
+
+        //resources
+
 
         return _token.getToken();
     }

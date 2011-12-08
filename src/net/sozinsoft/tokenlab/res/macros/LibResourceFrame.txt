@@ -1,0 +1,38 @@
+[h: title = "Resources"]
+[h:Resources   = json.get(macro.args, "Resources")]
+[h:token   = json.get(macro.args, "ID")]
+[h:ResourceNames = json.fields( Resources )]
+
+[h: imageFormatString = 	"<img src='%s' border=0 height=30 width=30 alt='%s'>"]
+[h: IncrementImage = 	strformat(imageFormatString, getImage("image:Increment"), 	"Add one to resource used")]
+[h: DecrementImage =        strformat(imageFormatString, getImage("image:Decrement"), 	"Subtract one to resource used")]
+[h: ResetImage =        strformat(imageFormatString, getImage("image:Decrement"), 	"Reset to zero")]
+
+[frame(title, "input=1; height=100; width=100"):{
+<html>
+<head>
+    <title>[r: title]</title>
+</head>
+<body>
+<table>
+    [FOREACH ( resourceName, ResourceNames, "" ), CODE: {
+    <tr>
+        [h: upargs   = json.set("{}", "resourceName", resourceName, "ID", token, "direction", "up" , "resourcesJSON", Resources )]
+        [h: downargs   = json.set("{}", "resourceName", resourceName, "ID", token, "direction", "down", "resourcesJSON", Resources  )]
+        [h: resetargs   = json.set("{}", "resourceName", resourceName, "ID", token, "direction", "reset", "resourcesJSON", Resources  )]
+        [h: UpButton = macroLink(IncrementImage, 	"UpdateResource@Lib:TokenLab", "none", upargs )]
+        [h: DownButton = macroLink(DecrementImage, 	"UpdateResource@Lib:TokenLab", "none", downargs )]
+        [h: ResetButton = macroLink(ResetImage, 	"UpdateResource@Lib:TokenLab", "none", resetargs )]
+        [h: used   = json.get( json.get( Resources, resourceName ), "used" ) )]
+        [h: max    = json.get( json.get( Resources, resourceName ), "max" ) )]
+        <td>[r:DownButton]</td>
+        <td>[r:used] <font size="2">/[r:max]</font></td>
+        <td>[r:UpButton]</td>
+        <td>[r:ResetButton]</td>
+        <td> [r:resourceName] </td>
+    </tr>
+    }]
+</table>
+</body>
+</html>
+}]

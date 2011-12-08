@@ -16,4 +16,9 @@ public class StringUtils {
 		}
 		return value;
 	}
+
+    public static String removeCommas( String value ) {
+        return value.replaceAll( ",", "" );
+    }
+
 }

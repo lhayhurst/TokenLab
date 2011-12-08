@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Spells</title>
+<link rel="stylesheet" type="text/css" href="css@Lib:TokenLab">
 </head>
 <body>
 <table>

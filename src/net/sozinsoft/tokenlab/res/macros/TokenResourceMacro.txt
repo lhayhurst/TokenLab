@@ -1,0 +1,2 @@
+[h: args = json.set( "{}", "Resources", ResourcesJSON, "ID", currentToken()  ) ]
+[MACRO("ResourceFrame@Lib:TokenLab") : args]
