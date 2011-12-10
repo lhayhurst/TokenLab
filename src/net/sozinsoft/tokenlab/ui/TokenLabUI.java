@@ -31,6 +31,7 @@ public class TokenLabUI {
 
     JPanel panel;
     private JButton configureSelectedButton;
+    private JButton configurePortfolioButton;
     Config config;
     Preferences prefs;
 
@@ -73,8 +74,10 @@ public class TokenLabUI {
 
 
         importButton.setEnabled(true);
+        configurePortfolioButton.setEnabled(true);
         exportAllButton.setEnabled(false);
         exportSelectedButton.setEnabled(false);
+
         configureSelectedButton.setEnabled(false);
 
 
@@ -145,6 +148,16 @@ public class TokenLabUI {
 
         });
 
+        configurePortfolioButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                PortfolioConfigurationDialog dialog = new PortfolioConfigurationDialog(config);
+                dialog.pack();
+                dialog.setVisible(true);
+
+                updateTokens();
+            }
+        });
+
         configureSelectedButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 //get the selected item
@@ -163,6 +176,7 @@ public class TokenLabUI {
                 }
             }
         });
+
         herolabsCharacterList.addListSelectionListener(new ListSelectionListener() {
             public void valueChanged(ListSelectionEvent e) {
                 configureSelectedButton.setEnabled(true);
@@ -203,6 +217,11 @@ public class TokenLabUI {
                 exportCharacter();
             }
         });
+    }
+
+    private void updateTokens() {
+        System.out.println("Would be updatin'");
+        config.defaultConfigEntries();
     }
 
     private void errorDialog(String title, String error) {

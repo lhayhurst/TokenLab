@@ -10,8 +10,6 @@ import java.io.File;
 import java.util.prefs.Preferences;
 
 public class ConfigureCharacterDialog extends JDialog {
-    public static final String IMAGE_DIR = "IMAGE_DIR";
-    public static final String TOKEN_DIR = "TOKEN_DIR";
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
@@ -75,12 +73,12 @@ public class ConfigureCharacterDialog extends JDialog {
     }
 
 
-    public ConfigureCharacterDialog( JList targetList, final Config.ConfigEntry config, final Preferences prefs ) {
-        this.configEntry = config;
+    public ConfigureCharacterDialog( JList targetList, final Config.ConfigEntry configEntry, final Preferences prefs ) {
+        this.configEntry = configEntry;
         this.targetList = targetList;
         this.prefs  = prefs;
-        imageChooser       = new JFileChooser( this.prefs.get(IMAGE_DIR, "" ) );
-        tokenOutputChooser = new JFileChooser( this.prefs.get(TOKEN_DIR, "" ) );
+        imageChooser       = new JFileChooser( this.prefs.get(Config.IMAGE_DIR, "" ) );
+        tokenOutputChooser = new JFileChooser( this.prefs.get(Config.TOKEN_DIR, "" ) );
         setImageFileChooserFilters(imageChooser);
         setTokenFileChooserFilters(tokenOutputChooser);
         setContentPane(contentPane);
@@ -119,7 +117,7 @@ public class ConfigureCharacterDialog extends JDialog {
                  int returnVal = imageChooser.showOpenDialog(null);
                  if (returnVal == JFileChooser.APPROVE_OPTION) {
                      File imageFile = imageChooser.getSelectedFile();
-                     prefs.put(IMAGE_DIR, imageFile.getParent());
+                     prefs.put(Config.IMAGE_DIR, imageFile.getParent());
                      configEntry.setPortraitFilePath(imageFile.getAbsolutePath());
                      setPortraitImageButton.setEnabled(false);
                      checkToEnableOkButton();
@@ -131,7 +129,7 @@ public class ConfigureCharacterDialog extends JDialog {
                 int returnVal = imageChooser.showOpenDialog(null);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                      File imageFile = imageChooser.getSelectedFile();
-                     prefs.put(IMAGE_DIR, imageFile.getParent());
+                     prefs.put(Config.IMAGE_DIR, imageFile.getParent());
                      configEntry.setImageFilePath(imageFile.getAbsolutePath());
                      setPogImageButton.setEnabled(false);
                      checkToEnableOkButton();
@@ -145,15 +143,15 @@ public class ConfigureCharacterDialog extends JDialog {
                 System.setProperty("apple.awt.fileDialogForDirectories", "true");
                 FileDialog dialog = new FileDialog(frame, "Save Token As", FileDialog.SAVE);
 
-                dialog.setFile(config.getTokenFileName());
-                dialog.setDirectory(config.getTokenFileDirectory());
+                dialog.setFile(configEntry.getTokenFileName());
+                dialog.setDirectory(configEntry.getTokenFileDirectory());
 
                 dialog.setVisible(true);
 
                 if (dialog.getFile() != null) {
                     configEntry.setTokenFileName(dialog.getFile());
                     configEntry.setTokenFileDirectory(dialog.getDirectory());
-                    prefs.put(TOKEN_DIR, configEntry.getTokenFileDirectory());
+                    prefs.put(Config.TOKEN_DIR, configEntry.getTokenFileDirectory());
                     setTokenLocationButton.setEnabled(false);
                     checkToEnableOkButton();
                 }

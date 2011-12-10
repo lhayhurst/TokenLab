@@ -1,6 +1,8 @@
 package net.sozinsoft.tokenlab;
 
 import java.io.*;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.prefs.Preferences;
 
@@ -11,10 +13,13 @@ import org.xml.sax.SAXException;
 public class Config {
 
     public static final String TOKENLAB_CHARACTER_MAPPINGS = "TOKENLAB_CHARACTER_MAPPINGS";
+    public static final String TOKEN_DIR = "TOKEN_DIR";
+    public static final String IMAGE_DIR = "IMAGE_DIR";
+    private static final String POG_DIR = "POG_DIR";
+    public static final String TOKEN_FILE_EXTENSION = ".rptok";
     private HashMap<String, ConfigEntry> configs;
     private Preferences prefs;
     private String xmlFileLocation;
-    private String outputTokenDirectory;
 	private String configFileName;
 
     public Config( Preferences prefs ) throws IOException {
@@ -62,7 +67,7 @@ public class Config {
     }
 
 	public ConfigEntry addConfigEntry( String name, String imagePath, String portraitPath, String tokenFileDirectory ) {
-        ConfigEntry ce = new ConfigEntry();
+        ConfigEntry ce = new ConfigEntry(this);
         ce.setCharacterName(name);
         ce.setImageFilePath(imagePath);
         ce.setPortraitFilePath(portraitPath);
@@ -86,11 +91,43 @@ public class Config {
 	}
 
     public String getOutputTokenDirectory() {
-        return outputTokenDirectory;
+        return prefs.get(TOKEN_DIR, "");
     }
 
     public void setOutputTokenDirectory(String outputTokenDirectory) {
-        this.outputTokenDirectory = outputTokenDirectory;
+        prefs.put(TOKEN_DIR, outputTokenDirectory);
+    }
+
+    public String getPogDirectory() {
+        return prefs.get(POG_DIR, "");
+    }
+
+    public void setPogDirectory(String pogDirectory) {
+        prefs.put(POG_DIR, pogDirectory);
+    }
+
+    public String getPortraitDirectory() {
+        return prefs.get(IMAGE_DIR, "");
+    }
+
+    public void setPortraitDirectory(String portraitDirectory) {
+        prefs.put(IMAGE_DIR, portraitDirectory);
+    }
+
+    public void defaultConfigEntries() {
+        for (ConfigEntry entry : configs.values() ) {
+            if (entry.getOutputTokenTo() == null) {
+                entry.setTokenFileDirectory(this.getOutputTokenDirectory());
+                entry.resetDefaultTokenFilename();
+            }
+
+            if (entry.getPortraitFilePath() == null) {
+            }
+        }
+    }
+
+    public Collection<ConfigEntry> getEntries() {
+        return Collections.unmodifiableCollection(configs.values());
     }
 
     public class ConfigEntry {
@@ -101,16 +138,15 @@ public class Config {
         private String tokenFileName;
         private String tokenFileDirectory;
 
-        public ConfigEntry() {
+        private final Config config;
 
+        ConfigEntry(Config config) {
+            this.config = config;
         }
 
-    	//public ConfigEntry( String name, String imagePath, String portraitPath, String outputTokenPath ) {
-    	//	this.CharacterName    = name;
-    	//	this.imageFilePath    = imagePath;
-    	//	this.portraitFilePath = portraitPath;
-    	//	this.outputTokenTo    = outputTokenPath;
-    	//}
+        public Config getConfig() {
+            return config;
+        }
 
         public String getCharacterName() {
 			return CharacterName;
@@ -156,19 +192,21 @@ public class Config {
             return tokenFileName;
         }
 
-        private String generateDefaultTokenFileName() {
+        private String generateDefaultFileName(String extension) {
             if (CharacterName == null || CharacterName.length() == 0) {
                 return null;
             }
 
-            String filename = CharacterName.replaceAll("[ ,'.]", "");
+            return CharacterName.replaceAll("[ ,'.]", "") + extension;
+        }
 
-            return filename + ".rptok";
+        private String generateDefaultTokenFileName() {
+            return generateDefaultFileName(TOKEN_FILE_EXTENSION);
         }
 
         public void setTokenFileName(String tokenFileName) {
-            if ( tokenFileName != null && ! tokenFileName.endsWith(".rptok")) {
-                tokenFileName = tokenFileName + ".rptok";
+            if ( tokenFileName != null && ! tokenFileName.endsWith(TOKEN_FILE_EXTENSION)) {
+                tokenFileName = tokenFileName + TOKEN_FILE_EXTENSION;
             }
 
             this.tokenFileName = tokenFileName;
@@ -184,6 +222,14 @@ public class Config {
 
         public void resetDefaultTokenFilename() {
             setTokenFileName(generateDefaultTokenFileName());
+        }
+
+        public String getPortraitFileName() {
+            // TODO: clean this up to be more efficient
+            if (portraitFilePath == null) {
+                return null;
+            }
+            return new File(portraitFilePath).getName();
         }
     }
 

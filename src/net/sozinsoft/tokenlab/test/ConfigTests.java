@@ -5,8 +5,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.prefs.Preferences;
 
 public class ConfigTests {
 
@@ -86,4 +88,44 @@ public class ConfigTests {
         entry.setImageFilePath("something else");
         assertTrue(entry.isOk());
     }
+
+    @Test
+    public void shouldCorrectlyUpdateUnconfiguredOutputEntries() {
+        Map<String, String> filenames = new HashMap<String, String>() {{
+           put("Jur Revicious", "JurRevicious.rptok");
+           put("Jacen Salem", "JacenSalem.rptok");
+           put("Dragon, Ancient Black", "DragonAncientBlack.rptok");
+           put("Kuroshi O'Koye", "KuroshiOKoye.rptok");
+           put("James T. Kirk", "JamesTKirk.rptok");
+        }};
+
+        Preferences mockPrefs = Preferences.userNodeForPackage(this.getClass());
+
+        Config config = null;
+        try {
+            config = new Config(mockPrefs);
+        } catch (IOException exception) {
+            fail("IO Exception - shouldn't be trying to load the file, however.");
+        }
+
+        String outputDirectory = "/Test/Tokens/";
+        String portraitDirectory = "/Test/Portraits/";
+        String pogDirectory = "/Test/Pogs/";
+        config.setOutputTokenDirectory(outputDirectory);
+        config.setPortraitDirectory(portraitDirectory);
+        config.setPogDirectory(pogDirectory);
+        for(String characterName : filenames.keySet()) {
+            Config.ConfigEntry entry = config.addConfigEntry(characterName);
+            assertEquals(null, entry.getOutputTokenTo());
+        }
+
+        config.defaultConfigEntries();
+
+        for (Config.ConfigEntry entry : config.getEntries() ) {
+            assertEquals(outputDirectory + entry.getTokenFileName(), entry.getOutputTokenTo());
+//            assertEquals(portraitDirectory + entry.getPortraitFileName(), entry.getPortraitFilePath());
+        }
+    }
+
+
 }
