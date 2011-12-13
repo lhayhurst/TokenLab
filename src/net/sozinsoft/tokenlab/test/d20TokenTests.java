@@ -44,6 +44,19 @@ public class d20TokenTests {
         assertEquals(10, d20tok.getLevel().intValue());
         assertEquals("Bbn 10", d20tok.getClassAbbreviation());
     }
+
+    @Test
+    public void testCore() throws Exception {
+
+        List<Character> characters = dig.getCharacters();
+        Character dss = characters.get(0);
+
+        D20Token d20tok = new D20Token(dss);
+        assertEquals( 90, d20tok.getClassHitpoints().intValue() );
+        assertEquals( 10, d20tok.getBaseAttackBonus().intValue());
+    }
+
+
     @Test
     public void testPathfinderTokenCreation() throws Exception {
         Config config = new Config();

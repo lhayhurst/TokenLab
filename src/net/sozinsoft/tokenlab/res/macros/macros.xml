@@ -142,6 +142,16 @@
                applyToSelectedTokens="0"
                file="res/macros/SpellMacro.txt"/>
 
+    <macro name="Resources"
+               group="Special Abilities"
+               sortPrefix="204"
+               buttonColor="navy"
+               fontColor="white"
+               fontSize="1.00em"
+               minWidth="53"
+               applyToSelectedTokens="0"
+               file="res/macros/TokenResourceMacro.txt"/>
+
     <macro name="Skill Check"
                group="Skills"
                sortPrefix="300"

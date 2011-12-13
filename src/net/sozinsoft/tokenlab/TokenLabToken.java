@@ -30,6 +30,8 @@ public class TokenLabToken {
     public static final String WEIGHT = "Weight";
     private static final String SPEED = "Speed";
     private static final String LEVEL = "Level";
+    private static final String CLASS_HP = "ClassHP";
+    private static final String BASE_ATTACK_BONUS = "BaseAttackBonus";
 
     private Token _token;
 
@@ -37,8 +39,14 @@ public class TokenLabToken {
 
     public void setCommonProperties(  ICharacter character, HashMap<String, Object> propertyMap ) throws IOException {
         setCoreProperties(character, propertyMap);
-
+        setHitPoints(character, propertyMap);
+        propertyMap.put( BASE_ATTACK_BONUS, character.getBaseAttackBonus() );
     }
+
+    private void setHitPoints(ICharacter character, HashMap<String, Object> propertyMap) {
+        propertyMap.put( CLASS_HP, character.getClassHitpoints().toString()  );
+    }
+
 
     private void setCoreProperties( ICharacter character, HashMap<String, Object> propertyMap) {
 

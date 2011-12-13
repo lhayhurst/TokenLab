@@ -32,9 +32,9 @@ public class HeroLabPathfinderDigester extends HeroLabDigester {
     }
 
 
-    public void saveCharacter(Config config, Character c) throws Exception {
+    public boolean saveCharacter(Config config, Character c) throws Exception {
         PathfinderToken pt = new PathfinderToken(c);
-        this.saveCharacter( config, pt );
+        return this.saveCharacter( config, pt );
     }
 
 

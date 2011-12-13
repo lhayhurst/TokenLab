@@ -10,3 +10,15 @@ Weight:0 lb
 Age
 Alignment:<alignment>
 Deity:<deity>
+-------------------|CORE|-------------------
+MaxHP:[r:ClassHP+MiscHP]
+CurrentHP:[r:MaxHP]
+HPChange
+ClassHP
+MiscHP
+TempHP:0
+Bloodied:[r:floor(MaxHP/2)]
+BaseAttackBonus
+AtkTempBonus
+DmgTempBonus
+SizeMod

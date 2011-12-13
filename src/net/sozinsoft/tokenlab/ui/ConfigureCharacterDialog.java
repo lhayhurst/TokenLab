@@ -16,6 +16,9 @@ public class ConfigureCharacterDialog extends JDialog {
     private JButton setPortraitImageButton;
     private JButton setPogImageButton;
     private JButton setTokenLocationButton;
+    private JTextField portraitImageField;
+    private JTextField pogImageField;
+    private JTextField tokenOutputField;
     private Config.ConfigEntry  configEntry;
     private final Preferences prefs;
     private JFileChooser imageChooser;
@@ -64,7 +67,9 @@ public class ConfigureCharacterDialog extends JDialog {
         });
     }
 
-    private void checkToEnableOkButton() {
+    private void postFieldUpdate(Config.ConfigEntry configEntry) {
+        updateFields(configEntry);
+
         if ( setPogImageButton.isEnabled() == false &&
              setPortraitImageButton.isEnabled() == false &&
              setTokenLocationButton.isEnabled() == false ) {
@@ -86,6 +91,13 @@ public class ConfigureCharacterDialog extends JDialog {
         getRootPane().setDefaultButton(buttonOK);
         buttonOK.setEnabled(false);
 
+        updateFields(configEntry);
+
+        // for now - have to select using button
+        portraitImageField.setEnabled(false);
+        pogImageField.setEnabled(false);
+        tokenOutputField.setEnabled(false);
+
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onOK();
@@ -98,7 +110,7 @@ public class ConfigureCharacterDialog extends JDialog {
             }
         });
 
-// call onCancel() when cross is clicked
+        // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -106,7 +118,7 @@ public class ConfigureCharacterDialog extends JDialog {
             }
         });
 
-// call onCancel() on ESCAPE
+        // call onCancel() on ESCAPE
         contentPane.registerKeyboardAction(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onCancel();
@@ -120,7 +132,7 @@ public class ConfigureCharacterDialog extends JDialog {
                      prefs.put(Config.IMAGE_DIR, imageFile.getParent());
                      configEntry.setPortraitFilePath(imageFile.getAbsolutePath());
                      setPortraitImageButton.setEnabled(false);
-                     checkToEnableOkButton();
+                     postFieldUpdate(configEntry);
                  }
             }
         });
@@ -132,7 +144,7 @@ public class ConfigureCharacterDialog extends JDialog {
                      prefs.put(Config.IMAGE_DIR, imageFile.getParent());
                      configEntry.setImageFilePath(imageFile.getAbsolutePath());
                      setPogImageButton.setEnabled(false);
-                     checkToEnableOkButton();
+                     postFieldUpdate(configEntry);
                  }
             }
         });
@@ -153,10 +165,16 @@ public class ConfigureCharacterDialog extends JDialog {
                     configEntry.setTokenFileDirectory(dialog.getDirectory());
                     prefs.put(Config.TOKEN_DIR, configEntry.getTokenFileDirectory());
                     setTokenLocationButton.setEnabled(false);
-                    checkToEnableOkButton();
+                    postFieldUpdate(configEntry);
                 }
             }
         });
+    }
+
+    private void updateFields(Config.ConfigEntry configEntry) {
+        portraitImageField.setText(configEntry.getPortraitFilePath());
+        pogImageField.setText(configEntry.getImageFilePath());
+        tokenOutputField.setText(configEntry.getOutputTokenTo());
     }
 
     private void onOK() {
@@ -165,7 +183,7 @@ public class ConfigureCharacterDialog extends JDialog {
     }
 
     private void onCancel() {
-// add your code here if necessary
+        // add your code here if necessary
         dispose();
     }
 

@@ -130,6 +130,19 @@ public class Config {
         return Collections.unmodifiableCollection(configs.values());
     }
 
+    public ConfigEntry get(String name) {
+        return this.configs.get(name);
+    }
+
+    public ConfigEntry getOrCreate(String name) {
+        ConfigEntry entry = get(name);
+        if (entry == null) {
+            entry = addConfigEntry(name);
+        }
+
+        return entry;
+    }
+
     public class ConfigEntry {
 		
     	private String CharacterName;
@@ -232,10 +245,6 @@ public class Config {
             return new File(portraitFilePath).getName();
         }
     }
-
-	public ConfigEntry get(String name) {
-		return this.configs.get(name);
-	}
 }
 
 

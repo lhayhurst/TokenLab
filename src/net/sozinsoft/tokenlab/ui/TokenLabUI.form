@@ -38,14 +38,6 @@
               <toolTipText value="Configure portfolio"/>
             </properties>
           </component>
-          <component id="ed516" class="javax.swing.JButton" binding="configureSelectedButton" default-binding="true">
-            <constraints/>
-            <properties>
-              <icon value="net/sozinsoft/tokenlab/res/Settings.png"/>
-              <text value=""/>
-              <toolTipText value="Configure Selected"/>
-            </properties>
-          </component>
           <component id="1c5ba" class="javax.swing.JButton" binding="exportSelectedButton" default-binding="true">
             <constraints/>
             <properties>
@@ -76,6 +68,9 @@
             <constraints/>
             <properties>
               <model/>
+              <selectionBackground color="-3487030"/>
+              <selectionForeground color="-16777216"/>
+              <toolTipText value="Double click to edit token."/>
             </properties>
           </component>
         </children>
