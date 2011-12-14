@@ -7,6 +7,7 @@
            fontSize="1.10em"
            minWidth="323"
            applyToSelectedTokens="0"
+           allowPlayersToEdit="1"
            file="res/macros/CharacterSheetMacro.txt"/>
     <macro name="Roll Initiative"
            group="Generic"
@@ -16,6 +17,7 @@
            fontSize="1.10em"
            minWidth="323"
            applyToSelectedTokens="1"
+           allowPlayersToEdit="1"
            file="res/macros/InitiativeMacro.txt"/>
     <macro name="HP Change"
            group="Generic"
@@ -25,6 +27,7 @@
            fontSize="1.10em"
            minWidth="323"
            applyToSelectedTokens="1"
+           allowPlayersToEdit="1"
            file="res/macros/HPChange.txt"/>
     <macro name="Change Temporary Bonuses"
            group="Generic"
@@ -34,6 +37,7 @@
            fontSize="1.10em"
            minWidth="323"
            applyToSelectedTokens="1"
+           allowPlayersToEdit="1"
            file="res/macros/ChangeTemporaryBonus.txt"/>
     <macro name="Extended Rest"
            group="Generic"
@@ -43,6 +47,7 @@
            fontSize="1.00em"
            minWidth="323"
            applyToSelectedTokens="1"
+           allowPlayersToEdit="1"
            file="res/macros/ExtendedRestMacro.txt"/>
     <macro name="Fort Save"
            group="Generic"
@@ -52,6 +57,7 @@
            fontSize="1.00em"
            minWidth="70"
            applyToSelectedTokens="1"
+           allowPlayersToEdit="1"
            file="res/macros/FortitudeSaveMacro.txt"/>
     <macro name="Ref Save"
                group="Generic"
@@ -61,6 +67,7 @@
                fontSize="1.00em"
                minWidth="70"
                applyToSelectedTokens="1"
+           allowPlayersToEdit="1"
                file="res/macros/ReflexSaveMacro.txt"/>
     <macro name="Will Save"
                group="Generic"
@@ -70,6 +77,7 @@
                fontSize="1.00em"
                minWidth="70"
                applyToSelectedTokens="1"
+           allowPlayersToEdit="1"
                file="res/macros/WillSaveMacro.txt"/>
     <macro name="CMB Roll"
                group="Generic"
@@ -79,6 +87,7 @@
                fontSize="1.00em"
                minWidth="70"
                applyToSelectedTokens="1"
+           allowPlayersToEdit="1"
                file="res/macros/CMBMacro.txt"/>
 
     <macro name="Standard Attack"
@@ -88,7 +97,8 @@
                fontColor="white"
                fontSize="1.00em"
                minWidth="323"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+           allowPlayersToEdit="1"
                file="res/macros/AttackMacroBasic.txt"/>
 
     <macro name="Attack - Full"
@@ -98,7 +108,8 @@
                fontColor="black"
                fontSize="1.00em"
                minWidth="13"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+           allowPlayersToEdit="1"
                file="res/macros/AttackMacroBasic.txt"/>
 
 
@@ -109,7 +120,8 @@
                fontColor="white"
                fontSize="1.00em"
                minWidth="30"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+           allowPlayersToEdit="0"
                file="res/macros/FeatsMacro.txt"/>
 
     <macro name="Traits"
@@ -119,7 +131,8 @@
                fontColor="white"
                fontSize="1.00em"
                minWidth="30"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+           allowPlayersToEdit="0"
                file="res/macros/TraitsMacro.txt"/>
 
     <macro name="Abilities"
@@ -129,7 +142,8 @@
                fontColor="white"
                fontSize="1.00em"
                minWidth="37"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="0"
                file="res/macros/AbilitiesMacro.txt"/>
 
     <macro name="Spells"
@@ -139,7 +153,8 @@
                fontColor="white"
                fontSize="1.00em"
                minWidth="30"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="0"
                file="res/macros/SpellMacro.txt"/>
 
     <macro name="Resources"
@@ -149,7 +164,8 @@
                fontColor="white"
                fontSize="1.00em"
                minWidth="53"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="0"
                file="res/macros/TokenResourceMacro.txt"/>
 
     <macro name="Skill Check"
@@ -159,24 +175,18 @@
                fontColor="black"
                fontSize="1.00em"
                minWidth="99"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="1"
                file="res/macros/SkillMacro.txt"/>
 
-    <macro name="cStatParser"
-               group="SUBMACROS"
-               sortPrefix="400"
-               buttonColor="darkgray"
-               fontColor="black"
-               fontSize="0.90em"
-               applyToSelectedTokens="0"
-               file="res/macros/cStatParserMacro.txt"/>
      <macro name="abil"
                group="SUBMACROS"
                sortPrefix="401"
                buttonColor="darkgray"
                fontColor="black"
                fontSize="0.90em"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="0"
                file="res/macros/abil.txt"/>
      <macro name="spell1"
                group="SUBMACROS"
@@ -184,7 +194,8 @@
                buttonColor="darkgray"
                fontColor="black"
                fontSize="0.90em"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="0"
                file="res/macros/spell1.txt"/>
      <macro name="spell2"
                group="SUBMACROS"
@@ -192,7 +203,8 @@
                buttonColor="darkgray"
                fontColor="black"
                fontSize="0.90em"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="0"
                file="res/macros/spell2.txt"/>
      <macro name="spell3"
                group="SUBMACROS"
@@ -200,6 +212,7 @@
                buttonColor="darkgray"
                fontColor="black"
                fontSize="0.90em"
-               applyToSelectedTokens="0"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="0"
                file="res/macros/spell3.txt"/>
 </macros>

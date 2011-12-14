@@ -4,6 +4,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css">
 <title>Abilities</title>
+<link rel="stylesheet" type="text/css" href="css@Lib:TokenLab">
 </head>
 <body>
 [h: SpecialAbilityNames = json.fields(SpecialAbilitiesJSON)]

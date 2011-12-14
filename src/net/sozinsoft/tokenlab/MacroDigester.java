@@ -44,7 +44,7 @@ public class MacroDigester {
            file="res/macros/CharacterSheet.txt">
          */
 
-        d.addCallMethod( "macros/macro", "addMacro", 9 );
+        d.addCallMethod( "macros/macro", "addMacro", 10 );
         d.addCallParam( "macros/macro", 0, "name" );
         d.addCallParam( "macros/macro", 1, "group" );
         d.addCallParam( "macros/macro", 2, "sortPrefix" );
@@ -53,7 +53,8 @@ public class MacroDigester {
         d.addCallParam( "macros/macro", 5, "fontSize" );
         d.addCallParam( "macros/macro", 6, "minWidth" );
         d.addCallParam( "macros/macro", 7, "applyToSelectedTokens" );
-        d.addCallParam( "macros/macro", 8, "file" );
+        d.addCallParam( "macros/macro", 8, "allowPlayersToEdit");
+        d.addCallParam( "macros/macro", 9, "file" );
 
         d.parse( ResourceManager.getMacroConfigFile() );
     }
@@ -61,9 +62,9 @@ public class MacroDigester {
     private HashMap<String, HashMap<String, MacroEntry >> macroEntries = new HashMap<String, HashMap<String, MacroEntry>>();
 
     public void addMacro( String name, String group, String sortPrefix, String buttonColor, String fontColor,
-                          String fontSize, String minWidth, String applyToSelectedTokens, String file  ) {
+                          String fontSize, String minWidth, String applyToSelectedTokens, String allowPlayersToEdit, String file  ) {
         MacroEntry me = new MacroEntry( name, group , sortPrefix , buttonColor , fontColor , fontSize,
-                                        minWidth , applyToSelectedTokens , file );
+                                        minWidth , applyToSelectedTokens , allowPlayersToEdit, file );
         HashMap<String, MacroEntry> groupMap = null;
         if ( macroEntries.containsKey(me.group)) {
             groupMap = macroEntries.get(me.group);
@@ -90,11 +91,12 @@ public class MacroDigester {
         String fontSize;
         String minWidth;
         String applyToSelectedTokens;
+        String allowPlayersToEdit;
         String file;
         String toolTip = "";
 
         public MacroEntry(String name, String group, String sortPrefix, String buttonColor, String fontColor, String fontSize,
-                          String minWidth, String applyToSelectedTokens, String file ) {
+                          String minWidth, String applyToSelectedTokens, String allowPlayersToEdit, String file ) {
             this.name = name;
             this.group = group;
             this.sortPrefix = sortPrefix ;
@@ -103,6 +105,7 @@ public class MacroDigester {
             this.fontSize  = fontSize ;
             this.minWidth  = minWidth;
             this.applyToSelectedTokens  = applyToSelectedTokens ;
+            this.allowPlayersToEdit = allowPlayersToEdit;
             this.file = file;
         }
 
@@ -132,7 +135,7 @@ public class MacroDigester {
             if ( applyToSelectedTokens.equals("1")) {
                 applyToTokens  = true;
             }
-            return new MacroButtonProperties(index, //index
+            MacroButtonProperties mbp = new MacroButtonProperties(index, //index
                     this.buttonColor, //colorKey,
                     MacroButtonHotKeyManager.HOTKEYS[0], //hotkey
                     replacer.replace( readFileAsString(ResourceManager.getResouceByName( this.file ).getAbsolutePath() ) ),
@@ -147,6 +150,8 @@ public class MacroDigester {
                     this.minWidth, //minWidth
                     this.minWidth, //maxWidth
                     this.toolTip); //toolTip
+            mbp.setAllowPlayerEdits( allowPlayersToEdit.equals("1")? true : false );
+            return mbp;
         }
     }
 }

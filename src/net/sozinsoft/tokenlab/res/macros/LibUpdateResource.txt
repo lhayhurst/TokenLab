@@ -1,10 +1,12 @@
+
 [h: resourceName = json.get(macro.args, "resourceName")]
 [h: resourceDirection = json.get(macro.args, "direction")]
-[h: token = json.get(macro.args, "ID")]
-[h: ResourcesJSON = json.get(macro.args, "resourcesJSON" )]
+[h: activeToken = json.get( macro.args, "ID" )]
+[h: ResourcesJSON = json.get( macro.args, "Resources" )]
 [h: Resource =  json.get( ResourcesJSON, resourceName )]
 [h: used = json.get( Resource, "used" )]
 [h: newValue = 0]
+
 
 [IF( resourceDirection == "up"), CODE: {
     [h:newValue = add( used, 1 )]
@@ -15,13 +17,10 @@
 }]
 
 [IF( resourceDirection == "reset"), CODE: {
-    [h:newValue = subtract( used, 0 )]
+    [h:newValue = 0]
 }]
 
-
 [h:Resource = json.set(Resource, "used", newValue)]
-[h:Resources = json.set( ResourcesJSON, resourceName, Resource )]
-[h:setProperty( ResourcesJSON, Resources, token )]
-[h:args = json.set( "{}", "Resources", Resources, "ID", token )]
-
-[MACRO( "ResourceFrame@Lib:TokenLab") : args ]
+[h: Resources = json.set(  ResourcesJSON, resourceName, Resource )]
+[h:Return = json.set( "{}",  "Resources", Resources, "ID", activeToken, "doSave", "1" )]
+[MACRO( "ResourceFrame@Lib:TokenLab" ): Return ]

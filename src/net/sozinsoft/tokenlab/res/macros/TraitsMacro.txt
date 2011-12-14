@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css">
 <title>Traits</title>
+<link rel="stylesheet" type="text/css" href="css@Lib:TokenLab">
 </head>
 <body>
 <h1><u>[r:getProperty("Character")] Traits </u></h1>
