@@ -13,11 +13,11 @@ import javax.xml.bind.JAXBException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 import java.util.prefs.Preferences;
 
 public class TokenLabUI {
@@ -28,9 +28,10 @@ public class TokenLabUI {
     JButton exportAllButton;
     JButton exportSelectedButton;
     JFileChooser herolabsXMLChooser ;
+    boolean contextMenuEnabled;
 
     JPanel panel;
-    private JButton configureSelectedButton;
+    private JButton configurePortfolioButton;
     Config config;
     Preferences prefs;
 
@@ -73,16 +74,14 @@ public class TokenLabUI {
 
 
         importButton.setEnabled(true);
+        configurePortfolioButton.setEnabled(true);
         exportAllButton.setEnabled(false);
         exportSelectedButton.setEnabled(false);
-        configureSelectedButton.setEnabled(false);
-
 
         setXMLChooserFileFilter(herolabsXMLChooser);
 
         IconListRenderer listRenderer = new IconListRenderer( config, this );
         herolabsCharacterList.setCellRenderer(listRenderer);
-
     }
 
 
@@ -138,88 +137,162 @@ public class TokenLabUI {
                         herolabsCharacterList.validate();
 
                     } catch (JAXBException je) {
-                        je.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                        je.printStackTrace();
                     }
                 }
             }
 
         });
 
-        configureSelectedButton.addActionListener(new ActionListener() {
+        configurePortfolioButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                //get the selected item
-                Object[] selectedValues = herolabsCharacterList.getSelectedValues();
-                for (Object object : selectedValues) {
+                PortfolioConfigurationDialog dialog = new PortfolioConfigurationDialog(config);
+                dialog.pack();
+                dialog.setVisible(true);
 
-                    Character character = (Character) object;
-                    Config.ConfigEntry entry = config.get(character.getName());
-                    if (entry == null) {
-                        entry = config.addConfigEntry(character.getName());
-                    }
-                    ConfigureCharacterDialog dialog = new ConfigureCharacterDialog(herolabsCharacterList, entry, prefs);
-                    dialog.pack();
-                    dialog.setVisible(true);
-
-                }
+                updateTokens();
             }
         });
+
         herolabsCharacterList.addListSelectionListener(new ListSelectionListener() {
             public void valueChanged(ListSelectionEvent e) {
-                configureSelectedButton.setEnabled(true);
+                contextMenuEnabled = true;
                 exportSelectedButton.setEnabled(true);
             }
         });
-        exportSelectedButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                Character c = (Character) herolabsCharacterList.getModel().getElementAt(herolabsCharacterList.getSelectedIndex());
-                Config.ConfigEntry ce = config.get(c.getName());
-                if (ce != null && ce.isOk()) {
-                    exportCharacter();
-                } else {
-                    JOptionPane.showMessageDialog(panel, "The character you selected hasn't been configured yet.  Please configure " +
-                            "and try again.", "Export Warning", JOptionPane.WARNING_MESSAGE);
+
+        herolabsCharacterList.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent mouseEvent) {
+                if (mouseEvent.getClickCount() == 2) {
+                    configureSelectedCharacters();
+                }
+            }
+
+            public void mouseReleased(MouseEvent mouseEvent) {
+                handleRightClick(mouseEvent);
+            }
+
+            public void mousePressed(MouseEvent mouseEvent) {
+                handleRightClick(mouseEvent);
+            }
+
+            private void handleRightClick(MouseEvent mouseEvent) {
+                if (mouseEvent.isPopupTrigger() && mouseEvent.getClickCount() == 1) {
+                    herolabsCharacterList.setSelectedIndex(herolabsCharacterList.locationToIndex(mouseEvent.getPoint()));
+                    showContextMenu(herolabsCharacterList, mouseEvent);
                 }
             }
         });
+
+        exportSelectedButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                exportSelectedCharacters();
+            }
+        });
+
         exportAllButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 //first select only valid characters
                 ListModel lm = herolabsCharacterList.getModel();
                 LinkedList<Integer> selectedIndices = new LinkedList<Integer>();
-                for ( int i = 0; i < lm.getSize(); i++ )
-                {
-                    Character c = (Character)lm.getElementAt(i);
+                for (int i = 0; i < lm.getSize(); i++) {
+                    Character c = (Character) lm.getElementAt(i);
                     Config.ConfigEntry ce = config.get(c.getName());
-                    if ( ce != null && ce.isOk() ) {
+                    if (ce != null && ce.isOk()) {
                         selectedIndices.add(i);
                     }
                 }
                 int[] index = new int[selectedIndices.size()];
-                for ( int i = 0; i < selectedIndices.size(); i++ ) {
-                    index[i] = selectedIndices.get( i );
+                for (int i = 0; i < selectedIndices.size(); i++) {
+                    index[i] = selectedIndices.get(i);
                 }
 
-                herolabsCharacterList.setSelectedIndices( index );
-                exportCharacter();
+                herolabsCharacterList.setSelectedIndices(index);
+                exportCharacters();
             }
         });
+    }
+
+    private void showContextMenu(JList characterList, MouseEvent mouseEvent) {
+        if (contextMenuEnabled) {
+            JPopupMenu menu = new JPopupMenu();
+            JMenuItem menuItem;
+
+            menuItem = new JMenuItem("Configure character...");
+            menuItem.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent actionEvent) {
+                    configureSelectedCharacters();
+                }
+            });
+            menu.add(menuItem);
+
+            menuItem = new JMenuItem("Export character...");
+            menuItem.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent actionEvent) {
+                    exportSelectedCharacters();
+                }
+            });
+            menu.add(menuItem);
+
+            menu.show(characterList, mouseEvent.getX(), mouseEvent.getY());
+        }
+    }
+
+    private void exportSelectedCharacters() {
+        if (herolabsCharacterList.getSelectedIndex() >= 0 ) {
+            Character c = (Character) herolabsCharacterList.getModel().getElementAt(herolabsCharacterList.getSelectedIndex());
+            Config.ConfigEntry ce = config.get(c.getName());
+            if (ce != null && ce.isOk()) {
+                exportCharacters();
+            } else {
+                JOptionPane.showMessageDialog(panel, "The character you selected hasn't been configured yet.  Please configure " +
+                        "and try again.", "Export Warning", JOptionPane.WARNING_MESSAGE);
+            }
+        }
+    }
+
+    private void configureSelectedCharacters() {
+        //get the selected item
+        for (Config.ConfigEntry entry : getSelectedCharacters()) {
+            ConfigureCharacterDialog dialog = new ConfigureCharacterDialog(herolabsCharacterList, entry, prefs);
+            dialog.pack();
+            dialog.setVisible(true);
+        }
+    }
+
+    private Collection<Config.ConfigEntry> getSelectedCharacters() {
+        final Collection<Config.ConfigEntry> entries = new ArrayList<Config.ConfigEntry>();
+        
+        Object[] selectedValues = herolabsCharacterList.getSelectedValues();
+        for (Object object : selectedValues) {
+            entries.add(config.getOrCreate(((Character) object).getName()));
+        }
+
+        return entries;
+    }
+
+    private void updateTokens() {
+        System.out.println("Would be updatin'");
+        config.defaultConfigEntries();
     }
 
     private void errorDialog(String title, String error) {
         JOptionPane.showMessageDialog(panel, error, title, JOptionPane.ERROR_MESSAGE);
     }
 
-    private void exportCharacter() {
 
+    private void exportCharacters() {
         Object [] selectedValues = herolabsCharacterList.getSelectedValues();
         HeroLabPathfinderDigester dig = new HeroLabPathfinderDigester();
         boolean success = true;
+        ArrayList<Character> notExported = new ArrayList<Character>();
+        
         for ( Object object : selectedValues ) {
-
             Character character = (Character) object;
             try {
-                dig.saveCharacter(config, character);
-
+                if (!dig.saveCharacter(config, character) ) {
+                    notExported.add(character);
+                }
             } catch (IOException io) {
                 success = false;
                 errorDialog( io.getMessage(), "Something bad happened:\\n\\n" + io.getStackTrace() );
@@ -233,12 +306,18 @@ public class TokenLabUI {
                 errorDialog( e.getMessage(), "Something bad happened:\\n\\n" + e.getStackTrace() );
             }
         }
+        
         if ( success ) {
-            JOptionPane.showMessageDialog(panel, "Successfully exported your selected Maptools token(s).");
+            String message = "Successfully exported " + (selectedValues.length - notExported.size()) + " out of " + selectedValues.length + " Maptools token(s).";
+            if (!notExported.isEmpty()) {
+                message += "  " + notExported.size() + " tokens were not exported as they are not fully configured.";
+                // TODO: do something more useful with this collection
+            }
+                    
+            JOptionPane.showMessageDialog(panel, message);
         }
-
     }
-
+    
     public class IconListRenderer extends DefaultListCellRenderer {
 
         public static final String NOTOK = "notok";
@@ -275,7 +354,7 @@ public class TokenLabUI {
 
             if ( ce == null ) {
                 icon = icons.get(NOTOK);
-                label.setToolTipText( "Press to enter configuration information for this character");
+                label.setToolTipText( "Double-click to enter configuration information for this character, right-click for more options");
             } else {
                 if ( ce.isOk() ) {
                     icon = icons.get(OK);

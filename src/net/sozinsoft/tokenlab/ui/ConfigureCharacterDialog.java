@@ -10,14 +10,15 @@ import java.io.File;
 import java.util.prefs.Preferences;
 
 public class ConfigureCharacterDialog extends JDialog {
-    public static final String IMAGE_DIR = "IMAGE_DIR";
-    public static final String TOKEN_DIR = "TOKEN_DIR";
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
     private JButton setPortraitImageButton;
     private JButton setPogImageButton;
     private JButton setTokenLocationButton;
+    private JTextField portraitImageField;
+    private JTextField pogImageField;
+    private JTextField tokenOutputField;
     private Config.ConfigEntry  configEntry;
     private final Preferences prefs;
     private JFileChooser imageChooser;
@@ -66,7 +67,9 @@ public class ConfigureCharacterDialog extends JDialog {
         });
     }
 
-    private void checkToEnableOkButton() {
+    private void postFieldUpdate(Config.ConfigEntry configEntry) {
+        updateFields(configEntry);
+
         if ( setPogImageButton.isEnabled() == false &&
              setPortraitImageButton.isEnabled() == false &&
              setTokenLocationButton.isEnabled() == false ) {
@@ -75,18 +78,25 @@ public class ConfigureCharacterDialog extends JDialog {
     }
 
 
-    public ConfigureCharacterDialog( JList targetList, final Config.ConfigEntry config, final Preferences prefs ) {
-        this.configEntry = config;
+    public ConfigureCharacterDialog( JList targetList, final Config.ConfigEntry configEntry, final Preferences prefs ) {
+        this.configEntry = configEntry;
         this.targetList = targetList;
         this.prefs  = prefs;
-        imageChooser       = new JFileChooser( this.prefs.get(IMAGE_DIR, "" ) );
-        tokenOutputChooser = new JFileChooser( this.prefs.get(TOKEN_DIR, "" ) );
+        imageChooser       = new JFileChooser( this.prefs.get(Config.IMAGE_DIR, "" ) );
+        tokenOutputChooser = new JFileChooser( this.prefs.get(Config.TOKEN_DIR, "" ) );
         setImageFileChooserFilters(imageChooser);
         setTokenFileChooserFilters(tokenOutputChooser);
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
         buttonOK.setEnabled(false);
+
+        updateFields(configEntry);
+
+        // for now - have to select using button
+        portraitImageField.setEnabled(false);
+        pogImageField.setEnabled(false);
+        tokenOutputField.setEnabled(false);
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -100,7 +110,7 @@ public class ConfigureCharacterDialog extends JDialog {
             }
         });
 
-// call onCancel() when cross is clicked
+        // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -108,7 +118,7 @@ public class ConfigureCharacterDialog extends JDialog {
             }
         });
 
-// call onCancel() on ESCAPE
+        // call onCancel() on ESCAPE
         contentPane.registerKeyboardAction(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onCancel();
@@ -119,10 +129,10 @@ public class ConfigureCharacterDialog extends JDialog {
                  int returnVal = imageChooser.showOpenDialog(null);
                  if (returnVal == JFileChooser.APPROVE_OPTION) {
                      File imageFile = imageChooser.getSelectedFile();
-                     prefs.put(IMAGE_DIR, imageFile.getParent());
+                     prefs.put(Config.IMAGE_DIR, imageFile.getParent());
                      configEntry.setPortraitFilePath(imageFile.getAbsolutePath());
                      setPortraitImageButton.setEnabled(false);
-                     checkToEnableOkButton();
+                     postFieldUpdate(configEntry);
                  }
             }
         });
@@ -131,10 +141,10 @@ public class ConfigureCharacterDialog extends JDialog {
                 int returnVal = imageChooser.showOpenDialog(null);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                      File imageFile = imageChooser.getSelectedFile();
-                     prefs.put(IMAGE_DIR, imageFile.getParent());
+                     prefs.put(Config.IMAGE_DIR, imageFile.getParent());
                      configEntry.setImageFilePath(imageFile.getAbsolutePath());
                      setPogImageButton.setEnabled(false);
-                     checkToEnableOkButton();
+                     postFieldUpdate(configEntry);
                  }
             }
         });
@@ -145,20 +155,26 @@ public class ConfigureCharacterDialog extends JDialog {
                 System.setProperty("apple.awt.fileDialogForDirectories", "true");
                 FileDialog dialog = new FileDialog(frame, "Save Token As", FileDialog.SAVE);
 
-                dialog.setFile(config.getTokenFileName());
-                dialog.setDirectory(config.getTokenFileDirectory());
+                dialog.setFile(configEntry.getTokenFileName());
+                dialog.setDirectory(configEntry.getTokenFileDirectory());
 
                 dialog.setVisible(true);
 
                 if (dialog.getFile() != null) {
                     configEntry.setTokenFileName(dialog.getFile());
                     configEntry.setTokenFileDirectory(dialog.getDirectory());
-                    prefs.put(TOKEN_DIR, configEntry.getTokenFileDirectory());
+                    prefs.put(Config.TOKEN_DIR, configEntry.getTokenFileDirectory());
                     setTokenLocationButton.setEnabled(false);
-                    checkToEnableOkButton();
+                    postFieldUpdate(configEntry);
                 }
             }
         });
+    }
+
+    private void updateFields(Config.ConfigEntry configEntry) {
+        portraitImageField.setText(configEntry.getPortraitFilePath());
+        pogImageField.setText(configEntry.getImageFilePath());
+        tokenOutputField.setText(configEntry.getOutputTokenTo());
     }
 
     private void onOK() {
@@ -167,7 +183,7 @@ public class ConfigureCharacterDialog extends JDialog {
     }
 
     private void onCancel() {
-// add your code here if necessary
+        // add your code here if necessary
         dispose();
     }
 
