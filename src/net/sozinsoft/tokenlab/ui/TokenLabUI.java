@@ -75,6 +75,7 @@ public class TokenLabUI {
 
         importButton.setEnabled(true);
         configurePortfolioButton.setEnabled(false); // TODO: take off coming soon tooltip
+
         exportAllButton.setEnabled(false);
         exportSelectedButton.setEnabled(false);
 

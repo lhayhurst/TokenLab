@@ -30,14 +30,6 @@
               <toolTipText value="Import"/>
             </properties>
           </component>
-          <component id="919f3" class="javax.swing.JButton" binding="configurePortfolioButton">
-            <constraints/>
-            <properties>
-              <icon value="net/sozinsoft/tokenlab/res/Settings.png"/>
-              <text value=""/>
-              <toolTipText value="Configure Portfolio Defaults (coming soon!)"/>
-            </properties>
-          </component>
           <component id="1c5ba" class="javax.swing.JButton" binding="exportSelectedButton" default-binding="true">
             <constraints/>
             <properties>
@@ -54,6 +46,17 @@
               <text value=""/>
               <toolTipText value="Export All"/>
             </properties>
+          </component>
+          <component id="919f3" class="javax.swing.JButton" binding="configurePortfolioButton">
+            <constraints/>
+            <properties>
+              <icon value="net/sozinsoft/tokenlab/res/Settings.png"/>
+              <text value=""/>
+              <toolTipText value="Configure Portfolio Defaults (coming soon!)"/>
+            </properties>
+            <clientProperties>
+              <html.disable class="java.lang.Boolean" value="false"/>
+            </clientProperties>
           </component>
         </children>
       </toolbar>
