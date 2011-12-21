@@ -35,7 +35,7 @@
             <properties>
               <icon value="net/sozinsoft/tokenlab/res/Settings.png"/>
               <text value=""/>
-              <toolTipText value="Configure Portfolio Defaults (coming soon!)"/>
+              <toolTipText value="Configure Portfolio Defaults"/>
             </properties>
           </component>
           <component id="1c5ba" class="javax.swing.JButton" binding="exportSelectedButton" default-binding="true">

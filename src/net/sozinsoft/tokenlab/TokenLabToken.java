@@ -70,7 +70,7 @@ public class TokenLabToken {
     public Token createToken(ICharacter character, Config.ConfigEntry configEntry ) throws IOException {
         _token = new Token();
         Asset tokenImage = null;
-        File file = new File(configEntry.getImageFilePath());
+        File file = new File(configEntry.getPogFilePath());
         tokenImage = AssetManager.createAsset(file);
         AssetManager.putAsset(tokenImage);
         _token = new Token(character.getName(), tokenImage.getId());

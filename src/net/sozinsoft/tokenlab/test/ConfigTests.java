@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.prefs.Preferences;
@@ -74,7 +75,7 @@ public class ConfigTests {
     }
 
     @Test
-    public void shouldBeOKWhenPathAndImageAreSet() {
+    public void shouldBeOKWhenTokenPogAndPortraitAreSet() {
         Config config = new Config();
         Config.ConfigEntry entry = config.addConfigEntry("Jacen Salem");
 
@@ -83,21 +84,28 @@ public class ConfigTests {
         entry.resetDefaultTokenFilename();
         assertFalse(entry.isOk());
 
-        entry.setTokenFileDirectory("something");
+        entry.setTokenFileDirectory("/Somewhere");
         assertFalse(entry.isOk());
 
-        entry.setImageFilePath("something else");
+        entry.setPogFilePath("/Somewhere/Else");
+        assertFalse(entry.isOk());
+
+        entry.setPortraitFilePath("/Also/Somewhere/Else");
         assertTrue(entry.isOk());
+
+        // Note: invalid path will be considered not OK
+        entry.setPortraitFilePath("blah de blah blah");
+        assertFalse(entry.isOk());
     }
 
     @Test
     public void shouldCorrectlyUpdateUnconfiguredOutputEntries() {
-        Map<String, String> filenames = new HashMap<String, String>() {{
-           put("Jur Revicious", "JurRevicious.rptok");
-           put("Jacen Salem", "JacenSalem.rptok");
-           put("Dragon, Ancient Black", "DragonAncientBlack.rptok");
-           put("Kuroshi O'Koye", "KuroshiOKoye.rptok");
-           put("James T. Kirk", "JamesTKirk.rptok");
+        ArrayList<String> characterNames = new ArrayList<String>() {{
+           add("Jur Revicious");
+           add("Jacen Salem");
+           add("Dragon, Ancient Black");
+           add("Kuroshi O'Koye");
+           add("James T. Kirk");
         }};
 
         Preferences mockPrefs = Preferences.userNodeForPackage(this.getClass());
@@ -115,18 +123,48 @@ public class ConfigTests {
         config.setOutputTokenDirectory(outputDirectory);
         config.setPortraitDirectory(portraitDirectory);
         config.setPogDirectory(pogDirectory);
-        for(String characterName : filenames.keySet()) {
-            Config.ConfigEntry entry = config.addConfigEntry(characterName);
-            assertEquals(null, entry.getOutputTokenTo());
-        }
 
-        config.defaultConfigEntries();
+        assertEquals(0, config.getEntries().size());
 
-        for (Config.ConfigEntry entry : config.getEntries() ) {
+        for (String characterName : characterNames ) {
+            config.populateCharacterWithDefaults(characterName);
+            Config.ConfigEntry entry = config.get(characterName);
+
             assertEquals(outputDirectory + entry.getTokenFileName(), entry.getOutputTokenTo());
+            // Right now not testing image lookups
 //            assertEquals(portraitDirectory + entry.getPortraitFileName(), entry.getPortraitFilePath());
+//            assertEquals(pogDirectory + entry.getPogFileName(), entry.getPortraitFilePath());
         }
+        
+        assertEquals(characterNames.size(), config.getEntries().size());
     }
 
+    @Test
+    public void shouldCorrectlyRemoveEntries() {
+       final String entryToRemove = "James T. Kirk";
+       ArrayList<String> characters = new ArrayList<String>() {{
+            add("Jur Revicious");
+            add("Jacen Salem");
+            add("Dragon, Ancient Black");
+            add("Kuroshi O'Koye");
+            add(entryToRemove);
+       }};
+
+        Config config = new Config();
+        Config.ConfigEntry entry;
+        for(String characterName : characters) {
+            entry = config.addConfigEntry(characterName);
+        }
+
+        assertEquals(characters.size(), config.getEntries().size());
+        assertEquals(entryToRemove, config.get("James T. Kirk").getCharacterName());
+
+        config.remove("James T. Kirk");
+        assertEquals(characters.size()-1, config.getEntries().size());
+        assertEquals(null, config.get("James T. Kirk"));
+
+        config.remove("Grolatta");
+        assertEquals(characters.size()-1, config.getEntries().size());
+    }
 
 }

@@ -46,7 +46,10 @@
                 <preferred-size width="300" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <editable value="false"/>
+              <enabled value="true"/>
+            </properties>
           </component>
           <component id="5e139" class="javax.swing.JTextField" binding="pogDirectoryField">
             <constraints>
@@ -54,7 +57,9 @@
                 <preferred-size width="300" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <editable value="false"/>
+            </properties>
           </component>
           <component id="6aba3" class="javax.swing.JTextField" binding="outputDirectoryField">
             <constraints>
@@ -63,6 +68,7 @@
               </grid>
             </constraints>
             <properties>
+              <editable value="false"/>
               <text value=""/>
             </properties>
           </component>

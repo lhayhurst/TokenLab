@@ -60,9 +60,9 @@ public class TokenLabUI {
             frame.setVisible(true);
         } catch ( Exception e ) {
             JOptionPane.showMessageDialog(frame,
-             "Something bad happened! " + e.getMessage(),
-             "Fatal error",
-             JOptionPane.ERROR_MESSAGE);
+                    "Something bad happened! \n" + e.getMessage(),
+                    "Fatal error",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -74,7 +74,7 @@ public class TokenLabUI {
 
 
         importButton.setEnabled(true);
-        configurePortfolioButton.setEnabled(false); // TODO: take off coming soon tooltip
+        configurePortfolioButton.setEnabled(true);
         exportAllButton.setEnabled(false);
         exportSelectedButton.setEnabled(false);
 
@@ -150,7 +150,13 @@ public class TokenLabUI {
                 dialog.pack();
                 dialog.setVisible(true);
 
-                updateTokens();
+                if (dialog.isOkPressed()) {
+                    config.setOutputTokenDirectory(dialog.getOutputTokenDirectory());
+                    config.setPortraitDirectory(dialog.getPortraitDirectory());
+                    config.setPogDirectory(dialog.getPogDirectory());
+
+                    defaultConfigurations();
+                }
             }
         });
 
@@ -169,18 +175,11 @@ public class TokenLabUI {
             }
 
             public void mouseReleased(MouseEvent mouseEvent) {
-                handleRightClick(mouseEvent);
+                showContextMenu(herolabsCharacterList, mouseEvent);
             }
 
             public void mousePressed(MouseEvent mouseEvent) {
-                handleRightClick(mouseEvent);
-            }
-
-            private void handleRightClick(MouseEvent mouseEvent) {
-                if (mouseEvent.isPopupTrigger() && mouseEvent.getClickCount() == 1) {
-                    herolabsCharacterList.setSelectedIndex(herolabsCharacterList.locationToIndex(mouseEvent.getPoint()));
-                    showContextMenu(herolabsCharacterList, mouseEvent);
-                }
+                showContextMenu(herolabsCharacterList, mouseEvent);
             }
         });
 
@@ -214,29 +213,61 @@ public class TokenLabUI {
     }
 
     private void showContextMenu(JList characterList, MouseEvent mouseEvent) {
-        if (contextMenuEnabled) {
-            JPopupMenu menu = new JPopupMenu();
-            JMenuItem menuItem;
+        // TODO: handle right-click outside of selected range correctly (should treat as single selection, but not deselect)
+        boolean multipleSelected = herolabsCharacterList.getSelectedValues().length > 1;
+        if (mouseEvent.isPopupTrigger() && mouseEvent.getClickCount() == 1) {
+            if (!multipleSelected) {
+                herolabsCharacterList.setSelectedIndex(herolabsCharacterList.locationToIndex(mouseEvent.getPoint()));
+            }
 
-            menuItem = new JMenuItem("Configure character...");
-            menuItem.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent actionEvent) {
-                    configureSelectedCharacters();
-                }
-            });
-            menu.add(menuItem);
+            if (contextMenuEnabled) {
+                JPopupMenu menu = new JPopupMenu();
+                JMenuItem menuItem;
 
-            menuItem = new JMenuItem("Export character...");
-            menuItem.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent actionEvent) {
-                    exportSelectedCharacters();
-                }
-            });
-            menu.add(menuItem);
+                menuItem = new JMenuItem("Configure character" + (multipleSelected ? "s" : "") + "...");
+                menuItem.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        configureSelectedCharacters();
+                    }
+                });
+                menu.add(menuItem);
 
-            menu.show(characterList, mouseEvent.getX(), mouseEvent.getY());
+                menuItem = new JMenuItem("Export character" + (multipleSelected ? "s" : "") + "...");
+                menuItem.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        exportSelectedCharacters();
+                    }
+                });
+                menu.add(menuItem);
+
+                menuItem = new JMenuItem("Clear configuration" + (multipleSelected ? "s" : "") + "...");
+                menuItem.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        clearConfigForSelectedCharacters();
+                    }
+                });
+                menu.add(menuItem);
+
+                menu.show(characterList, mouseEvent.getX(), mouseEvent.getY());
+            }
         }
     }
+
+    private void clearConfigForSelectedCharacters() {
+        int confirmation = JOptionPane.showConfirmDialog(
+                panel,
+                "WARNING:  this will erase the current configuration for all selected characters. \nAre you certain you wish to do this?",
+                "Clear Selected Configurations?",
+                JOptionPane.YES_NO_OPTION
+        );
+
+        if (confirmation == JOptionPane.YES_OPTION) {
+            for (Object character : herolabsCharacterList.getSelectedValues()) {
+                config.remove(((Character)character).getName());
+            }
+        }
+    }
+
 
     private void exportSelectedCharacters() {
         if (herolabsCharacterList.getSelectedIndex() >= 0 ) {
@@ -271,15 +302,16 @@ public class TokenLabUI {
         return entries;
     }
 
-    private void updateTokens() {
-        System.out.println("Would be updatin'");
-        config.defaultConfigEntries();
+    private void defaultConfigurations() {
+        ListModel model = herolabsCharacterList.getModel();
+        for (int i = 0; i < model.getSize(); i++) {
+            config.populateCharacterWithDefaults(((Character) model.getElementAt(i)).getName());
+        }
     }
 
     private void errorDialog(String title, String error) {
         JOptionPane.showMessageDialog(panel, error, title, JOptionPane.ERROR_MESSAGE);
     }
-
 
     private void exportCharacters() {
         Object [] selectedValues = herolabsCharacterList.getSelectedValues();

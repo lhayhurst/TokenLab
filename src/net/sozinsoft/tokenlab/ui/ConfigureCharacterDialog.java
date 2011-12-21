@@ -70,9 +70,9 @@ public class ConfigureCharacterDialog extends JDialog {
     private void postFieldUpdate(Config.ConfigEntry configEntry) {
         updateFields(configEntry);
 
-        if ( setPogImageButton.isEnabled() == false &&
-             setPortraitImageButton.isEnabled() == false &&
-             setTokenLocationButton.isEnabled() == false ) {
+        if ( !setPogImageButton.isEnabled() &&
+                !setPortraitImageButton.isEnabled() &&
+                !setTokenLocationButton.isEnabled()) {
             buttonOK.setEnabled(true);
         }
     }
@@ -142,7 +142,7 @@ public class ConfigureCharacterDialog extends JDialog {
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                      File imageFile = imageChooser.getSelectedFile();
                      prefs.put(Config.IMAGE_DIR, imageFile.getParent());
-                     configEntry.setImageFilePath(imageFile.getAbsolutePath());
+                     configEntry.setPogFilePath(imageFile.getAbsolutePath());
                      setPogImageButton.setEnabled(false);
                      postFieldUpdate(configEntry);
                  }
@@ -167,13 +167,15 @@ public class ConfigureCharacterDialog extends JDialog {
                     setTokenLocationButton.setEnabled(false);
                     postFieldUpdate(configEntry);
                 }
+
+                System.setProperty("apple.awt.fileDialogForDirectories", "false");
             }
         });
     }
 
     private void updateFields(Config.ConfigEntry configEntry) {
         portraitImageField.setText(configEntry.getPortraitFilePath());
-        pogImageField.setText(configEntry.getImageFilePath());
+        pogImageField.setText(configEntry.getPogFilePath());
         tokenOutputField.setText(configEntry.getOutputTokenTo());
     }
 
