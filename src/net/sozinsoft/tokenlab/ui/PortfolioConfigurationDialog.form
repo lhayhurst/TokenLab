@@ -48,7 +48,7 @@
             </constraints>
             <properties>
               <editable value="false"/>
-              <enabled value="true"/>
+              <enabled value="false"/>
             </properties>
           </component>
           <component id="5e139" class="javax.swing.JTextField" binding="pogDirectoryField">
@@ -59,6 +59,7 @@
             </constraints>
             <properties>
               <editable value="false"/>
+              <enabled value="false"/>
             </properties>
           </component>
           <component id="6aba3" class="javax.swing.JTextField" binding="outputDirectoryField">
@@ -69,6 +70,7 @@
             </constraints>
             <properties>
               <editable value="false"/>
+              <enabled value="false"/>
               <text value=""/>
             </properties>
           </component>

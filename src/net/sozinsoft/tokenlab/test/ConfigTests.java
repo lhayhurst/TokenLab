@@ -1,6 +1,9 @@
 package net.sozinsoft.tokenlab.test;
 
+import net.rptools.lib.FileUtil;
 import net.sozinsoft.tokenlab.Config;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -13,6 +16,25 @@ import java.util.Map;
 import java.util.prefs.Preferences;
 
 public class ConfigTests {
+
+    /**
+     * @return New Config with mocked out prefs file.
+     */
+    private Config newConfig() {
+        Preferences mockPrefs = Preferences.userNodeForPackage(this.getClass());
+
+        Config config = null;
+        try {
+            config = new Config(mockPrefs);
+        } catch (IOException exception) {
+            fail("IO Exception - shouldn't be trying to load the file, however.");
+        }
+        return config;
+    }
+    
+    private String cleanPath(String pathString) {
+        return FilenameUtils.separatorsToSystem(pathString);
+    }
 
     @Test
     public void shouldGenerateValidTokenFileNames() {
@@ -31,7 +53,7 @@ public class ConfigTests {
 //           put("Drüd", "Drud.rptok");
         }};
 
-        Config config = new Config();
+        Config config = newConfig();
         Config.ConfigEntry entry;
         for(String characterName : filenames.keySet()) {
             entry = config.addConfigEntry(characterName);
@@ -41,7 +63,7 @@ public class ConfigTests {
 
     @Test
     public void shouldAppendTokenSuffixToFileName() {
-        Config config = new Config();
+        Config config = newConfig();
         Config.ConfigEntry entry = config.addConfigEntry("Jacen Salem");
 
         entry.setTokenFileName("JacenSalem");
@@ -58,33 +80,24 @@ public class ConfigTests {
     }
 
     @Test
-    public void shouldCorrectlyCombineTokenNameAndPathInConfigEntry() {
-        Config config = new Config();
+    public void shouldCorrectlyDefaultTokenFilePath() {
+        Config config = newConfig();
         Config.ConfigEntry entry = config.addConfigEntry("Jacen Salem");
 
-        entry.setTokenFileName(entry.getTokenFileName()); // Should just set it to the default
+        entry.defaultTokenPath();
+        
         assertEquals("JacenSalem.rptok", entry.getTokenFileName());
-        entry.setTokenFileDirectory("/dev/null");
-        assertEquals( File.separator +  "dev" + File.separator + "null" + File.separator + "JacenSalem.rptok", entry.getOutputTokenTo());
-
-        entry.setTokenFileDirectory("/dev/null/");
-        assertEquals( File.separator +  "dev" + File.separator + "null" + File.separator + "JacenSalem.rptok", entry.getOutputTokenTo());
-
-        entry.setTokenFileName("JurRevicious");
-        assertEquals(File.separator +  "dev" + File.separator + "null" + File.separator + "JurRevicious.rptok", entry.getOutputTokenTo());
+        assertEquals(cleanPath(config.getOutputTokenDirectory()), cleanPath(entry.getTokenFileDirectory()));
     }
 
     @Test
     public void shouldBeOKWhenTokenPogAndPortraitAreSet() {
-        Config config = new Config();
+        Config config = newConfig();
         Config.ConfigEntry entry = config.addConfigEntry("Jacen Salem");
 
         assertFalse(entry.isOk());
 
-        entry.resetDefaultTokenFilename();
-        assertFalse(entry.isOk());
-
-        entry.setTokenFileDirectory("/Somewhere");
+        entry.defaultTokenPath();
         assertFalse(entry.isOk());
 
         entry.setPogFilePath("/Somewhere/Else");
@@ -92,14 +105,10 @@ public class ConfigTests {
 
         entry.setPortraitFilePath("/Also/Somewhere/Else");
         assertTrue(entry.isOk());
-
-        // Note: invalid path will be considered not OK
-        entry.setPortraitFilePath("blah de blah blah");
-        assertFalse(entry.isOk());
     }
 
     @Test
-    public void shouldCorrectlyUpdateUnconfiguredOutputEntries() {
+    public void shouldCorrectlyUpdateOutputEntriesWithDefaultValues() {
         ArrayList<String> characterNames = new ArrayList<String>() {{
            add("Jur Revicious");
            add("Jacen Salem");
@@ -108,14 +117,7 @@ public class ConfigTests {
            add("James T. Kirk");
         }};
 
-        Preferences mockPrefs = Preferences.userNodeForPackage(this.getClass());
-
-        Config config = null;
-        try {
-            config = new Config(mockPrefs);
-        } catch (IOException exception) {
-            fail("IO Exception - shouldn't be trying to load the file, however.");
-        }
+        Config config = newConfig();
 
         String outputDirectory = "/Test/Tokens/";
         String portraitDirectory = "/Test/Portraits/";
@@ -127,10 +129,10 @@ public class ConfigTests {
         assertEquals(0, config.getEntries().size());
 
         for (String characterName : characterNames ) {
-            config.populateCharacterWithDefaults(characterName);
+            config.populateCharacterWithDefaults(characterName, false);
             Config.ConfigEntry entry = config.get(characterName);
 
-            assertEquals(outputDirectory + entry.getTokenFileName(), entry.getOutputTokenTo());
+            assertEquals(cleanPath(outputDirectory + entry.getTokenFileName()), entry.getOutputTokenPath());
             // Right now not testing image lookups
 //            assertEquals(portraitDirectory + entry.getPortraitFileName(), entry.getPortraitFilePath());
 //            assertEquals(pogDirectory + entry.getPogFileName(), entry.getPortraitFilePath());
@@ -150,7 +152,7 @@ public class ConfigTests {
             add(entryToRemove);
        }};
 
-        Config config = new Config();
+        Config config = newConfig();
         Config.ConfigEntry entry;
         for(String characterName : characters) {
             entry = config.addConfigEntry(characterName);
@@ -166,5 +168,32 @@ public class ConfigTests {
         config.remove("Grolatta");
         assertEquals(characters.size()-1, config.getEntries().size());
     }
+    
+    @Test
+    public void shouldSuccessfullyLoadV1ConfigFile() {
+        Preferences mockPrefs = Preferences.userNodeForPackage(this.getClass());
 
+        Config config = null;
+        try {
+            config = new Config(mockPrefs, "src/net/sozinsoft/tokenlab/test/xml/configV1.xml");
+        } catch (IOException exception) {
+            fail("Failed to load test config file: \n" + exception.toString());
+        }
+
+        for (Config.ConfigEntry entry : config.getEntries()) {
+            assertEquals(config, entry.getConfig());
+        }
+
+        ArrayList<String> characters = new ArrayList<String>() {{
+            add("Bunyip");
+            add("Bruthazmus");
+        }};
+
+        for (String character : characters) {
+            Config.ConfigEntry entry = config.get(character);
+            assertEquals(character, entry.getCharacterName());
+            assertEquals(cleanPath("/Some/Portrait/Directory/") + character + ".png", entry.getPortraitFilePath());
+            assertEquals(cleanPath("/Some/Pog/Directory/") + character + ".png", entry.getPogFilePath());
+        }
+    }
 }

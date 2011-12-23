@@ -52,14 +52,22 @@ public class Config {
     };
     
     private HashMap<String, ConfigEntry> configs;
-    private Preferences prefs;
     private String xmlFileLocation;
 	private String configFileName;
+    private transient Preferences prefs;
+
 
     public Config( Preferences prefs ) throws IOException {
+        this(prefs, prefs.get(TOKENLAB_CHARACTER_MAPPINGS, ""));
+    }
+
+    /**
+     * Mostly for testing migrations from older config file versions.
+     */
+    public Config( Preferences prefs, String configFileLocation) throws IOException {
         this.prefs = prefs;
+        xmlFileLocation = configFileLocation;
         XStream xstream = new XStream();
-        xmlFileLocation = this.prefs.get(TOKENLAB_CHARACTER_MAPPINGS, "");
         File f = new File(xmlFileLocation);
         if ( xmlFileLocation != null && ! xmlFileLocation.isEmpty() && f.exists() ) {
             try {
@@ -72,20 +80,21 @@ public class Config {
             configs = new HashMap<String, ConfigEntry>();
         }
 
-        postLoadConfigs();
+        postProcessConfigEntriesAfterLoad();
 
         System.out.println("Loaded " + configs.size() + " Config Entries.");
     }
 
-    private void postLoadConfigs() {
+    /**
+     * This handles two issues loading from the config file:  
+     *     1)  XStream loaded ConfigEntries will not have their reference to the parent config set.
+     *     2)  Migration from prior versions of a config file will be broken, as XStream (per Mr. Walnes)
+     *      does not handle model changes elegantly.  See ConfigEntry.postProcessAfterLoad.
+     */
+    private void postProcessConfigEntriesAfterLoad() {
         for (ConfigEntry entry : configs.values()) {
-            // XStream loaded ConfigEntries will not have their reference to the parent config set.
-            entry.setConfig(this);
+            entry.postProcessAfterLoad(this);
         }
-    }
-
-    public Config() {
-        configs = new HashMap<String, ConfigEntry>();
     }
 
     public void save() {
@@ -116,25 +125,25 @@ public class Config {
         return addConfigEntry(name, null, null, null);
     }
 
-	public ConfigEntry addConfigEntry( String name, String imagePath, String portraitPath, String tokenFileDirectory ) {
+	public ConfigEntry addConfigEntry( String name, String pogPath, String portraitPath, String tokenPath) {
         ConfigEntry ce = new ConfigEntry(this);
         ce.setCharacterName(name);
-        ce.setPogFilePath(imagePath);
+        ce.setPogFilePath(pogPath);
         ce.setPortraitFilePath(portraitPath);
-        ce.setTokenFileDirectory(tokenFileDirectory);
-        ce.resetDefaultTokenFilename();
+        ce.setTokenFilePath(tokenPath);
 		configs.put( name, ce);
         return ce;
 	}
-	
+
+    // TODO: is this actually used by something?
 	public void parseConfigFile() throws IOException, SAXException {
-        Digester d = new Digester(); 
+        Digester d = new Digester();
         d.push( this );
 
-        d.addCallMethod( "config/token", "addConfigEntry", 4 );
-        d.addCallParam( "config/token", 0, "name" );
-        d.addCallParam( "config/token", 1, "pogFileDirectory" );
-        d.addCallParam( "config/token", 2, "portraitFileDirectory" );
+        d.addCallMethod("config/token", "addConfigEntry", 4 );
+        d.addCallParam("config/token", 0, "name" );
+        d.addCallParam("config/token", 1, "pogFileDirectory" );
+        d.addCallParam("config/token", 2, "portraitFileDirectory" );
         d.addCallParam( "config/token", 3, "outputTokenTo" );
 
         d.parse( new File( configFileName ) );
@@ -185,34 +194,41 @@ public class Config {
         configs.remove(characterName);
     }
 
-    public void populateCharacterWithDefaults(String characterName) {
+    public void populateCharacterWithDefaults(String characterName, boolean forceDefault) {
         ConfigEntry entry = getOrCreate(characterName);
 
-        entry.populateWithDefaultValues();
+        entry.populateWithDefaultValues(forceDefault);
     }
+
+
 
     public class ConfigEntry {
 		
     	private String characterName;
-    	private String pogFileDirectory;
-    	private String pogFileName;
-    	private String portraitFileDirectory;
-    	private String portraitFileName;
-        private String tokenFileDirectory;
-        private String tokenFileName;
+    	private DefaultableFilePath pogPath;
+    	private DefaultableFilePath portraitPath;
+        private DefaultableFilePath tokenPath;
 
-        private Config config;
+        // Don't want this serialized/deserialized with the config
+        private transient Config config;
 
         // Old Attributes - these can eventually be deleted.
         // Here to prevent crashing during deserialization from previous structure
-        private transient String CharacterName;
-        private transient String imageFilePath;
-        private transient String portraitFilePath;
-        // END Old Attributes
+        private String CharacterName;
+        private String imageFilePath;
+        private String portraitFilePath;
+        private String tokenFileDirectory;
+        private String tokenFileName;
+        private String outputTokenTo;
+       // END Old Attributes
 
 
         ConfigEntry(Config config) {
             this.config = config;
+            
+            pogPath = new DefaultableFilePath();
+            portraitPath = new DefaultableFilePath();
+            tokenPath = new DefaultableFilePath();
         }
 
         void setConfig(Config config) {
@@ -228,82 +244,36 @@ public class Config {
 
         }
 
-		private String getPogFileDirectory() {
-			return pogFileDirectory;
-		}
-
-        private void setPogFileDirectory(String directory) {
-            pogFileDirectory = directory;
-        }
-
-        private String getPortraitFileDirectory() {
-            return portraitFileDirectory;
-        }
-
-        private void setPortraitFileDirectory(String path) {
-            portraitFileDirectory = path;
-        }
-
-        private void setPortraitFileName(String name) {
-            portraitFileName = name;
-        }
-
-        private String getPortraitFileName() {
-            return portraitFileName;
-        }
-
         public String getPogFilePath() {
-            if (pogFileDirectory != null && pogFileName != null) {
-                return new File(pogFileDirectory, pogFileName).getPath();
-            }
-            
-            return null;
+            return pogPath.getFilePath();
         }
 
         public void setPogFilePath(String path) {
-            if (path != null) {
-                File fullPath = new File(path);
-    
-                pogFileDirectory = fullPath.getParent();
-                pogFileName = fullPath.getName();
-            }
+            pogPath.setFilePath(path);
         }
 
         public String getPortraitFilePath() {
-            if (portraitFileDirectory != null && portraitFileName != null) {
-                return new File(portraitFileDirectory, portraitFileName).getPath();
-            }
-
-            return null;
+            return portraitPath.getFilePath();
         }
 
         public void setPortraitFilePath(String path) {
-            if (path != null) {
-                File fullPath = new File(path);
-
-                portraitFileDirectory = fullPath.getParent();
-                portraitFileName = fullPath.getName();
-            }
+            portraitPath.setFilePath(path);
         }
 
-		public String getOutputTokenTo() {
-            if (tokenFileDirectory != null && tokenFileName != null) {
-                return new File(getTokenFileDirectory(), getTokenFileName()).toString();
-            }
-
-            return null;
+		public String getOutputTokenPath() {
+            return tokenPath.getFilePath();
 		}
 
         public boolean isOk() {
-            return getOutputTokenTo() != null && getPogFilePath() != null && getPortraitFilePath() != null;
+            return getOutputTokenPath() != null && getPogFilePath() != null && getPortraitFilePath() != null;
         }
 
         public String getTokenFileName() {
-            if (tokenFileName == null) {
-                tokenFileName = generateDefaultTokenFileName();
+            if (tokenPath.getFileName() == null) {
+                tokenPath.setFileName(generateDefaultTokenFileName());
             }
 
-            return tokenFileName;
+            return tokenPath.getFileName();
         }
 
         private String generateDefaultFileName() {
@@ -333,53 +303,51 @@ public class Config {
                 tokenFileName = tokenFileName + TOKEN_FILE_EXTENSION;
             }
 
-            this.tokenFileName = tokenFileName;
+            tokenPath.setFileName(tokenFileName);
         }
 
         public String getTokenFileDirectory() {
-            return tokenFileDirectory;
+            return tokenPath.getDirectory();
         }
 
-        public void setTokenFileDirectory(String tokenFileDirectory) {
-            this.tokenFileDirectory = tokenFileDirectory;
+        public void setTokenFilePath(String path) {
+            tokenPath.setFilePath(path);
         }
 
-        public void resetDefaultTokenFilename() {
-            setTokenFileName(generateDefaultTokenFileName());
+        public void defaultTokenPath() {
+            tokenPath.setFilePath(config.getOutputTokenDirectory(), generateDefaultTokenFileName(), false);
         }
 
-        private void populateWithDefaultValues() {
+        private void populateWithDefaultValues(boolean forceDefault) {
             System.out.println("Attempting to default " + characterName);
-            if (getTokenFileDirectory() == null) {
-                setTokenFileDirectory(config.getOutputTokenDirectory());
-                resetDefaultTokenFilename();
-
-                System.out.println("    Token will output to: " + getOutputTokenTo());
+            if (forceDefault || !tokenPath.isOverridden()) {
+                defaultTokenPath();
+                System.out.println("    Token will output to: " + getOutputTokenPath());
             }
 
             String defaultFileName = generateDefaultFileName();
-            if (getPortraitFileDirectory() == null) {
+            if (forceDefault || !portraitPath.isOverridden()) {
                 File portraitFile = findImageFile(config.getPortraitDirectory(), defaultFileName);
 
                 if (portraitFile != null) {
-                    setPortraitFilePath(portraitFile.getPath());
+                    portraitPath.setFilePath(portraitFile, false);
                     System.out.println("    Using Portrait File: " + getPortraitFilePath());
                 }
 
                 System.out.println("    No Portrait File Found");
             }
 
-            if (getPogFileDirectory() == null) {
+            if (forceDefault || !pogPath.isOverridden()) {
                 File pogFile = findImageFile(config.getPogDirectory(), defaultFileName);
 
                 if (pogFile != null) {
-                    setPogFilePath(pogFile.getPath());
+                    pogPath.setFilePath(pogFile, false);
                     System.out.println("    Using Pog File: " + getPogFilePath());
                 }
                 System.out.println("    No Pog File Found");
             }
         }
-
+        
         private File findImageFile(final String directory, final String defaultFileName) {
             File searchDirectory = new File(directory);
             
@@ -418,8 +386,111 @@ public class Config {
             return null;
         }
 
-        public String getPogFileName() {
-            return pogFileName;
+        /**
+         * Ugly little method to handle XStream migrations and avoid the crashy.
+         * Once we settle in on a 1.0 and stabilize the Config structure, this can all hopefully go away.
+         */
+        public void postProcessAfterLoad(Config config) {
+            this.config = config;
+            if (characterName == null) {
+                characterName = CharacterName;
+            }
+
+            portraitPath = checkDefaultablePath(portraitPath, portraitFilePath, null);
+            pogPath = checkDefaultablePath(pogPath, imageFilePath, null);
+            tokenPath = checkDefaultablePath(tokenPath, tokenFileDirectory, tokenFileName);
+            
+            // Null out old attributes - these should never again be serialized
+            CharacterName = null;
+            imageFilePath = null;
+            portraitFilePath = null;
+            tokenFileDirectory = null;
+            tokenFileName = null;
+            outputTokenTo = null;
+        }
+
+        /**
+         * Also an artifact of config migration.  Can go away once configs are locked in.
+         */
+        private DefaultableFilePath checkDefaultablePath(DefaultableFilePath oldDFP, String filePath, String fileName) {
+            DefaultableFilePath newDFP = oldDFP; 
+            if (newDFP == null) {
+                newDFP = new DefaultableFilePath();
+                if (filePath != null) {
+                    if (fileName != null) {
+                        newDFP.setFileName(fileName);
+                        newDFP.setDirectory(filePath);
+                    } else {
+                        newDFP.setFilePath(filePath);
+                    }
+                }
+            }
+            
+            return newDFP;
+        }
+
+        public Config getConfig() {
+            return config;
+        }
+
+        public String getPogDirectory() {
+            return pogPath.getDirectory();
+        }
+
+        public String getPortraitDirectory() {
+            return portraitPath.getDirectory();
+        }
+    }
+    
+    private class DefaultableFilePath {
+        private String directory;
+        private String fileName;
+        private boolean overridden;
+        
+        String getFilePath() {
+            if (directory != null && fileName != null) {
+                return new File(directory, fileName).getPath();
+            }
+
+            return null;
+        }
+
+        void setFilePath(String path) {
+            if (path != null) {
+                File fullPath = new File(path);
+
+                setFilePath(fullPath, true);
+            }
+        }
+        
+        void setFilePath(File fullPath, boolean isOverride) {
+            setFilePath(fullPath.getParent(), fullPath.getName(), isOverride);
+        }
+        
+        void setFilePath(String directory, String file, boolean isOverride) {
+            this.directory = directory;
+            fileName = file;
+            overridden = isOverride;
+        }
+
+        String getFileName() {
+            return fileName;
+        }
+
+        void setFileName(String fileName) {
+            this.fileName = fileName;
+        }
+
+        String getDirectory() {
+            return directory;
+        }
+
+        boolean isOverridden() {
+            return overridden;
+        }
+
+        void setDirectory(String directory) {
+            this.directory = directory;
         }
     }
 }

@@ -3,7 +3,7 @@
     <link rel="stylesheet" type="text/css" href="css@Lib:TokenLab">
 </head>
 <table>
-<tr><td>[r:macroLink("Spells", "Spells@token")]</td></tr>
+<tr><td>[r:macroLink("Spells", "Spells@this",  "none", "", currentToken())]</td></tr>
 </table>
 
 [h: Spell=json.get(macro.args, "spell")]

@@ -36,8 +36,8 @@ public class HeroLabDigester {
 
         System.out.println( "Creating token for character " + tokenizable.getName() );
         Token t = tokenizable.asToken(ce);
-        System.out.println( "Saving maptools token to output directory " + ce.getOutputTokenTo());
-        PersistenceUtil.saveToken(t, ce.getOutputTokenTo(), true);
+        System.out.println( "Saving maptools token to output directory " + ce.getOutputTokenPath());
+        PersistenceUtil.saveToken(t, ce.getOutputTokenPath(), true);
         return true;
     }
 

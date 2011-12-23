@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 
-public class PortfolioConfigurationDialog extends JDialog {
+public class PortfolioConfigurationDialog extends FileSelectionDialog {
     private JPanel contentPanel;
     private JTextField pogDirectoryField;
     private JTextField outputDirectoryField;
@@ -82,46 +82,6 @@ public class PortfolioConfigurationDialog extends JDialog {
                 onSelectTokenOutputDirectory();
             }
         });
-    }
-
-    private String selectDirectoryWithAWT(String selectionType, String currentDirectory) {
-        JFrame frame = new JFrame();
-        System.setProperty("apple.awt.fileDialogForDirectories", "true");
-        FileDialog dialog = new FileDialog(frame, "Select " + selectionType + " Directory");
-
-        dialog.setDirectory(currentDirectory);
-        dialog.setModal(true);
-        dialog.setVisible(true);
-
-        System.setProperty("apple.awt.fileDialogForDirectories", "false");
-
-        // TODO: What happens if this is a file?
-        return dialog.getDirectory() + dialog.getFile();
-    }
-
-    private String selectDirectoryWithSwing(String selectionType, String currentDirectory) {
-        JFileChooser fileChooser = new JFileChooser(currentDirectory);
-        fileChooser.setDialogTitle("Select " + selectionType + " Directory");
-        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        fileChooser.setAcceptAllFileFilterUsed(false);
-
-        if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-            File selectedFile = fileChooser.getSelectedFile();
-
-            return selectedFile.getPath();
-        }
-
-        return null;
-    }
-    
-    private String selectDirectory(String selectionType, String currentDirectory) {
-        String osName = System.getProperty("os.name").toLowerCase();
-        boolean isMacOs = osName.startsWith("mac os x");
-        if (isMacOs) {
-            return selectDirectoryWithAWT(selectionType, currentDirectory);
-        } else {
-            return selectDirectoryWithSwing(selectionType, currentDirectory);
-        }
     }
 
     private void onSelectTokenOutputDirectory() {

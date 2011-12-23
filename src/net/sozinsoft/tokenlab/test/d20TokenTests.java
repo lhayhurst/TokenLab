@@ -10,9 +10,12 @@ import org.junit.Test;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import java.util.prefs.Preferences;
 
 import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class d20TokenTests {
 
@@ -23,6 +26,21 @@ public class d20TokenTests {
     public void setUp() throws JAXBException {
         dig = new HeroLabD20Digester();
         dig.parse(new File("src/net/sozinsoft/tokenlab/test/xml/d20Portfolio.xml"));
+    }
+
+    /**
+     * @return New Config with mocked out prefs file.
+     */
+    private Config newConfig() {
+        Preferences mockPrefs = Preferences.userNodeForPackage(this.getClass());
+
+        Config config = null;
+        try {
+            config = new Config(mockPrefs);
+        } catch (IOException exception) {
+            fail("IO Exception - shouldn't be trying to load the file, however.");
+        }
+        return config;
     }
 
     @Test
@@ -59,7 +77,7 @@ public class d20TokenTests {
 
     @Test
     public void testPathfinderTokenCreation() throws Exception {
-        Config config = new Config();
+        Config config = newConfig();
         config.addConfigEntry( "Rawknar", "src/net/sozinsoft/tokenlab/test/img/Rawknar.png",
                 "src/net/sozinsoft/tokenlab/test/img/RawknarPortrait.jpg",
                 "src/net/sozinsoft/tokenlab/test/tokens/Rawknar.rptok");

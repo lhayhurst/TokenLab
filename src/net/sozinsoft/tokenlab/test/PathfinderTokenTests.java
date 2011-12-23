@@ -12,7 +12,9 @@ import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
+import java.io.IOException;
 import java.util.*;
+import java.util.prefs.Preferences;
 
 import static org.junit.Assert.*;
 
@@ -24,6 +26,21 @@ public class PathfinderTokenTests {
     public void setUp() throws JAXBException {
         dig = new HeroLabPathfinderDigester();
         dig.parse(new File("src/net/sozinsoft/tokenlab/test/xml/Children_Of_Steel.xml"));
+    }
+
+    /**
+     * @return New Config with mocked out prefs file.
+     */
+    private Config newConfig() {
+        Preferences mockPrefs = Preferences.userNodeForPackage(this.getClass());
+
+        Config config = null;
+        try {
+            config = new Config(mockPrefs);
+        } catch (IOException exception) {
+            fail("IO Exception - shouldn't be trying to load the file, however.");
+        }
+        return config;
     }
 
     @Test
@@ -441,19 +458,19 @@ public class PathfinderTokenTests {
 
     @Test
     public void testPathfinderTokenCreation() throws Exception, SAXException {
-        Config config = new Config();
+        Config config = newConfig();
         config.addConfigEntry("Derrak Stoneskull", "src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/derrakStoneskullPortrait.jpg",
-                "src/net/sozinsoft/tokenlab/test/tokens/");
+                "src/net/sozinsoft/tokenlab/test/tokens/derrakStoneSkull.rptok");
         config.addConfigEntry("Echean Ansolandi", "src/net/sozinsoft/tokenlab/test/img/echeanPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/echeanPortrait.jpg",
-                "src/net/sozinsoft/tokenlab/test/tokens/");
+                "src/net/sozinsoft/tokenlab/test/tokens/echeanPog.rptok");
         config.addConfigEntry("Inaris Jerveel", "src/net/sozinsoft/tokenlab/test/img/inarisJarveelPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/inarisJarveelPortrait.jpg",
-                "src/net/sozinsoft/tokenlab/test/tokens/");
+                "src/net/sozinsoft/tokenlab/test/tokens/inarisJarveelPog.rptok");
         config.addConfigEntry("Wotywina Turncoin", "src/net/sozinsoft/tokenlab/test/img/wotywinaTurncoinPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/wotywinaTurncoinPortrait.jpg",
-                "src/net/sozinsoft/tokenlab/test/tokens/");
+                "src/net/sozinsoft/tokenlab/test/tokens/wotywinaTurncoin.rptok");
 
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();

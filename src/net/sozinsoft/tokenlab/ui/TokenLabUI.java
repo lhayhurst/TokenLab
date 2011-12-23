@@ -60,9 +60,9 @@ public class TokenLabUI {
             frame.setVisible(true);
         } catch ( Exception e ) {
             JOptionPane.showMessageDialog(frame,
-                    "Something bad happened! \n" + e.getMessage(),
-                    "Fatal error",
-                    JOptionPane.ERROR_MESSAGE);
+            "Something bad happened! \n" + e.getMessage(),
+            "Fatal error",
+            JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -155,7 +155,7 @@ public class TokenLabUI {
                     config.setPortraitDirectory(dialog.getPortraitDirectory());
                     config.setPogDirectory(dialog.getPogDirectory());
 
-                    defaultConfigurations();
+                    defaultNonOverriddenConfigurations();
                 }
             }
         });
@@ -240,6 +240,14 @@ public class TokenLabUI {
                 });
                 menu.add(menuItem);
 
+                menuItem = new JMenuItem("Reset to portfolio defaults...");
+                menuItem.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        resetToDefaultsForSelectedCharacters();
+                    }
+                });
+                menu.add(menuItem);
+
                 menuItem = new JMenuItem("Clear configuration" + (multipleSelected ? "s" : "") + "...");
                 menuItem.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent actionEvent) {
@@ -251,6 +259,23 @@ public class TokenLabUI {
                 menu.show(characterList, mouseEvent.getX(), mouseEvent.getY());
             }
         }
+    }
+
+    private void resetToDefaultsForSelectedCharacters() {
+        int confirmation = JOptionPane.showConfirmDialog(
+                panel,
+                "NOTE:  this will attempt to replace any custom configuration for the selected characters with the Portfolio defaults. \nAre you certain you wish to do this?",
+                "Reset to portfolio defaults?",
+                JOptionPane.YES_NO_OPTION
+        );
+
+        if (confirmation == JOptionPane.YES_OPTION) {
+            for (Object character : herolabsCharacterList.getSelectedValues()) {
+                config.populateCharacterWithDefaults(((Character) character).getName(), true);
+            }
+        }
+
+        herolabsCharacterList.repaint();
     }
 
     private void clearConfigForSelectedCharacters() {
@@ -266,6 +291,8 @@ public class TokenLabUI {
                 config.remove(((Character)character).getName());
             }
         }
+
+        herolabsCharacterList.repaint();
     }
 
 
@@ -285,7 +312,7 @@ public class TokenLabUI {
     private void configureSelectedCharacters() {
         //get the selected item
         for (Config.ConfigEntry entry : getSelectedCharacters()) {
-            ConfigureCharacterDialog dialog = new ConfigureCharacterDialog(herolabsCharacterList, entry, prefs);
+            ConfigureCharacterDialog dialog = new ConfigureCharacterDialog(herolabsCharacterList, entry, config);
             dialog.pack();
             dialog.setVisible(true);
         }
@@ -302,10 +329,10 @@ public class TokenLabUI {
         return entries;
     }
 
-    private void defaultConfigurations() {
+    private void defaultNonOverriddenConfigurations() {
         ListModel model = herolabsCharacterList.getModel();
         for (int i = 0; i < model.getSize(); i++) {
-            config.populateCharacterWithDefaults(((Character) model.getElementAt(i)).getName());
+            config.populateCharacterWithDefaults(((Character) model.getElementAt(i)).getName(), false);
         }
     }
 
