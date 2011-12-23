@@ -1,0 +1,25 @@
+<map>
+  <entry>
+    <string>Bunyip</string>
+    <net.sozinsoft.tokenlab.Config_-ConfigEntry>
+      <CharacterName>Bunyip</CharacterName>
+      <imageFilePath>/Some/Pog/Directory/Bunyip.png</imageFilePath>
+      <portraitFilePath>/Some/Portrait/Directory/Bunyip.png</portraitFilePath>
+      <outputTokenTo>/Some/Token/Directory/Bunyip.rptok</outputTokenTo>
+      <outer-class>
+        <configs reference="../../../.."/>
+        <xmlFileLocation>config.xml</xmlFileLocation>
+      </outer-class>
+    </net.sozinsoft.tokenlab.Config_-ConfigEntry>
+  </entry>
+  <entry>
+    <string>Bruthazmus</string>
+    <net.sozinsoft.tokenlab.Config_-ConfigEntry>
+      <CharacterName>Bruthazmus</CharacterName>
+      <imageFilePath>/Some/Pog/Directory/Bruthazmus.png</imageFilePath>
+      <portraitFilePath>/Some/Portrait/Directory/Bruthazmus.png</portraitFilePath>
+      <outputTokenTo>/Some/Token/Directory/Bruthazmus.rptok</outputTokenTo>
+      <outer-class reference="../../../entry/net.sozinsoft.tokenlab.Config_-ConfigEntry/outer-class"/>
+    </net.sozinsoft.tokenlab.Config_-ConfigEntry>
+  </entry>
+</map>
