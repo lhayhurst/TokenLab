@@ -91,7 +91,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         setVision();
         setInitiative();
         setTrackedResources();
-        setSpellResources();
+     //   setSpellResources(); TODO: re-enable the spell resources work at some point
     }
 
     private HashMap<String, HashMap<String, Object >> _trackedResources = new HashMap<String, HashMap<String, Object>>();
@@ -633,16 +633,17 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
         _token.getToken().setProperty(RESOURCES_JSON, gjson.toJson(_trackedResources ));
 
+        //todo: reenable the below someday
         //this is a bit tortured, because you can't use triply nested for loops in maptool macros
         //but it is what it is
-        LinkedList<HashMap<String, Object>> spontaneousSpellResources = new LinkedList<HashMap<String,Object>>();
-        for( Integer level : _spontaneousSpellResources.keySet()) {
-            LinkedList<HashMap<String, Object>> spellsByLevel = _spontaneousSpellResources.get( level );
-            for( HashMap<String, Object> spellByLevel : spellsByLevel ) {
-                spontaneousSpellResources.add( spellByLevel );
-            }
-        }
-        _token.getToken().setProperty(SPONTANEOUS_RESOURCES_JSON, gjson.toJson( spontaneousSpellResources));
+        //LinkedList<HashMap<String, Object>> spontaneousSpellResources = new LinkedList<HashMap<String,Object>>();
+        //for( Integer level : _spontaneousSpellResources.keySet()) {
+          //  LinkedList<HashMap<String, Object>> spellsByLevel = _spontaneousSpellResources.get( level );
+            //for( HashMap<String, Object> spellByLevel : spellsByLevel ) {
+              //  spontaneousSpellResources.add( spellByLevel );
+            //}
+        //}
+       // _token.getToken().setProperty(SPONTANEOUS_RESOURCES_JSON, gjson.toJson( spontaneousSpellResources));
 
         //set the spells.  this needs to basically happen by class.
 

@@ -5,6 +5,16 @@
 [h: usedForLevel = json.get( macro.args, "used" )]
 [h: maxCasts = json.get( macro.args, "maxCasts" )]
 [h: names = json.fields( Spells ) ]
+[h: activeToken = json.get( macro.args, "ID" ) ]
+[h: resources = json.get( macro.args, "Resources" )]
+[h: outerIndex = json.get( macro.args, "index" )]
+
+
+[h: imageFormatString = 	"<img src='%s' border=0 height=45 width=45 alt='%s'>"]
+[h: IncrementImage = 	strformat(imageFormatString, tblImage( "TokenLabImages",  2 ), 	"Add one to resource used")]
+[h: DecrementImage =        strformat(imageFormatString, tblImage("TokenLabImages", 3 ), 	"Subtract one to resource used")]
+[h:index = 0]
+
 
 [FOREACH ( spellName, names, "" ), CODE: {
    [h: DC = json.get( json.get( Spells, spellName ), "dc" )]
@@ -13,18 +23,15 @@
    <td>[r:spellName]</td>
    <td>([r:spellClass])</td>
    <td>DC [r:DC]</td>
-    [IF( unlimited == "1" ), CODE: {
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>Unlimited usage</td>
-    }]
-   [IF( unlimited == "0" ), CODE: {
-        <td>lb</td>
-        <td>val</td>
-        <td>up</td>
-        <td>x level x spells left</td>
+       [h: upargs   = json.set("{}", "spellName", spellName,   "ID", activeToken, "direction", "up" , "Spells", Spells, "index", index, "Resources", resources, "outerIndex", outerIndex, "maxCasts", maxCasts )]
+       [h: downargs   = json.set("{}", "spellName", spellName,   "ID", activeToken, "direction", "up" , "Spells", Spells, "index", index, "Resources", resources, "outerIndex", outerIndex, "maxCasts", maxCasts )]
+       [h: UpButton = macroLink(IncrementImage, 	"UDF_UpdateSpontaneousResource@Lib:TokenLab", "self", upargs, activeToken )]
+       [h: DownButton = macroLink(DecrementImage, 	"UDF_UpdateSpontaneousResource@Lib:TokenLab", "self", downargs, activeToken )]
 
-    }]
+        <td>[r:DownButton]</td>
+        <td>[r:used]</td>
+        <td>[r:UpButton]</td>
+        <td> [r:maxCasts] Level [r:spellLevel] spells left</td>
+    [h: index = index + 1]
     </tr>
 }]

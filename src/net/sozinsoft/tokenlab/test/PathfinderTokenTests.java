@@ -459,6 +459,7 @@ public class PathfinderTokenTests {
     @Test
     public void testPathfinderTokenCreation() throws Exception, SAXException {
         Config config = newConfig();
+        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png");
         config.addConfigEntry("Derrak Stoneskull", "src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/derrakStoneskullPortrait.jpg",
                 "src/net/sozinsoft/tokenlab/test/tokens/derrakStoneSkull.rptok");
@@ -470,7 +471,7 @@ public class PathfinderTokenTests {
                 "src/net/sozinsoft/tokenlab/test/tokens/inarisJarveelPog.rptok");
         config.addConfigEntry("Wotywina Turncoin", "src/net/sozinsoft/tokenlab/test/img/wotywinaTurncoinPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/wotywinaTurncoinPortrait.jpg",
-                "src/net/sozinsoft/tokenlab/test/tokens/");
+                "src/net/sozinsoft/tokenlab/test/tokens/wotywinaTurncoin.rptok");
 
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
