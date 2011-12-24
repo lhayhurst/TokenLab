@@ -1,0 +1,45 @@
+[h: title = "Resources"]
+[h: activeToken = json.get( macro.args, "ID" ) ]
+[h: characterName = getProperty("Character", activeToken ) ]
+[h: Resources = json.get( macro.args, "Resources" )]
+[h: doSave = json.get( macro.args, "doSave" )]
+
+
+
+[IF( doSave == 1 ), CODE: {
+    [h:selectTokens( activeToken, 0 )]
+    [h:setProperty( "SpontaneousResourcesJSON", Resources, activeToken )]
+}]
+
+[h:SpellLevels = json.fields( Resources )]
+
+[frame(title, "input=1; height=100; width=100"):{
+	<html>
+	<head>
+	    <title>[r: title]</title>
+	    <link rel="stylesheet" type="text/css" href="css@Lib:TokenLab">
+	</head>
+	<body>
+	<h2><br>[r:characterName] Spontaneous Spells</h2>
+	<br>
+	<table>
+                             [FOREACH ( spellLevelResources, Resources, "" ), CODE: {
+                             	[h:spellClassName = json.get( spellLevelResources, "spellClassName" ) ]
+		[h:spellLevel = json.get( spellLevelResources, "spellLevel" ) ]
+		[h:spells = json.get( spellLevelResources, "spells" ) ]
+		[h:unlimited = json.get( spellLevelResources, "unlimited" ) ]
+		[h:used = json.get( spellLevelResources, "used" ) ]
+		[h:maxCasts = json.get( spellLevelResources, "maxCasts" ) ]
+		[h:SpellNames = json.fields( spells )]
+                                          [h: macroArgs = json.set("{}", "spells", spells, "spellClass", spellClassName, "spellLevel", spellLevel, "unlimited", unlimited, "used", used, "maxCasts", maxCasts)]
+
+
+                                               [MACRO("UDF_SRFHelper@Lib:TokenLab"): macroArgs]
+
+                             }]
+
+                      </table>
+	</body>
+	</html>
+
+}]

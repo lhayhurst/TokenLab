@@ -68,6 +68,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
     public static final String TRAITS_JSON = "TraitsJSON";
     public static final String SKILLS_JSON = "SkillsJSON";
     public static final String RESOURCES_JSON = "ResourcesJSON";
+    public static final String SPONTANEOUS_RESOURCES_JSON = "SpontaneousResourcesJSON";
 
 
     private Character _character;
@@ -90,6 +91,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         setVision();
         setInitiative();
         setTrackedResources();
+        setSpellResources();
     }
 
     private HashMap<String, HashMap<String, Object >> _trackedResources = new HashMap<String, HashMap<String, Object>>();
@@ -228,6 +230,70 @@ public class PathfinderToken implements ICharacter, ITokenizable {
             setSpecial(OTHER, s );
         }
     }
+
+
+
+    private void setSpellResources() {
+        for ( Spellclass sc : _character.getSpellclasses().getSpellclass() ) {
+            if ( sc.getSpells().equals("Spontaneous")) {
+                setSpontaneousSpellResources( sc );
+            }
+            else if ( sc.getSpells().equals("Spellbook")) {
+                //setSpellbookResources( sc );
+            }
+            else if ( sc.getSpells().equals( "Memorized" )) {
+                //setMemorizedResources( sc );
+            }
+            else {
+                //TODO: WTF, ZOMG!
+            }
+
+        }
+    }
+
+    private SortedMap<Integer, LinkedList<HashMap<String, Object>>> _spontaneousSpellResources =
+            new TreeMap<Integer, LinkedList<HashMap<String, Object>>>();
+
+    private void  setSpontaneousSpellResources( Spellclass spellClass ) {
+        String spellClassName = spellClass.getName();
+        for( Spelllevel spellLevel : spellClass.getSpelllevel() ) {
+            int spellLevelInt = Integer.parseInt( spellLevel.getLevel() );
+            boolean unlimited = spellLevel.getUnlimited() != null && spellLevel.getUnlimited().equals("yes");
+            if ( unlimited ) { //don't bother with unlimited resources
+                continue;
+            }
+
+            int maxCasts = Integer.parseInt(spellLevel.getMaxcasts());
+            int used = Integer.parseInt( spellLevel.getUsed());
+            HashMap<String, Object> hmap = new HashMap<String, Object>();
+            hmap.put( "spellLevel", spellLevelInt );
+            hmap.put( "maxCasts", maxCasts );
+            hmap.put( "used", used );
+            hmap.put( "spellClassName", spellClassName );
+            HashMap<String, HashMap<String, Object >> spellByLevel = new HashMap<String, HashMap<String, Object>>();
+            for ( Spell s : _character.getSpellsknown().getSpell() ) {
+                if ( s.getClazz().equals(spellClassName)  && s.getLevel().equals( spellLevel.getLevel() )) {
+                    HashMap<String, Object> spellsByDC = new HashMap<String, Object>();
+                    spellsByDC.put( "dc", s.getDc() );
+                    spellsByDC.put( "used", 0 );
+                    spellByLevel.put( s.getName(), spellsByDC );
+                }
+            }
+            hmap.put( "spells", spellByLevel);
+
+            Integer hkey = spellLevelInt;
+            LinkedList<HashMap<String, Object>> spellResourcesByClass;
+            if( _spontaneousSpellResources.containsKey(hkey)) {
+                spellResourcesByClass = _spontaneousSpellResources.get( hkey );
+            }
+            else {
+                spellResourcesByClass = new LinkedList<HashMap<String, Object>>();
+                _spontaneousSpellResources.put( hkey, spellResourcesByClass );
+            }
+            spellResourcesByClass.push( hmap );
+        }
+    }
+
 
     private HashMap<String, ClassSpells > _spells= new HashMap<String, ClassSpells>();
     private HashMap<String, HashMap<String, Object>> _trackedSpells = new HashMap<String, HashMap<String, Object>>();
@@ -566,6 +632,17 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         _token.getToken().setProperty(SKILLS_JSON, gjson.toJson(_skills));
 
         _token.getToken().setProperty(RESOURCES_JSON, gjson.toJson(_trackedResources ));
+
+        //this is a bit tortured, because you can't use triply nested for loops in maptool macros
+        //but it is what it is
+        LinkedList<HashMap<String, Object>> spontaneousSpellResources = new LinkedList<HashMap<String,Object>>();
+        for( Integer level : _spontaneousSpellResources.keySet()) {
+            LinkedList<HashMap<String, Object>> spellsByLevel = _spontaneousSpellResources.get( level );
+            for( HashMap<String, Object> spellByLevel : spellsByLevel ) {
+                spontaneousSpellResources.add( spellByLevel );
+            }
+        }
+        _token.getToken().setProperty(SPONTANEOUS_RESOURCES_JSON, gjson.toJson( spontaneousSpellResources));
 
         //set the spells.  this needs to basically happen by class.
 

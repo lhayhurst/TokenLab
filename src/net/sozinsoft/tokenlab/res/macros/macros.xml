@@ -168,6 +168,17 @@
                allowPlayersToEdit="0"
                file="res/macros/TokenResourceMacro.txt"/>
 
+        <macro name="Spontaneous"
+               group="Special Abilities"
+               sortPrefix="205"
+               buttonColor="navy"
+               fontColor="white"
+               fontSize="1.00em"
+               minWidth="53"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="0"
+               file="res/macros/TokenSpontaneousSpellsMacro.txt"/>
+
     <macro name="Skill Check"
                group="Skills"
                sortPrefix="300"

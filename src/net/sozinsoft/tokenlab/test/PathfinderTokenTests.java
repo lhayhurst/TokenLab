@@ -470,7 +470,7 @@ public class PathfinderTokenTests {
                 "src/net/sozinsoft/tokenlab/test/tokens/inarisJarveelPog.rptok");
         config.addConfigEntry("Wotywina Turncoin", "src/net/sozinsoft/tokenlab/test/img/wotywinaTurncoinPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/wotywinaTurncoinPortrait.jpg",
-                "src/net/sozinsoft/tokenlab/test/tokens/wotywinaTurncoin.rptok");
+                "src/net/sozinsoft/tokenlab/test/tokens/");
 
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();

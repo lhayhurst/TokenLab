@@ -1,0 +1,30 @@
+[h: Spells = json.get( macro.args, "spells" )]
+[h: spellClass = json.get( macro.args, "spellClass" )]
+[h: spellLevel = json.get( macro.args, "spellLevel" )]
+[h: unlimited = json.get( macro.args, "unlimited" )]
+[h: usedForLevel = json.get( macro.args, "used" )]
+[h: maxCasts = json.get( macro.args, "maxCasts" )]
+[h: names = json.fields( Spells ) ]
+
+[FOREACH ( spellName, names, "" ), CODE: {
+   [h: DC = json.get( json.get( Spells, spellName ), "dc" )]
+   [h: used = json.get( json.get( Spells, spellName ), "used" )]
+   <tr>
+   <td>[r:spellName]</td>
+   <td>([r:spellClass])</td>
+   <td>DC [r:DC]</td>
+    [IF( unlimited == "1" ), CODE: {
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Unlimited usage</td>
+    }]
+   [IF( unlimited == "0" ), CODE: {
+        <td>lb</td>
+        <td>val</td>
+        <td>up</td>
+        <td>x level x spells left</td>
+
+    }]
+    </tr>
+}]
