@@ -20,9 +20,6 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
     private JTextField tokenOutputField;
     private Config.ConfigEntry  configEntry;
     private final Config config;
-    private JFileChooser imageChooser;
-    private JFileChooser tokenOutputChooser;
-    private FileDialog tokenOutputDialog;
     private JList targetList;
 
 
@@ -68,12 +65,6 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
 
     private void postFieldUpdate(Config.ConfigEntry configEntry) {
         updateFields(configEntry);
-
-        if ( !setPogImageButton.isEnabled() &&
-                !setPortraitImageButton.isEnabled() &&
-                !setTokenLocationButton.isEnabled()) {
-            buttonOK.setEnabled(true);
-        }
     }
 
 
@@ -84,7 +75,6 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
-        buttonOK.setEnabled(false);
 
         updateFields(configEntry);
 
@@ -128,17 +118,10 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
                         config.setPortraitDirectory(configEntry.getPortraitDirectory());
                     }
 
-                    setPortraitImageButton.setEnabled(false);
+
                     postFieldUpdate(configEntry);
                 }
-//                 int returnVal = imageChooser.showOpenDialog(null);
-//                 if (returnVal == JFileChooser.APPROVE_OPTION) {
-//                     File imageFile = imageChooser.getSelectedFile();
-//                     config.put(Config.IMAGE_DIR, imageFile.getParent());
-//                     configEntry.setPortraitFilePath(imageFile.getAbsolutePath());
-//                     setPortraitImageButton.setEnabled(false);
-//                     postFieldUpdate(configEntry);
-//                 }
+
             }
         });
         setPogImageButton.addActionListener(new ActionListener() {
@@ -149,19 +132,11 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
                     if (config.getPogDirectory() == null) {
                         config.setPogDirectory(configEntry.getPogDirectory());
                     }
-                    
-                    setPogImageButton.setEnabled(false);
+
                     postFieldUpdate(configEntry);
                 }
                 
-//                int returnVal = imageChooser.showOpenDialog(null);
-//                if (returnVal == JFileChooser.APPROVE_OPTION) {
-//                     File imageFile = imageChooser.getSelectedFile();
-//                     config.put(Config.IMAGE_DIR, imageFile.getParent());
-//                     configEntry.setPogFilePath(imageFile.getAbsolutePath());
-//                     setPogImageButton.setEnabled(false);
-//                     postFieldUpdate(configEntry);
-//                 }
+
             }
         });
         setTokenLocationButton.addActionListener(new ActionListener() {
@@ -188,7 +163,6 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
             if (config.getOutputTokenDirectory() == null) {
                 config.setOutputTokenDirectory(configEntry.getTokenFileDirectory());
             }
-            setTokenLocationButton.setEnabled(false);
             postFieldUpdate(configEntry);
         }
     }
