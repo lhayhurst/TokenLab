@@ -18,75 +18,52 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
     private JTextField portraitImageField;
     private JTextField pogImageField;
     private JTextField tokenOutputField;
-    private Config.ConfigEntry  configEntry;
-    private final Config config;
-    private JFileChooser imageChooser;
-    private JFileChooser tokenOutputChooser;
-    private FileDialog tokenOutputDialog;
     private JList targetList;
 
+    private final Config config;
+    private Config.ConfigEntry entry;
+    private String portraitPath;
+    private String pogPath;
+    private String tokenPath;
 
     private void setImageFileChooserFilters(JFileChooser chooser) {
-        chooser.setFileFilter(new FileFilter() {
-            @Override
-            public boolean accept(File f) {
-                if (f.isDirectory()) {
-                    return true;
-                } else {
-                    String name = f.getName();
-                    return name.endsWith("tiff") || name.endsWith("tif") || name.endsWith("gif") ||
-                            name.endsWith("bmp") || name.endsWith("jpg") || name.endsWith("jpeg") ||
-                            name.endsWith("png");
-                }
-            }
-
-            @Override
-            public String getDescription() {
-                return "Image files";
-            }
-        });
+        chooser.setFileFilter(IMAGE_FILE_FILTER);
     }
 
     private void setTokenFileChooserFilters(JFileChooser chooser ) {
        chooser.setFileFilter(new FileFilter() {
-            @Override
-            public boolean accept(File f) {
-                if (f.isDirectory()) {
-                    return true;
-                } else {
-                    String name = f.getName();
-                    return name.endsWith("tok") || name.endsWith("pog");
-                }
-            }
+           @Override
+           public boolean accept(File f) {
+               if (f.isDirectory()) {
+                   return true;
+               } else {
+                   String name = f.getName();
+                   return name.endsWith("tok") || name.endsWith("pog");
+               }
+           }
 
-            @Override
-            public String getDescription() {
-                return "Token files";
-            }
-        });
+           @Override
+           public String getDescription() {
+               return "Token files";
+           }
+       });
     }
-
-    private void postFieldUpdate(Config.ConfigEntry configEntry) {
-        updateFields(configEntry);
-
-        if ( !setPogImageButton.isEnabled() &&
-                !setPortraitImageButton.isEnabled() &&
-                !setTokenLocationButton.isEnabled()) {
-            buttonOK.setEnabled(true);
-        }
-    }
-
 
     public ConfigureCharacterDialog( JList targetList, final Config.ConfigEntry configEntry, final Config config) {
-        this.configEntry = configEntry;
         this.targetList = targetList;
+        this.entry = configEntry;
         this.config = config;
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
         buttonOK.setEnabled(false);
+        this.setTitle("Configure " + configEntry.getCharacterName());
 
-        updateFields(configEntry);
+        portraitPath = entry.getPortraitFilePath();
+        pogPath = entry.getPogFilePath();
+        tokenPath = entry.getTokenFilePath();
+
+        updateFields();
 
         // for now - have to select using button
         portraitImageField.setEnabled(false);
@@ -121,47 +98,22 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
         setPortraitImageButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                String portraitFile = selectFile("portrait", config.getPortraitDirectory());
-                if (portraitFile != null) {
-                    configEntry.setPortraitFilePath(portraitFile);
-                    if (config.getPortraitDirectory() == null) {
-                        config.setPortraitDirectory(configEntry.getPortraitDirectory());
-                    }
-
+                String selectedFile = selectFile("Portrait for " + configEntry.getCharacterName(), config.getPortraitDirectory());
+                if (selectedFile != null) {
+                    portraitPath = selectedFile;
                     setPortraitImageButton.setEnabled(false);
                     postFieldUpdate(configEntry);
                 }
-//                 int returnVal = imageChooser.showOpenDialog(null);
-//                 if (returnVal == JFileChooser.APPROVE_OPTION) {
-//                     File imageFile = imageChooser.getSelectedFile();
-//                     config.put(Config.IMAGE_DIR, imageFile.getParent());
-//                     configEntry.setPortraitFilePath(imageFile.getAbsolutePath());
-//                     setPortraitImageButton.setEnabled(false);
-//                     postFieldUpdate(configEntry);
-//                 }
             }
         });
         setPogImageButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                String pogFile = selectFile("Pog", config.getPogDirectory());
-                if (pogFile != null) {
-                    configEntry.setPogFilePath(pogFile);
-                    if (config.getPogDirectory() == null) {
-                        config.setPogDirectory(configEntry.getPogDirectory());
-                    }
-                    
+                String selectedFile = selectFile("Pog for " + configEntry.getCharacterName(), config.getPogDirectory());
+                if (selectedFile != null) {
+                    pogPath = selectedFile;
                     setPogImageButton.setEnabled(false);
                     postFieldUpdate(configEntry);
                 }
-                
-//                int returnVal = imageChooser.showOpenDialog(null);
-//                if (returnVal == JFileChooser.APPROVE_OPTION) {
-//                     File imageFile = imageChooser.getSelectedFile();
-//                     config.put(Config.IMAGE_DIR, imageFile.getParent());
-//                     configEntry.setPogFilePath(imageFile.getAbsolutePath());
-//                     setPogImageButton.setEnabled(false);
-//                     postFieldUpdate(configEntry);
-//                 }
             }
         });
         setTokenLocationButton.addActionListener(new ActionListener() {
@@ -171,37 +123,64 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
         });
     }
 
+    private void postFieldUpdate(Config.ConfigEntry configEntry) {
+        updateFields();
+
+        if ( !setPogImageButton.isEnabled() &&
+                !setPortraitImageButton.isEnabled() &&
+                !setTokenLocationButton.isEnabled()) {
+
+            buttonOK.setEnabled(true);
+        }
+    }
+
     private void onSelectTokenLocation(Config.ConfigEntry configEntry) {
-        JFrame frame = new JFrame();
-        System.setProperty("apple.awt.fileDialogForDirectories", "true");
-        FileDialog dialog = new FileDialog(frame, "Save Token As", FileDialog.SAVE);
+//        JFrame frame = new JFrame();
+//        System.setProperty("apple.awt.fileDialogForDirectories", "true");
+//        FileDialog dialog = new FileDialog(frame, "Save Token As", FileDialog.SAVE);
+//
+//        dialog.setFile(configEntry.getTokenFileName());
+//        dialog.setDirectory(configEntry.getTokenFileDirectory());
+//        dialog.setModal(true);
+//        dialog.setVisible(true);
+//
+//        System.setProperty("apple.awt.fileDialogForDirectories", "false");
 
-        dialog.setFile(configEntry.getTokenFileName());
-        dialog.setDirectory(configEntry.getTokenFileDirectory());
-        dialog.setModal(true);
-        dialog.setVisible(true);
-
-        System.setProperty("apple.awt.fileDialogForDirectories", "false");
-
-        if (dialog.getFile() != null) {
-            configEntry.setTokenFilePath(dialog.getDirectory() + dialog.getFile());
-            if (config.getOutputTokenDirectory() == null) {
-                config.setOutputTokenDirectory(configEntry.getTokenFileDirectory());
-            }
+        String newFilePath = saveFileAs("Token", entry.getTokenFileDirectory(), entry.getTokenFileName());
+        if (newFilePath != null) {
+            tokenPath = newFilePath;
             setTokenLocationButton.setEnabled(false);
             postFieldUpdate(configEntry);
         }
     }
 
-    private void updateFields(Config.ConfigEntry configEntry) {
-        portraitImageField.setText(configEntry.getPortraitFilePath());
-        pogImageField.setText(configEntry.getPogFilePath());
-        tokenOutputField.setText(configEntry.getOutputTokenPath());
+    private void updateFields() {
+        portraitImageField.setText(portraitPath);
+        pogImageField.setText(pogPath);
+        tokenOutputField.setText(tokenPath);
     }
 
     private void onOK() {
+        updateConfigEntry();
         targetList.repaint();
         dispose();
+    }
+
+    private void updateConfigEntry() {
+        entry.setPortraitFilePath(portraitPath);
+        if (config.getPortraitDirectory() == null) {
+            config.setPortraitDirectory(entry.getPortraitDirectory());
+        }
+
+        entry.setPogFilePath(pogPath);
+        if (config.getPogDirectory() == null) {
+            config.setPogDirectory(entry.getPogDirectory());
+        }
+
+        entry.setTokenFilePath(tokenPath);
+        if (config.getOutputTokenDirectory() == null) {
+            config.setOutputTokenDirectory(entry.getTokenFileDirectory());
+        }
     }
 
     private void onCancel() {

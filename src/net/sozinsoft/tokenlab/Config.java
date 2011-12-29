@@ -25,7 +25,7 @@ public class Config {
     
     
     private static final String[] IMAGE_EXTENSIONS = new String[] { "tiff", "tif", "gif", "bmp", "jpg", "jpeg", "png" };
-    private static final Predicate IMAGE_EXTENSION_PREDICATE = new Predicate() {
+    public static final Predicate IMAGE_EXTENSION_PREDICATE = new Predicate() {
         public boolean evaluate(Object o) {
             String fileName = (String) o;
             for (String extension: IMAGE_EXTENSIONS) {
@@ -36,21 +36,7 @@ public class Config {
             return false;
         }
     };
-    private static final FileFilter IMAGE_FILE_FILTER = new FileFilter() {
-        public boolean accept(File f) {
-            if (f.isDirectory()) {
-                return true;
-            } else {
-                String name = f.getName();
-                return IMAGE_EXTENSION_PREDICATE.evaluate(name);
-            }
-        }
 
-        public String getDescription() {
-            return "Image files";
-        }
-    };
-    
     private HashMap<String, ConfigEntry> configs;
     private String xmlFileLocation;
 	private String configFileName;
@@ -252,12 +238,20 @@ public class Config {
             pogPath.setFilePath(path);
         }
 
+        public String getPogDirectory() {
+            return pogPath.getDirectory();
+        }
+
         public String getPortraitFilePath() {
             return portraitPath.getFilePath();
         }
 
         public void setPortraitFilePath(String path) {
             portraitPath.setFilePath(path);
+        }
+
+        public String getPortraitDirectory() {
+            return portraitPath.getDirectory();
         }
 
 		public String getOutputTokenPath() {
@@ -310,6 +304,9 @@ public class Config {
             return tokenPath.getDirectory();
         }
 
+        public String getTokenFilePath() {
+            return tokenPath.getFilePath();
+        }
         public void setTokenFilePath(String path) {
             tokenPath.setFilePath(path);
         }
@@ -431,14 +428,6 @@ public class Config {
 
         public Config getConfig() {
             return config;
-        }
-
-        public String getPogDirectory() {
-            return pogPath.getDirectory();
-        }
-
-        public String getPortraitDirectory() {
-            return portraitPath.getDirectory();
         }
     }
     
