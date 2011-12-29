@@ -232,15 +232,7 @@ public class TokenLabUI {
                 });
                 menu.add(menuItem);
 
-                menuItem = new JMenuItem("Export character" + (multipleSelected ? "s" : "") + "...");
-                menuItem.addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent actionEvent) {
-                        exportSelectedCharacters();
-                    }
-                });
-                menu.add(menuItem);
-
-                menuItem = new JMenuItem("Reset to portfolio defaults...");
+                menuItem = new JMenuItem("Configure using portfolio defaults");
                 menuItem.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent actionEvent) {
                         resetToDefaultsForSelectedCharacters();
@@ -248,7 +240,17 @@ public class TokenLabUI {
                 });
                 menu.add(menuItem);
 
-                menuItem = new JMenuItem("Clear configuration" + (multipleSelected ? "s" : "") + "...");
+                menuItem = new JMenuItem("Export character" + (multipleSelected ? "s" : "") );
+                menuItem.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        exportSelectedCharacters();
+                    }
+                });
+                menu.add(menuItem);
+
+
+
+                menuItem = new JMenuItem("Clear configuration" + (multipleSelected ? "s" : ""));
                 menuItem.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent actionEvent) {
                         clearConfigForSelectedCharacters();

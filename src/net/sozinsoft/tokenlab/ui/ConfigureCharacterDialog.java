@@ -56,7 +56,7 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
-        buttonOK.setEnabled(false);
+
         this.setTitle("Configure " + configEntry.getCharacterName());
 
         portraitPath = entry.getPortraitFilePath();
@@ -101,8 +101,7 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
                 String selectedFile = selectFile("Portrait for " + configEntry.getCharacterName(), config.getPortraitDirectory());
                 if (selectedFile != null) {
                     portraitPath = selectedFile;
-                    setPortraitImageButton.setEnabled(false);
-                    postFieldUpdate(configEntry);
+                    updateFields();
                 }
             }
         });
@@ -112,7 +111,7 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
                 if (selectedFile != null) {
                     pogPath = selectedFile;
                     setPogImageButton.setEnabled(false);
-                    postFieldUpdate(configEntry);
+                    updateFields();
                 }
             }
         });
@@ -123,34 +122,12 @@ public class ConfigureCharacterDialog extends FileSelectionDialog {
         });
     }
 
-    private void postFieldUpdate(Config.ConfigEntry configEntry) {
-        updateFields();
-
-        if ( !setPogImageButton.isEnabled() &&
-                !setPortraitImageButton.isEnabled() &&
-                !setTokenLocationButton.isEnabled()) {
-
-            buttonOK.setEnabled(true);
-        }
-    }
-
     private void onSelectTokenLocation(Config.ConfigEntry configEntry) {
-//        JFrame frame = new JFrame();
-//        System.setProperty("apple.awt.fileDialogForDirectories", "true");
-//        FileDialog dialog = new FileDialog(frame, "Save Token As", FileDialog.SAVE);
-//
-//        dialog.setFile(configEntry.getTokenFileName());
-//        dialog.setDirectory(configEntry.getTokenFileDirectory());
-//        dialog.setModal(true);
-//        dialog.setVisible(true);
-//
-//        System.setProperty("apple.awt.fileDialogForDirectories", "false");
-
         String newFilePath = saveFileAs("Token", entry.getTokenFileDirectory(), entry.getTokenFileName());
         if (newFilePath != null) {
             tokenPath = newFilePath;
             setTokenLocationButton.setEnabled(false);
-            postFieldUpdate(configEntry);
+            updateFields();
         }
     }
 

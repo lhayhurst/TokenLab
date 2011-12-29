@@ -459,6 +459,7 @@ public class PathfinderTokenTests {
     @Test
     public void testPathfinderTokenCreation() throws Exception, SAXException {
         Config config = newConfig();
+        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png");
         config.addConfigEntry("Derrak Stoneskull", "src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/derrakStoneskullPortrait.jpg",
                 "src/net/sozinsoft/tokenlab/test/tokens/derrakStoneSkull.rptok");

@@ -2,10 +2,10 @@
 <document signature="Hero Lab Portfolio">
 <product major="3" minor="8" patch="1" build="267"/>
 <game folder="pathfinder" game="Pathfinder Roleplaying Game" major="6" minor="9"/>
-<portfolio herocount="4" activehero="3">
+<portfolio herocount="4" activehero="2">
 <tactical combatturn="0"/>
 <notes/>
-<hero playername="" nextpick="609" nextcontainer="5" heroindex="2" herosummary="Dwarf Ftr 20 &#150; CR 19" heroname="Derrak Stoneskull" batchindex="495" userbatch="430" enmassebatch="39" nexttrade="21" nexttransact="21" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="feats">
+<hero playername="" nextpick="606" nextcontainer="5" heroindex="2" herosummary="Dwarf Ftr 20 &#150; CR 19" heroname="Derrak Stoneskull" batchindex="495" userbatch="430" enmassebatch="39" nexttrade="21" nexttransact="21" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="feats">
 <statblock>DERRAK STONESKULL	CR 19
 Male Dwarf Fighter (Weapon Master) 20
 NE Medium Humanoid (Dwarf)
@@ -2385,18 +2385,6 @@ Despite his abilities, Derrak has died several times in the course of his advent
 </usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<needsource source="OutAmmo"/>
-<needsource source="OutImage"/>
-<needsource source="OutSkills"/>
-<needsource source="OutValid"/>
-<needsource source="OutputOpt"/>
-<needsource source="PaizoBlog"/>
-<needsource source="UMFamil"/>
-<needsource source="UMHeader"/>
-<needsource source="WebTraits"/>
-<needsource source="XPMedium"/>
-<needsource source="XPTrack"/>
-<needsource source="APGHeader"/>
 <needsource source="CSHeader"/>
 <needsource source="CSISMagic"/>
 <needsource source="CSRival"/>
@@ -2406,10 +2394,23 @@ Despite his abilities, Derrak has died several times in the course of his advent
 <needsource source="Firearm"/>
 <needsource source="GMG"/>
 <needsource source="MiscHeader"/>
+<needsource source="OutAmmo"/>
+<needsource source="OutImage"/>
+<needsource source="OutSkills"/>
+<needsource source="OutValid"/>
+<needsource source="OutputOpt"/>
+<needsource source="PCHeader"/>
+<needsource source="PaizoBlog"/>
+<needsource source="UMFamil"/>
+<needsource source="UMHeader"/>
+<needsource source="WebTraits"/>
+<needsource source="XPMedium"/>
+<needsource source="XPTrack"/>
+<needsource source="APGHeader"/>
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="686" nextcontainer="7" heroindex="3" herosummary="Elf Wiz 20 &#150; CR 19" heroname="Echean Ansolandi" batchindex="606" userbatch="430" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="classes">
+<hero playername="" nextpick="684" nextcontainer="7" heroindex="3" herosummary="Elf Wiz 20 &#150; CR 19" heroname="Echean Ansolandi" batchindex="606" userbatch="430" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="classes">
 <statblock>ECHEAN ANSOLANDI	CR 19
 Male Elf Wizard 20
 NE Medium Humanoid (Elf)
@@ -4798,7 +4799,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="639" nextcontainer="5" heroindex="4" herosummary="Human Clr 20 &#150; CR 19" heroname="Inaris Jerveel" batchindex="551" userbatch="430" enmassebatch="39" nexttrade="17" nexttransact="17" poolcount="35" activemode="1" hasacted="no">
+<hero playername="" nextpick="638" nextcontainer="5" heroindex="4" herosummary="Human Clr 20 &#150; CR 19" heroname="Inaris Jerveel" batchindex="551" userbatch="430" enmassebatch="39" nexttrade="17" nexttransact="17" poolcount="35" activemode="1" hasacted="no">
 <statblock>INARIS JERVEEL	CR 19
 Female Human Cleric 20
 CN Medium Humanoid (Human)
@@ -7105,7 +7106,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="589" nextcontainer="5" heroindex="5" herosummary="Halfling Rog 20 &#150; CR 19" heroname="Wotywina Turncoin" batchindex="494" userbatch="430" enmassebatch="39" nexttrade="9" nexttransact="9" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="basics">
+<hero playername="" nextpick="588" nextcontainer="5" heroindex="5" herosummary="Halfling Rog 20 &#150; CR 19" heroname="Wotywina Turncoin" batchindex="494" userbatch="430" enmassebatch="39" nexttrade="9" nexttransact="9" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="basics">
 <statblock>WOTYWINA TURNCOIN	CR 19
 Female Halfling Rogue 20
 CE Small Humanoid (Halfling)

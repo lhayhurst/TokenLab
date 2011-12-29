@@ -8,4 +8,4 @@
    [h:callback = "spell3@this"]
    <b><font size="5" >[r:macrolink( spellname,  callback, "none", args, currentToken)] </font></b>: <font size="4"> [r:json.get(Spell, "shortDescription") ]
  (<b>DC [r:json.get( Spell, "spellDC")]</b>)
-}]</font>
+}]
