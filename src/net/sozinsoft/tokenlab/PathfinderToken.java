@@ -793,7 +793,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
     }
 
     private int buildGenericMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
-        index = buildMacros(macroButtonSet, "Generic", index);
+        index = buildMacros(macroButtonSet, "Basic", index);
         return index;
     }
 
@@ -830,7 +830,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
         //next do the power macros
         int sortPrefix = 0;
-        HashMap<String, MacroDigester.MacroEntry > powerMacros = macroDigester.getGroup("Powers");
+        HashMap<String, MacroDigester.MacroEntry > powerMacros = macroDigester.getGroup("Fight");
         for( WeaponImpl wimpl : _weapons.values()) {
 
             MacroDigester.MacroEntry macroEntry = powerMacros.get( "Standard Attack");
