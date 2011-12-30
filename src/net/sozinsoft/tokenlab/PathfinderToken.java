@@ -91,7 +91,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         setVision();
         setInitiative();
         setTrackedResources();
-     //   setSpellResources(); TODO: re-enable the spell resources work at some point
+        setSpellResources();
     }
 
     private HashMap<String, HashMap<String, Object >> _trackedResources = new HashMap<String, HashMap<String, Object>>();
@@ -242,12 +242,42 @@ public class PathfinderToken implements ICharacter, ITokenizable {
                 //setSpellbookResources( sc );
             }
             else if ( sc.getSpells().equals( "Memorized" )) {
-                //setMemorizedResources( sc );
+                setMemorizedResources( sc );
             }
             else {
                 //TODO: WTF, ZOMG!
             }
 
+        }
+    }
+
+    private SortedMap<Integer, LinkedList<HashMap<String, Object>>> _memorizedSpellResources = new TreeMap<Integer, LinkedList<HashMap<String, Object>>>() ;
+
+    private void setMemorizedResources( Spellclass spellClass ) {
+        for( Spell s : _character.getSpellsmemorized().getSpell() ) {
+
+            boolean unlimited = s.getUnlimited() != null && s.getUnlimited().equals("yes");
+            if ( unlimited ) { //don't bother with unlimited resources
+                continue;
+            }
+
+            int level = Integer.parseInt( s.getLevel() );
+            String name = s.getName();
+            int dc = Integer.parseInt( s.getDc() );
+            String className = spellClass.getName();
+
+            LinkedList<HashMap<String, Object>> spellsAtLevel = _memorizedSpellResources.get( level );
+            if ( spellsAtLevel == null ) {
+                spellsAtLevel = new LinkedList<HashMap<String, Object>>();
+                _memorizedSpellResources.put( level, spellsAtLevel);
+            }
+            HashMap<String,Object> spellAtLevel = new HashMap<String, Object>();
+            spellAtLevel.put( "name", name );
+            spellAtLevel.put( "level", level );
+            spellAtLevel.put( "className", className);
+            spellAtLevel.put( "dc", dc );
+            spellAtLevel.put( "used", 0 );
+            spellsAtLevel.add( spellAtLevel );
         }
     }
 
@@ -270,16 +300,6 @@ public class PathfinderToken implements ICharacter, ITokenizable {
             hmap.put( "maxCasts", maxCasts );
             hmap.put( "used", used );
             hmap.put( "spellClassName", spellClassName );
-            HashMap<String, HashMap<String, Object >> spellByLevel = new HashMap<String, HashMap<String, Object>>();
-            for ( Spell s : _character.getSpellsknown().getSpell() ) {
-                if ( s.getClazz().equals(spellClassName)  && s.getLevel().equals( spellLevel.getLevel() )) {
-                    HashMap<String, Object> spellsByDC = new HashMap<String, Object>();
-                    spellsByDC.put( "dc", s.getDc() );
-                    spellsByDC.put( "used", 0 );
-                    spellByLevel.put( s.getName(), spellsByDC );
-                }
-            }
-            hmap.put( "spells", spellByLevel);
 
             Integer hkey = spellLevelInt;
             LinkedList<HashMap<String, Object>> spellResourcesByClass;
@@ -633,17 +653,29 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
         _token.getToken().setProperty(RESOURCES_JSON, gjson.toJson(_trackedResources ));
 
-        //todo: reenable the below someday
+
         //this is a bit tortured, because you can't use triply nested for loops in maptool macros
         //but it is what it is
-        //LinkedList<HashMap<String, Object>> spontaneousSpellResources = new LinkedList<HashMap<String,Object>>();
-        //for( Integer level : _spontaneousSpellResources.keySet()) {
-          //  LinkedList<HashMap<String, Object>> spellsByLevel = _spontaneousSpellResources.get( level );
-            //for( HashMap<String, Object> spellByLevel : spellsByLevel ) {
-              //  spontaneousSpellResources.add( spellByLevel );
-            //}
-        //}
-       // _token.getToken().setProperty(SPONTANEOUS_RESOURCES_JSON, gjson.toJson( spontaneousSpellResources));
+        LinkedList<HashMap<String, Object>> spontaneousSpellResources = new LinkedList<HashMap<String,Object>>();
+        for( Integer level : _spontaneousSpellResources.keySet()) {
+            LinkedList<HashMap<String, Object>> spellsByLevel = _spontaneousSpellResources.get( level );
+            for( HashMap<String, Object> spellByLevel : spellsByLevel ) {
+                spontaneousSpellResources.add( spellByLevel );
+            }
+        }
+       _token.getToken().setProperty(SPONTANEOUS_RESOURCES_JSON, gjson.toJson( spontaneousSpellResources));
+
+        LinkedList<HashMap<String, Object>> memorizedSpellResources = new LinkedList<HashMap<String, Object>>();
+        for (Integer level : _memorizedSpellResources.keySet()) {
+            LinkedList<HashMap<String, Object>> spellsByLevel = _memorizedSpellResources.get(level);
+            for (HashMap<String, Object> spellByLevel : spellsByLevel) {
+                memorizedSpellResources.add(spellByLevel);
+            }
+        }
+        _token.getToken().setProperty("MemorizedResourcesJSON", gjson.toJson( memorizedSpellResources));
+
+
+
 
         //set the spells.  this needs to basically happen by class.
 
@@ -810,8 +842,13 @@ public class PathfinderToken implements ICharacter, ITokenizable {
             //kind of a small hack, special for spells
             //if the character doesn't have spells, don't bother creating a spell button
             //TODO: probably a smoother way to do this
-            if ( macroEntry.name.equals("Spells") ) {
+            if ( macroEntry.name.equals("Spell Reference") ) {
                 if (isSpellCaster()) {
+                    continue;
+                }
+            }
+            if ( macroEntry.name.equals("Spontaneous Spell Resources") ) {   //same for the above :-)
+                if (_spontaneousSpellResources.size() == 0 ) {
                     continue;
                 }
             }

@@ -136,27 +136,38 @@
                allowPlayersToEdit="0"
                file="res/macros/AbilitiesMacro.txt"/>
 
-    <macro name="Spells"
+    <macro name="Spell Reference"
                group="Special Abilities"
                sortPrefix="203"
                buttonColor="navy"
                fontColor="white"
-               fontSize="1.00em"
-               minWidth="30"
+               fontSize="0.90em"
+               minWidth="50"
                applyToSelectedTokens="1"
                allowPlayersToEdit="0"
                file="res/macros/SpellMacro.txt"/>
 
-    <macro name="Resources"
+    <macro name="Basic Resources"
                group="Special Abilities"
                sortPrefix="204"
                buttonColor="navy"
                fontColor="white"
-               fontSize="1.00em"
+               fontSize="0.90em"
                minWidth="53"
                applyToSelectedTokens="1"
                allowPlayersToEdit="0"
                file="res/macros/TokenResourceMacro.txt"/>
+
+    <macro name="Spontaneous Spell Resources"
+               group="Special Abilities"
+               sortPrefix="205"
+               buttonColor="navy"
+               fontColor="white"
+               fontSize="0.90em"
+               minWidth="53"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="0"
+               file="res/macros/TokenSpontaneousSpellsMacro.txt"/>
 
     <macro name="Skill Check"
                group="Skills"

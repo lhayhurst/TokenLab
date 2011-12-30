@@ -1,45 +1,30 @@
-[h: title = "Resources"]
-[h: activeToken = json.get( macro.args, "ID" ) ]
-[h: characterName = getProperty("Character", activeToken ) ]
-[h: Resources = json.get( macro.args, "Resources" )]
-[h: doSave = json.get( macro.args, "doSave" )]
-[IF( doSave == 1 ), CODE: {
-    [h:selectTokens( activeToken, 0 )]
-    [h:setProperty( "ResourcesJSON", Resources, activeToken )]
+
+[h: resourceName = json.get(macro.args, "resourceName")]
+[h: resourceDirection = json.get(macro.args, "direction")]
+[h: activeToken = json.get( macro.args, "ID" )]
+[h: ResourcesJSON = json.get( macro.args, "Resources" )]
+[h: Resource =  json.get( ResourcesJSON, resourceName )]
+[h: used = json.get( Resource, "used" )]
+[h: newValue = 0]
+
+
+[IF( resourceDirection == "up"), CODE: {
+    [h:newValue = add( used, 1 )]
 }]
-[h:ResourceNames = json.fields( Resources )]
-[h: imageFormatString = 	"<img src='%s' border=0 height=45 width=45 alt='%s'>"]
-[h: IncrementImage = 	strformat(imageFormatString, tblImage( "TokenLabImages",  2 ), 	"Add one to resource used")]
-[h: DecrementImage =        strformat(imageFormatString, tblImage("TokenLabImages", 3 ), 	"Subtract one to resource used")]
-[h: ResetImage =                 strformat(imageFormatString, tblImage("TokenLabImages", 4), 	"Reset to zero")]
-[frame(title, "input=1; height=100; width=100"):{
-<html>
-<head>
-    <title>[r: title]</title>
-    <link rel="stylesheet" type="text/css" href="css@Lib:TokenLab">
-</head>
-<body>
-<h2><br>[r:characterName]</h2>
-<br>
-<table>
-    [FOREACH ( resourceName, ResourceNames, "" ), CODE: {
-    <tr>
-        [h: upargs   = json.set("{}", "resourceName", resourceName,   "ID", activeToken, "direction", "up" , "Resources", Resources )]
-        [h: downargs   = json.set("{}", "resourceName", resourceName,   "ID", activeToken, "direction", "down", "Resources", Resources  )]
-        [h: resetargs   = json.set("{}", "resourceName", resourceName,   "ID", activeToken, "direction", "reset", "Resources", Resources  )]
-        [h: UpButton = macroLink(IncrementImage, 	"UpdateResource@Lib:TokenLab", "none", upargs, activeToken )]
-        [h: DownButton = macroLink(DecrementImage, 	"UpdateResource@Lib:TokenLab", "none", downargs, activeToken )]
-        [h: ResetButton = macroLink(ResetImage, 	"UpdateResource@Lib:TokenLab", "none", resetargs, activeToken )]
-        [h: used   = json.get( json.get( Resources, resourceName ), "used" ) )]
-        [h: max    = json.get( json.get( Resources, resourceName ), "max" ) )]
-        <td>[r:DownButton]</td>
-        <td><b><font size = "6" >[r:used] </font> </b><font size="3">/[r:max]</font></td>
-        <td>[r:UpButton]</td>
-        <td>[r:ResetButton]</td>
-        <td> <b> [r:resourceName] <b></td>
-    </tr>
-    }]
-</table>
-</body>
-</html>
+
+[IF( resourceDirection == "down"), CODE: {
+    [h:newValue = subtract( used, 1 )]
 }]
+
+[IF( resourceDirection == "reset"), CODE: {
+    [h:newValue = 0]
+}]
+
+[h:Resource = json.set(Resource, "used", newValue)]
+[h: Resources = json.set(  ResourcesJSON, resourceName, Resource )]
+[h:Return = json.set( "{}",  "Resources", Resources, "ID", activeToken )]
+
+[h:selectTokens( activeToken, 0 )]
+[h:setProperty( "ResourcesJSON", Resources, activeToken )]
+
+[MACRO( "ResourceFrame@Lib:TokenLab" ): Return ]

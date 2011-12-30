@@ -1,7 +1,7 @@
 [h: selectedTokens = getSelected()]
 [h, if(listCount(selectedTokens)!=1): assert(0, "You have to select only one token")]
 
-[h:Resources = getProperty( "SpontaneousResourcesJSON", currentToken() )]
+[h:Resources = getProperty( "MemorizedResourcesJSON", currentToken() )]
 [h: args = json.set( "{}" , "ID", currentToken(), "Resources", Resources  )]
 
-[MACRO("SpontaneousResourceFrame@Lib:TokenLab") : args ]
+[MACRO("MemorizedResourceFrame@Lib:TokenLab") : args ]

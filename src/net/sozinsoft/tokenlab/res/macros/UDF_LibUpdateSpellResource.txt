@@ -1,0 +1,32 @@
+[h:spells = json.get( macro.args, "Spells" )]
+[h:activeToken = json.get( macro.args, "ID" )]
+[h:direction = json.get( macro.args, "direction" )]
+[h: index = json.get( macro.args, "index" )]
+[h: resources = json.get( macro.args, "Resources" )]
+[h: spellByLevelAndClassEntry = json.get( resources, index )]
+[h: currentSpellValue = json.get( spellByLevelAndClassEntry, "used")]
+[h: propertyToSet = json.get(  macro.args, "property" )]
+[h: macroToCall = json.get( macro.args, "callbackMacro" )]
+
+[h: newValue = 0]
+
+[IF( direction == "up"), CODE: {
+    [h:newValue = add( currentSpellValue, 1 )]
+}]
+
+[IF( direction == "down"), CODE: {
+    [h:newValue = subtract( currentSpellValue, 1 )]
+}]
+
+[h: spellByLevelAndClassEntry = json.set( spellByLevelAndClassEntry, "used", newValue) ]
+[h: resources = json.set( resources, index, spellByLevelAndClassEntry )]
+
+[h: args = json.set( "{}" , "ID", activeToken, "Resources", resources )]
+
+[h:selectTokens( activeToken, 0 )]
+[h:setProperty( propertyToSet, Resources, activeToken )]
+
+[MACRO( macroToCall ) : args ]
+
+
+

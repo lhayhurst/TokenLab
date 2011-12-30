@@ -93,7 +93,7 @@ public class PathfinderTokenTests {
         assertEquals(20, ptok.getLevel().intValue());
         assertEquals("Ftr 20", ptok.getClassAbbreviation());
 
-        dss = characters.get(3);
+        dss = characters.get(4);
         ptok = new PathfinderToken(dss);
         assertEquals("Wotywina Turncoin", ptok.getName());
         assertEquals(183, ptok.getClassHitpoints().intValue());
@@ -442,7 +442,7 @@ public class PathfinderTokenTests {
         assertEquals(0, ptok.getACFromSize().intValue());
         assertEquals(0, ptok.getACMisc().intValue());
 
-        dss = characters.get(3);
+        dss = characters.get(4);
         ptok = new PathfinderToken(dss);
 
         //Wotywina Turncoin
@@ -472,6 +472,9 @@ public class PathfinderTokenTests {
         config.addConfigEntry("Wotywina Turncoin", "src/net/sozinsoft/tokenlab/test/img/wotywinaTurncoinPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/wotywinaTurncoinPortrait.jpg",
                 "src/net/sozinsoft/tokenlab/test/tokens/wotywinaTurncoin.rptok");
+        config.addConfigEntry("Isai Odighuzua", "src/net/sozinsoft/tokenlab/test/img/IsaiOdighuzua_pog.png",
+                        "src/net/sozinsoft/tokenlab/test/img/IsaiOdighuzua_portrait.jpg",
+                        "src/net/sozinsoft/tokenlab/test/tokens/IsaiOdighuzua.rptok");
 
 
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
