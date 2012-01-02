@@ -1,4 +1,4 @@
-[h: title = "Resources"]
+[h: title = "Spontaneous Spell Resources"]
 [h: activeToken = json.get( macro.args, "ID" ) ]
 [h: characterName = getProperty("Character", activeToken ) ]
 [h: Resources = json.get( macro.args, "Resources" )]
@@ -18,6 +18,10 @@
 	<body>
 	<h2><br>[r:characterName] Spontaneous Spells</h2>
 	<br>
+
+                     [h:resetArgs = json.set( "{}", "ID", activeToken, "Resources", resources  )]
+                     [r:macroLink("Reset all", "UDF_ResetSpontaneousSpellResources@Lib:TokenLab", "self", resetArgs, activeToken)]
+
                       [h:index = 0]
 	<table>
                      [FOREACH ( spellLevelResources, Resources, "" ), CODE: {
@@ -27,11 +31,11 @@
 		[h:unlimited = json.get( spellLevelResources, "unlimited" ) ]
 		[h:used = json.get( spellLevelResources, "used" ) ]
 		[h:maxCasts = json.get( spellLevelResources, "maxCasts" ) ]
-                                          [h: upargs   = json.set("{}",  "ID", activeToken, "direction", "up" , "index", index, "Resources", resources, "property", "SpontaneousResourcesJSON", "callbackMacro", "SpontaneousResourceFrame@Lib:TokenLab"  )]
-                                          [h: downargs   = json.set("{}",  "ID", activeToken, "direction", "down" , "index", index, "Resources", resources,  "property", "SpontaneousResourcesJSON", "callbackMacro", "SpontaneousResourceFrame@Lib:TokenLab"  )]
+                                          [h: upargs   = json.set("{}",  "ID", activeToken, "direction", "up" , "index", index, "Resources", resources  )]
+                                          [h: downargs   = json.set("{}",  "ID", activeToken, "direction", "down" , "index", index, "Resources", resources  )]
 
-                                          [h: UpButton = macroLink(IncrementImage, 	"UDF_UpdateSpellResource@Lib:TokenLab", "none", upargs, activeToken )]
-                                          [h: DownButton = macroLink(DecrementImage, 	"UDF_UpdateSpellResource@Lib:TokenLab", "none", downargs, activeToken )]
+                                          [h: UpButton = macroLink(IncrementImage, 	"UDF_UpdateSpontaneousSpellResource@Lib:TokenLab", "none", upargs, activeToken )]
+                                          [h: DownButton = macroLink(DecrementImage, 	"UDF_UpdateSpontaneousSpellResource@Lib:TokenLab", "none", downargs, activeToken )]
 
                                          <tr>
                                             <td><b><font size = "4" >[r:spellClassName] (level [r:spellLevel]) </font> </td>

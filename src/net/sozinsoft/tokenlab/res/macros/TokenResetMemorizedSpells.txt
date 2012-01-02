@@ -1,5 +1,4 @@
-/self
-Resetting all memorized spells ...
+
 [h: selectedTokens = getSelected()]
 [h, if(listCount(selectedTokens)!=1): assert(0, "You have to select only one token")]
 
@@ -21,4 +20,3 @@ Resetting all memorized spells ...
 
 [h:selectTokens( currentToken(), 0 )]
 [h:setProperty( "MemorizedResourcesJSON", tmpResources, currentToken() )]
-...done

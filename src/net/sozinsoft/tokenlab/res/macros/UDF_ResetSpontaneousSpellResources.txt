@@ -1,0 +1,17 @@
+[h: activeToken = json.get( macro.args, "ID" )]
+[h: Resources = json.get( macro.args, "Resources" )]
+[h: tmpResources = Resources]
+[h: index = 0]
+
+
+[FOREACH( spell, Resources, ""), CODE: {
+    [h:spell=json.set( spell, "used", 0)]
+    [h:tmpResources = json.set( tmpResources, index, spell )]
+    [h: index = index + 1]
+}]
+
+[h:selectTokens( activeToken, 0 )]
+[h:setProperty( "SpontaneousResourcesJSON", tmpResources, activeToken )]
+
+[h: callbackArgs = json.set( "{}" , "ID", activeToken, "Resources", tmpResources  )]
+[MACRO("SpontaneousResourceFrame@Lib:TokenLab") : callbackArgs ]

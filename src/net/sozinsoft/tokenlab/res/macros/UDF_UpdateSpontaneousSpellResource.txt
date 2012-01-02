@@ -1,0 +1,30 @@
+[h: resources = json.get( macro.args, "Resources" )]
+[h: index = json.get( macro.args, "index" )]
+[h:activeToken = json.get( macro.args, "ID" )]
+[h:direction = json.get( macro.args, "direction" )]
+[h:spell = json.get( resources, index )]
+
+[h: currentSpellValue = json.get( spell, "used")]
+[h: newValue = 0]
+
+[IF( direction == "up"), CODE: {
+    [h:newValue = add( currentSpellValue, 1 )]
+}]
+
+[IF( direction == "down"), CODE: {
+    [h:newValue = subtract( currentSpellValue, 1 )]
+}]
+
+
+[h: spell = json.set( spell, "used", newValue) ]
+[h: resources = json.set( resources, index, spell )]
+
+[h:selectTokens( activeToken, 0 )]
+[h:setProperty( "SpontaneousResourcesJSON", Resources, activeToken )]
+
+[h: args = json.set( "{}" , "ID", activeToken, "Resources", resources  )]
+[MACRO( "SpontaneousResourceFrame@Lib:TokenLab" ) : args ]
+
+
+
+
