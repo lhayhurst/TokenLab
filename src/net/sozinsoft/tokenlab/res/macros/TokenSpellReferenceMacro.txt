@@ -6,7 +6,7 @@
 </head>
 <body>
 <table>
-<tr><td>[r:macroLink("Spells", "Spells@token")]</td></tr>
+<tr><td>[r:macroLink("Spells", "Spell Reference@token", "none", "", currentToken() )]</td></tr>
 </table>
 [h: SpellClasses = json.fields(SpellJSON)]
 <h1><u>[r:getProperty("Character")] Spells </u></h1>

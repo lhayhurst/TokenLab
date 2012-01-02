@@ -145,7 +145,7 @@
                minWidth="50"
                applyToSelectedTokens="1"
                allowPlayersToEdit="0"
-               file="res/macros/SpellMacro.txt"/>
+               file="res/macros/TokenSpellReferenceMacro.txt"/>
 
     <macro name="Basic Resources"
                group="Special Abilities"
@@ -169,9 +169,20 @@
                allowPlayersToEdit="0"
                file="res/macros/TokenSpontaneousSpellsMacro.txt"/>
 
-        <macro name="Spontaneous Spell Resources"
+    <macro name="Reset all"
+           group="Special Abilities - Memorized Spells"
+           sortPrefix="500"
+           buttonColor="red"
+           fontColor="white"
+           fontSize="1.00em"
+           minWidth="41"
+           applyToSelectedTokens="1"
+           allowPlayersToEdit="0"
+           file="res/macros/TokenResetMemorizedSpells.txt"/>
+
+    <macro name="Spontaneous Spell Resources"
                group="Special Abilities - Memorized Spells"
-               sortPrefix="500"
+               sortPrefix="501"
                buttonColor="navy"
                fontColor="white"
                fontSize="1.00em"

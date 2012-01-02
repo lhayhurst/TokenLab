@@ -1,12 +1,19 @@
-[frame("Spells"): {
+[frame("Memorized Spells"): {
 <head>
     <link rel="stylesheet" type="text/css" href="css@Lib:TokenLab">
 </head>
+
+[h:activeToken = json.get( macro.args, "ID" )]
+[h: resources = json.get( macro.args, "Resources" )]
+[h: forLevel = json.get (macro.args, "level" )]
+[h: spell = json.get(macro.args, "spell")]
+[h: args = json.set( "{}" , "ID", activeToken, "Resources", resources, "level", forLevel ) ]
+
+<br>
 <table>
-<tr><td>[r:macroLink("Spells", "Spell Reference@this",  "none", "", currentToken())]</td></tr>
+<tr><td>[r:macroLink("Memorized Spells", "MemorizedResourceFrame@Lib:TokenLab", "", args, currentToken())]</td></tr>
 </table>
 
-[h: Spell=json.get(macro.args, "spell")]
 <h2>[r:json.get(Spell, "name")] </h2>
 <b>School</b> [r:json.get(Spell,"school")]<br>
 <b>Level</b> [r:json.get(Spell, "spellLevel")]<br>
@@ -20,4 +27,3 @@
 <b>DC</b> [r:json.get(Spell, "spellDC")],  <b>CL</b> [r:json.get(Spell, "casterLevel")] <br><br>
 [r:json.get(Spell, "description")]
 }]
-

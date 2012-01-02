@@ -758,6 +758,12 @@ public class PathfinderToken implements ICharacter, ITokenizable {
             return index;
         }
         HashMap<String, MacroDigester.MacroEntry > memorizedMacroSet = macroDigester.getGroup( "Special Abilities - Memorized Spells");
+
+        MacroDigester.MacroEntry resetEntry = (MacroDigester.MacroEntry) memorizedMacroSet.values().toArray()[1];
+        IMacroReplacer defaultReplacer = new DefaultReplacer();
+        MacroButtonProperties defaultProperties = resetEntry.getMacroButtonProperties( index++, defaultReplacer );
+        macroButtonSet.add( defaultProperties );
+
         MacroDigester.MacroEntry macroEntry = (MacroDigester.MacroEntry) memorizedMacroSet.values().toArray()[0];
         for( Integer level : _memorizedSpellResources.keySet() ) {
             IMacroReplacer memorizedReplacer = new MemorizedSpellReplacer( level );
