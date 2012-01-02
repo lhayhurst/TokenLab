@@ -25,6 +25,10 @@ public class ClassSpells {
     public ClassSpells( String className ) {
         this.className = className;
     }
+    
+    public String getClassName() {
+        return this.className;
+    }
 
     public void addSpell( Spell s ) {
         PFSRDSpell pfsrdSpell =  _pfSRDSpells.getSpell( s.getName() );

@@ -5,7 +5,7 @@
 <portfolio herocount="5" activehero="6">
 <tactical combatturn="0"/>
 <notes/>
-<hero playername="" nextpick="606" nextcontainer="5" heroindex="2" herosummary="Dwarf Ftr 20 &#150; CR 19" heroname="Derrak Stoneskull" batchindex="498" userbatch="433" enmassebatch="39" nexttrade="21" nexttransact="21" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="feats">
+<hero playername="" nextpick="612" nextcontainer="5" heroindex="2" herosummary="Dwarf Ftr 20 &#150; CR 19" heroname="Derrak Stoneskull" batchindex="498" userbatch="433" enmassebatch="39" nexttrade="21" nexttransact="21" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="feats">
 <statblock>DERRAK STONESKULL	CR 19
 Male Dwarf Fighter (Weapon Master) 20
 NE Medium Humanoid (Dwarf)
@@ -2426,7 +2426,7 @@ Despite his abilities, Derrak has died several times in the course of his advent
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="685" nextcontainer="7" heroindex="3" herosummary="Elf Wiz 20 &#150; CR 19" heroname="Echean Ansolandi" batchindex="609" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="classes">
+<hero playername="" nextpick="689" nextcontainer="7" heroindex="3" herosummary="Elf Wiz 20 &#150; CR 19" heroname="Echean Ansolandi" batchindex="609" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="classes">
 <statblock>ECHEAN ANSOLANDI	CR 19
 Male Elf Wizard 20
 NE Medium Humanoid (Elf)
@@ -4836,7 +4836,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="640" nextcontainer="5" heroindex="4" herosummary="Human Clr 20 &#150; CR 19" heroname="Inaris Jerveel" batchindex="554" userbatch="433" enmassebatch="39" nexttrade="17" nexttransact="17" poolcount="35" activemode="1" hasacted="no">
+<hero playername="" nextpick="642" nextcontainer="5" heroindex="4" herosummary="Human Clr 20 &#150; CR 19" heroname="Inaris Jerveel" batchindex="554" userbatch="433" enmassebatch="39" nexttrade="17" nexttransact="17" poolcount="35" activemode="1" hasacted="no">
 <statblock>INARIS JERVEEL	CR 19
 Female Human Cleric 20
 CN Medium Humanoid (Human)
@@ -7164,7 +7164,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="590" nextcontainer="5" heroindex="5" herosummary="Halfling Rog 20 &#150; CR 19" heroname="Wotywina Turncoin" batchindex="497" userbatch="433" enmassebatch="39" nexttrade="9" nexttransact="9" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="basics">
+<hero playername="" nextpick="592" nextcontainer="5" heroindex="5" herosummary="Halfling Rog 20 &#150; CR 19" heroname="Wotywina Turncoin" batchindex="497" userbatch="433" enmassebatch="39" nexttrade="9" nexttransact="9" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="basics">
 <statblock>WOTYWINA TURNCOIN	CR 19
 Female Halfling Rogue 20
 CE Small Humanoid (Halfling)
@@ -9518,33 +9518,32 @@ The only time that Wynn creates strife with her comrades is when selecting contr
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="1714" nextcontainer="9" heroindex="6" herosummary="Human Brd 5 Clr 5 Sor 9 &#150; CR 18" heroname="Isai Odighuzua" batchindex="552" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="classes">
-<statblock>ISAI ODIGHUZUA	CR 18
-Male Human (Mwangi) Bard 5 Cleric 5 Sorcerer 9
+<hero playername="" nextpick="2291" nextcontainer="12" heroindex="6" herosummary="Human Brd 5 Clr 5 Drd 2 Sor 7 Wiz 1 &#150; CR 19" heroname="Isai Odighuzua" batchindex="577" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="cHelpDrd">
+<statblock>ISAI ODIGHUZUA	CR 19
+Male Human (Mwangi) Bard 5 Cleric 5 Druid 2 Sorcerer 7 Wizard 1
 CE Medium Humanoid (Human)
 Init +6; Senses Perception +3
 --------------------
 DEFENSE
 --------------------
 AC 12, touch 12, flat-footed 10   (+2 Dex)
-hp 167 (10d8+9d6+57)
-Fort +11, Ref +11, Will +18
-Resist Photosynthesis (Sustenance, +4 save vs. Poison &amp; S
+hp 186 (12d8+8d6+60)
+Fort +13, Ref +10, Will +22
+Resist Photosynthesis (Sustenance, +2 save vs. Poison &amp; S
 --------------------
 OFFENSE
 --------------------
 Spd 30 ft.
 Melee Dagger +9/+4 (1d4-1/19-20/x2) and
    Unarmed Strike +9/+4 (1d3-1/20/x2)
-Special Attacks Bardic Performance (standard action) (18 rounds/da, Bardic Performance: Countersong, Bardic Performance: Distraction, Bardic Performance: Fascinate (DC 18), Bardic Performance: Inspire Competence +2, Bardic Performance: Inspire Courage +2, Destructive Smite +2 (6/day), Tanglevine (CMB 15) (9/day)
-Spell-Like Abilities Massmorph (Tree Shape) (1/day), Speak with Animals (8 rounds/day)
+Special Attacks Acid Cloud (1d6) (4/day) (DC 11), Bardic Performance (standard action) (18 rounds/da, Bardic Performance: Countersong, Bardic Performance: Distraction, Bardic Performance: Fascinate (DC 18), Bardic Performance: Inspire Competence +2, Bardic Performance: Inspire Courage +2, Destructive Smite +2 (6/day), Tanglevine (CMB 13) (9/day)
+Spell-Like Abilities Speak with Animals (8 rounds/day)
 Bard Spells Known (CL 5, +9 melee touch, +12 ranged touch):
 2 (4/day) Blindness/Deafness (DC 18), Blur (DC 18), Blood Biography (DC 18)
 1 (6/day) Beguiling Gift (DC 17), Animate Rope, Borrow Skill (DC 17), Call Weapon (DC 17)
 0 (at will) Lullaby (DC 16), Open/Close (DC 16), Know Direction (DC 16), Flare (DC 16), Daze (DC 16), Light
-Sorcerer Spells Known (CL 9, +9 melee touch, +12 ranged touch):
-4 (5/day) Command Plants (DC 20), Shadow Conjuration (DC 20), Acid Pit (DC 20)
-3 (7/day) Invisibility Sphere (DC 19), Blink (DC 19), Haste (DC 19), Dispel Magic, Speak with Plants (DC 19), Fly (DC 19), Sheet Lightning (DC 19), Tiny Hut
+Sorcerer Spells Known (CL 7, +9 melee touch, +12 ranged touch):
+3 (5/day) Invisibility Sphere (DC 19), Blink (DC 19), Haste (DC 19), Dispel Magic, Speak with Plants (DC 19), Fly (DC 19), Sheet Lightning (DC 19), Tiny Hut
 2 (8/day) Stone Call, Barkskin, False Life (DC 18), Mirror Image (DC 18), Web (DC 18), Scorching Ray, Greensight
 1 (8/day) Magic Missile, Shocking Grasp, Mage Armor (DC 17), Hydraulic Push, Color Spray (DC 17), Endure Elements (DC 17), Entangle (DC 17), Jump (DC 17), Feather Fall (DC 17)
 0 (at will) Read Magic (DC 16), Ghost Sound (DC 16), Mage Hand, Mending, Detect Magic, Dancing Lights, Prestidigitation (DC 16), Message
@@ -9553,19 +9552,29 @@ Cleric Spells Known (CL 5, 9 melee touch, 12 ranged touch):
 2 (3/day) Cure Moderate Wounds (DC 15), Gust of Wind (DC 15), Darkness, Share Language (DC 15)
 1 (4/day) Detect Evil, Detect Evil, Inflict Light Wounds (DC 14), Infernal Healing, Calm Animals (DC 14)
 0 (at will) Bleed (DC 13), Bleed (DC 13), Bleed (DC 13), Bleed (DC 13)
+Druid Spells Known (CL 2, 9 melee touch, 12 ranged touch):
+1 (3/day) Stone Fist (DC 14), Touch of the Sea (DC 14), Negate Aroma (DC 14)
+0 (at will) Know Direction (DC 13), Detect Poison, Create Water, Detect Magic
+Wizard Spells Known (CL 1, 9 melee touch, 12 ranged touch):
+1 (2/day) Crafter&apos;s Fortune (DC 12), Color Spray (DC 12)
+0 (at will) Resistance (DC 11), Ray of Frost, Read Magic (DC 11)
 --------------------
 STATISTICS
 --------------------
 Str 8,  Dex 14,  Con 14,  Int 12,  Wis 16,  Cha 20/22
 Base Atk +10; CMB +9; CMD 21
-Feats Bard Weapon Proficiencies, Combat Casting, Eschew Materials, Expanded Arcana: Sorcerer, Extend Spell, Improved Initiative, Lingering Spell, Persistent Spell, Toughness +19
-Skills Bluff +11, Craft (Alchemy) +10, Fly +10, Knowledge (Arcana) +7, Knowledge (Nature) +12, Profession (Gardener) +7, Profession (Herbalist) +7, Spellcraft +13, Use Magic Device +16
-Languages Common, Polyglot, Sylvan
-SQ Animal Companion Link (Ex), Aura (Ex), Bardic Knowledge +2 (Ex), Channel Negative Energy 3d6 (9/day) (DC 18) (Su), Cleric Domain: Animal, Cleric Domain: Catastrophe, Lore Master (1/day) (Ex), Metamagic Rod, Lingering, Lesser, Share Spells with Companion (Ex), Spontaneous Casting, Verdant, Versatile Singing +0 (Ex), Well Versed (Ex)
+Feats Bard Weapon Proficiencies, Combat Casting, Druid Weapon Proficiencies, Eschew Materials, Expanded Arcana: Sorcerer, Extend Spell, Improved Initiative, Lingering Spell, Persistent Spell, Scribe Scroll, Toughness +20, Wizard Weapon Proficiencies
+Skills Bluff +11, Craft (Alchemy) +10, Fly +10, Knowledge (Arcana) +7, Knowledge (Nature) +14, Profession (Gardener) +7, Profession (Herbalist) +7, Spellcraft +13, Survival +5, Use Magic Device +16
+Languages Common, Druidic, Polyglot, Sylvan
+SQ Air, Animal Companion Link (Ex), Aura (Ex), Bardic Knowledge +2 (Ex), Bonded Object: -Choose- (1/day) (Sp), Channel Negative Energy 3d6 (9/day) (DC 18) (Su), Cleric Domain: Animal, Cleric Domain: Catastrophe, Druid Domain: Cave, Earth Supremacy +2 (Su), Lore Master (1/day) (Ex), Metamagic Rod, Lingering, Lesser, Nature Sense (Ex), Share Spells with Companion (Ex), Spontaneous Casting, Spontaneous Casting, Verdant, Versatile Singing +0 (Ex), Well Versed (Ex), Wild Empathy +8 (Ex), Woodland Stride (Ex)
 Combat Gear Dagger; Other Gear Alchemist&apos;s Lab, Portable, Cloak of Resistance, +1, Headband of Alluring Charisma, +2, Metamagic Rod, Lingering, Lesser, Spell component pouch
 --------------------
 SPECIAL ABILITIES
 --------------------
+Acid Cloud (1d6) (4/day) (DC 11) (Su) 5&apos;r cloud deals 1d6+0 Acid damage and sickens for 1r.  Fort halves/negates.
+Air Classical opposition school for: Earth
+
+You must spend 2 slots to cast spells from the Air school.
 Animal Companion Link (Ex) You have a link with your Animal Companion.
 Aura (Ex) The Cleric has an aura corresponding to his deity&apos;s alignment.
 Bardic Knowledge +2 (Ex) Add + 2 to all knowledge skill checks.
@@ -9575,16 +9584,20 @@ Bardic Performance: Distraction (Su) Counter magical effects that depend on sigh
 Bardic Performance: Fascinate (DC 18) (Su) One or more creatures becomes fascinated with you.
 Bardic Performance: Inspire Competence +2 (Su) +2 competence bonus for one ally on a skill check.
 Bardic Performance: Inspire Courage +2 (Su) Morale bonus on some saving throws, attack and damage rolls.
+Bonded Object: -Choose- (1/day) (Sp) DC 20 + spell level to cast spells without the bonded object. Once per day, you can cast any spell in your spellbook for free.
 Channel Negative Energy 3d6 (9/day) (DC 18) (Su) A good cleric can channel positive energy to heal the living and injure the undead; an evil cleric can channel negative energy to injure the living and heal the undead.
 Cleric Domain: Animal Granted Powers: You can speak with and befriend animals with ease. In addition, you treat Knowledge (nature) as a class skill.
 Cleric Domain: Catastrophe Associated Domain: Destruction
 Combat Casting +4 to Concentration checks to cast while on the defensive.
 Destructive Smite +2 (6/day) (Su)  You gain the destructive smite power: the supernatural ability to make a single melee attack with a morale bonus on damage rolls equal to 1/2 your cleric level (minimum 1). You must declare the destructive smite before making the attack. You can use
+Druid Domain: Cave Granted Powers: The wonders and dark secrets of the deepest caves give you strength.
+
+Domain Spells: 1st - detect aberration**, 2nd - stone call**, 3rd - deeper darkness, 4th - blackwing host*, 5th - wal
+Earth Supremacy +2 (Su) +2 CMD vs. bull rush, drag, reposition, trip, and overrun while touching the ground.  +1 insight bonus to melee attack/damage while you and your opponent are touching the ground.
 Eschew Materials Cast spells without materials, if component cost is 1 gp or less.
 Extend Spell Spell duration lasts twice as normal. +1 Level.
 Lingering Spell You can cast an instantaneous spell that lingers until the beginning of your next turn, affecting anyone who enters that area and possibly  providing concealment.
 Lore Master (1/day) (Ex) Take 10 on knowledge checks, and 1/day take 20 as a standard action.
-Massmorph (Tree Shape) (1/day) (Sp) Alter the size and health of plant life or transform willing creatures.
 Metamagic Rod, Lingering, Lesser The wielder can cast up to three spells per day that linger for 1 round as though using the Lingering Spell feat.
 
 Metamagic rods hold the essence of a metamagic feat, allowing the user to apply metamagic effects to spells as they are cast. This does not change the spell slot of the altered spell. All the rods described here are use-activated (but casting spells in a threatened area still draws an attack of opportunity). A caster may only use one metamagic rod on any given spell, but it is permissible to combine a rod with metamagic feats possessed by the rod&#146;s wielder. In this case, only the feats possessed by the wielder adjust the spell slot of the spell being cast.
@@ -9595,15 +9608,19 @@ Lesser and Greater Metamagic Rods: Normal metamagic rods can be used with spells
 
 Construction
 Requirements Craft Rod, Lingering Spell; Cost 1,500 gp
+Nature Sense (Ex) A druid gains a +2 bonus on Knowledge (nature) and Survival checks.
 Persistent Spell You can cast a spell that requires targets to succeed at 2 saves or suffer the effects of the spell.
-Photosynthesis (Sustenance, +4 save vs. Poison &amp; Sleep) (Ex) You need no food and can sleep 2H for the benefits of 8H sleep.  +4 save vs. poison and sleep
+Photosynthesis (Sustenance, +2 save vs. Poison &amp; Sleep) (Ex) You need no food and can sleep 2H for the benefits of 8H sleep.  +2 save vs. poison and sleep
 Share Spells with Companion (Ex) Spells cast on you can also affect your Companion, if it&apos;s within 5 feet.
 Speak with Animals (8 rounds/day) (Sp) You can use speak with animals as a spell-like ability.
 Spontaneous Casting The Cleric can convert stored spells into Cure or Inflict spells.
-Tanglevine (CMB 15) (9/day) (Sp) 15&apos; vine can be used for disarm, steal, or trip.
+Spontaneous Casting The Druid can convert stored spells into Summon Nature&apos;s Ally spells.
+Tanglevine (CMB 13) (9/day) (Sp) 15&apos; vine can be used for disarm, steal, or trip.
 Verdant Gain +spell level natural armor for 1d4r after casting a personal spell.
 Versatile Singing +0 (Ex) You may substitute the final value of your Perform: Sing skill for Bluff or Sense Motive checks
 Well Versed (Ex) +4 save vs. bardic performance, sonic, and language-dependent effects.
+Wild Empathy +8 (Ex) Improve the attitude of an animal, as if using Diplomacy.
+Woodland Stride (Ex) Move through undergrowth at normal speed.
 --------------------
 Isai Odighuzua is a native of Jiwadi, a small village on the edge of the Screaming Jungle. A follower of the shamanic faiths of his people, Isai was fascinated at an early age by plants and herbs and apprenticed to his village shaman. His gifts were undeniable, but he was easily bored by the mundanities, much preferring to work with poisonous and even carnivorous plants. He would experiment in secret on pets, livestock, or small animals he would capture and breed for his cruel experiments. When the shaman seemed about to discover his illicit activities, Isai poisoned him, and, feigning sadness at the loss of his mentor, pillaged his master&#146;s secret treasures and left Jiwadi, never to return.
 
@@ -9615,7 +9632,7 @@ Isai stands over 6 feet tall, with long spidery limbs and a mane of dreadlocks. 
 
 Hero Lab&#174; and the Hero Lab logo are Registered Trademarks of LWD Technology, Inc. Free download at http://www.wolflair.com
 Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishing, LLC&#174;, and are used under license.</statblock>
-<container index="0" chosencount="3" pickcount="687">
+<container index="0" chosencount="3" pickcount="751">
 <notes/>
 <chosen source="bgDeity" pickindex="483"/>
 <chosen source="bgRace" pickindex="497"/>
@@ -9688,7 +9705,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="tGen" user="-999."></field>
 <field id="tGenChoice" menuthing="creaPick" ispick="yes" menuusage="hero" cacheindex="74"></field>
 <field id="acType" menuthing="typNPC"></field>
-<field id="tMaskCopy" piece="111"></field>
+<field id="tMaskCopy" piece="11111"></field>
 <field id="tFavCl"></field>
 <field id="tSecFavCl"></field>
 <field id="tThiFavCl"></field>
@@ -11566,12 +11583,28 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="cBard" index="1096" batchindex="508" refcount="0" fieldcount="4" source="clsTable">
 <chain index="1097"/>
 <linkage id="helper" index="1097"/>
+<field id="cIndex" value="8."></field>
+<field id="cHP" user="8."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="8."></field>
+</pick>
+<pick thing="cBard" index="1133" batchindex="509" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1097"/>
+<linkage id="helper" index="1097"/>
+<field id="cIndex" value="9."></field>
+<field id="cHP" user="8."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="9."></field>
+</pick>
+<pick thing="cBard" index="1134" batchindex="510" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1097"/>
+<linkage id="helper" index="1097"/>
 <field id="cIndex" value="10."></field>
 <field id="cHP" user="8."></field>
 <field id="cFavorChc"></field>
 <field id="cIndexUser" value="10."></field>
 </pick>
-<pick thing="cBard" index="1133" batchindex="509" refcount="0" fieldcount="4" source="clsTable">
+<pick thing="cBard" index="1135" batchindex="511" refcount="0" fieldcount="4" source="clsTable">
 <chain index="1097"/>
 <linkage id="helper" index="1097"/>
 <field id="cIndex" value="11."></field>
@@ -11579,29 +11612,13 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="cFavorChc"></field>
 <field id="cIndexUser" value="11."></field>
 </pick>
-<pick thing="cBard" index="1134" batchindex="510" refcount="0" fieldcount="4" source="clsTable">
+<pick thing="cBard" index="1136" batchindex="512" refcount="0" fieldcount="4" source="clsTable">
 <chain index="1097"/>
 <linkage id="helper" index="1097"/>
 <field id="cIndex" value="12."></field>
 <field id="cHP" user="8."></field>
 <field id="cFavorChc"></field>
 <field id="cIndexUser" value="12."></field>
-</pick>
-<pick thing="cBard" index="1135" batchindex="511" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1097"/>
-<linkage id="helper" index="1097"/>
-<field id="cIndex" value="13."></field>
-<field id="cHP" user="8."></field>
-<field id="cFavorChc"></field>
-<field id="cIndexUser" value="13."></field>
-</pick>
-<pick thing="cBard" index="1136" batchindex="512" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1097"/>
-<linkage id="helper" index="1097"/>
-<field id="cIndex" value="14."></field>
-<field id="cHP" user="8."></field>
-<field id="cFavorChc"></field>
-<field id="cIndexUser" value="14."></field>
 </pick>
 <pick thing="cBrdJack10" index="1107" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <reference pickindex="1097" batchindex="508" bootindex="1"/>
@@ -11767,12 +11784,28 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="cCleric" index="1153" batchindex="529" refcount="0" fieldcount="4" source="clsTable">
 <chain index="1154"/>
 <linkage id="helper" index="1154"/>
+<field id="cIndex" value="13."></field>
+<field id="cHP" user="8."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="13."></field>
+</pick>
+<pick thing="cCleric" index="1164" batchindex="530" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1154"/>
+<linkage id="helper" index="1154"/>
+<field id="cIndex" value="14."></field>
+<field id="cHP" user="8."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="14."></field>
+</pick>
+<pick thing="cCleric" index="1165" batchindex="531" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1154"/>
+<linkage id="helper" index="1154"/>
 <field id="cIndex" value="15."></field>
 <field id="cHP" user="8."></field>
 <field id="cFavorChc"></field>
 <field id="cIndexUser" value="15."></field>
 </pick>
-<pick thing="cCleric" index="1164" batchindex="530" refcount="0" fieldcount="4" source="clsTable">
+<pick thing="cCleric" index="1166" batchindex="532" refcount="0" fieldcount="4" source="clsTable">
 <chain index="1154"/>
 <linkage id="helper" index="1154"/>
 <field id="cIndex" value="16."></field>
@@ -11780,29 +11813,13 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="cFavorChc"></field>
 <field id="cIndexUser" value="16."></field>
 </pick>
-<pick thing="cCleric" index="1165" batchindex="531" refcount="0" fieldcount="4" source="clsTable">
+<pick thing="cCleric" index="1167" batchindex="533" refcount="0" fieldcount="4" source="clsTable">
 <chain index="1154"/>
 <linkage id="helper" index="1154"/>
 <field id="cIndex" value="17."></field>
 <field id="cHP" user="8."></field>
 <field id="cFavorChc"></field>
 <field id="cIndexUser" value="17."></field>
-</pick>
-<pick thing="cCleric" index="1166" batchindex="532" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1154"/>
-<linkage id="helper" index="1154"/>
-<field id="cIndex" value="18."></field>
-<field id="cHP" user="8."></field>
-<field id="cFavorChc"></field>
-<field id="cIndexUser" value="18."></field>
-</pick>
-<pick thing="cCleric" index="1167" batchindex="533" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1154"/>
-<linkage id="helper" index="1154"/>
-<field id="cIndex" value="19."></field>
-<field id="cHP" user="8."></field>
-<field id="cFavorChc"></field>
-<field id="cIndexUser" value="19."></field>
 </pick>
 <pick thing="cClrAura" index="1159" batchindex="529" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <reference pickindex="1154" batchindex="529" bootindex="1"/>
@@ -11824,6 +11841,135 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference pickindex="1154" batchindex="529" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdCavesi" index="2283" batchindex="570" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2280" batchindex="570" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdNature" index="2257" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdResNat" index="2262" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdSpont" index="2259" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdThous" index="2276" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdTime" index="2277" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdTrackS" index="2261" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdTremor" index="2281" batchindex="570" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<chain index="538"/>
+<reference pickindex="2280" batchindex="570" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdTremor" index="2282" batchindex="570" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<chain index="538"/>
+<reference pickindex="2280" batchindex="570" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdVenom" index="2274" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="329"/>
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWild" index="2264" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWild" index="2265" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWild" index="2266" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWild" index="2267" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWild" index="2268" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWild" index="2269" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWild" index="2270" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWild" index="2271" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWild" index="2272" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWildAn" index="2263" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWildEl" index="2273" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDrdWildPl" index="2275" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cDruid" index="2250" batchindex="567" refcount="0" fieldcount="4" source="clsTable">
+<chain index="2251"/>
+<linkage id="helper" index="2251"/>
+<field id="cIndex" value="19."></field>
+<field id="cHP" user="8."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="19."></field>
+</pick>
+<pick thing="cDruid" index="2278" batchindex="568" refcount="0" fieldcount="4" source="clsTable">
+<chain index="2251"/>
+<linkage id="helper" index="2251"/>
+<field id="cIndex" value="20."></field>
+<field id="cHP" user="8."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="20."></field>
 </pick>
 <pick thing="cHelpBrd" index="1097" batchindex="508" uniqueness="unique" root="no" refcount="5" fieldcount="1" bootstrap="yes">
 <chain index="1098"/>
@@ -11886,7 +12032,39 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference pickindex="1167" batchindex="533" bootindex="1"/>
 <field id="cIndexCopy" value="2."></field>
 </pick>
-<pick thing="cHelpSor" index="485" batchindex="437" uniqueness="unique" root="no" refcount="9" bootstrap="yes" default="yes">
+<pick thing="cHelpDrd" index="2251" batchindex="567" uniqueness="unique" root="no" refcount="2" fieldcount="1" bootstrap="yes">
+<chain index="2252"/>
+<chain index="2253"/>
+<chain index="2254"/>
+<chain index="2255"/>
+<chain index="2256"/>
+<chain index="2257"/>
+<chain index="2258"/>
+<chain index="2259"/>
+<chain index="2260"/>
+<chain index="2261"/>
+<chain index="2262"/>
+<chain index="2263"/>
+<chain index="2264"/>
+<chain index="2265"/>
+<chain index="2266"/>
+<chain index="2267"/>
+<chain index="2268"/>
+<chain index="2269"/>
+<chain index="2270"/>
+<chain index="2271"/>
+<chain index="2272"/>
+<chain index="2273"/>
+<chain index="2274"/>
+<chain index="2275"/>
+<chain index="2276"/>
+<chain index="2277"/>
+<linkage id="spellattr" index="69"/>
+<reference pickindex="2250" batchindex="567" bootindex="1"/>
+<reference pickindex="2278" batchindex="568" bootindex="1"/>
+<field id="cIndexCopy" value="4."></field>
+</pick>
+<pick thing="cHelpSor" index="485" batchindex="437" uniqueness="unique" root="no" refcount="7" bootstrap="yes" default="yes">
 <chain index="486"/>
 <chain index="487"/>
 <linkage id="spellattr" index="64"/>
@@ -11897,8 +12075,14 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference pickindex="492" batchindex="441" bootindex="1"/>
 <reference pickindex="493" batchindex="442" bootindex="1"/>
 <reference pickindex="494" batchindex="443" bootindex="1"/>
-<reference pickindex="495" batchindex="444" bootindex="1"/>
-<reference pickindex="496" batchindex="445" bootindex="1"/>
+</pick>
+<pick thing="cHelpWiz" index="1721" batchindex="553" uniqueness="unique" root="no" fieldcount="1" bootstrap="yes">
+<chain index="1722"/>
+<chain index="1723"/>
+<chain index="1725"/>
+<linkage id="spellattr" index="67"/>
+<reference pickindex="1720" batchindex="553" bootindex="1"/>
+<field id="cIndexCopy" value="3."></field>
 </pick>
 <pick thing="cSorEschew" index="487" batchindex="437" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <chain index="488"/>
@@ -12033,21 +12217,77 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="592"></field>
 <field id="cIndexUser" value="7."></field>
 </pick>
-<pick thing="cSorcerer" index="495" batchindex="444" refcount="0" fieldcount="4" source="clsTable">
-<chain index="485"/>
-<linkage id="helper" index="485"/>
-<field id="cIndex" value="8."></field>
-<field id="cHP" user="3."></field>
-<field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="595"></field>
-<field id="cIndexUser" value="8."></field>
+<pick thing="cWildEmp" index="2258" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
 </pick>
-<pick thing="cSorcerer" index="496" batchindex="445" refcount="0" fieldcount="4" source="clsTable">
-<chain index="485"/>
-<linkage id="helper" index="485"/>
-<field id="cIndex" value="9."></field>
-<field id="cHP" user="3."></field>
-<field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="594"></field>
-<field id="cIndexUser" value="9."></field>
+<pick thing="cWizAcidCl" index="1736" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1730" batchindex="557" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizBond" index="2234" batchindex="560" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWiz" source="ClsTerAbil" agentid="cHelpWiz">
+<reference/>
+<field id="custOrder" value="7."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEaGlid" index="1737" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="436"/>
+<reference pickindex="1730" batchindex="557" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEarSup" index="1731" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1730" batchindex="557" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEarSup" index="1732" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1730" batchindex="557" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEarSup" index="1733" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1730" batchindex="557" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEarSup" index="1734" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1730" batchindex="557" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEarSup" index="1735" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1730" batchindex="557" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizScribe" index="1723" batchindex="553" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="1724"/>
+<reference pickindex="1721" batchindex="553" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizSplFoc" index="1725" batchindex="553" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<chain index="1726"/>
+<reference pickindex="1721" batchindex="553" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizard" index="1720" batchindex="553" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1721"/>
+<linkage id="helper" index="1721"/>
+<field id="cIndex" value="18."></field>
+<field id="cHP" user="6."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="18."></field>
+</pick>
+<pick thing="cWoodStrid" index="2260" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
 </pick>
 <pick thing="cdAnimal" index="1168" batchindex="534" uniqueness="unique" fieldcount="3" tablelinkid="cHelpClr" source="ClsCstAbil" agentid="cHelpClr">
 <chain index="1169"/>
@@ -12064,6 +12304,14 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <chain index="1696"/>
 <reference/>
 <field id="custOrder" value="4."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cdCave" index="2280" batchindex="570" refcount="0" fieldcount="3" tablelinkid="cHelpDrd" source="ClsCstAbil" agentid="cHelpDrd">
+<chain index="2281"/>
+<chain index="2282"/>
+<chain index="2283"/>
+<field id="custOrder" value="8."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12106,8 +12354,18 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
+<pick thing="fArmLight" index="2253" batchindex="567" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
 <pick thing="fArmMedium" index="1156" batchindex="529" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <reference pickindex="1154" batchindex="529" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fArmMedium" index="2254" batchindex="567" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12118,6 +12376,11 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </pick>
 <pick thing="fArmShield" index="1157" batchindex="529" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <reference pickindex="1154" batchindex="529" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fArmShield" index="2255" batchindex="567" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12150,6 +12413,11 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen2"></field>
 </pick>
 <pick thing="fPersisSpl" index="588" batchindex="497" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fScribeS" index="1724" batchindex="553" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1723" batchindex="553" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12208,6 +12476,11 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
+<pick thing="fSpellFoc" index="1726" batchindex="553" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1725" batchindex="553" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
 <pick thing="fSpellPch" index="571" batchindex="481" refcount="0" fieldcount="2" source="gTable" default="yes">
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
@@ -12221,8 +12494,18 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
+<pick thing="fWepDrd" index="2256" batchindex="567" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
 <pick thing="fWepMart" index="357" batchindex="314" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference pickindex="355" batchindex="314" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fWepWiz" index="1722" batchindex="553" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1721" batchindex="553" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12419,6 +12702,9 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </pick>
 <pick thing="lCommon" index="32" batchindex="32" uniqueness="useronce" bootstrap="yes" default="yes">
 <reference bootindex="200"/>
+</pick>
+<pick thing="lDruidic" index="2252" batchindex="567" uniqueness="useronce" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2251" batchindex="567" bootindex="1"/>
 </pick>
 <pick thing="lPolyglot" index="597" batchindex="505" uniqueness="unique" root="no" bootstrap="yes" default="yes">
 <reference pickindex="596" batchindex="505" bootindex="1"/>
@@ -14788,6 +15074,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="spAcidPit4" index="569" batchindex="479" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spAcidSpl0" index="213" batchindex="201" refcount="0" default="yes"></pick>
 <pick thing="spAcidSpl0" index="214" batchindex="202" refcount="0" default="yes"></pick>
+<pick thing="spAcidSpl0" index="2235" batchindex="561" refcount="0" tablelinkid="cHelpWiz" source="ClsBkSpec" basislink="213" agentid="cHelpWiz" default="yes"></pick>
 <pick thing="spAnimPla8" index="521" batchindex="449" root="no" bootstrap="yes" default="yes">
 <reference pickindex="520" batchindex="449" bootindex="1"/>
 </pick>
@@ -14814,10 +15101,16 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="spCallWea1" index="1147" batchindex="523" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
 <pick thing="spCalmAni1" index="1697" batchindex="536" refcount="0" tablelinkid="cHelpClr" source="ClsCastSec" agentid="cHelpClr" default="yes"></pick>
 <pick thing="spColoSpr1" index="548" batchindex="458" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spColoSpr1" index="1727" batchindex="554" refcount="0" tablelinkid="cHelpWiz" source="ClsBook" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spColoSpr1" index="2239" batchindex="565" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="1727" agentid="cHelpWiz" default="yes"></pick>
 <pick thing="spCommPla4" index="526" batchindex="449" root="no" bootstrap="yes" default="yes">
 <reference pickindex="520" batchindex="449" bootindex="1"/>
 </pick>
+<pick thing="spCrafFor1" index="1728" batchindex="555" refcount="0" tablelinkid="cHelpWiz" source="ClsBook" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spCrafFor1" index="2240" batchindex="566" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="1728" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spCreaWat0" index="2287" batchindex="574" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
 <pick thing="spCureMod2" index="1708" batchindex="547" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spDancLan1" index="1729" batchindex="556" refcount="0" tablelinkid="cHelpWiz" source="ClsBook" agentid="cHelpWiz" default="yes"></pick>
 <pick thing="spDancLig0" index="220" batchindex="208" refcount="0" default="yes"></pick>
 <pick thing="spDancLig0" index="221" batchindex="209" refcount="0" default="yes"></pick>
 <pick thing="spDancLig0" index="222" batchindex="210" refcount="0" default="yes"></pick>
@@ -14833,8 +15126,10 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="spDeteMag0" index="227" batchindex="215" refcount="0" default="yes"></pick>
 <pick thing="spDeteMag0" index="228" batchindex="216" refcount="0" default="yes"></pick>
 <pick thing="spDeteMag0" index="541" batchindex="451" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spDeteMag0" index="2286" batchindex="573" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
 <pick thing="spDetePoi0" index="229" batchindex="217" refcount="0" default="yes"></pick>
 <pick thing="spDetePoi0" index="230" batchindex="218" refcount="0" default="yes"></pick>
+<pick thing="spDetePoi0" index="2285" batchindex="572" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
 <pick thing="spDispMag3" index="563" batchindex="473" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spDisrUnd0" index="231" batchindex="219" refcount="0" default="yes"></pick>
 <pick thing="spDisrUnd0" index="232" batchindex="220" refcount="0" default="yes"></pick>
@@ -14863,6 +15158,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="spInviSph3" index="566" batchindex="476" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spJump1" index="552" batchindex="462" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spKnowDir0" index="1140" batchindex="516" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
+<pick thing="spKnowDir0" index="2284" batchindex="571" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
 <pick thing="spLight0" index="239" batchindex="227" refcount="0" default="yes"></pick>
 <pick thing="spLight0" index="240" batchindex="228" refcount="0" default="yes"></pick>
 <pick thing="spLight0" index="241" batchindex="229" refcount="0" default="yes"></pick>
@@ -14880,6 +15176,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="spMessage0" index="247" batchindex="235" refcount="0" default="yes"></pick>
 <pick thing="spMessage0" index="545" batchindex="455" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spMirrIma2" index="558" batchindex="468" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spNegaAro1" index="2288" batchindex="575" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
 <pick thing="spOpenClo0" index="248" batchindex="236" refcount="0" default="yes"></pick>
 <pick thing="spOpenClo0" index="249" batchindex="237" refcount="0" default="yes"></pick>
 <pick thing="spOpenClo0" index="1143" batchindex="519" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
@@ -14892,12 +15189,15 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="spPutrFoo0" index="252" batchindex="240" refcount="0" default="yes"></pick>
 <pick thing="spRayFro0" index="253" batchindex="241" refcount="0" default="yes"></pick>
 <pick thing="spRayFro0" index="254" batchindex="242" refcount="0" default="yes"></pick>
+<pick thing="spRayFro0" index="2236" batchindex="562" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="253" agentid="cHelpWiz" default="yes"></pick>
 <pick thing="spReadMag0" index="255" batchindex="243" refcount="0" default="yes"></pick>
 <pick thing="spReadMag0" index="256" batchindex="244" refcount="0" default="yes"></pick>
 <pick thing="spReadMag0" index="257" batchindex="245" refcount="0" default="yes"></pick>
 <pick thing="spReadMag0" index="547" batchindex="457" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spReadMag0" index="2237" batchindex="563" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="255" agentid="cHelpWiz" default="yes"></pick>
 <pick thing="spResista0" index="258" batchindex="246" refcount="0" default="yes"></pick>
 <pick thing="spResista0" index="259" batchindex="247" refcount="0" default="yes"></pick>
+<pick thing="spResista0" index="2238" batchindex="564" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="258" agentid="cHelpWiz" default="yes"></pick>
 <pick thing="spScorRay2" index="559" batchindex="469" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spScriCha0" index="260" batchindex="248" count="0" refcount="0" default="yes" live="no"></pick>
 <pick thing="spShadCon4" index="570" batchindex="480" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
@@ -14918,9 +15218,11 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </pick>
 <pick thing="spStabili0" index="264" batchindex="252" refcount="0" default="yes"></pick>
 <pick thing="spStonCal2" index="560" batchindex="470" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spStonFis1" index="2289" batchindex="576" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
 <pick thing="spTinyHut3" index="568" batchindex="478" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spToucFat0" index="265" batchindex="253" refcount="0" default="yes"></pick>
 <pick thing="spToucFat0" index="266" batchindex="254" refcount="0" default="yes"></pick>
+<pick thing="spToucSea1" index="2290" batchindex="577" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
 <pick thing="spTranvia6" index="528" batchindex="449" root="no" bootstrap="yes" default="yes">
 <reference pickindex="520" batchindex="449" bootindex="1"/>
 </pick>
@@ -15185,6 +15487,12 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="weSpark0" index="424" batchindex="377" count="0" refcount="0" default="yes" live="no"></pick>
 <pick thing="weSpark0" index="425" batchindex="378" count="0" refcount="0" default="yes" live="no"></pick>
 <pick thing="weSpark0" index="426" batchindex="379" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="wfAir" index="1738" batchindex="558" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWiz" source="ClsSecAbil" agentid="cHelpWiz">
+<reference/>
+<field id="custOrder" value="6."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
 <pick thing="wmBoost" index="427" batchindex="380" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
@@ -15212,8 +15520,22 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="wmLengthy" index="435" batchindex="388" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="xBurrow" index="436" batchindex="389" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="wsEarth" index="1730" batchindex="557" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWiz" source="ClsCstAbil" agentid="cHelpWiz">
+<chain index="1731"/>
+<chain index="1732"/>
+<chain index="1733"/>
+<chain index="1734"/>
+<chain index="1735"/>
+<chain index="1736"/>
+<chain index="1737"/>
 <reference/>
+<field id="custOrder" value="5."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xBurrow" index="436" batchindex="389" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
+<reference/>
+<reference pickindex="1737" batchindex="557" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15524,12 +15846,13 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmPois" index="329" batchindex="307" uniqueness="unique" root="no" count="0" refcount="5" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<pick thing="xImmPois" index="329" batchindex="307" uniqueness="unique" root="no" count="0" refcount="6" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference pickindex="322" batchindex="307" bootindex="1"/>
 <reference pickindex="348" batchindex="313" bootindex="1"/>
 <reference pickindex="358" batchindex="315" bootindex="1"/>
 <reference pickindex="359" batchindex="316" bootindex="1"/>
 <reference pickindex="539" batchindex="449" bootindex="1"/>
+<reference pickindex="2274" batchindex="567" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15574,9 +15897,11 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xTremorsen" index="538" batchindex="449" uniqueness="unique" root="no" refcount="2" fieldcount="2" bootstrap="yes" default="yes">
+<pick thing="xTremorsen" index="538" batchindex="449" uniqueness="unique" root="no" refcount="4" fieldcount="2" bootstrap="yes" default="yes">
 <reference pickindex="536" batchindex="449" bootindex="1"/>
 <reference pickindex="539" batchindex="449" bootindex="1"/>
+<reference pickindex="2281" batchindex="570" bootindex="1"/>
+<reference pickindex="2282" batchindex="570" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>

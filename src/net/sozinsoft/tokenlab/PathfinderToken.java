@@ -238,23 +238,23 @@ public class PathfinderToken implements ICharacter, ITokenizable {
             if ( sc.getSpells().equals("Spontaneous")) {
                 setSpontaneousSpellResources( sc );
             }
-            else if ( sc.getSpells().equals("Spellbook")) {
-                //setSpellbookResources( sc );
-            }
-            else if ( sc.getSpells().equals( "Memorized" )) {
-                setMemorizedResources( sc );
-            }
-            else {
-                //TODO: WTF, ZOMG!
-            }
-
         }
+        setMemorizedResources();
     }
+
 
     private SortedMap<Integer, LinkedList<HashMap<String, Object>>> _memorizedSpellResources = new TreeMap<Integer, LinkedList<HashMap<String, Object>>>() ;
 
-    private void setMemorizedResources( Spellclass spellClass ) {
-        for( Spell s : _character.getSpellsmemorized().getSpell() ) {
+    private void setMemorizedResources() {
+        if ( _character.getSpellsmemorized().getSpell().size() > 0 ) {
+            buildSpellResource(_memorizedSpellResources, _character.getSpellsmemorized().getSpell() );
+        }
+    }
+
+    private void buildSpellResource( SortedMap<Integer, LinkedList<HashMap<String, Object>>> spellResourceCollection,
+                                    List<Spell> spells ) {
+        
+        for( Spell s : spells ) {
 
             boolean unlimited = s.getUnlimited() != null && s.getUnlimited().equals("yes");
             if ( unlimited ) { //don't bother with unlimited resources
@@ -264,12 +264,12 @@ public class PathfinderToken implements ICharacter, ITokenizable {
             int level = Integer.parseInt( s.getLevel() );
             String name = s.getName();
             int dc = Integer.parseInt( s.getDc() );
-            String className = spellClass.getName();
+            String className = s.getClazz() == null || s.getClazz().length() == 0? _spellToClassMap.get(name) : s.getClazz();
 
-            LinkedList<HashMap<String, Object>> spellsAtLevel = _memorizedSpellResources.get( level );
+            LinkedList<HashMap<String, Object>> spellsAtLevel = spellResourceCollection.get( level );
             if ( spellsAtLevel == null ) {
                 spellsAtLevel = new LinkedList<HashMap<String, Object>>();
-                _memorizedSpellResources.put( level, spellsAtLevel);
+                spellResourceCollection.put( level, spellsAtLevel);
             }
             HashMap<String,Object> spellAtLevel = new HashMap<String, Object>();
             spellAtLevel.put( "name", name );
@@ -331,26 +331,30 @@ public class PathfinderToken implements ICharacter, ITokenizable {
             }
 
             if ( sc.getSpells().equals(SPELLBOOK) ) {
-                for ( Spell s : _character.getSpellbook().getSpell() ) {
-                    cs.addSpell(s);
-                }
+                addClassSpell( _character.getSpellbook().getSpell(), cs );
             }
             else if ( sc.getSpells().equals(MEMORIZED)) {
-                for ( Spell s : _character.getSpellsmemorized().getSpell() ) {
-                    cs.addSpell(s);
-                }
+                addClassSpell( _character.getSpellsmemorized().getSpell(), cs );
             }
             else if ( sc.getSpells().equals(SPONTANEOUS)) {
-                for ( Spell s: _character.getSpellsknown().getSpell()) {
-                    cs.addSpell(s);
-                }
+                addClassSpell(  _character.getSpellsknown().getSpell(), cs );
             }
             else {
                 System.out.println("Unknown spell class " + sc.getSpells() );
             }
         }
     }
+    
+    private HashMap<String, String> _spellToClassMap = new HashMap<String, String>();
 
+    private void addClassSpell(List<Spell> spells, ClassSpells cs) {
+        for( Spell s: spells ) {
+            cs.addSpell(s);
+            if ( ! _spellToClassMap.containsKey(s.getName() ) ) {
+                _spellToClassMap.put( s.getName(), cs.getClassName() );
+            }
+        }
+    }
 
 
     private static HashMap<IAttribute, IAttributeAbbreviated > attributeAbbreviations =
@@ -666,8 +670,6 @@ public class PathfinderToken implements ICharacter, ITokenizable {
        _token.getToken().setProperty(SPONTANEOUS_RESOURCES_JSON, gjson.toJson( spontaneousSpellResources));
 
         _token.getToken().setProperty("MemorizedResourcesJSON", gjson.toJson( _memorizedSpellResources));
-
-
 
 
         //set the spells.  this needs to basically happen by class.
