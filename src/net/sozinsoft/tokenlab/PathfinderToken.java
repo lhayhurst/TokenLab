@@ -665,14 +665,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         }
        _token.getToken().setProperty(SPONTANEOUS_RESOURCES_JSON, gjson.toJson( spontaneousSpellResources));
 
-        LinkedList<HashMap<String, Object>> memorizedSpellResources = new LinkedList<HashMap<String, Object>>();
-        for (Integer level : _memorizedSpellResources.keySet()) {
-            LinkedList<HashMap<String, Object>> spellsByLevel = _memorizedSpellResources.get(level);
-            for (HashMap<String, Object> spellByLevel : spellsByLevel) {
-                memorizedSpellResources.add(spellByLevel);
-            }
-        }
-        _token.getToken().setProperty("MemorizedResourcesJSON", gjson.toJson( memorizedSpellResources));
+        _token.getToken().setProperty("MemorizedResourcesJSON", gjson.toJson( _memorizedSpellResources));
 
 
 
@@ -751,6 +744,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         index = buildWeaponMacros(macroButtonSet, index);
         index = buildSpecialAbilityMacros(macroButtonSet, index);
         index = buildSkillMacros(macroButtonSet, index);
+        index = buildMemorizedMacros( macroButtonSet, index );
         buildSubMacros( macroButtonSet, index );
 
 
@@ -758,6 +752,22 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         t.replaceMacroList(macroButtonSet);
 
 	}
+
+    private int buildMemorizedMacros( List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
+        if ( _memorizedSpellResources.size() == 0 ) {
+            return index;
+        }
+        HashMap<String, MacroDigester.MacroEntry > memorizedMacroSet = macroDigester.getGroup( "Special Abilities - Memorized Spells");
+        MacroDigester.MacroEntry macroEntry = (MacroDigester.MacroEntry) memorizedMacroSet.values().toArray()[0];
+        for( Integer level : _memorizedSpellResources.keySet() ) {
+            IMacroReplacer memorizedReplacer = new MemorizedSpellReplacer( level );
+            MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, memorizedReplacer );
+            properties.setLabel( level.toString() );
+            macroButtonSet.add( properties );
+        }
+
+        return index;
+    }
 
     private int buildSubMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
         HashMap<String, MacroDigester.MacroEntry > submacros = macroDigester.getGroup( "SUBMACROS");

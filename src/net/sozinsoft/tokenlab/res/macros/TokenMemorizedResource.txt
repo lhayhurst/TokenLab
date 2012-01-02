@@ -2,6 +2,6 @@
 [h, if(listCount(selectedTokens)!=1): assert(0, "You have to select only one token")]
 
 [h:Resources = getProperty( "MemorizedResourcesJSON", currentToken() )]
-[h: args = json.set( "{}" , "ID", currentToken(), "Resources", Resources  )]
+[h: args = json.set( "{}" , "ID", currentToken(), "Resources", Resources, "level", $LEVEL ) ]
 
 [MACRO("MemorizedResourceFrame@Lib:TokenLab") : args ]

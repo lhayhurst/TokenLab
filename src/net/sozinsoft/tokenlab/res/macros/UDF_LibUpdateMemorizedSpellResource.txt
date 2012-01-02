@@ -1,0 +1,36 @@
+[h: spells = json.get( macro.args, "spells" )]
+[h: resources = json.get( macro.args, "Resources" )]
+[h: index = json.get( macro.args, "index" )]
+[h: spell = json.get( macro.args, "spell" )]
+[h: spellLevel = json.get( macro.args, "spellLevel" )]
+
+[h:activeToken = json.get( macro.args, "ID" )]
+[h:direction = json.get( macro.args, "direction" )]
+
+
+
+[h: currentSpellValue = json.get( spell, "used")]
+[h: newValue = 0]
+
+[IF( direction == "up"), CODE: {
+    [h:newValue = add( currentSpellValue, 1 )]
+}]
+
+[IF( direction == "down"), CODE: {
+    [h:newValue = subtract( currentSpellValue, 1 )]
+}]
+
+
+[h: spell = json.set( spell, "used", newValue) ]
+[r: spells = json.set( spells, index, spell )]
+[h: resources = json.set( resources, spellLevel, spells )]
+
+[h:selectTokens( activeToken, 0 )]
+[h:setProperty( "MemorizedResourcesJSON", Resources, activeToken )]
+
+[h: args = json.set( "{}" , "ID", activeToken, "Resources", resources, "level", spellLevel )]
+[MACRO( "MemorizedResourceFrame@Lib:TokenLab" ) : args ]
+
+
+
+

@@ -169,6 +169,17 @@
                allowPlayersToEdit="0"
                file="res/macros/TokenSpontaneousSpellsMacro.txt"/>
 
+        <macro name="Spontaneous Spell Resources"
+               group="Special Abilities - Memorized Spells"
+               sortPrefix="500"
+               buttonColor="navy"
+               fontColor="white"
+               fontSize="1.00em"
+               minWidth="10"
+               applyToSelectedTokens="1"
+               allowPlayersToEdit="0"
+               file="res/macros/TokenMemorizedResource.txt"/>
+
     <macro name="Skill Check"
                group="Skills"
                sortPrefix="300"

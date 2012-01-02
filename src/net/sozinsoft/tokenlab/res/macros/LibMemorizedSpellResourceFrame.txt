@@ -1,7 +1,11 @@
 [h: title = "Memorized Spells"]
+
 [h: activeToken = json.get( macro.args, "ID" ) ]
 [h: characterName = getProperty("Character", activeToken ) ]
 [h: Resources = json.get( macro.args, "Resources" )]
+[h: forLevel = json.get( macro.args, "level") ]
+[h: spells = json.get( Resources, forLevel )]
+
 
 [h: imageFormatString = 	"<img src='%s' border=0 height=45 width=45 alt='%s'>"]
 [h: IncrementImage = 	    strformat(imageFormatString, tblImage( "TokenLabImages",  2 ), 	"Add one to resource used")]
@@ -14,21 +18,21 @@
 	    <link rel="stylesheet" type="text/css" href="css@Lib:TokenLab">
 	</head>
 	<body>
-	<h2><br>[r:characterName] Memorized Spells</h2>
+	<h2><br>[r:characterName] Level [r:forLevel] Memorized Spells</h2>
 	<br>
                       [h:index = 0]
 	<table>
-                    [FOREACH ( spellLevelResources, Resources, "" ), CODE: {
-                                           [h:spellClassName = json.get( spellLevelResources, "className" ) ]
-		[h:spellLevel = json.get( spellLevelResources, "level" ) ]
-		[h:dc = json.get( spellLevelResources, "dc" )]
-		[h:spellName = json.get( spellLevelResources, "name")]
-		[h:used = json.get( spellLevelResources, "used")]
-                                          [h: upargs   = json.set("{}",  "ID", activeToken, "direction", "up" , "index", index, "Resources", resources, "property", "MemorizedResourcesJSON", "callbackMacro", "MemorizedResourceFrame@Lib:TokenLab"  )]
-                                          [h: downargs   = json.set("{}",  "ID", activeToken, "direction", "down" , "index", index, "Resources", resources, "property", "MemorizedResourcesJSON", "callbackMacro", "MemorizedResourceFrame@Lib:TokenLab"  )]
+                    [FOREACH ( spell, spells, "" ), CODE: {
+                                        [h:spellClassName = json.get( spell, "className" ) ]
+		[h:spellLevel = json.get( spell, "level" ) ]
+		[h:dc = json.get( spell, "dc" )]
+		[h:spellName = json.get( spell, "name")]
+		[h:used = json.get( spell, "used")]
+                                          [h: upargs   = json.set("{}",  "ID", activeToken, "direction", "up" , "index", index, "Resources", resources, "spellLevel", forLevel, "spell", spell, "spells", spells  )]
+                                          [h: downargs   = json.set("{}",  "ID", activeToken, "direction", "down" , "index", index, "Resources", resources, "spellLevel", forLevel, "spell", spell, "spells", spells   )]
 
-                                          [h: UpButton = macroLink(IncrementImage, 	"UDF_UpdateSpellResource@Lib:TokenLab", "none", upargs, activeToken )]
-                                          [h: DownButton = macroLink(DecrementImage, 	"UDF_UpdateSpellResource@Lib:TokenLab", "none", downargs, activeToken )]
+                                          [h: UpButton = macroLink(IncrementImage, 	"UDF_UpdateMemorizedSpellResource@Lib:TokenLab", "none", upargs, activeToken )]
+                                          [h: DownButton = macroLink(DecrementImage, 	"UDF_UpdateMemorizedSpellResource@Lib:TokenLab", "none", downargs, activeToken )]
 
                                          <tr>
                                             <td><b><font size = "4">[r:spellName] </b></font> </td>
@@ -46,4 +50,5 @@
 	</body>
 	</html>
 }]
+
 
