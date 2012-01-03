@@ -2,6 +2,7 @@ package net.sozinsoft.tokenlab;
 
 
 import com.google.gson.*;
+import com.sun.org.apache.bcel.internal.generic.NEW;
 import net.rptools.maptool.model.*;
 import net.sozinsoft.tokenlab.dtd.*;
 import net.sozinsoft.tokenlab.dtd.Character;
@@ -256,28 +257,39 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         
         for( Spell s : spells ) {
 
-            boolean unlimited = s.getUnlimited() != null && s.getUnlimited().equals("yes");
-            if ( unlimited ) { //don't bother with unlimited resources
-                continue;
-            }
-
-            int level = Integer.parseInt( s.getLevel() );
             String name = s.getName();
-            int dc = Integer.parseInt( s.getDc() );
-            String className = s.getClazz() == null || s.getClazz().length() == 0? _spellToClassMap.get(name) : s.getClazz();
-
-            LinkedList<HashMap<String, Object>> spellsAtLevel = spellResourceCollection.get( level );
-            if ( spellsAtLevel == null ) {
-                spellsAtLevel = new LinkedList<HashMap<String, Object>>();
-                spellResourceCollection.put( level, spellsAtLevel);
+            
+            int numRepeats = StringUtils.isXN( name );
+            if ( numRepeats > 0 ) {
+                name = StringUtils.removeXN( name );
             }
-            HashMap<String,Object> spellAtLevel = new HashMap<String, Object>();
-            spellAtLevel.put( "name", name );
-            spellAtLevel.put( "level", level );
-            spellAtLevel.put( "className", className);
-            spellAtLevel.put( "dc", dc );
-            spellAtLevel.put( "used", 0 );
-            spellsAtLevel.add( spellAtLevel );
+            else {
+                 numRepeats = 1;
+            }
+            
+            for( int i = 0; i < numRepeats; i++ ) {
+            
+                boolean unlimited = s.getUnlimited() != null && s.getUnlimited().equals("yes");
+
+                int level = Integer.parseInt( s.getLevel() );
+
+                int dc = Integer.parseInt( s.getDc() );
+                String className = s.getClazz() == null || s.getClazz().length() == 0? _spellToClassMap.get(name) : s.getClazz();
+
+                LinkedList<HashMap<String, Object>> spellsAtLevel = spellResourceCollection.get( level );
+                if ( spellsAtLevel == null ) {
+                    spellsAtLevel = new LinkedList<HashMap<String, Object>>();
+                    spellResourceCollection.put( level, spellsAtLevel);
+                }
+                HashMap<String,Object> spellAtLevel = new HashMap<String, Object>();
+                spellAtLevel.put( "name", name );
+                spellAtLevel.put( "unlimited", unlimited? 1: 0 );
+                spellAtLevel.put( "level", level );
+                spellAtLevel.put( "className", className);
+                spellAtLevel.put( "dc", dc );
+                spellAtLevel.put( "used", 0 );
+                spellsAtLevel.add( spellAtLevel );
+            }
         }
     }
 
@@ -460,6 +472,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
                                            new Integer( 0 ) );
         _propertyMap.put( AC_MISC_BONUS_2, new Integer( 0  ) );
         _propertyMap.put( AC_TEMP_BONUS,   new Integer( 0 ) );
+        _propertyMap.put( ARMOR_MAX_DEX_BONUS, new Integer( 9999 ) );
 
         for ( Penalty p : _character.getPenalties().getPenalty() ) {
             if (p.getName().equals( "Armor Check Penalty") ) {

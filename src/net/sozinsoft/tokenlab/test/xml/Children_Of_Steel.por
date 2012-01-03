@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <document signature="Hero Lab Portfolio">
-<product major="3" minor="8" patch="1" build="267"/>
+<product major="3" minor="9" patch="0" build="277"/>
 <game folder="pathfinder" game="Pathfinder Roleplaying Game" major="6" minor="10"/>
-<portfolio herocount="5" activehero="6">
+<portfolio herocount="5" activehero="5">
 <tactical combatturn="0"/>
 <notes/>
-<hero playername="" nextpick="612" nextcontainer="5" heroindex="2" herosummary="Dwarf Ftr 20 &#150; CR 19" heroname="Derrak Stoneskull" batchindex="498" userbatch="433" enmassebatch="39" nexttrade="21" nexttransact="21" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="feats">
+<hero playername="" nextpick="606" nextcontainer="5" heroindex="2" herosummary="Dwarf Ftr 20 &#150; CR 19" heroname="Derrak Stoneskull" batchindex="498" userbatch="433" enmassebatch="39" nexttrade="21" nexttransact="21" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="armor">
 <statblock>DERRAK STONESKULL	CR 19
 Male Dwarf Fighter (Weapon Master) 20
 NE Medium Humanoid (Dwarf)
@@ -2426,7 +2426,7 @@ Despite his abilities, Derrak has died several times in the course of his advent
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="689" nextcontainer="7" heroindex="3" herosummary="Elf Wiz 20 &#150; CR 19" heroname="Echean Ansolandi" batchindex="609" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="classes">
+<hero playername="" nextpick="685" nextcontainer="7" heroindex="3" herosummary="Elf Wiz 20 &#150; CR 19" heroname="Echean Ansolandi" batchindex="609" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="classes">
 <statblock>ECHEAN ANSOLANDI	CR 19
 Male Elf Wizard 20
 NE Medium Humanoid (Elf)
@@ -4836,7 +4836,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="642" nextcontainer="5" heroindex="4" herosummary="Human Clr 20 &#150; CR 19" heroname="Inaris Jerveel" batchindex="554" userbatch="433" enmassebatch="39" nexttrade="17" nexttransact="17" poolcount="35" activemode="1" hasacted="no">
+<hero playername="" nextpick="640" nextcontainer="5" heroindex="4" herosummary="Human Clr 20 &#150; CR 19" heroname="Inaris Jerveel" batchindex="554" userbatch="433" enmassebatch="39" nexttrade="17" nexttransact="17" poolcount="35" activemode="1" hasacted="no" focustab="armor">
 <statblock>INARIS JERVEEL	CR 19
 Female Human Cleric 20
 CN Medium Humanoid (Human)
@@ -7164,7 +7164,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="592" nextcontainer="5" heroindex="5" herosummary="Halfling Rog 20 &#150; CR 19" heroname="Wotywina Turncoin" batchindex="497" userbatch="433" enmassebatch="39" nexttrade="9" nexttransact="9" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="basics">
+<hero playername="" nextpick="590" nextcontainer="5" heroindex="5" herosummary="Halfling Rog 20 &#150; CR 19" heroname="Wotywina Turncoin" batchindex="497" userbatch="433" enmassebatch="39" nexttrade="9" nexttransact="9" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="basics">
 <statblock>WOTYWINA TURNCOIN	CR 19
 Female Halfling Rogue 20
 CE Small Humanoid (Halfling)
@@ -9518,86 +9518,94 @@ The only time that Wynn creates strife with her comrades is when selecting contr
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="2291" nextcontainer="12" heroindex="6" herosummary="Human Brd 5 Clr 5 Drd 2 Sor 7 Wiz 1 &#150; CR 19" heroname="Isai Odighuzua" batchindex="577" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="cHelpDrd">
+<hero playername="" nextpick="2383" nextcontainer="12" heroindex="6" herosummary="Human APa 2 Brd 2 Clr 2 Drd 2 Ora 2 Sor 5 Wit 2 Wiz 3 &#150; CR 19" heroname="Isai Odighuzua" batchindex="600" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="cHelpAPa">
 <statblock>ISAI ODIGHUZUA	CR 19
-Male Human (Mwangi) Bard 5 Cleric 5 Druid 2 Sorcerer 7 Wizard 1
+Male Human (Mwangi) Antipaladin 2 Bard 2 Cleric 2 Druid 2 Oracle 2 Sorcerer 5 Witch 2 Wizard 3
 CE Medium Humanoid (Human)
-Init +6; Senses Perception +3
+Init +6; Senses Deaf, Scent; Perception +6
 --------------------
 DEFENSE
 --------------------
 AC 12, touch 12, flat-footed 10   (+2 Dex)
-hp 186 (12d8+8d6+60)
-Fort +13, Ref +10, Will +22
-Resist Photosynthesis (Sustenance, +2 save vs. Poison &amp; S
+hp 180 (2d10+8d8+10d6+60)
+Fort +20, Ref +14, Will +35
+Resist Photosynthesis (Sustenance, +2 save vs. Poison &amp; S, Resist Life
 --------------------
 OFFENSE
 --------------------
 Spd 30 ft.
 Melee Dagger +9/+4 (1d4-1/19-20/x2) and
    Unarmed Strike +9/+4 (1d3-1/20/x2)
-Special Attacks Acid Cloud (1d6) (4/day) (DC 11), Bardic Performance (standard action) (18 rounds/da, Bardic Performance: Countersong, Bardic Performance: Distraction, Bardic Performance: Fascinate (DC 18), Bardic Performance: Inspire Competence +2, Bardic Performance: Inspire Courage +2, Destructive Smite +2 (6/day), Tanglevine (CMB 13) (9/day)
-Spell-Like Abilities Speak with Animals (8 rounds/day)
-Bard Spells Known (CL 5, +9 melee touch, +12 ranged touch):
-2 (4/day) Blindness/Deafness (DC 18), Blur (DC 18), Blood Biography (DC 18)
-1 (6/day) Beguiling Gift (DC 17), Animate Rope, Borrow Skill (DC 17), Call Weapon (DC 17)
-0 (at will) Lullaby (DC 16), Open/Close (DC 16), Know Direction (DC 16), Flare (DC 16), Daze (DC 16), Light
-Sorcerer Spells Known (CL 7, +9 melee touch, +12 ranged touch):
-3 (5/day) Invisibility Sphere (DC 19), Blink (DC 19), Haste (DC 19), Dispel Magic, Speak with Plants (DC 19), Fly (DC 19), Sheet Lightning (DC 19), Tiny Hut
-2 (8/day) Stone Call, Barkskin, False Life (DC 18), Mirror Image (DC 18), Web (DC 18), Scorching Ray, Greensight
+Special Attacks Acid Cloud (1d6+1) (4/day) (DC 12), Bardic Performance (standard action) (12 rounds/da, Bardic Performance: Countersong, Bardic Performance: Distraction, Bardic Performance: Fascinate (DC 17), Bardic Performance: Inspire Courage +1, Blight (DC 12), Destructive Smite +1 (6/day), Smite Good (1/day), Tanglevine (CMB 11) (9/day)
+Spell-Like Abilities Detect Good (At will), Speak with Animals (5 rounds/day)
+Bard Spells Known (CL 2, +9 melee touch, +12 ranged touch):
+1 (4/day) Beguiling Gift (DC 17), Animate Rope, Borrow Skill (DC 17)
+0 (at will) Open/Close (DC 16), Know Direction (DC 16), Flare (DC 16), Daze (DC 16), Light
+Oracle Spells Known (CL 2, +9 melee touch, +12 ranged touch):
+1 (6/day) Cause Fear (DC 17), Cure Light Wounds (DC 17), Cure Light Wounds (DC 17), Ant Haul (DC 17)
+0 (at will) Resistance (DC 16), Virtue, Stabilize, Guidance (DC 16), Spark (DC 16)
+Sorcerer Spells Known (CL 5, +9 melee touch, +12 ranged touch):
+2 (6/day) Stone Call, Barkskin, False Life (DC 18), Mirror Image (DC 18), Web (DC 18), Scorching Ray, Greensight
 1 (8/day) Magic Missile, Shocking Grasp, Mage Armor (DC 17), Hydraulic Push, Color Spray (DC 17), Endure Elements (DC 17), Entangle (DC 17), Jump (DC 17), Feather Fall (DC 17)
 0 (at will) Read Magic (DC 16), Ghost Sound (DC 16), Mage Hand, Mending, Detect Magic, Dancing Lights, Prestidigitation (DC 16), Message
-Cleric Spells Known (CL 5, 9 melee touch, 12 ranged touch):
-3 (2/day) Glyph of Warding (DC 16), Call Lightning (DC 16), Enter Image
-2 (3/day) Cure Moderate Wounds (DC 15), Gust of Wind (DC 15), Darkness, Share Language (DC 15)
-1 (4/day) Detect Evil, Detect Evil, Inflict Light Wounds (DC 14), Infernal Healing, Calm Animals (DC 14)
+Antipaladin Spells Known (CL 0, 9 melee touch, 12 ranged touch):
+Cleric Spells Known (CL 2, 9 melee touch, 12 ranged touch):
+1 (3/day) Detect Evil, Detect Evil, Inflict Light Wounds (DC 14), Calm Animals (DC 14)
 0 (at will) Bleed (DC 13), Bleed (DC 13), Bleed (DC 13), Bleed (DC 13)
 Druid Spells Known (CL 2, 9 melee touch, 12 ranged touch):
-1 (3/day) Stone Fist (DC 14), Touch of the Sea (DC 14), Negate Aroma (DC 14)
+1 (3/day) Cure Light Wounds (DC 14), Cure Light Wounds (DC 14), Negate Aroma (DC 14)
 0 (at will) Know Direction (DC 13), Detect Poison, Create Water, Detect Magic
-Wizard Spells Known (CL 1, 9 melee touch, 12 ranged touch):
-1 (2/day) Crafter&apos;s Fortune (DC 12), Color Spray (DC 12)
-0 (at will) Resistance (DC 11), Ray of Frost, Read Magic (DC 11)
+Witch Spells Known (CL 2, 9 melee touch, 12 ranged touch):
+1 (3/day) Enlarge Person (DC 12), Cure Light Wounds (DC 12), Cure Light Wounds (DC 12)
+0 (at will) Arcane Mark, Arcane Mark, Arcane Mark, Arcane Mark
+Wizard Spells Known (CL 3, 9 melee touch, 12 ranged touch):
+2 (1/day) Cat&apos;s Grace (DC 13)
+1 (3/day) Crafter&apos;s Fortune (DC 12), Color Spray (DC 12), Color Spray (DC 12)
+0 (at will) Resistance (DC 11), Ray of Frost, Read Magic (DC 11), Detect Magic
 --------------------
 STATISTICS
 --------------------
 Str 8,  Dex 14,  Con 14,  Int 12,  Wis 16,  Cha 20/22
 Base Atk +10; CMB +9; CMD 21
-Feats Bard Weapon Proficiencies, Combat Casting, Druid Weapon Proficiencies, Eschew Materials, Expanded Arcana: Sorcerer, Extend Spell, Improved Initiative, Lingering Spell, Persistent Spell, Scribe Scroll, Toughness +20, Wizard Weapon Proficiencies
-Skills Bluff +11, Craft (Alchemy) +10, Fly +10, Knowledge (Arcana) +7, Knowledge (Nature) +14, Profession (Gardener) +7, Profession (Herbalist) +7, Spellcraft +13, Survival +5, Use Magic Device +16
+Feats Bard Weapon Proficiencies, Combat Casting, Druid Weapon Proficiencies, Eschew Materials, Expanded Arcana: Sorcerer, Extend Spell, Improved Initiative, Lingering Spell, Persistent Spell, Scribe Scroll, Silent Spell, Toughness +20, Wizard Weapon Proficiencies
+Skills Bluff +11, Craft (Alchemy) +10, Fly +10, Knowledge (Arcana) +6, Knowledge (Nature) +13, Perception +6, Profession (Gardener) +7, Profession (Herbalist) +7, Spellcraft +13, Survival +5, Use Magic Device +16
 Languages Common, Druidic, Polyglot, Sylvan
-SQ Air, Animal Companion Link (Ex), Aura (Ex), Bardic Knowledge +2 (Ex), Bonded Object: -Choose- (1/day) (Sp), Channel Negative Energy 3d6 (9/day) (DC 18) (Su), Cleric Domain: Animal, Cleric Domain: Catastrophe, Druid Domain: Cave, Earth Supremacy +2 (Su), Lore Master (1/day) (Ex), Metamagic Rod, Lingering, Lesser, Nature Sense (Ex), Share Spells with Companion (Ex), Spontaneous Casting, Spontaneous Casting, Verdant, Versatile Singing +0 (Ex), Well Versed (Ex), Wild Empathy +8 (Ex), Woodland Stride (Ex)
+SQ Air, Arcane Familiar Nearby, Aura (Ex), Aura of Evil (Ex), Bardic Knowledge +1 (Ex), Bonded Object: -Choose- (1/day) (Sp), Cackle, Channel Negative Energy 1d6 (12/day) (DC 17) (Su), Cleric Domain: Animal, Cleric Domain: Catastrophe, Druid Domain: Cave, Earth Supremacy +2 (Su), Empathic Link with Familiar (Su), Metamagic Rod, Lingering, Lesser, Nature Sense (Ex), Share Spells with Familiar, Spontaneous Casting, Spontaneous Casting, Touch of Corruption (1d6) (7/day) (Su), Unholy Resilience (Su), Verdant, Versatile Singing +0 (Ex), Well Versed (Ex), Wild Empathy +8 (Ex), Woodland Stride (Ex)
 Combat Gear Dagger; Other Gear Alchemist&apos;s Lab, Portable, Cloak of Resistance, +1, Headband of Alluring Charisma, +2, Metamagic Rod, Lingering, Lesser, Spell component pouch
 --------------------
 SPECIAL ABILITIES
 --------------------
-Acid Cloud (1d6) (4/day) (DC 11) (Su) 5&apos;r cloud deals 1d6+0 Acid damage and sickens for 1r.  Fort halves/negates.
+Acid Cloud (1d6+1) (4/day) (DC 12) (Su) 5&apos;r cloud deals 1d6+1 Acid damage and sickens for 1r.  Fort halves/negates.
 Air Classical opposition school for: Earth
 
 You must spend 2 slots to cast spells from the Air school.
-Animal Companion Link (Ex) You have a link with your Animal Companion.
+Arcane Familiar Nearby You gain the Alertness feat while your familiar is within arm&apos;s reach.
 Aura (Ex) The Cleric has an aura corresponding to his deity&apos;s alignment.
-Bardic Knowledge +2 (Ex) Add + 2 to all knowledge skill checks.
-Bardic Performance (standard action) (18 rounds/day) Your performances can create magical effects.
+Aura of Evil (Ex) The antipaladin has an Aura of Evil with power equal to her class level.
+Bardic Knowledge +1 (Ex) Add + 1 to all knowledge skill checks.
+Bardic Performance (standard action) (12 rounds/day) Your performances can create magical effects.
 Bardic Performance: Countersong (Su) Counter magical effects that depend on sound.
 Bardic Performance: Distraction (Su) Counter magical effects that depend on sight.
-Bardic Performance: Fascinate (DC 18) (Su) One or more creatures becomes fascinated with you.
-Bardic Performance: Inspire Competence +2 (Su) +2 competence bonus for one ally on a skill check.
-Bardic Performance: Inspire Courage +2 (Su) Morale bonus on some saving throws, attack and damage rolls.
+Bardic Performance: Fascinate (DC 17) (Su) One or more creatures becomes fascinated with you.
+Bardic Performance: Inspire Courage +1 (Su) Morale bonus on some saving throws, attack and damage rolls.
+Blight (DC 12) (Su) Curse animals, plants, or land
 Bonded Object: -Choose- (1/day) (Sp) DC 20 + spell level to cast spells without the bonded object. Once per day, you can cast any spell in your spellbook for free.
-Channel Negative Energy 3d6 (9/day) (DC 18) (Su) A good cleric can channel positive energy to heal the living and injure the undead; an evil cleric can channel negative energy to injure the living and heal the undead.
+Cackle Extend the duration of other hexes.
+Channel Negative Energy 1d6 (12/day) (DC 17) (Su) A good cleric can channel positive energy to heal the living and injure the undead; an evil cleric can channel negative energy to injure the living and heal the undead.
 Cleric Domain: Animal Granted Powers: You can speak with and befriend animals with ease. In addition, you treat Knowledge (nature) as a class skill.
 Cleric Domain: Catastrophe Associated Domain: Destruction
 Combat Casting +4 to Concentration checks to cast while on the defensive.
-Destructive Smite +2 (6/day) (Su)  You gain the destructive smite power: the supernatural ability to make a single melee attack with a morale bonus on damage rolls equal to 1/2 your cleric level (minimum 1). You must declare the destructive smite before making the attack. You can use
+Deaf Fail sound-based Perception, -4 opposed Perception.  All spells have Silent Spell for free.
+Destructive Smite +1 (6/day) (Su)  You gain the destructive smite power: the supernatural ability to make a single melee attack with a morale bonus on damage rolls equal to 1/2 your cleric level (minimum 1). You must declare the destructive smite before making the attack. You can use
+Detect Good (At will) (Sp) You can use Detect Good at will (as the spell).
 Druid Domain: Cave Granted Powers: The wonders and dark secrets of the deepest caves give you strength.
 
 Domain Spells: 1st - detect aberration**, 2nd - stone call**, 3rd - deeper darkness, 4th - blackwing host*, 5th - wal
 Earth Supremacy +2 (Su) +2 CMD vs. bull rush, drag, reposition, trip, and overrun while touching the ground.  +1 insight bonus to melee attack/damage while you and your opponent are touching the ground.
+Empathic Link with Familiar (Su) You have an empathic link with your Arcane Familiar.
 Eschew Materials Cast spells without materials, if component cost is 1 gp or less.
 Extend Spell Spell duration lasts twice as normal. +1 Level.
 Lingering Spell You can cast an instantaneous spell that lingers until the beginning of your next turn, affecting anyone who enters that area and possibly  providing concealment.
-Lore Master (1/day) (Ex) Take 10 on knowledge checks, and 1/day take 20 as a standard action.
 Metamagic Rod, Lingering, Lesser The wielder can cast up to three spells per day that linger for 1 round as though using the Lingering Spell feat.
 
 Metamagic rods hold the essence of a metamagic feat, allowing the user to apply metamagic effects to spells as they are cast. This does not change the spell slot of the altered spell. All the rods described here are use-activated (but casting spells in a threatened area still draws an attack of opportunity). A caster may only use one metamagic rod on any given spell, but it is permissible to combine a rod with metamagic feats possessed by the rod&#146;s wielder. In this case, only the feats possessed by the wielder adjust the spell slot of the spell being cast.
@@ -9611,11 +9619,17 @@ Requirements Craft Rod, Lingering Spell; Cost 1,500 gp
 Nature Sense (Ex) A druid gains a +2 bonus on Knowledge (nature) and Survival checks.
 Persistent Spell You can cast a spell that requires targets to succeed at 2 saves or suffer the effects of the spell.
 Photosynthesis (Sustenance, +2 save vs. Poison &amp; Sleep) (Ex) You need no food and can sleep 2H for the benefits of 8H sleep.  +2 save vs. poison and sleep
-Share Spells with Companion (Ex) Spells cast on you can also affect your Companion, if it&apos;s within 5 feet.
-Speak with Animals (8 rounds/day) (Sp) You can use speak with animals as a spell-like ability.
+Resist Life (Su) Treated as Undead for positive/negative energy.
+Scent (Ex) Detect opponents within 15+ feet by sense of smell.
+Share Spells with Familiar The wizard may cast a spell with a target of &quot;You&quot; on his familiar (as a touch spell) instead of on himself. A wizard may cast spells on his familiar even if the spells do not normally affect creatures of the familiar&apos;s type (magical beast).
+Silent Spell Cast a spell with no verbal components. +1 Level.
+Smite Good (1/day) (Su) +6 to hit, +2 to damage, +6 deflection bonus to AC when used.
+Speak with Animals (5 rounds/day) (Sp) You can use speak with animals as a spell-like ability.
 Spontaneous Casting The Cleric can convert stored spells into Cure or Inflict spells.
 Spontaneous Casting The Druid can convert stored spells into Summon Nature&apos;s Ally spells.
-Tanglevine (CMB 13) (9/day) (Sp) 15&apos; vine can be used for disarm, steal, or trip.
+Tanglevine (CMB 11) (9/day) (Sp) 15&apos; vine can be used for disarm, steal, or trip.
+Touch of Corruption (1d6) (7/day) (Su) You can inflict 1d6 damage, 7/day
+Unholy Resilience (Su) You gain your Charisma Bonus as a bonus to all saving throws.
 Verdant Gain +spell level natural armor for 1d4r after casting a personal spell.
 Versatile Singing +0 (Ex) You may substitute the final value of your Perform: Sing skill for Bluff or Sense Motive checks
 Well Versed (Ex) +4 save vs. bardic performance, sonic, and language-dependent effects.
@@ -9632,11 +9646,11 @@ Isai stands over 6 feet tall, with long spidery limbs and a mane of dreadlocks. 
 
 Hero Lab&#174; and the Hero Lab logo are Registered Trademarks of LWD Technology, Inc. Free download at http://www.wolflair.com
 Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishing, LLC&#174;, and are used under license.</statblock>
-<container index="0" chosencount="3" pickcount="751">
+<container index="0" chosencount="3" pickcount="868">
 <notes/>
 <chosen source="bgDeity" pickindex="483"/>
-<chosen source="bgRace" pickindex="497"/>
-<chosen source="bgAlign" pickindex="519"/>
+<chosen source="bgRace" pickindex="493"/>
+<chosen source="bgAlign" pickindex="515"/>
 <pick thing="AllCraft" index="11" batchindex="11" bootstrap="yes" default="yes">
 <reference bootindex="11"/>
 </pick>
@@ -9705,7 +9719,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="tGen" user="-999."></field>
 <field id="tGenChoice" menuthing="creaPick" ispick="yes" menuusage="hero" cacheindex="74"></field>
 <field id="acType" menuthing="typNPC"></field>
-<field id="tMaskCopy" piece="11111"></field>
+<field id="tMaskCopy" piece="111111"></field>
 <field id="tFavCl"></field>
 <field id="tSecFavCl"></field>
 <field id="tThiFavCl"></field>
@@ -9730,7 +9744,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference/>
 <field id="aUser" user="14."></field>
 </pick>
-<pick thing="aChaoEvil" index="519" batchindex="448" refcount="0" source="bgAlign" default="yes"></pick>
+<pick thing="aChaoEvil" index="515" batchindex="444" refcount="0" source="bgAlign" default="yes"></pick>
 <pick thing="aDEX" index="66" batchindex="55" uniqueness="unique" fieldcount="1">
 <reference/>
 <field id="aUser" user="14."></field>
@@ -9752,8 +9766,8 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="abExpArc2" index="585" batchindex="494" root="no" fieldcount="3" bootstrap="yes">
-<reference pickindex="584" batchindex="494" bootindex="1"/>
+<pick thing="abExpArc2" index="581" batchindex="490" root="no" fieldcount="3" bootstrap="yes">
+<reference pickindex="580" batchindex="490" bootindex="1"/>
 <field id="actUser" user="3."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
@@ -9777,83 +9791,177 @@ It was while aiding his growing collection of shambling mounds that he encounter
 
 Isai stands over 6 feet tall, with long spidery limbs and a mane of dreadlocks. His skin is chocolate brown but laced with elaborate dark traceries of greenish-black under his flesh. He wears loose green and white clothing adorned with numerous small animal and plant fetishes."></field>
 </pick>
-<pick thing="cAnimClass" index="1171" batchindex="534" uniqueness="unique" root="no" bootstrap="yes" default="yes">
-<chain index="1172"/>
-<linkage id="realcomp" index="1172"/>
-<reference pickindex="1170" batchindex="534" bootindex="1"/>
+<pick thing="cAPaAuCowa" index="1771" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
 </pick>
-<pick thing="cAnimComp" index="1172" batchindex="534" uniqueness="unique" root="no" count="0" bootstrap="yes" default="yes" live="no">
-<minion heroname="Animal Companion" batchindex="464" userbatch="461" enmassebatch="67" nexttrade="1" nexttransact="1" poolcount="25" activemode="1" isally="no" hasacted="no" live="no">
+<pick thing="cAPaAuDepr" index="1783" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="455"/>
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaAuEvil" index="1766" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaAuSin" index="1782" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaAuVeng" index="1781" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaChanEn" index="1773" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="1152"/>
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaDetGoo" index="1767" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaPlague" index="1772" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="327"/>
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaSmite" index="1768" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaSmite" index="1774" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaSmite" index="1775" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaSmite" index="1776" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaSmite" index="1777" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaSmite" index="1778" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaSmite" index="1779" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaToCorr" index="1770" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaUnCham" index="1784" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="455"/>
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAPaUnResi" index="1769" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cAnimClass" index="1157" batchindex="519" uniqueness="unique" root="no" bootstrap="yes" default="yes">
+<chain index="1158"/>
+<linkage id="realcomp" index="1158"/>
+<reference pickindex="1156" batchindex="519" bootindex="1"/>
+</pick>
+<pick thing="cAnimComp" index="1158" batchindex="519" uniqueness="unique" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<minion heroname="Animal Companion" batchindex="464" userbatch="461" enmassebatch="67" nexttrade="1" nexttransact="1" poolcount="35" activemode="1" isally="no" hasacted="no" live="no">
 <statblock>
 Hero Lab&#174; and the Hero Lab logo are Registered Trademarks of LWD Technology, Inc. Free download at http://www.wolflair.com
 Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishing, LLC&#174;, and are used under license.</statblock>
 <container index="6" chosencount="1" pickcount="508">
 <notes/>
-<chosen source="bgDeity" pickindex="1691"/>
-<pick thing="AllCraft" index="1183" batchindex="11" bootstrap="yes" default="yes">
+<chosen source="bgDeity" pickindex="1680"/>
+<pick thing="AllCraft" index="1170" batchindex="11" bootstrap="yes" default="yes">
 <reference bootindex="11"/>
 </pick>
-<pick thing="AllKnow" index="1184" batchindex="12" bootstrap="yes" default="yes">
+<pick thing="AllKnow" index="1171" batchindex="12" bootstrap="yes" default="yes">
 <reference bootindex="12"/>
 </pick>
-<pick thing="AllPerform" index="1185" batchindex="13" bootstrap="yes" default="yes">
+<pick thing="AllPerform" index="1172" batchindex="13" bootstrap="yes" default="yes">
 <reference bootindex="13"/>
 </pick>
-<pick thing="AllProf" index="1186" batchindex="14" bootstrap="yes" default="yes">
+<pick thing="AllProf" index="1173" batchindex="14" bootstrap="yes" default="yes">
 <reference bootindex="14"/>
 </pick>
-<pick thing="AllSkills" index="1180" batchindex="8" bootstrap="yes" default="yes">
+<pick thing="AllSkills" index="1167" batchindex="8" bootstrap="yes" default="yes">
 <reference bootindex="8"/>
 </pick>
-<pick thing="ArmorClass" index="1177" batchindex="5" bootstrap="yes" default="yes">
+<pick thing="ArmorClass" index="1164" batchindex="5" bootstrap="yes" default="yes">
 <reference bootindex="5"/>
 </pick>
-<pick thing="ArmorDR" index="1190" batchindex="18" uniqueness="unique" bootstrap="yes" default="yes">
+<pick thing="ArmorDR" index="1177" batchindex="18" uniqueness="unique" bootstrap="yes" default="yes">
 <reference bootindex="18"/>
 </pick>
-<pick thing="ArmorDef" index="1189" batchindex="17" uniqueness="unique" bootstrap="yes" default="yes">
+<pick thing="ArmorDef" index="1176" batchindex="17" uniqueness="unique" bootstrap="yes" default="yes">
 <reference bootindex="17"/>
 </pick>
-<pick thing="Attack" index="1175" batchindex="3" bootstrap="yes" default="yes">
+<pick thing="Attack" index="1162" batchindex="3" bootstrap="yes" default="yes">
 <reference bootindex="3"/>
 </pick>
-<pick thing="AttrCost" index="1264" batchindex="67" refcount="0" default="yes"></pick>
-<pick thing="BasAttrArr" index="1265" batchindex="68" refcount="0" default="yes"></pick>
-<pick thing="CritDef" index="1191" batchindex="19" uniqueness="unique" bootstrap="yes" default="yes">
+<pick thing="AttrCost" index="1251" batchindex="67" refcount="0" default="yes"></pick>
+<pick thing="BasAttrArr" index="1252" batchindex="68" refcount="0" default="yes"></pick>
+<pick thing="CritDef" index="1178" batchindex="19" uniqueness="unique" bootstrap="yes" default="yes">
 <reference bootindex="19"/>
 </pick>
-<pick thing="Damage" index="1182" batchindex="10" bootstrap="yes" default="yes">
+<pick thing="Damage" index="1169" batchindex="10" bootstrap="yes" default="yes">
 <reference bootindex="10"/>
 </pick>
-<pick thing="Feat" index="1266" batchindex="69" refcount="0" default="yes"></pick>
-<pick thing="Flaw" index="1267" batchindex="70" refcount="0" default="yes"></pick>
-<pick thing="HerAttrArr" index="1268" batchindex="71" refcount="0" default="yes"></pick>
-<pick thing="Initiative" index="1178" batchindex="6" bootstrap="yes" default="yes">
+<pick thing="Feat" index="1253" batchindex="69" refcount="0" default="yes"></pick>
+<pick thing="Flaw" index="1254" batchindex="70" refcount="0" default="yes"></pick>
+<pick thing="HerAttrArr" index="1255" batchindex="71" refcount="0" default="yes"></pick>
+<pick thing="Initiative" index="1165" batchindex="6" bootstrap="yes" default="yes">
 <reference bootindex="6"/>
 </pick>
-<pick thing="ManeuvBon" index="1195" batchindex="23" bootstrap="yes" default="yes">
+<pick thing="ManeuvBon" index="1182" batchindex="23" bootstrap="yes" default="yes">
 <reference bootindex="23"/>
 </pick>
-<pick thing="ManeuvDef" index="1194" batchindex="22" bootstrap="yes" default="yes">
+<pick thing="ManeuvDef" index="1181" batchindex="22" bootstrap="yes" default="yes">
 <reference bootindex="22"/>
 </pick>
-<pick thing="Maneuver" index="1176" batchindex="4" bootstrap="yes" default="yes">
+<pick thing="Maneuver" index="1163" batchindex="4" bootstrap="yes" default="yes">
 <reference bootindex="4"/>
 </pick>
-<pick thing="MonAttrArr" index="1269" batchindex="72" refcount="0" default="yes"></pick>
-<pick thing="OtherMount" index="1270" batchindex="73" refcount="0" default="yes"></pick>
-<pick thing="PerfCombat" index="1271" batchindex="74" refcount="0" default="yes"></pick>
-<pick thing="PieceArmor" index="1193" batchindex="21" uniqueness="unique" bootstrap="yes" default="yes">
+<pick thing="MonAttrArr" index="1256" batchindex="72" refcount="0" default="yes"></pick>
+<pick thing="OtherMount" index="1257" batchindex="73" refcount="0" default="yes"></pick>
+<pick thing="PerfCombat" index="1258" batchindex="74" refcount="0" default="yes"></pick>
+<pick thing="PieceArmor" index="1180" batchindex="21" uniqueness="unique" bootstrap="yes" default="yes">
 <reference bootindex="21"/>
 </pick>
-<pick thing="Psionics" index="1187" batchindex="15" bootstrap="yes" default="yes">
+<pick thing="Psionics" index="1174" batchindex="15" bootstrap="yes" default="yes">
 <reference bootindex="15"/>
 </pick>
-<pick thing="SocItem" index="1272" batchindex="75" refcount="0" default="yes"></pick>
-<pick thing="Speed" index="1179" batchindex="7" bootstrap="yes" default="yes">
+<pick thing="SocItem" index="1259" batchindex="75" refcount="0" default="yes"></pick>
+<pick thing="Speed" index="1166" batchindex="7" bootstrap="yes" default="yes">
 <reference bootindex="7"/>
 </pick>
-<pick thing="Totals" index="1173" batchindex="1" uniqueness="unique" fieldcount="7" bootstrap="yes">
+<pick thing="Totals" index="1160" batchindex="1" uniqueness="unique" fieldcount="7" bootstrap="yes">
 <reference/>
 <field id="tGenChoice"></field>
 <field id="acType" menuthing="typHero"></field>
@@ -9863,1058 +9971,1058 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="tThiFavCl"></field>
 <field id="dashUser" value="8."></field>
 </pick>
-<pick thing="Trait" index="1273" batchindex="76" refcount="0" default="yes"></pick>
-<pick thing="UserImage" index="1688" batchindex="461" refcount="0" fieldcount="1" source="bImages">
+<pick thing="Trait" index="1260" batchindex="76" refcount="0" default="yes"></pick>
+<pick thing="UserImage" index="1677" batchindex="461" refcount="0" fieldcount="1" source="bImages">
 <field id="imgIndex" value="1."></field>
 </pick>
-<pick thing="Wounds" index="1192" batchindex="20" uniqueness="unique" bootstrap="yes" default="yes">
+<pick thing="Wounds" index="1179" batchindex="20" uniqueness="unique" bootstrap="yes" default="yes">
 <reference bootindex="20"/>
 </pick>
-<pick thing="XPFast" index="1274" batchindex="77" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="XPMedium" index="1275" batchindex="78" refcount="0" default="yes"></pick>
-<pick thing="XPSlow" index="1276" batchindex="79" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="XPSociety" index="1277" batchindex="80" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="aCHA" index="1278" batchindex="81" uniqueness="unique" default="yes">
+<pick thing="XPFast" index="1261" batchindex="77" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="XPMedium" index="1262" batchindex="78" refcount="0" default="yes"></pick>
+<pick thing="XPSlow" index="1263" batchindex="79" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="XPSociety" index="1264" batchindex="80" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="aCHA" index="1265" batchindex="81" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="aCON" index="1279" batchindex="82" uniqueness="unique" default="yes">
+<pick thing="aCON" index="1266" batchindex="82" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="aDEX" index="1280" batchindex="83" uniqueness="unique" default="yes">
+<pick thing="aDEX" index="1267" batchindex="83" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="aINT" index="1281" batchindex="84" uniqueness="unique" default="yes">
+<pick thing="aINT" index="1268" batchindex="84" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="aSTR" index="1282" batchindex="85" uniqueness="unique" default="yes">
+<pick thing="aSTR" index="1269" batchindex="85" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="aWIS" index="1283" batchindex="86" uniqueness="unique" default="yes">
+<pick thing="aWIS" index="1270" batchindex="86" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="abDRCIrMag" index="1284" batchindex="87" uniqueness="unique" count="0" fieldcount="2" default="yes" live="no">
+<pick thing="abDRCIrMag" index="1271" batchindex="87" uniqueness="unique" count="0" fieldcount="2" default="yes" live="no">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="abHeroP" index="1321" batchindex="123" root="no" count="0" fieldcount="3" bootstrap="yes" live="no">
-<reference pickindex="1320" batchindex="123" bootindex="1"/>
+<pick thing="abHeroP" index="1308" batchindex="123" root="no" count="0" fieldcount="3" bootstrap="yes" live="no">
+<reference pickindex="1307" batchindex="123" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 <field id="trkUser" user="1."></field>
 </pick>
-<pick thing="background" index="1174" batchindex="2" bootstrap="yes" default="yes">
+<pick thing="background" index="1161" batchindex="2" bootstrap="yes" default="yes">
 <reference bootindex="2"/>
 </pick>
-<pick thing="cAnimDevo" index="1241" batchindex="57" uniqueness="unique" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<pick thing="cAnimDevo" index="1228" batchindex="57" uniqueness="unique" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cAnimEvas" index="1240" batchindex="56" uniqueness="unique" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<pick thing="cAnimEvas" index="1227" batchindex="56" uniqueness="unique" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cAnimImpEv" index="1251" batchindex="60" uniqueness="unique" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<pick thing="cAnimImpEv" index="1238" batchindex="60" uniqueness="unique" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cAnimMulti" index="1242" batchindex="58" uniqueness="unique" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<chain index="1243"/>
+<pick thing="cAnimMulti" index="1229" batchindex="58" uniqueness="unique" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<chain index="1230"/>
 <reference bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBonHDHelp" index="1224" batchindex="40" uniqueness="unique" root="no" count="0" refcount="16" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1223" batchindex="40" bootindex="1"/>
-<reference pickindex="1225" batchindex="41" bootindex="1"/>
-<reference pickindex="1226" batchindex="42" bootindex="1"/>
-<reference pickindex="1227" batchindex="43" bootindex="1"/>
-<reference pickindex="1228" batchindex="44" bootindex="1"/>
-<reference pickindex="1229" batchindex="45" bootindex="1"/>
-<reference pickindex="1230" batchindex="46" bootindex="1"/>
-<reference pickindex="1231" batchindex="47" bootindex="1"/>
-<reference pickindex="1232" batchindex="48" bootindex="1"/>
-<reference pickindex="1233" batchindex="49" bootindex="1"/>
-<reference pickindex="1234" batchindex="50" bootindex="1"/>
-<reference pickindex="1235" batchindex="51" bootindex="1"/>
-<reference pickindex="1236" batchindex="52" bootindex="1"/>
-<reference pickindex="1237" batchindex="53" bootindex="1"/>
-<reference pickindex="1238" batchindex="54" bootindex="1"/>
-<reference pickindex="1239" batchindex="55" bootindex="1"/>
+<pick thing="cBonHDHelp" index="1211" batchindex="40" uniqueness="unique" root="no" count="0" refcount="16" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1210" batchindex="40" bootindex="1"/>
+<reference pickindex="1212" batchindex="41" bootindex="1"/>
+<reference pickindex="1213" batchindex="42" bootindex="1"/>
+<reference pickindex="1214" batchindex="43" bootindex="1"/>
+<reference pickindex="1215" batchindex="44" bootindex="1"/>
+<reference pickindex="1216" batchindex="45" bootindex="1"/>
+<reference pickindex="1217" batchindex="46" bootindex="1"/>
+<reference pickindex="1218" batchindex="47" bootindex="1"/>
+<reference pickindex="1219" batchindex="48" bootindex="1"/>
+<reference pickindex="1220" batchindex="49" bootindex="1"/>
+<reference pickindex="1221" batchindex="50" bootindex="1"/>
+<reference pickindex="1222" batchindex="51" bootindex="1"/>
+<reference pickindex="1223" batchindex="52" bootindex="1"/>
+<reference pickindex="1224" batchindex="53" bootindex="1"/>
+<reference pickindex="1225" batchindex="54" bootindex="1"/>
+<reference pickindex="1226" batchindex="55" bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1223" batchindex="40" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1210" batchindex="40" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1225" batchindex="41" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1212" batchindex="41" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1226" batchindex="42" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1213" batchindex="42" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1227" batchindex="43" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1214" batchindex="43" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1228" batchindex="44" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1215" batchindex="44" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1229" batchindex="45" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1216" batchindex="45" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1230" batchindex="46" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1217" batchindex="46" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1231" batchindex="47" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1218" batchindex="47" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1232" batchindex="48" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1219" batchindex="48" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1233" batchindex="49" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1220" batchindex="49" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1234" batchindex="50" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1221" batchindex="50" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1235" batchindex="51" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1222" batchindex="51" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1236" batchindex="52" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1223" batchindex="52" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1237" batchindex="53" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1224" batchindex="53" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1238" batchindex="54" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1225" batchindex="54" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="cBonusHD" index="1239" batchindex="55" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
-<chain index="1224"/>
+<pick thing="cBonusHD" index="1226" batchindex="55" count="0" fieldcount="1" bootstrap="yes" default="yes" live="no">
+<chain index="1211"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="creaEpic" index="1285" batchindex="88" refcount="0" default="yes"></pick>
-<pick thing="creaHigh" index="1286" batchindex="89" refcount="0" default="yes"></pick>
-<pick thing="creaLow" index="1287" batchindex="90" refcount="0" default="yes"></pick>
-<pick thing="creaPick" index="1288" batchindex="91" refcount="0" default="yes"></pick>
-<pick thing="creaStanda" index="1289" batchindex="92" refcount="0" default="yes"></pick>
-<pick thing="deiOther" index="1691" batchindex="464" uniqueness="unique" source="bgDeity" default="yes">
+<pick thing="creaEpic" index="1272" batchindex="88" refcount="0" default="yes"></pick>
+<pick thing="creaHigh" index="1273" batchindex="89" refcount="0" default="yes"></pick>
+<pick thing="creaLow" index="1274" batchindex="90" refcount="0" default="yes"></pick>
+<pick thing="creaPick" index="1275" batchindex="91" refcount="0" default="yes"></pick>
+<pick thing="creaStanda" index="1276" batchindex="92" refcount="0" default="yes"></pick>
+<pick thing="deiOther" index="1680" batchindex="464" uniqueness="unique" source="bgDeity" default="yes">
 <reference/>
 </pick>
-<pick thing="fArmLight" index="1259" batchindex="62" uniqueness="useronce" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<pick thing="fArmLight" index="1246" batchindex="62" uniqueness="useronce" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fEndure" index="1261" batchindex="64" uniqueness="useronce" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<pick thing="fEndure" index="1248" batchindex="64" uniqueness="useronce" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fMobility" index="1262" batchindex="65" uniqueness="useronce" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<pick thing="fMobility" index="1249" batchindex="65" uniqueness="useronce" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fMultiAtt" index="1243" batchindex="58" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1242" batchindex="58" bootindex="1"/>
+<pick thing="fMultiAtt" index="1230" batchindex="58" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1229" batchindex="58" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="1532" batchindex="333" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1531" batchindex="333" bootindex="1"/>
+<pick thing="fSimple" index="1519" batchindex="333" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1518" batchindex="333" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="1536" batchindex="335" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
+<pick thing="fSimple" index="1523" batchindex="335" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="1553" batchindex="336" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1552" batchindex="336" bootindex="1"/>
+<pick thing="fSimple" index="1540" batchindex="336" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1539" batchindex="336" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="1555" batchindex="337" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1554" batchindex="337" bootindex="1"/>
+<pick thing="fSimple" index="1542" batchindex="337" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1541" batchindex="337" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="1557" batchindex="338" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1556" batchindex="338" bootindex="1"/>
+<pick thing="fSimple" index="1544" batchindex="338" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1543" batchindex="338" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="1560" batchindex="340" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1559" batchindex="340" bootindex="1"/>
+<pick thing="fSimple" index="1547" batchindex="340" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1546" batchindex="340" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="1569" batchindex="342" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1568" batchindex="342" bootindex="1"/>
+<pick thing="fSimple" index="1556" batchindex="342" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1555" batchindex="342" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="1573" batchindex="344" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="fSimple" index="1560" batchindex="344" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fWepMart" index="1570" batchindex="342" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1568" batchindex="342" bootindex="1"/>
+<pick thing="fWepMart" index="1557" batchindex="342" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1555" batchindex="342" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcHP" index="1290" batchindex="93" uniqueness="unique" fieldcount="2" default="yes">
-<reference/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="fcSkillPts" index="1291" batchindex="94" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="fcHP" index="1277" batchindex="93" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="gClothes" index="1203" batchindex="31" count="0" fieldcount="3" bootstrap="yes" live="no">
+<pick thing="fcSkillPts" index="1278" batchindex="94" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="gClothes" index="1190" batchindex="31" count="0" fieldcount="3" bootstrap="yes" live="no">
 <reference bootindex="107"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 <field id="usrSelect" text="Artisan&apos;s Outfit (Free)"></field>
 </pick>
-<pick thing="gGround" index="1292" batchindex="95" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="gGround" index="1279" batchindex="95" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="gMoney" index="1202" batchindex="30" fieldcount="2" bootstrap="yes" default="yes">
+<pick thing="gMoney" index="1189" batchindex="30" fieldcount="2" bootstrap="yes" default="yes">
 <reference bootindex="106"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="hActionPts" index="1188" batchindex="16" count="0" bootstrap="yes" default="yes" live="no">
+<pick thing="hActionPts" index="1175" batchindex="16" count="0" bootstrap="yes" default="yes" live="no">
 <reference bootindex="16"/>
 </pick>
-<pick thing="hPP" index="1207" batchindex="34" count="0" bootstrap="yes" default="yes" live="no">
+<pick thing="hPP" index="1194" batchindex="34" count="0" bootstrap="yes" default="yes" live="no">
 <reference bootindex="500"/>
 </pick>
-<pick thing="heroname" index="1210" batchindex="37" fieldcount="1" bootstrap="yes">
+<pick thing="heroname" index="1197" batchindex="37" fieldcount="1" bootstrap="yes">
 <reference bootindex="999999001"/>
 <field id="useredit" text="Animal Companion"></field>
 </pick>
-<pick thing="isEqpArmor" index="1293" batchindex="96" refcount="0" default="yes"></pick>
-<pick thing="isEqpBack" index="1294" batchindex="97" refcount="0" default="yes"></pick>
-<pick thing="isEqpBody" index="1295" batchindex="98" refcount="0" default="yes"></pick>
-<pick thing="isEqpEyes" index="1296" batchindex="99" refcount="0" default="yes"></pick>
-<pick thing="isEqpFoot" index="1297" batchindex="100" refcount="0" default="yes"></pick>
-<pick thing="isEqpHBand" index="1298" batchindex="101" refcount="0" default="yes"></pick>
-<pick thing="isEqpHand" index="1299" batchindex="102" refcount="0" default="yes"></pick>
-<pick thing="isEqpHead" index="1300" batchindex="103" refcount="0" default="yes"></pick>
-<pick thing="isEqpNeck" index="1301" batchindex="104" refcount="0" default="yes"></pick>
-<pick thing="isEqpPFRun" index="1302" batchindex="105" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="isEqpRing" index="1303" batchindex="106" refcount="0" default="yes"></pick>
-<pick thing="isEqpTorso" index="1304" batchindex="107" refcount="0" default="yes"></pick>
-<pick thing="isEqpWaist" index="1305" batchindex="108" refcount="0" default="yes"></pick>
-<pick thing="isEqpWrist" index="1306" batchindex="109" refcount="0" default="yes"></pick>
-<pick thing="journal" index="1689" batchindex="462" refcount="0" fieldcount="2" source="journal">
+<pick thing="isEqpArmor" index="1280" batchindex="96" refcount="0" default="yes"></pick>
+<pick thing="isEqpBack" index="1281" batchindex="97" refcount="0" default="yes"></pick>
+<pick thing="isEqpBody" index="1282" batchindex="98" refcount="0" default="yes"></pick>
+<pick thing="isEqpEyes" index="1283" batchindex="99" refcount="0" default="yes"></pick>
+<pick thing="isEqpFoot" index="1284" batchindex="100" refcount="0" default="yes"></pick>
+<pick thing="isEqpHBand" index="1285" batchindex="101" refcount="0" default="yes"></pick>
+<pick thing="isEqpHand" index="1286" batchindex="102" refcount="0" default="yes"></pick>
+<pick thing="isEqpHead" index="1287" batchindex="103" refcount="0" default="yes"></pick>
+<pick thing="isEqpNeck" index="1288" batchindex="104" refcount="0" default="yes"></pick>
+<pick thing="isEqpPFRun" index="1289" batchindex="105" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="isEqpRing" index="1290" batchindex="106" refcount="0" default="yes"></pick>
+<pick thing="isEqpTorso" index="1291" batchindex="107" refcount="0" default="yes"></pick>
+<pick thing="isEqpWaist" index="1292" batchindex="108" refcount="0" default="yes"></pick>
+<pick thing="isEqpWrist" index="1293" batchindex="109" refcount="0" default="yes"></pick>
+<pick thing="journal" index="1678" batchindex="462" refcount="0" fieldcount="2" source="journal">
 <field id="jFaction"></field>
 <field id="jrnReal" user="20120101."></field>
 </pick>
-<pick thing="journal" index="1690" batchindex="463" refcount="0" fieldcount="2" source="presjourn">
+<pick thing="journal" index="1679" batchindex="463" refcount="0" fieldcount="2" source="presjourn">
 <field id="jFaction"></field>
 <field id="jrnReal" user="20120101."></field>
 </pick>
-<pick thing="lCommon" index="1204" batchindex="32" uniqueness="useronce" bootstrap="yes" default="yes">
+<pick thing="lCommon" index="1191" batchindex="32" uniqueness="useronce" bootstrap="yes" default="yes">
 <reference bootindex="200"/>
 </pick>
-<pick thing="mArmor" index="1200" batchindex="28" bootstrap="yes" default="yes">
+<pick thing="mArmor" index="1187" batchindex="28" bootstrap="yes" default="yes">
 <reference bootindex="104"/>
 </pick>
-<pick thing="mNatural" index="1199" batchindex="27" bootstrap="yes" default="yes">
+<pick thing="mNatural" index="1186" batchindex="27" bootstrap="yes" default="yes">
 <reference bootindex="103"/>
 </pick>
-<pick thing="mShield" index="1201" batchindex="29" bootstrap="yes" default="yes">
+<pick thing="mShield" index="1188" batchindex="29" bootstrap="yes" default="yes">
 <reference bootindex="105"/>
 </pick>
-<pick thing="manBullRus" index="1307" batchindex="110" refcount="0" default="yes"></pick>
-<pick thing="manDirtTri" index="1308" batchindex="111" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="manDisarm" index="1309" batchindex="112" refcount="0" default="yes"></pick>
-<pick thing="manDrag" index="1310" batchindex="113" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="manFeint" index="1311" batchindex="114" refcount="0" default="yes"></pick>
-<pick thing="manGrapple" index="1312" batchindex="115" refcount="0" default="yes"></pick>
-<pick thing="manOverrun" index="1313" batchindex="116" refcount="0" default="yes"></pick>
-<pick thing="manPull" index="1314" batchindex="117" refcount="0" default="yes"></pick>
-<pick thing="manPush" index="1315" batchindex="118" refcount="0" default="yes"></pick>
-<pick thing="manReposit" index="1316" batchindex="119" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="manSteal" index="1317" batchindex="120" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="manSunder" index="1318" batchindex="121" refcount="0" default="yes"></pick>
-<pick thing="manTrip" index="1319" batchindex="122" refcount="0" default="yes"></pick>
-<pick thing="mechHeroP" index="1320" batchindex="123" count="0" refcount="0" default="yes" live="no">
-<chain index="1321"/>
+<pick thing="manBullRus" index="1294" batchindex="110" refcount="0" default="yes"></pick>
+<pick thing="manDirtTri" index="1295" batchindex="111" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manDisarm" index="1296" batchindex="112" refcount="0" default="yes"></pick>
+<pick thing="manDrag" index="1297" batchindex="113" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manFeint" index="1298" batchindex="114" refcount="0" default="yes"></pick>
+<pick thing="manGrapple" index="1299" batchindex="115" refcount="0" default="yes"></pick>
+<pick thing="manOverrun" index="1300" batchindex="116" refcount="0" default="yes"></pick>
+<pick thing="manPull" index="1301" batchindex="117" refcount="0" default="yes"></pick>
+<pick thing="manPush" index="1302" batchindex="118" refcount="0" default="yes"></pick>
+<pick thing="manReposit" index="1303" batchindex="119" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manSteal" index="1304" batchindex="120" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manSunder" index="1305" batchindex="121" refcount="0" default="yes"></pick>
+<pick thing="manTrip" index="1306" batchindex="122" refcount="0" default="yes"></pick>
+<pick thing="mechHeroP" index="1307" batchindex="123" count="0" refcount="0" default="yes" live="no">
+<chain index="1308"/>
 </pick>
-<pick thing="mechWealth" index="1322" batchindex="124" refcount="0" default="yes"></pick>
-<pick thing="pDethgaggd" index="1323" batchindex="125" count="0" refcount="0" fieldcount="4" live="no">
+<pick thing="mechWealth" index="1309" batchindex="124" refcount="0" default="yes"></pick>
+<pick thing="pDethgaggd" index="1310" batchindex="125" count="0" refcount="0" fieldcount="4" live="no">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="1."></field>
 </pick>
-<pick thing="pcnBlind" index="1324" batchindex="126" refcount="0" fieldcount="4">
+<pick thing="pcnBlind" index="1311" batchindex="126" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="2."></field>
 </pick>
-<pick thing="pcnConfuse" index="1325" batchindex="127" refcount="0" fieldcount="4">
+<pick thing="pcnConfuse" index="1312" batchindex="127" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="3."></field>
 </pick>
-<pick thing="pcnCower" index="1326" batchindex="128" refcount="0" fieldcount="4">
+<pick thing="pcnCower" index="1313" batchindex="128" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="4."></field>
 </pick>
-<pick thing="pcnDazed" index="1327" batchindex="129" refcount="0" fieldcount="4">
+<pick thing="pcnDazed" index="1314" batchindex="129" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="5."></field>
 </pick>
-<pick thing="pcnDazzle" index="1328" batchindex="130" refcount="0" fieldcount="4">
+<pick thing="pcnDazzle" index="1315" batchindex="130" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="6."></field>
 </pick>
-<pick thing="pcnDeaf" index="1329" batchindex="131" refcount="0" fieldcount="4">
+<pick thing="pcnDeaf" index="1316" batchindex="131" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="7."></field>
 </pick>
-<pick thing="pcnDisable" index="1330" batchindex="132" refcount="0" fieldcount="4">
+<pick thing="pcnDisable" index="1317" batchindex="132" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="8."></field>
 </pick>
-<pick thing="pcnDying" index="1331" batchindex="133" refcount="0" fieldcount="4">
+<pick thing="pcnDying" index="1318" batchindex="133" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="9."></field>
 </pick>
-<pick thing="pcnEntangl" index="1332" batchindex="134" refcount="0" fieldcount="4">
+<pick thing="pcnEntangl" index="1319" batchindex="134" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="10."></field>
 </pick>
-<pick thing="pcnExhaust" index="1333" batchindex="135" refcount="0" fieldcount="4">
+<pick thing="pcnExhaust" index="1320" batchindex="135" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="11."></field>
 </pick>
-<pick thing="pcnFascin" index="1334" batchindex="136" refcount="0" fieldcount="4">
+<pick thing="pcnFascin" index="1321" batchindex="136" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="12."></field>
 </pick>
-<pick thing="pcnFatigue" index="1335" batchindex="137" refcount="0" fieldcount="4">
+<pick thing="pcnFatigue" index="1322" batchindex="137" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="13."></field>
 </pick>
-<pick thing="pcnFlatFt" index="1336" batchindex="138" refcount="0" fieldcount="4">
+<pick thing="pcnFlatFt" index="1323" batchindex="138" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="14."></field>
 </pick>
-<pick thing="pcnFright" index="1337" batchindex="139" refcount="0" fieldcount="4">
+<pick thing="pcnFright" index="1324" batchindex="139" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="15."></field>
 </pick>
-<pick thing="pcnGrapple" index="1338" batchindex="140" refcount="0" fieldcount="4">
+<pick thing="pcnGrapple" index="1325" batchindex="140" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="16."></field>
 </pick>
-<pick thing="pcnHelpls" index="1339" batchindex="141" refcount="0" fieldcount="4">
+<pick thing="pcnHelpls" index="1326" batchindex="141" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="17."></field>
 </pick>
-<pick thing="pcnIncorp" index="1340" batchindex="142" refcount="0" fieldcount="4">
+<pick thing="pcnIncorp" index="1327" batchindex="142" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="18."></field>
 </pick>
-<pick thing="pcnInvis" index="1341" batchindex="143" refcount="0" fieldcount="4">
+<pick thing="pcnInvis" index="1328" batchindex="143" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="19."></field>
 </pick>
-<pick thing="pcnNausea" index="1342" batchindex="144" refcount="0" fieldcount="4">
+<pick thing="pcnNausea" index="1329" batchindex="144" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="20."></field>
 </pick>
-<pick thing="pcnPanic" index="1343" batchindex="145" refcount="0" fieldcount="4">
+<pick thing="pcnPanic" index="1330" batchindex="145" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="21."></field>
 </pick>
-<pick thing="pcnParaly" index="1344" batchindex="146" refcount="0" fieldcount="4">
+<pick thing="pcnParaly" index="1331" batchindex="146" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="22."></field>
 </pick>
-<pick thing="pcnPetri" index="1345" batchindex="147" refcount="0" fieldcount="4">
+<pick thing="pcnPetri" index="1332" batchindex="147" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="23."></field>
 </pick>
-<pick thing="pcnPinned" index="1346" batchindex="148" refcount="0" fieldcount="4">
+<pick thing="pcnPinned" index="1333" batchindex="148" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="24."></field>
 </pick>
-<pick thing="pcnProne" index="1347" batchindex="149" refcount="0" fieldcount="4">
+<pick thing="pcnProne" index="1334" batchindex="149" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="25."></field>
 </pick>
-<pick thing="pcnShaken" index="1348" batchindex="150" refcount="0" fieldcount="4">
+<pick thing="pcnShaken" index="1335" batchindex="150" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="26."></field>
 </pick>
-<pick thing="pcnSicken" index="1349" batchindex="151" refcount="0" fieldcount="4">
+<pick thing="pcnSicken" index="1336" batchindex="151" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="27."></field>
 </pick>
-<pick thing="pcnStable" index="1350" batchindex="152" refcount="0" fieldcount="4">
+<pick thing="pcnStable" index="1337" batchindex="152" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="28."></field>
 </pick>
-<pick thing="pcnStagger" index="1351" batchindex="153" refcount="0" fieldcount="4">
+<pick thing="pcnStagger" index="1338" batchindex="153" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="29."></field>
 </pick>
-<pick thing="pcnStunned" index="1352" batchindex="154" refcount="0" fieldcount="4">
+<pick thing="pcnStunned" index="1339" batchindex="154" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="30."></field>
 </pick>
-<pick thing="pcnUnconc" index="1353" batchindex="155" refcount="0" fieldcount="4">
+<pick thing="pcnUnconc" index="1340" batchindex="155" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="31."></field>
 </pick>
-<pick thing="playername" index="1209" batchindex="36" bootstrap="yes" default="yes">
+<pick thing="playername" index="1196" batchindex="36" bootstrap="yes" default="yes">
 <reference bootindex="999999000"/>
 </pick>
-<pick thing="pstChargin" index="1354" batchindex="156" refcount="0" fieldcount="4">
+<pick thing="pstChargin" index="1341" batchindex="156" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="32."></field>
 </pick>
-<pick thing="pstConcTot" index="1355" batchindex="157" refcount="0" fieldcount="4">
+<pick thing="pstConcTot" index="1342" batchindex="157" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="33."></field>
 </pick>
-<pick thing="pstConceal" index="1356" batchindex="158" refcount="0" fieldcount="4">
+<pick thing="pstConceal" index="1343" batchindex="158" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="34."></field>
 </pick>
-<pick thing="pstCover" index="1357" batchindex="159" refcount="0" fieldcount="4">
+<pick thing="pstCover" index="1344" batchindex="159" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="35."></field>
 </pick>
-<pick thing="pstCoverIm" index="1358" batchindex="160" refcount="0" fieldcount="4">
+<pick thing="pstCoverIm" index="1345" batchindex="160" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="36."></field>
 </pick>
-<pick thing="pstCoverPa" index="1359" batchindex="161" refcount="0" fieldcount="4">
+<pick thing="pstCoverPa" index="1346" batchindex="161" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="37."></field>
 </pick>
-<pick thing="pstCoverSo" index="1360" batchindex="162" refcount="0" fieldcount="4">
+<pick thing="pstCoverSo" index="1347" batchindex="162" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="38."></field>
 </pick>
-<pick thing="pstFlankin" index="1361" batchindex="163" refcount="0" fieldcount="4">
+<pick thing="pstFlankin" index="1348" batchindex="163" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="39."></field>
 </pick>
-<pick thing="pstFtDefen" index="1362" batchindex="164" refcount="0" fieldcount="4">
+<pick thing="pstFtDefen" index="1349" batchindex="164" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="40."></field>
 </pick>
-<pick thing="pstHighGr" index="1363" batchindex="165" refcount="0" fieldcount="4">
+<pick thing="pstHighGr" index="1350" batchindex="165" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="41."></field>
 </pick>
-<pick thing="pstMounted" index="1364" batchindex="166" refcount="0" fieldcount="4">
+<pick thing="pstMounted" index="1351" batchindex="166" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="42."></field>
 </pick>
-<pick thing="pstRunning" index="1365" batchindex="167" refcount="0" fieldcount="4">
+<pick thing="pstRunning" index="1352" batchindex="167" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="43."></field>
 </pick>
-<pick thing="pstSqueeze" index="1366" batchindex="168" refcount="0" fieldcount="4">
+<pick thing="pstSqueeze" index="1353" batchindex="168" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="44."></field>
 </pick>
-<pick thing="pstTotDef" index="1367" batchindex="169" refcount="0" fieldcount="4">
+<pick thing="pstTotDef" index="1354" batchindex="169" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="45."></field>
 </pick>
-<pick thing="pstWithdr" index="1368" batchindex="170" refcount="0" fieldcount="4">
+<pick thing="pstWithdr" index="1355" batchindex="170" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="46."></field>
 </pick>
-<pick thing="raAttr2Sel" index="1263" batchindex="66" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<pick thing="raAttr2Sel" index="1250" batchindex="66" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raDarkVis" index="1246" batchindex="59" uniqueness="unique" root="no" count="0" refcount="9" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1244" batchindex="59" bootindex="1"/>
-<reference pickindex="1531" batchindex="333" bootindex="1"/>
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1552" batchindex="336" bootindex="1"/>
-<reference pickindex="1558" batchindex="339" bootindex="1"/>
-<reference pickindex="1559" batchindex="340" bootindex="1"/>
-<reference pickindex="1568" batchindex="342" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
-<reference pickindex="1577" batchindex="345" bootindex="1"/>
+<pick thing="raDarkVis" index="1233" batchindex="59" uniqueness="unique" root="no" count="0" refcount="9" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1231" batchindex="59" bootindex="1"/>
+<reference pickindex="1518" batchindex="333" bootindex="1"/>
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1539" batchindex="336" bootindex="1"/>
+<reference pickindex="1545" batchindex="339" bootindex="1"/>
+<reference pickindex="1546" batchindex="340" bootindex="1"/>
+<reference pickindex="1555" batchindex="342" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
+<reference pickindex="1564" batchindex="345" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raIgnArmDR" index="1567" batchindex="341" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1561" batchindex="341" bootindex="1"/>
+<pick thing="raIgnArmDR" index="1554" batchindex="341" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1548" batchindex="341" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raImmNonLe" index="1551" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="raImmNonLe" index="1538" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raLowLight" index="1534" batchindex="334" uniqueness="unique" root="no" count="0" refcount="6" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1533" batchindex="334" bootindex="1"/>
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1552" batchindex="336" bootindex="1"/>
-<reference pickindex="1554" batchindex="337" bootindex="1"/>
-<reference pickindex="1558" batchindex="339" bootindex="1"/>
-<reference pickindex="1571" batchindex="343" bootindex="1"/>
+<pick thing="raLowLight" index="1521" batchindex="334" uniqueness="unique" root="no" count="0" refcount="6" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1520" batchindex="334" bootindex="1"/>
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1539" batchindex="336" bootindex="1"/>
+<reference pickindex="1541" batchindex="337" bootindex="1"/>
+<reference pickindex="1545" batchindex="339" bootindex="1"/>
+<reference pickindex="1558" batchindex="343" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="resAnTrick" index="1369" batchindex="171" refcount="0" default="yes"></pick>
-<pick thing="resAttrib" index="1370" batchindex="172" refcount="0" default="yes"></pick>
-<pick thing="resFeat" index="1371" batchindex="173" refcount="0" default="yes"></pick>
-<pick thing="resFlaw" index="1372" batchindex="174" refcount="0" default="yes"></pick>
-<pick thing="resRaceCus" index="1373" batchindex="175" refcount="0" default="yes"></pick>
-<pick thing="resRace2nd" index="1374" batchindex="176" refcount="0" default="yes"></pick>
-<pick thing="resSkill" index="1375" batchindex="177" refcount="0" default="yes"></pick>
-<pick thing="resTrait" index="1376" batchindex="178" refcount="0" default="yes"></pick>
-<pick thing="resTrick" index="1377" batchindex="179" refcount="0" default="yes"></pick>
-<pick thing="sCustomSpl" index="1205" batchindex="33" bootstrap="yes" default="yes">
+<pick thing="resAnTrick" index="1356" batchindex="171" refcount="0" default="yes"></pick>
+<pick thing="resAttrib" index="1357" batchindex="172" refcount="0" default="yes"></pick>
+<pick thing="resFeat" index="1358" batchindex="173" refcount="0" default="yes"></pick>
+<pick thing="resFlaw" index="1359" batchindex="174" refcount="0" default="yes"></pick>
+<pick thing="resRaceCus" index="1360" batchindex="175" refcount="0" default="yes"></pick>
+<pick thing="resRace2nd" index="1361" batchindex="176" refcount="0" default="yes"></pick>
+<pick thing="resSkill" index="1362" batchindex="177" refcount="0" default="yes"></pick>
+<pick thing="resTrait" index="1363" batchindex="178" refcount="0" default="yes"></pick>
+<pick thing="resTrick" index="1364" batchindex="179" refcount="0" default="yes"></pick>
+<pick thing="sCustomSpl" index="1192" batchindex="33" bootstrap="yes" default="yes">
 <gizmo id="CustSpell">
 <container index="7" chosencount="0" pickcount="1">
 <notes/>
-<pick thing="CustSpell" index="1206" batchindex="33" bootstrap="yes" default="yes">
+<pick thing="CustSpell" index="1193" batchindex="33" bootstrap="yes" default="yes">
 <reference bootindex="1"/>
 </pick>
 </container>
 </gizmo>
 <reference bootindex="400"/>
 </pick>
-<pick thing="selAxChaos" index="1378" batchindex="180" refcount="0" default="yes"></pick>
-<pick thing="selAxEvil" index="1379" batchindex="181" refcount="0" default="yes"></pick>
-<pick thing="selAxGood" index="1380" batchindex="182" refcount="0" default="yes"></pick>
-<pick thing="selAxLaw" index="1381" batchindex="183" refcount="0" default="yes"></pick>
-<pick thing="selDrBlack" index="1382" batchindex="184" refcount="0" default="yes"></pick>
-<pick thing="selDrBlue" index="1383" batchindex="185" refcount="0" default="yes"></pick>
-<pick thing="selDrBrass" index="1384" batchindex="186" refcount="0" default="yes"></pick>
-<pick thing="selDrBronz" index="1385" batchindex="187" refcount="0" default="yes"></pick>
-<pick thing="selDrCoppe" index="1386" batchindex="188" refcount="0" default="yes"></pick>
-<pick thing="selDrGold" index="1387" batchindex="189" refcount="0" default="yes"></pick>
-<pick thing="selDrGreen" index="1388" batchindex="190" refcount="0" default="yes"></pick>
-<pick thing="selDrRed" index="1389" batchindex="191" refcount="0" default="yes"></pick>
-<pick thing="selDrSilve" index="1390" batchindex="192" refcount="0" default="yes"></pick>
-<pick thing="selDrWhite" index="1391" batchindex="193" refcount="0" default="yes"></pick>
-<pick thing="selElAir" index="1392" batchindex="194" refcount="0" default="yes"></pick>
-<pick thing="selElEarth" index="1393" batchindex="195" refcount="0" default="yes"></pick>
-<pick thing="selElFire" index="1394" batchindex="196" refcount="0" default="yes"></pick>
-<pick thing="selElWater" index="1395" batchindex="197" refcount="0" default="yes"></pick>
-<pick thing="selEnAcid" index="1396" batchindex="198" refcount="0" default="yes"></pick>
-<pick thing="selEnCold" index="1397" batchindex="199" refcount="0" default="yes"></pick>
-<pick thing="selEnElec" index="1398" batchindex="200" refcount="0" default="yes"></pick>
-<pick thing="selEnFire" index="1399" batchindex="201" refcount="0" default="yes"></pick>
-<pick thing="selEnSonic" index="1400" batchindex="202" refcount="0" default="yes"></pick>
-<pick thing="selShBuck" index="1401" batchindex="203" refcount="0" default="yes"></pick>
-<pick thing="selShHeavy" index="1402" batchindex="204" refcount="0" default="yes"></pick>
-<pick thing="selShLight" index="1403" batchindex="205" refcount="0" default="yes"></pick>
-<pick thing="selShTower" index="1404" batchindex="206" refcount="0" default="yes"></pick>
-<pick thing="skAcrobat" index="1405" batchindex="207" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1280"/>
+<pick thing="selAxChaos" index="1365" batchindex="180" refcount="0" default="yes"></pick>
+<pick thing="selAxEvil" index="1366" batchindex="181" refcount="0" default="yes"></pick>
+<pick thing="selAxGood" index="1367" batchindex="182" refcount="0" default="yes"></pick>
+<pick thing="selAxLaw" index="1368" batchindex="183" refcount="0" default="yes"></pick>
+<pick thing="selDrBlack" index="1369" batchindex="184" refcount="0" default="yes"></pick>
+<pick thing="selDrBlue" index="1370" batchindex="185" refcount="0" default="yes"></pick>
+<pick thing="selDrBrass" index="1371" batchindex="186" refcount="0" default="yes"></pick>
+<pick thing="selDrBronz" index="1372" batchindex="187" refcount="0" default="yes"></pick>
+<pick thing="selDrCoppe" index="1373" batchindex="188" refcount="0" default="yes"></pick>
+<pick thing="selDrGold" index="1374" batchindex="189" refcount="0" default="yes"></pick>
+<pick thing="selDrGreen" index="1375" batchindex="190" refcount="0" default="yes"></pick>
+<pick thing="selDrRed" index="1376" batchindex="191" refcount="0" default="yes"></pick>
+<pick thing="selDrSilve" index="1377" batchindex="192" refcount="0" default="yes"></pick>
+<pick thing="selDrWhite" index="1378" batchindex="193" refcount="0" default="yes"></pick>
+<pick thing="selElAir" index="1379" batchindex="194" refcount="0" default="yes"></pick>
+<pick thing="selElEarth" index="1380" batchindex="195" refcount="0" default="yes"></pick>
+<pick thing="selElFire" index="1381" batchindex="196" refcount="0" default="yes"></pick>
+<pick thing="selElWater" index="1382" batchindex="197" refcount="0" default="yes"></pick>
+<pick thing="selEnAcid" index="1383" batchindex="198" refcount="0" default="yes"></pick>
+<pick thing="selEnCold" index="1384" batchindex="199" refcount="0" default="yes"></pick>
+<pick thing="selEnElec" index="1385" batchindex="200" refcount="0" default="yes"></pick>
+<pick thing="selEnFire" index="1386" batchindex="201" refcount="0" default="yes"></pick>
+<pick thing="selEnSonic" index="1387" batchindex="202" refcount="0" default="yes"></pick>
+<pick thing="selShBuck" index="1388" batchindex="203" refcount="0" default="yes"></pick>
+<pick thing="selShHeavy" index="1389" batchindex="204" refcount="0" default="yes"></pick>
+<pick thing="selShLight" index="1390" batchindex="205" refcount="0" default="yes"></pick>
+<pick thing="selShTower" index="1391" batchindex="206" refcount="0" default="yes"></pick>
+<pick thing="skAcrobat" index="1392" batchindex="207" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1267"/>
 <reference/>
 </pick>
-<pick thing="skAppraise" index="1406" batchindex="208" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1281"/>
+<pick thing="skAppraise" index="1393" batchindex="208" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1268"/>
 <reference/>
 </pick>
-<pick thing="skBluff" index="1407" batchindex="209" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1278"/>
+<pick thing="skBluff" index="1394" batchindex="209" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1265"/>
 <reference/>
 </pick>
-<pick thing="skClimb" index="1408" batchindex="210" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1282"/>
+<pick thing="skClimb" index="1395" batchindex="210" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1269"/>
 <reference/>
 </pick>
-<pick thing="skDiplo" index="1409" batchindex="211" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1278"/>
+<pick thing="skDiplo" index="1396" batchindex="211" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1265"/>
 <reference/>
 </pick>
-<pick thing="skDisable" index="1410" batchindex="212" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1280"/>
+<pick thing="skDisable" index="1397" batchindex="212" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1267"/>
 <reference/>
 </pick>
-<pick thing="skDisguise" index="1411" batchindex="213" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1278"/>
+<pick thing="skDisguise" index="1398" batchindex="213" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1265"/>
 <reference/>
 </pick>
-<pick thing="skEscape" index="1412" batchindex="214" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1280"/>
+<pick thing="skEscape" index="1399" batchindex="214" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1267"/>
 <reference/>
 </pick>
-<pick thing="skFly" index="1413" batchindex="215" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1280"/>
+<pick thing="skFly" index="1400" batchindex="215" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1267"/>
 <reference/>
 </pick>
-<pick thing="skHandleAn" index="1414" batchindex="216" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1278"/>
+<pick thing="skHandleAn" index="1401" batchindex="216" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1265"/>
 <reference/>
 </pick>
-<pick thing="skHeal" index="1415" batchindex="217" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1283"/>
+<pick thing="skHeal" index="1402" batchindex="217" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1270"/>
 <reference/>
 </pick>
-<pick thing="skIntim" index="1416" batchindex="218" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1278"/>
+<pick thing="skIntim" index="1403" batchindex="218" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1265"/>
 <reference/>
 </pick>
-<pick thing="skLinguist" index="1417" batchindex="219" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1281"/>
+<pick thing="skLinguist" index="1404" batchindex="219" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1268"/>
 <reference/>
 </pick>
-<pick thing="skPercep" index="1418" batchindex="220" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1283"/>
+<pick thing="skPercep" index="1405" batchindex="220" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1270"/>
 <reference/>
 </pick>
-<pick thing="skRide" index="1419" batchindex="221" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1280"/>
+<pick thing="skRide" index="1406" batchindex="221" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1267"/>
 <reference/>
 </pick>
-<pick thing="skSenseMot" index="1420" batchindex="222" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1283"/>
+<pick thing="skSenseMot" index="1407" batchindex="222" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1270"/>
 <reference/>
 </pick>
-<pick thing="skSleight" index="1421" batchindex="223" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1280"/>
+<pick thing="skSleight" index="1408" batchindex="223" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1267"/>
 <reference/>
 </pick>
-<pick thing="skSpellcr" index="1422" batchindex="224" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1281"/>
+<pick thing="skSpellcr" index="1409" batchindex="224" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1268"/>
 <reference/>
 </pick>
-<pick thing="skStealth" index="1423" batchindex="225" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1280"/>
+<pick thing="skStealth" index="1410" batchindex="225" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1267"/>
 <reference/>
 </pick>
-<pick thing="skSurvival" index="1424" batchindex="226" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1283"/>
+<pick thing="skSurvival" index="1411" batchindex="226" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1270"/>
 <reference/>
 </pick>
-<pick thing="skSwim" index="1425" batchindex="227" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1282"/>
+<pick thing="skSwim" index="1412" batchindex="227" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1269"/>
 <reference/>
 </pick>
-<pick thing="skUseMagic" index="1426" batchindex="228" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="1278"/>
+<pick thing="skUseMagic" index="1413" batchindex="228" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1265"/>
 <reference/>
 </pick>
-<pick thing="spAcidSpl0" index="1427" batchindex="229" refcount="0" default="yes"></pick>
-<pick thing="spAcidSpl0" index="1428" batchindex="230" refcount="0" default="yes"></pick>
-<pick thing="spArcaMar0" index="1429" batchindex="231" refcount="0" default="yes"></pick>
-<pick thing="spArcaMar0" index="1430" batchindex="232" refcount="0" default="yes"></pick>
-<pick thing="spArcaMar0" index="1431" batchindex="233" refcount="0" default="yes"></pick>
-<pick thing="spBleed0" index="1432" batchindex="234" refcount="0" default="yes"></pick>
-<pick thing="spBleed0" index="1433" batchindex="235" refcount="0" default="yes"></pick>
-<pick thing="spDancLig0" index="1434" batchindex="236" refcount="0" default="yes"></pick>
-<pick thing="spDancLig0" index="1435" batchindex="237" refcount="0" default="yes"></pick>
-<pick thing="spDancLig0" index="1436" batchindex="238" refcount="0" default="yes"></pick>
-<pick thing="spDaze0" index="1437" batchindex="239" refcount="0" default="yes"></pick>
-<pick thing="spDaze0" index="1438" batchindex="240" refcount="0" default="yes"></pick>
-<pick thing="spDaze0" index="1439" batchindex="241" refcount="0" default="yes"></pick>
-<pick thing="spDeteMag0" index="1440" batchindex="242" refcount="0" default="yes"></pick>
-<pick thing="spDeteMag0" index="1441" batchindex="243" refcount="0" default="yes"></pick>
-<pick thing="spDeteMag0" index="1442" batchindex="244" refcount="0" default="yes"></pick>
-<pick thing="spDetePoi0" index="1443" batchindex="245" refcount="0" default="yes"></pick>
-<pick thing="spDetePoi0" index="1444" batchindex="246" refcount="0" default="yes"></pick>
-<pick thing="spDisrUnd0" index="1445" batchindex="247" refcount="0" default="yes"></pick>
-<pick thing="spDisrUnd0" index="1446" batchindex="248" refcount="0" default="yes"></pick>
-<pick thing="spFlare0" index="1447" batchindex="249" refcount="0" default="yes"></pick>
-<pick thing="spFlare0" index="1448" batchindex="250" refcount="0" default="yes"></pick>
-<pick thing="spGhosSou0" index="1449" batchindex="251" refcount="0" default="yes"></pick>
-<pick thing="spGhosSou0" index="1450" batchindex="252" refcount="0" default="yes"></pick>
-<pick thing="spGuidanc0" index="1451" batchindex="253" refcount="0" default="yes"></pick>
-<pick thing="spHaunFey0" index="1452" batchindex="254" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="spLight0" index="1453" batchindex="255" refcount="0" default="yes"></pick>
-<pick thing="spLight0" index="1454" batchindex="256" refcount="0" default="yes"></pick>
-<pick thing="spLight0" index="1455" batchindex="257" refcount="0" default="yes"></pick>
-<pick thing="spMageHan0" index="1456" batchindex="258" refcount="0" default="yes"></pick>
-<pick thing="spMageHan0" index="1457" batchindex="259" refcount="0" default="yes"></pick>
-<pick thing="spMending0" index="1458" batchindex="260" refcount="0" default="yes"></pick>
-<pick thing="spMending0" index="1459" batchindex="261" refcount="0" default="yes"></pick>
-<pick thing="spMessage0" index="1460" batchindex="262" refcount="0" default="yes"></pick>
-<pick thing="spMessage0" index="1461" batchindex="263" refcount="0" default="yes"></pick>
-<pick thing="spOpenClo0" index="1462" batchindex="264" refcount="0" default="yes"></pick>
-<pick thing="spOpenClo0" index="1463" batchindex="265" refcount="0" default="yes"></pick>
-<pick thing="spPrestid0" index="1464" batchindex="266" refcount="0" default="yes"></pick>
-<pick thing="spPrestid0" index="1465" batchindex="267" refcount="0" default="yes"></pick>
-<pick thing="spPutrFoo0" index="1466" batchindex="268" refcount="0" default="yes"></pick>
-<pick thing="spRayFro0" index="1467" batchindex="269" refcount="0" default="yes"></pick>
-<pick thing="spRayFro0" index="1468" batchindex="270" refcount="0" default="yes"></pick>
-<pick thing="spReadMag0" index="1469" batchindex="271" refcount="0" default="yes"></pick>
-<pick thing="spReadMag0" index="1470" batchindex="272" refcount="0" default="yes"></pick>
-<pick thing="spReadMag0" index="1471" batchindex="273" refcount="0" default="yes"></pick>
-<pick thing="spResista0" index="1472" batchindex="274" refcount="0" default="yes"></pick>
-<pick thing="spResista0" index="1473" batchindex="275" refcount="0" default="yes"></pick>
-<pick thing="spScriCha0" index="1474" batchindex="276" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="spSottVoc0" index="1208" batchindex="35" count="0" bootstrap="yes" default="yes" live="no">
+<pick thing="spAcidSpl0" index="1414" batchindex="229" refcount="0" default="yes"></pick>
+<pick thing="spAcidSpl0" index="1415" batchindex="230" refcount="0" default="yes"></pick>
+<pick thing="spArcaMar0" index="1416" batchindex="231" refcount="0" default="yes"></pick>
+<pick thing="spArcaMar0" index="1417" batchindex="232" refcount="0" default="yes"></pick>
+<pick thing="spArcaMar0" index="1418" batchindex="233" refcount="0" default="yes"></pick>
+<pick thing="spBleed0" index="1419" batchindex="234" refcount="0" default="yes"></pick>
+<pick thing="spBleed0" index="1420" batchindex="235" refcount="0" default="yes"></pick>
+<pick thing="spDancLig0" index="1421" batchindex="236" refcount="0" default="yes"></pick>
+<pick thing="spDancLig0" index="1422" batchindex="237" refcount="0" default="yes"></pick>
+<pick thing="spDancLig0" index="1423" batchindex="238" refcount="0" default="yes"></pick>
+<pick thing="spDaze0" index="1424" batchindex="239" refcount="0" default="yes"></pick>
+<pick thing="spDaze0" index="1425" batchindex="240" refcount="0" default="yes"></pick>
+<pick thing="spDaze0" index="1426" batchindex="241" refcount="0" default="yes"></pick>
+<pick thing="spDeteMag0" index="1427" batchindex="242" refcount="0" default="yes"></pick>
+<pick thing="spDeteMag0" index="1428" batchindex="243" refcount="0" default="yes"></pick>
+<pick thing="spDeteMag0" index="1429" batchindex="244" refcount="0" default="yes"></pick>
+<pick thing="spDetePoi0" index="1430" batchindex="245" refcount="0" default="yes"></pick>
+<pick thing="spDetePoi0" index="1431" batchindex="246" refcount="0" default="yes"></pick>
+<pick thing="spDisrUnd0" index="1432" batchindex="247" refcount="0" default="yes"></pick>
+<pick thing="spDisrUnd0" index="1433" batchindex="248" refcount="0" default="yes"></pick>
+<pick thing="spFlare0" index="1434" batchindex="249" refcount="0" default="yes"></pick>
+<pick thing="spFlare0" index="1435" batchindex="250" refcount="0" default="yes"></pick>
+<pick thing="spGhosSou0" index="1436" batchindex="251" refcount="0" default="yes"></pick>
+<pick thing="spGhosSou0" index="1437" batchindex="252" refcount="0" default="yes"></pick>
+<pick thing="spGuidanc0" index="1438" batchindex="253" refcount="0" default="yes"></pick>
+<pick thing="spHaunFey0" index="1439" batchindex="254" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="spLight0" index="1440" batchindex="255" refcount="0" default="yes"></pick>
+<pick thing="spLight0" index="1441" batchindex="256" refcount="0" default="yes"></pick>
+<pick thing="spLight0" index="1442" batchindex="257" refcount="0" default="yes"></pick>
+<pick thing="spMageHan0" index="1443" batchindex="258" refcount="0" default="yes"></pick>
+<pick thing="spMageHan0" index="1444" batchindex="259" refcount="0" default="yes"></pick>
+<pick thing="spMending0" index="1445" batchindex="260" refcount="0" default="yes"></pick>
+<pick thing="spMending0" index="1446" batchindex="261" refcount="0" default="yes"></pick>
+<pick thing="spMessage0" index="1447" batchindex="262" refcount="0" default="yes"></pick>
+<pick thing="spMessage0" index="1448" batchindex="263" refcount="0" default="yes"></pick>
+<pick thing="spOpenClo0" index="1449" batchindex="264" refcount="0" default="yes"></pick>
+<pick thing="spOpenClo0" index="1450" batchindex="265" refcount="0" default="yes"></pick>
+<pick thing="spPrestid0" index="1451" batchindex="266" refcount="0" default="yes"></pick>
+<pick thing="spPrestid0" index="1452" batchindex="267" refcount="0" default="yes"></pick>
+<pick thing="spPutrFoo0" index="1453" batchindex="268" refcount="0" default="yes"></pick>
+<pick thing="spRayFro0" index="1454" batchindex="269" refcount="0" default="yes"></pick>
+<pick thing="spRayFro0" index="1455" batchindex="270" refcount="0" default="yes"></pick>
+<pick thing="spReadMag0" index="1456" batchindex="271" refcount="0" default="yes"></pick>
+<pick thing="spReadMag0" index="1457" batchindex="272" refcount="0" default="yes"></pick>
+<pick thing="spReadMag0" index="1458" batchindex="273" refcount="0" default="yes"></pick>
+<pick thing="spResista0" index="1459" batchindex="274" refcount="0" default="yes"></pick>
+<pick thing="spResista0" index="1460" batchindex="275" refcount="0" default="yes"></pick>
+<pick thing="spScriCha0" index="1461" batchindex="276" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="spSottVoc0" index="1195" batchindex="35" count="0" bootstrap="yes" default="yes" live="no">
 <reference bootindex="600"/>
 </pick>
-<pick thing="spSpark0" index="1475" batchindex="277" refcount="0" default="yes"></pick>
-<pick thing="spSpark0" index="1476" batchindex="278" refcount="0" default="yes"></pick>
-<pick thing="spSpark0" index="1477" batchindex="279" refcount="0" default="yes"></pick>
-<pick thing="spStabili0" index="1478" batchindex="280" refcount="0" default="yes"></pick>
-<pick thing="spToucFat0" index="1479" batchindex="281" refcount="0" default="yes"></pick>
-<pick thing="spToucFat0" index="1480" batchindex="282" refcount="0" default="yes"></pick>
-<pick thing="ssAbjur" index="1481" batchindex="283" refcount="0" default="yes"></pick>
-<pick thing="ssAcid" index="1482" batchindex="284" refcount="0" default="yes"></pick>
-<pick thing="ssAir" index="1483" batchindex="285" refcount="0" default="yes"></pick>
-<pick thing="ssCalling" index="1484" batchindex="286" refcount="0" default="yes"></pick>
-<pick thing="ssChaotic" index="1485" batchindex="287" refcount="0" default="yes"></pick>
-<pick thing="ssCharm" index="1486" batchindex="288" refcount="0" default="yes"></pick>
-<pick thing="ssCold" index="1487" batchindex="289" refcount="0" default="yes"></pick>
-<pick thing="ssCompuls" index="1488" batchindex="290" refcount="0" default="yes"></pick>
-<pick thing="ssConjur" index="1489" batchindex="291" refcount="0" default="yes"></pick>
-<pick thing="ssCreation" index="1490" batchindex="292" refcount="0" default="yes"></pick>
-<pick thing="ssCurse" index="1491" batchindex="293" refcount="0" default="yes"></pick>
-<pick thing="ssDarkness" index="1492" batchindex="294" refcount="0" default="yes"></pick>
-<pick thing="ssDeath" index="1493" batchindex="295" refcount="0" default="yes"></pick>
-<pick thing="ssDisease" index="1494" batchindex="296" refcount="0" default="yes"></pick>
-<pick thing="ssDivin" index="1495" batchindex="297" refcount="0" default="yes"></pick>
-<pick thing="ssEarth" index="1496" batchindex="298" refcount="0" default="yes"></pick>
-<pick thing="ssElec" index="1497" batchindex="299" refcount="0" default="yes"></pick>
-<pick thing="ssEmotion" index="1498" batchindex="300" refcount="0" default="yes"></pick>
-<pick thing="ssEnchant" index="1499" batchindex="301" refcount="0" default="yes"></pick>
-<pick thing="ssEvil" index="1500" batchindex="302" refcount="0" default="yes"></pick>
-<pick thing="ssEvoc" index="1501" batchindex="303" refcount="0" default="yes"></pick>
-<pick thing="ssFear" index="1502" batchindex="304" refcount="0" default="yes"></pick>
-<pick thing="ssFigment" index="1503" batchindex="305" refcount="0" default="yes"></pick>
-<pick thing="ssFire" index="1504" batchindex="306" refcount="0" default="yes"></pick>
-<pick thing="ssForce" index="1505" batchindex="307" refcount="0" default="yes"></pick>
-<pick thing="ssGlamer" index="1506" batchindex="308" refcount="0" default="yes"></pick>
-<pick thing="ssGood" index="1507" batchindex="309" refcount="0" default="yes"></pick>
-<pick thing="ssHealing" index="1508" batchindex="310" refcount="0" default="yes"></pick>
-<pick thing="ssIllusion" index="1509" batchindex="311" refcount="0" default="yes"></pick>
-<pick thing="ssLang" index="1510" batchindex="312" refcount="0" default="yes"></pick>
-<pick thing="ssLawful" index="1511" batchindex="313" refcount="0" default="yes"></pick>
-<pick thing="ssLight" index="1512" batchindex="314" refcount="0" default="yes"></pick>
-<pick thing="ssMind" index="1513" batchindex="315" refcount="0" default="yes"></pick>
-<pick thing="ssNecro" index="1514" batchindex="316" refcount="0" default="yes"></pick>
-<pick thing="ssPain" index="1515" batchindex="317" refcount="0" default="yes"></pick>
-<pick thing="ssPattern" index="1516" batchindex="318" refcount="0" default="yes"></pick>
-<pick thing="ssPhantasm" index="1517" batchindex="319" refcount="0" default="yes"></pick>
-<pick thing="ssPoison" index="1518" batchindex="320" refcount="0" default="yes"></pick>
-<pick thing="ssPolymor" index="1519" batchindex="321" refcount="0" default="yes"></pick>
-<pick thing="ssScrying" index="1520" batchindex="322" refcount="0" default="yes"></pick>
-<pick thing="ssShadow" index="1521" batchindex="323" refcount="0" default="yes"></pick>
-<pick thing="ssShadowDs" index="1522" batchindex="324" refcount="0" default="yes"></pick>
-<pick thing="ssSonic" index="1523" batchindex="325" refcount="0" default="yes"></pick>
-<pick thing="ssSummon" index="1524" batchindex="326" refcount="0" default="yes"></pick>
-<pick thing="ssTeleport" index="1525" batchindex="327" refcount="0" default="yes"></pick>
-<pick thing="ssTrans" index="1526" batchindex="328" refcount="0" default="yes"></pick>
-<pick thing="ssWater" index="1527" batchindex="329" refcount="0" default="yes"></pick>
-<pick thing="svFort" index="1528" batchindex="330" refcount="0" default="yes"></pick>
-<pick thing="svRef" index="1529" batchindex="331" refcount="0" default="yes"></pick>
-<pick thing="svWill" index="1530" batchindex="332" refcount="0" default="yes"></pick>
-<pick thing="tEncumTbl" index="1181" batchindex="9" bootstrap="yes" default="yes">
+<pick thing="spSpark0" index="1462" batchindex="277" refcount="0" default="yes"></pick>
+<pick thing="spSpark0" index="1463" batchindex="278" refcount="0" default="yes"></pick>
+<pick thing="spSpark0" index="1464" batchindex="279" refcount="0" default="yes"></pick>
+<pick thing="spStabili0" index="1465" batchindex="280" refcount="0" default="yes"></pick>
+<pick thing="spToucFat0" index="1466" batchindex="281" refcount="0" default="yes"></pick>
+<pick thing="spToucFat0" index="1467" batchindex="282" refcount="0" default="yes"></pick>
+<pick thing="ssAbjur" index="1468" batchindex="283" refcount="0" default="yes"></pick>
+<pick thing="ssAcid" index="1469" batchindex="284" refcount="0" default="yes"></pick>
+<pick thing="ssAir" index="1470" batchindex="285" refcount="0" default="yes"></pick>
+<pick thing="ssCalling" index="1471" batchindex="286" refcount="0" default="yes"></pick>
+<pick thing="ssChaotic" index="1472" batchindex="287" refcount="0" default="yes"></pick>
+<pick thing="ssCharm" index="1473" batchindex="288" refcount="0" default="yes"></pick>
+<pick thing="ssCold" index="1474" batchindex="289" refcount="0" default="yes"></pick>
+<pick thing="ssCompuls" index="1475" batchindex="290" refcount="0" default="yes"></pick>
+<pick thing="ssConjur" index="1476" batchindex="291" refcount="0" default="yes"></pick>
+<pick thing="ssCreation" index="1477" batchindex="292" refcount="0" default="yes"></pick>
+<pick thing="ssCurse" index="1478" batchindex="293" refcount="0" default="yes"></pick>
+<pick thing="ssDarkness" index="1479" batchindex="294" refcount="0" default="yes"></pick>
+<pick thing="ssDeath" index="1480" batchindex="295" refcount="0" default="yes"></pick>
+<pick thing="ssDisease" index="1481" batchindex="296" refcount="0" default="yes"></pick>
+<pick thing="ssDivin" index="1482" batchindex="297" refcount="0" default="yes"></pick>
+<pick thing="ssEarth" index="1483" batchindex="298" refcount="0" default="yes"></pick>
+<pick thing="ssElec" index="1484" batchindex="299" refcount="0" default="yes"></pick>
+<pick thing="ssEmotion" index="1485" batchindex="300" refcount="0" default="yes"></pick>
+<pick thing="ssEnchant" index="1486" batchindex="301" refcount="0" default="yes"></pick>
+<pick thing="ssEvil" index="1487" batchindex="302" refcount="0" default="yes"></pick>
+<pick thing="ssEvoc" index="1488" batchindex="303" refcount="0" default="yes"></pick>
+<pick thing="ssFear" index="1489" batchindex="304" refcount="0" default="yes"></pick>
+<pick thing="ssFigment" index="1490" batchindex="305" refcount="0" default="yes"></pick>
+<pick thing="ssFire" index="1491" batchindex="306" refcount="0" default="yes"></pick>
+<pick thing="ssForce" index="1492" batchindex="307" refcount="0" default="yes"></pick>
+<pick thing="ssGlamer" index="1493" batchindex="308" refcount="0" default="yes"></pick>
+<pick thing="ssGood" index="1494" batchindex="309" refcount="0" default="yes"></pick>
+<pick thing="ssHealing" index="1495" batchindex="310" refcount="0" default="yes"></pick>
+<pick thing="ssIllusion" index="1496" batchindex="311" refcount="0" default="yes"></pick>
+<pick thing="ssLang" index="1497" batchindex="312" refcount="0" default="yes"></pick>
+<pick thing="ssLawful" index="1498" batchindex="313" refcount="0" default="yes"></pick>
+<pick thing="ssLight" index="1499" batchindex="314" refcount="0" default="yes"></pick>
+<pick thing="ssMind" index="1500" batchindex="315" refcount="0" default="yes"></pick>
+<pick thing="ssNecro" index="1501" batchindex="316" refcount="0" default="yes"></pick>
+<pick thing="ssPain" index="1502" batchindex="317" refcount="0" default="yes"></pick>
+<pick thing="ssPattern" index="1503" batchindex="318" refcount="0" default="yes"></pick>
+<pick thing="ssPhantasm" index="1504" batchindex="319" refcount="0" default="yes"></pick>
+<pick thing="ssPoison" index="1505" batchindex="320" refcount="0" default="yes"></pick>
+<pick thing="ssPolymor" index="1506" batchindex="321" refcount="0" default="yes"></pick>
+<pick thing="ssScrying" index="1507" batchindex="322" refcount="0" default="yes"></pick>
+<pick thing="ssShadow" index="1508" batchindex="323" refcount="0" default="yes"></pick>
+<pick thing="ssShadowDs" index="1509" batchindex="324" refcount="0" default="yes"></pick>
+<pick thing="ssSonic" index="1510" batchindex="325" refcount="0" default="yes"></pick>
+<pick thing="ssSummon" index="1511" batchindex="326" refcount="0" default="yes"></pick>
+<pick thing="ssTeleport" index="1512" batchindex="327" refcount="0" default="yes"></pick>
+<pick thing="ssTrans" index="1513" batchindex="328" refcount="0" default="yes"></pick>
+<pick thing="ssWater" index="1514" batchindex="329" refcount="0" default="yes"></pick>
+<pick thing="svFort" index="1515" batchindex="330" refcount="0" default="yes"></pick>
+<pick thing="svRef" index="1516" batchindex="331" refcount="0" default="yes"></pick>
+<pick thing="svWill" index="1517" batchindex="332" refcount="0" default="yes"></pick>
+<pick thing="tEncumTbl" index="1168" batchindex="9" bootstrap="yes" default="yes">
 <reference bootindex="9"/>
 </pick>
-<pick thing="tmCelest" index="1244" batchindex="59" uniqueness="unique" count="0" fieldcount="2" bootstrap="yes" live="no">
-<chain index="1245"/>
-<chain index="1246"/>
-<chain index="1247"/>
-<chain index="1248"/>
-<chain index="1249"/>
-<chain index="1250"/>
-<chain index="1222"/>
+<pick thing="tmCelest" index="1231" batchindex="59" uniqueness="unique" count="0" fieldcount="2" bootstrap="yes" live="no">
+<chain index="1232"/>
+<chain index="1233"/>
+<chain index="1234"/>
+<chain index="1235"/>
+<chain index="1236"/>
+<chain index="1237"/>
+<chain index="1209"/>
 <reference bootindex="1"/>
 <field id="cFavorChc"></field>
 <field id="cIndexUser" value="1."></field>
 </pick>
-<pick thing="tpAberr" index="1531" batchindex="333" refcount="0" default="yes">
-<chain index="1246"/>
+<pick thing="tpAberr" index="1518" batchindex="333" refcount="0" default="yes">
+<chain index="1233"/>
+<chain index="1519"/>
+</pick>
+<pick thing="tpAnimal" index="1520" batchindex="334" refcount="0" default="yes">
+<chain index="1521"/>
+</pick>
+<pick thing="tpConst" index="1522" batchindex="335" refcount="0" default="yes">
+<chain index="1521"/>
+<chain index="1233"/>
+<chain index="1523"/>
+<chain index="1524"/>
+<chain index="1525"/>
+<chain index="1526"/>
+<chain index="1527"/>
+<chain index="1528"/>
+<chain index="1529"/>
+<chain index="1530"/>
+<chain index="1531"/>
 <chain index="1532"/>
-</pick>
-<pick thing="tpAnimal" index="1533" batchindex="334" refcount="0" default="yes">
+<chain index="1533"/>
 <chain index="1534"/>
-</pick>
-<pick thing="tpConst" index="1535" batchindex="335" refcount="0" default="yes">
-<chain index="1534"/>
-<chain index="1246"/>
+<chain index="1535"/>
 <chain index="1536"/>
 <chain index="1537"/>
 <chain index="1538"/>
-<chain index="1539"/>
+</pick>
+<pick thing="tpDragon" index="1539" batchindex="336" refcount="0" default="yes">
+<chain index="1521"/>
+<chain index="1233"/>
 <chain index="1540"/>
-<chain index="1541"/>
+<chain index="1530"/>
+<chain index="1531"/>
+</pick>
+<pick thing="tpFey" index="1541" batchindex="337" refcount="0" default="yes">
+<chain index="1521"/>
 <chain index="1542"/>
-<chain index="1543"/>
+</pick>
+<pick thing="tpHumanoid" index="1543" batchindex="338" refcount="0" default="yes">
 <chain index="1544"/>
-<chain index="1545"/>
-<chain index="1546"/>
+</pick>
+<pick thing="tpMagBeast" index="1545" batchindex="339" refcount="0" default="yes">
+<chain index="1521"/>
+<chain index="1233"/>
+</pick>
+<pick thing="tpMonHuman" index="1546" batchindex="340" refcount="0" default="yes">
+<chain index="1233"/>
 <chain index="1547"/>
-<chain index="1548"/>
+</pick>
+<pick thing="tpOoze" index="1548" batchindex="341" refcount="0" default="yes">
 <chain index="1549"/>
+<chain index="1529"/>
+<chain index="1530"/>
+<chain index="1531"/>
+<chain index="1532"/>
 <chain index="1550"/>
 <chain index="1551"/>
-</pick>
-<pick thing="tpDragon" index="1552" batchindex="336" refcount="0" default="yes">
-<chain index="1534"/>
-<chain index="1246"/>
+<chain index="1552"/>
 <chain index="1553"/>
-<chain index="1543"/>
-<chain index="1544"/>
+<chain index="1554"/>
 </pick>
-<pick thing="tpFey" index="1554" batchindex="337" refcount="0" default="yes">
-<chain index="1534"/>
-<chain index="1555"/>
-</pick>
-<pick thing="tpHumanoid" index="1556" batchindex="338" refcount="0" default="yes">
+<pick thing="tpOutsider" index="1555" batchindex="342" refcount="0" default="yes">
+<chain index="1233"/>
+<chain index="1556"/>
 <chain index="1557"/>
 </pick>
-<pick thing="tpMagBeast" index="1558" batchindex="339" refcount="0" default="yes">
-<chain index="1534"/>
-<chain index="1246"/>
-</pick>
-<pick thing="tpMonHuman" index="1559" batchindex="340" refcount="0" default="yes">
-<chain index="1246"/>
-<chain index="1560"/>
-</pick>
-<pick thing="tpOoze" index="1561" batchindex="341" refcount="0" default="yes">
-<chain index="1562"/>
-<chain index="1542"/>
-<chain index="1543"/>
-<chain index="1544"/>
-<chain index="1545"/>
-<chain index="1563"/>
-<chain index="1564"/>
-<chain index="1565"/>
-<chain index="1566"/>
-<chain index="1567"/>
-</pick>
-<pick thing="tpOutsider" index="1568" batchindex="342" refcount="0" default="yes">
-<chain index="1246"/>
-<chain index="1569"/>
-<chain index="1570"/>
-</pick>
-<pick thing="tpPlant" index="1571" batchindex="343" refcount="0" default="yes">
-<chain index="1534"/>
-<chain index="1539"/>
-<chain index="1542"/>
-<chain index="1543"/>
-<chain index="1544"/>
-<chain index="1545"/>
-<chain index="1563"/>
-</pick>
-<pick thing="tpUndead" index="1572" batchindex="344" refcount="0" default="yes">
-<chain index="1246"/>
-<chain index="1573"/>
-<chain index="1574"/>
-<chain index="1539"/>
-<chain index="1540"/>
-<chain index="1575"/>
-<chain index="1542"/>
-<chain index="1543"/>
-<chain index="1544"/>
-<chain index="1545"/>
-<chain index="1576"/>
-<chain index="1547"/>
-<chain index="1548"/>
-<chain index="1549"/>
+<pick thing="tpPlant" index="1558" batchindex="343" refcount="0" default="yes">
+<chain index="1521"/>
+<chain index="1526"/>
+<chain index="1529"/>
+<chain index="1530"/>
+<chain index="1531"/>
+<chain index="1532"/>
 <chain index="1550"/>
-<chain index="1551"/>
+</pick>
+<pick thing="tpUndead" index="1559" batchindex="344" refcount="0" default="yes">
+<chain index="1233"/>
+<chain index="1560"/>
+<chain index="1561"/>
+<chain index="1526"/>
+<chain index="1527"/>
+<chain index="1562"/>
+<chain index="1529"/>
+<chain index="1530"/>
+<chain index="1531"/>
+<chain index="1532"/>
+<chain index="1563"/>
+<chain index="1534"/>
+<chain index="1535"/>
+<chain index="1536"/>
+<chain index="1537"/>
 <chain index="1538"/>
+<chain index="1525"/>
 </pick>
-<pick thing="tpVermin" index="1577" batchindex="345" refcount="0" default="yes">
-<chain index="1246"/>
+<pick thing="tpVermin" index="1564" batchindex="345" refcount="0" default="yes">
+<chain index="1233"/>
 </pick>
-<pick thing="triAttack" index="1253" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1252" batchindex="61" bootindex="1"/>
+<pick thing="triAttack" index="1240" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1239" batchindex="61" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="triComRide" index="1252" batchindex="61" uniqueness="useronce" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<chain index="1253"/>
-<chain index="1254"/>
-<chain index="1255"/>
-<chain index="1256"/>
-<chain index="1257"/>
-<chain index="1258"/>
+<pick thing="triComRide" index="1239" batchindex="61" uniqueness="useronce" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<chain index="1240"/>
+<chain index="1241"/>
+<chain index="1242"/>
+<chain index="1243"/>
+<chain index="1244"/>
+<chain index="1245"/>
 <reference bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="triCome" index="1254" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1252" batchindex="61" bootindex="1"/>
+<pick thing="triCome" index="1241" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1239" batchindex="61" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="triDefend" index="1255" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1252" batchindex="61" bootindex="1"/>
+<pick thing="triDefend" index="1242" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1239" batchindex="61" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="triDown" index="1256" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1252" batchindex="61" bootindex="1"/>
+<pick thing="triDown" index="1243" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1239" batchindex="61" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="triGuard" index="1257" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1252" batchindex="61" bootindex="1"/>
+<pick thing="triGuard" index="1244" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1239" batchindex="61" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="triHeel" index="1258" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1252" batchindex="61" bootindex="1"/>
+<pick thing="triHeel" index="1245" batchindex="61" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1239" batchindex="61" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="triSwoop" index="1260" batchindex="63" uniqueness="useronce" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<pick thing="triSwoop" index="1247" batchindex="63" uniqueness="useronce" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="typOoze" index="1562" batchindex="341" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1561" batchindex="341" bootindex="1"/>
+<pick thing="typOoze" index="1549" batchindex="341" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1548" batchindex="341" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="typUndead" index="1574" batchindex="344" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="typUndead" index="1561" batchindex="344" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="validgizmo" index="1211" batchindex="38" bootstrap="yes" default="yes">
+<pick thing="validgizmo" index="1198" batchindex="38" bootstrap="yes" default="yes">
 <gizmo id="validgizmo">
 <container index="8" chosencount="0" pickcount="0">
 <notes/>
@@ -10922,454 +11030,454 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </gizmo>
 <reference bootindex="999999003"/>
 </pick>
-<pick thing="wGauntArm" index="1197" batchindex="25" uniqueness="unique" count="0" bootstrap="yes" default="yes" live="no">
+<pick thing="wGauntArm" index="1184" batchindex="25" uniqueness="unique" count="0" bootstrap="yes" default="yes" live="no">
 <reference bootindex="101"/>
 </pick>
-<pick thing="wMainHand" index="1198" batchindex="26" bootstrap="yes" default="yes">
+<pick thing="wMainHand" index="1185" batchindex="26" bootstrap="yes" default="yes">
 <reference bootindex="102"/>
 </pick>
-<pick thing="wRay" index="1578" batchindex="346" refcount="0" default="yes"></pick>
-<pick thing="wTouch" index="1579" batchindex="347" refcount="0" default="yes"></pick>
-<pick thing="wUnarmed" index="1196" batchindex="24" bootstrap="yes" default="yes">
+<pick thing="wRay" index="1565" batchindex="346" refcount="0" default="yes"></pick>
+<pick thing="wTouch" index="1566" batchindex="347" refcount="0" default="yes"></pick>
+<pick thing="wUnarmed" index="1183" batchindex="24" bootstrap="yes" default="yes">
 <reference bootindex="100"/>
 </pick>
-<pick thing="wcAcid" index="1580" batchindex="348" refcount="0" default="yes"></pick>
-<pick thing="wcAlign" index="1581" batchindex="349" refcount="0" default="yes"></pick>
-<pick thing="wcAnimal" index="1582" batchindex="350" refcount="0" default="yes"></pick>
-<pick thing="wcArmor" index="1583" batchindex="351" refcount="0" default="yes"></pick>
-<pick thing="wcBinding" index="1584" batchindex="352" refcount="0" default="yes"></pick>
-<pick thing="wcBody" index="1585" batchindex="353" refcount="0" default="yes"></pick>
-<pick thing="wcChange" index="1586" batchindex="354" refcount="0" default="yes"></pick>
-<pick thing="wcCold" index="1587" batchindex="355" refcount="0" default="yes"></pick>
-<pick thing="wcCommand" index="1588" batchindex="356" refcount="0" default="yes"></pick>
-<pick thing="wcConceal" index="1589" batchindex="357" refcount="0" default="yes"></pick>
-<pick thing="wcDeath" index="1590" batchindex="358" refcount="0" default="yes"></pick>
-<pick thing="wcDestruct" index="1591" batchindex="359" refcount="0" default="yes"></pick>
-<pick thing="wcDetect" index="1592" batchindex="360" refcount="0" default="yes"></pick>
-<pick thing="wcDispel" index="1593" batchindex="361" refcount="0" default="yes"></pick>
-<pick thing="wcDivinat" index="1594" batchindex="362" refcount="0" default="yes"></pick>
-<pick thing="wcElectric" index="1595" batchindex="363" refcount="0" default="yes"></pick>
-<pick thing="wcFear" index="1596" batchindex="364" refcount="0" default="yes"></pick>
-<pick thing="wcFire" index="1597" batchindex="365" refcount="0" default="yes"></pick>
-<pick thing="wcFlight" index="1598" batchindex="366" refcount="0" default="yes"></pick>
-<pick thing="wcForce" index="1599" batchindex="367" refcount="0" default="yes"></pick>
-<pick thing="wcGravity" index="1600" batchindex="368" refcount="0" default="yes"></pick>
-<pick thing="wcHealing" index="1601" batchindex="369" refcount="0" default="yes"></pick>
-<pick thing="wcIllumin" index="1602" batchindex="370" refcount="0" default="yes"></pick>
-<pick thing="wcIllusion" index="1603" batchindex="371" refcount="0" default="yes"></pick>
-<pick thing="wcLanguage" index="1604" batchindex="372" refcount="0" default="yes"></pick>
-<pick thing="wcLife" index="1605" batchindex="373" refcount="0" default="yes"></pick>
-<pick thing="wcPain" index="1606" batchindex="374" refcount="0" default="yes"></pick>
-<pick thing="wcPower" index="1607" batchindex="375" refcount="0" default="yes"></pick>
-<pick thing="wcSonic" index="1608" batchindex="376" refcount="0" default="yes"></pick>
-<pick thing="wcSummon" index="1609" batchindex="377" refcount="0" default="yes"></pick>
-<pick thing="wcTeleport" index="1610" batchindex="378" refcount="0" default="yes"></pick>
-<pick thing="wcTime" index="1611" batchindex="379" refcount="0" default="yes"></pick>
-<pick thing="wcWall" index="1612" batchindex="380" refcount="0" default="yes"></pick>
-<pick thing="wcWeather" index="1613" batchindex="381" refcount="0" default="yes"></pick>
-<pick thing="wcWounding" index="1614" batchindex="382" refcount="0" default="yes"></pick>
-<pick thing="weAcidBur0" index="1615" batchindex="383" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weAcidBur0" index="1616" batchindex="384" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weBleeWou0" index="1617" batchindex="385" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weBleeWou0" index="1618" batchindex="386" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weColdSna0" index="1619" batchindex="387" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weColdSna0" index="1620" batchindex="388" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weCramp0" index="1621" batchindex="389" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weCramp0" index="1622" batchindex="390" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weDeciphe0" index="1623" batchindex="391" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weDeciphe0" index="1624" batchindex="392" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weDeciphe0" index="1625" batchindex="393" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weEcho0" index="1626" batchindex="394" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weFlamJet0" index="1627" batchindex="395" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weFlamJet0" index="1628" batchindex="396" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weForcBlo0" index="1629" batchindex="397" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weForcBlo0" index="1630" batchindex="398" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weLift0" index="1631" batchindex="399" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weLift0" index="1632" batchindex="400" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSensMag0" index="1633" batchindex="401" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSensMag0" index="1634" batchindex="402" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSensMag0" index="1635" batchindex="403" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSootTou0" index="1636" batchindex="404" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSpark0" index="1637" batchindex="405" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSpark0" index="1638" batchindex="406" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSpark0" index="1639" batchindex="407" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="wmBoost" index="1640" batchindex="408" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wcAcid" index="1567" batchindex="348" refcount="0" default="yes"></pick>
+<pick thing="wcAlign" index="1568" batchindex="349" refcount="0" default="yes"></pick>
+<pick thing="wcAnimal" index="1569" batchindex="350" refcount="0" default="yes"></pick>
+<pick thing="wcArmor" index="1570" batchindex="351" refcount="0" default="yes"></pick>
+<pick thing="wcBinding" index="1571" batchindex="352" refcount="0" default="yes"></pick>
+<pick thing="wcBody" index="1572" batchindex="353" refcount="0" default="yes"></pick>
+<pick thing="wcChange" index="1573" batchindex="354" refcount="0" default="yes"></pick>
+<pick thing="wcCold" index="1574" batchindex="355" refcount="0" default="yes"></pick>
+<pick thing="wcCommand" index="1575" batchindex="356" refcount="0" default="yes"></pick>
+<pick thing="wcConceal" index="1576" batchindex="357" refcount="0" default="yes"></pick>
+<pick thing="wcDeath" index="1577" batchindex="358" refcount="0" default="yes"></pick>
+<pick thing="wcDestruct" index="1578" batchindex="359" refcount="0" default="yes"></pick>
+<pick thing="wcDetect" index="1579" batchindex="360" refcount="0" default="yes"></pick>
+<pick thing="wcDispel" index="1580" batchindex="361" refcount="0" default="yes"></pick>
+<pick thing="wcDivinat" index="1581" batchindex="362" refcount="0" default="yes"></pick>
+<pick thing="wcElectric" index="1582" batchindex="363" refcount="0" default="yes"></pick>
+<pick thing="wcFear" index="1583" batchindex="364" refcount="0" default="yes"></pick>
+<pick thing="wcFire" index="1584" batchindex="365" refcount="0" default="yes"></pick>
+<pick thing="wcFlight" index="1585" batchindex="366" refcount="0" default="yes"></pick>
+<pick thing="wcForce" index="1586" batchindex="367" refcount="0" default="yes"></pick>
+<pick thing="wcGravity" index="1587" batchindex="368" refcount="0" default="yes"></pick>
+<pick thing="wcHealing" index="1588" batchindex="369" refcount="0" default="yes"></pick>
+<pick thing="wcIllumin" index="1589" batchindex="370" refcount="0" default="yes"></pick>
+<pick thing="wcIllusion" index="1590" batchindex="371" refcount="0" default="yes"></pick>
+<pick thing="wcLanguage" index="1591" batchindex="372" refcount="0" default="yes"></pick>
+<pick thing="wcLife" index="1592" batchindex="373" refcount="0" default="yes"></pick>
+<pick thing="wcPain" index="1593" batchindex="374" refcount="0" default="yes"></pick>
+<pick thing="wcPower" index="1594" batchindex="375" refcount="0" default="yes"></pick>
+<pick thing="wcSonic" index="1595" batchindex="376" refcount="0" default="yes"></pick>
+<pick thing="wcSummon" index="1596" batchindex="377" refcount="0" default="yes"></pick>
+<pick thing="wcTeleport" index="1597" batchindex="378" refcount="0" default="yes"></pick>
+<pick thing="wcTime" index="1598" batchindex="379" refcount="0" default="yes"></pick>
+<pick thing="wcWall" index="1599" batchindex="380" refcount="0" default="yes"></pick>
+<pick thing="wcWeather" index="1600" batchindex="381" refcount="0" default="yes"></pick>
+<pick thing="wcWounding" index="1601" batchindex="382" refcount="0" default="yes"></pick>
+<pick thing="weAcidBur0" index="1602" batchindex="383" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weAcidBur0" index="1603" batchindex="384" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weBleeWou0" index="1604" batchindex="385" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weBleeWou0" index="1605" batchindex="386" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weColdSna0" index="1606" batchindex="387" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weColdSna0" index="1607" batchindex="388" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weCramp0" index="1608" batchindex="389" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weCramp0" index="1609" batchindex="390" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weDeciphe0" index="1610" batchindex="391" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weDeciphe0" index="1611" batchindex="392" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weDeciphe0" index="1612" batchindex="393" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weEcho0" index="1613" batchindex="394" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weFlamJet0" index="1614" batchindex="395" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weFlamJet0" index="1615" batchindex="396" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weForcBlo0" index="1616" batchindex="397" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weForcBlo0" index="1617" batchindex="398" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weLift0" index="1618" batchindex="399" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weLift0" index="1619" batchindex="400" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSensMag0" index="1620" batchindex="401" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSensMag0" index="1621" batchindex="402" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSensMag0" index="1622" batchindex="403" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSootTou0" index="1623" batchindex="404" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSpark0" index="1624" batchindex="405" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSpark0" index="1625" batchindex="406" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSpark0" index="1626" batchindex="407" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="wmBoost" index="1627" batchindex="408" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmBoost" index="1641" batchindex="409" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmBoost" index="1628" batchindex="409" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmBoost" index="1642" batchindex="410" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmBoost" index="1629" batchindex="410" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmDistant" index="1643" batchindex="411" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmDistant" index="1630" batchindex="411" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmDistant" index="1644" batchindex="412" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmDistant" index="1631" batchindex="412" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmDistant" index="1645" batchindex="413" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmDistant" index="1632" batchindex="413" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmLengthy" index="1646" batchindex="414" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmLengthy" index="1633" batchindex="414" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmLengthy" index="1647" batchindex="415" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmLengthy" index="1634" batchindex="415" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmLengthy" index="1648" batchindex="416" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmLengthy" index="1635" batchindex="416" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="xBurrow" index="1649" batchindex="417" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xBurrow" index="1636" batchindex="417" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xCelSmite" index="1245" batchindex="59" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1244" batchindex="59" bootindex="1"/>
+<pick thing="xCelSmite" index="1232" batchindex="59" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1231" batchindex="59" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xClimb" index="1650" batchindex="418" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xClimb" index="1637" batchindex="418" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xConstruct" index="1537" batchindex="335" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
+<pick thing="xConstruct" index="1524" batchindex="335" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRd" index="1651" batchindex="419" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRd" index="1638" batchindex="419" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdAdB" index="1652" batchindex="420" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdAdB" index="1639" batchindex="420" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdAdGd" index="1653" batchindex="421" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdAdGd" index="1640" batchindex="421" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdAdam" index="1654" batchindex="422" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdAdam" index="1641" batchindex="422" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdArro" index="1655" batchindex="423" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdArro" index="1642" batchindex="423" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdB" index="1656" batchindex="424" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdB" index="1643" batchindex="424" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdBMg" index="1657" batchindex="425" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdBMg" index="1644" batchindex="425" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdCIEv" index="1658" batchindex="426" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdCIEv" index="1645" batchindex="426" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdCISi" index="1659" batchindex="427" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdCISi" index="1646" batchindex="427" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdChao" index="1660" batchindex="428" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdChao" index="1647" batchindex="428" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdEpic" index="1661" batchindex="429" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdEpic" index="1648" batchindex="429" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdEvMa" index="1662" batchindex="430" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdEvMa" index="1649" batchindex="430" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdEvSi" index="1663" batchindex="431" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdEvSi" index="1650" batchindex="431" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdEvil" index="1250" batchindex="59" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" default="yes" live="no">
-<reference pickindex="1244" batchindex="59" bootindex="1"/>
+<pick thing="xDamRdEvil" index="1237" batchindex="59" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" default="yes" live="no">
+<reference pickindex="1231" batchindex="59" bootindex="1"/>
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdGoCI" index="1664" batchindex="433" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdGoCI" index="1651" batchindex="433" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdGoPi" index="1665" batchindex="434" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdGoPi" index="1652" batchindex="434" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdGoSi" index="1666" batchindex="435" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdGoSi" index="1653" batchindex="435" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdGood" index="1667" batchindex="436" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdGood" index="1654" batchindex="436" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdIron" index="1668" batchindex="437" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdIron" index="1655" batchindex="437" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdLaCI" index="1669" batchindex="438" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdLaCI" index="1656" batchindex="438" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdLaw" index="1670" batchindex="439" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdLaw" index="1657" batchindex="439" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdLeth" index="1671" batchindex="440" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdLeth" index="1658" batchindex="440" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdMag" index="1672" batchindex="441" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdMag" index="1659" batchindex="441" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdMgSi" index="1673" batchindex="442" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdMgSi" index="1660" batchindex="442" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdMgSl" index="1674" batchindex="443" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdMgSl" index="1661" batchindex="443" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdNWoo" index="1675" batchindex="444" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdNWoo" index="1662" batchindex="444" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdNoMa" index="1676" batchindex="445" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdNoMa" index="1663" batchindex="445" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdP" index="1677" batchindex="446" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdP" index="1664" batchindex="446" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdPS" index="1678" batchindex="447" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdPS" index="1665" batchindex="447" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdS" index="1679" batchindex="448" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdS" index="1666" batchindex="448" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdSB" index="1680" batchindex="449" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdSB" index="1667" batchindex="449" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdSil" index="1681" batchindex="450" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdSil" index="1668" batchindex="450" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdVorp" index="1682" batchindex="451" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdVorp" index="1669" batchindex="451" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdWood" index="1683" batchindex="452" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdWood" index="1670" batchindex="452" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRsAcid" index="1247" batchindex="59" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" default="yes" live="no">
-<reference pickindex="1244" batchindex="59" bootindex="1"/>
+<pick thing="xDamRsAcid" index="1234" batchindex="59" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" default="yes" live="no">
+<reference pickindex="1231" batchindex="59" bootindex="1"/>
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRsCold" index="1248" batchindex="59" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" default="yes" live="no">
-<reference pickindex="1244" batchindex="59" bootindex="1"/>
+<pick thing="xDamRsCold" index="1235" batchindex="59" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" default="yes" live="no">
+<reference pickindex="1231" batchindex="59" bootindex="1"/>
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRsElec" index="1249" batchindex="59" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" default="yes" live="no">
-<reference pickindex="1244" batchindex="59" bootindex="1"/>
+<pick thing="xDamRsElec" index="1236" batchindex="59" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" default="yes" live="no">
+<reference pickindex="1231" batchindex="59" bootindex="1"/>
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRsFire" index="1684" batchindex="456" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRsFire" index="1671" batchindex="456" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRsSoni" index="1685" batchindex="457" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRsSoni" index="1672" batchindex="457" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xFly" index="1686" batchindex="458" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xFly" index="1673" batchindex="458" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmAbDmP" index="1576" batchindex="344" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmAbDmP" index="1563" batchindex="344" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmAbilDm" index="1546" batchindex="335" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
+<pick thing="xImmAbilDm" index="1533" batchindex="335" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmAbilDr" index="1547" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmAbilDr" index="1534" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmBleed" index="1538" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmBleed" index="1525" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmCrit" index="1564" batchindex="341" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1561" batchindex="341" bootindex="1"/>
+<pick thing="xImmCrit" index="1551" batchindex="341" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1548" batchindex="341" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmDeNec" index="1541" batchindex="335" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
+<pick thing="xImmDeNec" index="1528" batchindex="335" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmDeath" index="1575" batchindex="344" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmDeath" index="1562" batchindex="344" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmDis" index="1540" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmDis" index="1527" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmEnerDr" index="1550" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmEnerDr" index="1537" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmExhaus" index="1549" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmExhaus" index="1536" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmFatigu" index="1548" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmFatigu" index="1535" batchindex="335" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmFlank" index="1565" batchindex="341" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1561" batchindex="341" bootindex="1"/>
+<pick thing="xImmFlank" index="1552" batchindex="341" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1548" batchindex="341" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmMind" index="1539" batchindex="335" uniqueness="unique" root="no" count="0" refcount="3" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1571" batchindex="343" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmMind" index="1526" batchindex="335" uniqueness="unique" root="no" count="0" refcount="3" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1558" batchindex="343" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmParaly" index="1544" batchindex="335" uniqueness="unique" root="no" count="0" refcount="5" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1552" batchindex="336" bootindex="1"/>
-<reference pickindex="1561" batchindex="341" bootindex="1"/>
-<reference pickindex="1571" batchindex="343" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmParaly" index="1531" batchindex="335" uniqueness="unique" root="no" count="0" refcount="5" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1539" batchindex="336" bootindex="1"/>
+<reference pickindex="1548" batchindex="341" bootindex="1"/>
+<reference pickindex="1558" batchindex="343" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmPois" index="1542" batchindex="335" uniqueness="unique" root="no" count="0" refcount="4" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1561" batchindex="341" bootindex="1"/>
-<reference pickindex="1571" batchindex="343" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmPois" index="1529" batchindex="335" uniqueness="unique" root="no" count="0" refcount="4" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1548" batchindex="341" bootindex="1"/>
+<reference pickindex="1558" batchindex="343" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmPoly" index="1563" batchindex="341" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1561" batchindex="341" bootindex="1"/>
-<reference pickindex="1571" batchindex="343" bootindex="1"/>
+<pick thing="xImmPoly" index="1550" batchindex="341" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1548" batchindex="341" bootindex="1"/>
+<reference pickindex="1558" batchindex="343" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmPrec" index="1566" batchindex="341" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1561" batchindex="341" bootindex="1"/>
+<pick thing="xImmPrec" index="1553" batchindex="341" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1548" batchindex="341" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmSleep" index="1543" batchindex="335" uniqueness="unique" root="no" count="0" refcount="5" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1552" batchindex="336" bootindex="1"/>
-<reference pickindex="1561" batchindex="341" bootindex="1"/>
-<reference pickindex="1571" batchindex="343" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmSleep" index="1530" batchindex="335" uniqueness="unique" root="no" count="0" refcount="5" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1539" batchindex="336" bootindex="1"/>
+<reference pickindex="1548" batchindex="341" bootindex="1"/>
+<reference pickindex="1558" batchindex="343" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmStun" index="1545" batchindex="335" uniqueness="unique" root="no" count="0" refcount="4" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1535" batchindex="335" bootindex="1"/>
-<reference pickindex="1561" batchindex="341" bootindex="1"/>
-<reference pickindex="1571" batchindex="343" bootindex="1"/>
-<reference pickindex="1572" batchindex="344" bootindex="1"/>
+<pick thing="xImmStun" index="1532" batchindex="335" uniqueness="unique" root="no" count="0" refcount="4" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1522" batchindex="335" bootindex="1"/>
+<reference pickindex="1548" batchindex="341" bootindex="1"/>
+<reference pickindex="1558" batchindex="343" bootindex="1"/>
+<reference pickindex="1559" batchindex="344" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xSplRs" index="1222" batchindex="39" uniqueness="unique" count="0" refcount="3" fieldcount="2" default="yes" live="no">
+<pick thing="xSplRs" index="1209" batchindex="39" uniqueness="unique" count="0" refcount="3" fieldcount="2" default="yes" live="no">
 <reference bootindex="1"/>
-<reference pickindex="1244" batchindex="59" bootindex="1"/>
+<reference pickindex="1231" batchindex="59" bootindex="1"/>
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xSwim" index="1687" batchindex="460" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xSwim" index="1674" batchindex="460" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
@@ -11542,18 +11650,28 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="APG" name="Advanced Player&apos;s Guide" count="1"/>
 <source source="APGFamil" name="Advanced Player&apos;s Guide Familiars" count="1"/>
 <ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
-<usagepool id="jPP" usagecount="0" pickindex="1689" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="1689" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="1689" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="1689" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="1689" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="1690" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="1690" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPP" usagecount="0" pickindex="1690" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="1690" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="1690" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="1690" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="1690" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPP" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPresSpent" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPrestige" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jSP" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jXP" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="psiPPUsed" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPP" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPresSpent" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPrestige" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jSP" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jXP" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="1679" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="1679" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPP" usagecount="0" pickindex="1679" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPresSpent" usagecount="0" pickindex="1679" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPrestige" usagecount="0" pickindex="1679" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jSP" usagecount="0" pickindex="1679" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jXP" usagecount="0" pickindex="1679" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Damage" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Nonlethal" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="PresSpent" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
@@ -11565,413 +11683,2049 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usagepool id="TotalSP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="1689" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="1689" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="facPresTPA" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="facPresSpt" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
 </minion>
-<reference pickindex="1171" batchindex="534" bootindex="1"/>
+<reference pickindex="1157" batchindex="519" bootindex="1"/>
 </pick>
-<pick thing="cAnimLink" index="1692" batchindex="534" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1168" batchindex="534" bootindex="1"/>
+<pick thing="cAnimLink" index="1675" batchindex="519" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1154" batchindex="519" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cAnimShare" index="1693" batchindex="534" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1168" batchindex="534" bootindex="1"/>
+<pick thing="cAnimShare" index="1676" batchindex="519" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1154" batchindex="519" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBard" index="1096" batchindex="508" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1097"/>
-<linkage id="helper" index="1097"/>
-<field id="cIndex" value="8."></field>
+<pick thing="cAntipal" index="1764" batchindex="558" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1765"/>
+<linkage id="helper" index="1765"/>
+<field id="cIndex" value="14."></field>
+<field id="cHP" user="6."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="14."></field>
+</pick>
+<pick thing="cAntipal" index="2320" batchindex="564" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1765"/>
+<linkage id="helper" index="1765"/>
+<field id="cIndex" value="20."></field>
+<field id="cHP" user="6."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="20."></field>
+</pick>
+<pick thing="cArcFClass" index="1826" batchindex="561" uniqueness="unique" root="no" bootstrap="yes" default="yes">
+<chain index="1827"/>
+<linkage id="realcomp" index="1827"/>
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
+</pick>
+<pick thing="cArcFEmpLn" index="1820" batchindex="561" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cArcFNear" index="2310" batchindex="561" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cArcFScry" index="1824" batchindex="561" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cArcFShare" index="1819" batchindex="561" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cArcFSpkAn" index="1823" batchindex="561" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cArcFSpkMs" index="1822" batchindex="561" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cArcFTouch" index="1821" batchindex="561" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cArcFamil" index="1827" batchindex="561" uniqueness="unique" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<minion heroname="Arcane Familiar" batchindex="439" userbatch="436" enmassebatch="42" nexttrade="1" nexttransact="1" poolcount="35" activemode="1" isally="no" hasacted="no" live="no">
+<statblock>
+Hero Lab&#174; and the Hero Lab logo are Registered Trademarks of LWD Technology, Inc. Free download at http://www.wolflair.com
+Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishing, LLC&#174;, and are used under license.</statblock>
+<container index="9" chosencount="1" pickcount="474">
+<notes/>
+<chosen source="bgDeity" pickindex="2317"/>
+<pick thing="AllCraft" index="1839" batchindex="11" bootstrap="yes" default="yes">
+<reference bootindex="11"/>
+</pick>
+<pick thing="AllKnow" index="1840" batchindex="12" bootstrap="yes" default="yes">
+<reference bootindex="12"/>
+</pick>
+<pick thing="AllPerform" index="1841" batchindex="13" bootstrap="yes" default="yes">
+<reference bootindex="13"/>
+</pick>
+<pick thing="AllProf" index="1842" batchindex="14" bootstrap="yes" default="yes">
+<reference bootindex="14"/>
+</pick>
+<pick thing="AllSkills" index="1836" batchindex="8" bootstrap="yes" default="yes">
+<reference bootindex="8"/>
+</pick>
+<pick thing="ArmorClass" index="1833" batchindex="5" bootstrap="yes" default="yes">
+<reference bootindex="5"/>
+</pick>
+<pick thing="ArmorDR" index="1846" batchindex="18" uniqueness="unique" bootstrap="yes" default="yes">
+<reference bootindex="18"/>
+</pick>
+<pick thing="ArmorDef" index="1845" batchindex="17" uniqueness="unique" bootstrap="yes" default="yes">
+<reference bootindex="17"/>
+</pick>
+<pick thing="Attack" index="1831" batchindex="3" bootstrap="yes" default="yes">
+<reference bootindex="3"/>
+</pick>
+<pick thing="AttrCost" index="1881" batchindex="42" refcount="0" default="yes"></pick>
+<pick thing="BasAttrArr" index="1882" batchindex="43" refcount="0" default="yes"></pick>
+<pick thing="CritDef" index="1847" batchindex="19" uniqueness="unique" bootstrap="yes" default="yes">
+<reference bootindex="19"/>
+</pick>
+<pick thing="Damage" index="1838" batchindex="10" bootstrap="yes" default="yes">
+<reference bootindex="10"/>
+</pick>
+<pick thing="Feat" index="1883" batchindex="44" refcount="0" default="yes"></pick>
+<pick thing="Flaw" index="1884" batchindex="45" refcount="0" default="yes"></pick>
+<pick thing="HerAttrArr" index="1885" batchindex="46" refcount="0" default="yes"></pick>
+<pick thing="Initiative" index="1834" batchindex="6" bootstrap="yes" default="yes">
+<reference bootindex="6"/>
+</pick>
+<pick thing="ManeuvBon" index="1851" batchindex="23" bootstrap="yes" default="yes">
+<reference bootindex="23"/>
+</pick>
+<pick thing="ManeuvDef" index="1850" batchindex="22" bootstrap="yes" default="yes">
+<reference bootindex="22"/>
+</pick>
+<pick thing="Maneuver" index="1832" batchindex="4" bootstrap="yes" default="yes">
+<reference bootindex="4"/>
+</pick>
+<pick thing="MonAttrArr" index="1886" batchindex="47" refcount="0" default="yes"></pick>
+<pick thing="OtherMount" index="1887" batchindex="48" refcount="0" default="yes"></pick>
+<pick thing="PerfCombat" index="1888" batchindex="49" refcount="0" default="yes"></pick>
+<pick thing="PieceArmor" index="1849" batchindex="21" uniqueness="unique" bootstrap="yes" default="yes">
+<reference bootindex="21"/>
+</pick>
+<pick thing="Psionics" index="1843" batchindex="15" bootstrap="yes" default="yes">
+<reference bootindex="15"/>
+</pick>
+<pick thing="SocItem" index="1889" batchindex="50" refcount="0" default="yes"></pick>
+<pick thing="Speed" index="1835" batchindex="7" bootstrap="yes" default="yes">
+<reference bootindex="7"/>
+</pick>
+<pick thing="Totals" index="1829" batchindex="1" uniqueness="unique" fieldcount="7" bootstrap="yes">
+<reference/>
+<field id="tGenChoice"></field>
+<field id="acType" menuthing="typHero"></field>
+<field id="tMaskCopy"></field>
+<field id="tFavCl"></field>
+<field id="tSecFavCl"></field>
+<field id="tThiFavCl"></field>
+<field id="dashUser" value="9."></field>
+</pick>
+<pick thing="Trait" index="1890" batchindex="51" refcount="0" default="yes"></pick>
+<pick thing="UserImage" index="2314" batchindex="436" refcount="0" fieldcount="1" source="bImages">
+<field id="imgIndex" value="1."></field>
+</pick>
+<pick thing="Wounds" index="1848" batchindex="20" uniqueness="unique" bootstrap="yes" default="yes">
+<reference bootindex="20"/>
+</pick>
+<pick thing="XPFast" index="1891" batchindex="52" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="XPMedium" index="1892" batchindex="53" refcount="0" default="yes"></pick>
+<pick thing="XPSlow" index="1893" batchindex="54" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="XPSociety" index="1894" batchindex="55" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="aCHA" index="1895" batchindex="56" uniqueness="unique" default="yes">
+<reference/>
+</pick>
+<pick thing="aCON" index="1896" batchindex="57" uniqueness="unique" default="yes">
+<reference/>
+</pick>
+<pick thing="aDEX" index="1897" batchindex="58" uniqueness="unique" default="yes">
+<reference/>
+</pick>
+<pick thing="aINT" index="1898" batchindex="59" uniqueness="unique" default="yes">
+<reference/>
+</pick>
+<pick thing="aSTR" index="1899" batchindex="60" uniqueness="unique" default="yes">
+<reference/>
+</pick>
+<pick thing="aWIS" index="1900" batchindex="61" uniqueness="unique" default="yes">
+<reference/>
+</pick>
+<pick thing="abDRCIrMag" index="1901" batchindex="62" uniqueness="unique" count="0" fieldcount="2" default="yes" live="no">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="abHeroP" index="1938" batchindex="98" root="no" count="0" fieldcount="3" bootstrap="yes" live="no">
+<reference pickindex="1937" batchindex="98" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+<field id="trkUser" user="1."></field>
+</pick>
+<pick thing="background" index="1830" batchindex="2" bootstrap="yes" default="yes">
+<reference bootindex="2"/>
+</pick>
+<pick thing="cArcFImpEv" index="1878" batchindex="39" uniqueness="unique" fieldcount="2" bootstrap="yes" default="yes">
+<reference bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="creaEpic" index="1902" batchindex="63" refcount="0" default="yes"></pick>
+<pick thing="creaHigh" index="1903" batchindex="64" refcount="0" default="yes"></pick>
+<pick thing="creaLow" index="1904" batchindex="65" refcount="0" default="yes"></pick>
+<pick thing="creaPick" index="1905" batchindex="66" refcount="0" default="yes"></pick>
+<pick thing="creaStanda" index="1906" batchindex="67" refcount="0" default="yes"></pick>
+<pick thing="deiOther" index="2317" batchindex="439" uniqueness="unique" source="bgDeity" default="yes">
+<reference/>
+</pick>
+<pick thing="fSimple" index="2150" batchindex="308" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2148" batchindex="308" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fSimple" index="2154" batchindex="310" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fSimple" index="2171" batchindex="311" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2170" batchindex="311" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fSimple" index="2173" batchindex="312" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2172" batchindex="312" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fSimple" index="2175" batchindex="313" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2174" batchindex="313" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fSimple" index="2178" batchindex="315" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2177" batchindex="315" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fSimple" index="2187" batchindex="317" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2186" batchindex="317" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fSimple" index="2191" batchindex="319" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fWepMart" index="2188" batchindex="317" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2186" batchindex="317" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcHP" index="1907" batchindex="68" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcSkillPts" index="1908" batchindex="69" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="gClothes" index="1859" batchindex="31" count="0" fieldcount="3" bootstrap="yes" live="no">
+<reference bootindex="107"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+<field id="usrSelect" text="Artisan&apos;s Outfit (Free)"></field>
+</pick>
+<pick thing="gGround" index="1909" batchindex="70" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="gMoney" index="1858" batchindex="30" fieldcount="2" bootstrap="yes" default="yes">
+<reference bootindex="106"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="hActionPts" index="1844" batchindex="16" count="0" bootstrap="yes" default="yes" live="no">
+<reference bootindex="16"/>
+</pick>
+<pick thing="hPP" index="1863" batchindex="34" count="0" bootstrap="yes" default="yes" live="no">
+<reference bootindex="500"/>
+</pick>
+<pick thing="heroname" index="1866" batchindex="37" fieldcount="1" bootstrap="yes">
+<reference bootindex="999999001"/>
+<field id="useredit" text="Arcane Familiar"></field>
+</pick>
+<pick thing="isEqpArmor" index="1910" batchindex="71" refcount="0" default="yes"></pick>
+<pick thing="isEqpBack" index="1911" batchindex="72" refcount="0" default="yes"></pick>
+<pick thing="isEqpBody" index="1912" batchindex="73" refcount="0" default="yes"></pick>
+<pick thing="isEqpEyes" index="1913" batchindex="74" refcount="0" default="yes"></pick>
+<pick thing="isEqpFoot" index="1914" batchindex="75" refcount="0" default="yes"></pick>
+<pick thing="isEqpHBand" index="1915" batchindex="76" refcount="0" default="yes"></pick>
+<pick thing="isEqpHand" index="1916" batchindex="77" refcount="0" default="yes"></pick>
+<pick thing="isEqpHead" index="1917" batchindex="78" refcount="0" default="yes"></pick>
+<pick thing="isEqpNeck" index="1918" batchindex="79" refcount="0" default="yes"></pick>
+<pick thing="isEqpPFRun" index="1919" batchindex="80" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="isEqpRing" index="1920" batchindex="81" refcount="0" default="yes"></pick>
+<pick thing="isEqpTorso" index="1921" batchindex="82" refcount="0" default="yes"></pick>
+<pick thing="isEqpWaist" index="1922" batchindex="83" refcount="0" default="yes"></pick>
+<pick thing="isEqpWrist" index="1923" batchindex="84" refcount="0" default="yes"></pick>
+<pick thing="journal" index="2315" batchindex="437" refcount="0" fieldcount="2" source="journal">
+<field id="jFaction"></field>
+<field id="jrnReal" user="20120102."></field>
+</pick>
+<pick thing="journal" index="2316" batchindex="438" refcount="0" fieldcount="2" source="presjourn">
+<field id="jFaction"></field>
+<field id="jrnReal" user="20120102."></field>
+</pick>
+<pick thing="lCommon" index="1860" batchindex="32" uniqueness="useronce" bootstrap="yes" default="yes">
+<reference bootindex="200"/>
+</pick>
+<pick thing="mArmor" index="1856" batchindex="28" bootstrap="yes" default="yes">
+<reference bootindex="104"/>
+</pick>
+<pick thing="mNatural" index="1855" batchindex="27" bootstrap="yes" default="yes">
+<reference bootindex="103"/>
+</pick>
+<pick thing="mShield" index="1857" batchindex="29" bootstrap="yes" default="yes">
+<reference bootindex="105"/>
+</pick>
+<pick thing="manBullRus" index="1924" batchindex="85" refcount="0" default="yes"></pick>
+<pick thing="manDirtTri" index="1925" batchindex="86" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manDisarm" index="1926" batchindex="87" refcount="0" default="yes"></pick>
+<pick thing="manDrag" index="1927" batchindex="88" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manFeint" index="1928" batchindex="89" refcount="0" default="yes"></pick>
+<pick thing="manGrapple" index="1929" batchindex="90" refcount="0" default="yes"></pick>
+<pick thing="manOverrun" index="1930" batchindex="91" refcount="0" default="yes"></pick>
+<pick thing="manPull" index="1931" batchindex="92" refcount="0" default="yes"></pick>
+<pick thing="manPush" index="1932" batchindex="93" refcount="0" default="yes"></pick>
+<pick thing="manReposit" index="1933" batchindex="94" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manSteal" index="1934" batchindex="95" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manSunder" index="1935" batchindex="96" refcount="0" default="yes"></pick>
+<pick thing="manTrip" index="1936" batchindex="97" refcount="0" default="yes"></pick>
+<pick thing="mechHeroP" index="1937" batchindex="98" count="0" refcount="0" default="yes" live="no">
+<chain index="1938"/>
+</pick>
+<pick thing="mechWealth" index="1939" batchindex="99" refcount="0" default="yes"></pick>
+<pick thing="pDethgaggd" index="1940" batchindex="100" count="0" refcount="0" fieldcount="4" live="no">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="1."></field>
+</pick>
+<pick thing="pcnBlind" index="1941" batchindex="101" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="2."></field>
+</pick>
+<pick thing="pcnConfuse" index="1942" batchindex="102" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="3."></field>
+</pick>
+<pick thing="pcnCower" index="1943" batchindex="103" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="4."></field>
+</pick>
+<pick thing="pcnDazed" index="1944" batchindex="104" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="5."></field>
+</pick>
+<pick thing="pcnDazzle" index="1945" batchindex="105" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="6."></field>
+</pick>
+<pick thing="pcnDeaf" index="1946" batchindex="106" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="7."></field>
+</pick>
+<pick thing="pcnDisable" index="1947" batchindex="107" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="8."></field>
+</pick>
+<pick thing="pcnDying" index="1948" batchindex="108" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="9."></field>
+</pick>
+<pick thing="pcnEntangl" index="1949" batchindex="109" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="10."></field>
+</pick>
+<pick thing="pcnExhaust" index="1950" batchindex="110" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="11."></field>
+</pick>
+<pick thing="pcnFascin" index="1951" batchindex="111" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="12."></field>
+</pick>
+<pick thing="pcnFatigue" index="1952" batchindex="112" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="13."></field>
+</pick>
+<pick thing="pcnFlatFt" index="1953" batchindex="113" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="14."></field>
+</pick>
+<pick thing="pcnFright" index="1954" batchindex="114" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="15."></field>
+</pick>
+<pick thing="pcnGrapple" index="1955" batchindex="115" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="16."></field>
+</pick>
+<pick thing="pcnHelpls" index="1956" batchindex="116" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="17."></field>
+</pick>
+<pick thing="pcnIncorp" index="1957" batchindex="117" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="18."></field>
+</pick>
+<pick thing="pcnInvis" index="1958" batchindex="118" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="19."></field>
+</pick>
+<pick thing="pcnNausea" index="1959" batchindex="119" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="20."></field>
+</pick>
+<pick thing="pcnPanic" index="1960" batchindex="120" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="21."></field>
+</pick>
+<pick thing="pcnParaly" index="1961" batchindex="121" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="22."></field>
+</pick>
+<pick thing="pcnPetri" index="1962" batchindex="122" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="23."></field>
+</pick>
+<pick thing="pcnPinned" index="1963" batchindex="123" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="24."></field>
+</pick>
+<pick thing="pcnProne" index="1964" batchindex="124" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="25."></field>
+</pick>
+<pick thing="pcnShaken" index="1965" batchindex="125" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="26."></field>
+</pick>
+<pick thing="pcnSicken" index="1966" batchindex="126" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="27."></field>
+</pick>
+<pick thing="pcnStable" index="1967" batchindex="127" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="28."></field>
+</pick>
+<pick thing="pcnStagger" index="1968" batchindex="128" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="29."></field>
+</pick>
+<pick thing="pcnStunned" index="1969" batchindex="129" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="30."></field>
+</pick>
+<pick thing="pcnUnconc" index="1970" batchindex="130" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="31."></field>
+</pick>
+<pick thing="playername" index="1865" batchindex="36" bootstrap="yes" default="yes">
+<reference bootindex="999999000"/>
+</pick>
+<pick thing="pstChargin" index="1971" batchindex="131" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="32."></field>
+</pick>
+<pick thing="pstConcTot" index="1972" batchindex="132" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="33."></field>
+</pick>
+<pick thing="pstConceal" index="1973" batchindex="133" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="34."></field>
+</pick>
+<pick thing="pstCover" index="1974" batchindex="134" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="35."></field>
+</pick>
+<pick thing="pstCoverIm" index="1975" batchindex="135" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="36."></field>
+</pick>
+<pick thing="pstCoverPa" index="1976" batchindex="136" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="37."></field>
+</pick>
+<pick thing="pstCoverSo" index="1977" batchindex="137" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="38."></field>
+</pick>
+<pick thing="pstFlankin" index="1978" batchindex="138" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="39."></field>
+</pick>
+<pick thing="pstFtDefen" index="1979" batchindex="139" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="40."></field>
+</pick>
+<pick thing="pstHighGr" index="1980" batchindex="140" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="41."></field>
+</pick>
+<pick thing="pstMounted" index="1981" batchindex="141" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="42."></field>
+</pick>
+<pick thing="pstRunning" index="1982" batchindex="142" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="43."></field>
+</pick>
+<pick thing="pstSqueeze" index="1983" batchindex="143" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="44."></field>
+</pick>
+<pick thing="pstTotDef" index="1984" batchindex="144" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="45."></field>
+</pick>
+<pick thing="pstWithdr" index="1985" batchindex="145" refcount="0" fieldcount="4">
+<field id="pIsOn" user="0."></field>
+<field id="pChosen"></field>
+<field id="pMount"></field>
+<field id="pIndex" value="46."></field>
+</pick>
+<pick thing="raAttr2Sel" index="1880" batchindex="41" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="raDarkVis" index="2149" batchindex="308" uniqueness="unique" root="no" count="0" refcount="8" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2148" batchindex="308" bootindex="1"/>
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2170" batchindex="311" bootindex="1"/>
+<reference pickindex="2176" batchindex="314" bootindex="1"/>
+<reference pickindex="2177" batchindex="315" bootindex="1"/>
+<reference pickindex="2186" batchindex="317" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<reference pickindex="2195" batchindex="320" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="raIgnArmDR" index="2185" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2179" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="raImmNonLe" index="2169" batchindex="310" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="raLowLight" index="2152" batchindex="309" uniqueness="unique" root="no" count="0" refcount="6" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2151" batchindex="309" bootindex="1"/>
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2170" batchindex="311" bootindex="1"/>
+<reference pickindex="2172" batchindex="312" bootindex="1"/>
+<reference pickindex="2176" batchindex="314" bootindex="1"/>
+<reference pickindex="2189" batchindex="318" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="resAnTrick" index="1986" batchindex="146" refcount="0" default="yes"></pick>
+<pick thing="resAttrib" index="1987" batchindex="147" refcount="0" default="yes"></pick>
+<pick thing="resFeat" index="1988" batchindex="148" refcount="0" default="yes"></pick>
+<pick thing="resFlaw" index="1989" batchindex="149" refcount="0" default="yes"></pick>
+<pick thing="resRaceCus" index="1990" batchindex="150" refcount="0" default="yes"></pick>
+<pick thing="resRace2nd" index="1991" batchindex="151" refcount="0" default="yes"></pick>
+<pick thing="resSkill" index="1992" batchindex="152" refcount="0" default="yes"></pick>
+<pick thing="resTrait" index="1993" batchindex="153" refcount="0" default="yes"></pick>
+<pick thing="resTrick" index="1994" batchindex="154" refcount="0" default="yes"></pick>
+<pick thing="sCustomSpl" index="1861" batchindex="33" bootstrap="yes" default="yes">
+<gizmo id="CustSpell">
+<container index="10" chosencount="0" pickcount="1">
+<notes/>
+<pick thing="CustSpell" index="1862" batchindex="33" bootstrap="yes" default="yes">
+<reference bootindex="1"/>
+</pick>
+</container>
+</gizmo>
+<reference bootindex="400"/>
+</pick>
+<pick thing="selAxChaos" index="1995" batchindex="155" refcount="0" default="yes"></pick>
+<pick thing="selAxEvil" index="1996" batchindex="156" refcount="0" default="yes"></pick>
+<pick thing="selAxGood" index="1997" batchindex="157" refcount="0" default="yes"></pick>
+<pick thing="selAxLaw" index="1998" batchindex="158" refcount="0" default="yes"></pick>
+<pick thing="selDrBlack" index="1999" batchindex="159" refcount="0" default="yes"></pick>
+<pick thing="selDrBlue" index="2000" batchindex="160" refcount="0" default="yes"></pick>
+<pick thing="selDrBrass" index="2001" batchindex="161" refcount="0" default="yes"></pick>
+<pick thing="selDrBronz" index="2002" batchindex="162" refcount="0" default="yes"></pick>
+<pick thing="selDrCoppe" index="2003" batchindex="163" refcount="0" default="yes"></pick>
+<pick thing="selDrGold" index="2004" batchindex="164" refcount="0" default="yes"></pick>
+<pick thing="selDrGreen" index="2005" batchindex="165" refcount="0" default="yes"></pick>
+<pick thing="selDrRed" index="2006" batchindex="166" refcount="0" default="yes"></pick>
+<pick thing="selDrSilve" index="2007" batchindex="167" refcount="0" default="yes"></pick>
+<pick thing="selDrWhite" index="2008" batchindex="168" refcount="0" default="yes"></pick>
+<pick thing="selElAir" index="2009" batchindex="169" refcount="0" default="yes"></pick>
+<pick thing="selElEarth" index="2010" batchindex="170" refcount="0" default="yes"></pick>
+<pick thing="selElFire" index="2011" batchindex="171" refcount="0" default="yes"></pick>
+<pick thing="selElWater" index="2012" batchindex="172" refcount="0" default="yes"></pick>
+<pick thing="selEnAcid" index="2013" batchindex="173" refcount="0" default="yes"></pick>
+<pick thing="selEnCold" index="2014" batchindex="174" refcount="0" default="yes"></pick>
+<pick thing="selEnElec" index="2015" batchindex="175" refcount="0" default="yes"></pick>
+<pick thing="selEnFire" index="2016" batchindex="176" refcount="0" default="yes"></pick>
+<pick thing="selEnSonic" index="2017" batchindex="177" refcount="0" default="yes"></pick>
+<pick thing="selShBuck" index="2018" batchindex="178" refcount="0" default="yes"></pick>
+<pick thing="selShHeavy" index="2019" batchindex="179" refcount="0" default="yes"></pick>
+<pick thing="selShLight" index="2020" batchindex="180" refcount="0" default="yes"></pick>
+<pick thing="selShTower" index="2021" batchindex="181" refcount="0" default="yes"></pick>
+<pick thing="skAcrobat" index="2022" batchindex="182" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1897"/>
+<reference/>
+</pick>
+<pick thing="skAppraise" index="2023" batchindex="183" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1898"/>
+<reference/>
+</pick>
+<pick thing="skBluff" index="2024" batchindex="184" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1895"/>
+<reference/>
+</pick>
+<pick thing="skClimb" index="2025" batchindex="185" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1899"/>
+<reference/>
+</pick>
+<pick thing="skDiplo" index="2026" batchindex="186" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1895"/>
+<reference/>
+</pick>
+<pick thing="skDisable" index="2027" batchindex="187" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1897"/>
+<reference/>
+</pick>
+<pick thing="skDisguise" index="2028" batchindex="188" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1895"/>
+<reference/>
+</pick>
+<pick thing="skEscape" index="2029" batchindex="189" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1897"/>
+<reference/>
+</pick>
+<pick thing="skFly" index="2030" batchindex="190" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1897"/>
+<reference/>
+</pick>
+<pick thing="skHandleAn" index="2031" batchindex="191" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1895"/>
+<reference/>
+</pick>
+<pick thing="skHeal" index="2032" batchindex="192" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1900"/>
+<reference/>
+</pick>
+<pick thing="skIntim" index="2033" batchindex="193" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1895"/>
+<reference/>
+</pick>
+<pick thing="skLinguist" index="2034" batchindex="194" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1898"/>
+<reference/>
+</pick>
+<pick thing="skPercep" index="2035" batchindex="195" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1900"/>
+<reference/>
+</pick>
+<pick thing="skRide" index="2036" batchindex="196" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1897"/>
+<reference/>
+</pick>
+<pick thing="skSenseMot" index="2037" batchindex="197" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1900"/>
+<reference/>
+</pick>
+<pick thing="skSleight" index="2038" batchindex="198" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1897"/>
+<reference/>
+</pick>
+<pick thing="skSpellcr" index="2039" batchindex="199" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1898"/>
+<reference/>
+</pick>
+<pick thing="skStealth" index="2040" batchindex="200" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1897"/>
+<reference/>
+</pick>
+<pick thing="skSurvival" index="2041" batchindex="201" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1900"/>
+<reference/>
+</pick>
+<pick thing="skSwim" index="2042" batchindex="202" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1899"/>
+<reference/>
+</pick>
+<pick thing="skUseMagic" index="2043" batchindex="203" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="1895"/>
+<reference/>
+</pick>
+<pick thing="spAcidSpl0" index="2044" batchindex="204" refcount="0" default="yes"></pick>
+<pick thing="spAcidSpl0" index="2045" batchindex="205" refcount="0" default="yes"></pick>
+<pick thing="spArcaMar0" index="2046" batchindex="206" refcount="0" default="yes"></pick>
+<pick thing="spArcaMar0" index="2047" batchindex="207" refcount="0" default="yes"></pick>
+<pick thing="spArcaMar0" index="2048" batchindex="208" refcount="0" default="yes"></pick>
+<pick thing="spBleed0" index="2049" batchindex="209" refcount="0" default="yes"></pick>
+<pick thing="spBleed0" index="2050" batchindex="210" refcount="0" default="yes"></pick>
+<pick thing="spDancLig0" index="2051" batchindex="211" refcount="0" default="yes"></pick>
+<pick thing="spDancLig0" index="2052" batchindex="212" refcount="0" default="yes"></pick>
+<pick thing="spDancLig0" index="2053" batchindex="213" refcount="0" default="yes"></pick>
+<pick thing="spDaze0" index="2054" batchindex="214" refcount="0" default="yes"></pick>
+<pick thing="spDaze0" index="2055" batchindex="215" refcount="0" default="yes"></pick>
+<pick thing="spDaze0" index="2056" batchindex="216" refcount="0" default="yes"></pick>
+<pick thing="spDeteMag0" index="2057" batchindex="217" refcount="0" default="yes"></pick>
+<pick thing="spDeteMag0" index="2058" batchindex="218" refcount="0" default="yes"></pick>
+<pick thing="spDeteMag0" index="2059" batchindex="219" refcount="0" default="yes"></pick>
+<pick thing="spDetePoi0" index="2060" batchindex="220" refcount="0" default="yes"></pick>
+<pick thing="spDetePoi0" index="2061" batchindex="221" refcount="0" default="yes"></pick>
+<pick thing="spDisrUnd0" index="2062" batchindex="222" refcount="0" default="yes"></pick>
+<pick thing="spDisrUnd0" index="2063" batchindex="223" refcount="0" default="yes"></pick>
+<pick thing="spFlare0" index="2064" batchindex="224" refcount="0" default="yes"></pick>
+<pick thing="spFlare0" index="2065" batchindex="225" refcount="0" default="yes"></pick>
+<pick thing="spGhosSou0" index="2066" batchindex="226" refcount="0" default="yes"></pick>
+<pick thing="spGhosSou0" index="2067" batchindex="227" refcount="0" default="yes"></pick>
+<pick thing="spGuidanc0" index="2068" batchindex="228" refcount="0" default="yes"></pick>
+<pick thing="spHaunFey0" index="2069" batchindex="229" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="spLight0" index="2070" batchindex="230" refcount="0" default="yes"></pick>
+<pick thing="spLight0" index="2071" batchindex="231" refcount="0" default="yes"></pick>
+<pick thing="spLight0" index="2072" batchindex="232" refcount="0" default="yes"></pick>
+<pick thing="spMageHan0" index="2073" batchindex="233" refcount="0" default="yes"></pick>
+<pick thing="spMageHan0" index="2074" batchindex="234" refcount="0" default="yes"></pick>
+<pick thing="spMending0" index="2075" batchindex="235" refcount="0" default="yes"></pick>
+<pick thing="spMending0" index="2076" batchindex="236" refcount="0" default="yes"></pick>
+<pick thing="spMessage0" index="2077" batchindex="237" refcount="0" default="yes"></pick>
+<pick thing="spMessage0" index="2078" batchindex="238" refcount="0" default="yes"></pick>
+<pick thing="spOpenClo0" index="2079" batchindex="239" refcount="0" default="yes"></pick>
+<pick thing="spOpenClo0" index="2080" batchindex="240" refcount="0" default="yes"></pick>
+<pick thing="spPrestid0" index="2081" batchindex="241" refcount="0" default="yes"></pick>
+<pick thing="spPrestid0" index="2082" batchindex="242" refcount="0" default="yes"></pick>
+<pick thing="spPutrFoo0" index="2083" batchindex="243" refcount="0" default="yes"></pick>
+<pick thing="spRayFro0" index="2084" batchindex="244" refcount="0" default="yes"></pick>
+<pick thing="spRayFro0" index="2085" batchindex="245" refcount="0" default="yes"></pick>
+<pick thing="spReadMag0" index="2086" batchindex="246" refcount="0" default="yes"></pick>
+<pick thing="spReadMag0" index="2087" batchindex="247" refcount="0" default="yes"></pick>
+<pick thing="spReadMag0" index="2088" batchindex="248" refcount="0" default="yes"></pick>
+<pick thing="spResista0" index="2089" batchindex="249" refcount="0" default="yes"></pick>
+<pick thing="spResista0" index="2090" batchindex="250" refcount="0" default="yes"></pick>
+<pick thing="spScriCha0" index="2091" batchindex="251" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="spSottVoc0" index="1864" batchindex="35" count="0" bootstrap="yes" default="yes" live="no">
+<reference bootindex="600"/>
+</pick>
+<pick thing="spSpark0" index="2092" batchindex="252" refcount="0" default="yes"></pick>
+<pick thing="spSpark0" index="2093" batchindex="253" refcount="0" default="yes"></pick>
+<pick thing="spSpark0" index="2094" batchindex="254" refcount="0" default="yes"></pick>
+<pick thing="spStabili0" index="2095" batchindex="255" refcount="0" default="yes"></pick>
+<pick thing="spToucFat0" index="2096" batchindex="256" refcount="0" default="yes"></pick>
+<pick thing="spToucFat0" index="2097" batchindex="257" refcount="0" default="yes"></pick>
+<pick thing="ssAbjur" index="2098" batchindex="258" refcount="0" default="yes"></pick>
+<pick thing="ssAcid" index="2099" batchindex="259" refcount="0" default="yes"></pick>
+<pick thing="ssAir" index="2100" batchindex="260" refcount="0" default="yes"></pick>
+<pick thing="ssCalling" index="2101" batchindex="261" refcount="0" default="yes"></pick>
+<pick thing="ssChaotic" index="2102" batchindex="262" refcount="0" default="yes"></pick>
+<pick thing="ssCharm" index="2103" batchindex="263" refcount="0" default="yes"></pick>
+<pick thing="ssCold" index="2104" batchindex="264" refcount="0" default="yes"></pick>
+<pick thing="ssCompuls" index="2105" batchindex="265" refcount="0" default="yes"></pick>
+<pick thing="ssConjur" index="2106" batchindex="266" refcount="0" default="yes"></pick>
+<pick thing="ssCreation" index="2107" batchindex="267" refcount="0" default="yes"></pick>
+<pick thing="ssCurse" index="2108" batchindex="268" refcount="0" default="yes"></pick>
+<pick thing="ssDarkness" index="2109" batchindex="269" refcount="0" default="yes"></pick>
+<pick thing="ssDeath" index="2110" batchindex="270" refcount="0" default="yes"></pick>
+<pick thing="ssDisease" index="2111" batchindex="271" refcount="0" default="yes"></pick>
+<pick thing="ssDivin" index="2112" batchindex="272" refcount="0" default="yes"></pick>
+<pick thing="ssEarth" index="2113" batchindex="273" refcount="0" default="yes"></pick>
+<pick thing="ssElec" index="2114" batchindex="274" refcount="0" default="yes"></pick>
+<pick thing="ssEmotion" index="2115" batchindex="275" refcount="0" default="yes"></pick>
+<pick thing="ssEnchant" index="2116" batchindex="276" refcount="0" default="yes"></pick>
+<pick thing="ssEvil" index="2117" batchindex="277" refcount="0" default="yes"></pick>
+<pick thing="ssEvoc" index="2118" batchindex="278" refcount="0" default="yes"></pick>
+<pick thing="ssFear" index="2119" batchindex="279" refcount="0" default="yes"></pick>
+<pick thing="ssFigment" index="2120" batchindex="280" refcount="0" default="yes"></pick>
+<pick thing="ssFire" index="2121" batchindex="281" refcount="0" default="yes"></pick>
+<pick thing="ssForce" index="2122" batchindex="282" refcount="0" default="yes"></pick>
+<pick thing="ssGlamer" index="2123" batchindex="283" refcount="0" default="yes"></pick>
+<pick thing="ssGood" index="2124" batchindex="284" refcount="0" default="yes"></pick>
+<pick thing="ssHealing" index="2125" batchindex="285" refcount="0" default="yes"></pick>
+<pick thing="ssIllusion" index="2126" batchindex="286" refcount="0" default="yes"></pick>
+<pick thing="ssLang" index="2127" batchindex="287" refcount="0" default="yes"></pick>
+<pick thing="ssLawful" index="2128" batchindex="288" refcount="0" default="yes"></pick>
+<pick thing="ssLight" index="2129" batchindex="289" refcount="0" default="yes"></pick>
+<pick thing="ssMind" index="2130" batchindex="290" refcount="0" default="yes"></pick>
+<pick thing="ssNecro" index="2131" batchindex="291" refcount="0" default="yes"></pick>
+<pick thing="ssPain" index="2132" batchindex="292" refcount="0" default="yes"></pick>
+<pick thing="ssPattern" index="2133" batchindex="293" refcount="0" default="yes"></pick>
+<pick thing="ssPhantasm" index="2134" batchindex="294" refcount="0" default="yes"></pick>
+<pick thing="ssPoison" index="2135" batchindex="295" refcount="0" default="yes"></pick>
+<pick thing="ssPolymor" index="2136" batchindex="296" refcount="0" default="yes"></pick>
+<pick thing="ssScrying" index="2137" batchindex="297" refcount="0" default="yes"></pick>
+<pick thing="ssShadow" index="2138" batchindex="298" refcount="0" default="yes"></pick>
+<pick thing="ssShadowDs" index="2139" batchindex="299" refcount="0" default="yes"></pick>
+<pick thing="ssSonic" index="2140" batchindex="300" refcount="0" default="yes"></pick>
+<pick thing="ssSummon" index="2141" batchindex="301" refcount="0" default="yes"></pick>
+<pick thing="ssTeleport" index="2142" batchindex="302" refcount="0" default="yes"></pick>
+<pick thing="ssTrans" index="2143" batchindex="303" refcount="0" default="yes"></pick>
+<pick thing="ssWater" index="2144" batchindex="304" refcount="0" default="yes"></pick>
+<pick thing="svFort" index="2145" batchindex="305" refcount="0" default="yes"></pick>
+<pick thing="svRef" index="2146" batchindex="306" refcount="0" default="yes"></pick>
+<pick thing="svWill" index="2147" batchindex="307" refcount="0" default="yes"></pick>
+<pick thing="tEncumTbl" index="1837" batchindex="9" bootstrap="yes" default="yes">
+<reference bootindex="9"/>
+</pick>
+<pick thing="tpAberr" index="2148" batchindex="308" refcount="0" default="yes">
+<chain index="2149"/>
+<chain index="2150"/>
+</pick>
+<pick thing="tpAnimal" index="2151" batchindex="309" refcount="0" default="yes">
+<chain index="2152"/>
+</pick>
+<pick thing="tpConst" index="2153" batchindex="310" refcount="0" default="yes">
+<chain index="2152"/>
+<chain index="2149"/>
+<chain index="2154"/>
+<chain index="2155"/>
+<chain index="2156"/>
+<chain index="2157"/>
+<chain index="2158"/>
+<chain index="2159"/>
+<chain index="2160"/>
+<chain index="2161"/>
+<chain index="2162"/>
+<chain index="2163"/>
+<chain index="2164"/>
+<chain index="2165"/>
+<chain index="2166"/>
+<chain index="2167"/>
+<chain index="2168"/>
+<chain index="2169"/>
+</pick>
+<pick thing="tpDragon" index="2170" batchindex="311" refcount="0" default="yes">
+<chain index="2152"/>
+<chain index="2149"/>
+<chain index="2171"/>
+<chain index="2161"/>
+<chain index="2162"/>
+</pick>
+<pick thing="tpFey" index="2172" batchindex="312" refcount="0" default="yes">
+<chain index="2152"/>
+<chain index="2173"/>
+</pick>
+<pick thing="tpHumanoid" index="2174" batchindex="313" refcount="0" default="yes">
+<chain index="2175"/>
+</pick>
+<pick thing="tpMagBeast" index="2176" batchindex="314" refcount="0" default="yes">
+<chain index="2152"/>
+<chain index="2149"/>
+</pick>
+<pick thing="tpMonHuman" index="2177" batchindex="315" refcount="0" default="yes">
+<chain index="2149"/>
+<chain index="2178"/>
+</pick>
+<pick thing="tpOoze" index="2179" batchindex="316" refcount="0" default="yes">
+<chain index="2180"/>
+<chain index="2160"/>
+<chain index="2161"/>
+<chain index="2162"/>
+<chain index="2163"/>
+<chain index="2181"/>
+<chain index="2182"/>
+<chain index="2183"/>
+<chain index="2184"/>
+<chain index="2185"/>
+</pick>
+<pick thing="tpOutsider" index="2186" batchindex="317" refcount="0" default="yes">
+<chain index="2149"/>
+<chain index="2187"/>
+<chain index="2188"/>
+</pick>
+<pick thing="tpPlant" index="2189" batchindex="318" refcount="0" default="yes">
+<chain index="2152"/>
+<chain index="2157"/>
+<chain index="2160"/>
+<chain index="2161"/>
+<chain index="2162"/>
+<chain index="2163"/>
+<chain index="2181"/>
+</pick>
+<pick thing="tpUndead" index="2190" batchindex="319" refcount="0" default="yes">
+<chain index="2149"/>
+<chain index="2191"/>
+<chain index="2192"/>
+<chain index="2157"/>
+<chain index="2158"/>
+<chain index="2193"/>
+<chain index="2160"/>
+<chain index="2161"/>
+<chain index="2162"/>
+<chain index="2163"/>
+<chain index="2194"/>
+<chain index="2165"/>
+<chain index="2166"/>
+<chain index="2167"/>
+<chain index="2168"/>
+<chain index="2169"/>
+<chain index="2156"/>
+</pick>
+<pick thing="tpVermin" index="2195" batchindex="320" refcount="0" default="yes">
+<chain index="2149"/>
+</pick>
+<pick thing="typOoze" index="2180" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2179" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="typUndead" index="2192" batchindex="319" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="validgizmo" index="1867" batchindex="38" bootstrap="yes" default="yes">
+<gizmo id="validgizmo">
+<container index="11" chosencount="0" pickcount="0">
+<notes/>
+</container>
+</gizmo>
+<reference bootindex="999999003"/>
+</pick>
+<pick thing="wGauntArm" index="1853" batchindex="25" uniqueness="unique" count="0" bootstrap="yes" default="yes" live="no">
+<reference bootindex="101"/>
+</pick>
+<pick thing="wMainHand" index="1854" batchindex="26" bootstrap="yes" default="yes">
+<reference bootindex="102"/>
+</pick>
+<pick thing="wRay" index="2196" batchindex="321" refcount="0" default="yes"></pick>
+<pick thing="wTouch" index="2197" batchindex="322" refcount="0" default="yes"></pick>
+<pick thing="wUnarmed" index="1852" batchindex="24" bootstrap="yes" default="yes">
+<reference bootindex="100"/>
+</pick>
+<pick thing="wcAcid" index="2198" batchindex="323" refcount="0" default="yes"></pick>
+<pick thing="wcAlign" index="2199" batchindex="324" refcount="0" default="yes"></pick>
+<pick thing="wcAnimal" index="2200" batchindex="325" refcount="0" default="yes"></pick>
+<pick thing="wcArmor" index="2201" batchindex="326" refcount="0" default="yes"></pick>
+<pick thing="wcBinding" index="2202" batchindex="327" refcount="0" default="yes"></pick>
+<pick thing="wcBody" index="2203" batchindex="328" refcount="0" default="yes"></pick>
+<pick thing="wcChange" index="2204" batchindex="329" refcount="0" default="yes"></pick>
+<pick thing="wcCold" index="2205" batchindex="330" refcount="0" default="yes"></pick>
+<pick thing="wcCommand" index="2206" batchindex="331" refcount="0" default="yes"></pick>
+<pick thing="wcConceal" index="2207" batchindex="332" refcount="0" default="yes"></pick>
+<pick thing="wcDeath" index="2208" batchindex="333" refcount="0" default="yes"></pick>
+<pick thing="wcDestruct" index="2209" batchindex="334" refcount="0" default="yes"></pick>
+<pick thing="wcDetect" index="2210" batchindex="335" refcount="0" default="yes"></pick>
+<pick thing="wcDispel" index="2211" batchindex="336" refcount="0" default="yes"></pick>
+<pick thing="wcDivinat" index="2212" batchindex="337" refcount="0" default="yes"></pick>
+<pick thing="wcElectric" index="2213" batchindex="338" refcount="0" default="yes"></pick>
+<pick thing="wcFear" index="2214" batchindex="339" refcount="0" default="yes"></pick>
+<pick thing="wcFire" index="2215" batchindex="340" refcount="0" default="yes"></pick>
+<pick thing="wcFlight" index="2216" batchindex="341" refcount="0" default="yes"></pick>
+<pick thing="wcForce" index="2217" batchindex="342" refcount="0" default="yes"></pick>
+<pick thing="wcGravity" index="2218" batchindex="343" refcount="0" default="yes"></pick>
+<pick thing="wcHealing" index="2219" batchindex="344" refcount="0" default="yes"></pick>
+<pick thing="wcIllumin" index="2220" batchindex="345" refcount="0" default="yes"></pick>
+<pick thing="wcIllusion" index="2221" batchindex="346" refcount="0" default="yes"></pick>
+<pick thing="wcLanguage" index="2222" batchindex="347" refcount="0" default="yes"></pick>
+<pick thing="wcLife" index="2223" batchindex="348" refcount="0" default="yes"></pick>
+<pick thing="wcPain" index="2224" batchindex="349" refcount="0" default="yes"></pick>
+<pick thing="wcPower" index="2225" batchindex="350" refcount="0" default="yes"></pick>
+<pick thing="wcSonic" index="2226" batchindex="351" refcount="0" default="yes"></pick>
+<pick thing="wcSummon" index="2227" batchindex="352" refcount="0" default="yes"></pick>
+<pick thing="wcTeleport" index="2228" batchindex="353" refcount="0" default="yes"></pick>
+<pick thing="wcTime" index="2229" batchindex="354" refcount="0" default="yes"></pick>
+<pick thing="wcWall" index="2230" batchindex="355" refcount="0" default="yes"></pick>
+<pick thing="wcWeather" index="2231" batchindex="356" refcount="0" default="yes"></pick>
+<pick thing="wcWounding" index="2232" batchindex="357" refcount="0" default="yes"></pick>
+<pick thing="weAcidBur0" index="2233" batchindex="358" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weAcidBur0" index="2234" batchindex="359" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weBleeWou0" index="2235" batchindex="360" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weBleeWou0" index="2236" batchindex="361" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weColdSna0" index="2237" batchindex="362" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weColdSna0" index="2238" batchindex="363" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weCramp0" index="2239" batchindex="364" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weCramp0" index="2240" batchindex="365" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weDeciphe0" index="2241" batchindex="366" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weDeciphe0" index="2242" batchindex="367" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weDeciphe0" index="2243" batchindex="368" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weEcho0" index="2244" batchindex="369" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weFlamJet0" index="2245" batchindex="370" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weFlamJet0" index="2246" batchindex="371" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weForcBlo0" index="2247" batchindex="372" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weForcBlo0" index="2248" batchindex="373" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weLift0" index="2249" batchindex="374" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weLift0" index="2250" batchindex="375" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSensMag0" index="2251" batchindex="376" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSensMag0" index="2252" batchindex="377" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSensMag0" index="2253" batchindex="378" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSootTou0" index="2254" batchindex="379" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSpark0" index="2255" batchindex="380" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSpark0" index="2256" batchindex="381" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSpark0" index="2257" batchindex="382" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="wmBoost" index="2258" batchindex="383" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<field id="wmChosen"></field>
+</pick>
+<pick thing="wmBoost" index="2259" batchindex="384" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<field id="wmChosen"></field>
+</pick>
+<pick thing="wmBoost" index="2260" batchindex="385" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<field id="wmChosen"></field>
+</pick>
+<pick thing="wmDistant" index="2261" batchindex="386" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<field id="wmChosen"></field>
+</pick>
+<pick thing="wmDistant" index="2262" batchindex="387" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<field id="wmChosen"></field>
+</pick>
+<pick thing="wmDistant" index="2263" batchindex="388" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<field id="wmChosen"></field>
+</pick>
+<pick thing="wmLengthy" index="2264" batchindex="389" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<field id="wmChosen"></field>
+</pick>
+<pick thing="wmLengthy" index="2265" batchindex="390" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<field id="wmChosen"></field>
+</pick>
+<pick thing="wmLengthy" index="2266" batchindex="391" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<field id="wmChosen"></field>
+</pick>
+<pick thing="xBurrow" index="2267" batchindex="392" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xClimb" index="2268" batchindex="393" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xConstruct" index="2155" batchindex="310" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRd" index="2269" batchindex="394" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdAdB" index="2270" batchindex="395" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdAdGd" index="2271" batchindex="396" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdAdam" index="2272" batchindex="397" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdArro" index="2273" batchindex="398" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdB" index="2274" batchindex="399" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdBMg" index="2275" batchindex="400" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdCIEv" index="2276" batchindex="401" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdCISi" index="2277" batchindex="402" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdChao" index="2278" batchindex="403" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdEpic" index="2279" batchindex="404" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdEvMa" index="2280" batchindex="405" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdEvSi" index="2281" batchindex="406" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdEvil" index="2282" batchindex="407" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdGoCI" index="2283" batchindex="408" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdGoPi" index="2284" batchindex="409" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdGoSi" index="2285" batchindex="410" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdGood" index="2286" batchindex="411" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdIron" index="2287" batchindex="412" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdLaCI" index="2288" batchindex="413" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdLaw" index="2289" batchindex="414" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdLeth" index="2290" batchindex="415" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdMag" index="2291" batchindex="416" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdMgSi" index="2292" batchindex="417" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdMgSl" index="2293" batchindex="418" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdNWoo" index="2294" batchindex="419" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdNoMa" index="2295" batchindex="420" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdP" index="2296" batchindex="421" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdPS" index="2297" batchindex="422" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdS" index="2298" batchindex="423" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdSB" index="2299" batchindex="424" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdSil" index="2300" batchindex="425" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdVorp" index="2301" batchindex="426" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRdWood" index="2302" batchindex="427" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRsAcid" index="2303" batchindex="428" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRsCold" index="2304" batchindex="429" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRsElec" index="2305" batchindex="430" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRsFire" index="2306" batchindex="431" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xDamRsSoni" index="2307" batchindex="432" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xFly" index="2308" batchindex="433" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmAbDmP" index="2194" batchindex="319" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmAbilDm" index="2164" batchindex="310" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmAbilDr" index="2165" batchindex="310" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmBleed" index="2156" batchindex="310" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmCrit" index="2182" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2179" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmDeNec" index="2159" batchindex="310" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmDeath" index="2193" batchindex="319" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmDis" index="2158" batchindex="310" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmEnerDr" index="2168" batchindex="310" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmExhaus" index="2167" batchindex="310" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmFatigu" index="2166" batchindex="310" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmFlank" index="2183" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2179" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmMind" index="2157" batchindex="310" uniqueness="unique" root="no" count="0" refcount="3" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2189" batchindex="318" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmParaly" index="2162" batchindex="310" uniqueness="unique" root="no" count="0" refcount="5" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2170" batchindex="311" bootindex="1"/>
+<reference pickindex="2179" batchindex="316" bootindex="1"/>
+<reference pickindex="2189" batchindex="318" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmPois" index="2160" batchindex="310" uniqueness="unique" root="no" count="0" refcount="4" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2179" batchindex="316" bootindex="1"/>
+<reference pickindex="2189" batchindex="318" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmPoly" index="2181" batchindex="316" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2179" batchindex="316" bootindex="1"/>
+<reference pickindex="2189" batchindex="318" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmPrec" index="2184" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2179" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmSleep" index="2161" batchindex="310" uniqueness="unique" root="no" count="0" refcount="5" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2170" batchindex="311" bootindex="1"/>
+<reference pickindex="2179" batchindex="316" bootindex="1"/>
+<reference pickindex="2189" batchindex="318" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmStun" index="2163" batchindex="310" uniqueness="unique" root="no" count="0" refcount="4" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2153" batchindex="310" bootindex="1"/>
+<reference pickindex="2179" batchindex="316" bootindex="1"/>
+<reference pickindex="2189" batchindex="318" bootindex="1"/>
+<reference pickindex="2190" batchindex="319" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xSplRs" index="1879" batchindex="40" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
+<reference bootindex="1"/>
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xSwim" index="2309" batchindex="435" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+</container>
+<source source="APGHeader" name="Advanced Player&apos;s Guide" count="0"/>
+<source source="APGHero" name="Advanced Player&apos;s Guide Hero Points" count="0"/>
+<source source="APGManeuv" name="Advanced Player&apos;s Guide New Combat Maneuvers" count="0"/>
+<source source="APGSandPoi" name="Shadows Under Sandpoint" count="0"/>
+<source source="APGTrait" name="Advanced Player&apos;s Guide Traits" count="0"/>
+<source source="Arcana" name="Open Content from Unearthed Arcana" count="0"/>
+<source source="BestHeader" name="Bestiary" count="0"/>
+<source source="Bestiary1" name="Bestiary" count="0"/>
+<source source="Bestiary2" name="Bestiary 2" count="0"/>
+<source source="Bestiary3" name="Bestiary 3" count="1"/>
+<source source="BonusBest1" name="Bonus Bestiary" count="0"/>
+<source source="CSBDFoHors" name="Book of the Damned 3: Horsemen of the Apocalypse" count="1"/>
+<source source="CSBDLrdCha" name="Book of the Damned 2: Lords of Chaos" count="0"/>
+<source source="CSBDPrince" name="Book of the Damned 1: Princes of Darkness" count="0"/>
+<source source="CSCitiesGo" name="Cities of Golarion" count="0"/>
+<source source="CSCityStra" name="City of Strangers" count="0"/>
+<source source="CSClHorror" name="Classic Horrors Revisited" count="0"/>
+<source source="CSClMonstr" name="Classic Monsters Revisited" count="0"/>
+<source source="CSClTreas" name="Classic Treasures Revisited" count="0"/>
+<source source="CSDarkmoon" name="Guide to Darkmoon Vale" count="0"/>
+<source source="CSDraEmpGa" name="Dragon Empires Gazetteer" count="1"/>
+<source source="CSDragoRev" name="Dragons Revisited" count="0"/>
+<source source="CSDunDeniz" name="Dungeon Denizens Revisited" count="0"/>
+<source source="CSDungeon" name="Dungeons of Golarion" count="0"/>
+<source source="CSFactionG" name="Faction Guide" count="0"/>
+<source source="CSFieldGui" name="Pathfinder Society Field Guide" count="0"/>
+<source source="CSGodsMagc" name="Gods &amp; Magic" count="0"/>
+<source source="CSGreatBey" name="The Great Beyond" count="0"/>
+<source source="CSHeader" name="Campaign Setting" count="0"/>
+<source source="CSHeartJun" name="Heart of the Jungle" count="0"/>
+<source source="CSISMagic" name="Inner Sea Magic" count="1"/>
+<source source="CSIntoDark" name="Into the Darklands" count="0"/>
+<source source="CSKatapesh" name="Dark Markets: A Guide to Katapesh" count="0"/>
+<source source="CSLandLinn" name="Lands of the Linnorm Kings" count="1"/>
+<source source="CSLostCit" name="Lost Cities of Golarion" count="0"/>
+<source source="CSMisfitMn" name="Misfit Monsters Redeemed" count="0"/>
+<source source="CSRival" name="Rival Guide" count="1"/>
+<source source="CSRiverKin" name="Guide to the River Kingdoms" count="0"/>
+<source source="CSSeekerSe" name="Seekers of Secrets" count="0"/>
+<source source="CSUndeadRe" name="Undead Revisited" count="0"/>
+<source source="CSWorldGui" name="Inner Sea World Guide" count="1"/>
+<source source="CoreDeity" name="Core Rulebook Deities" count="1"/>
+<source source="FireAll" name="Guns Everywhere" count="0"/>
+<source source="FireCommon" name="Commonplace Guns" count="0"/>
+<source source="FireEmerg" name="Emerging Guns" count="1"/>
+<source source="FireNo" name="No Guns" count="0"/>
+<source source="FireVRare" name="Very Rare Guns" count="0"/>
+<source source="Firearm" name="Firearm Availability" count="0"/>
+<source source="GMG" name="GameMastery Guide" count="1"/>
+<source source="HouArmorCh" name="Ignore Armor Check Penalty" count="0"/>
+<source source="HouBonus0" name="Bonus 0-level spells" count="0"/>
+<source source="HouFavNotR" name="Favored Classes Not Required" count="0"/>
+<source source="HouKeen" name="Keen &amp; Imp. Critical Stack" count="0"/>
+<source source="HouNoComm" name="No Common Language" count="0"/>
+<source source="HouUnLang" name="Unrestricted Languages" count="0"/>
+<source source="HouUnTrait" name="Unrestricted Traits" count="0"/>
+<source source="HouseRules" name="House Rules" count="0"/>
+<source source="MiscHeader" name="Miscellaneous Content" count="0"/>
+<source source="OptAction" name="Use Action Points" count="0"/>
+<source source="OptAltRace" name="Use Alternate Racial Traits" count="0"/>
+<source source="OptAnyMin" name="Don&apos;t Restrict Companion Race" count="0"/>
+<source source="OptBody" name="No Age, Height, Weight Limits" count="0"/>
+<source source="OptBonHD" name="Allow PCs to add Bonus HD" count="0"/>
+<source source="OptClasses" name="Classes to Show" count="0"/>
+<source source="OptFaction" name="Use Factions/Backgrounds" count="0"/>
+<source source="OptHPAvg" name="Average HPs at New Levels" count="0"/>
+<source source="OptHPGroup" name="HP Options" count="0"/>
+<source source="OptHPs" name="Max HPs at New Levels" count="0"/>
+<source source="OptMagicIt" name="Equipment, Weapons &amp; Armor to Show" count="0"/>
+<source source="OptNoAdFir" name="Hide Advanced Firearms" count="0"/>
+<source source="OptNoAlFir" name="Hide Firearms &amp; Related" count="0"/>
+<source source="OptNoAniRa" name="No Minion Races" count="0"/>
+<source source="OptNoArti" name="No Artifacts" count="0"/>
+<source source="OptNoBrAge" name="Hide Bronze Age Weapons &amp; Armor" count="0"/>
+<source source="OptNoCoinW" name="No Coin Weight" count="0"/>
+<source source="OptNoCurse" name="No Cursed Items" count="0"/>
+<source source="OptNoEast" name="Hide Eastern Weapons &amp; Armor" count="0"/>
+<source source="OptNoEnc" name="No Encumbrance" count="0"/>
+<source source="OptNoFewMm" name="Don&apos;t Require Memorized Spells" count="0"/>
+<source source="OptNoGladi" name="Hide Gladiator Weapons" count="0"/>
+<source source="OptNoMonst" name="No Extra Races" count="0"/>
+<source source="OptNoNPC" name="No NPC Classes" count="0"/>
+<source source="OptNoNPCRa" name="No NPC Races" count="0"/>
+<source source="OptNoPrest" name="No Prestige Classes" count="0"/>
+<source source="OptNoSFire" name="Hide Simple Firearms" count="0"/>
+<source source="OptNoSiege" name="Hide Siege Weapons" count="0"/>
+<source source="OptNoStAge" name="Hide Stone Age Weapons &amp; Armor" count="0"/>
+<source source="OptNoTempl" name="No Templates" count="0"/>
+<source source="OptNoTools" name="Skills Don&apos;t Need Tools" count="0"/>
+<source source="OptPrestig" name="Use Prestige Awards" count="0"/>
+<source source="OptRaces" name="Races to Show" count="0"/>
+<source source="OptRepItem" name="Replace Item Creation Bonus Feats" count="0"/>
+<source source="OptTraits" name="Use Traits &amp; Flaws" count="0"/>
+<source source="OptUpbring" name="Free Upbringing Feat" count="0"/>
+<source source="OptVariant" name="Use Archetypes" count="0"/>
+<source source="Optional" name="Optional Rules" count="0"/>
+<source source="OutAmmo" name="Hide Ammo (in weapons)" count="1"/>
+<source source="OutHideBck" name="Hide Background Details" count="0"/>
+<source source="OutImage" name="Show Hero Portrait" count="1"/>
+<source source="OutSkills" name="Hide Unusable Skills" count="1"/>
+<source source="OutSpecDsc" name="Show Feat / Ability Descriptions" count="0"/>
+<source source="OutTwoWep" name="Always Print 2-Weapon Attacks" count="0"/>
+<source source="OutUnarmed" name="Hide Unarmed (in weapons)" count="0"/>
+<source source="OutValid" name="Hide Validation Messages" count="1"/>
+<source source="OutputOpt" name="Output Options" count="0"/>
+<source source="PCAdvArm" name="Adventurer&apos;s Armory" count="0"/>
+<source source="PCAndoran" name="Andoran, Spirit of Liberty" count="0"/>
+<source source="PCCheliax" name="Cheliax, Empire of Devils" count="0"/>
+<source source="PCDwarvGol" name="Dwarves of Golarion" count="0"/>
+<source source="PCElvesGol" name="Elves of Golarion" count="0"/>
+<source source="PCFaithBal" name="Faiths of Balance" count="0"/>
+<source source="PCFaithCor" name="Faiths of Corruption" count="1"/>
+<source source="PCFaithPur" name="Faiths of Purity" count="0"/>
+<source source="PCGnomeGol" name="Gnomes of Golarion" count="0"/>
+<source source="PCGobliGol" name="Goblins of Golarion" count="0"/>
+<source source="PCHalflGol" name="Halflings of Golarion" count="0"/>
+<source source="PCHeader" name="Player Companion" count="0"/>
+<source source="PCHumanGol" name="Humans of Golarion" count="0"/>
+<source source="PCInSeaPri" name="Inner Sea Primer" count="0"/>
+<source source="PCOrcsGol" name="Orcs of Golarion" count="0"/>
+<source source="PCOsirion" name="Osirion, Land of the Pharaohs" count="0"/>
+<source source="PCQadira" name="Qadira, Gateway to the East" count="0"/>
+<source source="PCSargava" name="Sargava, the Lost Colony" count="0"/>
+<source source="PCTaldor" name="Taldor, Echoes of Glory" count="0"/>
+<source source="PaizoBlog" name="Paizo Blog" count="1"/>
+<source source="PathAdvent" name="Pathfinder Adventure Paths" count="0"/>
+<source source="PathCCrown" name="Carrion Crown" count="0"/>
+<source source="PathCounTh" name="Council of Thieves" count="0"/>
+<source source="PathCurse" name="Curse of the Crimson Throne" count="0"/>
+<source source="PathJadeRe" name="Jade Regent" count="0"/>
+<source source="PathKingma" name="Kingmaker" count="0"/>
+<source source="PathLegacy" name="Legacy of Fire" count="0"/>
+<source source="PathRise" name="Rise of the Runelords" count="0"/>
+<source source="PathSRD" name="SRD Pathfinder Adventure Paths" count="0"/>
+<source source="PathSecond" name="Second Darkness" count="0"/>
+<source source="PathSerpSk" name="Serpent&apos;s Skull" count="0"/>
+<source source="SRD" name="Prior SRD Content" count="0"/>
+<source source="SRDAnimals" name="d20 SRD Animals" count="0"/>
+<source source="SRDItems" name="d20 SRD Magic Items" count="0"/>
+<source source="SRDPsionic" name="d20 SRD Psionics (Planned Addition)" count="0"/>
+<source source="SRDSpells" name="d20 SRD Spells" count="0"/>
+<source source="ShowTrackR" name="Include Tracked Resources on Statblock" count="0"/>
+<source source="SocChar" name="Pathfinder Society Organized Play Character" count="0"/>
+<source source="SocContent" name="Pathfinder Society Content (no Restrictions)" count="0"/>
+<source source="Society" name="Pathfinder Society" count="0"/>
+<source source="UCArmorDR" name="Ultimate Combat Armor/DR" count="0"/>
+<source source="UCCallShot" name="Ultimate Combat Called Shots" count="0"/>
+<source source="UCHeader" name="Ultimate Combat" count="0"/>
+<source source="UCPieceArm" name="Ultimate Combat Piecemeal Armor" count="0"/>
+<source source="UCWound" name="Ultimate Combat Wounds &amp; Vigor" count="0"/>
+<source source="UMFamil" name="Ultimate Magic Familiars" count="1"/>
+<source source="UMHeader" name="Ultimate Magic" count="0"/>
+<source source="UMWords" name="Words of Power" count="0"/>
+<source source="UltCombat" name="Ultimate Combat" count="0"/>
+<source source="UltMagic" name="Ultimate Magic" count="0"/>
+<source source="UserParent" name="User Content" count="0"/>
+<source source="WebTraits" name="Character Traits Web Enhancement" count="1"/>
+<source source="XPFast" name="Fast Advancement" count="0"/>
+<source source="XPMedium" name="Medium Advancement" count="1"/>
+<source source="XPSlow" name="Slow Advancement" count="0"/>
+<source source="XPSociety" name="Pathfinder Society Advancement" count="0"/>
+<source source="XPTrack" name="Advancement Speed" count="0"/>
+<source source="__none__" name="(no user sources defined)" count="0"/>
+<source source="__source__" name="Master Source" count="0"/>
+<source source="APG" name="Advanced Player&apos;s Guide" count="1"/>
+<source source="APGFamil" name="Advanced Player&apos;s Guide Familiars" count="1"/>
+<ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
+<usagepool id="jCP" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPP" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPresSpent" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPrestige" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jSP" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jXP" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="psiPPUsed" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPP" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPresSpent" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPrestige" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jSP" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jXP" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="2316" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="2316" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPP" usagecount="0" pickindex="2316" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPresSpent" usagecount="0" pickindex="2316" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPrestige" usagecount="0" pickindex="2316" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jSP" usagecount="0" pickindex="2316" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jXP" usagecount="0" pickindex="2316" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="Damage" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="Nonlethal" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="PresSpent" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="TotalCP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="TotalGP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="TotalPP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="TotalPres" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="TotalPwrPt" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="TotalSP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="facPresTPA" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="facPresSpt" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+</minion>
+<reference pickindex="1826" batchindex="561" bootindex="1"/>
+</pick>
+<pick thing="cBard" index="1093" batchindex="504" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1094"/>
+<linkage id="helper" index="1094"/>
+<field id="cIndex" value="6."></field>
 <field id="cHP" user="8."></field>
 <field id="cFavorChc"></field>
-<field id="cIndexUser" value="8."></field>
+<field id="cIndexUser" value="6."></field>
 </pick>
-<pick thing="cBard" index="1133" batchindex="509" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1097"/>
-<linkage id="helper" index="1097"/>
-<field id="cIndex" value="9."></field>
+<pick thing="cBard" index="1130" batchindex="505" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1094"/>
+<linkage id="helper" index="1094"/>
+<field id="cIndex" value="7."></field>
 <field id="cHP" user="8."></field>
 <field id="cFavorChc"></field>
-<field id="cIndexUser" value="9."></field>
+<field id="cIndexUser" value="7."></field>
 </pick>
-<pick thing="cBard" index="1134" batchindex="510" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1097"/>
-<linkage id="helper" index="1097"/>
-<field id="cIndex" value="10."></field>
-<field id="cHP" user="8."></field>
-<field id="cFavorChc"></field>
-<field id="cIndexUser" value="10."></field>
-</pick>
-<pick thing="cBard" index="1135" batchindex="511" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1097"/>
-<linkage id="helper" index="1097"/>
-<field id="cIndex" value="11."></field>
-<field id="cHP" user="8."></field>
-<field id="cFavorChc"></field>
-<field id="cIndexUser" value="11."></field>
-</pick>
-<pick thing="cBard" index="1136" batchindex="512" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1097"/>
-<linkage id="helper" index="1097"/>
-<field id="cIndex" value="12."></field>
-<field id="cHP" user="8."></field>
-<field id="cFavorChc"></field>
-<field id="cIndexUser" value="12."></field>
-</pick>
-<pick thing="cBrdJack10" index="1107" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdJack10" index="1104" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdJack16" index="1108" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdJack16" index="1105" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdJack19" index="1109" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdJack19" index="1106" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdKnow" index="1102" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdKnow" index="1099" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdLore" index="1104" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdLore" index="1101" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdLore" index="1105" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdLore" index="1102" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdLore" index="1106" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdLore" index="1103" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPCount" index="1110" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPCount" index="1107" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPDead" index="1129" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPDead" index="1126" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPDistr" index="1111" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPDistr" index="1108" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPDoom" index="1123" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPDoom" index="1120" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPFas" index="1112" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPFas" index="1109" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPFrigh" index="1126" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPFrigh" index="1123" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsC" index="1113" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsC" index="1110" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsC" index="1114" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsC" index="1111" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsC" index="1115" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsC" index="1112" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsC" index="1116" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsC" index="1113" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsGr" index="1124" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsGr" index="1121" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsHe" index="1127" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsHe" index="1124" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsM" index="1117" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsM" index="1114" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsM" index="1118" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsM" index="1115" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsM" index="1119" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsM" index="1116" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsM" index="1120" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsM" index="1117" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPInsM" index="1121" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPInsM" index="1118" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPSooth" index="1125" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPSooth" index="1122" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPSugg" index="1122" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPSugg" index="1119" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPSugg" index="1128" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPSugg" index="1125" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPerfor" index="1130" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPerfor" index="1127" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPerfor" index="1131" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPerfor" index="1128" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdPerfor" index="1132" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdPerfor" index="1129" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdVeSing" index="1137" batchindex="513" uniqueness="unique" fieldcount="3" tablelinkid="cHelpBrd" source="ClsCstAbil" agentid="cHelpBrd">
+<pick thing="cBrdVeSing" index="1131" batchindex="506" uniqueness="unique" fieldcount="3" tablelinkid="cHelpBrd" source="ClsCstAbil" agentid="cHelpBrd">
 <reference/>
 <field id="custOrder" value="2."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cBrdVersed" index="1103" batchindex="508" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="cBrdVersed" index="1100" batchindex="504" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cCleric" index="1153" batchindex="529" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1154"/>
-<linkage id="helper" index="1154"/>
-<field id="cIndex" value="13."></field>
+<pick thing="cCleric" index="1142" batchindex="517" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1143"/>
+<linkage id="helper" index="1143"/>
+<field id="cIndex" value="8."></field>
 <field id="cHP" user="8."></field>
 <field id="cFavorChc"></field>
-<field id="cIndexUser" value="13."></field>
+<field id="cIndexUser" value="8."></field>
 </pick>
-<pick thing="cCleric" index="1164" batchindex="530" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1154"/>
-<linkage id="helper" index="1154"/>
-<field id="cIndex" value="14."></field>
+<pick thing="cCleric" index="1153" batchindex="518" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1143"/>
+<linkage id="helper" index="1143"/>
+<field id="cIndex" value="9."></field>
 <field id="cHP" user="8."></field>
 <field id="cFavorChc"></field>
-<field id="cIndexUser" value="14."></field>
+<field id="cIndexUser" value="9."></field>
 </pick>
-<pick thing="cCleric" index="1165" batchindex="531" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1154"/>
-<linkage id="helper" index="1154"/>
-<field id="cIndex" value="15."></field>
-<field id="cHP" user="8."></field>
-<field id="cFavorChc"></field>
-<field id="cIndexUser" value="15."></field>
-</pick>
-<pick thing="cCleric" index="1166" batchindex="532" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1154"/>
-<linkage id="helper" index="1154"/>
-<field id="cIndex" value="16."></field>
-<field id="cHP" user="8."></field>
-<field id="cFavorChc"></field>
-<field id="cIndexUser" value="16."></field>
-</pick>
-<pick thing="cCleric" index="1167" batchindex="533" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1154"/>
-<linkage id="helper" index="1154"/>
-<field id="cIndex" value="17."></field>
-<field id="cHP" user="8."></field>
-<field id="cFavorChc"></field>
-<field id="cIndexUser" value="17."></field>
-</pick>
-<pick thing="cClrAura" index="1159" batchindex="529" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1154" batchindex="529" bootindex="1"/>
+<pick thing="cClrAura" index="1148" batchindex="517" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1143" batchindex="517" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cClrChan" index="1162" batchindex="529" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<chain index="1163"/>
-<reference pickindex="1154" batchindex="529" bootindex="1"/>
+<pick thing="cClrChan" index="1151" batchindex="517" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="1152"/>
+<reference pickindex="1143" batchindex="517" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cClrDeiWep" index="1160" batchindex="529" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1154" batchindex="529" bootindex="1"/>
+<pick thing="cClrDeiWep" index="1149" batchindex="517" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1143" batchindex="517" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cClrSpont" index="1161" batchindex="529" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1154" batchindex="529" bootindex="1"/>
+<pick thing="cClrSpont" index="1150" batchindex="517" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1143" batchindex="517" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdCavesi" index="2283" batchindex="570" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="2280" batchindex="570" bootindex="1"/>
+<pick thing="cDrdCavesi" index="1755" batchindex="549" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1752" batchindex="549" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdNature" index="2257" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdNature" index="1730" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdResNat" index="2262" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdResNat" index="1735" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdSpont" index="2259" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdSpont" index="1732" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdThous" index="2276" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdThous" index="1749" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdTime" index="2277" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdTime" index="1750" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdTrackS" index="2261" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdTrackS" index="1734" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdTremor" index="2281" batchindex="570" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<chain index="538"/>
-<reference pickindex="2280" batchindex="570" bootindex="1"/>
+<pick thing="cDrdTremor" index="1753" batchindex="549" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<chain index="534"/>
+<reference pickindex="1752" batchindex="549" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdTremor" index="2282" batchindex="570" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<chain index="538"/>
-<reference pickindex="2280" batchindex="570" bootindex="1"/>
+<pick thing="cDrdTremor" index="1754" batchindex="549" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<chain index="534"/>
+<reference pickindex="1752" batchindex="549" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdVenom" index="2274" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<pick thing="cDrdVenom" index="1747" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <chain index="329"/>
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWild" index="2264" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWild" index="1737" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWild" index="2265" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWild" index="1738" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWild" index="2266" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWild" index="1739" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWild" index="2267" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWild" index="1740" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWild" index="2268" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWild" index="1741" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWild" index="2269" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWild" index="1742" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWild" index="2270" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWild" index="1743" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWild" index="2271" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWild" index="1744" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWild" index="2272" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWild" index="1745" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWildAn" index="2263" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWildAn" index="1736" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWildEl" index="2273" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWildEl" index="1746" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDrdWildPl" index="2275" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cDrdWildPl" index="1748" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cDruid" index="2250" batchindex="567" refcount="0" fieldcount="4" source="clsTable">
-<chain index="2251"/>
-<linkage id="helper" index="2251"/>
-<field id="cIndex" value="19."></field>
+<pick thing="cDruid" index="1723" batchindex="547" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1724"/>
+<linkage id="helper" index="1724"/>
+<field id="cIndex" value="11."></field>
 <field id="cHP" user="8."></field>
 <field id="cFavorChc"></field>
-<field id="cIndexUser" value="19."></field>
+<field id="cIndexUser" value="11."></field>
 </pick>
-<pick thing="cDruid" index="2278" batchindex="568" refcount="0" fieldcount="4" source="clsTable">
-<chain index="2251"/>
-<linkage id="helper" index="2251"/>
-<field id="cIndex" value="20."></field>
+<pick thing="cDruid" index="1751" batchindex="548" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1724"/>
+<linkage id="helper" index="1724"/>
+<field id="cIndex" value="12."></field>
 <field id="cHP" user="8."></field>
 <field id="cFavorChc"></field>
-<field id="cIndexUser" value="20."></field>
+<field id="cIndexUser" value="12."></field>
 </pick>
-<pick thing="cHelpBrd" index="1097" batchindex="508" uniqueness="unique" root="no" refcount="5" fieldcount="1" bootstrap="yes">
+<pick thing="cHelpAPa" index="1765" batchindex="558" uniqueness="unique" root="no" refcount="2" fieldcount="1" bootstrap="yes">
+<chain index="1766"/>
+<chain index="1767"/>
+<chain index="1768"/>
+<chain index="1769"/>
+<chain index="1770"/>
+<chain index="1771"/>
+<chain index="1772"/>
+<chain index="1773"/>
+<chain index="1774"/>
+<chain index="1775"/>
+<chain index="1776"/>
+<chain index="1777"/>
+<chain index="1778"/>
+<chain index="1779"/>
+<chain index="1780"/>
+<chain index="1781"/>
+<chain index="1782"/>
+<chain index="1783"/>
+<chain index="1784"/>
+<chain index="1785"/>
+<chain index="1786"/>
+<chain index="1787"/>
+<chain index="1788"/>
+<chain index="1789"/>
+<chain index="1790"/>
+<linkage id="spellattr" index="64"/>
+<reference pickindex="1764" batchindex="558" bootindex="1"/>
+<reference pickindex="2320" batchindex="564" bootindex="1"/>
+<field id="cIndexCopy" value="5."></field>
+</pick>
+<pick thing="cHelpBrd" index="1094" batchindex="504" uniqueness="unique" root="no" refcount="2" fieldcount="1" bootstrap="yes">
+<chain index="1095"/>
+<chain index="1096"/>
+<chain index="1097"/>
 <chain index="1098"/>
 <chain index="1099"/>
 <chain index="1100"/>
@@ -12004,67 +13758,88 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <chain index="1127"/>
 <chain index="1128"/>
 <chain index="1129"/>
-<chain index="1130"/>
-<chain index="1131"/>
-<chain index="1132"/>
 <linkage id="spellattr" index="64"/>
-<reference pickindex="1096" batchindex="508" bootindex="1"/>
-<reference pickindex="1133" batchindex="509" bootindex="1"/>
-<reference pickindex="1134" batchindex="510" bootindex="1"/>
-<reference pickindex="1135" batchindex="511" bootindex="1"/>
-<reference pickindex="1136" batchindex="512" bootindex="1"/>
+<reference pickindex="1093" batchindex="504" bootindex="1"/>
+<reference pickindex="1130" batchindex="505" bootindex="1"/>
 <field id="cIndexCopy" value="1."></field>
 </pick>
-<pick thing="cHelpClr" index="1154" batchindex="529" uniqueness="unique" root="no" refcount="5" fieldcount="1" bootstrap="yes">
-<chain index="1155"/>
-<chain index="1156"/>
-<chain index="1157"/>
-<chain index="1158"/>
-<chain index="1159"/>
-<chain index="1160"/>
-<chain index="1161"/>
-<chain index="1162"/>
+<pick thing="cHelpClr" index="1143" batchindex="517" uniqueness="unique" root="no" refcount="2" fieldcount="1" bootstrap="yes">
+<chain index="1144"/>
+<chain index="1145"/>
+<chain index="1146"/>
+<chain index="1147"/>
+<chain index="1148"/>
+<chain index="1149"/>
+<chain index="1150"/>
+<chain index="1151"/>
 <linkage id="spellattr" index="69"/>
-<reference pickindex="1153" batchindex="529" bootindex="1"/>
-<reference pickindex="1164" batchindex="530" bootindex="1"/>
-<reference pickindex="1165" batchindex="531" bootindex="1"/>
-<reference pickindex="1166" batchindex="532" bootindex="1"/>
-<reference pickindex="1167" batchindex="533" bootindex="1"/>
+<reference pickindex="1142" batchindex="517" bootindex="1"/>
+<reference pickindex="1153" batchindex="518" bootindex="1"/>
 <field id="cIndexCopy" value="2."></field>
 </pick>
-<pick thing="cHelpDrd" index="2251" batchindex="567" uniqueness="unique" root="no" refcount="2" fieldcount="1" bootstrap="yes">
-<chain index="2252"/>
-<chain index="2253"/>
-<chain index="2254"/>
-<chain index="2255"/>
-<chain index="2256"/>
-<chain index="2257"/>
-<chain index="2258"/>
-<chain index="2259"/>
-<chain index="2260"/>
-<chain index="2261"/>
-<chain index="2262"/>
-<chain index="2263"/>
-<chain index="2264"/>
-<chain index="2265"/>
-<chain index="2266"/>
-<chain index="2267"/>
-<chain index="2268"/>
-<chain index="2269"/>
-<chain index="2270"/>
-<chain index="2271"/>
-<chain index="2272"/>
-<chain index="2273"/>
-<chain index="2274"/>
-<chain index="2275"/>
-<chain index="2276"/>
-<chain index="2277"/>
+<pick thing="cHelpDrd" index="1724" batchindex="547" uniqueness="unique" root="no" refcount="2" fieldcount="1" bootstrap="yes">
+<chain index="1725"/>
+<chain index="1726"/>
+<chain index="1727"/>
+<chain index="1728"/>
+<chain index="1729"/>
+<chain index="1730"/>
+<chain index="1731"/>
+<chain index="1732"/>
+<chain index="1733"/>
+<chain index="1734"/>
+<chain index="1735"/>
+<chain index="1736"/>
+<chain index="1737"/>
+<chain index="1738"/>
+<chain index="1739"/>
+<chain index="1740"/>
+<chain index="1741"/>
+<chain index="1742"/>
+<chain index="1743"/>
+<chain index="1744"/>
+<chain index="1745"/>
+<chain index="1746"/>
+<chain index="1747"/>
+<chain index="1748"/>
+<chain index="1749"/>
+<chain index="1750"/>
 <linkage id="spellattr" index="69"/>
-<reference pickindex="2250" batchindex="567" bootindex="1"/>
-<reference pickindex="2278" batchindex="568" bootindex="1"/>
+<reference pickindex="1723" batchindex="547" bootindex="1"/>
+<reference pickindex="1751" batchindex="548" bootindex="1"/>
 <field id="cIndexCopy" value="4."></field>
 </pick>
-<pick thing="cHelpSor" index="485" batchindex="437" uniqueness="unique" root="no" refcount="7" bootstrap="yes" default="yes">
+<pick thing="cHelpOra" index="1792" batchindex="559" uniqueness="unique" root="no" refcount="2" fieldcount="1" bootstrap="yes">
+<chain index="1793"/>
+<chain index="1794"/>
+<chain index="1795"/>
+<chain index="1796"/>
+<chain index="1797"/>
+<chain index="1798"/>
+<chain index="1799"/>
+<chain index="1800"/>
+<chain index="1801"/>
+<chain index="1802"/>
+<chain index="1803"/>
+<chain index="1804"/>
+<chain index="1805"/>
+<chain index="1806"/>
+<chain index="1807"/>
+<chain index="1808"/>
+<chain index="1809"/>
+<chain index="1810"/>
+<chain index="1811"/>
+<chain index="1812"/>
+<chain index="1813"/>
+<chain index="1814"/>
+<chain index="1815"/>
+<linkage id="spellattr" index="64"/>
+<linkage id="maxsplattr" index="64"/>
+<reference pickindex="1791" batchindex="559" bootindex="1"/>
+<reference pickindex="1816" batchindex="560" bootindex="1"/>
+<field id="cIndexCopy" value="-1."></field>
+</pick>
+<pick thing="cHelpSor" index="485" batchindex="437" uniqueness="unique" root="no" refcount="5" bootstrap="yes" default="yes">
 <chain index="486"/>
 <chain index="487"/>
 <linkage id="spellattr" index="64"/>
@@ -12073,16 +13848,118 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference pickindex="490" batchindex="439" bootindex="1"/>
 <reference pickindex="491" batchindex="440" bootindex="1"/>
 <reference pickindex="492" batchindex="441" bootindex="1"/>
-<reference pickindex="493" batchindex="442" bootindex="1"/>
-<reference pickindex="494" batchindex="443" bootindex="1"/>
 </pick>
-<pick thing="cHelpWiz" index="1721" batchindex="553" uniqueness="unique" root="no" fieldcount="1" bootstrap="yes">
-<chain index="1722"/>
-<chain index="1723"/>
-<chain index="1725"/>
+<pick thing="cHelpWit" index="1818" batchindex="561" uniqueness="unique" root="no" refcount="2" fieldcount="1" bootstrap="yes">
+<chain index="1819"/>
+<chain index="1820"/>
+<chain index="1821"/>
+<chain index="1822"/>
+<chain index="1823"/>
+<chain index="1824"/>
+<chain index="1825"/>
+<chain index="1826"/>
+<chain index="2310"/>
+<chain index="2311"/>
+<chain index="2312"/>
+<chain index="2313"/>
+<linkage id="maxsplattr" index="67"/>
 <linkage id="spellattr" index="67"/>
-<reference pickindex="1720" batchindex="553" bootindex="1"/>
+<reference pickindex="1817" batchindex="561" bootindex="1"/>
+<reference pickindex="2318" batchindex="562" bootindex="1"/>
+<field id="cIndexCopy" value="-1."></field>
+</pick>
+<pick thing="cHelpWiz" index="1700" batchindex="536" uniqueness="unique" root="no" refcount="3" fieldcount="1" bootstrap="yes">
+<chain index="1701"/>
+<chain index="1702"/>
+<chain index="1704"/>
+<linkage id="spellattr" index="67"/>
+<reference pickindex="1699" batchindex="536" bootindex="1"/>
+<reference pickindex="1763" batchindex="557" bootindex="1"/>
+<reference pickindex="2319" batchindex="563" bootindex="1"/>
 <field id="cIndexCopy" value="3."></field>
+</pick>
+<pick thing="cOraDeafen" index="2333" batchindex="566" uniqueness="unique" fieldcount="3" tablelinkid="cHelpOra" source="ClsSecAbil" agentid="cHelpOra">
+<chain index="2334"/>
+<chain index="2336"/>
+<chain index="2337"/>
+<chain index="2338"/>
+<reference/>
+<field id="custOrder" value="10."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cOraImpPer" index="2334" batchindex="566" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="2335"/>
+<reference pickindex="2333" batchindex="566" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cOraImpPer" index="2336" batchindex="566" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="2335"/>
+<reference pickindex="2333" batchindex="566" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cOraMyBone" index="2321" batchindex="565" uniqueness="unique" fieldcount="3" tablelinkid="cHelpOra" source="ClsCstAbil" agentid="cHelpOra">
+<chain index="2322"/>
+<chain index="2323"/>
+<chain index="2324"/>
+<chain index="2325"/>
+<chain index="2326"/>
+<chain index="2327"/>
+<chain index="2328"/>
+<chain index="2329"/>
+<chain index="2330"/>
+<chain index="2331"/>
+<chain index="2332"/>
+<reference/>
+<field id="custOrder" value="9."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cOraPoKill" index="2329" batchindex="565" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cOraReBone" index="2327" batchindex="565" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cOraResLif" index="2339" batchindex="567" uniqueness="unique" fieldcount="3" tablelinkid="cHelpOra" source="ClsTerAbil" agentid="cHelpOra">
+<chain index="2340"/>
+<reference/>
+<field id="custOrder" value="11."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cOraTremor" index="2337" batchindex="566" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="534"/>
+<reference pickindex="2333" batchindex="566" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cOracle" index="1791" batchindex="559" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1792"/>
+<linkage id="helper" index="1792"/>
+<field id="cIndex" value="15."></field>
+<field id="cHP" user="6."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="15."></field>
+</pick>
+<pick thing="cOracle" index="1816" batchindex="560" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1792"/>
+<linkage id="helper" index="1792"/>
+<field id="cIndex" value="16."></field>
+<field id="cHP" user="6."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="16."></field>
+</pick>
+<pick thing="cPAaAuDesp" index="1780" batchindex="558" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
 </pick>
 <pick thing="cSorEschew" index="487" batchindex="437" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <chain index="488"/>
@@ -12090,55 +13967,59 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cSorMassmo" index="533" batchindex="449" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="cSorMassmo" index="529" batchindex="445" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cSorMassmo" index="534" batchindex="449" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="cSorMassmo" index="530" batchindex="445" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cSorMassmo" index="535" batchindex="449" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="cSorMassmo" index="531" batchindex="445" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cSorPhotos" index="530" batchindex="449" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="cSorPhotos" index="526" batchindex="445" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cSorPhotos" index="532" batchindex="449" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="cSorPhotos" index="528" batchindex="445" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cSorRootin" index="536" batchindex="449" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<chain index="537"/>
-<chain index="538"/>
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="cSorRootin" index="532" batchindex="445" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="533"/>
+<chain index="534"/>
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cSorShepTr" index="539" batchindex="449" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<pick thing="cSorShepTr" index="535" batchindex="445" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <chain index="331"/>
 <chain index="329"/>
 <chain index="350"/>
 <chain index="330"/>
 <chain index="332"/>
-<chain index="538"/>
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<chain index="534"/>
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cSorTangle" index="531" batchindex="449" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="cSorTangle" index="527" batchindex="445" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cSorVerdan" index="520" batchindex="449" uniqueness="unique" fieldcount="4" tablelinkid="cHelpSor" source="ClsCstAbil" agentid="cHelpSor">
+<pick thing="cSorVerdan" index="516" batchindex="445" uniqueness="unique" fieldcount="4" tablelinkid="cHelpSor" source="ClsCstAbil" agentid="cHelpSor">
+<chain index="517"/>
+<chain index="518"/>
+<chain index="519"/>
+<chain index="520"/>
 <chain index="521"/>
 <chain index="522"/>
 <chain index="523"/>
@@ -12151,11 +14032,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <chain index="530"/>
 <chain index="531"/>
 <chain index="532"/>
-<chain index="533"/>
-<chain index="534"/>
 <chain index="535"/>
-<chain index="536"/>
-<chain index="539"/>
 <reference/>
 <field id="custOrder" value="1."></field>
 <field id="actUser" user="1."></field>
@@ -12182,7 +14059,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <linkage id="helper" index="485"/>
 <field id="cIndex" value="3."></field>
 <field id="cHP" user="3."></field>
-<field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="590"></field>
+<field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="586"></field>
 <field id="cIndexUser" value="3."></field>
 </pick>
 <pick thing="cSorcerer" index="491" batchindex="440" refcount="0" fieldcount="4" source="clsTable">
@@ -12190,7 +14067,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <linkage id="helper" index="485"/>
 <field id="cIndex" value="4."></field>
 <field id="cHP" user="3."></field>
-<field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="516"></field>
+<field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="512"></field>
 <field id="cIndexUser" value="4."></field>
 </pick>
 <pick thing="cSorcerer" index="492" batchindex="441" refcount="0" fieldcount="4" source="clsTable">
@@ -12198,119 +14075,162 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <linkage id="helper" index="485"/>
 <field id="cIndex" value="5."></field>
 <field id="cHP" user="3."></field>
-<field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="591"></field>
+<field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="587"></field>
 <field id="cIndexUser" value="5."></field>
 </pick>
-<pick thing="cSorcerer" index="493" batchindex="442" refcount="0" fieldcount="4" source="clsTable">
-<chain index="485"/>
-<linkage id="helper" index="485"/>
-<field id="cIndex" value="6."></field>
-<field id="cHP" user="3."></field>
-<field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="593"></field>
-<field id="cIndexUser" value="6."></field>
-</pick>
-<pick thing="cSorcerer" index="494" batchindex="443" refcount="0" fieldcount="4" source="clsTable">
-<chain index="485"/>
-<linkage id="helper" index="485"/>
-<field id="cIndex" value="7."></field>
-<field id="cHP" user="3."></field>
-<field id="cFavorChc" menuthing="fcSorHuman" ispick="yes" menuusage="hero" cacheindex="592"></field>
-<field id="cIndexUser" value="7."></field>
-</pick>
-<pick thing="cWildEmp" index="2258" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cWildEmp" index="1731" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cWizAcidCl" index="1736" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1730" batchindex="557" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="cWizBond" index="2234" batchindex="560" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWiz" source="ClsTerAbil" agentid="cHelpWiz">
+<pick thing="cWitBlight" index="2355" batchindex="582" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWit" source="ClsCstAbil" agentid="cHelpWit">
 <reference/>
-<field id="custOrder" value="7."></field>
+<field id="custOrder" value="12."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cWizEaGlid" index="1737" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<chain index="436"/>
-<reference pickindex="1730" batchindex="557" bootindex="1"/>
+<pick thing="cWitCackle" index="2356" batchindex="583" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWit" source="ClsCstAbil" agentid="cHelpWit">
+<reference/>
+<field id="custOrder" value="13."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cWizEarSup" index="1731" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1730" batchindex="557" bootindex="1"/>
+<pick thing="cWitCatSp" index="2357" batchindex="584" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWit" source="ClsSecAbil" agentid="cHelpWit">
+<chain index="2358"/>
+<chain index="2359"/>
+<chain index="2360"/>
+<chain index="2361"/>
+<chain index="2362"/>
+<chain index="2363"/>
+<chain index="2364"/>
+<chain index="2365"/>
+<chain index="2366"/>
+<reference/>
+<field id="custOrder" value="14."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cWizEarSup" index="1732" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1730" batchindex="557" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
+<pick thing="cWitch" index="1817" batchindex="561" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1818"/>
+<linkage id="helper" index="1818"/>
+<field id="cIndex" value="17."></field>
+<field id="cHP" user="6."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="17."></field>
 </pick>
-<pick thing="cWizEarSup" index="1733" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1730" batchindex="557" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="cWizEarSup" index="1734" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1730" batchindex="557" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="cWizEarSup" index="1735" batchindex="557" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1730" batchindex="557" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="cWizScribe" index="1723" batchindex="553" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<chain index="1724"/>
-<reference pickindex="1721" batchindex="553" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="cWizSplFoc" index="1725" batchindex="553" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<chain index="1726"/>
-<reference pickindex="1721" batchindex="553" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="cWizard" index="1720" batchindex="553" refcount="0" fieldcount="4" source="clsTable">
-<chain index="1721"/>
-<linkage id="helper" index="1721"/>
+<pick thing="cWitch" index="2318" batchindex="562" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1818"/>
+<linkage id="helper" index="1818"/>
 <field id="cIndex" value="18."></field>
 <field id="cHP" user="6."></field>
 <field id="cFavorChc"></field>
 <field id="cIndexUser" value="18."></field>
 </pick>
-<pick thing="cWoodStrid" index="2260" batchindex="567" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="cWizAcidCl" index="1715" batchindex="540" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1709" batchindex="540" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cdAnimal" index="1168" batchindex="534" uniqueness="unique" fieldcount="3" tablelinkid="cHelpClr" source="ClsCstAbil" agentid="cHelpClr">
-<chain index="1169"/>
-<chain index="1170"/>
-<chain index="1692"/>
-<chain index="1693"/>
+<pick thing="cWizBond" index="1718" batchindex="542" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWiz" source="ClsTerAbil" agentid="cHelpWiz">
+<reference/>
+<field id="custOrder" value="7."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEaGlid" index="1716" batchindex="540" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="436"/>
+<reference pickindex="1709" batchindex="540" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEarSup" index="1710" batchindex="540" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1709" batchindex="540" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEarSup" index="1711" batchindex="540" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1709" batchindex="540" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEarSup" index="1712" batchindex="540" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1709" batchindex="540" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEarSup" index="1713" batchindex="540" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1709" batchindex="540" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizEarSup" index="1714" batchindex="540" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1709" batchindex="540" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizScribe" index="1702" batchindex="536" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="1703"/>
+<reference pickindex="1700" batchindex="536" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizSplFoc" index="1704" batchindex="536" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<chain index="1705"/>
+<reference pickindex="1700" batchindex="536" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cWizard" index="1699" batchindex="536" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1700"/>
+<linkage id="helper" index="1700"/>
+<field id="cIndex" value="10."></field>
+<field id="cHP" user="6."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="10."></field>
+</pick>
+<pick thing="cWizard" index="1763" batchindex="557" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1700"/>
+<linkage id="helper" index="1700"/>
+<field id="cIndex" value="13."></field>
+<field id="cHP" user="6."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="13."></field>
+</pick>
+<pick thing="cWizard" index="2319" batchindex="563" refcount="0" fieldcount="4" source="clsTable">
+<chain index="1700"/>
+<linkage id="helper" index="1700"/>
+<field id="cIndex" value="19."></field>
+<field id="cHP" user="6."></field>
+<field id="cFavorChc"></field>
+<field id="cIndexUser" value="19."></field>
+</pick>
+<pick thing="cWoodStrid" index="1733" batchindex="547" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="cdAnimal" index="1154" batchindex="519" uniqueness="unique" fieldcount="3" tablelinkid="cHelpClr" source="ClsCstAbil" agentid="cHelpClr">
+<chain index="1155"/>
+<chain index="1156"/>
+<chain index="1675"/>
+<chain index="1676"/>
 <reference/>
 <field id="custOrder" value="3."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cdCatastro" index="1694" batchindex="535" uniqueness="unique" fieldcount="3" tablelinkid="cHelpClr" source="ClsCstAbil" agentid="cHelpClr">
-<chain index="1695"/>
-<chain index="1696"/>
+<pick thing="cdCatastro" index="1681" batchindex="520" uniqueness="unique" fieldcount="3" tablelinkid="cHelpClr" source="ClsCstAbil" agentid="cHelpClr">
+<chain index="1682"/>
+<chain index="1683"/>
 <reference/>
 <field id="custOrder" value="4."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="cdCave" index="2280" batchindex="570" refcount="0" fieldcount="3" tablelinkid="cHelpDrd" source="ClsCstAbil" agentid="cHelpDrd">
-<chain index="2281"/>
-<chain index="2282"/>
-<chain index="2283"/>
+<pick thing="cdCave" index="1752" batchindex="549" refcount="0" fieldcount="3" tablelinkid="cHelpDrd" source="ClsCstAbil" agentid="cHelpDrd">
+<chain index="1753"/>
+<chain index="1754"/>
+<chain index="1755"/>
 <field id="custOrder" value="8."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
@@ -12320,71 +14240,106 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="creaLow" index="73" batchindex="62" refcount="0" default="yes"></pick>
 <pick thing="creaPick" index="74" batchindex="63" refcount="0" default="yes"></pick>
 <pick thing="creaStanda" index="75" batchindex="64" refcount="0" default="yes"></pick>
-<pick thing="dAniComp" index="1170" batchindex="534" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<chain index="1171"/>
-<reference pickindex="1168" batchindex="534" bootindex="1"/>
+<pick thing="dAniComp" index="1156" batchindex="519" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<chain index="1157"/>
+<reference pickindex="1154" batchindex="519" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="dAniSpeak" index="1169" batchindex="534" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1168" batchindex="534" bootindex="1"/>
+<pick thing="dAniSpeak" index="1155" batchindex="519" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1154" batchindex="519" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="dCatWeathe" index="1696" batchindex="535" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1694" batchindex="535" bootindex="1"/>
+<pick thing="dCatWeathe" index="1683" batchindex="520" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1681" batchindex="520" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="dDesSmite" index="1695" batchindex="535" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1694" batchindex="535" bootindex="1"/>
+<pick thing="dDesSmite" index="1682" batchindex="520" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1681" batchindex="520" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
 <pick thing="deiOther" index="483" batchindex="436" uniqueness="unique" source="bgDeity" default="yes">
 <reference/>
 </pick>
-<pick thing="fArmLight" index="1098" batchindex="508" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="fArmHeavy" index="1787" batchindex="558" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fArmLight" index="1155" batchindex="529" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1154" batchindex="529" bootindex="1"/>
+<pick thing="fArmLight" index="1095" batchindex="504" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fArmLight" index="2253" batchindex="567" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="fArmLight" index="1144" batchindex="517" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1143" batchindex="517" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fArmMedium" index="1156" batchindex="529" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1154" batchindex="529" bootindex="1"/>
+<pick thing="fArmLight" index="1726" batchindex="547" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fArmMedium" index="2254" batchindex="567" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="fArmLight" index="1785" batchindex="558" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fArmShield" index="1099" batchindex="508" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="fArmLight" index="1812" batchindex="559" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fArmShield" index="1157" batchindex="529" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1154" batchindex="529" bootindex="1"/>
+<pick thing="fArmMedium" index="1145" batchindex="517" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1143" batchindex="517" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fArmShield" index="2255" batchindex="567" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="fArmMedium" index="1727" batchindex="547" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fComCast" index="583" batchindex="493" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
+<pick thing="fArmMedium" index="1786" batchindex="558" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fArmMedium" index="1793" batchindex="559" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fArmShield" index="1096" batchindex="504" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fArmShield" index="1146" batchindex="517" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1143" batchindex="517" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fArmShield" index="1728" batchindex="547" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fArmShield" index="1788" batchindex="558" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fArmShield" index="1810" batchindex="559" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fComCast" index="579" batchindex="489" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12393,31 +14348,36 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fExpArcana" index="584" batchindex="494" refcount="0" fieldcount="4" source="fTable">
-<chain index="585"/>
+<pick thing="fExpArcana" index="580" batchindex="490" refcount="0" fieldcount="4" source="fTable">
+<chain index="581"/>
 <field id="actUser" user="3."></field>
 <field id="usrIsCheck" user="1."></field>
 <field id="usrChosen1" menuthing="cHelpSor" ispick="yes" menuusage="hero" cacheindex="485"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fExtSpell" index="582" batchindex="492" uniqueness="useronce" refcount="0" fieldcount="2" tablelinkid="cHelpSor" source="ClsBonFeat" agentid="cHelpSor" default="yes">
+<pick thing="fExtSpell" index="578" batchindex="488" uniqueness="useronce" refcount="0" fieldcount="2" tablelinkid="cHelpSor" source="ClsBonFeat" agentid="cHelpSor" default="yes">
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fImpInit" index="586" batchindex="495" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
+<pick thing="fImpInit" index="582" batchindex="491" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fLingerSpl" index="587" batchindex="496" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
+<pick thing="fLingerSpl" index="583" batchindex="492" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fPersisSpl" index="588" batchindex="497" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
+<pick thing="fPersisSpl" index="584" batchindex="493" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fScribeS" index="1724" batchindex="553" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1723" batchindex="553" bootindex="1"/>
+<pick thing="fScribeS" index="1703" batchindex="536" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1702" batchindex="536" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fSilentSpl" index="2338" batchindex="566" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2333" batchindex="566" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12466,36 +14426,51 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="1100" batchindex="508" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="fSimple" index="1097" batchindex="504" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="1158" batchindex="529" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1154" batchindex="529" bootindex="1"/>
+<pick thing="fSimple" index="1147" batchindex="517" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1143" batchindex="517" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSpellFoc" index="1726" batchindex="553" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="1725" batchindex="553" bootindex="1"/>
+<pick thing="fSimple" index="1789" batchindex="558" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSpellPch" index="571" batchindex="481" refcount="0" fieldcount="2" source="gTable" default="yes">
+<pick thing="fSimple" index="1811" batchindex="559" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fToughness" index="589" batchindex="498" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
+<pick thing="fSimple" index="1825" batchindex="561" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fWepBrd" index="1101" batchindex="508" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1097" batchindex="508" bootindex="1"/>
+<pick thing="fSpellFoc" index="1705" batchindex="536" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1704" batchindex="536" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fWepDrd" index="2256" batchindex="567" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="fSpellPch" index="567" batchindex="477" refcount="0" fieldcount="2" source="gTable" default="yes">
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fToughness" index="585" batchindex="494" uniqueness="useronce" refcount="0" fieldcount="2" source="fTable" default="yes">
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fWepBrd" index="1098" batchindex="504" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1094" batchindex="504" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fWepDrd" index="1729" batchindex="547" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12504,38 +14479,43 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fWepWiz" index="1722" batchindex="553" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1721" batchindex="553" bootindex="1"/>
+<pick thing="fWepMart" index="1790" batchindex="558" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1765" batchindex="558" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcBbnHuSup" index="503" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fWepWiz" index="1701" batchindex="536" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1700" batchindex="536" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcBbnHuTrS" index="502" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcBbnHuSup" index="499" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcBrdHuman" index="504" batchindex="446" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcBbnHuTrS" index="498" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcClrHuman" index="505" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcBrdHuman" index="500" batchindex="442" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcDrdHuman" index="506" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcClrHuman" index="501" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcFtrHuman" index="507" batchindex="446" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcDrdHuman" index="502" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcFtrHuman" index="503" batchindex="442" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12544,47 +14524,62 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcMnkHuman" index="508" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcMnkHuman" index="504" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcPalHAcid" index="509" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<pick thing="fcOraDwarf" index="1813" batchindex="559" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcOraGnome" index="1814" batchindex="559" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcOraHuman" index="1815" batchindex="559" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcPalHAcid" index="505" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <chain index="472"/>
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcPalHCold" index="510" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<pick thing="fcPalHCold" index="506" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <chain index="473"/>
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcPalHElec" index="511" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<pick thing="fcPalHElec" index="507" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <chain index="474"/>
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcPalHFire" index="512" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<pick thing="fcPalHFire" index="508" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
 <chain index="475"/>
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcRgrHumHP" index="514" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcRgrHumHP" index="510" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcRgrHumSP" index="513" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcRgrHumSP" index="509" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcRogHuman" index="515" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcRogHuman" index="511" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12593,48 +14588,63 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcSorHuman" index="516" batchindex="446" root="no" fieldcount="3" bootstrap="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcSorHuman" index="512" batchindex="442" root="no" fieldcount="3" bootstrap="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="actUser" user="1."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcSorHuman" index="586" batchindex="495" refcount="0" fieldcount="3" source="clsFavor">
+<field id="actUser" user="1."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcSorHuman" index="587" batchindex="496" refcount="0" fieldcount="3" source="clsFavor">
+<field id="actUser" user="1."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcSorHuman" index="588" batchindex="497" refcount="0" fieldcount="3" source="clsFavor">
+<field id="actUser" user="2."></field>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcSorHuman" index="589" batchindex="498" refcount="0" fieldcount="3" source="clsFavor">
+<field id="actUser" user="2."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
 <pick thing="fcSorHuman" index="590" batchindex="499" refcount="0" fieldcount="3" source="clsFavor">
-<field id="actUser" user="1."></field>
+<field id="actUser" user="3."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
 <pick thing="fcSorHuman" index="591" batchindex="500" refcount="0" fieldcount="3" source="clsFavor">
-<field id="actUser" user="1."></field>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="fcSorHuman" index="592" batchindex="501" refcount="0" fieldcount="3" source="clsFavor">
-<field id="actUser" user="2."></field>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="fcSorHuman" index="593" batchindex="502" refcount="0" fieldcount="3" source="clsFavor">
-<field id="actUser" user="2."></field>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="fcSorHuman" index="594" batchindex="503" refcount="0" fieldcount="3" source="clsFavor">
 <field id="actUser" user="3."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcSorHuman" index="595" batchindex="504" refcount="0" fieldcount="3" source="clsFavor">
-<field id="actUser" user="3."></field>
+<pick thing="fcWitHElf" index="2311" batchindex="561" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcWizHuman" index="517" batchindex="446" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="fcWitHOrc" index="2312" batchindex="561" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="gAlchLabPo" index="572" batchindex="482" refcount="0" fieldcount="2" source="gTable" holder="78" default="yes">
+<pick thing="fcWitHuman" index="2313" batchindex="561" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1818" batchindex="561" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="fcWizHuman" index="513" batchindex="442" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="gAlchLabPo" index="568" batchindex="478" refcount="0" fieldcount="2" source="gTable" holder="78" default="yes">
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -12664,16 +14674,16 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference bootindex="999999001"/>
 <field id="useredit" text="Isai Odighuzua"></field>
 </pick>
-<pick thing="idMMLinL" index="578" batchindex="488" refcount="0" fieldcount="2" source="iTable" default="yes">
+<pick thing="idMMLinL" index="574" batchindex="484" refcount="0" fieldcount="2" source="iTable" default="yes">
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="ioClRes1" index="580" batchindex="490" refcount="0" fieldcount="3" source="iTable">
+<pick thing="ioClRes1" index="576" batchindex="486" refcount="0" fieldcount="3" source="iTable">
 <field id="gIsEquip" user="1."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="ioHeadCha2" index="579" batchindex="489" refcount="0" fieldcount="3" source="iTable">
+<pick thing="ioHeadCha2" index="575" batchindex="485" refcount="0" fieldcount="3" source="iTable">
 <field id="gIsEquip" user="1."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
@@ -12703,13 +14713,13 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="lCommon" index="32" batchindex="32" uniqueness="useronce" bootstrap="yes" default="yes">
 <reference bootindex="200"/>
 </pick>
-<pick thing="lDruidic" index="2252" batchindex="567" uniqueness="useronce" root="no" bootstrap="yes" default="yes">
-<reference pickindex="2251" batchindex="567" bootindex="1"/>
+<pick thing="lDruidic" index="1725" batchindex="547" uniqueness="useronce" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1724" batchindex="547" bootindex="1"/>
 </pick>
-<pick thing="lPolyglot" index="597" batchindex="505" uniqueness="unique" root="no" bootstrap="yes" default="yes">
-<reference pickindex="596" batchindex="505" bootindex="1"/>
+<pick thing="lPolyglot" index="593" batchindex="501" uniqueness="unique" root="no" bootstrap="yes" default="yes">
+<reference pickindex="592" batchindex="501" bootindex="1"/>
 </pick>
-<pick thing="lSylvan" index="598" batchindex="506" uniqueness="useronce" refcount="0" source="bLanguages" default="yes"></pick>
+<pick thing="lSylvan" index="594" batchindex="502" uniqueness="useronce" refcount="0" source="bLanguages" default="yes"></pick>
 <pick thing="mArmor" index="28" batchindex="28" bootstrap="yes" default="yes">
 <reference bootindex="104"/>
 </pick>
@@ -12736,8 +14746,8 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <chain index="107"/>
 </pick>
 <pick thing="mechWealth" index="108" batchindex="96" refcount="0" default="yes"></pick>
-<pick thing="minHire" index="599" batchindex="507" refcount="0" source="othMinion" default="yes">
-<minion heroname="Shambling Mound" batchindex="437" userbatch="433" enmassebatch="39" nexttrade="1" nexttransact="1" poolcount="25" activemode="1" isally="no" hasacted="no">
+<pick thing="minHire" index="595" batchindex="503" refcount="0" source="othMinion" default="yes">
+<minion heroname="Shambling Mound" batchindex="437" userbatch="433" enmassebatch="39" nexttrade="1" nexttransact="1" poolcount="35" activemode="1" isally="no" hasacted="no">
 <statblock>SHAMBLING MOUND	CR 6
 Male Shambling Mound
 NN Large Plant
@@ -12791,72 +14801,72 @@ Hero Lab&#174; and the Hero Lab logo are Registered Trademarks of LWD Technology
 Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishing, LLC&#174;, and are used under license.</statblock>
 <container index="3" chosencount="2" pickcount="485">
 <notes/>
-<chosen source="bgDeity" pickindex="1082"/>
-<chosen source="bgRace" pickindex="1083"/>
-<pick thing="AllCraft" index="610" batchindex="11" bootstrap="yes" default="yes">
+<chosen source="bgDeity" pickindex="1079"/>
+<chosen source="bgRace" pickindex="1080"/>
+<pick thing="AllCraft" index="607" batchindex="11" bootstrap="yes" default="yes">
 <reference bootindex="11"/>
 </pick>
-<pick thing="AllKnow" index="611" batchindex="12" bootstrap="yes" default="yes">
+<pick thing="AllKnow" index="608" batchindex="12" bootstrap="yes" default="yes">
 <reference bootindex="12"/>
 </pick>
-<pick thing="AllPerform" index="612" batchindex="13" bootstrap="yes" default="yes">
+<pick thing="AllPerform" index="609" batchindex="13" bootstrap="yes" default="yes">
 <reference bootindex="13"/>
 </pick>
-<pick thing="AllProf" index="613" batchindex="14" bootstrap="yes" default="yes">
+<pick thing="AllProf" index="610" batchindex="14" bootstrap="yes" default="yes">
 <reference bootindex="14"/>
 </pick>
-<pick thing="AllSkills" index="607" batchindex="8" bootstrap="yes" default="yes">
+<pick thing="AllSkills" index="604" batchindex="8" bootstrap="yes" default="yes">
 <reference bootindex="8"/>
 </pick>
-<pick thing="ArmorClass" index="604" batchindex="5" bootstrap="yes" default="yes">
+<pick thing="ArmorClass" index="601" batchindex="5" bootstrap="yes" default="yes">
 <reference bootindex="5"/>
 </pick>
-<pick thing="ArmorDR" index="617" batchindex="18" uniqueness="unique" bootstrap="yes" default="yes">
+<pick thing="ArmorDR" index="614" batchindex="18" uniqueness="unique" bootstrap="yes" default="yes">
 <reference bootindex="18"/>
 </pick>
-<pick thing="ArmorDef" index="616" batchindex="17" uniqueness="unique" bootstrap="yes" default="yes">
+<pick thing="ArmorDef" index="613" batchindex="17" uniqueness="unique" bootstrap="yes" default="yes">
 <reference bootindex="17"/>
 </pick>
-<pick thing="Attack" index="602" batchindex="3" bootstrap="yes" default="yes">
+<pick thing="Attack" index="599" batchindex="3" bootstrap="yes" default="yes">
 <reference bootindex="3"/>
 </pick>
-<pick thing="AttrCost" index="649" batchindex="39" refcount="0" default="yes"></pick>
-<pick thing="BasAttrArr" index="650" batchindex="40" refcount="0" default="yes"></pick>
-<pick thing="CritDef" index="618" batchindex="19" uniqueness="unique" bootstrap="yes" default="yes">
+<pick thing="AttrCost" index="646" batchindex="39" refcount="0" default="yes"></pick>
+<pick thing="BasAttrArr" index="647" batchindex="40" refcount="0" default="yes"></pick>
+<pick thing="CritDef" index="615" batchindex="19" uniqueness="unique" bootstrap="yes" default="yes">
 <reference bootindex="19"/>
 </pick>
-<pick thing="Damage" index="609" batchindex="10" bootstrap="yes" default="yes">
+<pick thing="Damage" index="606" batchindex="10" bootstrap="yes" default="yes">
 <reference bootindex="10"/>
 </pick>
-<pick thing="Feat" index="651" batchindex="41" refcount="0" default="yes"></pick>
-<pick thing="Flaw" index="652" batchindex="42" refcount="0" default="yes"></pick>
-<pick thing="HerAttrArr" index="653" batchindex="43" refcount="0" default="yes"></pick>
-<pick thing="Initiative" index="605" batchindex="6" bootstrap="yes" default="yes">
+<pick thing="Feat" index="648" batchindex="41" refcount="0" default="yes"></pick>
+<pick thing="Flaw" index="649" batchindex="42" refcount="0" default="yes"></pick>
+<pick thing="HerAttrArr" index="650" batchindex="43" refcount="0" default="yes"></pick>
+<pick thing="Initiative" index="602" batchindex="6" bootstrap="yes" default="yes">
 <reference bootindex="6"/>
 </pick>
-<pick thing="ManeuvBon" index="622" batchindex="23" bootstrap="yes" default="yes">
+<pick thing="ManeuvBon" index="619" batchindex="23" bootstrap="yes" default="yes">
 <reference bootindex="23"/>
 </pick>
-<pick thing="ManeuvDef" index="621" batchindex="22" bootstrap="yes" default="yes">
+<pick thing="ManeuvDef" index="618" batchindex="22" bootstrap="yes" default="yes">
 <reference bootindex="22"/>
 </pick>
-<pick thing="Maneuver" index="603" batchindex="4" bootstrap="yes" default="yes">
+<pick thing="Maneuver" index="600" batchindex="4" bootstrap="yes" default="yes">
 <reference bootindex="4"/>
 </pick>
-<pick thing="MonAttrArr" index="654" batchindex="44" refcount="0" default="yes"></pick>
-<pick thing="OtherMount" index="655" batchindex="45" refcount="0" default="yes"></pick>
-<pick thing="PerfCombat" index="656" batchindex="46" refcount="0" default="yes"></pick>
-<pick thing="PieceArmor" index="620" batchindex="21" uniqueness="unique" bootstrap="yes" default="yes">
+<pick thing="MonAttrArr" index="651" batchindex="44" refcount="0" default="yes"></pick>
+<pick thing="OtherMount" index="652" batchindex="45" refcount="0" default="yes"></pick>
+<pick thing="PerfCombat" index="653" batchindex="46" refcount="0" default="yes"></pick>
+<pick thing="PieceArmor" index="617" batchindex="21" uniqueness="unique" bootstrap="yes" default="yes">
 <reference bootindex="21"/>
 </pick>
-<pick thing="Psionics" index="614" batchindex="15" bootstrap="yes" default="yes">
+<pick thing="Psionics" index="611" batchindex="15" bootstrap="yes" default="yes">
 <reference bootindex="15"/>
 </pick>
-<pick thing="SocItem" index="657" batchindex="47" refcount="0" default="yes"></pick>
-<pick thing="Speed" index="606" batchindex="7" bootstrap="yes" default="yes">
+<pick thing="SocItem" index="654" batchindex="47" refcount="0" default="yes"></pick>
+<pick thing="Speed" index="603" batchindex="7" bootstrap="yes" default="yes">
 <reference bootindex="7"/>
 </pick>
-<pick thing="Totals" index="600" batchindex="1" uniqueness="unique" fieldcount="8" bootstrap="yes">
+<pick thing="Totals" index="597" batchindex="1" uniqueness="unique" fieldcount="8" bootstrap="yes">
 <reference/>
 <field id="tGenChoice"></field>
 <field id="acType" menuthing="typHero"></field>
@@ -12867,579 +14877,579 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="tThiFavCl"></field>
 <field id="dashUser" value="6."></field>
 </pick>
-<pick thing="Trait" index="658" batchindex="48" refcount="0" default="yes"></pick>
-<pick thing="UserImage" index="1079" batchindex="433" refcount="0" fieldcount="1" source="bImages">
+<pick thing="Trait" index="655" batchindex="48" refcount="0" default="yes"></pick>
+<pick thing="UserImage" index="1076" batchindex="433" refcount="0" fieldcount="1" source="bImages">
 <field id="imgIndex" value="1."></field>
 </pick>
-<pick thing="Wounds" index="619" batchindex="20" uniqueness="unique" bootstrap="yes" default="yes">
+<pick thing="Wounds" index="616" batchindex="20" uniqueness="unique" bootstrap="yes" default="yes">
 <reference bootindex="20"/>
 </pick>
-<pick thing="XPFast" index="659" batchindex="49" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="XPMedium" index="660" batchindex="50" refcount="0" default="yes"></pick>
-<pick thing="XPSlow" index="661" batchindex="51" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="XPSociety" index="662" batchindex="52" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="aCHA" index="663" batchindex="53" uniqueness="unique" default="yes">
+<pick thing="XPFast" index="656" batchindex="49" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="XPMedium" index="657" batchindex="50" refcount="0" default="yes"></pick>
+<pick thing="XPSlow" index="658" batchindex="51" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="XPSociety" index="659" batchindex="52" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="aCHA" index="660" batchindex="53" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="aCON" index="664" batchindex="54" uniqueness="unique" default="yes">
+<pick thing="aCON" index="661" batchindex="54" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="aDEX" index="665" batchindex="55" uniqueness="unique" default="yes">
+<pick thing="aDEX" index="662" batchindex="55" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="aINT" index="666" batchindex="56" uniqueness="unique" default="yes">
+<pick thing="aINT" index="663" batchindex="56" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="aSTR" index="667" batchindex="57" uniqueness="unique" default="yes">
+<pick thing="aSTR" index="664" batchindex="57" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="aWIS" index="668" batchindex="58" uniqueness="unique" default="yes">
+<pick thing="aWIS" index="665" batchindex="58" uniqueness="unique" default="yes">
 <reference/>
 </pick>
-<pick thing="abDRCIrMag" index="669" batchindex="59" uniqueness="unique" count="0" fieldcount="2" default="yes" live="no">
+<pick thing="abDRCIrMag" index="666" batchindex="59" uniqueness="unique" count="0" fieldcount="2" default="yes" live="no">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="abHeroP" index="706" batchindex="95" root="no" count="0" fieldcount="3" bootstrap="yes" live="no">
-<reference pickindex="705" batchindex="95" bootindex="1"/>
+<pick thing="abHeroP" index="703" batchindex="95" root="no" count="0" fieldcount="3" bootstrap="yes" live="no">
+<reference pickindex="702" batchindex="95" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 <field id="trkUser" user="1."></field>
 </pick>
-<pick thing="background" index="601" batchindex="2" bootstrap="yes" default="yes">
+<pick thing="background" index="598" batchindex="2" bootstrap="yes" default="yes">
 <reference bootindex="2"/>
 </pick>
-<pick thing="creaEpic" index="670" batchindex="60" refcount="0" default="yes"></pick>
-<pick thing="creaHigh" index="671" batchindex="61" refcount="0" default="yes"></pick>
-<pick thing="creaLow" index="672" batchindex="62" refcount="0" default="yes"></pick>
-<pick thing="creaPick" index="673" batchindex="63" refcount="0" default="yes"></pick>
-<pick thing="creaStanda" index="674" batchindex="64" refcount="0" default="yes"></pick>
-<pick thing="deiOther" index="1082" batchindex="436" uniqueness="unique" source="bgDeity" default="yes">
+<pick thing="creaEpic" index="667" batchindex="60" refcount="0" default="yes"></pick>
+<pick thing="creaHigh" index="668" batchindex="61" refcount="0" default="yes"></pick>
+<pick thing="creaLow" index="669" batchindex="62" refcount="0" default="yes"></pick>
+<pick thing="creaPick" index="670" batchindex="63" refcount="0" default="yes"></pick>
+<pick thing="creaStanda" index="671" batchindex="64" refcount="0" default="yes"></pick>
+<pick thing="deiOther" index="1079" batchindex="436" uniqueness="unique" source="bgDeity" default="yes">
 <reference/>
 </pick>
-<pick thing="fCleave" index="1085" batchindex="437" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="fCleave" index="1082" batchindex="437" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fIronWill" index="1086" batchindex="437" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="fIronWill" index="1083" batchindex="437" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fLightRef" index="1087" batchindex="437" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="fLightRef" index="1084" batchindex="437" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fPowerAtt" index="1088" batchindex="437" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="fPowerAtt" index="1085" batchindex="437" uniqueness="useronce" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="918" batchindex="305" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="916" batchindex="305" bootindex="1"/>
+<pick thing="fSimple" index="915" batchindex="305" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="913" batchindex="305" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="922" batchindex="307" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
+<pick thing="fSimple" index="919" batchindex="307" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="939" batchindex="308" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="938" batchindex="308" bootindex="1"/>
+<pick thing="fSimple" index="936" batchindex="308" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="935" batchindex="308" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="941" batchindex="309" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="940" batchindex="309" bootindex="1"/>
+<pick thing="fSimple" index="938" batchindex="309" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="937" batchindex="309" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="943" batchindex="310" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="942" batchindex="310" bootindex="1"/>
+<pick thing="fSimple" index="940" batchindex="310" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="939" batchindex="310" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="946" batchindex="312" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="945" batchindex="312" bootindex="1"/>
+<pick thing="fSimple" index="943" batchindex="312" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="942" batchindex="312" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="955" batchindex="314" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="954" batchindex="314" bootindex="1"/>
+<pick thing="fSimple" index="952" batchindex="314" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="951" batchindex="314" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fSimple" index="959" batchindex="316" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="958" batchindex="316" bootindex="1"/>
+<pick thing="fSimple" index="956" batchindex="316" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="955" batchindex="316" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fWepFoc" index="1089" batchindex="437" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="fWepFoc" index="1086" batchindex="437" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fWepMart" index="956" batchindex="314" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="954" batchindex="314" bootindex="1"/>
+<pick thing="fWepMart" index="953" batchindex="314" uniqueness="useronce" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="951" batchindex="314" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="fcHP" index="675" batchindex="65" uniqueness="unique" fieldcount="2" default="yes">
-<reference/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="fcSkillPts" index="676" batchindex="66" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="fcHP" index="672" batchindex="65" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="gClothes" index="630" batchindex="31" fieldcount="4" bootstrap="yes">
+<pick thing="fcSkillPts" index="673" batchindex="66" uniqueness="unique" fieldcount="2" default="yes">
+<reference/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="gClothes" index="627" batchindex="31" fieldcount="4" bootstrap="yes">
 <reference bootindex="107"/>
 <field id="gSize" value="1."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 <field id="usrSelect" text="Artisan&apos;s Outfit (Free)"></field>
 </pick>
-<pick thing="gGround" index="677" batchindex="67" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="gGround" index="674" batchindex="67" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="gMoney" index="629" batchindex="30" fieldcount="3" bootstrap="yes">
+<pick thing="gMoney" index="626" batchindex="30" fieldcount="3" bootstrap="yes">
 <reference bootindex="106"/>
 <field id="gSize" value="1."></field>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="hActionPts" index="615" batchindex="16" count="0" bootstrap="yes" default="yes" live="no">
+<pick thing="hActionPts" index="612" batchindex="16" count="0" bootstrap="yes" default="yes" live="no">
 <reference bootindex="16"/>
 </pick>
-<pick thing="hPP" index="634" batchindex="34" count="0" bootstrap="yes" default="yes" live="no">
+<pick thing="hPP" index="631" batchindex="34" count="0" bootstrap="yes" default="yes" live="no">
 <reference bootindex="500"/>
 </pick>
-<pick thing="heroname" index="637" batchindex="37" fieldcount="1" bootstrap="yes">
+<pick thing="heroname" index="634" batchindex="37" fieldcount="1" bootstrap="yes">
 <reference bootindex="999999001"/>
 <field id="useredit" text="Shambling Mound"></field>
 </pick>
-<pick thing="isEqpArmor" index="678" batchindex="68" refcount="0" default="yes"></pick>
-<pick thing="isEqpBack" index="679" batchindex="69" refcount="0" default="yes"></pick>
-<pick thing="isEqpBody" index="680" batchindex="70" refcount="0" default="yes"></pick>
-<pick thing="isEqpEyes" index="681" batchindex="71" refcount="0" default="yes"></pick>
-<pick thing="isEqpFoot" index="682" batchindex="72" refcount="0" default="yes"></pick>
-<pick thing="isEqpHBand" index="683" batchindex="73" refcount="0" default="yes"></pick>
-<pick thing="isEqpHand" index="684" batchindex="74" refcount="0" default="yes"></pick>
-<pick thing="isEqpHead" index="685" batchindex="75" refcount="0" default="yes"></pick>
-<pick thing="isEqpNeck" index="686" batchindex="76" refcount="0" default="yes"></pick>
-<pick thing="isEqpPFRun" index="687" batchindex="77" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="isEqpRing" index="688" batchindex="78" refcount="0" default="yes"></pick>
-<pick thing="isEqpTorso" index="689" batchindex="79" refcount="0" default="yes"></pick>
-<pick thing="isEqpWaist" index="690" batchindex="80" refcount="0" default="yes"></pick>
-<pick thing="isEqpWrist" index="691" batchindex="81" refcount="0" default="yes"></pick>
-<pick thing="journal" index="1080" batchindex="434" refcount="0" fieldcount="2" source="journal">
+<pick thing="isEqpArmor" index="675" batchindex="68" refcount="0" default="yes"></pick>
+<pick thing="isEqpBack" index="676" batchindex="69" refcount="0" default="yes"></pick>
+<pick thing="isEqpBody" index="677" batchindex="70" refcount="0" default="yes"></pick>
+<pick thing="isEqpEyes" index="678" batchindex="71" refcount="0" default="yes"></pick>
+<pick thing="isEqpFoot" index="679" batchindex="72" refcount="0" default="yes"></pick>
+<pick thing="isEqpHBand" index="680" batchindex="73" refcount="0" default="yes"></pick>
+<pick thing="isEqpHand" index="681" batchindex="74" refcount="0" default="yes"></pick>
+<pick thing="isEqpHead" index="682" batchindex="75" refcount="0" default="yes"></pick>
+<pick thing="isEqpNeck" index="683" batchindex="76" refcount="0" default="yes"></pick>
+<pick thing="isEqpPFRun" index="684" batchindex="77" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="isEqpRing" index="685" batchindex="78" refcount="0" default="yes"></pick>
+<pick thing="isEqpTorso" index="686" batchindex="79" refcount="0" default="yes"></pick>
+<pick thing="isEqpWaist" index="687" batchindex="80" refcount="0" default="yes"></pick>
+<pick thing="isEqpWrist" index="688" batchindex="81" refcount="0" default="yes"></pick>
+<pick thing="journal" index="1077" batchindex="434" refcount="0" fieldcount="2" source="journal">
 <field id="jFaction"></field>
 <field id="jrnReal" user="20110607."></field>
 </pick>
-<pick thing="journal" index="1081" batchindex="435" refcount="0" fieldcount="2" source="presjourn">
+<pick thing="journal" index="1078" batchindex="435" refcount="0" fieldcount="2" source="presjourn">
 <field id="jFaction"></field>
 <field id="jrnReal" user="20110607."></field>
 </pick>
-<pick thing="lCommon" index="631" batchindex="32" uniqueness="useronce" bootstrap="yes" default="yes">
+<pick thing="lCommon" index="628" batchindex="32" uniqueness="useronce" bootstrap="yes" default="yes">
 <reference bootindex="200"/>
 </pick>
-<pick thing="lSylvan" index="1090" batchindex="437" uniqueness="useronce" root="no" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="lSylvan" index="1087" batchindex="437" uniqueness="useronce" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 </pick>
-<pick thing="mArmor" index="627" batchindex="28" bootstrap="yes" default="yes">
+<pick thing="mArmor" index="624" batchindex="28" bootstrap="yes" default="yes">
 <reference bootindex="104"/>
 </pick>
-<pick thing="mNatural" index="626" batchindex="27" fieldcount="1" bootstrap="yes">
+<pick thing="mNatural" index="623" batchindex="27" fieldcount="1" bootstrap="yes">
 <reference bootindex="103"/>
 <field id="gSize" value="1."></field>
 </pick>
-<pick thing="mShield" index="628" batchindex="29" bootstrap="yes" default="yes">
+<pick thing="mShield" index="625" batchindex="29" bootstrap="yes" default="yes">
 <reference bootindex="105"/>
 </pick>
-<pick thing="manBullRus" index="692" batchindex="82" refcount="0" default="yes"></pick>
-<pick thing="manDirtTri" index="693" batchindex="83" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="manDisarm" index="694" batchindex="84" refcount="0" default="yes"></pick>
-<pick thing="manDrag" index="695" batchindex="85" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="manFeint" index="696" batchindex="86" refcount="0" default="yes"></pick>
-<pick thing="manGrapple" index="697" batchindex="87" refcount="0" default="yes"></pick>
-<pick thing="manOverrun" index="698" batchindex="88" refcount="0" default="yes"></pick>
-<pick thing="manPull" index="699" batchindex="89" refcount="0" default="yes"></pick>
-<pick thing="manPush" index="700" batchindex="90" refcount="0" default="yes"></pick>
-<pick thing="manReposit" index="701" batchindex="91" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="manSteal" index="702" batchindex="92" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="manSunder" index="703" batchindex="93" refcount="0" default="yes"></pick>
-<pick thing="manTrip" index="704" batchindex="94" refcount="0" default="yes"></pick>
-<pick thing="mechHeroP" index="705" batchindex="95" count="0" refcount="0" default="yes" live="no">
-<chain index="706"/>
+<pick thing="manBullRus" index="689" batchindex="82" refcount="0" default="yes"></pick>
+<pick thing="manDirtTri" index="690" batchindex="83" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manDisarm" index="691" batchindex="84" refcount="0" default="yes"></pick>
+<pick thing="manDrag" index="692" batchindex="85" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manFeint" index="693" batchindex="86" refcount="0" default="yes"></pick>
+<pick thing="manGrapple" index="694" batchindex="87" refcount="0" default="yes"></pick>
+<pick thing="manOverrun" index="695" batchindex="88" refcount="0" default="yes"></pick>
+<pick thing="manPull" index="696" batchindex="89" refcount="0" default="yes"></pick>
+<pick thing="manPush" index="697" batchindex="90" refcount="0" default="yes"></pick>
+<pick thing="manReposit" index="698" batchindex="91" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manSteal" index="699" batchindex="92" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="manSunder" index="700" batchindex="93" refcount="0" default="yes"></pick>
+<pick thing="manTrip" index="701" batchindex="94" refcount="0" default="yes"></pick>
+<pick thing="mechHeroP" index="702" batchindex="95" count="0" refcount="0" default="yes" live="no">
+<chain index="703"/>
 </pick>
-<pick thing="mechWealth" index="707" batchindex="96" refcount="0" default="yes"></pick>
-<pick thing="pDethgaggd" index="708" batchindex="97" count="0" refcount="0" fieldcount="4" live="no">
+<pick thing="mechWealth" index="704" batchindex="96" refcount="0" default="yes"></pick>
+<pick thing="pDethgaggd" index="705" batchindex="97" count="0" refcount="0" fieldcount="4" live="no">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="1."></field>
 </pick>
-<pick thing="pcnBlind" index="709" batchindex="98" refcount="0" fieldcount="4">
+<pick thing="pcnBlind" index="706" batchindex="98" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="2."></field>
 </pick>
-<pick thing="pcnConfuse" index="710" batchindex="99" refcount="0" fieldcount="4">
+<pick thing="pcnConfuse" index="707" batchindex="99" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="3."></field>
 </pick>
-<pick thing="pcnCower" index="711" batchindex="100" refcount="0" fieldcount="4">
+<pick thing="pcnCower" index="708" batchindex="100" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="4."></field>
 </pick>
-<pick thing="pcnDazed" index="712" batchindex="101" refcount="0" fieldcount="4">
+<pick thing="pcnDazed" index="709" batchindex="101" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="5."></field>
 </pick>
-<pick thing="pcnDazzle" index="713" batchindex="102" refcount="0" fieldcount="4">
+<pick thing="pcnDazzle" index="710" batchindex="102" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="6."></field>
 </pick>
-<pick thing="pcnDeaf" index="714" batchindex="103" refcount="0" fieldcount="4">
+<pick thing="pcnDeaf" index="711" batchindex="103" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="7."></field>
 </pick>
-<pick thing="pcnDisable" index="715" batchindex="104" refcount="0" fieldcount="4">
+<pick thing="pcnDisable" index="712" batchindex="104" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="8."></field>
 </pick>
-<pick thing="pcnDying" index="716" batchindex="105" refcount="0" fieldcount="4">
+<pick thing="pcnDying" index="713" batchindex="105" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="9."></field>
 </pick>
-<pick thing="pcnEntangl" index="717" batchindex="106" refcount="0" fieldcount="4">
+<pick thing="pcnEntangl" index="714" batchindex="106" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="10."></field>
 </pick>
-<pick thing="pcnExhaust" index="718" batchindex="107" refcount="0" fieldcount="4">
+<pick thing="pcnExhaust" index="715" batchindex="107" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="11."></field>
 </pick>
-<pick thing="pcnFascin" index="719" batchindex="108" refcount="0" fieldcount="4">
+<pick thing="pcnFascin" index="716" batchindex="108" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="12."></field>
 </pick>
-<pick thing="pcnFatigue" index="720" batchindex="109" refcount="0" fieldcount="4">
+<pick thing="pcnFatigue" index="717" batchindex="109" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="13."></field>
 </pick>
-<pick thing="pcnFlatFt" index="721" batchindex="110" refcount="0" fieldcount="4">
+<pick thing="pcnFlatFt" index="718" batchindex="110" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="14."></field>
 </pick>
-<pick thing="pcnFright" index="722" batchindex="111" refcount="0" fieldcount="4">
+<pick thing="pcnFright" index="719" batchindex="111" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="15."></field>
 </pick>
-<pick thing="pcnGrapple" index="723" batchindex="112" refcount="0" fieldcount="4">
+<pick thing="pcnGrapple" index="720" batchindex="112" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="16."></field>
 </pick>
-<pick thing="pcnHelpls" index="724" batchindex="113" refcount="0" fieldcount="4">
+<pick thing="pcnHelpls" index="721" batchindex="113" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="17."></field>
 </pick>
-<pick thing="pcnIncorp" index="725" batchindex="114" refcount="0" fieldcount="4">
+<pick thing="pcnIncorp" index="722" batchindex="114" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="18."></field>
 </pick>
-<pick thing="pcnInvis" index="726" batchindex="115" refcount="0" fieldcount="4">
+<pick thing="pcnInvis" index="723" batchindex="115" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="19."></field>
 </pick>
-<pick thing="pcnNausea" index="727" batchindex="116" refcount="0" fieldcount="4">
+<pick thing="pcnNausea" index="724" batchindex="116" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="20."></field>
 </pick>
-<pick thing="pcnPanic" index="728" batchindex="117" refcount="0" fieldcount="4">
+<pick thing="pcnPanic" index="725" batchindex="117" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="21."></field>
 </pick>
-<pick thing="pcnParaly" index="729" batchindex="118" refcount="0" fieldcount="4">
+<pick thing="pcnParaly" index="726" batchindex="118" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="22."></field>
 </pick>
-<pick thing="pcnPetri" index="730" batchindex="119" refcount="0" fieldcount="4">
+<pick thing="pcnPetri" index="727" batchindex="119" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="23."></field>
 </pick>
-<pick thing="pcnPinned" index="731" batchindex="120" refcount="0" fieldcount="4">
+<pick thing="pcnPinned" index="728" batchindex="120" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="24."></field>
 </pick>
-<pick thing="pcnProne" index="732" batchindex="121" refcount="0" fieldcount="4">
+<pick thing="pcnProne" index="729" batchindex="121" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="25."></field>
 </pick>
-<pick thing="pcnShaken" index="733" batchindex="122" refcount="0" fieldcount="4">
+<pick thing="pcnShaken" index="730" batchindex="122" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="26."></field>
 </pick>
-<pick thing="pcnSicken" index="734" batchindex="123" refcount="0" fieldcount="4">
+<pick thing="pcnSicken" index="731" batchindex="123" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="27."></field>
 </pick>
-<pick thing="pcnStable" index="735" batchindex="124" refcount="0" fieldcount="4">
+<pick thing="pcnStable" index="732" batchindex="124" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="28."></field>
 </pick>
-<pick thing="pcnStagger" index="736" batchindex="125" refcount="0" fieldcount="4">
+<pick thing="pcnStagger" index="733" batchindex="125" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="29."></field>
 </pick>
-<pick thing="pcnStunned" index="737" batchindex="126" refcount="0" fieldcount="4">
+<pick thing="pcnStunned" index="734" batchindex="126" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="30."></field>
 </pick>
-<pick thing="pcnUnconc" index="738" batchindex="127" refcount="0" fieldcount="4">
+<pick thing="pcnUnconc" index="735" batchindex="127" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="31."></field>
 </pick>
-<pick thing="playername" index="636" batchindex="36" bootstrap="yes" default="yes">
+<pick thing="playername" index="633" batchindex="36" bootstrap="yes" default="yes">
 <reference bootindex="999999000"/>
 </pick>
-<pick thing="pstChargin" index="739" batchindex="128" refcount="0" fieldcount="4">
+<pick thing="pstChargin" index="736" batchindex="128" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="32."></field>
 </pick>
-<pick thing="pstConcTot" index="740" batchindex="129" refcount="0" fieldcount="4">
+<pick thing="pstConcTot" index="737" batchindex="129" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="33."></field>
 </pick>
-<pick thing="pstConceal" index="741" batchindex="130" refcount="0" fieldcount="4">
+<pick thing="pstConceal" index="738" batchindex="130" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="34."></field>
 </pick>
-<pick thing="pstCover" index="742" batchindex="131" refcount="0" fieldcount="4">
+<pick thing="pstCover" index="739" batchindex="131" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="35."></field>
 </pick>
-<pick thing="pstCoverIm" index="743" batchindex="132" refcount="0" fieldcount="4">
+<pick thing="pstCoverIm" index="740" batchindex="132" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="36."></field>
 </pick>
-<pick thing="pstCoverPa" index="744" batchindex="133" refcount="0" fieldcount="4">
+<pick thing="pstCoverPa" index="741" batchindex="133" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="37."></field>
 </pick>
-<pick thing="pstCoverSo" index="745" batchindex="134" refcount="0" fieldcount="4">
+<pick thing="pstCoverSo" index="742" batchindex="134" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="38."></field>
 </pick>
-<pick thing="pstFlankin" index="746" batchindex="135" refcount="0" fieldcount="4">
+<pick thing="pstFlankin" index="743" batchindex="135" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="39."></field>
 </pick>
-<pick thing="pstFtDefen" index="747" batchindex="136" refcount="0" fieldcount="4">
+<pick thing="pstFtDefen" index="744" batchindex="136" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="40."></field>
 </pick>
-<pick thing="pstHighGr" index="748" batchindex="137" refcount="0" fieldcount="4">
+<pick thing="pstHighGr" index="745" batchindex="137" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="41."></field>
 </pick>
-<pick thing="pstMounted" index="749" batchindex="138" refcount="0" fieldcount="4">
+<pick thing="pstMounted" index="746" batchindex="138" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="42."></field>
 </pick>
-<pick thing="pstRunning" index="750" batchindex="139" refcount="0" fieldcount="4">
+<pick thing="pstRunning" index="747" batchindex="139" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="43."></field>
 </pick>
-<pick thing="pstSqueeze" index="751" batchindex="140" refcount="0" fieldcount="4">
+<pick thing="pstSqueeze" index="748" batchindex="140" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="44."></field>
 </pick>
-<pick thing="pstTotDef" index="752" batchindex="141" refcount="0" fieldcount="4">
+<pick thing="pstTotDef" index="749" batchindex="141" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="45."></field>
 </pick>
-<pick thing="pstWithdr" index="753" batchindex="142" refcount="0" fieldcount="4">
+<pick thing="pstWithdr" index="750" batchindex="142" refcount="0" fieldcount="4">
 <field id="pIsOn" user="0."></field>
 <field id="pChosen"></field>
 <field id="pMount"></field>
 <field id="pIndex" value="46."></field>
 </pick>
-<pick thing="rShamMound" index="1083" batchindex="437" refcount="0" fieldcount="2" source="bgRace">
+<pick thing="rShamMound" index="1080" batchindex="437" refcount="0" fieldcount="2" source="bgRace">
+<chain index="1081"/>
+<chain index="1075"/>
+<chain index="1082"/>
+<chain index="1083"/>
 <chain index="1084"/>
-<chain index="1078"/>
 <chain index="1085"/>
 <chain index="1086"/>
 <chain index="1087"/>
 <chain index="1088"/>
 <chain index="1089"/>
 <chain index="1090"/>
+<chain index="1071"/>
 <chain index="1091"/>
 <chain index="1092"/>
-<chain index="1093"/>
-<chain index="1074"/>
-<chain index="1094"/>
-<chain index="1095"/>
 <field id="cHP" user="40."></field>
 <field id="cFavorChc"></field>
 </pick>
-<pick thing="raDarkVis" index="917" batchindex="305" uniqueness="unique" root="no" count="0" refcount="8" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="916" batchindex="305" bootindex="1"/>
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="938" batchindex="308" bootindex="1"/>
-<reference pickindex="944" batchindex="311" bootindex="1"/>
-<reference pickindex="945" batchindex="312" bootindex="1"/>
-<reference pickindex="954" batchindex="314" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<reference pickindex="963" batchindex="317" bootindex="1"/>
+<pick thing="raDarkVis" index="914" batchindex="305" uniqueness="unique" root="no" count="0" refcount="8" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="913" batchindex="305" bootindex="1"/>
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="935" batchindex="308" bootindex="1"/>
+<reference pickindex="941" batchindex="311" bootindex="1"/>
+<reference pickindex="942" batchindex="312" bootindex="1"/>
+<reference pickindex="951" batchindex="314" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<reference pickindex="960" batchindex="317" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raGrab" index="1095" batchindex="437" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="raGrab" index="1092" batchindex="437" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raIgnArmDR" index="953" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="947" batchindex="313" bootindex="1"/>
+<pick thing="raIgnArmDR" index="950" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="944" batchindex="313" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raImmNonLe" index="937" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
+<pick thing="raImmNonLe" index="934" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raLowLight" index="920" batchindex="306" uniqueness="unique" root="no" refcount="6" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="919" batchindex="306" bootindex="1"/>
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="938" batchindex="308" bootindex="1"/>
-<reference pickindex="940" batchindex="309" bootindex="1"/>
-<reference pickindex="944" batchindex="311" bootindex="1"/>
-<reference pickindex="957" batchindex="315" bootindex="1"/>
+<pick thing="raLowLight" index="917" batchindex="306" uniqueness="unique" root="no" refcount="6" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="916" batchindex="306" bootindex="1"/>
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="935" batchindex="308" bootindex="1"/>
+<reference pickindex="937" batchindex="309" bootindex="1"/>
+<reference pickindex="941" batchindex="311" bootindex="1"/>
+<reference pickindex="954" batchindex="315" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raShaElecF" index="1091" batchindex="437" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="raShaElecF" index="1088" batchindex="437" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raStealth" index="1084" batchindex="437" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="raStealth" index="1081" batchindex="437" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="resAnTrick" index="754" batchindex="143" refcount="0" default="yes"></pick>
-<pick thing="resAttrib" index="755" batchindex="144" refcount="0" default="yes"></pick>
-<pick thing="resFeat" index="756" batchindex="145" refcount="0" default="yes"></pick>
-<pick thing="resFlaw" index="757" batchindex="146" refcount="0" default="yes"></pick>
-<pick thing="resRaceCus" index="758" batchindex="147" refcount="0" default="yes"></pick>
-<pick thing="resRace2nd" index="759" batchindex="148" refcount="0" default="yes"></pick>
-<pick thing="resSkill" index="760" batchindex="149" refcount="0" default="yes"></pick>
-<pick thing="resTrait" index="761" batchindex="150" refcount="0" default="yes"></pick>
-<pick thing="resTrick" index="762" batchindex="151" refcount="0" default="yes"></pick>
-<pick thing="sCustomSpl" index="632" batchindex="33" fieldcount="1" bootstrap="yes">
+<pick thing="resAnTrick" index="751" batchindex="143" refcount="0" default="yes"></pick>
+<pick thing="resAttrib" index="752" batchindex="144" refcount="0" default="yes"></pick>
+<pick thing="resFeat" index="753" batchindex="145" refcount="0" default="yes"></pick>
+<pick thing="resFlaw" index="754" batchindex="146" refcount="0" default="yes"></pick>
+<pick thing="resRaceCus" index="755" batchindex="147" refcount="0" default="yes"></pick>
+<pick thing="resRace2nd" index="756" batchindex="148" refcount="0" default="yes"></pick>
+<pick thing="resSkill" index="757" batchindex="149" refcount="0" default="yes"></pick>
+<pick thing="resTrait" index="758" batchindex="150" refcount="0" default="yes"></pick>
+<pick thing="resTrick" index="759" batchindex="151" refcount="0" default="yes"></pick>
+<pick thing="sCustomSpl" index="629" batchindex="33" fieldcount="1" bootstrap="yes">
 <gizmo id="CustSpell">
 <container index="4" chosencount="0" pickcount="1">
 <notes/>
-<pick thing="CustSpell" index="633" batchindex="33" bootstrap="yes" default="yes">
+<pick thing="CustSpell" index="630" batchindex="33" bootstrap="yes" default="yes">
 <reference bootindex="1"/>
 </pick>
 </container>
@@ -13447,348 +15457,351 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference bootindex="400"/>
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="selAxChaos" index="763" batchindex="152" refcount="0" default="yes"></pick>
-<pick thing="selAxEvil" index="764" batchindex="153" refcount="0" default="yes"></pick>
-<pick thing="selAxGood" index="765" batchindex="154" refcount="0" default="yes"></pick>
-<pick thing="selAxLaw" index="766" batchindex="155" refcount="0" default="yes"></pick>
-<pick thing="selDrBlack" index="767" batchindex="156" refcount="0" default="yes"></pick>
-<pick thing="selDrBlue" index="768" batchindex="157" refcount="0" default="yes"></pick>
-<pick thing="selDrBrass" index="769" batchindex="158" refcount="0" default="yes"></pick>
-<pick thing="selDrBronz" index="770" batchindex="159" refcount="0" default="yes"></pick>
-<pick thing="selDrCoppe" index="771" batchindex="160" refcount="0" default="yes"></pick>
-<pick thing="selDrGold" index="772" batchindex="161" refcount="0" default="yes"></pick>
-<pick thing="selDrGreen" index="773" batchindex="162" refcount="0" default="yes"></pick>
-<pick thing="selDrRed" index="774" batchindex="163" refcount="0" default="yes"></pick>
-<pick thing="selDrSilve" index="775" batchindex="164" refcount="0" default="yes"></pick>
-<pick thing="selDrWhite" index="776" batchindex="165" refcount="0" default="yes"></pick>
-<pick thing="selElAir" index="777" batchindex="166" refcount="0" default="yes"></pick>
-<pick thing="selElEarth" index="778" batchindex="167" refcount="0" default="yes"></pick>
-<pick thing="selElFire" index="779" batchindex="168" refcount="0" default="yes"></pick>
-<pick thing="selElWater" index="780" batchindex="169" refcount="0" default="yes"></pick>
-<pick thing="selEnAcid" index="781" batchindex="170" refcount="0" default="yes"></pick>
-<pick thing="selEnCold" index="782" batchindex="171" refcount="0" default="yes"></pick>
-<pick thing="selEnElec" index="783" batchindex="172" refcount="0" default="yes"></pick>
-<pick thing="selEnFire" index="784" batchindex="173" refcount="0" default="yes"></pick>
-<pick thing="selEnSonic" index="785" batchindex="174" refcount="0" default="yes"></pick>
-<pick thing="selShBuck" index="786" batchindex="175" refcount="0" default="yes"></pick>
-<pick thing="selShHeavy" index="787" batchindex="176" refcount="0" default="yes"></pick>
-<pick thing="selShLight" index="788" batchindex="177" refcount="0" default="yes"></pick>
-<pick thing="selShTower" index="789" batchindex="178" refcount="0" default="yes"></pick>
-<pick thing="skAcrobat" index="790" batchindex="179" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="665"/>
+<pick thing="selAxChaos" index="760" batchindex="152" refcount="0" default="yes"></pick>
+<pick thing="selAxEvil" index="761" batchindex="153" refcount="0" default="yes"></pick>
+<pick thing="selAxGood" index="762" batchindex="154" refcount="0" default="yes"></pick>
+<pick thing="selAxLaw" index="763" batchindex="155" refcount="0" default="yes"></pick>
+<pick thing="selDrBlack" index="764" batchindex="156" refcount="0" default="yes"></pick>
+<pick thing="selDrBlue" index="765" batchindex="157" refcount="0" default="yes"></pick>
+<pick thing="selDrBrass" index="766" batchindex="158" refcount="0" default="yes"></pick>
+<pick thing="selDrBronz" index="767" batchindex="159" refcount="0" default="yes"></pick>
+<pick thing="selDrCoppe" index="768" batchindex="160" refcount="0" default="yes"></pick>
+<pick thing="selDrGold" index="769" batchindex="161" refcount="0" default="yes"></pick>
+<pick thing="selDrGreen" index="770" batchindex="162" refcount="0" default="yes"></pick>
+<pick thing="selDrRed" index="771" batchindex="163" refcount="0" default="yes"></pick>
+<pick thing="selDrSilve" index="772" batchindex="164" refcount="0" default="yes"></pick>
+<pick thing="selDrWhite" index="773" batchindex="165" refcount="0" default="yes"></pick>
+<pick thing="selElAir" index="774" batchindex="166" refcount="0" default="yes"></pick>
+<pick thing="selElEarth" index="775" batchindex="167" refcount="0" default="yes"></pick>
+<pick thing="selElFire" index="776" batchindex="168" refcount="0" default="yes"></pick>
+<pick thing="selElWater" index="777" batchindex="169" refcount="0" default="yes"></pick>
+<pick thing="selEnAcid" index="778" batchindex="170" refcount="0" default="yes"></pick>
+<pick thing="selEnCold" index="779" batchindex="171" refcount="0" default="yes"></pick>
+<pick thing="selEnElec" index="780" batchindex="172" refcount="0" default="yes"></pick>
+<pick thing="selEnFire" index="781" batchindex="173" refcount="0" default="yes"></pick>
+<pick thing="selEnSonic" index="782" batchindex="174" refcount="0" default="yes"></pick>
+<pick thing="selShBuck" index="783" batchindex="175" refcount="0" default="yes"></pick>
+<pick thing="selShHeavy" index="784" batchindex="176" refcount="0" default="yes"></pick>
+<pick thing="selShLight" index="785" batchindex="177" refcount="0" default="yes"></pick>
+<pick thing="selShTower" index="786" batchindex="178" refcount="0" default="yes"></pick>
+<pick thing="skAcrobat" index="787" batchindex="179" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="662"/>
 <reference/>
 </pick>
-<pick thing="skAppraise" index="791" batchindex="180" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="666"/>
-<reference/>
-</pick>
-<pick thing="skBluff" index="792" batchindex="181" uniqueness="unique" default="yes">
+<pick thing="skAppraise" index="788" batchindex="180" uniqueness="unique" default="yes">
 <linkage id="skillattr" index="663"/>
 <reference/>
 </pick>
-<pick thing="skClimb" index="793" batchindex="182" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="667"/>
+<pick thing="skBluff" index="789" batchindex="181" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="660"/>
 <reference/>
 </pick>
-<pick thing="skDiplo" index="794" batchindex="183" uniqueness="unique" default="yes">
+<pick thing="skClimb" index="790" batchindex="182" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="664"/>
+<reference/>
+</pick>
+<pick thing="skDiplo" index="791" batchindex="183" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="660"/>
+<reference/>
+</pick>
+<pick thing="skDisable" index="792" batchindex="184" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="662"/>
+<reference/>
+</pick>
+<pick thing="skDisguise" index="793" batchindex="185" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="660"/>
+<reference/>
+</pick>
+<pick thing="skEscape" index="794" batchindex="186" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="662"/>
+<reference/>
+</pick>
+<pick thing="skFly" index="795" batchindex="187" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="662"/>
+<reference/>
+</pick>
+<pick thing="skHandleAn" index="796" batchindex="188" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="660"/>
+<reference/>
+</pick>
+<pick thing="skHeal" index="797" batchindex="189" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="665"/>
+<reference/>
+</pick>
+<pick thing="skIntim" index="798" batchindex="190" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="660"/>
+<reference/>
+</pick>
+<pick thing="skLinguist" index="799" batchindex="191" uniqueness="unique" default="yes">
 <linkage id="skillattr" index="663"/>
 <reference/>
 </pick>
-<pick thing="skDisable" index="795" batchindex="184" uniqueness="unique" default="yes">
+<pick thing="skPercep" index="800" batchindex="192" uniqueness="unique" default="yes">
 <linkage id="skillattr" index="665"/>
 <reference/>
 </pick>
-<pick thing="skDisguise" index="796" batchindex="185" uniqueness="unique" default="yes">
+<pick thing="skRide" index="801" batchindex="193" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="662"/>
+<reference/>
+</pick>
+<pick thing="skSenseMot" index="802" batchindex="194" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="665"/>
+<reference/>
+</pick>
+<pick thing="skSleight" index="803" batchindex="195" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="662"/>
+<reference/>
+</pick>
+<pick thing="skSpellcr" index="804" batchindex="196" uniqueness="unique" default="yes">
 <linkage id="skillattr" index="663"/>
 <reference/>
 </pick>
-<pick thing="skEscape" index="797" batchindex="186" uniqueness="unique" default="yes">
+<pick thing="skStealth" index="805" batchindex="197" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="662"/>
+<reference/>
+</pick>
+<pick thing="skSurvival" index="806" batchindex="198" uniqueness="unique" default="yes">
 <linkage id="skillattr" index="665"/>
 <reference/>
 </pick>
-<pick thing="skFly" index="798" batchindex="187" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="665"/>
+<pick thing="skSwim" index="807" batchindex="199" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="664"/>
 <reference/>
 </pick>
-<pick thing="skHandleAn" index="799" batchindex="188" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="663"/>
+<pick thing="skUseMagic" index="808" batchindex="200" uniqueness="unique" default="yes">
+<linkage id="skillattr" index="660"/>
 <reference/>
 </pick>
-<pick thing="skHeal" index="800" batchindex="189" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="668"/>
-<reference/>
-</pick>
-<pick thing="skIntim" index="801" batchindex="190" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="663"/>
-<reference/>
-</pick>
-<pick thing="skLinguist" index="802" batchindex="191" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="666"/>
-<reference/>
-</pick>
-<pick thing="skPercep" index="803" batchindex="192" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="668"/>
-<reference/>
-</pick>
-<pick thing="skRide" index="804" batchindex="193" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="665"/>
-<reference/>
-</pick>
-<pick thing="skSenseMot" index="805" batchindex="194" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="668"/>
-<reference/>
-</pick>
-<pick thing="skSleight" index="806" batchindex="195" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="665"/>
-<reference/>
-</pick>
-<pick thing="skSpellcr" index="807" batchindex="196" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="666"/>
-<reference/>
-</pick>
-<pick thing="skStealth" index="808" batchindex="197" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="665"/>
-<reference/>
-</pick>
-<pick thing="skSurvival" index="809" batchindex="198" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="668"/>
-<reference/>
-</pick>
-<pick thing="skSwim" index="810" batchindex="199" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="667"/>
-<reference/>
-</pick>
-<pick thing="skUseMagic" index="811" batchindex="200" uniqueness="unique" default="yes">
-<linkage id="skillattr" index="663"/>
-<reference/>
-</pick>
-<pick thing="spAcidSpl0" index="812" batchindex="201" refcount="0" fieldcount="1">
+<pick thing="spAcidSpl0" index="809" batchindex="201" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spAcidSpl0" index="813" batchindex="202" refcount="0" fieldcount="1">
+<pick thing="spAcidSpl0" index="810" batchindex="202" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spArcaMar0" index="814" batchindex="203" refcount="0" fieldcount="1">
+<pick thing="spArcaMar0" index="811" batchindex="203" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spArcaMar0" index="815" batchindex="204" refcount="0" fieldcount="1">
+<pick thing="spArcaMar0" index="812" batchindex="204" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spArcaMar0" index="816" batchindex="205" refcount="0" fieldcount="1">
+<pick thing="spArcaMar0" index="813" batchindex="205" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spBleed0" index="817" batchindex="206" refcount="0" fieldcount="1">
+<pick thing="spBleed0" index="814" batchindex="206" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spBleed0" index="818" batchindex="207" refcount="0" fieldcount="1">
+<pick thing="spBleed0" index="815" batchindex="207" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDancLig0" index="819" batchindex="208" refcount="0" fieldcount="1">
+<pick thing="spDancLig0" index="816" batchindex="208" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDancLig0" index="820" batchindex="209" refcount="0" fieldcount="1">
+<pick thing="spDancLig0" index="817" batchindex="209" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDancLig0" index="821" batchindex="210" refcount="0" fieldcount="1">
+<pick thing="spDancLig0" index="818" batchindex="210" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDaze0" index="822" batchindex="211" refcount="0" fieldcount="1">
+<pick thing="spDaze0" index="819" batchindex="211" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDaze0" index="823" batchindex="212" refcount="0" fieldcount="1">
+<pick thing="spDaze0" index="820" batchindex="212" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDaze0" index="824" batchindex="213" refcount="0" fieldcount="1">
+<pick thing="spDaze0" index="821" batchindex="213" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDeteMag0" index="825" batchindex="214" refcount="0" fieldcount="1">
+<pick thing="spDeteMag0" index="822" batchindex="214" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDeteMag0" index="826" batchindex="215" refcount="0" fieldcount="1">
+<pick thing="spDeteMag0" index="823" batchindex="215" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDeteMag0" index="827" batchindex="216" refcount="0" fieldcount="1">
+<pick thing="spDeteMag0" index="824" batchindex="216" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDetePoi0" index="828" batchindex="217" refcount="0" fieldcount="1">
+<pick thing="spDetePoi0" index="825" batchindex="217" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDetePoi0" index="829" batchindex="218" refcount="0" fieldcount="1">
+<pick thing="spDetePoi0" index="826" batchindex="218" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDisrUnd0" index="830" batchindex="219" refcount="0" fieldcount="1">
+<pick thing="spDisrUnd0" index="827" batchindex="219" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spDisrUnd0" index="831" batchindex="220" refcount="0" fieldcount="1">
+<pick thing="spDisrUnd0" index="828" batchindex="220" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spFlare0" index="832" batchindex="221" refcount="0" fieldcount="1">
+<pick thing="spFlare0" index="829" batchindex="221" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spFlare0" index="833" batchindex="222" refcount="0" fieldcount="1">
+<pick thing="spFlare0" index="830" batchindex="222" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spGhosSou0" index="834" batchindex="223" refcount="0" fieldcount="1">
+<pick thing="spGhosSou0" index="831" batchindex="223" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spGhosSou0" index="835" batchindex="224" refcount="0" fieldcount="1">
+<pick thing="spGhosSou0" index="832" batchindex="224" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spGuidanc0" index="836" batchindex="225" refcount="0" fieldcount="1">
+<pick thing="spGuidanc0" index="833" batchindex="225" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spHaunFey0" index="837" batchindex="226" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="spLight0" index="838" batchindex="227" refcount="0" fieldcount="1">
+<pick thing="spHaunFey0" index="834" batchindex="226" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="spLight0" index="835" batchindex="227" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spLight0" index="839" batchindex="228" refcount="0" fieldcount="1">
+<pick thing="spLight0" index="836" batchindex="228" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spLight0" index="840" batchindex="229" refcount="0" fieldcount="1">
+<pick thing="spLight0" index="837" batchindex="229" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spMageHan0" index="841" batchindex="230" refcount="0" fieldcount="1">
+<pick thing="spMageHan0" index="838" batchindex="230" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spMageHan0" index="842" batchindex="231" refcount="0" fieldcount="1">
+<pick thing="spMageHan0" index="839" batchindex="231" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spMending0" index="843" batchindex="232" refcount="0" fieldcount="1">
+<pick thing="spMending0" index="840" batchindex="232" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spMending0" index="844" batchindex="233" refcount="0" fieldcount="1">
+<pick thing="spMending0" index="841" batchindex="233" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spMessage0" index="845" batchindex="234" refcount="0" fieldcount="1">
+<pick thing="spMessage0" index="842" batchindex="234" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spMessage0" index="846" batchindex="235" refcount="0" fieldcount="1">
+<pick thing="spMessage0" index="843" batchindex="235" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spOpenClo0" index="847" batchindex="236" refcount="0" fieldcount="1">
+<pick thing="spOpenClo0" index="844" batchindex="236" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spOpenClo0" index="848" batchindex="237" refcount="0" fieldcount="1">
+<pick thing="spOpenClo0" index="845" batchindex="237" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spPrestid0" index="849" batchindex="238" refcount="0" fieldcount="1">
+<pick thing="spPrestid0" index="846" batchindex="238" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spPrestid0" index="850" batchindex="239" refcount="0" fieldcount="1">
+<pick thing="spPrestid0" index="847" batchindex="239" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spPutrFoo0" index="851" batchindex="240" count="0" refcount="0" fieldcount="1" live="no">
+<pick thing="spPutrFoo0" index="848" batchindex="240" count="0" refcount="0" fieldcount="1" live="no">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spRayFro0" index="852" batchindex="241" refcount="0" fieldcount="1">
+<pick thing="spRayFro0" index="849" batchindex="241" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spRayFro0" index="853" batchindex="242" refcount="0" fieldcount="1">
+<pick thing="spRayFro0" index="850" batchindex="242" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spReadMag0" index="854" batchindex="243" refcount="0" fieldcount="1">
+<pick thing="spReadMag0" index="851" batchindex="243" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spReadMag0" index="855" batchindex="244" refcount="0" fieldcount="1">
+<pick thing="spReadMag0" index="852" batchindex="244" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spReadMag0" index="856" batchindex="245" refcount="0" fieldcount="1">
+<pick thing="spReadMag0" index="853" batchindex="245" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spResista0" index="857" batchindex="246" refcount="0" fieldcount="1">
+<pick thing="spResista0" index="854" batchindex="246" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spResista0" index="858" batchindex="247" refcount="0" fieldcount="1">
+<pick thing="spResista0" index="855" batchindex="247" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spScriCha0" index="859" batchindex="248" count="0" refcount="0" fieldcount="1" live="no">
+<pick thing="spScriCha0" index="856" batchindex="248" count="0" refcount="0" fieldcount="1" live="no">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spSottVoc0" index="635" batchindex="35" count="0" fieldcount="1" bootstrap="yes" live="no">
+<pick thing="spSottVoc0" index="632" batchindex="35" count="0" fieldcount="1" bootstrap="yes" live="no">
 <reference bootindex="600"/>
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spSpark0" index="860" batchindex="249" count="0" refcount="0" fieldcount="1" live="no">
+<pick thing="spSpark0" index="857" batchindex="249" count="0" refcount="0" fieldcount="1" live="no">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spSpark0" index="861" batchindex="250" count="0" refcount="0" fieldcount="1" live="no">
+<pick thing="spSpark0" index="858" batchindex="250" count="0" refcount="0" fieldcount="1" live="no">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spSpark0" index="862" batchindex="251" count="0" refcount="0" fieldcount="1" live="no">
+<pick thing="spSpark0" index="859" batchindex="251" count="0" refcount="0" fieldcount="1" live="no">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spStabili0" index="863" batchindex="252" refcount="0" fieldcount="1">
+<pick thing="spStabili0" index="860" batchindex="252" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spToucFat0" index="864" batchindex="253" refcount="0" fieldcount="1">
+<pick thing="spToucFat0" index="861" batchindex="253" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="spToucFat0" index="865" batchindex="254" refcount="0" fieldcount="1">
+<pick thing="spToucFat0" index="862" batchindex="254" refcount="0" fieldcount="1">
 <field id="sCasterLev" user="1."></field>
 </pick>
-<pick thing="ssAbjur" index="866" batchindex="255" refcount="0" default="yes"></pick>
-<pick thing="ssAcid" index="867" batchindex="256" refcount="0" default="yes"></pick>
-<pick thing="ssAir" index="868" batchindex="257" refcount="0" default="yes"></pick>
-<pick thing="ssCalling" index="869" batchindex="258" refcount="0" default="yes"></pick>
-<pick thing="ssChaotic" index="870" batchindex="259" refcount="0" default="yes"></pick>
-<pick thing="ssCharm" index="871" batchindex="260" refcount="0" default="yes"></pick>
-<pick thing="ssCold" index="872" batchindex="261" refcount="0" default="yes"></pick>
-<pick thing="ssCompuls" index="873" batchindex="262" refcount="0" default="yes"></pick>
-<pick thing="ssConjur" index="874" batchindex="263" refcount="0" default="yes"></pick>
-<pick thing="ssCreation" index="875" batchindex="264" refcount="0" default="yes"></pick>
-<pick thing="ssCurse" index="876" batchindex="265" refcount="0" default="yes"></pick>
-<pick thing="ssDarkness" index="877" batchindex="266" refcount="0" default="yes"></pick>
-<pick thing="ssDeath" index="878" batchindex="267" refcount="0" default="yes"></pick>
-<pick thing="ssDisease" index="879" batchindex="268" refcount="0" default="yes"></pick>
-<pick thing="ssDivin" index="880" batchindex="269" refcount="0" default="yes"></pick>
-<pick thing="ssEarth" index="881" batchindex="270" refcount="0" default="yes"></pick>
-<pick thing="ssElec" index="882" batchindex="271" refcount="0" default="yes"></pick>
-<pick thing="ssEmotion" index="883" batchindex="272" refcount="0" default="yes"></pick>
-<pick thing="ssEnchant" index="884" batchindex="273" refcount="0" default="yes"></pick>
-<pick thing="ssEvil" index="885" batchindex="274" refcount="0" default="yes"></pick>
-<pick thing="ssEvoc" index="886" batchindex="275" refcount="0" default="yes"></pick>
-<pick thing="ssFear" index="887" batchindex="276" refcount="0" default="yes"></pick>
-<pick thing="ssFigment" index="888" batchindex="277" refcount="0" default="yes"></pick>
-<pick thing="ssFire" index="889" batchindex="278" refcount="0" default="yes"></pick>
-<pick thing="ssForce" index="890" batchindex="279" refcount="0" default="yes"></pick>
-<pick thing="ssGlamer" index="891" batchindex="280" refcount="0" default="yes"></pick>
-<pick thing="ssGood" index="892" batchindex="281" refcount="0" default="yes"></pick>
-<pick thing="ssHealing" index="893" batchindex="282" refcount="0" default="yes"></pick>
-<pick thing="ssIllusion" index="894" batchindex="283" refcount="0" default="yes"></pick>
-<pick thing="ssLang" index="895" batchindex="284" refcount="0" default="yes"></pick>
-<pick thing="ssLawful" index="896" batchindex="285" refcount="0" default="yes"></pick>
-<pick thing="ssLight" index="897" batchindex="286" refcount="0" default="yes"></pick>
-<pick thing="ssMind" index="898" batchindex="287" refcount="0" default="yes"></pick>
-<pick thing="ssNecro" index="899" batchindex="288" refcount="0" default="yes"></pick>
-<pick thing="ssPain" index="900" batchindex="289" refcount="0" default="yes"></pick>
-<pick thing="ssPattern" index="901" batchindex="290" refcount="0" default="yes"></pick>
-<pick thing="ssPhantasm" index="902" batchindex="291" refcount="0" default="yes"></pick>
-<pick thing="ssPoison" index="903" batchindex="292" refcount="0" default="yes"></pick>
-<pick thing="ssPolymor" index="904" batchindex="293" refcount="0" default="yes"></pick>
-<pick thing="ssScrying" index="905" batchindex="294" refcount="0" default="yes"></pick>
-<pick thing="ssShadow" index="906" batchindex="295" refcount="0" default="yes"></pick>
-<pick thing="ssShadowDs" index="907" batchindex="296" refcount="0" default="yes"></pick>
-<pick thing="ssSonic" index="908" batchindex="297" refcount="0" default="yes"></pick>
-<pick thing="ssSummon" index="909" batchindex="298" refcount="0" default="yes"></pick>
-<pick thing="ssTeleport" index="910" batchindex="299" refcount="0" default="yes"></pick>
-<pick thing="ssTrans" index="911" batchindex="300" refcount="0" default="yes"></pick>
-<pick thing="ssWater" index="912" batchindex="301" refcount="0" default="yes"></pick>
-<pick thing="svFort" index="913" batchindex="302" refcount="0" default="yes"></pick>
-<pick thing="svRef" index="914" batchindex="303" refcount="0" default="yes"></pick>
-<pick thing="svWill" index="915" batchindex="304" refcount="0" default="yes"></pick>
-<pick thing="tEncumTbl" index="608" batchindex="9" bootstrap="yes" default="yes">
+<pick thing="ssAbjur" index="863" batchindex="255" refcount="0" default="yes"></pick>
+<pick thing="ssAcid" index="864" batchindex="256" refcount="0" default="yes"></pick>
+<pick thing="ssAir" index="865" batchindex="257" refcount="0" default="yes"></pick>
+<pick thing="ssCalling" index="866" batchindex="258" refcount="0" default="yes"></pick>
+<pick thing="ssChaotic" index="867" batchindex="259" refcount="0" default="yes"></pick>
+<pick thing="ssCharm" index="868" batchindex="260" refcount="0" default="yes"></pick>
+<pick thing="ssCold" index="869" batchindex="261" refcount="0" default="yes"></pick>
+<pick thing="ssCompuls" index="870" batchindex="262" refcount="0" default="yes"></pick>
+<pick thing="ssConjur" index="871" batchindex="263" refcount="0" default="yes"></pick>
+<pick thing="ssCreation" index="872" batchindex="264" refcount="0" default="yes"></pick>
+<pick thing="ssCurse" index="873" batchindex="265" refcount="0" default="yes"></pick>
+<pick thing="ssDarkness" index="874" batchindex="266" refcount="0" default="yes"></pick>
+<pick thing="ssDeath" index="875" batchindex="267" refcount="0" default="yes"></pick>
+<pick thing="ssDisease" index="876" batchindex="268" refcount="0" default="yes"></pick>
+<pick thing="ssDivin" index="877" batchindex="269" refcount="0" default="yes"></pick>
+<pick thing="ssEarth" index="878" batchindex="270" refcount="0" default="yes"></pick>
+<pick thing="ssElec" index="879" batchindex="271" refcount="0" default="yes"></pick>
+<pick thing="ssEmotion" index="880" batchindex="272" refcount="0" default="yes"></pick>
+<pick thing="ssEnchant" index="881" batchindex="273" refcount="0" default="yes"></pick>
+<pick thing="ssEvil" index="882" batchindex="274" refcount="0" default="yes"></pick>
+<pick thing="ssEvoc" index="883" batchindex="275" refcount="0" default="yes"></pick>
+<pick thing="ssFear" index="884" batchindex="276" refcount="0" default="yes"></pick>
+<pick thing="ssFigment" index="885" batchindex="277" refcount="0" default="yes"></pick>
+<pick thing="ssFire" index="886" batchindex="278" refcount="0" default="yes"></pick>
+<pick thing="ssForce" index="887" batchindex="279" refcount="0" default="yes"></pick>
+<pick thing="ssGlamer" index="888" batchindex="280" refcount="0" default="yes"></pick>
+<pick thing="ssGood" index="889" batchindex="281" refcount="0" default="yes"></pick>
+<pick thing="ssHealing" index="890" batchindex="282" refcount="0" default="yes"></pick>
+<pick thing="ssIllusion" index="891" batchindex="283" refcount="0" default="yes"></pick>
+<pick thing="ssLang" index="892" batchindex="284" refcount="0" default="yes"></pick>
+<pick thing="ssLawful" index="893" batchindex="285" refcount="0" default="yes"></pick>
+<pick thing="ssLight" index="894" batchindex="286" refcount="0" default="yes"></pick>
+<pick thing="ssMind" index="895" batchindex="287" refcount="0" default="yes"></pick>
+<pick thing="ssNecro" index="896" batchindex="288" refcount="0" default="yes"></pick>
+<pick thing="ssPain" index="897" batchindex="289" refcount="0" default="yes"></pick>
+<pick thing="ssPattern" index="898" batchindex="290" refcount="0" default="yes"></pick>
+<pick thing="ssPhantasm" index="899" batchindex="291" refcount="0" default="yes"></pick>
+<pick thing="ssPoison" index="900" batchindex="292" refcount="0" default="yes"></pick>
+<pick thing="ssPolymor" index="901" batchindex="293" refcount="0" default="yes"></pick>
+<pick thing="ssScrying" index="902" batchindex="294" refcount="0" default="yes"></pick>
+<pick thing="ssShadow" index="903" batchindex="295" refcount="0" default="yes"></pick>
+<pick thing="ssShadowDs" index="904" batchindex="296" refcount="0" default="yes"></pick>
+<pick thing="ssSonic" index="905" batchindex="297" refcount="0" default="yes"></pick>
+<pick thing="ssSummon" index="906" batchindex="298" refcount="0" default="yes"></pick>
+<pick thing="ssTeleport" index="907" batchindex="299" refcount="0" default="yes"></pick>
+<pick thing="ssTrans" index="908" batchindex="300" refcount="0" default="yes"></pick>
+<pick thing="ssWater" index="909" batchindex="301" refcount="0" default="yes"></pick>
+<pick thing="svFort" index="910" batchindex="302" refcount="0" default="yes"></pick>
+<pick thing="svRef" index="911" batchindex="303" refcount="0" default="yes"></pick>
+<pick thing="svWill" index="912" batchindex="304" refcount="0" default="yes"></pick>
+<pick thing="tEncumTbl" index="605" batchindex="9" bootstrap="yes" default="yes">
 <reference bootindex="9"/>
 </pick>
-<pick thing="tpAberr" index="916" batchindex="305" refcount="0" default="yes">
-<chain index="917"/>
-<chain index="918"/>
+<pick thing="tpAberr" index="913" batchindex="305" refcount="0" default="yes">
+<chain index="914"/>
+<chain index="915"/>
 </pick>
-<pick thing="tpAnimal" index="919" batchindex="306" refcount="0" default="yes">
-<chain index="920"/>
-</pick>
-<pick thing="tpConst" index="921" batchindex="307" refcount="0" default="yes">
-<chain index="920"/>
+<pick thing="tpAnimal" index="916" batchindex="306" refcount="0" default="yes">
 <chain index="917"/>
+</pick>
+<pick thing="tpConst" index="918" batchindex="307" refcount="0" default="yes">
+<chain index="917"/>
+<chain index="914"/>
+<chain index="919"/>
+<chain index="920"/>
+<chain index="921"/>
 <chain index="922"/>
 <chain index="923"/>
 <chain index="924"/>
@@ -13802,91 +15815,88 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <chain index="932"/>
 <chain index="933"/>
 <chain index="934"/>
-<chain index="935"/>
-<chain index="936"/>
-<chain index="937"/>
 </pick>
-<pick thing="tpDragon" index="938" batchindex="308" refcount="0" default="yes">
-<chain index="920"/>
+<pick thing="tpDragon" index="935" batchindex="308" refcount="0" default="yes">
 <chain index="917"/>
-<chain index="939"/>
-<chain index="929"/>
-<chain index="930"/>
+<chain index="914"/>
+<chain index="936"/>
+<chain index="926"/>
+<chain index="927"/>
 </pick>
-<pick thing="tpFey" index="940" batchindex="309" refcount="0" default="yes">
-<chain index="920"/>
-<chain index="941"/>
+<pick thing="tpFey" index="937" batchindex="309" refcount="0" default="yes">
+<chain index="917"/>
+<chain index="938"/>
 </pick>
-<pick thing="tpHumanoid" index="942" batchindex="310" refcount="0" default="yes">
+<pick thing="tpHumanoid" index="939" batchindex="310" refcount="0" default="yes">
+<chain index="940"/>
+</pick>
+<pick thing="tpMagBeast" index="941" batchindex="311" refcount="0" default="yes">
+<chain index="917"/>
+<chain index="914"/>
+</pick>
+<pick thing="tpMonHuman" index="942" batchindex="312" refcount="0" default="yes">
+<chain index="914"/>
 <chain index="943"/>
 </pick>
-<pick thing="tpMagBeast" index="944" batchindex="311" refcount="0" default="yes">
-<chain index="920"/>
-<chain index="917"/>
-</pick>
-<pick thing="tpMonHuman" index="945" batchindex="312" refcount="0" default="yes">
-<chain index="917"/>
-<chain index="946"/>
-</pick>
-<pick thing="tpOoze" index="947" batchindex="313" refcount="0" default="yes">
-<chain index="948"/>
+<pick thing="tpOoze" index="944" batchindex="313" refcount="0" default="yes">
+<chain index="945"/>
+<chain index="925"/>
+<chain index="926"/>
+<chain index="927"/>
 <chain index="928"/>
-<chain index="929"/>
-<chain index="930"/>
-<chain index="931"/>
+<chain index="946"/>
+<chain index="947"/>
+<chain index="948"/>
 <chain index="949"/>
 <chain index="950"/>
-<chain index="951"/>
+</pick>
+<pick thing="tpOutsider" index="951" batchindex="314" refcount="0" default="yes">
+<chain index="914"/>
 <chain index="952"/>
 <chain index="953"/>
 </pick>
-<pick thing="tpOutsider" index="954" batchindex="314" refcount="0" default="yes">
+<pick thing="tpPlant" index="954" batchindex="315" refcount="0" default="yes">
 <chain index="917"/>
-<chain index="955"/>
-<chain index="956"/>
-</pick>
-<pick thing="tpPlant" index="957" batchindex="315" refcount="0" default="yes">
-<chain index="920"/>
-<chain index="925"/>
-<chain index="928"/>
-<chain index="929"/>
-<chain index="930"/>
-<chain index="931"/>
-<chain index="949"/>
-</pick>
-<pick thing="tpUndead" index="958" batchindex="316" refcount="0" default="yes">
-<chain index="917"/>
-<chain index="959"/>
-<chain index="960"/>
+<chain index="922"/>
 <chain index="925"/>
 <chain index="926"/>
-<chain index="961"/>
+<chain index="927"/>
 <chain index="928"/>
-<chain index="929"/>
+<chain index="946"/>
+</pick>
+<pick thing="tpUndead" index="955" batchindex="316" refcount="0" default="yes">
+<chain index="914"/>
+<chain index="956"/>
+<chain index="957"/>
+<chain index="922"/>
+<chain index="923"/>
+<chain index="958"/>
+<chain index="925"/>
+<chain index="926"/>
+<chain index="927"/>
+<chain index="928"/>
+<chain index="959"/>
 <chain index="930"/>
 <chain index="931"/>
-<chain index="962"/>
+<chain index="932"/>
 <chain index="933"/>
 <chain index="934"/>
-<chain index="935"/>
-<chain index="936"/>
-<chain index="937"/>
-<chain index="924"/>
+<chain index="921"/>
 </pick>
-<pick thing="tpVermin" index="963" batchindex="317" refcount="0" default="yes">
-<chain index="917"/>
+<pick thing="tpVermin" index="960" batchindex="317" refcount="0" default="yes">
+<chain index="914"/>
 </pick>
-<pick thing="typOoze" index="948" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="947" batchindex="313" bootindex="1"/>
+<pick thing="typOoze" index="945" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="944" batchindex="313" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="typUndead" index="960" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="958" batchindex="316" bootindex="1"/>
+<pick thing="typUndead" index="957" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="955" batchindex="316" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="validgizmo" index="638" batchindex="38" bootstrap="yes" default="yes">
+<pick thing="validgizmo" index="635" batchindex="38" bootstrap="yes" default="yes">
 <gizmo id="validgizmo">
 <container index="5" chosencount="0" pickcount="0">
 <notes/>
@@ -13894,462 +15904,462 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </gizmo>
 <reference bootindex="999999003"/>
 </pick>
-<pick thing="wConstrict" index="1092" batchindex="437" root="no" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="wConstrict" index="1089" batchindex="437" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 </pick>
-<pick thing="wGauntArm" index="624" batchindex="25" uniqueness="unique" count="0" bootstrap="yes" default="yes" live="no">
+<pick thing="wGauntArm" index="621" batchindex="25" uniqueness="unique" count="0" bootstrap="yes" default="yes" live="no">
 <reference bootindex="101"/>
 </pick>
-<pick thing="wMainHand" index="625" batchindex="26" bootstrap="yes" default="yes">
+<pick thing="wMainHand" index="622" batchindex="26" bootstrap="yes" default="yes">
 <reference bootindex="102"/>
 </pick>
-<pick thing="wRay" index="964" batchindex="318" refcount="0" fieldcount="1">
+<pick thing="wRay" index="961" batchindex="318" refcount="0" fieldcount="1">
 <field id="gSize" value="1."></field>
 </pick>
-<pick thing="wSlam" index="1094" batchindex="437" root="no" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<pick thing="wSlam" index="1091" batchindex="437" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 </pick>
-<pick thing="wTouch" index="965" batchindex="319" refcount="0" fieldcount="1">
+<pick thing="wTouch" index="962" batchindex="319" refcount="0" fieldcount="1">
 <field id="gSize" value="1."></field>
 </pick>
-<pick thing="wUnarmed" index="623" batchindex="24" fieldcount="1" bootstrap="yes">
+<pick thing="wUnarmed" index="620" batchindex="24" fieldcount="1" bootstrap="yes">
 <reference bootindex="100"/>
 <field id="gSize" value="1."></field>
 </pick>
-<pick thing="wcAcid" index="966" batchindex="320" refcount="0" default="yes"></pick>
-<pick thing="wcAlign" index="967" batchindex="321" refcount="0" default="yes"></pick>
-<pick thing="wcAnimal" index="968" batchindex="322" refcount="0" default="yes"></pick>
-<pick thing="wcArmor" index="969" batchindex="323" refcount="0" default="yes"></pick>
-<pick thing="wcBinding" index="970" batchindex="324" refcount="0" default="yes"></pick>
-<pick thing="wcBody" index="971" batchindex="325" refcount="0" default="yes"></pick>
-<pick thing="wcChange" index="972" batchindex="326" refcount="0" default="yes"></pick>
-<pick thing="wcCold" index="973" batchindex="327" refcount="0" default="yes"></pick>
-<pick thing="wcCommand" index="974" batchindex="328" refcount="0" default="yes"></pick>
-<pick thing="wcConceal" index="975" batchindex="329" refcount="0" default="yes"></pick>
-<pick thing="wcDeath" index="976" batchindex="330" refcount="0" default="yes"></pick>
-<pick thing="wcDestruct" index="977" batchindex="331" refcount="0" default="yes"></pick>
-<pick thing="wcDetect" index="978" batchindex="332" refcount="0" default="yes"></pick>
-<pick thing="wcDispel" index="979" batchindex="333" refcount="0" default="yes"></pick>
-<pick thing="wcDivinat" index="980" batchindex="334" refcount="0" default="yes"></pick>
-<pick thing="wcElectric" index="981" batchindex="335" refcount="0" default="yes"></pick>
-<pick thing="wcFear" index="982" batchindex="336" refcount="0" default="yes"></pick>
-<pick thing="wcFire" index="983" batchindex="337" refcount="0" default="yes"></pick>
-<pick thing="wcFlight" index="984" batchindex="338" refcount="0" default="yes"></pick>
-<pick thing="wcForce" index="985" batchindex="339" refcount="0" default="yes"></pick>
-<pick thing="wcGravity" index="986" batchindex="340" refcount="0" default="yes"></pick>
-<pick thing="wcHealing" index="987" batchindex="341" refcount="0" default="yes"></pick>
-<pick thing="wcIllumin" index="988" batchindex="342" refcount="0" default="yes"></pick>
-<pick thing="wcIllusion" index="989" batchindex="343" refcount="0" default="yes"></pick>
-<pick thing="wcLanguage" index="990" batchindex="344" refcount="0" default="yes"></pick>
-<pick thing="wcLife" index="991" batchindex="345" refcount="0" default="yes"></pick>
-<pick thing="wcPain" index="992" batchindex="346" refcount="0" default="yes"></pick>
-<pick thing="wcPower" index="993" batchindex="347" refcount="0" default="yes"></pick>
-<pick thing="wcSonic" index="994" batchindex="348" refcount="0" default="yes"></pick>
-<pick thing="wcSummon" index="995" batchindex="349" refcount="0" default="yes"></pick>
-<pick thing="wcTeleport" index="996" batchindex="350" refcount="0" default="yes"></pick>
-<pick thing="wcTime" index="997" batchindex="351" refcount="0" default="yes"></pick>
-<pick thing="wcWall" index="998" batchindex="352" refcount="0" default="yes"></pick>
-<pick thing="wcWeather" index="999" batchindex="353" refcount="0" default="yes"></pick>
-<pick thing="wcWounding" index="1000" batchindex="354" refcount="0" default="yes"></pick>
-<pick thing="weAcidBur0" index="1001" batchindex="355" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weAcidBur0" index="1002" batchindex="356" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weBleeWou0" index="1003" batchindex="357" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weBleeWou0" index="1004" batchindex="358" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weColdSna0" index="1005" batchindex="359" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weColdSna0" index="1006" batchindex="360" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weCramp0" index="1007" batchindex="361" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weCramp0" index="1008" batchindex="362" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weDeciphe0" index="1009" batchindex="363" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weDeciphe0" index="1010" batchindex="364" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weDeciphe0" index="1011" batchindex="365" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weEcho0" index="1012" batchindex="366" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weFlamJet0" index="1013" batchindex="367" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weFlamJet0" index="1014" batchindex="368" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weForcBlo0" index="1015" batchindex="369" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weForcBlo0" index="1016" batchindex="370" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weLift0" index="1017" batchindex="371" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weLift0" index="1018" batchindex="372" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSensMag0" index="1019" batchindex="373" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSensMag0" index="1020" batchindex="374" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSensMag0" index="1021" batchindex="375" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSootTou0" index="1022" batchindex="376" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSpark0" index="1023" batchindex="377" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSpark0" index="1024" batchindex="378" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="weSpark0" index="1025" batchindex="379" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="wmBoost" index="1026" batchindex="380" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wcAcid" index="963" batchindex="320" refcount="0" default="yes"></pick>
+<pick thing="wcAlign" index="964" batchindex="321" refcount="0" default="yes"></pick>
+<pick thing="wcAnimal" index="965" batchindex="322" refcount="0" default="yes"></pick>
+<pick thing="wcArmor" index="966" batchindex="323" refcount="0" default="yes"></pick>
+<pick thing="wcBinding" index="967" batchindex="324" refcount="0" default="yes"></pick>
+<pick thing="wcBody" index="968" batchindex="325" refcount="0" default="yes"></pick>
+<pick thing="wcChange" index="969" batchindex="326" refcount="0" default="yes"></pick>
+<pick thing="wcCold" index="970" batchindex="327" refcount="0" default="yes"></pick>
+<pick thing="wcCommand" index="971" batchindex="328" refcount="0" default="yes"></pick>
+<pick thing="wcConceal" index="972" batchindex="329" refcount="0" default="yes"></pick>
+<pick thing="wcDeath" index="973" batchindex="330" refcount="0" default="yes"></pick>
+<pick thing="wcDestruct" index="974" batchindex="331" refcount="0" default="yes"></pick>
+<pick thing="wcDetect" index="975" batchindex="332" refcount="0" default="yes"></pick>
+<pick thing="wcDispel" index="976" batchindex="333" refcount="0" default="yes"></pick>
+<pick thing="wcDivinat" index="977" batchindex="334" refcount="0" default="yes"></pick>
+<pick thing="wcElectric" index="978" batchindex="335" refcount="0" default="yes"></pick>
+<pick thing="wcFear" index="979" batchindex="336" refcount="0" default="yes"></pick>
+<pick thing="wcFire" index="980" batchindex="337" refcount="0" default="yes"></pick>
+<pick thing="wcFlight" index="981" batchindex="338" refcount="0" default="yes"></pick>
+<pick thing="wcForce" index="982" batchindex="339" refcount="0" default="yes"></pick>
+<pick thing="wcGravity" index="983" batchindex="340" refcount="0" default="yes"></pick>
+<pick thing="wcHealing" index="984" batchindex="341" refcount="0" default="yes"></pick>
+<pick thing="wcIllumin" index="985" batchindex="342" refcount="0" default="yes"></pick>
+<pick thing="wcIllusion" index="986" batchindex="343" refcount="0" default="yes"></pick>
+<pick thing="wcLanguage" index="987" batchindex="344" refcount="0" default="yes"></pick>
+<pick thing="wcLife" index="988" batchindex="345" refcount="0" default="yes"></pick>
+<pick thing="wcPain" index="989" batchindex="346" refcount="0" default="yes"></pick>
+<pick thing="wcPower" index="990" batchindex="347" refcount="0" default="yes"></pick>
+<pick thing="wcSonic" index="991" batchindex="348" refcount="0" default="yes"></pick>
+<pick thing="wcSummon" index="992" batchindex="349" refcount="0" default="yes"></pick>
+<pick thing="wcTeleport" index="993" batchindex="350" refcount="0" default="yes"></pick>
+<pick thing="wcTime" index="994" batchindex="351" refcount="0" default="yes"></pick>
+<pick thing="wcWall" index="995" batchindex="352" refcount="0" default="yes"></pick>
+<pick thing="wcWeather" index="996" batchindex="353" refcount="0" default="yes"></pick>
+<pick thing="wcWounding" index="997" batchindex="354" refcount="0" default="yes"></pick>
+<pick thing="weAcidBur0" index="998" batchindex="355" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weAcidBur0" index="999" batchindex="356" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weBleeWou0" index="1000" batchindex="357" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weBleeWou0" index="1001" batchindex="358" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weColdSna0" index="1002" batchindex="359" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weColdSna0" index="1003" batchindex="360" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weCramp0" index="1004" batchindex="361" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weCramp0" index="1005" batchindex="362" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weDeciphe0" index="1006" batchindex="363" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weDeciphe0" index="1007" batchindex="364" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weDeciphe0" index="1008" batchindex="365" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weEcho0" index="1009" batchindex="366" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weFlamJet0" index="1010" batchindex="367" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weFlamJet0" index="1011" batchindex="368" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weForcBlo0" index="1012" batchindex="369" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weForcBlo0" index="1013" batchindex="370" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weLift0" index="1014" batchindex="371" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weLift0" index="1015" batchindex="372" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSensMag0" index="1016" batchindex="373" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSensMag0" index="1017" batchindex="374" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSensMag0" index="1018" batchindex="375" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSootTou0" index="1019" batchindex="376" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSpark0" index="1020" batchindex="377" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSpark0" index="1021" batchindex="378" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="weSpark0" index="1022" batchindex="379" count="0" refcount="0" default="yes" live="no"></pick>
+<pick thing="wmBoost" index="1023" batchindex="380" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmBoost" index="1027" batchindex="381" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmBoost" index="1024" batchindex="381" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmBoost" index="1028" batchindex="382" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmBoost" index="1025" batchindex="382" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmDistant" index="1029" batchindex="383" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmDistant" index="1026" batchindex="383" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmDistant" index="1030" batchindex="384" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmDistant" index="1027" batchindex="384" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmDistant" index="1031" batchindex="385" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmDistant" index="1028" batchindex="385" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmLengthy" index="1032" batchindex="386" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmLengthy" index="1029" batchindex="386" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmLengthy" index="1033" batchindex="387" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmLengthy" index="1030" batchindex="387" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wmLengthy" index="1034" batchindex="388" count="0" refcount="0" fieldcount="1" default="yes" live="no">
+<pick thing="wmLengthy" index="1031" batchindex="388" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="xBurrow" index="1035" batchindex="389" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xBurrow" index="1032" batchindex="389" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xClimb" index="1036" batchindex="390" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xClimb" index="1033" batchindex="390" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xConstruct" index="923" batchindex="307" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
+<pick thing="xConstruct" index="920" batchindex="307" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRd" index="1037" batchindex="391" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRd" index="1034" batchindex="391" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdAdB" index="1038" batchindex="392" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdAdB" index="1035" batchindex="392" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdAdGd" index="1039" batchindex="393" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdAdGd" index="1036" batchindex="393" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdAdam" index="1040" batchindex="394" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdAdam" index="1037" batchindex="394" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdArro" index="1041" batchindex="395" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdArro" index="1038" batchindex="395" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdB" index="1042" batchindex="396" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdB" index="1039" batchindex="396" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdBMg" index="1043" batchindex="397" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdBMg" index="1040" batchindex="397" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdCIEv" index="1044" batchindex="398" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdCIEv" index="1041" batchindex="398" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdCISi" index="1045" batchindex="399" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdCISi" index="1042" batchindex="399" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdChao" index="1046" batchindex="400" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdChao" index="1043" batchindex="400" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdEpic" index="1047" batchindex="401" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdEpic" index="1044" batchindex="401" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdEvMa" index="1048" batchindex="402" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdEvMa" index="1045" batchindex="402" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdEvSi" index="1049" batchindex="403" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdEvSi" index="1046" batchindex="403" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdEvil" index="1050" batchindex="404" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdEvil" index="1047" batchindex="404" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdGoCI" index="1051" batchindex="405" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdGoCI" index="1048" batchindex="405" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdGoPi" index="1052" batchindex="406" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdGoPi" index="1049" batchindex="406" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdGoSi" index="1053" batchindex="407" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdGoSi" index="1050" batchindex="407" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdGood" index="1054" batchindex="408" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdGood" index="1051" batchindex="408" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdIron" index="1055" batchindex="409" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdIron" index="1052" batchindex="409" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdLaCI" index="1056" batchindex="410" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdLaCI" index="1053" batchindex="410" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdLaw" index="1057" batchindex="411" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdLaw" index="1054" batchindex="411" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdLeth" index="1058" batchindex="412" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdLeth" index="1055" batchindex="412" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdMag" index="1059" batchindex="413" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdMag" index="1056" batchindex="413" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdMgSi" index="1060" batchindex="414" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdMgSi" index="1057" batchindex="414" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdMgSl" index="1061" batchindex="415" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdMgSl" index="1058" batchindex="415" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdNWoo" index="1062" batchindex="416" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdNWoo" index="1059" batchindex="416" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdNoMa" index="1063" batchindex="417" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdNoMa" index="1060" batchindex="417" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdP" index="1064" batchindex="418" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdP" index="1061" batchindex="418" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdPS" index="1065" batchindex="419" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdPS" index="1062" batchindex="419" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdS" index="1066" batchindex="420" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdS" index="1063" batchindex="420" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdSB" index="1067" batchindex="421" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdSB" index="1064" batchindex="421" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdSil" index="1068" batchindex="422" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdSil" index="1065" batchindex="422" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdVorp" index="1069" batchindex="423" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdVorp" index="1066" batchindex="423" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdWood" index="1070" batchindex="424" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdWood" index="1067" batchindex="424" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRsAcid" index="1071" batchindex="425" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRsAcid" index="1068" batchindex="425" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRsCold" index="1072" batchindex="426" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRsCold" index="1069" batchindex="426" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRsElec" index="1073" batchindex="427" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRsElec" index="1070" batchindex="427" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRsFire" index="1074" batchindex="428" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
+<pick thing="xDamRsFire" index="1071" batchindex="428" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
 <reference/>
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRsSoni" index="1075" batchindex="429" uniqueness="unique" fieldcount="2" default="yes">
-<reference/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xFly" index="1076" batchindex="430" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRsSoni" index="1072" batchindex="429" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmAbDmP" index="962" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmAbilDm" index="932" batchindex="307" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmAbilDr" index="933" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmBleed" index="924" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmCrit" index="950" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="947" batchindex="313" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmDeNec" index="927" batchindex="307" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmDeath" index="961" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmDis" index="926" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmElec" index="1093" batchindex="437" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmEnerDr" index="936" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmExhaus" index="935" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmFatigu" index="934" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmFlank" index="951" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="947" batchindex="313" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmMind" index="925" batchindex="307" uniqueness="unique" root="no" refcount="3" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="957" batchindex="315" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmParaly" index="930" batchindex="307" uniqueness="unique" root="no" refcount="5" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="938" batchindex="308" bootindex="1"/>
-<reference pickindex="947" batchindex="313" bootindex="1"/>
-<reference pickindex="957" batchindex="315" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmPois" index="928" batchindex="307" uniqueness="unique" root="no" refcount="4" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="947" batchindex="313" bootindex="1"/>
-<reference pickindex="957" batchindex="315" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmPoly" index="949" batchindex="313" uniqueness="unique" root="no" refcount="2" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="947" batchindex="313" bootindex="1"/>
-<reference pickindex="957" batchindex="315" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmPrec" index="952" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
-<reference pickindex="947" batchindex="313" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmSleep" index="929" batchindex="307" uniqueness="unique" root="no" refcount="5" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="938" batchindex="308" bootindex="1"/>
-<reference pickindex="947" batchindex="313" bootindex="1"/>
-<reference pickindex="957" batchindex="315" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xImmStun" index="931" batchindex="307" uniqueness="unique" root="no" refcount="4" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="921" batchindex="307" bootindex="1"/>
-<reference pickindex="947" batchindex="313" bootindex="1"/>
-<reference pickindex="957" batchindex="315" bootindex="1"/>
-<reference pickindex="958" batchindex="316" bootindex="1"/>
-<field id="usrChosen1"></field>
-<field id="usrChosen2"></field>
-</pick>
-<pick thing="xSplRs" index="1077" batchindex="431" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xFly" index="1073" batchindex="430" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xSwim" index="1078" batchindex="432" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
+<pick thing="xImmAbDmP" index="959" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmAbilDm" index="929" batchindex="307" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmAbilDr" index="930" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmBleed" index="921" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmCrit" index="947" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="944" batchindex="313" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmDeNec" index="924" batchindex="307" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmDeath" index="958" batchindex="316" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmDis" index="923" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmElec" index="1090" batchindex="437" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmEnerDr" index="933" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmExhaus" index="932" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmFatigu" index="931" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmFlank" index="948" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="944" batchindex="313" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmMind" index="922" batchindex="307" uniqueness="unique" root="no" refcount="3" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="954" batchindex="315" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmParaly" index="927" batchindex="307" uniqueness="unique" root="no" refcount="5" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="935" batchindex="308" bootindex="1"/>
+<reference pickindex="944" batchindex="313" bootindex="1"/>
+<reference pickindex="954" batchindex="315" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmPois" index="925" batchindex="307" uniqueness="unique" root="no" refcount="4" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="944" batchindex="313" bootindex="1"/>
+<reference pickindex="954" batchindex="315" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmPoly" index="946" batchindex="313" uniqueness="unique" root="no" refcount="2" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="944" batchindex="313" bootindex="1"/>
+<reference pickindex="954" batchindex="315" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmPrec" index="949" batchindex="313" uniqueness="unique" root="no" count="0" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<reference pickindex="944" batchindex="313" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmSleep" index="926" batchindex="307" uniqueness="unique" root="no" refcount="5" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="935" batchindex="308" bootindex="1"/>
+<reference pickindex="944" batchindex="313" bootindex="1"/>
+<reference pickindex="954" batchindex="315" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xImmStun" index="928" batchindex="307" uniqueness="unique" root="no" refcount="4" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="918" batchindex="307" bootindex="1"/>
+<reference pickindex="944" batchindex="313" bootindex="1"/>
+<reference pickindex="954" batchindex="315" bootindex="1"/>
+<reference pickindex="955" batchindex="316" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xSplRs" index="1074" batchindex="431" uniqueness="unique" fieldcount="2" default="yes">
 <reference/>
-<reference pickindex="1083" batchindex="437" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xSwim" index="1075" batchindex="432" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
+<reference/>
+<reference pickindex="1080" batchindex="437" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -14521,18 +16531,28 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="APG" name="Advanced Player&apos;s Guide" count="0"/>
 <source source="APGFamil" name="Advanced Player&apos;s Guide Familiars" count="1"/>
 <ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
-<usagepool id="jPP" usagecount="0" pickindex="1080" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="1080" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="1080" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="1080" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="1080" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="1081" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="1081" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPP" usagecount="0" pickindex="1081" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="1081" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="1081" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="1081" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="1081" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPP" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPresSpent" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPrestige" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jSP" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jXP" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="psiPPUsed" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPP" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPresSpent" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPrestige" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jSP" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jXP" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="1078" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="1078" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPP" usagecount="0" pickindex="1078" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPresSpent" usagecount="0" pickindex="1078" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jPrestige" usagecount="0" pickindex="1078" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jSP" usagecount="0" pickindex="1078" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jXP" usagecount="0" pickindex="1078" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Damage" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Nonlethal" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="PresSpent" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
@@ -14544,8 +16564,8 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usagepool id="TotalSP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="1080" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="1080" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="facPresTPA" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="facPresSpt" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
 </minion>
 </pick>
 <pick thing="pDethgaggd" index="109" batchindex="97" count="0" refcount="0" fieldcount="4" live="no">
@@ -14827,7 +16847,11 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="pMount"></field>
 <field id="pIndex" value="45."></field>
 </pick>
-<pick thing="rHuman" index="497" batchindex="446" refcount="0" fieldcount="2" source="bgRace">
+<pick thing="rHuman" index="493" batchindex="442" refcount="0" fieldcount="2" source="bgRace">
+<chain index="494"/>
+<chain index="495"/>
+<chain index="496"/>
+<chain index="497"/>
 <chain index="498"/>
 <chain index="499"/>
 <chain index="500"/>
@@ -14844,15 +16868,11 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <chain index="511"/>
 <chain index="512"/>
 <chain index="513"/>
-<chain index="514"/>
-<chain index="515"/>
-<chain index="516"/>
-<chain index="517"/>
 <field id="cFavorChc"></field>
 <field id="cIndexCopy" value="-1."></field>
 </pick>
-<pick thing="raAttr2Sel" index="498" batchindex="446" root="no" fieldcount="2" bootstrap="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="raAttr2Sel" index="494" batchindex="442" root="no" fieldcount="2" bootstrap="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1" menuthing="aCHA" ispick="yes" menuusage="hero" cacheindex="64"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -14868,13 +16888,13 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raHuFeat" index="499" batchindex="446" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="raHuFeat" index="495" batchindex="442" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="raHuSkill" index="500" batchindex="446" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="raHuSkill" index="496" batchindex="442" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -14899,8 +16919,8 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="rcMwangi" index="596" batchindex="505" uniqueness="unique" fieldcount="3" source="RacCstAbil">
-<chain index="597"/>
+<pick thing="rcMwangi" index="592" batchindex="501" uniqueness="unique" fieldcount="3" source="RacCstAbil">
+<chain index="593"/>
 <reference/>
 <field id="rcOrder" value="1."></field>
 <field id="usrChosen1"></field>
@@ -14926,7 +16946,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </gizmo>
 <reference bootindex="400"/>
 </pick>
-<pick thing="sPFInfHea1" index="1706" batchindex="545" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
 <pick thing="selAxChaos" index="164" batchindex="152" refcount="0" default="yes"></pick>
 <pick thing="selAxEvil" index="165" batchindex="153" refcount="0" default="yes"></pick>
 <pick thing="selAxGood" index="166" batchindex="154" refcount="0" default="yes"></pick>
@@ -14971,7 +16990,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <linkage id="skillattr" index="68"/>
 <reference/>
 </pick>
-<pick thing="skCrafAlch" index="573" batchindex="483" uniqueness="unique" fieldcount="1" source="kTable">
+<pick thing="skCrafAlch" index="569" batchindex="479" uniqueness="unique" fieldcount="1" source="kTable">
 <linkage id="skillattr" index="67"/>
 <reference/>
 <field id="skUser" user="6."></field>
@@ -15009,12 +17028,12 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <linkage id="skillattr" index="64"/>
 <reference/>
 </pick>
-<pick thing="skKnowArca" index="574" batchindex="484" uniqueness="unique" fieldcount="1" source="kTable">
+<pick thing="skKnowArca" index="570" batchindex="480" uniqueness="unique" fieldcount="1" source="kTable">
 <linkage id="skillattr" index="67"/>
 <reference/>
 <field id="skUser" user="1."></field>
 </pick>
-<pick thing="skKnowNat" index="575" batchindex="485" uniqueness="unique" fieldcount="1" source="kTable">
+<pick thing="skKnowNat" index="571" batchindex="481" uniqueness="unique" fieldcount="1" source="kTable">
 <linkage id="skillattr" index="67"/>
 <reference/>
 <field id="skUser" user="6."></field>
@@ -15027,12 +17046,12 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <linkage id="skillattr" index="69"/>
 <reference/>
 </pick>
-<pick thing="skProfGard" index="576" batchindex="486" uniqueness="unique" fieldcount="1" source="kTable">
+<pick thing="skProfGard" index="572" batchindex="482" uniqueness="unique" fieldcount="1" source="kTable">
 <linkage id="skillattr" index="69"/>
 <reference/>
 <field id="skUser" user="1."></field>
 </pick>
-<pick thing="skProfHerb" index="577" batchindex="487" uniqueness="unique" fieldcount="1" source="kTable">
+<pick thing="skProfHerb" index="573" batchindex="483" uniqueness="unique" fieldcount="1" source="kTable">
 <linkage id="skillattr" index="69"/>
 <reference/>
 <field id="skUser" user="1."></field>
@@ -15071,165 +17090,289 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference/>
 <field id="skUser" user="7."></field>
 </pick>
-<pick thing="spAcidPit4" index="569" batchindex="479" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spAcidPit4" index="565" batchindex="475" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spAcidSpl0" index="213" batchindex="201" refcount="0" default="yes"></pick>
 <pick thing="spAcidSpl0" index="214" batchindex="202" refcount="0" default="yes"></pick>
-<pick thing="spAcidSpl0" index="2235" batchindex="561" refcount="0" tablelinkid="cHelpWiz" source="ClsBkSpec" basislink="213" agentid="cHelpWiz" default="yes"></pick>
-<pick thing="spAnimPla8" index="521" batchindex="449" root="no" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="spAcidSpl0" index="1719" batchindex="543" refcount="0" tablelinkid="cHelpWiz" source="ClsBkSpec" basislink="213" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spAnimDea3" index="2330" batchindex="565" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
 </pick>
-<pick thing="spAnimRop1" index="1144" batchindex="520" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
+<pick thing="spAnimPla8" index="517" batchindex="445" root="no" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
+</pick>
+<pick thing="spAnimRop1" index="1137" batchindex="512" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
+<pick thing="spAnimSha8" index="2365" batchindex="584" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2357" batchindex="584" bootindex="1"/>
+</pick>
+<pick thing="spAntHau1" index="2345" batchindex="572" refcount="0" tablelinkid="cHelpOra" source="ClsSplSpon" agentid="cHelpOra" default="yes"></pick>
 <pick thing="spArcaMar0" index="215" batchindex="203" refcount="0" default="yes"></pick>
 <pick thing="spArcaMar0" index="216" batchindex="204" refcount="0" default="yes"></pick>
 <pick thing="spArcaMar0" index="217" batchindex="205" refcount="0" default="yes"></pick>
-<pick thing="spBarkski2" index="524" batchindex="449" root="no" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="spArcaMar0" index="2367" batchindex="585" refcount="0" tablelinkid="cHelpWit" source="ClsSplBook" basislink="216" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spArcaMar0" index="2368" batchindex="586" refcount="0" tablelinkid="cHelpWit" source="ClsSplBook" basislink="216" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spArcaMar0" index="2369" batchindex="587" refcount="0" tablelinkid="cHelpWit" source="ClsSplBook" basislink="216" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spArcaMar0" index="2370" batchindex="588" refcount="0" tablelinkid="cHelpWit" source="ClsSplBook" basislink="216" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spBane1" index="2380" batchindex="598" refcount="0" tablelinkid="cHelpAPa" source="ClsSplMem" agentid="cHelpAPa" default="yes"></pick>
+<pick thing="spBarkski2" index="520" batchindex="445" root="no" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 </pick>
-<pick thing="spBeguGif1" index="1145" batchindex="521" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
+<pick thing="spBeguGif1" index="1138" batchindex="513" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
 <pick thing="spBleed0" index="218" batchindex="206" refcount="0" default="yes"></pick>
 <pick thing="spBleed0" index="219" batchindex="207" refcount="0" default="yes"></pick>
-<pick thing="spBleed0" index="1700" batchindex="539" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spBleed0" index="1701" batchindex="540" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spBleed0" index="1702" batchindex="541" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spBleed0" index="1703" batchindex="542" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spBlindne2" index="1148" batchindex="524" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spBlink3" index="562" batchindex="472" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spBlooBio2" index="1149" batchindex="525" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spBlur2" index="1150" batchindex="526" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spBorrSki1" index="1146" batchindex="522" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spCallLig3" index="1699" batchindex="538" refcount="0" tablelinkid="cHelpClr" source="ClsCastSec" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spCallWea1" index="1147" batchindex="523" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spCalmAni1" index="1697" batchindex="536" refcount="0" tablelinkid="cHelpClr" source="ClsCastSec" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spColoSpr1" index="548" batchindex="458" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spColoSpr1" index="1727" batchindex="554" refcount="0" tablelinkid="cHelpWiz" source="ClsBook" agentid="cHelpWiz" default="yes"></pick>
-<pick thing="spColoSpr1" index="2239" batchindex="565" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="1727" agentid="cHelpWiz" default="yes"></pick>
-<pick thing="spCommPla4" index="526" batchindex="449" root="no" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="spBleed0" index="1687" batchindex="524" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spBleed0" index="1688" batchindex="525" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spBleed0" index="1689" batchindex="526" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spBleed0" index="1690" batchindex="527" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spBlink3" index="558" batchindex="468" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spBorrSki1" index="1139" batchindex="514" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
+<pick thing="spCallLig3" index="1686" batchindex="523" refcount="0" tablelinkid="cHelpClr" source="ClsCastSec" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spCalmAni1" index="1684" batchindex="521" refcount="0" tablelinkid="cHelpClr" source="ClsCastSec" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spCatsGra2" index="2359" batchindex="584" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2357" batchindex="584" bootindex="1"/>
 </pick>
-<pick thing="spCrafFor1" index="1728" batchindex="555" refcount="0" tablelinkid="cHelpWiz" source="ClsBook" agentid="cHelpWiz" default="yes"></pick>
-<pick thing="spCrafFor1" index="2240" batchindex="566" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="1728" agentid="cHelpWiz" default="yes"></pick>
-<pick thing="spCreaWat0" index="2287" batchindex="574" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
-<pick thing="spCureMod2" index="1708" batchindex="547" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spDancLan1" index="1729" batchindex="556" refcount="0" tablelinkid="cHelpWiz" source="ClsBook" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spCatsGra2" index="2376" batchindex="594" refcount="0" tablelinkid="cHelpWiz" source="ClsBook" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spCatsGra2" index="2377" batchindex="595" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="2376" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spCatsGra6" index="2363" batchindex="584" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2357" batchindex="584" bootindex="1"/>
+</pick>
+<pick thing="spCausFea1" index="2326" batchindex="565" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
+</pick>
+<pick thing="spCircDea6" index="2322" batchindex="565" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
+</pick>
+<pick thing="spColoSpr1" index="544" batchindex="454" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spColoSpr1" index="1706" batchindex="537" refcount="0" tablelinkid="cHelpWiz" source="ClsBook" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spColoSpr1" index="2375" batchindex="593" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="1706" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spColoSpr1" index="2378" batchindex="596" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="1706" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spCommPla4" index="522" batchindex="445" root="no" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
+</pick>
+<pick thing="spCommand1" index="2348" batchindex="575" refcount="0" tablelinkid="cHelpWit" source="ClsBook" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spCompLan1" index="2349" batchindex="576" refcount="0" tablelinkid="cHelpWit" source="ClsBook" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spContUnd7" index="2323" batchindex="565" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
+</pick>
+<pick thing="spCrafFor1" index="1707" batchindex="538" refcount="0" tablelinkid="cHelpWiz" source="ClsBook" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spCrafFor1" index="2379" batchindex="597" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="1707" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spCreaWat0" index="1759" batchindex="553" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
+<pick thing="spCureCri4" index="1800" batchindex="559" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spCureCri8" index="1808" batchindex="559" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spCureLig1" index="1761" batchindex="555" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
+<pick thing="spCureLig1" index="1762" batchindex="556" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
+<pick thing="spCureLig1" index="1794" batchindex="559" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spCureLig1" index="2346" batchindex="573" refcount="0" tablelinkid="cHelpOra" source="ClsSplSpon" agentid="cHelpOra" default="yes"></pick>
+<pick thing="spCureLig1" index="2350" batchindex="577" refcount="0" tablelinkid="cHelpWit" source="ClsBook" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spCureLig1" index="2371" batchindex="589" refcount="0" tablelinkid="cHelpWit" source="ClsSplBook" basislink="2350" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spCureLig1" index="2372" batchindex="590" refcount="0" tablelinkid="cHelpWit" source="ClsSplBook" basislink="2350" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spCureLig5" index="1802" batchindex="559" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spCureMod2" index="1694" batchindex="531" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spCureMod2" index="1796" batchindex="559" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spCureMod6" index="1804" batchindex="559" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spCureSer3" index="1798" batchindex="559" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spCureSer7" index="1806" batchindex="559" root="no" bootstrap="yes" default="yes">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spDancLan1" index="1708" batchindex="539" refcount="0" tablelinkid="cHelpWiz" source="ClsBook" agentid="cHelpWiz" default="yes"></pick>
 <pick thing="spDancLig0" index="220" batchindex="208" refcount="0" default="yes"></pick>
 <pick thing="spDancLig0" index="221" batchindex="209" refcount="0" default="yes"></pick>
 <pick thing="spDancLig0" index="222" batchindex="210" refcount="0" default="yes"></pick>
-<pick thing="spDancLig0" index="540" batchindex="450" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spDarknes2" index="1709" batchindex="548" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spDancLig0" index="536" batchindex="446" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spDaze0" index="223" batchindex="211" refcount="0" default="yes"></pick>
 <pick thing="spDaze0" index="224" batchindex="212" refcount="0" default="yes"></pick>
 <pick thing="spDaze0" index="225" batchindex="213" refcount="0" default="yes"></pick>
-<pick thing="spDaze0" index="1138" batchindex="514" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spDeteEvi1" index="1704" batchindex="543" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spDeteEvi1" index="1705" batchindex="544" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spDaze0" index="1132" batchindex="507" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
+<pick thing="spDeteEvi1" index="1691" batchindex="528" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spDeteEvi1" index="1692" batchindex="529" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
 <pick thing="spDeteMag0" index="226" batchindex="214" refcount="0" default="yes"></pick>
 <pick thing="spDeteMag0" index="227" batchindex="215" refcount="0" default="yes"></pick>
 <pick thing="spDeteMag0" index="228" batchindex="216" refcount="0" default="yes"></pick>
-<pick thing="spDeteMag0" index="541" batchindex="451" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spDeteMag0" index="2286" batchindex="573" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
+<pick thing="spDeteMag0" index="537" batchindex="447" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spDeteMag0" index="1758" batchindex="552" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
+<pick thing="spDeteMag0" index="2374" batchindex="592" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="226" agentid="cHelpWiz" default="yes"></pick>
 <pick thing="spDetePoi0" index="229" batchindex="217" refcount="0" default="yes"></pick>
 <pick thing="spDetePoi0" index="230" batchindex="218" refcount="0" default="yes"></pick>
-<pick thing="spDetePoi0" index="2285" batchindex="572" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
-<pick thing="spDispMag3" index="563" batchindex="473" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spDetePoi0" index="1757" batchindex="551" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
+<pick thing="spDeteSec1" index="2351" batchindex="578" refcount="0" tablelinkid="cHelpWit" source="ClsBook" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spDispMag3" index="559" batchindex="469" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spDisrUnd0" index="231" batchindex="219" refcount="0" default="yes"></pick>
 <pick thing="spDisrUnd0" index="232" batchindex="220" refcount="0" default="yes"></pick>
-<pick thing="spEnduEle1" index="549" batchindex="459" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spEntangl1" index="523" batchindex="449" root="no" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="spDoom1" index="2381" batchindex="599" refcount="0" tablelinkid="cHelpAPa" source="ClsSplMem" agentid="cHelpAPa" default="yes"></pick>
+<pick thing="spEnduEle1" index="545" batchindex="455" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spEnlaPer1" index="2352" batchindex="579" refcount="0" tablelinkid="cHelpWit" source="ClsBook" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spEnlaPer1" index="2373" batchindex="591" refcount="0" tablelinkid="cHelpWit" source="ClsSplBook" basislink="2352" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spEntangl1" index="519" batchindex="445" root="no" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 </pick>
-<pick thing="spEnteIma3" index="1711" batchindex="550" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spFalsLif2" index="556" batchindex="466" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spFeatFal1" index="550" batchindex="460" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spEnteIma3" index="1696" batchindex="533" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spEtheJau7" index="2364" batchindex="584" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2357" batchindex="584" bootindex="1"/>
+</pick>
+<pick thing="spFalsLif2" index="552" batchindex="462" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spFalsLif2" index="2328" batchindex="565" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
+</pick>
+<pick thing="spFear4" index="2331" batchindex="565" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
+</pick>
+<pick thing="spFeatFal1" index="546" batchindex="456" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spFlare0" index="233" batchindex="221" refcount="0" default="yes"></pick>
 <pick thing="spFlare0" index="234" batchindex="222" refcount="0" default="yes"></pick>
-<pick thing="spFlare0" index="1139" batchindex="515" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spFly3" index="564" batchindex="474" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spFlare0" index="1133" batchindex="508" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
+<pick thing="spFly3" index="560" batchindex="470" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spFreeMov4" index="2361" batchindex="584" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2357" batchindex="584" bootindex="1"/>
+</pick>
 <pick thing="spGhosSou0" index="235" batchindex="223" refcount="0" default="yes"></pick>
 <pick thing="spGhosSou0" index="236" batchindex="224" refcount="0" default="yes"></pick>
-<pick thing="spGhosSou0" index="542" batchindex="452" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spGlypWar3" index="1710" batchindex="549" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spGreensi2" index="557" batchindex="467" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spGhosSou0" index="538" batchindex="448" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spGlypWar3" index="1695" batchindex="532" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spGreensi2" index="553" batchindex="463" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spGuidanc0" index="237" batchindex="225" refcount="0" default="yes"></pick>
-<pick thing="spGustWin2" index="1698" batchindex="537" refcount="0" tablelinkid="cHelpClr" source="ClsCastSec" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spHaste3" index="565" batchindex="475" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spGuidanc0" index="2347" batchindex="574" refcount="0" tablelinkid="cHelpOra" source="ClsSplSpon" agentid="cHelpOra" default="yes"></pick>
+<pick thing="spGustWin2" index="1685" batchindex="522" refcount="0" tablelinkid="cHelpClr" source="ClsCastSec" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spHaste3" index="561" batchindex="471" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spHaste3" index="2360" batchindex="584" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2357" batchindex="584" bootindex="1"/>
+</pick>
 <pick thing="spHaunFey0" index="238" batchindex="226" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="spHydrPus1" index="551" batchindex="461" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spInflLig1" index="1707" batchindex="546" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spInviSph3" index="566" batchindex="476" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spJump1" index="552" batchindex="462" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spKnowDir0" index="1140" batchindex="516" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spKnowDir0" index="2284" batchindex="571" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
+<pick thing="spHorrWil8" index="2324" batchindex="565" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
+</pick>
+<pick thing="spHydrPus1" index="547" batchindex="457" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spHypnoti1" index="2353" batchindex="580" refcount="0" tablelinkid="cHelpWit" source="ClsBook" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spIdentif1" index="2354" batchindex="581" refcount="0" tablelinkid="cHelpWit" source="ClsBook" agentid="cHelpWit" default="yes"></pick>
+<pick thing="spInflCri4" index="1801" batchindex="559" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spInflCri8" index="1809" batchindex="559" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spInflLig1" index="1693" batchindex="530" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spInflLig1" index="1795" batchindex="559" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spInflLig5" index="1803" batchindex="559" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spInflMod2" index="1797" batchindex="559" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spInflMod6" index="1805" batchindex="559" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spInflSer3" index="1799" batchindex="559" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spInflSer7" index="1807" batchindex="559" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="1792" batchindex="559" bootindex="1"/>
+</pick>
+<pick thing="spInviSph3" index="562" batchindex="472" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spJump1" index="548" batchindex="458" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spJump1" index="2358" batchindex="584" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2357" batchindex="584" bootindex="1"/>
+</pick>
+<pick thing="spKnowDir0" index="1134" batchindex="509" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
+<pick thing="spKnowDir0" index="1756" batchindex="550" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
 <pick thing="spLight0" index="239" batchindex="227" refcount="0" default="yes"></pick>
 <pick thing="spLight0" index="240" batchindex="228" refcount="0" default="yes"></pick>
 <pick thing="spLight0" index="241" batchindex="229" refcount="0" default="yes"></pick>
-<pick thing="spLight0" index="1141" batchindex="517" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spLullaby0" index="1142" batchindex="518" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spMageArm1" index="553" batchindex="463" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spLight0" index="1135" batchindex="510" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
+<pick thing="spMageArm1" index="549" batchindex="459" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spMageHan0" index="242" batchindex="230" refcount="0" default="yes"></pick>
 <pick thing="spMageHan0" index="243" batchindex="231" refcount="0" default="yes"></pick>
-<pick thing="spMageHan0" index="543" batchindex="453" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spMagiMis1" index="554" batchindex="464" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spMageHan0" index="539" batchindex="449" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spMagiMis1" index="550" batchindex="460" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spMending0" index="244" batchindex="232" refcount="0" default="yes"></pick>
 <pick thing="spMending0" index="245" batchindex="233" refcount="0" default="yes"></pick>
-<pick thing="spMending0" index="544" batchindex="454" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spMending0" index="540" batchindex="450" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spMessage0" index="246" batchindex="234" refcount="0" default="yes"></pick>
 <pick thing="spMessage0" index="247" batchindex="235" refcount="0" default="yes"></pick>
-<pick thing="spMessage0" index="545" batchindex="455" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spMirrIma2" index="558" batchindex="468" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spNegaAro1" index="2288" batchindex="575" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
+<pick thing="spMessage0" index="541" batchindex="451" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spMirrIma2" index="554" batchindex="464" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spNegaAro1" index="1760" batchindex="554" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
 <pick thing="spOpenClo0" index="248" batchindex="236" refcount="0" default="yes"></pick>
 <pick thing="spOpenClo0" index="249" batchindex="237" refcount="0" default="yes"></pick>
-<pick thing="spOpenClo0" index="1143" batchindex="519" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
-<pick thing="spPlanSha7" index="529" batchindex="449" root="no" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="spOpenClo0" index="1136" batchindex="511" refcount="0" tablelinkid="cHelpBrd" source="ClsSplSpon" agentid="cHelpBrd" default="yes"></pick>
+<pick thing="spPlanSha7" index="525" batchindex="445" root="no" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
+</pick>
+<pick thing="spPolymor5" index="2362" batchindex="584" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2357" batchindex="584" bootindex="1"/>
 </pick>
 <pick thing="spPrestid0" index="250" batchindex="238" refcount="0" default="yes"></pick>
 <pick thing="spPrestid0" index="251" batchindex="239" refcount="0" default="yes"></pick>
-<pick thing="spPrestid0" index="546" batchindex="456" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spPrestid0" index="542" batchindex="452" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spPutrFoo0" index="252" batchindex="240" refcount="0" default="yes"></pick>
 <pick thing="spRayFro0" index="253" batchindex="241" refcount="0" default="yes"></pick>
 <pick thing="spRayFro0" index="254" batchindex="242" refcount="0" default="yes"></pick>
-<pick thing="spRayFro0" index="2236" batchindex="562" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="253" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spRayFro0" index="1720" batchindex="544" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="253" agentid="cHelpWiz" default="yes"></pick>
 <pick thing="spReadMag0" index="255" batchindex="243" refcount="0" default="yes"></pick>
 <pick thing="spReadMag0" index="256" batchindex="244" refcount="0" default="yes"></pick>
 <pick thing="spReadMag0" index="257" batchindex="245" refcount="0" default="yes"></pick>
-<pick thing="spReadMag0" index="547" batchindex="457" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spReadMag0" index="2237" batchindex="563" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="255" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spReadMag0" index="543" batchindex="453" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spReadMag0" index="1721" batchindex="545" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="255" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spReadMag1" index="2382" batchindex="600" refcount="0" tablelinkid="cHelpAPa" source="ClsSplMem" agentid="cHelpAPa" default="yes"></pick>
 <pick thing="spResista0" index="258" batchindex="246" refcount="0" default="yes"></pick>
 <pick thing="spResista0" index="259" batchindex="247" refcount="0" default="yes"></pick>
-<pick thing="spResista0" index="2238" batchindex="564" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="258" agentid="cHelpWiz" default="yes"></pick>
-<pick thing="spScorRay2" index="559" batchindex="469" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spResista0" index="1722" batchindex="546" refcount="0" tablelinkid="cHelpWiz" source="ClsSplBook" basislink="258" agentid="cHelpWiz" default="yes"></pick>
+<pick thing="spResista0" index="2341" batchindex="568" refcount="0" tablelinkid="cHelpOra" source="ClsSplSpon" agentid="cHelpOra" default="yes"></pick>
+<pick thing="spScorRay2" index="555" batchindex="465" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spScriCha0" index="260" batchindex="248" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="spShadCon4" index="570" batchindex="480" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spShamble9" index="522" batchindex="449" root="no" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="spShadCon4" index="566" batchindex="476" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spShamble9" index="518" batchindex="445" root="no" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 </pick>
-<pick thing="spSharLan2" index="1712" batchindex="551" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
-<pick thing="spSheetLi3" index="567" batchindex="477" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spShocGra1" index="555" batchindex="465" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spShapech9" index="2366" batchindex="584" root="no" count="0" bootstrap="yes" default="yes" live="no">
+<reference pickindex="2357" batchindex="584" bootindex="1"/>
+</pick>
+<pick thing="spSharLan2" index="1697" batchindex="534" refcount="0" tablelinkid="cHelpClr" source="ClsSplMem" agentid="cHelpClr" default="yes"></pick>
+<pick thing="spSheetLi3" index="563" batchindex="473" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spShocGra1" index="551" batchindex="461" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spSlayLiv5" index="2332" batchindex="565" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
+</pick>
 <pick thing="spSottVoc0" index="36" batchindex="35" count="0" bootstrap="yes" default="yes" live="no">
 <reference bootindex="600"/>
 </pick>
 <pick thing="spSpark0" index="261" batchindex="249" refcount="0" default="yes"></pick>
 <pick thing="spSpark0" index="262" batchindex="250" refcount="0" default="yes"></pick>
 <pick thing="spSpark0" index="263" batchindex="251" refcount="0" default="yes"></pick>
-<pick thing="spSpeaPla3" index="525" batchindex="449" root="no" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="spSpark0" index="2342" batchindex="569" refcount="0" tablelinkid="cHelpOra" source="ClsSplSpon" agentid="cHelpOra" default="yes"></pick>
+<pick thing="spSpeaPla3" index="521" batchindex="445" root="no" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 </pick>
 <pick thing="spStabili0" index="264" batchindex="252" refcount="0" default="yes"></pick>
-<pick thing="spStonCal2" index="560" batchindex="470" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
-<pick thing="spStonFis1" index="2289" batchindex="576" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
-<pick thing="spTinyHut3" index="568" batchindex="478" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spStabili0" index="2343" batchindex="570" refcount="0" tablelinkid="cHelpOra" source="ClsSplSpon" agentid="cHelpOra" default="yes"></pick>
+<pick thing="spStonCal2" index="556" batchindex="466" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spTinyHut3" index="564" batchindex="474" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="spToucFat0" index="265" batchindex="253" refcount="0" default="yes"></pick>
 <pick thing="spToucFat0" index="266" batchindex="254" refcount="0" default="yes"></pick>
-<pick thing="spToucSea1" index="2290" batchindex="577" refcount="0" tablelinkid="cHelpDrd" source="ClsSplMem" agentid="cHelpDrd" default="yes"></pick>
-<pick thing="spTranvia6" index="528" batchindex="449" root="no" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="spTranvia6" index="524" batchindex="445" root="no" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
 </pick>
-<pick thing="spWallTho5" index="527" batchindex="449" root="no" bootstrap="yes" default="yes">
-<reference pickindex="520" batchindex="449" bootindex="1"/>
+<pick thing="spVirtue0" index="2344" batchindex="571" refcount="0" tablelinkid="cHelpOra" source="ClsSplSpon" agentid="cHelpOra" default="yes"></pick>
+<pick thing="spWailBan9" index="2325" batchindex="565" root="no" bootstrap="yes" default="yes">
+<reference pickindex="2321" batchindex="565" bootindex="1"/>
 </pick>
-<pick thing="spWeb2" index="561" batchindex="471" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
+<pick thing="spWallTho5" index="523" batchindex="445" root="no" bootstrap="yes" default="yes">
+<reference pickindex="516" batchindex="445" bootindex="1"/>
+</pick>
+<pick thing="spWeb2" index="557" batchindex="467" refcount="0" tablelinkid="cHelpSor" source="ClsSplSpon" agentid="cHelpSor" default="yes"></pick>
 <pick thing="ssAbjur" index="267" batchindex="255" refcount="0" default="yes"></pick>
 <pick thing="ssAcid" index="268" batchindex="256" refcount="0" default="yes"></pick>
 <pick thing="ssAir" index="269" batchindex="257" refcount="0" default="yes"></pick>
@@ -15277,8 +17420,8 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="ssTeleport" index="311" batchindex="299" refcount="0" default="yes"></pick>
 <pick thing="ssTrans" index="312" batchindex="300" refcount="0" default="yes"></pick>
 <pick thing="ssWater" index="313" batchindex="301" refcount="0" default="yes"></pick>
-<pick thing="stHuman" index="501" batchindex="446" uniqueness="unique" root="no" bootstrap="yes" default="yes">
-<reference pickindex="497" batchindex="446" bootindex="1"/>
+<pick thing="stHuman" index="497" batchindex="442" uniqueness="unique" root="no" bootstrap="yes" default="yes">
+<reference pickindex="493" batchindex="442" bootindex="1"/>
 </pick>
 <pick thing="svFort" index="314" batchindex="302" refcount="0" default="yes"></pick>
 <pick thing="svRef" index="315" batchindex="303" refcount="0" default="yes"></pick>
@@ -15393,16 +17536,16 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="uCHA" index="518" batchindex="447" refcount="0" fieldcount="1" source="clsAttrib">
+<pick thing="uCHA" index="514" batchindex="443" refcount="0" fieldcount="1" source="clsAttrib">
 <field id="uIndex" value="1."></field>
 </pick>
-<pick thing="uCHA" index="1151" batchindex="527" refcount="0" fieldcount="1" source="clsAttrib">
+<pick thing="uCHA" index="1140" batchindex="515" refcount="0" fieldcount="1" source="clsAttrib">
 <field id="uIndex" value="2."></field>
 </pick>
-<pick thing="uCHA" index="1152" batchindex="528" refcount="0" fieldcount="1" source="clsAttrib">
+<pick thing="uCHA" index="1141" batchindex="516" refcount="0" fieldcount="1" source="clsAttrib">
 <field id="uIndex" value="3."></field>
 </pick>
-<pick thing="uCHA" index="1713" batchindex="552" refcount="0" fieldcount="1" source="clsAttrib">
+<pick thing="uCHA" index="1698" batchindex="535" refcount="0" fieldcount="1" source="clsAttrib">
 <field id="uIndex" value="4."></field>
 </pick>
 <pick thing="validgizmo" index="39" batchindex="38" bootstrap="yes" default="yes">
@@ -15413,7 +17556,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </gizmo>
 <reference bootindex="999999003"/>
 </pick>
-<pick thing="wDagger" index="581" batchindex="491" refcount="0" fieldcount="1" source="wTable">
+<pick thing="wDagger" index="577" batchindex="487" refcount="0" fieldcount="1" source="wTable">
 <field id="gIsEquip" user="1."></field>
 </pick>
 <pick thing="wGauntArm" index="25" batchindex="25" uniqueness="unique" count="0" bootstrap="yes" default="yes" live="no">
@@ -15487,7 +17630,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="weSpark0" index="424" batchindex="377" count="0" refcount="0" default="yes" live="no"></pick>
 <pick thing="weSpark0" index="425" batchindex="378" count="0" refcount="0" default="yes" live="no"></pick>
 <pick thing="weSpark0" index="426" batchindex="379" count="0" refcount="0" default="yes" live="no"></pick>
-<pick thing="wfAir" index="1738" batchindex="558" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWiz" source="ClsSecAbil" agentid="cHelpWiz">
+<pick thing="wfAir" index="1717" batchindex="541" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWiz" source="ClsSecAbil" agentid="cHelpWiz">
 <reference/>
 <field id="custOrder" value="6."></field>
 <field id="usrChosen1"></field>
@@ -15520,14 +17663,14 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="wmLengthy" index="435" batchindex="388" count="0" refcount="0" fieldcount="1" default="yes" live="no">
 <field id="wmChosen"></field>
 </pick>
-<pick thing="wsEarth" index="1730" batchindex="557" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWiz" source="ClsCstAbil" agentid="cHelpWiz">
-<chain index="1731"/>
-<chain index="1732"/>
-<chain index="1733"/>
-<chain index="1734"/>
-<chain index="1735"/>
-<chain index="1736"/>
-<chain index="1737"/>
+<pick thing="wsEarth" index="1709" batchindex="540" uniqueness="unique" fieldcount="3" tablelinkid="cHelpWiz" source="ClsCstAbil" agentid="cHelpWiz">
+<chain index="1710"/>
+<chain index="1711"/>
+<chain index="1712"/>
+<chain index="1713"/>
+<chain index="1714"/>
+<chain index="1715"/>
+<chain index="1716"/>
 <reference/>
 <field id="custOrder" value="5."></field>
 <field id="usrChosen1"></field>
@@ -15535,12 +17678,18 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </pick>
 <pick thing="xBurrow" index="436" batchindex="389" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
 <reference/>
-<reference pickindex="1737" batchindex="557" bootindex="1"/>
+<reference pickindex="1716" batchindex="540" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xChannel" index="1163" batchindex="529" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="1162" batchindex="529" bootindex="1"/>
+<pick thing="xChanRes" index="2340" batchindex="567" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2339" batchindex="567" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xChannel" index="1152" batchindex="517" uniqueness="unique" root="no" refcount="2" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="1151" batchindex="517" bootindex="1"/>
+<reference pickindex="1773" batchindex="558" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15639,8 +17788,10 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xDamRdGood" index="455" batchindex="408" uniqueness="unique" fieldcount="2" default="yes">
+<pick thing="xDamRdGood" index="455" batchindex="408" uniqueness="unique" refcount="3" fieldcount="2" default="yes">
 <reference/>
+<reference pickindex="1783" batchindex="558" bootindex="1"/>
+<reference pickindex="1784" batchindex="558" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15726,25 +17877,25 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </pick>
 <pick thing="xDamRsAcid" index="472" batchindex="425" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
 <reference/>
-<reference pickindex="509" batchindex="446" bootindex="1"/>
+<reference pickindex="505" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
 <pick thing="xDamRsCold" index="473" batchindex="426" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
 <reference/>
-<reference pickindex="510" batchindex="446" bootindex="1"/>
+<reference pickindex="506" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
 <pick thing="xDamRsElec" index="474" batchindex="427" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
 <reference/>
-<reference pickindex="511" batchindex="446" bootindex="1"/>
+<reference pickindex="507" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
 <pick thing="xDamRsFire" index="475" batchindex="428" uniqueness="unique" refcount="2" fieldcount="2" default="yes">
 <reference/>
-<reference pickindex="512" batchindex="446" bootindex="1"/>
+<reference pickindex="508" batchindex="442" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15753,8 +17904,8 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xFastHeal" index="537" batchindex="449" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="536" batchindex="449" bootindex="1"/>
+<pick thing="xFastHeal" index="533" batchindex="445" uniqueness="unique" root="no" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="532" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15800,9 +17951,10 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xImmDis" index="327" batchindex="307" uniqueness="unique" root="no" count="0" refcount="2" fieldcount="2" bootstrap="yes" default="yes" live="no">
+<pick thing="xImmDis" index="327" batchindex="307" uniqueness="unique" root="no" count="0" refcount="3" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference pickindex="322" batchindex="307" bootindex="1"/>
 <reference pickindex="359" batchindex="316" bootindex="1"/>
+<reference pickindex="1772" batchindex="558" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15842,7 +17994,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference pickindex="348" batchindex="313" bootindex="1"/>
 <reference pickindex="358" batchindex="315" bootindex="1"/>
 <reference pickindex="359" batchindex="316" bootindex="1"/>
-<reference pickindex="539" batchindex="449" bootindex="1"/>
+<reference pickindex="535" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15851,15 +18003,15 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference pickindex="348" batchindex="313" bootindex="1"/>
 <reference pickindex="358" batchindex="315" bootindex="1"/>
 <reference pickindex="359" batchindex="316" bootindex="1"/>
-<reference pickindex="539" batchindex="449" bootindex="1"/>
-<reference pickindex="2274" batchindex="567" bootindex="1"/>
+<reference pickindex="535" batchindex="445" bootindex="1"/>
+<reference pickindex="1747" batchindex="547" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
 <pick thing="xImmPoly" index="350" batchindex="313" uniqueness="unique" root="no" count="0" refcount="3" fieldcount="2" bootstrap="yes" default="yes" live="no">
 <reference pickindex="348" batchindex="313" bootindex="1"/>
 <reference pickindex="358" batchindex="315" bootindex="1"/>
-<reference pickindex="539" batchindex="449" bootindex="1"/>
+<reference pickindex="535" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15874,7 +18026,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference pickindex="348" batchindex="313" bootindex="1"/>
 <reference pickindex="358" batchindex="315" bootindex="1"/>
 <reference pickindex="359" batchindex="316" bootindex="1"/>
-<reference pickindex="539" batchindex="449" bootindex="1"/>
+<reference pickindex="535" batchindex="445" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15883,7 +18035,13 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference pickindex="348" batchindex="313" bootindex="1"/>
 <reference pickindex="358" batchindex="315" bootindex="1"/>
 <reference pickindex="359" batchindex="316" bootindex="1"/>
-<reference pickindex="539" batchindex="449" bootindex="1"/>
+<reference pickindex="535" batchindex="445" bootindex="1"/>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+</pick>
+<pick thing="xScent" index="2335" batchindex="566" uniqueness="unique" root="no" refcount="2" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="2334" batchindex="566" bootindex="1"/>
+<reference pickindex="2336" batchindex="566" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
@@ -15897,11 +18055,12 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>
-<pick thing="xTremorsen" index="538" batchindex="449" uniqueness="unique" root="no" refcount="4" fieldcount="2" bootstrap="yes" default="yes">
-<reference pickindex="536" batchindex="449" bootindex="1"/>
-<reference pickindex="539" batchindex="449" bootindex="1"/>
-<reference pickindex="2281" batchindex="570" bootindex="1"/>
-<reference pickindex="2282" batchindex="570" bootindex="1"/>
+<pick thing="xTremorsen" index="534" batchindex="445" uniqueness="unique" root="no" refcount="5" fieldcount="2" bootstrap="yes" default="yes">
+<reference pickindex="532" batchindex="445" bootindex="1"/>
+<reference pickindex="535" batchindex="445" bootindex="1"/>
+<reference pickindex="1753" batchindex="549" bootindex="1"/>
+<reference pickindex="1754" batchindex="549" bootindex="1"/>
+<reference pickindex="2337" batchindex="566" bootindex="1"/>
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 </pick>

@@ -27,6 +27,8 @@ public class PathfinderTokenTests {
         dig = new HeroLabPathfinderDigester();
         dig.parse(new File("src/net/sozinsoft/tokenlab/test/xml/Children_Of_Steel.xml"));
     }
+    
+
 
     /**
      * @return New Config with mocked out prefs file.
@@ -72,6 +74,22 @@ public class PathfinderTokenTests {
         } catch (Exception e) {
             assertFalse(true);
         }
+    }
+
+    @Test
+    public void testSpellX2() throws Exception {
+        dig = new HeroLabPathfinderDigester();
+        dig.parse( new File( "src/net/sozinsoft/tokenlab/test/xml/Alia_Elshaw.xml"));
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+        Config config = newConfig();
+        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/img");
+        config.addConfigEntry("Alia Elshaw", "src/net/sozinsoft/tokenlab/test/img/Alia_ElshawPog.png",
+                "src/net/sozinsoft/tokenlab/test/img/Alia_ElshawPortrait.jpg",
+                "src/net/sozinsoft/tokenlab/test/tokens/Alia_Elshaw.rptok");
+        for (Character c : characters) {
+            dig.saveCharacter(config, c);
+        }
+
     }
 
     @Test
@@ -459,7 +477,7 @@ public class PathfinderTokenTests {
     @Test
     public void testPathfinderTokenCreation() throws Exception, SAXException {
         Config config = newConfig();
-        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png");
+        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/img");
         config.addConfigEntry("Derrak Stoneskull", "src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/derrakStoneskullPortrait.jpg",
                 "src/net/sozinsoft/tokenlab/test/tokens/derrakStoneSkull.rptok");

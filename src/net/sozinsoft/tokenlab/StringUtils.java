@@ -1,5 +1,7 @@
 package net.sozinsoft.tokenlab;
 
+import java.util.regex.Pattern;
+
 /**
  * Created by IntelliJ IDEA.
  * User: lhayhurst
@@ -21,4 +23,19 @@ public class StringUtils {
         return value.replaceAll( ",", "" );
     }
 
+    static Pattern XNRegex = Pattern.compile("^.*\\s+\\(x(\\d+)");
+    public static int isXN(String name) {
+        java.util.regex.Matcher matcher = XNRegex.matcher(name);
+        int numRepeats = 0;
+        if (matcher.find()) {
+            numRepeats = Integer.parseInt(matcher.group(1));
+        }
+        return numRepeats;
+
+    }
+
+    public static String removeXN(String name) {
+        String ret = name.replaceAll("\\s+\\(x\\d+\\).*$", "");
+        return ret;
+    }
 }
