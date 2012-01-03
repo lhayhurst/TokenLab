@@ -47,6 +47,7 @@ public class ConfigTests {
            put("Dragon, Ancient Black", "DragonAncientBlack.rptok");
            put("Kuroshi O'Koye", "KuroshiOKoye.rptok");
            put("James T. Kirk", "JamesTKirk.rptok");
+           put("Name_With_Underscores", "NameWithUnderscores.rptok");
 
             // Some cases not handled yet, to handle later
 //           put("Dragon, Ancient Black", "AncientBlackDragon.rptok");

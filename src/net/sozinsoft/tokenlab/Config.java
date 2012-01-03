@@ -279,7 +279,7 @@ public class Config {
                 return null;
             }
 
-            return name.replaceAll("[ ,'.]", "");
+            return name.replaceAll("[ ,'._]", "");
         }
 
         private String generateDefaultTokenFileName() {
