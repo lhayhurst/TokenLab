@@ -77,7 +77,7 @@ public class PathfinderTokenTests {
     }
 
     @Test
-    public void testSpellX2() throws Exception {
+         public void testSpellX2() throws Exception {
         dig = new HeroLabPathfinderDigester();
         dig.parse( new File( "src/net/sozinsoft/tokenlab/test/xml/Alia_Elshaw.xml"));
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
@@ -91,6 +91,23 @@ public class PathfinderTokenTests {
         }
 
     }
+
+    @Test
+    public void testRustMonster() throws Exception {
+        dig = new HeroLabPathfinderDigester();
+        dig.parse( new File( "src/net/sozinsoft/tokenlab/test/xml/Rust_Monster.xml"));
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+        Config config = newConfig();
+        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/img");
+        config.addConfigEntry("Rust Monster", "src/net/sozinsoft/tokenlab/test/img/rustmonster.png",
+                "src/net/sozinsoft/tokenlab/test/img/aberration_rustMonster.jpg",
+                "src/net/sozinsoft/tokenlab/test/tokens/RustMonster.rptok");
+        for (Character c : characters) {
+            dig.saveCharacter(config, c);
+        }
+
+    }
+
 
     @Test
     public void testBasic() throws Exception {
