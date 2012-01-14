@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <document signature="Hero Lab Portfolio">
-<product major="3" minor="9" patch="0" build="277"/>
-<game folder="pathfinder" game="Pathfinder Roleplaying Game" major="6" minor="10"/>
-<portfolio herocount="5" activehero="5">
+<product major="3" minor="9" patch="1" build="279"/>
+<game folder="pathfinder" game="Pathfinder Roleplaying Game" major="6" minor="11"/>
+<portfolio herocount="5" activehero="4">
 <tactical combatturn="0"/>
 <notes/>
-<hero playername="" nextpick="606" nextcontainer="5" heroindex="2" herosummary="Dwarf Ftr 20 &#150; CR 19" heroname="Derrak Stoneskull" batchindex="498" userbatch="433" enmassebatch="39" nexttrade="21" nexttransact="21" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="armor">
+<hero playername="" nextpick="614" nextcontainer="6" heroindex="2" herosummary="Dwarf Ftr 20 &#150; CR 19" heroname="Derrak Stoneskull" batchindex="501" userbatch="433" enmassebatch="39" nexttrade="33" nexttransact="33" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="weapons">
 <statblock>DERRAK STONESKULL	CR 19
 Male Dwarf Fighter (Weapon Master) 20
 NE Medium Humanoid (Dwarf)
@@ -24,6 +24,7 @@ Spd 20 ft.
 Melee +5 Adamantine Curve blade, elven +40/+35/+30/+25 (1d10+26/15-20/x3) and
    Gauntlet (from Armor) +28/+23/+18/+13 (1d3+8/20/x2) and
    Unarmed Strike +28/+23/+18/+13 (1d3+8/20/x2)
+Ranged +3 Longbow, Composite (Str +5) +24/+19/+14/+9 (1d8+8/20/x3)
 Special Attacks Critical Specialist: Curve blade, elven, Deadly Critical: Curve blade, elven (3/day), Reliable Strike: Curve blade, elven (4/day), Unstoppable Strike: Curve blade, elven, Weapon Training +5: Curve blade, elven
 --------------------
 STATISTICS
@@ -35,7 +36,7 @@ Traits Poverty-Stricken, Reactionary
 Skills Acrobatics -4, Appraise +5, Climb +3, Escape Artist -4, Fly -4, Intimidate +11, Knowledge (Dungeoneering) +8, Perception +17, Ride -4, Sense Motive +7, Stealth -4, Survival +3, Swim +3
 Languages Common, Dwarven
 SQ Greed, Hardy +2, Hatred, Slow and Steady, Stability, Stonecunning +2, Weapon Guard +5: Curve blade, elven (Ex), Weapon Mastery: Curve blade, elven (Ex)
-Combat Gear +5 Adamantine Curve blade, elven, +5 Full Plate; Other Gear Amulet of Natural Armor +2, Belt of Physical Might, STR &amp; CON +6, Cloak of Resistance, +4, Golden Bracelet (focus for sacred bond spell), Ring of Protection, +2
+Combat Gear +3 Longbow, Composite (Str +5), +5 Adamantine Curve blade, elven, +5 Full Plate; Other Gear Amulet of Natural Armor +2, Belt of Physical Might, STR &amp; CON +6, Cloak of Resistance, +4, Golden Bracelet (focus for sacred bond spell), Ring of Protection, +2
 --------------------
 SPECIAL ABILITIES
 --------------------
@@ -74,7 +75,7 @@ Despite his abilities, Derrak has died several times in the course of his advent
 
 Hero Lab&#174; and the Hero Lab logo are Registered Trademarks of LWD Technology, Inc. Free download at http://www.wolflair.com
 Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishing, LLC&#174;, and are used under license.</statblock>
-<container index="0" chosencount="3" pickcount="587">
+<container index="0" chosencount="3" pickcount="588">
 <notes/>
 <chosen source="bgDeity" pickindex="483"/>
 <chosen source="bgRace" pickindex="578"/>
@@ -886,6 +887,29 @@ Despite his abilities, Derrak has died several times in the course of his advent
 <field id="usrChosen1"></field>
 <field id="usrChosen2"></field>
 <field id="gIsEquip" user="1."></field>
+</pick>
+<pick thing="iMagWeapon" index="607" batchindex="500" refcount="0" fieldcount="3" source="wTableMag">
+<gizmo id="gMagWeapon">
+<container index="5" chosencount="1" pickcount="3">
+<notes/>
+<chosen source="wMagChoose" pickindex="610"/>
+<pick thing="gCustMagic" index="608" batchindex="500" fieldcount="2" bootstrap="yes">
+<chain index="609"/>
+<reference bootindex="1"/>
+<field id="gCustBonus" user="3."></field>
+<field id="gMaster" user="1."></field>
+</pick>
+<pick thing="lCommon" index="609" batchindex="500" uniqueness="useronce" root="no" bootstrap="yes" default="yes">
+<reference pickindex="608" batchindex="500" bootindex="1"/>
+</pick>
+<pick thing="wCompLong" index="610" batchindex="501" refcount="0" fieldcount="1" source="wMagChoose">
+<field id="wMaxStr" value="5."></field>
+</pick>
+</container>
+</gizmo>
+<field id="usrChosen1"></field>
+<field id="usrChosen2"></field>
+<field id="wMaxStr" value="5."></field>
 </pick>
 <pick thing="ioAmArmor2" index="574" batchindex="483" refcount="0" fieldcount="3" source="iTable">
 <field id="gIsEquip" user="1."></field>
@@ -2211,6 +2235,7 @@ Despite his abilities, Derrak has died several times in the course of his advent
 <source source="CSLandLinn" name="Lands of the Linnorm Kings" count="0"/>
 <source source="CSLostCit" name="Lost Cities of Golarion" count="0"/>
 <source source="CSMisfitMn" name="Misfit Monsters Redeemed" count="0"/>
+<source source="CSMythicRe" name="Mythical Monsters Revisited" count="1"/>
 <source source="CSRival" name="Rival Guide" count="1"/>
 <source source="CSRiverKin" name="Guide to the River Kingdoms" count="0"/>
 <source source="CSSeekerSe" name="Seekers of Secrets" count="0"/>
@@ -2340,16 +2365,6 @@ Despite his abilities, Derrak has died several times in the course of his advent
 <source source="__none__" name="(no user sources defined)" count="0"/>
 <source source="__source__" name="Master Source" count="0"/>
 <ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
-<usagepool id="facPresSpt" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresTPA" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="psiPPUsed" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jCP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jGP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
@@ -2367,45 +2382,50 @@ Despite his abilities, Derrak has died several times in the course of his advent
 <usagepool id="Damage" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Nonlethal" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="PresSpent" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="TotalCP" usagecount="5" pickindex="-1" lasttransact="20" quantity="0.">
+<usagepool id="TotalCP" usagecount="8" pickindex="-1" lasttransact="32" quantity="0.">
 <usage index="4" transaction="4" quantity="-0."/>
 <usage index="8" transaction="8" quantity="-0."/>
 <usage index="12" transaction="12" quantity="-0."/>
 <usage index="16" transaction="16" quantity="-0."/>
 <usage index="20" transaction="20" quantity="0."/>
+<usage index="24" transaction="24" quantity="-0."/>
+<usage index="28" transaction="28" quantity="0."/>
+<usage index="32" transaction="32" quantity="-0."/>
 </usagepool>
-<usagepool id="TotalGP" usagecount="5" pickindex="-1" lasttransact="18" quantity="0.">
+<usagepool id="TotalGP" usagecount="8" pickindex="-1" lasttransact="30" quantity="-100.">
 <usage index="2" transaction="2" quantity="-0."/>
 <usage index="6" transaction="6" quantity="-0."/>
 <usage index="10" transaction="10" quantity="-0."/>
 <usage index="14" transaction="14" quantity="-0."/>
 <usage index="18" transaction="18" quantity="0."/>
+<usage index="22" transaction="22" quantity="-100."/>
+<usage index="26" transaction="26" quantity="0."/>
+<usage index="30" transaction="30" quantity="-0."/>
 </usagepool>
-<usagepool id="TotalPP" usagecount="5" pickindex="-1" lasttransact="17" quantity="0.">
+<usagepool id="TotalPP" usagecount="8" pickindex="-1" lasttransact="29" quantity="0.">
 <usage index="1" transaction="1" quantity="-0."/>
 <usage index="5" transaction="5" quantity="-0."/>
 <usage index="9" transaction="9" quantity="-0."/>
 <usage index="13" transaction="13" quantity="-0."/>
 <usage index="17" transaction="17" quantity="0."/>
+<usage index="21" transaction="21" quantity="-0."/>
+<usage index="25" transaction="25" quantity="0."/>
+<usage index="29" transaction="29" quantity="-0."/>
 </usagepool>
 <usagepool id="TotalPres" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="TotalPwrPt" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="TotalSP" usagecount="5" pickindex="-1" lasttransact="19" quantity="0.">
+<usagepool id="TotalSP" usagecount="8" pickindex="-1" lasttransact="31" quantity="0.">
 <usage index="3" transaction="3" quantity="-0."/>
 <usage index="7" transaction="7" quantity="-0."/>
 <usage index="11" transaction="11" quantity="-0."/>
 <usage index="15" transaction="15" quantity="-0."/>
 <usage index="19" transaction="19" quantity="0."/>
+<usage index="23" transaction="23" quantity="-0."/>
+<usage index="27" transaction="27" quantity="0."/>
+<usage index="31" transaction="31" quantity="-0."/>
 </usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<needsource source="Firearm"/>
-<needsource source="GMG"/>
-<needsource source="MiscHeader"/>
-<needsource source="OutAmmo"/>
-<needsource source="OutImage"/>
-<needsource source="OutSkills"/>
-<needsource source="OutValid"/>
 <needsource source="OutputOpt"/>
 <needsource source="PaizoBlog"/>
 <needsource source="UMFamil"/>
@@ -2419,14 +2439,22 @@ Despite his abilities, Derrak has died several times in the course of his advent
 <needsource source="CSDraEmpGa"/>
 <needsource source="CSHeader"/>
 <needsource source="CSISMagic"/>
+<needsource source="CSMythicRe"/>
 <needsource source="CSRival"/>
 <needsource source="CSWorldGui"/>
 <needsource source="CoreDeity"/>
 <needsource source="FireEmerg"/>
+<needsource source="Firearm"/>
+<needsource source="GMG"/>
+<needsource source="MiscHeader"/>
+<needsource source="OutAmmo"/>
+<needsource source="OutImage"/>
+<needsource source="OutSkills"/>
+<needsource source="OutValid"/>
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="685" nextcontainer="7" heroindex="3" herosummary="Elf Wiz 20 &#150; CR 19" heroname="Echean Ansolandi" batchindex="609" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="classes">
+<hero playername="" nextpick="687" nextcontainer="7" heroindex="3" herosummary="Elf Wiz 20 &#150; CR 19" heroname="Echean Ansolandi" batchindex="609" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="classes">
 <statblock>ECHEAN ANSOLANDI	CR 19
 Male Elf Wizard 20
 NE Medium Humanoid (Elf)
@@ -4636,6 +4664,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="CSLandLinn" name="Lands of the Linnorm Kings" count="0"/>
 <source source="CSLostCit" name="Lost Cities of Golarion" count="0"/>
 <source source="CSMisfitMn" name="Misfit Monsters Redeemed" count="0"/>
+<source source="CSMythicRe" name="Mythical Monsters Revisited" count="1"/>
 <source source="CSRival" name="Rival Guide" count="1"/>
 <source source="CSRiverKin" name="Guide to the River Kingdoms" count="0"/>
 <source source="CSSeekerSe" name="Seekers of Secrets" count="0"/>
@@ -4765,16 +4794,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="__none__" name="(no user sources defined)" count="0"/>
 <source source="__source__" name="Master Source" count="0"/>
 <ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
-<usagepool id="facPresSpt" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresTPA" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="psiPPUsed" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jCP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jGP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
@@ -4808,14 +4827,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<needsource source="Bestiary3"/>
-<needsource source="CSDraEmpGa"/>
-<needsource source="CSHeader"/>
-<needsource source="CSISMagic"/>
-<needsource source="CSRival"/>
-<needsource source="CSWorldGui"/>
-<needsource source="CoreDeity"/>
-<needsource source="FireEmerg"/>
 <needsource source="Firearm"/>
 <needsource source="GMG"/>
 <needsource source="MiscHeader"/>
@@ -4833,10 +4844,19 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="XPTrack"/>
 <needsource source="APGHeader"/>
 <needsource source="BestHeader"/>
+<needsource source="Bestiary3"/>
+<needsource source="CSDraEmpGa"/>
+<needsource source="CSHeader"/>
+<needsource source="CSISMagic"/>
+<needsource source="CSMythicRe"/>
+<needsource source="CSRival"/>
+<needsource source="CSWorldGui"/>
+<needsource source="CoreDeity"/>
+<needsource source="FireEmerg"/>
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="640" nextcontainer="5" heroindex="4" herosummary="Human Clr 20 &#150; CR 19" heroname="Inaris Jerveel" batchindex="554" userbatch="433" enmassebatch="39" nexttrade="17" nexttransact="17" poolcount="35" activemode="1" hasacted="no" focustab="armor">
+<hero playername="" nextpick="644" nextcontainer="6" heroindex="4" herosummary="Human Clr 20 &#150; CR 19" heroname="Inaris Jerveel" batchindex="555" userbatch="433" enmassebatch="39" nexttrade="17" nexttransact="17" poolcount="35" activemode="1" hasacted="no" focustab="weapons">
 <statblock>INARIS JERVEEL	CR 19
 Female Human Cleric 20
 CN Medium Humanoid (Human)
@@ -6953,6 +6973,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="CSLandLinn" name="Lands of the Linnorm Kings" count="0"/>
 <source source="CSLostCit" name="Lost Cities of Golarion" count="0"/>
 <source source="CSMisfitMn" name="Misfit Monsters Redeemed" count="0"/>
+<source source="CSMythicRe" name="Mythical Monsters Revisited" count="1"/>
 <source source="CSRival" name="Rival Guide" count="0"/>
 <source source="CSRiverKin" name="Guide to the River Kingdoms" count="0"/>
 <source source="CSSeekerSe" name="Seekers of Secrets" count="0"/>
@@ -7082,16 +7103,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="__none__" name="(no user sources defined)" count="0"/>
 <source source="__source__" name="Master Source" count="0"/>
 <ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
-<usagepool id="facPresSpt" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresTPA" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="psiPPUsed" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jCP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jGP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
@@ -7137,13 +7148,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<needsource source="GMG"/>
-<needsource source="MiscHeader"/>
-<needsource source="OutAmmo"/>
-<needsource source="OutImage"/>
-<needsource source="OutSkills"/>
-<needsource source="OutValid"/>
-<needsource source="OutputOpt"/>
 <needsource source="PCHeader"/>
 <needsource source="PaizoBlog"/>
 <needsource source="UMFamil"/>
@@ -7157,14 +7161,22 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="CSDraEmpGa"/>
 <needsource source="CSHeader"/>
 <needsource source="CSISMagic"/>
+<needsource source="CSMythicRe"/>
 <needsource source="CSWorldGui"/>
 <needsource source="CoreDeity"/>
 <needsource source="FireEmerg"/>
 <needsource source="Firearm"/>
+<needsource source="GMG"/>
+<needsource source="MiscHeader"/>
+<needsource source="OutAmmo"/>
+<needsource source="OutImage"/>
+<needsource source="OutSkills"/>
+<needsource source="OutValid"/>
+<needsource source="OutputOpt"/>
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="590" nextcontainer="5" heroindex="5" herosummary="Halfling Rog 20 &#150; CR 19" heroname="Wotywina Turncoin" batchindex="497" userbatch="433" enmassebatch="39" nexttrade="9" nexttransact="9" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="basics">
+<hero playername="" nextpick="591" nextcontainer="5" heroindex="5" herosummary="Halfling Rog 20 &#150; CR 19" heroname="Wotywina Turncoin" batchindex="497" userbatch="433" enmassebatch="39" nexttrade="9" nexttransact="9" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="basics">
 <statblock>WOTYWINA TURNCOIN	CR 19
 Female Halfling Rogue 20
 CE Small Humanoid (Halfling)
@@ -9314,6 +9326,7 @@ The only time that Wynn creates strife with her comrades is when selecting contr
 <source source="CSLandLinn" name="Lands of the Linnorm Kings" count="0"/>
 <source source="CSLostCit" name="Lost Cities of Golarion" count="0"/>
 <source source="CSMisfitMn" name="Misfit Monsters Redeemed" count="0"/>
+<source source="CSMythicRe" name="Mythical Monsters Revisited" count="1"/>
 <source source="CSRival" name="Rival Guide" count="1"/>
 <source source="CSRiverKin" name="Guide to the River Kingdoms" count="0"/>
 <source source="CSSeekerSe" name="Seekers of Secrets" count="0"/>
@@ -9443,16 +9456,6 @@ The only time that Wynn creates strife with her comrades is when selecting contr
 <source source="__none__" name="(no user sources defined)" count="0"/>
 <source source="__source__" name="Master Source" count="0"/>
 <ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
-<usagepool id="facPresSpt" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresTPA" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="psiPPUsed" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jCP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jGP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
@@ -9490,14 +9493,6 @@ The only time that Wynn creates strife with her comrades is when selecting contr
 </usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<needsource source="Bestiary3"/>
-<needsource source="CSDraEmpGa"/>
-<needsource source="CSHeader"/>
-<needsource source="CSISMagic"/>
-<needsource source="CSRival"/>
-<needsource source="CSWorldGui"/>
-<needsource source="CoreDeity"/>
-<needsource source="FireEmerg"/>
 <needsource source="Firearm"/>
 <needsource source="GMG"/>
 <needsource source="MiscHeader"/>
@@ -9515,10 +9510,19 @@ The only time that Wynn creates strife with her comrades is when selecting contr
 <needsource source="XPTrack"/>
 <needsource source="APGHeader"/>
 <needsource source="BestHeader"/>
+<needsource source="Bestiary3"/>
+<needsource source="CSDraEmpGa"/>
+<needsource source="CSHeader"/>
+<needsource source="CSISMagic"/>
+<needsource source="CSMythicRe"/>
+<needsource source="CSRival"/>
+<needsource source="CSWorldGui"/>
+<needsource source="CoreDeity"/>
+<needsource source="FireEmerg"/>
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>
-<hero playername="" nextpick="2383" nextcontainer="12" heroindex="6" herosummary="Human APa 2 Brd 2 Clr 2 Drd 2 Ora 2 Sor 5 Wit 2 Wiz 3 &#150; CR 19" heroname="Isai Odighuzua" batchindex="600" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="cHelpAPa">
+<hero playername="" nextpick="2402" nextcontainer="12" heroindex="6" herosummary="Human APa 2 Brd 2 Clr 2 Drd 2 Ora 2 Sor 5 Wit 2 Wiz 3 &#150; CR 19" heroname="Isai Odighuzua" batchindex="600" userbatch="433" enmassebatch="39" nexttrade="5" nexttransact="5" poolcount="35" activemode="1" isally="no" hasacted="no" focustab="cHelpAPa">
 <statblock>ISAI ODIGHUZUA	CR 19
 Male Human (Mwangi) Antipaladin 2 Bard 2 Cleric 2 Druid 2 Oracle 2 Sorcerer 5 Witch 2 Wizard 3
 CE Medium Humanoid (Human)
@@ -11519,6 +11523,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="CSLandLinn" name="Lands of the Linnorm Kings" count="1"/>
 <source source="CSLostCit" name="Lost Cities of Golarion" count="0"/>
 <source source="CSMisfitMn" name="Misfit Monsters Redeemed" count="0"/>
+<source source="CSMythicRe" name="Mythical Monsters Revisited" count="1"/>
 <source source="CSRival" name="Rival Guide" count="1"/>
 <source source="CSRiverKin" name="Guide to the River Kingdoms" count="0"/>
 <source source="CSSeekerSe" name="Seekers of Secrets" count="0"/>
@@ -11650,16 +11655,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="APG" name="Advanced Player&apos;s Guide" count="1"/>
 <source source="APGFamil" name="Advanced Player&apos;s Guide Familiars" count="1"/>
 <ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
-<usagepool id="jCP" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPP" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="psiPPUsed" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPP" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPresSpent" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPrestige" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
@@ -11683,8 +11678,8 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usagepool id="TotalSP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresTPA" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresSpt" usagecount="0" pickindex="1159" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="1678" lasttransact="0" quantity="0."></usagepool>
 </minion>
 <reference pickindex="1157" batchindex="519" bootindex="1"/>
 </pick>
@@ -13179,6 +13174,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="CSLandLinn" name="Lands of the Linnorm Kings" count="1"/>
 <source source="CSLostCit" name="Lost Cities of Golarion" count="0"/>
 <source source="CSMisfitMn" name="Misfit Monsters Redeemed" count="0"/>
+<source source="CSMythicRe" name="Mythical Monsters Revisited" count="1"/>
 <source source="CSRival" name="Rival Guide" count="1"/>
 <source source="CSRiverKin" name="Guide to the River Kingdoms" count="0"/>
 <source source="CSSeekerSe" name="Seekers of Secrets" count="0"/>
@@ -13310,16 +13306,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="APG" name="Advanced Player&apos;s Guide" count="1"/>
 <source source="APGFamil" name="Advanced Player&apos;s Guide Familiars" count="1"/>
 <ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
-<usagepool id="jCP" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPP" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="psiPPUsed" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPP" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPresSpent" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPrestige" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
@@ -13343,8 +13329,8 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usagepool id="TotalSP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresTPA" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresSpt" usagecount="0" pickindex="1828" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="2315" lasttransact="0" quantity="0."></usagepool>
 </minion>
 <reference pickindex="1826" batchindex="561" bootindex="1"/>
 </pick>
@@ -16400,6 +16386,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="CSLandLinn" name="Lands of the Linnorm Kings" count="1"/>
 <source source="CSLostCit" name="Lost Cities of Golarion" count="0"/>
 <source source="CSMisfitMn" name="Misfit Monsters Redeemed" count="0"/>
+<source source="CSMythicRe" name="Mythical Monsters Revisited" count="1"/>
 <source source="CSRival" name="Rival Guide" count="0"/>
 <source source="CSRiverKin" name="Guide to the River Kingdoms" count="0"/>
 <source source="CSSeekerSe" name="Seekers of Secrets" count="0"/>
@@ -16531,16 +16518,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="APG" name="Advanced Player&apos;s Guide" count="0"/>
 <source source="APGFamil" name="Advanced Player&apos;s Guide Familiars" count="1"/>
 <ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
-<usagepool id="jCP" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPP" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="psiPPUsed" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPP" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPresSpent" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPrestige" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
@@ -16564,8 +16541,8 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usagepool id="TotalSP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresTPA" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresSpt" usagecount="0" pickindex="596" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jGP" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
+<usagepool id="jCP" usagecount="0" pickindex="1077" lasttransact="0" quantity="0."></usagepool>
 </minion>
 </pick>
 <pick thing="pDethgaggd" index="109" batchindex="97" count="0" refcount="0" fieldcount="4" live="no">
@@ -18103,6 +18080,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="CSLandLinn" name="Lands of the Linnorm Kings" count="1"/>
 <source source="CSLostCit" name="Lost Cities of Golarion" count="0"/>
 <source source="CSMisfitMn" name="Misfit Monsters Redeemed" count="0"/>
+<source source="CSMythicRe" name="Mythical Monsters Revisited" count="1"/>
 <source source="CSRival" name="Rival Guide" count="1"/>
 <source source="CSRiverKin" name="Guide to the River Kingdoms" count="0"/>
 <source source="CSSeekerSe" name="Seekers of Secrets" count="0"/>
@@ -18232,16 +18210,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <source source="__none__" name="(no user sources defined)" count="0"/>
 <source source="__source__" name="Master Source" count="0"/>
 <ruleset context="_dummy_" ruleset="_dummy_" contextname="dummy" rulesetname="dummy" enabled="no"/>
-<usagepool id="facPresSpt" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="facPresTPA" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jCP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jGP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPresSpent" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jPrestige" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jSP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="jXP" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="psiPPUsed" usagecount="0" pickindex="0" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jCP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jGP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="jPP" usagecount="0" pickindex="481" lasttransact="0" quantity="0."></usagepool>
@@ -18275,19 +18243,6 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 </usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<needsource source="XPTrack"/>
-<needsource source="APGHeader"/>
-<needsource source="BestHeader"/>
-<needsource source="Bestiary1"/>
-<needsource source="Bestiary3"/>
-<needsource source="CSBDFoHors"/>
-<needsource source="CSDraEmpGa"/>
-<needsource source="CSHeader"/>
-<needsource source="CSISMagic"/>
-<needsource source="CSLandLinn"/>
-<needsource source="CSRival"/>
-<needsource source="CSWorldGui"/>
-<needsource source="CoreDeity"/>
 <needsource source="FireEmerg"/>
 <needsource source="Firearm"/>
 <needsource source="GMG"/>
@@ -18304,6 +18259,20 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <needsource source="UMHeader"/>
 <needsource source="WebTraits"/>
 <needsource source="XPMedium"/>
+<needsource source="XPTrack"/>
+<needsource source="APGHeader"/>
+<needsource source="BestHeader"/>
+<needsource source="Bestiary1"/>
+<needsource source="Bestiary3"/>
+<needsource source="CSBDFoHors"/>
+<needsource source="CSDraEmpGa"/>
+<needsource source="CSHeader"/>
+<needsource source="CSISMagic"/>
+<needsource source="CSLandLinn"/>
+<needsource source="CSMythicRe"/>
+<needsource source="CSRival"/>
+<needsource source="CSWorldGui"/>
+<needsource source="CoreDeity"/>
 <needsource source="APG"/>
 <needsource source="APGFamil"/>
 </hero>

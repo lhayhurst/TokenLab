@@ -17,12 +17,12 @@
 [h: WeaponDamage = json.get( Damage, "bonusDamage")]
 [h: d20roll = 1d20]
 [h: AttackBonus= AttackBonus + TemporaryAttackModifier]
-[h: CritDamageRoll = eval(json.get(Weapon, "damageDice"))]
+
 [h: DamageBonus= WeaponDamage + TemporaryDamageModifier ]
 [h: CriticalRoll=1d20]
 [h: WeaponCritsOn=json.get(Weapon, "critFloor")]
 [h: WeaponDamageType=json.get(Weapon, "weaponType")]
-
+[h: CritMultiplier = json.get( Weapon, "critMultiplier")]
 
 <table>
 	<tr>
@@ -40,7 +40,7 @@
 
 	<tr><td style="text-align:center;color:#ffffff;background-color:#777777;width:90px;">
 			<span style="text-decoration:underline;">Attack</span>
-			(+[r:AttackBonus])
+			([r:IF( AttackBonus >= 0, "+", "")][r:AttackBonus])
 		</td>
 		<td colspan="2" style="text-align:center;width:50px;;color:#ffffff;background-color:#0077aa;">
 			vs [r:WeaponAttacksVs]
@@ -51,22 +51,22 @@
 			<td style="text-align:center;width:90px;color:#ffffff;background-color:#C11B17;">
 			<span style="text-decoration:underline;">Damage</span> (+[r:DamageBonus])
 			</td>
-	    </tr>
-        <tr><td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
-                1d20(<font color='red'>[r:d20roll]</font>)+[r:AttackBonus] = <font color='red'><b>[r:d20roll+AttackBonus]</b></font>
-            </td>
-            <td colspan="2" style="text-align:center;color:#ffffff;background-color:#C11B17;">
-                [r:WeaponDice]([r:DamageRoll])+[r:DamageBonus] = <b>[r:DamageRoll+DamageBonus]</b> [r:WeaponDamageType]
-            </td>
-        </tr>
-        <tr><td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
-                1d20([r:CriticalRoll])+[r:AttackBonus] = <b>[r:CriticalRoll+AttackBonus]</b>
-            </td>
-            <td colspan="2" style="text-align:center;color:#ffffff;background-color:#C11B17;">
-                [r:WeaponDice]([r:CritDamageRoll])+[r:DamageBonus] = <b>[r:CritDamageRoll+DamageBonus]</b> [r:WeaponDamageType]
-            </td>
-        </tr>
-		};{}]
+
+            [h: critCounter = CritMultiplier]
+            [WHILE( critCounter > 0), CODE: {
+                [h:critCounter = critCounter - 1]
+                <tr>
+                    <td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
+                    1d20(<font color='red'>[r:d20roll]</font>)
+                    [r:IF( AttackBonus >= 0, "+", "" ) ][r:AttackBonus] = <font color='red'><b>[r:d20roll+AttackBonus]</b></font>
+                    </td>
+                    <td colspan="2" style="text-align:center;color:#ffffff;background-color:#C11B17;">
+                    [h: CritDamageRoll = eval(json.get(Weapon, "damageDice"))]
+                    [r:WeaponDice]([r:CritDamageRoll])+[r:DamageBonus] = <b>[r:CritDamageRoll+DamageBonus]</b> [r:WeaponDamageType]
+                    </td>
+                </tr>
+            }]
+        };{}]
 
 		<!-- Normal Roll -->
         [if((d20roll < WeaponCritsOn) && (d20roll > 1)), CODE:{
@@ -75,7 +75,7 @@
 			</td>
 	    </tr>
         <tr><td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
-                1d20([r:d20roll])+[r:AttackBonus] = <b>[r:d20roll+AttackBonus]</b>
+                1d20([r:d20roll])[r:IF( AttackBonus >= 0, "+", "" )] [r:AttackBonus] = <b>[r:d20roll+AttackBonus]</b>
             </td>
             <td colspan="2" style="text-align:center;color:#ffffff;background-color:#009900;">
                 [r:WeaponDice]([r:DamageRoll])+[r:DamageBonus] = <b>[r:DamageRoll+DamageBonus]</b> [r:WeaponDamageType]
@@ -90,7 +90,7 @@
 			</td>
 	    </tr>
         <tr><td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
-                1d20(<font color='yellow'>[r:d20roll]</font>)+[r:AttackBonus]
+                1d20(<font color='yellow'>[r:d20roll]</font>)[r:IF( AttackBonus >= 0, "+", "" )] [r:AttackBonus]
             </td>
             <td colspan="2" style="text-align:center;color:#ffffff;background-color:#990000;">
                 <font style="color:#FF0000">E</font>

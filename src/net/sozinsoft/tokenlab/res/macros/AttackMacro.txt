@@ -27,6 +27,7 @@
                  WeaponFocus     + WeaponProficiency + TwoWeaponFightingPenalty + ShieldAttackPenalty  +
                  SizeMod         + AtkTempBonus ]
 [h: CritDamageRoll = eval(json.get(Weapon, "damageDice"))]
+[h: CritMultiplier = json.get( Weapon, "critMultiplier")]
 [h: DamageBonus= WeaponEnhBonus + WeaponMiscDmgBonus + DmgTempBonus ]
 [h: CriticalRoll=1d20]
 [h: WeaponCritsOn=json.get(Weapon, "critFloor")]
@@ -60,22 +61,21 @@
 			<td style="text-align:center;width:90px;color:#ffffff;background-color:#C11B17;">
 			<span style="text-decoration:underline;">Damage</span> (+[r:DamageBonus])
 			</td>
-	    </tr>
-        <tr><td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
-                1d20(<font color='red'>[r:d20roll]</font>)+[r:AttackBonus] = <font color='red'><b>[r:d20roll+AttackBonus]</b></font>
-            </td>
-            <td colspan="2" style="text-align:center;color:#ffffff;background-color:#C11B17;">
-                [r:WeaponDice]([r:DamageRoll])+[r:DamageBonus] = <b>[r:DamageRoll+DamageBonus]</b> [r:WeaponDamageType]
-            </td>
-        </tr>
-        <tr><td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
-                1d20([r:CriticalRoll])+[r:AttackBonus] = <b>[r:CriticalRoll+AttackBonus]</b>
-            </td>
-            <td colspan="2" style="text-align:center;color:#ffffff;background-color:#C11B17;">
-                [r:WeaponDice]([r:CritDamageRoll])+[r:DamageBonus] = <b>[r:CritDamageRoll+DamageBonus]</b> [r:WeaponDamageType]
-            </td>
-        </tr>
-		};{}]
+
+            [h: critCounter = CritMultiplier]
+            [WHILE( critCounter > 0), CODE {
+                [h:critCounter = critCounter - 1]
+                <tr>
+                    <td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;">
+                    1d20(<font color='red'>[r:d20roll]</font>)+[r:AttackBonus] = <font color='red'><b>[r:d20roll+AttackBonus]</b></font>
+                    </td>
+                    <td colspan="2" style="text-align:center;color:#ffffff;background-color:#C11B17;">
+                    [r:WeaponDice]([r:DamageRoll])+[r:DamageBonus] = <b>[r:DamageRoll+DamageBonus]</b> [r:WeaponDamageType]
+                    </td>
+                </tr>
+            }]
+        };{}]
+
 
 		<!-- Normal Roll -->
         [if((d20roll < WeaponCritsOn) && (d20roll > 1)), CODE:{

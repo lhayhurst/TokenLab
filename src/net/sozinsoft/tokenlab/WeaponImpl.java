@@ -70,7 +70,11 @@ public class WeaponImpl {
         int count = 1;
         while (matcher.find()) {
             String ab = matcher.group();
-            attacks.put(new Integer(count++), Integer.parseInt(ab));
+            int multiplier = 1;
+            if ( attackBonus.startsWith("-")) {
+                multiplier = -1;
+            }
+            attacks.put(new Integer(count++), multiplier * Integer.parseInt(ab));
         }
     }
 
