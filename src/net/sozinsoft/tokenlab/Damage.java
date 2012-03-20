@@ -36,7 +36,7 @@ public class Damage {
         return Integer.toString(numDamageDice) + "d" + Integer.toString(damageDice);
     }
 
-    private static Pattern damageRegex =  Pattern.compile("(\\d*)d*(\\d*)\\s*\\+*\\s*(-*\\d+)\\s*(\\w*)");
+    private static Pattern damageRegex =  Pattern.compile("^(\\d*)d*(\\d*)\\s*\\+*\\s*(-*\\d+)\\s*(.*)$");
     private static Pattern bonusDamageOnly = Pattern.compile( "^(\\d+)$");
     private static Pattern noBonusDamage = Pattern.compile("^(\\d+)d(\\d+)$");
 
@@ -44,15 +44,13 @@ public class Damage {
 
         Matcher matcher = bonusDamageOnly.matcher(expression); //"6"
 
-
-
         if ( expression.startsWith("--") ) {
             //there are some herolabs exports that contain this odd string for damage
             //for example, the advanced wasp swarm.
             //assume  this means just zero damage.
             ;
         }
-        else if ( expression.matches("^[a-zA-Z]+$") ) { //"Rust Monster"
+        else if ( expression.matches("^[a-zA-Z]+$") ) { //"RustMonster"
             ;
         }
 
@@ -65,7 +63,7 @@ public class Damage {
                 numDamageDice = Integer.parseInt( matcher.group(1  ) );
                 damageDice    = Integer.parseInt( matcher.group( 2 ) );
             }
-            else {  //1d6+3 Fire
+            else {  //1d6+3 Fire + Confusion + ...
                 matcher = getDamageRegexMacher(expression);
                 if (matcher.matches()) {
                     String ndd = matcher.group(1);

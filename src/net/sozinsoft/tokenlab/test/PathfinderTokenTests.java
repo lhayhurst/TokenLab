@@ -492,9 +492,25 @@ public class PathfinderTokenTests {
     }
 
     @Test
+    public void testBadAlchemist() throws Exception, SAXException {
+
+        dig = new HeroLabPathfinderDigester();
+        dig.parse( new File( "src/net/sozinsoft/tokenlab/test/xml/Cyllio_Shyraki.xml"));
+        Config config = newConfig();
+        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/tokens");
+        config.addConfigEntry( "Cyllio Shyraki", "src/net/sozinsoft/tokenlab/test/img/Cyllio Shyraki_pog.png",
+                "src/net/sozinsoft/tokenlab/test/img/Cyllio Shyraki.jpg",
+                "src/net/sozinsoft/tokenlab/test/tokens/CyllioShyraki.rptok");
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+        for (Character c : characters) {
+            dig.saveCharacter(config, c);
+        }
+    }
+
+    @Test
     public void testPathfinderTokenCreation() throws Exception, SAXException {
         Config config = newConfig();
-        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/img");
+        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/tokens");
         config.addConfigEntry("Derrak Stoneskull", "src/net/sozinsoft/tokenlab/test/img/derrakStoneSkullPog.png",
                 "src/net/sozinsoft/tokenlab/test/img/derrakStoneskullPortrait.jpg",
                 "src/net/sozinsoft/tokenlab/test/tokens/derrakStoneSkull.rptok");
