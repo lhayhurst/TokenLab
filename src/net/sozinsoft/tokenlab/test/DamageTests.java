@@ -16,8 +16,14 @@ public class DamageTests {
 
     @Test
     public void testDamages() throws Exception {
+        
+        String noDamage = "";
+        Damage d = new Damage( noDamage );
+        assertEquals( 0, d.getNumDamageDice());
+        assertEquals( 0, d.getDamageDice() );
+
         String basicDamage = "1d6";
-        Damage d = new Damage( basicDamage);
+        d = new Damage( basicDamage);
         assertEquals( 1, d.getNumDamageDice()) ;
         assertEquals( 6, d.getDamageDice());
 
@@ -53,6 +59,8 @@ public class DamageTests {
         assertEquals( 6, d.getDamageDice());
         assertEquals( 5, d.getBonusDamage());
         assertEquals( "Fire + Confusion", d.getDamageType());
+
+
 
 
     }

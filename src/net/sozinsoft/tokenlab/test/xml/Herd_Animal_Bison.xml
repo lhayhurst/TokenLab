@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document><public><program name="Hero Lab" url="http://www.wolflair.com"><programinfo>Hero Lab® and the Hero Lab logo are Registered Trademarks of LWD Technology, Inc. Free download at http://www.wolflair.com
+Pathfinder® and associated marks and logos are trademarks of Paizo Publishing, LLC®, and are used under license.</programinfo><version version="3.9b" primary="3" secondary="9" tertiary="b" build="285"/></program><localization language="eng" units="imperial"/><character active="yes" nature="normal" role="npc" relationship="enemy" type="Hero" name="Herd Animal, Bison" playername=""><race racetext="Herd Animal, Bison" name="Herd Animal, Bison" ethnicity=""/><alignment name="True Neutral"/><templates summary="Herd Animal, Bison +5"/><size name="Large"><space text="10'" value="10"/><reach text="5'" value="5"/></size><deity/><classes level="0" summary="" summaryabbr=""/><factions/><types><type name="Animal" active="yes"/></types><subtypes/><heropoints enabled="no" total="0"/><senses><special name="Low-Light Vision" shortname="Low-Light Vision"><description>See twice as far as a human in low light, distinguishing color and detail.</description></special><special name="Scent (Ex)" shortname="Scent" type="Extraordinary Ability"><description>This special quality allows a creature to detect approaching enemies, sniff out hidden foes, and track by sense of smell. Creatures with the scent ability can identify familiar odors just as humans do familiar sights.
+
+The creature can detect opponents within 30 feet by sense of smell. If the opponent is upwind, the range increases to 60 feet; if downwind, it drops to 15 feet.  Strong scents, such as smoke or rotting garbage, can be detected at twice the ranges noted above. Overpowering scents, such as skunk musk or troglodyte stench, can be detected at triple normal range.
+
+When a creature detects a scent, the exact location of the source is not revealed&#8212;only its presence somewhere within range. The creature can take a move action to note the direction of the scent. When the creature is within 5 feet of the source, it pinpoints the source's location.
+
+A creature with the scent ability can follow tracks by smell, making a Wisdom (or Survival) check to find or follow a track. The typical DC for a fresh trail is 10 (no matter what kind of surface holds the scent). This DC increases or decreases depending on how strong the quarry's odor is, the number of creatures, and the age of the trail. For each hour that the trail is cold, the DC increases by 2. The ability otherwise follows the rules for the Survival skill. Creatures tracking by scent ignore the effects of surface conditions and poor visibility.</description></special></senses><auras/><favoredclasses/><health hitdice="5d8+20" hitpoints="42" damage="0" nonlethal="0" currenthp="42"/><xp total="0"/><money total="0" pp="0" gp="0" sp="0" cp="0" valuables="0"/><personal gender="Male" age="0" hair="" eyes="" skin=""><description></description><charheight text="0'" value="0"/><charweight text="0lb." value="0"/></personal><languages/><attributes><attribute name="Strength"><attrvalue text="27" base="27" modified="27"/><attrbonus text="+8" base="+8" modified="+8"/></attribute><attribute name="Dexterity"><attrvalue text="10" base="10" modified="10"/><attrbonus text="0" base="+0" modified="+0"/></attribute><attribute name="Constitution"><attrvalue text="19" base="19" modified="19"/><attrbonus text="+4" base="+4" modified="+4"/></attribute><attribute name="Intelligence"><attrvalue text="2" base="2" modified="2"/><attrbonus text="-4" base="-4" modified="-4"/></attribute><attribute name="Wisdom"><attrvalue text="11" base="11" modified="11"/><attrbonus text="0" base="+0" modified="+0"/></attribute><attribute name="Charisma"><attrvalue text="4" base="4" modified="4"/><attrbonus text="-3" base="-3" modified="-3"/></attribute></attributes><saves><save name="Fortitude Save" abbr="Fort" save="+8" base="+4" fromattr="+4" fromresist="" frommisc=""/><save name="Reflex Save" abbr="Ref" save="+4" base="+4" fromattr="" fromresist="" frommisc=""/><save name="Will Save" abbr="Will" save="+1" base="+1" fromattr="" fromresist="" frommisc=""/></saves><defensive/><damagereduction/><immunities/><resistances/><weaknesses/><armorclass ac="17" touch="9" flatfooted="17" fromarmor="" fromshield="" fromdexterity="" fromsize="-1" fromnatural="+8" fromdeflect="" fromdodge="" frommisc=""/><penalties><penalty name="Armor Check Penalty" text="0" value="0"/><penalty name="Max Dex Bonus" text="99999" value="99999"/></penalties><maneuvers cmb="+12" cmd="22" cmdflatfooted="22"><maneuvertype name="Bull Rush" bonus="2" cmb="+14" cmd="24"/><maneuvertype name="Disarm" bonus="0" cmb="+12" cmd="22"/><maneuvertype name="Feint" bonus="0" cmb="+12" cmd="22"/><maneuvertype name="Grapple" bonus="0" cmb="+12" cmd="22"/><maneuvertype name="Overrun" bonus="0" cmb="+12" cmd="22"/><maneuvertype name="Pull" bonus="0" cmb="+12" cmd="22"/><maneuvertype name="Push" bonus="0" cmb="+12" cmd="22"/><maneuvertype name="Sunder" bonus="0" cmb="+12" cmd="22"/><maneuvertype name="Trip" bonus="0" cmb="+12" cmd="26"/></maneuvers><initiative total="+0" attrtext="+0" misctext="+0" attrname="Dexterity"/><movement><speed text="40'" value="40"/><basespeed text="40'" value="40"/></movement><encumbrance carried="0" encumstr="27" light="1038" medium="2079" heavy="3120" level="Light Load"/><skills><skill name="Acrobatics" ranks="0" attrbonus="0" attrname="Dexterity" value="0" armorcheck="yes" classskill="yes"><description>You can keep your balance while traversing narrow or treacherous surfaces. You can also dive, flip, jump, and roll to avoid attacks and overcome obstacles.
+
+Check: You can use Acrobatics to move on narrow surfaces and uneven ground without falling. A successful check allows you to move at half speed across such surfaces - only one check is needed per round. Use the following table to determine the base DC, which is then modified by the Acrobatics skill modifiers noted on page 89. While you are using Acrobatics in this way, you are considered flat-footed and lose your Dexterity bonus to your AC (if any). If you take damage while using Acrobatics, you must immediately make another Acrobatics check at the same DC to avoid falling or being knocked prone.
+
+Continued - Core Rulebook, pg. 87</description></skill><skill name="Appraise" ranks="0" attrbonus="-4" attrname="Intelligence" value="-4"><description>You can evaluate the monetary value of an object.
+
+Check: A DC 20 Appraise check determines the value of a common item. If you succeed by 5 or more, you also determine if the item has magic properties, although this success does not grant knowledge of the magic item's abilities. If your fail the check by less than 5, you determine the price of that item to within 20% of its actual value. If you fail this check by 5 or more, the price is wildly inaccurate, subject to GM discretion. Particularly rare or exotic items might increase the DC of this check by 5 or more.
+
+You can also use this check to determine the most valuable item visible in a treasure hoard. The DC of this check is generally 20 but can increase to as high as 30 for a particularly large hoard.
+
+Action: Appraising an item takes 1 standard action. Determining the most valuable object in a treasure hoard takes 1 full-round action.
+
+Try Again: Additional attempts to Appraise an item reveal the same result.
+
+Special: A spellcaster with a raven familiar gains a +3 bonus on Appraise checks.</description></skill><skill name="Bluff" ranks="0" attrbonus="-3" attrname="Charisma" value="-3"><description>You know how to tell a lie.
+
+Check: Bluff is an opposed skill check against your opponent's Sense Motive skill. If you use Bluff to fool someone, with a successful check you convince your opponent that what you are saying is true. Bluff checks are modified depending upon the believability of the lie. The following modifiers are applied to the roll of the creature attempting to tell the lie. Note that some lies are so improbable that it is impossible to convince anyone that they are true (subject to GM discretion).
+
+Circumstances: Bluff Modifier
+The target wants to believe you: +5
+The lie is believable: +0
+The lie is unlikely: -5
+The lie is far-fetched: -10
+The lie is impossible: -20
+The target is drunk or impaired: +5
+You possess convincing proof: up to +10
+
+Feint: You can use Bluff to feint in combat, causing your opponent to be denied his Dexterity bonus to his AC against your next attack. The DC of this check is equal to 10 + your opponent's base attack bonus + your opponent's Wisdom modifier. If your opponent is trained in Sense Motive, the DC is instead equal to 10 + your opponent's Sense Motive bonus, if higher. For more information on feinting in combat, see Chapter 8.
+
+Continued - Core Rulebook, pg. 90</description></skill><skill name="Climb" ranks="0" attrbonus="8" attrname="Strength" value="8" armorcheck="yes" classskill="yes" tools="uses"><description>You are skilled at scaling vertical surfaces, from smooth city walls to rocky cliffs.
+
+Check: With a successful Climb check, you can advance up, down, or across a slope, wall, or other steep incline (or even across a ceiling, provided it has handholds) at one-quarter your normal speed. A slope is considered to be any incline at an angle measuring less than 60 degrees; a wall is any incline at an angle measuring 60 degrees or more.
+
+A Climb check that fails by 4 or less means that you make no progress, and one that fails by 5 or more means that you fall from whatever height you have already attained.
+
+The DC of the check depends on the conditions of the climb.
+
+Continued - Core Rulebook, pg. 90</description></skill><skill name="Diplomacy" ranks="0" attrbonus="-3" attrname="Charisma" value="-3"><description>You can use this skill to persuade others to agree with your arguments, to resolve differences, and to gather valuable information or rumors from people. This skill is also used to negotiate conflicts by using the proper etiquette and manners suitable to the problem.
+
+Check: You can change the initial attitudes of nonplayer characters with a successful check. The DC of this check depends on the creature's starting attitude toward you, adjusted by its Charisma modifier. If you succeed, the character's attitude toward you is improved by one step. For every 5 by which your check result exceeds the DC, the character's attitude toward you increases by one additional step. A creature's attitude cannot be shifted more than two steps up in this way, although the GM can override this rule in some situations. If you fail the check by 4 or less, the character's attitude toward you is unchanged. If you fail by 5 or more, the character's attitude toward you is decreased by one step.
+
+Continued - Core Rulebook, pg. 93.</description></skill><skill name="Disable Device" ranks="0" attrbonus="0" attrname="Dexterity" value="-2" armorcheck="yes" trainedonly="yes" usable="no" tools="needs"><description>You are skilled at disarming traps and opening locks. In addition, this skill lets you sabotage simple mechanical devices, such as catapults, wagon wheels, and doors.
+
+Check: When disarming a trap or other device, the Disable Device check is made secretly, so that you don't necessarily know whether you've succeeded.
+
+The DC depends on how tricky the device is. If the check succeeds, you disable the device. If it fails by 4 or less, you have failed but can try again. If you fail by 5 or more, something goes wrong. If the device is a trap, you trigger it. If you're attempting some sort of sabotage, you think the device is disabled, but it still works normally.
+
+You also can rig simple devices such as saddles or wagon wheels to work normally for a while and then fail or fall off some time later (usually after 1d4 rounds or minutes of use).
+
+Continued - Core Rulebook, pg. 94.</description></skill><skill name="Disguise" ranks="0" attrbonus="-3" attrname="Charisma" value="-3" tools="uses"><description>You are skilled at changing your appearance.
+
+Check: Your Disguise check result determines how good the disguise is, and it is opposed by others' Perception check results. If you don't draw any attention to yourself, others do not get to make Perception checks. If you come to the attention of people who are suspicious (such as a guard who is watching commoners walking through a city gate), it can be assumed that such observers are taking 10 on their Perception checks.
+
+You get only one Disguise check per use of the skill, even if several people make Perception checks against it. The Disguise check is made secretly, so that you can't be sure how good the result is.
+
+The effectiveness of your disguise depends on how much you're changing your appearance. Disguise can be used to make yourself appear like a creature that is one size category larger or smaller than your actual size. This does not change your actual size or reach, should you enter combat while wearing such a disguise.
+
+Continued - Core Rulebook, pg. 95.</description></skill><skill name="Escape Artist" ranks="0" attrbonus="0" attrname="Dexterity" value="0" armorcheck="yes"><description>Your training allows you to slip out of bonds and escape from grapples.
+
+Check: The table below gives the DCs needed to escape various forms of restraints.
+Ropes: The DC of your Escape Artist check is equal to the binder's Combat Maneuver Bonus +20.
+Manacles and Masterwork Manacles: The DC for manacles is set by their construction (see the table below).
+Tight Space: The DC noted is for getting through a space through which your head fits but your shoulders don't. If the space is long, you may need to make multiple checks. You can't squeeze through a space that your head does not fit through.
+Grappler: You can make an Escape Artist check in place of a combat maneuver check to escape a grapple (see Chapter 8) or to change from a pinned condition to merely grappled.
+
+Continued - Core Rulebook, pg. 95.</description></skill><skill name="Fly" ranks="0" attrbonus="0" attrname="Dexterity" value="-2" armorcheck="yes" classskill="yes"><description>You are skilled at flying, through either the use of wings or magic, and can perform daring or complex maneuvers while airborne. Note that this skill does not give you the ability to fly.
+
+Check: You generally need only make a Fly check when you are attempting a complex maneuver. Without making a check, a flying creature can remain flying at the end of its turn so long as it moves a distance greater than half its speed. It can also turn up to 45 degrees by sacrificing 5 feet of movement, can rise at half speed at an angle of 45 degrees, and can descend at any angle at normal speed. Note that these restrictions only apply to movement taken during your current turn. At the beginning of the next turn, you can move in a different direction than you did the previous turn without making a check. Taking any action that violates these rules requires a Fly check.
+
+Continued - Core Rulebook, pg. 96.</description></skill><skill name="Handle Animal" ranks="0" attrbonus="-3" attrname="Charisma" value="-3" trainedonly="yes" usable="no"><description>You are trained at working with animals, and can teach them tricks, get them to follow your simple commands, or even domesticate them.
+
+Check: The DC depends on what you are trying to do.
+
+Task: Handle Animal DC
+Handle an animal: 10
+"Push" an animal: 25
+Teach an animal a trick: 15 or 20*
+Train an animal for a general purpose: 15 or 20*
+Rear a wild animal: 15 + HD of animal
+* See the specific trick or purpose below.
+
+Continued - Core Rulebook, pg. 97.</description></skill><skill name="Heal" ranks="0" attrbonus="0" attrname="Wisdom" value="0" tools="uses"><description>You are skilled at tending to wounds and ailments.
+
+Check: The DC and effect of a Heal check depend on the task you attempt.
+
+Task DC
+First aid: 15
+Long-term care: 15
+Treat wounds from caltrops, spike growth, or spike stones: 15
+Treat deadly wounds: 20
+Treat poison: Poison's save DC
+Treat disease: Disease's save DC
+
+First Aid: You usually use first aid to save a dying character. If a character has negative hit points and is losing hit points (at the rate of 1 per round, 1 per hour, or 1 per day), you can make him stable. A stable character regains no hit points but stops losing them. First aid also stops a character from losing hit points due to effects that cause bleed (see Appendix 2 for rules on bleed damage).
+
+Continued - Core Rulebook, pg. 98.</description></skill><skill name="Intimidate" ranks="0" attrbonus="-3" attrname="Charisma" value="-3"><description>You can use this skill to frighten your opponents or to get them to act in a way that benefits you. This skill includes verbal threats and displays of prowess.
+
+Check: You can use Intimidate to force an opponent to act friendly toward you for 1d6 × 10 minutes with a successful check. The DC of this check is equal to 10 + the target's Hit Dice + the target's Wisdom modifier.
+
+If successful, the target gives you the information you desire, takes actions that do not endanger it, or otherwise offers limited assistance. After the Intimidate expires, the target treats you as unfriendly and may report you to local authorities. If you fail this check by 5 or more, the target attempts to deceive you or otherwise hinder your activities.
+
+Demoralize: You can use this skill to cause your opponents to become shaken for a number of rounds. The DC of this check is equal to 10 + the target's Hit Dice + the target's Wisdom modifier. If you are successful, the target is shaken for 1 round. This duration increases by 1 round for every 5 by which you beat the DC. You can only threaten opponents in this way if they are within 30 feet and can clearly see and hear you.
+
+Continued - Core Rulebook, pg. 99.</description></skill><skill name="Linguistics" ranks="0" attrbonus="-4" attrname="Intelligence" value="-4" trainedonly="yes" usable="no"><description>You are skilled at working with language, in both its spoken and written forms. You can speak multiple languages, and can decipher nearly any tongue given enough time. Your skill in writing allows you to create and detect forgeries as well.
+
+Check: You can decipher writing in an unfamiliar language or a message written in an incomplete or archaic form. The base DC is 20 for the simplest messages, 25 for standard texts, and 30 or higher for intricate, exotic, or very old writing. If the check succeeds, you understand the general content of a piece of writing about one page long (or the equivalent). If the check fails, make a DC 5 Wisdom check to see if you avoid drawing a false conclusion about the text. (Success means that you do not draw a false conclusion; failure means that you do.)
+
+Both the Linguistics check and (if necessary) the Wisdom check are made secretly by the GM, so that you can't tell whether the conclusion you draw is true or false.
+
+Continued - Core Rulebook, pg. 100.</description></skill><skill name="Perception" ranks="5" attrbonus="0" attrname="Wisdom" value="8" classskill="yes"><description>Your senses allow you to notice fine details and alert you to danger. Perception covers all five senses, including sight, hearing, touch, taste, and smell.
+
+Check: Perception has a number of uses, the most common of which is an opposed check versus an opponent's Stealth check to notice the opponent and avoid being surprised. If you are successful, you notice the opponent and can react accordingly. If you fail, your opponent can take a variety of actions, including sneaking past you and attacking you.
+
+Perception is also used to notice fine details in the environment. The DC to notice such details varies depending upon distance, the environment, and how noticeable the detail is.
+
+Continued - Core Rulebook, pg. 102.</description></skill><skill name="Ride" ranks="0" attrbonus="0" attrname="Dexterity" value="0" armorcheck="yes"><description>You are skilled at riding mounts, usually a horse, but possibly something more exotic, like a griffon or pegasus. If you attempt to ride a creature that is ill suited as a mount, you take a -5 penalty on your Ride checks.
+
+Check: Typical riding actions don't require checks. You can saddle, mount, ride, and dismount from a mount without a problem. The following tasks do require checks.
+
+Task: Ride DC
+Guide with knees: 5
+Stay in saddle: 5
+Fight with a combat-trained mount: 10
+Cover: 15
+Soft fall: 15
+Leap: 15
+Spur mount: 15
+Control mount in battle: 20
+Fast mount or dismount: 20
+
+Guide with Knees: You can guide your mount with your knees so you can use both hands in combat. Make your Ride check at the start of your turn. If you fail, you can use only one hand this round because you need to use the other to control your mount. This does not take an action.
+
+Stay in Saddle: You can react instantly to try to avoid falling when your mount rears or bolts unexpectedly or when you take damage. This usage does not take an action.
+
+Fight with a Combat-Trained Mount: If you direct your wartrained mount to attack in battle, you can still make your own attack or attacks normally. This usage is a free action.
+
+Continued - Core Rulebook, pg. 103.</description></skill><skill name="Sense Motive" ranks="0" attrbonus="0" attrname="Wisdom" value="0"><description>You are skilled at detecting falsehoods and true intentions.
+
+Check: A successful check lets you avoid being bluffed (see the Bluff skill). You can also use this skill to determine when "something is up" (that is, something odd is going on) or to assess someone's trustworthiness.
+
+Task: Sense Motive DC
+Hunch: 20
+Sense enchantment: 25 or 15
+Discern secret message: Varies
+
+Hunch: This use of the skill involves making a gut assessment of the social situation. You can get the feeling from another's behavior that something is wrong, such as when you're talking to an impostor. Alternatively, you can get the feeling that someone is trustworthy.
+
+Sense Enchantment: You can tell that someone's behavior is being influenced by an enchantment effect even if that person isn't aware of it. The usual DC is 25, but if the target is dominated (see dominate person), the DC is only 15 because of the limited range of the target's activities.
+
+Continued - Core Rulebook, pg. 104.</description></skill><skill name="Sleight of Hand" ranks="0" attrbonus="0" attrname="Dexterity" value="0" armorcheck="yes" trainedonly="yes" usable="no"><description>Your training allows you to pick pockets, draw hidden weapons, and take a variety of actions without being noticed.
+
+Check: A DC 10 Sleight of Hand check lets you palm a coin-sized, unattended object. Performing a minor feat of legerdemain, such as making a coin disappear, also has a DC of 10 unless an observer is determined to note where the item went.
+
+When you use this skill under close observation, your skill check is opposed by the observer's Perception check. The observer's success doesn't prevent you from performing the action, just from doing it unnoticed.
+
+Continued - Core Rulebook, pg. 104.</description></skill><skill name="Spellcraft" ranks="0" attrbonus="-4" attrname="Intelligence" value="-4" trainedonly="yes" usable="no"><description>You are skilled at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast.
+
+Check: Spellcraft is used whenever your knowledge and skill of the technical art of casting a spell or crafting a magic item comes into question. This skill is also used to identify the properties of magic items in your possession through the use of spells such as detect magic and identify. The DC of this check varies depending upon the task at hand.
+
+Action: Identifying a spell as it is being cast requires no action, but you must be able to clearly see the spell as it is being cast, and this incurs the same penalties as a Perception skill check due to distance, poor conditions, and other factors. Learning a spell from a spellbook takes 1 hour per level of the spell (0-level spells take 30 minutes). Preparing a spell from a borrowed spellbook does not add any time to your spell preparation. Making a Spellcraft check to craft a magic item is made as part of the creation process. Attempting to ascertain the properties of a magic item takes 3 rounds per item to be identified and you must be able to thoroughly examine the object.
+
+Continued - Core Rulebook, pg. 106.</description></skill><skill name="Stealth" ranks="0" attrbonus="0" attrname="Dexterity" value="-4" armorcheck="yes" classskill="yes"><description>You are skilled at avoiding detection, allowing you to slip past foes or strike from an unseen position. This skill covers hiding and moving silently.
+
+Check: Your Stealth check is opposed by the Perception check of anyone who might notice you. You can move up to half your normal speed and use Stealth at no penalty. When moving at a speed greater than half but less than your normal speed, you take a -5 penalty. It's impossible to use Stealth while attacking, running, or charging.
+
+A creature larger or smaller than Medium takes a size bonus or penalty on Stealth checks depending on its size category: Fine +16, Diminutive +12, Tiny +8, Small +4, Large -4, Huge -8, Gargantuan -12, Colossal -16.
+
+If people are observing you using any of their senses (but typically sight), you can't use Stealth. Against most creatures, finding cover or concealment allows you to use Stealth. If your observers are momentarily distracted (such as by a Bluff check), you can attempt to use Stealth. While the others turn their attention from you, you can attempt a Stealth check if you can get to an unobserved place of some kind. This check, however, is made at a -10 penalty because you have to move fast.
+
+Continued - Core Rulebook, pg. 106.</description></skill><skill name="Survival" ranks="0" attrbonus="0" attrname="Wisdom" value="0"><description>You are skilled at surviving in the wild and at navigating in the wilderness. You also excel at following trails and tracks left by others.
+
+Check: You can keep yourself and others safe and fed in the wild. The table below gives the DCs for various tasks that require Survival checks.
+
+Survival DC: Task
+10: Get along in the wild. Move up to half your overland speed while hunting and foraging (no food or water supplies needed). You can provide food and water for one other person for every 2 points by which your check result exceeds 10.
+15: Gain a +2 bonus on all Fortitude saves against severe weather while moving up to half your overland speed, or gain a +4 bonus if you remain stationary. You may grant the same bonus to one other character for every 1 point by which your Survival check result exceeds 15.
+15: Keep from getting lost or avoid natural hazards, such as quicksand.
+15: Predict the weather up to 24 hours in advance. For every 5 points by which your Survival check result exceeds 15, you can predict the weather for one additional day in advance.
+
+Continued - Core Rulebook, pg. 107.</description></skill><skill name="Swim" ranks="0" attrbonus="8" attrname="Strength" value="8" armorcheck="yes" classskill="yes"><description>You know how to swim and can do so even in stormy water.
+
+Check: Make a Swim check once per round while you are in the water. Success means you may swim at up to half your speed (as a full-round action) or at a quarter of your speed (as a move action). If you fail by 4 or less, you make no progress. If you fail by 5 or more, you go underwater.
+
+If you are underwater, either because you failed a Swim check or because you are swimming underwater intentionally, you must hold your breath. You can hold your breath for a number of rounds equal to twice your Constitution score, but only if you do nothing other than take move actions or free actions. If you take a standard action or a full-round action (such as making an attack), the remainder of the duration for which you can hold your breath is reduced by 1 round. (Effectively, a character in combat can hold his breath only half as long as normal.) After that period of time, you must make a DC 10 Constitution check every round to continue holding your breath. Each round, the DC for that check increases by 1. If you fail the Constitution check, you begin to drown.
+
+Continued - Core Rulebook, pg. 108.</description></skill><skill name="Use Magic Device" ranks="0" attrbonus="-3" attrname="Charisma" value="-3" trainedonly="yes" usable="no"><description>You are skilled at activating magic items, even if you are not otherwise trained in their use.
+
+Check: You can use this skill to read a spell or to activate a magic item. Use Magic Device lets you use a magic item as if you had the spell ability or class features of another class, as if you were a different race, or as if you were of a different alignment.
+
+You make a Use Magic Device check each time you activate a device such as a wand. If you are using the check to emulate an alignment or some other quality in an ongoing manner, you need to make the relevant Use Magic Device check once per hour.
+
+You must consciously choose which requirement to emulate. That is, you must know what you are trying to emulate when you make a Use Magic Device check for that purpose.
+
+Continued - Core Rulebook, pg. 108.</description></skill></skills><skillabilities/><feats><feat name="Endurance" categorytext="" useradded="no"><description>Harsh conditions or long exertions do not easily tire you.
+
+Benefit: You gain a +4 bonus on the following checks and saves: Swim checks made to resist nonlethal damage from exhaustion; Constitution checks made to continue running; Constitution checks made to avoid nonlethal damage from a forced march; Constitution checks made to hold your breath; Constitution checks made to avoid nonlethal damage from starvation or thirst; Fortitude saves made to avoid nonlethal damage from hot or cold environments; and Fortitude saves made to resist damage from suffocation.
+
+You may sleep in light or medium armor without becoming fatigued.
+
+Normal: A character without this feat who sleeps in medium or heavier armor is fatigued the next day.</description></feat><feat name="Improved Bull Rush" categorytext="Combat" useradded="no"><description>You are skilled at pushing your foes around.
+
+Prerequisite: Str 13, Power Attack, base attack bonus +1.
+
+Benefit: You do not provoke an attack of opportunity when performing a bull rush combat maneuver. In addition, you receive a +2 bonus on checks made to bull rush a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to bull rush you.
+
+Normal: You provoke an attack of opportunity when performing a bull rush combat maneuver.</description><featcategory>Combat</featcategory></feat><feat name="Power Attack -1/+2" categorytext="Combat" useradded="no"><description>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.
+
+Prerequisites: Str 13, base attack bonus +1.
+
+Benefit: You can choose to take a &#8211;1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (&#8211;50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by &#8211;1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</description><featcategory>Combat</featcategory></feat></feats><traits/><flaws/><skilltricks/><animaltricks/><attack attackbonus="+2" meleeattack="+10" rangedattack="+2" baseattack="+3"><special name="Stampede (Ex)" shortname="Stampede" type="Extraordinary Ability" sourcetext="Herd Animal, Bison"><description>A stampede occurs if three or more creatures with stampede make a trample attack while remaining adjacent to each other. While stampeding, the creatures can trample foes of their size or smaller, and the trample's save DC increases by +2.</description><specsource>Herd Animal, Bison</specsource></special></attack><melee><weapon name="Gore (Herd Animal, Bison)" categorytext="Melee Weapon" typetext="P" attack="+10" damage="2d6+12" crit="20/x2" useradded="no"><description>A creature's natural Gore attack.</description><wepcategory>Melee Weapon</wepcategory><weptype>Piercing</weptype></weapon><weapon name="Trample (DC 20) (Herd Animal, Bison)" categorytext="Melee Weapon" typetext="B" attack="+10" damage="2d6+12" crit="" useradded="no"><description>As a full-round action, a creature with the trample ability can attempt to overrun any creature that is at least one size category smaller than itself. This works just like the overrun combat maneuver, but the trampling creature does not need to make a check, it merely has to move over opponents in its path. Targets of a trample take an amount of damage equal to the trampling creature's slam damage + 1-1/2 times its Str modifier. Targets of a trample can make an attack of opportunity, but at a -4 penalty. If targets forgo an attack of opportunity, they can attempt to avoid the trampling creature and receive a Reflex save to take half damage. The save DC against a creature's trample attack is 10 + 1/2 creature's HD + creature's Str modifier (the exact DC is given in the creature's descriptive text). A trampling creature can only deal trampling damage to each target once per round, no matter how many times its movement takes it over a target creature.</description><wepcategory>Melee Weapon</wepcategory><weptype>Bludgeoning</weptype></weapon><weapon name="Unarmed Strike" categorytext="Melee Weapon, Unarmed Attack" typetext="B" attack="+10" damage="1d4+8" crit="20/x2" useradded="no" quantity="1"><weight text="" value="0"/><cost text="" value="0"/><description>A Medium character deals 1d3 points of nonlethal damage with an unarmed strike. A Small character deals 1d2 points of nonlethal damage. A monk or any character with the Improved Unarmed Strike feat can deal lethal or nonlethal damage with unarmed strikes, at his discretion. The damage from an unarmed strike is considered weapon damage for the purposes of effects that give you a bonus on weapon damage rolls.
+
+An unarmed strike is always considered a light weapon. Therefore, you can use the Weapon Finesse feat to apply your Dexterity modifier instead of your Strength modifier to attack rolls with an unarmed strike. Unarmed strikes do not count as natural weapons (see Chapter 8).</description><wepcategory>Melee Weapon</wepcategory><wepcategory>Unarmed Attack</wepcategory><weptype>Bludgeoning</weptype></weapon></melee><ranged/><defenses><armor name="Natural Armor" ac="+8" equipped="yes" natural="yes" useradded="no" quantity="1"><weight text="" value="0"/><cost text="" value="0"/><description></description><itemslot>Armor</itemslot></armor></defenses><magicitems/><gear/><spelllike/><trackedresources/><otherspecials/><spellsknown/><spellsmemorized/><spellbook/><spellclasses/><journals><journal name="Title" gamedate="0" realdate="20100413" xp="0" pp="0" gp="0" sp="0" cp="0" prestigeaward="0" prestigespend="0"><description></description></journal></journals><images/><validation><report></report></validation><settings summary="Advanced Player's Guide: Advanced Player's Guide Familiars; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary; Player Companion: Dragon Empires Primer, Pirates of the Inner Sea; Campaign Setting: Distant Worlds, Inner Sea World Guide; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"/><npc><description>This creature has small, upward-pointing horns, a shaggy coat of fur, and a large hump on its shoulders.</description><basics/><tactics/><ecology><npcinfo name="Ecology - Environment">Cold or temperate plains</npcinfo><npcinfo name="Ecology - Organization">Solitary, pair, or herd (3-30)</npcinfo><npcinfo name="Ecology - Treasure">None</npcinfo></ecology><additional/></npc><minions/></character></public></document>

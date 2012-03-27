@@ -253,6 +253,36 @@ public class PathfinderTokenTests {
         assertEquals("Combat Casting", combatCasting.getName());
     }
 
+    
+    @Test
+    public void testOctopus() throws Exception {
+        dig = new HeroLabPathfinderDigester();
+        dig.parse( new File ( "src/net/sozinsoft/tokenlab/test/xml/octopus.xml") );
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+
+        Character dss = characters.get(0);
+        PathfinderToken puss = new PathfinderToken(dss);
+        assertEquals("Octopus", puss.getName());
+        assertEquals(Vision.HEROLABS_LOWLIGHT_VISION, puss.getVision());
+
+        
+    }
+
+
+    @Test
+    public void testArionBeryle() throws Exception {
+        dig = new HeroLabPathfinderDigester();
+        dig.parse( new File ( "src/net/sozinsoft/tokenlab/test/xml/Justice_Arion_Beryle.xml") );
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+
+        Character dss = characters.get(0);
+        PathfinderToken puss = new PathfinderToken(dss);
+        assertEquals("Justice Arion Beryle", puss.getName());
+        assertEquals(Vision.MT_NORMAL_VISION, puss.getVision());
+
+
+    }
+
     @Test
     public void testVisionExternal() throws Exception {
         dig = new HeroLabPathfinderDigester();
@@ -501,6 +531,22 @@ public class PathfinderTokenTests {
         config.addConfigEntry( "Cyllio Shyraki", "src/net/sozinsoft/tokenlab/test/img/Cyllio Shyraki_pog.png",
                 "src/net/sozinsoft/tokenlab/test/img/Cyllio Shyraki.jpg",
                 "src/net/sozinsoft/tokenlab/test/tokens/CyllioShyraki.rptok");
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+        for (Character c : characters) {
+            dig.saveCharacter(config, c);
+        }
+    }
+
+    @Test
+    public void testBison() throws Exception, SAXException {
+
+        dig = new HeroLabPathfinderDigester();
+        dig.parse( new File( "src/net/sozinsoft/tokenlab/test/xml/Herd_Animal_Bison.xml"));
+        Config config = newConfig();
+        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/tokens");
+        config.addConfigEntry( "Herd Animal, Bison", "src/net/sozinsoft/tokenlab/test/img/Cyllio Shyraki_pog.png",
+                "src/net/sozinsoft/tokenlab/test/img/Cyllio Shyraki.jpg",
+                "src/net/sozinsoft/tokenlab/test/tokens/Bison.rptok");
         List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
         for (Character c : characters) {
             dig.saveCharacter(config, c);

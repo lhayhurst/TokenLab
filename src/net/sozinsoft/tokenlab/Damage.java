@@ -42,7 +42,14 @@ public class Damage {
 
     public Damage(String expression) throws Exception {
 
+        if ( expression.length() == 0  || expression.isEmpty() )
+        {
+            //check out the octopus, its damage is blank!
+            return;
+
+        }
         Matcher matcher = bonusDamageOnly.matcher(expression); //"6"
+
 
         if ( expression.startsWith("--") ) {
             //there are some herolabs exports that contain this odd string for damage
