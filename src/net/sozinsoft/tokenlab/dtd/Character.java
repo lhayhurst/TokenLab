@@ -253,6 +253,10 @@ public class Character {
     public String getName() {
         return name;
     }
+    
+    public String toString() {
+        return this.getName();
+    }
 
     /**
      * Sets the value of the name property.
