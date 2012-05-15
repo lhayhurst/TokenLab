@@ -3,7 +3,6 @@ package net.sozinsoft.tokenlab.dtd;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Generated;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -18,10 +17,8 @@ import javax.xml.bind.annotation.XmlType;
     "armor"
 })
 @XmlRootElement(name = "defenses")
-@Generated(value = "com.sun.tools.internal.xjc.Driver", date = "2011-11-15T04:01:32-06:00", comments = "JAXB RI vJAXB 2.1.10 in JDK 6")
 public class Defenses {
 
-    @Generated(value = "com.sun.tools.internal.xjc.Driver", date = "2011-11-15T04:01:32-06:00", comments = "JAXB RI vJAXB 2.1.10 in JDK 6")
     protected List<Armor> armor;
 
     /**
@@ -46,7 +43,6 @@ public class Defenses {
      * 
      * 
      */
-    @Generated(value = "com.sun.tools.internal.xjc.Driver", date = "2011-11-15T04:01:32-06:00", comments = "JAXB RI vJAXB 2.1.10 in JDK 6")
     public List<Armor> getArmor() {
         if (armor == null) {
             armor = new ArrayList<Armor>();

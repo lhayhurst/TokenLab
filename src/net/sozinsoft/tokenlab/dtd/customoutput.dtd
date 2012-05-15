@@ -179,7 +179,7 @@
 <!ATTLIST personal
 	age CDATA #IMPLIED
 	eyes CDATA #IMPLIED
-	gender (Male | Female) #REQUIRED
+	gender (Male | Female | No Gender) #REQUIRED
 	hair CDATA #IMPLIED
 	skin CDATA #IMPLIED
 >
