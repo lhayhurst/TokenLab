@@ -893,6 +893,10 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         return _character.getSpellclasses().getSpellclass().size() == 0;
     }
 
+    private boolean isNPC()
+    {
+        return _character.getRole().equals("npc");
+    }
 
     private int buildWeaponMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
 
@@ -912,7 +916,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
             macroEntry.name = wimpl.name;
             MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++,
-                                                                                    new WeaponNameReplacer( wimpl.name, new Integer(1) ) );
+                                                                                    new WeaponNameReplacer( isNPC(), wimpl.name, new Integer(1) ) );
             macroButtonSet.add( properties );
 
             //and set all the full attack stuff
@@ -924,7 +928,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
                     fullAttackMacroEntry.sortPrefix = new Integer( sortPrefix ).toString();
                     fullAttackMacroEntry.name = attackCount.toString();
                     MacroButtonProperties faProperties = fullAttackMacroEntry.getMacroButtonProperties( index++,
-                                                                                    new WeaponNameReplacer( wimpl.name, attackCount ) );
+                                                                                    new WeaponNameReplacer( isNPC(), wimpl.name, attackCount ) );
                     macroButtonSet.add( faProperties );
 
                 }
