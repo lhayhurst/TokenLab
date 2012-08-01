@@ -2,7 +2,6 @@ package net.sozinsoft.tokenlab;
 
 
 import com.google.gson.*;
-import com.sun.org.apache.bcel.internal.generic.NEW;
 import net.rptools.maptool.model.*;
 import net.sozinsoft.tokenlab.dtd.*;
 import net.sozinsoft.tokenlab.dtd.Character;
@@ -70,6 +69,16 @@ public class PathfinderToken implements ICharacter, ITokenizable {
     public static final String SKILLS_JSON = "SkillsJSON";
     public static final String RESOURCES_JSON = "ResourcesJSON";
     public static final String SPONTANEOUS_RESOURCES_JSON = "SpontaneousResourcesJSON";
+    public static final String MEMORIZED_RESOURCES_JSON = "MemorizedResourcesJSON";
+    public static final String YELLOW = "yellow";
+    public static final String DARKGRAY = "darkgray";
+    public static final String BEGIN_ROLL = "[r:";
+    public static final String END_ROLL = "]";
+    public static final String SPELL_REFERENCE_MACRO_NAME = "Spell Reference";
+    public static final String SPONTANEOUS_SPELL_RESOURCES_MACRO_NAME = "Spontaneous Spell Resources";
+    public static final String NPC = "npc";
+    public static final String STANDARD_ATTACK_MACRO_NAME = "Standard Attack";
+    public static final String ATTACK_FULL = "Attack - Full";
 
 
     private Character _character;
@@ -111,9 +120,16 @@ public class PathfinderToken implements ICharacter, ITokenizable {
     }
 
     private HashMap<String, WeaponImpl> _weapons = new HashMap<String, WeaponImpl>();
+    public HashMap<String, WeaponImpl> getWeapons() {
+        return _weapons;
+    }
+
     private void setWeapons() throws Exception {
         for( Weapon weapon: this._character.getMelee().getWeapon() ) {
 
+            if ( _weapons.containsKey( weapon.getName() )) {
+                weapon.setName( weapon.getName() + " (" + weapon.getEquipped() + ")");
+            }
             WeaponImpl wimpl = new WeaponImpl(weapon.getName(), weapon.getDamage(), weapon.getCategorytext(),
                     weapon.getCrit(), weapon.getAttack(), weapon.getEquipped(),
                     weapon.getCategorytext(), weapon.getDescription());
@@ -123,6 +139,9 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
         for( Weapon weapon: this._character.getRanged().getWeapon() ) {
 
+            if ( _weapons.containsKey( weapon.getName() )) {
+                weapon.setName( weapon.getName() + "(" + weapon.getEquipped() + ")");
+            }
             WeaponImpl wimpl = new WeaponImpl(weapon.getName(), weapon.getDamage(), weapon.getCategorytext(),
                     weapon.getCrit(), weapon.getAttack(), weapon.getEquipped(),
                     weapon.getCategorytext(), weapon.getDescription());
@@ -664,7 +683,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
         _token.getToken().setProperty(TRAITS_JSON, gjson.toJson(_traits));
 
-        _token.getToken().setProperty(WEAPON_JSON, gjson.toJson(_weapons));
+        _token.getToken().setProperty(WEAPON_JSON,  gjson.toJson( _weapons ));
 
         _token.getToken().setProperty(SKILLS_JSON, gjson.toJson(_skills));
 
@@ -682,7 +701,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         }
        _token.getToken().setProperty(SPONTANEOUS_RESOURCES_JSON, gjson.toJson( spontaneousSpellResources));
 
-        _token.getToken().setProperty("MemorizedResourcesJSON", gjson.toJson( _memorizedSpellResources));
+        _token.getToken().setProperty(MEMORIZED_RESOURCES_JSON, gjson.toJson( _memorizedSpellResources));
 
 
         //set the spells.  this needs to basically happen by class.
@@ -710,6 +729,8 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
         return _token.getToken();
     }
+
+
 
 
     private HashMap<String, HashMap<String, String >> _skills = new HashMap<String, HashMap<String, String>>() ;
@@ -830,10 +851,10 @@ public class PathfinderToken implements ICharacter, ITokenizable {
            boolean disableButton = false;
 
             if ( isClassSkill(s) ) {
-                macroEntry.buttonColor = "yellow";
+                macroEntry.buttonColor = YELLOW;
             }
             else if ( s.getTrainedonly().equals(YES ) ) {
-                macroEntry.buttonColor = "darkgray";
+                macroEntry.buttonColor = DARKGRAY;
                 if ( s.getRanks().length() == 0 || s.getRanks().equals("0")) {
                     disableButton = true;
                 }
@@ -844,7 +865,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
             //todo: refactor the below into the replacer interface if I ever do it somewhere else.
             if ( ! disableButton ) {
-                macroEntry.toolTip = "[r:" + s.getRanks() + "]";
+                macroEntry.toolTip = BEGIN_ROLL + s.getRanks() + END_ROLL;
                 macroEntry.name = skillName;
                 MacroButtonProperties properties = macroEntry.getMacroButtonProperties( index++, replacer );
                 macroButtonSet.add( properties );
@@ -873,12 +894,12 @@ public class PathfinderToken implements ICharacter, ITokenizable {
             //kind of a small hack, special for spells
             //if the character doesn't have spells, don't bother creating a spell button
             //TODO: probably a smoother way to do this
-            if ( macroEntry.name.equals("Spell Reference") ) {
+            if ( macroEntry.name.equals(SPELL_REFERENCE_MACRO_NAME) ) {
                 if (isSpellCaster()) {
                     continue;
                 }
             }
-            if ( macroEntry.name.equals("Spontaneous Spell Resources") ) {   //same for the above :-)
+            if ( macroEntry.name.equals(SPONTANEOUS_SPELL_RESOURCES_MACRO_NAME) ) {   //same for the above :-)
                 if (_spontaneousSpellResources.size() == 0 ) {
                     continue;
                 }
@@ -895,7 +916,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
     private boolean isNPC()
     {
-        return _character.getRole().equals("npc");
+        return _character.getRole().equals(NPC);
     }
 
     private int buildWeaponMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
@@ -905,7 +926,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         HashMap<String, MacroDigester.MacroEntry > powerMacros = macroDigester.getGroup("Fight");
         for( WeaponImpl wimpl : _weapons.values()) {
 
-            MacroDigester.MacroEntry macroEntry = powerMacros.get( "Standard Attack");
+            MacroDigester.MacroEntry macroEntry = powerMacros.get(STANDARD_ATTACK_MACRO_NAME);
 
             if ( sortPrefix == 0 ) {
                 sortPrefix = Integer.parseInt(macroEntry.sortPrefix); //bootstrap the sortPrefix
@@ -923,7 +944,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
             if ( wimpl.numFullAttacks > 1 ) {
                 for ( Integer attackCount : wimpl.sortedAttacks() ) {
-                    MacroDigester.MacroEntry fullAttackMacroEntry = powerMacros.get( "Attack - Full");
+                    MacroDigester.MacroEntry fullAttackMacroEntry = powerMacros.get(ATTACK_FULL);
                     ++sortPrefix;
                     fullAttackMacroEntry.sortPrefix = new Integer( sortPrefix ).toString();
                     fullAttackMacroEntry.name = attackCount.toString();

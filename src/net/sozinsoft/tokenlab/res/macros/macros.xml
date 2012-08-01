@@ -15,7 +15,7 @@
             buttonColor="black"
             fontColor="white"
             fontSize="1.00em"
-            minWidth="35"
+            minWidth="37"
             applyToSelectedTokens="1"
             allowPlayersToEdit="1"
             file="res/macros/ChangeTemporaryBonus.txt"/>
@@ -120,7 +120,7 @@
                buttonColor="navy"
                fontColor="white"
                fontSize="1.00em"
-               minWidth="30"
+               minWidth="32"
                applyToSelectedTokens="1"
            allowPlayersToEdit="0"
                file="res/macros/TraitsMacro.txt"/>
@@ -131,7 +131,7 @@
                buttonColor="navy"
                fontColor="white"
                fontSize="1.00em"
-               minWidth="37"
+               minWidth="42"
                applyToSelectedTokens="1"
                allowPlayersToEdit="0"
                file="res/macros/AbilitiesMacro.txt"/>

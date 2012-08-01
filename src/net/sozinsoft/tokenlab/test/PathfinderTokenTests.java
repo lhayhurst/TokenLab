@@ -1,5 +1,7 @@
 package net.sozinsoft.tokenlab.test;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import net.rptools.maptool.model.Token;
 import net.sozinsoft.tokenlab.*;
 import net.sozinsoft.tokenlab.dtd.Character;
@@ -76,6 +78,20 @@ public class PathfinderTokenTests {
         }
     }
 
+
+    @Test
+    //see https://github.com/lhayhurst/TokenLab/issues/23
+    public void testTwoWeaponFighting() throws Exception {
+        dig = new HeroLabPathfinderDigester();
+        dig.parse( new File( "src/net/sozinsoft/tokenlab/test/xml/Alia_Elshaw.xml"));
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+        Character dss = characters.get(0);
+        PathfinderToken ptok = new PathfinderToken(dss);
+        HashMap<String, WeaponImpl> weapons = ptok.getWeapons();
+        assertTrue( weapons.containsKey("Dagger"));
+        assertTrue( weapons.containsKey("Dagger (offhand)"));
+        assertTrue( weapons.containsKey( "Sword, Bastard") );
+    }
     @Test
          public void testSpellX2() throws Exception {
         dig = new HeroLabPathfinderDigester();

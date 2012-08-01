@@ -39,7 +39,7 @@ public class WeaponImpl {
         //and then the first comma
         this.name = name.replaceAll( "\\n.*$", "");
         this.name = this.name.replaceAll("\\s+$", "" );
-        this.name = this.name.replaceAll(",\\s+.*$", "");
+     //   this.name = this.name.replaceAll(",\\s+.*$", "");  this regex was messing up perfectly good weapon names (Sword, Bastard for ex)
 
 
         this.damage = new Damage(damage);
