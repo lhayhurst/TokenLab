@@ -675,7 +675,10 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         }
 
         for( String propKey : _propertyMap.keySet() ) {
-            _token.getToken().setProperty(propKey, _propertyMap.get(propKey).toString());
+            Object propertyValue = _propertyMap.get(propKey);
+            if ( propertyValue != null ) {
+                _token.getToken().setProperty(propKey, propertyValue.toString());
+            }
         }
 
 
