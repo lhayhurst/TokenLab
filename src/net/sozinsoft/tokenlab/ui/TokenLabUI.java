@@ -60,7 +60,7 @@ public class TokenLabUI {
             frame.setVisible(true);
         } catch ( Exception e ) {
             JOptionPane.showMessageDialog(frame,
-            "Something bad happened! \n" + e.getMessage(),
+            "Something bad happened! \n" + e.toString(),
             "Fatal error",
             JOptionPane.ERROR_MESSAGE);
         }
@@ -356,15 +356,15 @@ public class TokenLabUI {
                 }
             } catch (IOException io) {
                 success = false;
-                errorDialog( io.getMessage(), "Something bad happened:\\n\\n" + io.getStackTrace() );
+                errorDialog( io.getMessage(), "Something bad happened:" + io.toString() );
 
             } catch (SAXException saxe) {
                 success = false;
-                errorDialog( saxe.getMessage(), "Something bad happened:\\n\\n" + saxe.getStackTrace() );
+                errorDialog( saxe.getMessage(), "Something bad happened:" + saxe.toString() );
             }
             catch (Exception e ) {
                 success = false;
-                errorDialog( e.getMessage(), "Something bad happened:\\n\\n" + e.getStackTrace() );
+                errorDialog( e.getMessage(), "Something bad happened:" + e.toString() );
             }
         }
         

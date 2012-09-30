@@ -5,7 +5,7 @@
 <portfolio herocount="1" activehero="1">
 <tactical combatturn="0"/>
 <notes/>
-<hero playername="Mark Mealman" nextpick="1072" nextcontainer="6" heroindex="1" herosummary="Human Wit 1 &#150; CR 1/2" heroname="Alia Elshaw" batchindex="477" userbatch="435" enmassebatch="40" nexttrade="33" nexttransact="33" poolcount="35" activemode="1" hasacted="no" focustab="weapons">
+<hero playername="Mark Mealman" nextpick="1077" nextcontainer="6" heroindex="1" herosummary="Human Wit 1 &#150; CR 1/2" heroname="Alia Elshaw" batchindex="482" userbatch="435" enmassebatch="40" nexttrade="37" nexttransact="37" poolcount="35" activemode="1" hasacted="no" focustab="weapons">
 <statblock>ALIA ELSHAW	CR 1/2
 Male Human (Tian-Shu) Witch 1
 CN Medium Humanoid (Human)
@@ -22,6 +22,11 @@ OFFENSE
 Spd 30 ft.
 Melee Dagger -5 (1d4-1/19-20/x2) and
    Dagger -9 (1d4-1/19-20/x2) and
+   Dagger -1 (1d4-1/19-20/x2) and
+   Dagger -1 (1d4-1/19-20/x2) and
+   Dagger -1 (1d4-1/19-20/x2) and
+   Dagger -1 (1d4-1/19-20/x2) and
+   Dagger -1 (1d4-1/19-20/x2) and
    Sword, Bastard -5 (1d10-1/19-20/x2) and
    Unarmed Strike -1 (1d3-1/20/x2)
 Ranged Crossbow, Light +1 (1d8/19-20/x2)
@@ -39,7 +44,7 @@ Traits Alchemical Prodigy: Bless, Hedge Magician
 Skills Craft (Alchemy) +13, Fly +5, Heal +4, Knowledge (Arcana) +9, Knowledge (Planes) +9, Spellcraft +9, Use Magic Device +5
 Languages Common, Elven, Goblin, Halfling, Orc, Sylvan, Tien
 SQ +2 to Reflex saves, Empathic Link with Familiar (Su), Heart of the Fields +0: Craft (Alchemy) (1/day), Share Spells with Familiar
-Combat Gear Bolts, Crossbow (20), Crossbow, Light, Dagger, Dagger, Sword, Bastard; 
+Combat Gear Arrow, Smoke (5), Bolts, Crossbow (20), Crossbow, Light, Dagger, Dagger, Dagger, Dagger, Dagger, Dagger, Dagger, Sword, Bastard; 
 --------------------
 SPECIAL ABILITIES
 --------------------
@@ -54,7 +59,7 @@ Slumber (1 rounds) (DC 15) (Su) Target falls asleep.
 
 Hero Lab&#174; and the Hero Lab logo are Registered Trademarks of LWD Technology, Inc. Free download at http://www.wolflair.com
 Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishing, LLC&#174;, and are used under license.</statblock>
-<container index="0" chosencount="3" pickcount="561">
+<container index="0" chosencount="3" pickcount="567">
 <notes/>
 <chosen source="bgDeity" pickindex="485"/>
 <chosen source="bgAlign" pickindex="1001"/>
@@ -3064,6 +3069,11 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <pick thing="wDagger" index="1067" batchindex="475" refcount="0" fieldcount="1" source="wTable">
 <field id="wIs2nd" user="1."></field>
 </pick>
+<pick thing="wDagger" index="1070" batchindex="478" refcount="0" source="wTable" default="yes"></pick>
+<pick thing="wDagger" index="1071" batchindex="479" refcount="0" source="wTable" default="yes"></pick>
+<pick thing="wDagger" index="1072" batchindex="480" refcount="0" source="wTable" default="yes"></pick>
+<pick thing="wDagger" index="1073" batchindex="481" refcount="0" source="wTable" default="yes"></pick>
+<pick thing="wDagger" index="1074" batchindex="482" refcount="0" source="wTable" default="yes"></pick>
 <pick thing="wGauntArm" index="26" batchindex="26" uniqueness="unique" count="0" bootstrap="yes" default="yes" live="no">
 <reference bootindex="101"/>
 </pick>
@@ -3071,7 +3081,10 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <reference bootindex="102"/>
 </pick>
 <pick thing="wRay" index="365" batchindex="318" refcount="0" default="yes"></pick>
-<pick thing="wSwordBast" index="1071" batchindex="477" refcount="0" source="wTable" default="yes"></pick>
+<pick thing="wSmArrow" index="1069" batchindex="477" refcount="0" fieldcount="1" source="wTable">
+<field id="stackQty" user="5."></field>
+</pick>
+<pick thing="wSwordBast" index="1068" batchindex="476" refcount="0" source="wTable" default="yes"></pick>
 <pick thing="wTouch" index="366" batchindex="319" refcount="0" default="yes"></pick>
 <pick thing="wUnarmed" index="25" batchindex="25" bootstrap="yes" default="yes">
 <reference bootindex="100"/>
@@ -3722,7 +3735,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usagepool id="Damage" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Nonlethal" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="PresSpent" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="TotalCP" usagecount="8" pickindex="-1" lasttransact="32" quantity="0.">
+<usagepool id="TotalCP" usagecount="9" pickindex="-1" lasttransact="36" quantity="0.">
 <usage index="4" transaction="4" quantity="-0."/>
 <usage index="8" transaction="8" quantity="-0."/>
 <usage index="12" transaction="12" quantity="-0."/>
@@ -3731,8 +3744,9 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usage index="24" transaction="24" quantity="-0."/>
 <usage index="28" transaction="28" quantity="0."/>
 <usage index="32" transaction="32" quantity="-0."/>
+<usage index="36" transaction="36" quantity="-0."/>
 </usagepool>
-<usagepool id="TotalGP" usagecount="8" pickindex="-1" lasttransact="30" quantity="-78.">
+<usagepool id="TotalGP" usagecount="9" pickindex="-1" lasttransact="34" quantity="-88.">
 <usage index="2" transaction="2" quantity="-35."/>
 <usage index="6" transaction="6" quantity="-1."/>
 <usage index="10" transaction="10" quantity="-1."/>
@@ -3741,8 +3755,9 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usage index="22" transaction="22" quantity="-2."/>
 <usage index="26" transaction="26" quantity="0."/>
 <usage index="30" transaction="30" quantity="-35."/>
+<usage index="34" transaction="34" quantity="-10."/>
 </usagepool>
-<usagepool id="TotalPP" usagecount="8" pickindex="-1" lasttransact="29" quantity="0.">
+<usagepool id="TotalPP" usagecount="9" pickindex="-1" lasttransact="33" quantity="0.">
 <usage index="1" transaction="1" quantity="-0."/>
 <usage index="5" transaction="5" quantity="-0."/>
 <usage index="9" transaction="9" quantity="-0."/>
@@ -3751,10 +3766,11 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usage index="21" transaction="21" quantity="-0."/>
 <usage index="25" transaction="25" quantity="0."/>
 <usage index="29" transaction="29" quantity="-0."/>
+<usage index="33" transaction="33" quantity="-0."/>
 </usagepool>
 <usagepool id="TotalPres" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="TotalPwrPt" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
-<usagepool id="TotalSP" usagecount="8" pickindex="-1" lasttransact="31" quantity="0.">
+<usagepool id="TotalSP" usagecount="9" pickindex="-1" lasttransact="35" quantity="0.">
 <usage index="3" transaction="3" quantity="-0."/>
 <usage index="7" transaction="7" quantity="-0."/>
 <usage index="11" transaction="11" quantity="-0."/>
@@ -3763,6 +3779,7 @@ Pathfinder&#174; and associated marks and logos are trademarks of Paizo Publishi
 <usage index="23" transaction="23" quantity="-0."/>
 <usage index="27" transaction="27" quantity="0."/>
 <usage index="31" transaction="31" quantity="-0."/>
+<usage index="35" transaction="35" quantity="-0."/>
 </usagepool>
 <usagepool id="TotalXP" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>
 <usagepool id="Wounds" usagecount="0" pickindex="-1" lasttransact="0" quantity="0."></usagepool>

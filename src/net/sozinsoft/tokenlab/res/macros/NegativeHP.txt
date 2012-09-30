@@ -1,0 +1,79 @@
+$SELF
+<span style=font-size:0>
+    [HPChange = DamageAmount ]
+    [HP       = getProperty("CurrentHP")]
+    [TempHP   = getProperty("TempHP")]
+    [h: Con = getProperty( "Constitution" )]
+    [h: ConValue = json.get( Con, "value")]
+    [h: ConBonus = json.get( Con, "bonusModifier" )]
+    [h: ConDamage = json.get( Con, "damage" )]
+    [h: TempConModifier = json.get( Con, "tempModifier" )]
+    [h: ConScore = ConValue + ConBonus + ConDamage + TempConModifier]
+    [h: MinConScore = ConScore * -1]
+
+    [HpReport1 = "<font color=red>Lost</font> "]
+    [HpReport2 = "<font color=blue>HP</font>!<br />"]
+    [CurrentHP = max(CurrentHP - HPChange + TempHP,MinConScore)]
+</span>
+
+
+
+[r:HpReport1] [r:HPChange] [r:HpReport2]
+[r: CurrentHP] / [r:MaxHP] HP remaining...
+[h: setBar("Health",CurrentHP/MaxHP)]
+
+[h:text = ""]
+
+<!-- IF THEY ARE ALRIGHT -->
+[h,if(CurrentHP > Bloodied), CODE:
+{
+    [state.Bloodied = 0]
+    [state.Disabled = 0]
+    [state.Dying = 0]
+    [state.Dead = 0]
+}]
+
+<!-- IF THEY DROP TO BLOODIED -->
+[h,if(CurrentHP <= Bloodied && CurrentHP > 0), CODE:
+{
+    [state.Bloodied = 1]
+    [state.Disabled = 0]
+    [state.Dying = 0]
+    [state.Dead = 0]
+    [text = "<br /><b>You are <font color=red>bloodied</front>!</b>"]
+}]
+
+<!-- IF THEY DROP TO DISABLED -->
+[h,if(CurrentHP == 0), CODE:
+{
+    [state.Bloodied = 1]
+    [state.Disabled = 1]
+    [state.Dying = 0]
+    [state.Dead = 0]
+    [text = "<br /><b>You are disabled!</b>"]
+}]
+
+<!-- IF THEY DROP TO DYING -->
+[h,if(CurrentHP < 0 && CurrentHP >= -ConScore), CODE:
+{
+    [state.Bloodied = 1]
+    [state.Disabled = 1]
+    [state.Dying = 1]
+    [state.Dead = 0]
+    [CurrentStance = "None"]
+    [text = "<br /><b>You are dying!</b>"]
+}]
+
+<!-- IF THEY DROP TO DEAD -->
+[h,if(CurrentHP <= -ConScore), CODE:
+{
+    [state.Bloodied = 1]
+    [state.Disabled = 1]
+    [state.Dying = 1]
+    [state.Dead = 1]
+    [text = "<br /><b>You have <font color=red>died</font>!</b>"]
+}]
+
+[r:text]
+
+

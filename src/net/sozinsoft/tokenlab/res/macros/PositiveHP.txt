@@ -1,0 +1,26 @@
+$SELF
+<span style=font-size:0>
+
+<!-- RECORD THE CHANGE IN HP -->
+[HPChange = HealAmount]
+[HP       = getProperty("CurrentHP")]
+[TempHP   = getProperty("TempHP")]
+
+
+[HpReport1 = "<font color=green>Gained</font> "]
+[CurrentHP = min(CurrentHP + HPChange + TempHP,MaxHP)]
+[HpReport2 = "<font color=blue>HP</font>!<br />"]
+
+</span>
+
+[h: setBar("Health",CurrentHP/MaxHP)]
+[r:HpReport1] [r:HPChange] [r:HpReport2]
+
+<!-- IF THEY ARE ALRIGHT -->
+[h,if(CurrentHP > Bloodied), CODE:
+{
+    [state.Bloodied = 0]
+	[state.Disabled = 0]
+	[state.Dying = 0]
+	[state.Dead = 0]
+}]

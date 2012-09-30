@@ -799,7 +799,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
         HashMap<String, MacroDigester.MacroEntry > memorizedMacroSet = macroDigester.getGroup( "Special Abilities - Memorized Spells");
 
         MacroDigester.MacroEntry resetEntry = (MacroDigester.MacroEntry) memorizedMacroSet.values().toArray()[1];
-        IMacroReplacer defaultReplacer = new DefaultReplacer();
+        IMacroReplacer defaultReplacer = new DefaultReplacer( isNPC() );
         MacroButtonProperties defaultProperties = resetEntry.getMacroButtonProperties( index++, defaultReplacer );
         macroButtonSet.add( defaultProperties );
 
@@ -817,7 +817,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
     private int buildSubMacros(List<MacroButtonProperties> macroButtonSet, int index) throws IOException {
         HashMap<String, MacroDigester.MacroEntry > submacros = macroDigester.getGroup( "SUBMACROS");
 
-        IMacroReplacer defaultReplacer = new DefaultReplacer();
+        IMacroReplacer defaultReplacer = new DefaultReplacer( isNPC() );
         for( MacroDigester.MacroEntry macroEntry : submacros.values()) {
 
             //this is kind of a hack.
@@ -891,7 +891,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
     private int buildMacros(List<MacroButtonProperties> macroButtonSet, String groupName, int index) throws IOException {
         HashMap<String, MacroDigester.MacroEntry > genericMacros = macroDigester.getGroup( groupName );
-        IMacroReplacer defaultReplacer = new DefaultReplacer();
+        IMacroReplacer defaultReplacer = new DefaultReplacer( isNPC() );
         for( MacroDigester.MacroEntry macroEntry : genericMacros.values()) {
 
             //kind of a small hack, special for spells

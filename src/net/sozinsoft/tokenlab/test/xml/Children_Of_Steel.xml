@@ -255,7 +255,7 @@ Demoralize: You can use this skill to cause an opponent to become shaken for a n
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Dungeoneering)" ranks="5" attrbonus="0" attrname="Intelligence" value="8" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (dungeoneering)" ranks="5" attrbonus="0" attrname="Intelligence" value="8" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -443,7 +443,7 @@ Prerequisite: Dex 13.
 Benefit: You gain a +1 dodge bonus to your AC. A condition that makes you lose your Dex bonus to AC also makes you lose the benefits of this feat.</description>
                     <featcategory>Combat</featcategory>
                 </feat>
-                <feat name="Exotic Weapon Proficiency: Curve Blade, Elven" categorytext="Combat">
+                <feat name="Exotic Weapon Proficiency (Curve Blade, Elven)" categorytext="Combat">
                     <description>Choose one type of exotic weapon, such as the spiked chain or whip. You understand how to use that type of exotic weapon in combat, and can utilize any special tricks or qualities that exotic weapon might allow.
 
 Prerequisite: Base attack bonus +1.
@@ -479,7 +479,7 @@ Prerequisites: Improved Vital Strike, Vital Strike, base attack bonus +16.
 Benefit: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack four times and add the results together before adding bonuses from Strength, weapon abilities (such as flaming), precision-based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</description>
                     <featcategory>Combat</featcategory>
                 </feat>
-                <feat name="Greater Weapon Focus: Curve Blade, Elven" categorytext="Combat">
+                <feat name="Greater Weapon Focus (Curve Blade, Elven)" categorytext="Combat">
                     <description>Choose one type of weapon (including unarmed strike or grapple) for which you have already selected Weapon Focus. You are a master at your chosen weapon.
 
 Prerequisites: Proficiency with selected weapon, Weapon Focus with selected weapon, base attack bonus +1, 8th-level fighter.
@@ -489,7 +489,7 @@ Benefit: You gain a +1 bonus on attack rolls you make using the selected weapon.
 Special: You can gain Greater Weapon Focus multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</description>
                     <featcategory>Combat</featcategory>
                 </feat>
-                <feat name="Greater Weapon Specialization: Curve Blade, Elven" categorytext="Combat">
+                <feat name="Greater Weapon Specialization (Curve Blade, Elven)" categorytext="Combat">
                     <description>Choose one type of weapon (including unarmed strike or grapple) for which you possess the Weapon Specialization feat. Your attacks with the chosen weapon are more devastating than normal.
 
 Prerequisites: Proficiency with selected weapon, Greater Weapon Focus with selected weapon, Weapon Focus with selected weapon, Weapon Specialization with selected weapon, 12th-level fighter.
@@ -499,7 +499,7 @@ Benefit: You gain a +2 bonus on all damage rolls you make using the selected wea
 Special: You can gain Greater Weapon Specialization multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</description>
                     <featcategory>Combat</featcategory>
                 </feat>
-                <feat name="Improved Critical: Curve Blade, Elven" categorytext="Combat">
+                <feat name="Improved Critical (Curve Blade, Elven)" categorytext="Combat">
                     <description>Attacks made with your chosen weapon are quite deadly.
 
 Prerequisite: Proficient with weapon, base attack bonus +8.
@@ -635,7 +635,7 @@ Addition from Improved Vital Strike: Your Vital Strike damage is multiplied by 3
 Addition from Greater Vital Strike: Your Vital Strike damage is multiplied by 4 instead of 2.</description>
                     <featcategory>Combat</featcategory>
                 </feat>
-                <feat name="Weapon Focus: Curve Blade, Elven" categorytext="Combat">
+                <feat name="Weapon Focus (Curve Blade, Elven)" categorytext="Combat">
                     <description>Choose one type of weapon. You can also choose unarmed strike or grapple (or ray, if you are a spellcaster) as your weapon for the purposes of this feat.
 
 Prerequisites: Proficiency with selected weapon, base attack bonus +1.
@@ -645,7 +645,7 @@ Benefit: You gain a +1 bonus on all attack rolls you make using the selected wea
 Special: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</description>
                     <featcategory>Combat</featcategory>
                 </feat>
-                <feat name="Weapon Specialization: Curve Blade, Elven" categorytext="Combat">
+                <feat name="Weapon Specialization (Curve Blade, Elven)" categorytext="Combat">
                     <description>You are skilled at dealing damage with one weapon. Choose one type of weapon (including unarmed strike or grapple) for which you have already selected the Weapon Focus feat. You deal extra damage when using this weapon.
 
 Prerequisites: Proficiency with selected weapon, Weapon Focus with selected weapon, fighter level 4th.
@@ -705,29 +705,9 @@ Adamantine: Ignore hardness less than 20.</description>
                     <wepcategory>Melee Weapon</wepcategory>
                     <weptype>Slashing</weptype>
                 </weapon>
-                <weapon name="Gauntlet (from Armor)" categorytext="Melee Weapon, Unarmed Attack" typetext="B" attack="+28/+23/+18/+13" damage="1d3+8" crit="20/x2" useradded="no" quantity="1">
-                    <weight text="1 lb" value="1"></weight>
-                    <cost text="" value="0"></cost>
-                    <description>(One or more of the pieces of armor you have available includes Gauntlets.)
-
-This metal glove lets you deal lethal damage rather than nonlethal damage with unarmed strikes. A strike with a gauntlet is otherwise considered an unarmed attack. The cost and weight given are for a single gauntlet. Medium and heavy armors (except breastplate) come with gauntlets. Your opponent cannot use a disarm action to disarm you of gauntlets.</description>
-                    <wepcategory>Melee Weapon</wepcategory>
-                    <wepcategory>Unarmed Attack</wepcategory>
-                    <weptype>Bludgeoning</weptype>
-                </weapon>
-                <weapon name="Unarmed Strike" categorytext="Melee Weapon, Unarmed Attack" typetext="B" attack="+28/+23/+18/+13" damage="1d3+8" crit="20/x2" useradded="no" quantity="1">
-                    <weight text="" value="0"></weight>
-                    <cost text="" value="0"></cost>
-                    <description>A Medium character deals 1d3 points of nonlethal damage with an unarmed strike. A Small character deals 1d2 points of nonlethal damage. A monk or any character with the Improved Unarmed Strike feat can deal lethal or nonlethal damage with unarmed strikes, at his discretion. The damage from an unarmed strike is considered weapon damage for the purposes of effects that give you a bonus on weapon damage rolls.
-
-An unarmed strike is always considered a light weapon. Therefore, you can use the Weapon Finesse feat to apply your Dexterity modifier instead of your Strength modifier to attack rolls with an unarmed strike. Unarmed strikes do not count as natural weapons (see Chapter 8).</description>
-                    <wepcategory>Melee Weapon</wepcategory>
-                    <wepcategory>Unarmed Attack</wepcategory>
-                    <weptype>Bludgeoning</weptype>
-                </weapon>
             </melee>
             <ranged>
-                <weapon name="+3 Longbow, Composite (Str +5)" categorytext="Projectile Weapon" typetext="P" attack="+24/+19/+14/+9" damage="1d8+8" crit="20/x3" quantity="1">
+                <weapon name="+3 Longbow, Composite (Str +5)" categorytext="Projectile Weapon" typetext="P" attack="+24/+19/+14/+9" damage="1d8+8" crit="x3" quantity="1">
                     <rangedattack attack="+24/+19/+14/+9" rangeinctext="110'" rangeincvalue="110'"></rangedattack>
                     <weight text="3 lbs" value="3"></weight>
                     <cost text="18900 GP" value="18900"></cost>
@@ -843,7 +823,7 @@ Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level
                     <description>At 2nd level, a weapon master gains a +1 bonus to CMD against disarm and sunder attempts while wielding his chosen weapon. This bonus also applies on saves against any effect that targets his chosen weapon (for example, grease, heat metal, shatter, warp wood). The bonus increases by +1 for every four levels beyond 2nd. This ability replaces bravery.</description>
                     <specsource>Fighter</specsource>
                 </special>
-                <special name="Weapon Mastery: Curve Blade, Elven (Ex)" shortname="Weapon Mastery (Curve Blade, Elven)" type="Extraordinary Ability" sourcetext="Fighter">
+                <special name="Weapon Mastery (Curve Blade, Elven) (Ex)" shortname="Weapon Mastery (Curve Blade, Elven)" type="Extraordinary Ability" sourcetext="Fighter">
                     <description>At 20th level, a fighter chooses one weapon, such as the longsword, greataxe, or longbow. Any attacks made with that weapon automatically confirm all critical threats and have their damage multiplier increased by 1 (×2 becomes ×3, for example). In addition, he cannot be disarmed while wielding a weapon of this type.</description>
                     <specsource>Fighter</specsource>
                 </special>
@@ -867,7 +847,7 @@ Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level
                 <validmessage>Error: Slaying Sprint: Mobility required.</validmessage>
                 <validmessage>Error: Slaying Sprint: Spring Attack required.</validmessage>
             </validation>
-            <settings summary="Advanced Player's Guide: Advanced Player's Guide, Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Pirates of the Inner Sea; Campaign Setting: Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited, Rival Guide; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
+            <settings summary="Advanced Player's Guide: Advanced Player's Guide, Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Pirates of the Inner Sea, Varisia, Birthplace of Legends; Campaign Setting: Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited, Rival Guide; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
             <minions></minions>
         </character>
         <character nature="normal" role="npc" relationship="enemy" type="Hero" name="Echean Ansolandi" playername="">
@@ -995,7 +975,7 @@ Check: You can use Acrobatics to move on narrow surfaces and uneven ground witho
 
 Continued - Core Rulebook, pg. 87</description>
                 </skill>
-                <skill name="Appraise" ranks="0" attrbonus="9" attrname="Intelligence" value="9" classskill="yes">
+                <skill name="Appraise" ranks="20" attrbonus="9" attrname="Intelligence" value="32" classskill="yes">
                     <description>You can evaluate the monetary value of an object.
 
 Check: A DC 20 Appraise check determines the value of a common item. If you succeed by 5 or more, you also determine if the item has magic properties, although this success does not grant knowledge of the magic item's abilities. If your fail the check by less than 5, you determine the price of that item to within 20% of its actual value. If you fail this check by 5 or more, the price is wildly inaccurate, subject to GM discretion. Particularly rare or exotic items might increase the DC of this check by 5 or more.
@@ -1037,7 +1017,7 @@ The DC of the check depends on the conditions of the climb.
 
 Continued - Core Rulebook, pg. 90</description>
                 </skill>
-                <skill name="Craft (Alchemy)" ranks="10" attrbonus="9" attrname="Intelligence" value="22" classskill="yes" tools="uses">
+                <skill name="Craft (alchemy)" ranks="10" attrbonus="9" attrname="Intelligence" value="22" classskill="yes" tools="uses">
                     <description>You are skilled in the creation of a specific group of items, such as armor or weapons. Like Knowledge, Perform, and Profession, Craft is actually a number of separate skills. You could have several Craft skills, each with its own ranks. The most common Craft skills are alchemy, armor, baskets, books, bows, calligraphy, carpentry, cloth, clothing, glass, jewelry, leather, locks, paintings, pottery, sculptures, ships, shoes, stonemasonry, traps, and weapons.
 
 A Craft skill is specifically focused on creating something. If nothing is created by the endeavor, it probably falls under the heading of a Profession skill.
@@ -1136,7 +1116,7 @@ Demoralize: You can use this skill to cause an opponent to become shaken for a n
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Arcana)" ranks="0" attrbonus="9" attrname="Intelligence" value="9" classskill="yes" trainedonly="yes" usable="no">
+                <skill name="Knowledge (arcana)" ranks="20" attrbonus="9" attrname="Intelligence" value="32" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -1151,7 +1131,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Dungeoneering)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (dungeoneering)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -1166,7 +1146,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Engineering)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (engineering)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -1181,7 +1161,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Geography)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (geography)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -1196,7 +1176,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (History)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (history)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -1211,7 +1191,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Local)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (local)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -1226,7 +1206,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Nature)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (nature)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -1241,7 +1221,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Nobility)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (nobility)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -1256,7 +1236,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Planes)" ranks="15" attrbonus="9" attrname="Intelligence" value="27" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (planes)" ranks="15" attrbonus="9" attrname="Intelligence" value="27" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -1271,7 +1251,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Religion)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (religion)" ranks="5" attrbonus="9" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -1304,7 +1284,7 @@ Perception is also used to notice fine details in the environment. The DC to not
 
 Continued - Core Rulebook, pg. 102.</description>
                 </skill>
-                <skill name="Perform (Dance)" ranks="10" attrbonus="1" attrname="Charisma" value="11">
+                <skill name="Perform (dance)" ranks="10" attrbonus="1" attrname="Charisma" value="11">
                     <description>You are skilled at one form of entertainment, from singing to acting to playing an instrument. Like Craft, Knowledge, and Profession, Perform is actually a number of separate skills. You could have several Perform skills, each with its own ranks.
 
 Each of the nine categories of the Perform skill includes a variety of methods, instruments, or techniques, a small sample of which is provided for each category below.
@@ -1371,7 +1351,7 @@ When you use this skill under close observation, your skill check is opposed by 
 
 Continued - Core Rulebook, pg. 104.</description>
                 </skill>
-                <skill name="Spellcraft" ranks="0" attrbonus="9" attrname="Intelligence" value="9" classskill="yes" trainedonly="yes" usable="no">
+                <skill name="Spellcraft" ranks="20" attrbonus="9" attrname="Intelligence" value="32" classskill="yes" trainedonly="yes">
                     <description>You are skilled at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast.
 
 Check: Spellcraft is used whenever your knowledge and skill of the technical art of casting a spell or crafting a magic item comes into question. This skill is also used to identify the properties of magic items in your possession through the use of spells such as detect magic and identify. The DC of this check varies depending upon the task at hand.
@@ -1548,22 +1528,12 @@ Normal: When using a weapon with which you are not proficient, you are at -4 to 
             <animaltricks></animaltricks>
             <attack attackbonus="+10/+5" meleeattack="+9/+4" rangedattack="+13/+8" baseattack="+10"></attack>
             <melee>
-                <weapon name="+2 Quarterstaff" categorytext="Double Weapon, Melee Weapon" typetext="B" attack="+11/+6" damage="1d6+1" crit="20/x2" equipped="bothhands" quantity="1">
+                <weapon name="+2 Quarterstaff" categorytext="Double Weapon, Melee Weapon" typetext="B" attack="+11/+6" damage="1d6+1" crit="x2" equipped="bothhands" quantity="1">
                     <weight text="4 lbs" value="4"></weight>
                     <cost text="8600 GP" value="8600"></cost>
                     <description>A quarterstaff is a simple piece of wood, about 5 feet in length.</description>
                     <wepcategory>Double Weapon</wepcategory>
                     <wepcategory>Melee Weapon</wepcategory>
-                    <weptype>Bludgeoning</weptype>
-                </weapon>
-                <weapon name="Unarmed Strike" categorytext="Melee Weapon, Unarmed Attack" typetext="B" attack="+9/+4" damage="1d3-1" crit="20/x2" useradded="no" quantity="1">
-                    <weight text="" value="0"></weight>
-                    <cost text="" value="0"></cost>
-                    <description>A Medium character deals 1d3 points of nonlethal damage with an unarmed strike. A Small character deals 1d2 points of nonlethal damage. A monk or any character with the Improved Unarmed Strike feat can deal lethal or nonlethal damage with unarmed strikes, at his discretion. The damage from an unarmed strike is considered weapon damage for the purposes of effects that give you a bonus on weapon damage rolls.
-
-An unarmed strike is always considered a light weapon. Therefore, you can use the Weapon Finesse feat to apply your Dexterity modifier instead of your Strength modifier to attack rolls with an unarmed strike. Unarmed strikes do not count as natural weapons (see Chapter 8).</description>
-                    <wepcategory>Melee Weapon</wepcategory>
-                    <wepcategory>Unarmed Attack</wepcategory>
                     <weptype>Bludgeoning</weptype>
                 </weapon>
             </melee>
@@ -1607,7 +1577,7 @@ Moderate conjuration; CL 7th; Craft Wondrous Item, mage armor, creator's caster 
 Faint abjuration; CL 5th; Craft Wondrous Item, resistance, creator's caster level must be at least three times the cloak's bonus; Price 25,000 gp; Weight 1 lb.</description>
                     <itemslot>Shoulders</itemslot>
                 </item>
-                <item name="Headband of Vast Intelligence, +6: Appraise, Knowledge (Arcana)" quantity="1">
+                <item name="Headband of Vast Intelligence, +6 (Appraise, Knowledge [arcana])" quantity="1">
                     <weight text="1 lb" value="1"></weight>
                     <cost text="36000 GP" value="36000"></cost>
                     <description>This intricate gold headband has a small blue gem set so that it rests upon the forehead of the wearer.  The headband grants an enhancement bonus to Intelligence of +2, +4, or +6.  A Headband of Vast Intelligence has one skill associated with it per +2 bonus it grants.  After being worn for 24 hours, it grants a number of skill ranks in those skills equal to the wearer's total HD.  These ranks do not stack with the ranks a creature already possesses.  These skills are chosen when the headband is created.
@@ -1689,7 +1659,7 @@ Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level
             </gear>
             <spelllike></spelllike>
             <trackedresources>
-                <trackedresource name="Bonded Object: +2 Quarterstaff (1/day) (Sp)" text="0/1" used="0" left="1" min="0" max="1"></trackedresource>
+                <trackedresource name="Bonded Object (+2 Quarterstaff) (1/day) (Sp)" text="0/1" used="0" left="1" min="0" max="1"></trackedresource>
                 <trackedresource name="Hand of the Apprentice (12/day) (Su)" text="0/12" used="0" left="12" min="0" max="12"></trackedresource>
                 <trackedresource name="Metamagic Gem, Empowering Topaz" text="0/2" used="0" left="2" min="0" max="2"></trackedresource>
                 <trackedresource name="Metamagic Gem, Maximizing Sapphire" text="0/1" used="0" left="1" min="0" max="1"></trackedresource>
@@ -1698,7 +1668,7 @@ Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level
                 <trackedresource name="Metamagic Mastery (7/day) (Su)" text="0/7" used="0" left="7" min="0" max="7"></trackedresource>
             </trackedresources>
             <otherspecials>
-                <special name="Bonded Object: +2 Quarterstaff (1/day) (Sp)" shortname="Bonded Object (+2 Quarterstaff) (1/day)" type="Spell-Like Ability" sourcetext="Wizard">
+                <special name="Bonded Object (+2 Quarterstaff) (1/day) (Sp)" shortname="Bonded Object (+2 Quarterstaff) (1/day)" type="Spell-Like Ability" sourcetext="Wizard">
                     <description>Wizards who select a bonded object begin play with one at no cost. Objects that are the subject of an arcane bond must fall into one of the following categories: amulet, ring, staff, wand, or weapon. These objects are always masterwork quality. Weapons acquired at 1st level are not made of any special material. If the object is an amulet or ring, it must be worn to have effect, while staves, wands, and weapons must be wielded. If a wizard attempts to cast a spell without his bonded object worn or in hand, he must make a concentration check or lose the spell. The DC for this check is equal to 20 + the spell's level. If the object is a ring or amulet, it occupies the ring or neck slot accordingly.
 
 A bonded object can be used once per day to cast any one spell that the wizard has in his spellbook and is capable of casting, even if the spell is not prepared. This spell is treated like any other spell cast by the wizard, including casting time, duration, and other effects dependent on the wizard's level. This spell cannot be modified by metamagic feats or other abilities. The bonded object cannot be used to cast spells from the wizard's opposition schools (see arcane school).
@@ -2051,7 +2021,7 @@ All of the hasted creature's modes of movement (including land movement, burrow,
                     <spellschool>Illusion</spellschool>
                     <spellsubschool>Glamer</spellsubschool>
                 </spell>
-                <spell name="Mage's Lucubration" level="6" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="Instantaneous" save="DC 25 " resist="" dc="25" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Transmutation, Void Elemental" subschooltext="" descriptortext="" castsleft="1">
+                <spell name="Mage's Lucubration" level="6" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="Instantaneous" save="" resist="" dc="25" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Transmutation, Void Elemental" subschooltext="" descriptortext="" castsleft="1">
                     <description>You instantly prepare any one spell of 5th level or lower that you have used during the past 24 hours. The spell must have been actually cast during that period. The chosen spell is stored in your mind as through prepared in the normal fashion. If the recalled spell requires material components, you must provide them. The recovered spell is not usable until the material components are available.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellcomp>Somatic</spellcomp>
@@ -2197,7 +2167,7 @@ Prismatic wall can be made permanent with a permanency spell.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Necromancy</spellschool>
                 </spell>
-                <spell name="Read Magic" level="0" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="DC 19 " resist="" dc="19" casterlevel="20" componenttext="Verbal, Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" unlimited="yes">
+                <spell name="Read Magic" level="0" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="" resist="" dc="19" casterlevel="20" componenttext="Verbal, Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" unlimited="yes">
                     <description>You can decipher magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be unintelligible. This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed or trapped scroll. Furthermore, once the spell is cast and you have read the magical inscription, you are thereafter able to read that particular writing without recourse to the use of read magic. You can read at the rate of one page (250 words) per minute. The spell allows you to identify a glyph of warding with a DC 13 Spellcraft check, a greater glyph of warding with a DC 16 Spellcraft check, or any symbol spell with a Spellcraft check (DC 10 + spell level).
 
 Read magic can be made permanent with a permanency spell.</description>
@@ -2237,7 +2207,7 @@ Read magic can be made permanent with a permanency spell.</description>
                     <spellschool>Fire Elemental</spellschool>
                     <spelldescript>Fire</spelldescript>
                 </spell>
-                <spell name="Shield" level="1" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 min./level (D)" save="DC 20 " resist="" dc="20" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Abjuration, Void Elemental" subschooltext="" descriptortext="Force" castsleft="1">
+                <spell name="Shield" level="1" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 min./level (D)" save="" resist="" dc="20" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Abjuration, Void Elemental" subschooltext="" descriptortext="Force" castsleft="1">
                     <description>Shield creates an invisible shield of force that hovers in front of you. It negates magic missile attacks directed at you. The disk also provides a +4 shield bonus to AC. This bonus applies against incorporeal touch attacks, since it is a force effect. The shield has no armor check penalty or arcane spell failure chance.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellcomp>Somatic</spellcomp>
@@ -2301,13 +2271,13 @@ False destination - - - - - 81-92 - 93-100</description>
                     <spellschool>Void Elemental</spellschool>
                     <spellsubschool>Teleport</spellsubschool>
                 </spell>
-                <spell name="Time Stop" level="9" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1d4+1 rounds (apparent time); see text" save="DC 28 " resist="" dc="28" casterlevel="20" componenttext="Verbal" schooltext="Transmutation, Void Elemental" subschooltext="" descriptortext="" castsleft="1">
+                <spell name="Time Stop" level="9" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1d4+1 rounds (apparent time); see text" save="" resist="" dc="28" casterlevel="20" componenttext="Verbal" schooltext="Transmutation, Void Elemental" subschooltext="" descriptortext="" castsleft="1">
                     <description>This spell seems to make time cease to flow for everyone but you. In fact, you speed up so greatly that all other creatures seem frozen, though they are actually still moving at their normal speeds. You are free to act for 1d4+1 rounds of apparent time. Normal and magical fire, cold, gas, and the like can still harm you. While the time stop is in effect, other creatures are invulnerable to your attacks and spells; you cannot target such creatures with any attack or spell. A spell that affects an area and has a duration longer than the remaining duration of the time stop have their normal effects on other creatures once the time stop ends. Most spellcasters use the additional time to improve their defenses, summon allies, or flee from combat. You cannot move or harm items held, carried, or worn by a creature stuck in normal time, but you can affect any item that is not in another creature's possession. You are undetectable while time stop lasts. You cannot enter an area protected by an antimagic field while under the effect of time stop.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellschool>Transmutation</spellschool>
                     <spellschool>Void Elemental</spellschool>
                 </spell>
-                <spell name="True Strike" level="1" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="See text" save="DC 20 " resist="" dc="20" casterlevel="20" componenttext="Verbal, Focus" schooltext="Divination, Void Elemental" subschooltext="" descriptortext="" castsleft="1">
+                <spell name="True Strike" level="1" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="See text" save="" resist="" dc="20" casterlevel="20" componenttext="Verbal, Focus" schooltext="Divination, Void Elemental" subschooltext="" descriptortext="" castsleft="1">
                     <description>You gain temporary, intuitive insight into the immediate future during your next attack. Your next single attack roll (if it is made before the end of the next round) gains a +20 insight bonus. Additionally, you are not affected by the miss chance that applies to attackers trying to strike a concealed target.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellcomp>Focus</spellcomp>
@@ -2638,7 +2608,7 @@ Light can be used to counter or dispel any darkness spell of equal or lower spel
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Transmutation</spellschool>
                 </spell>
-                <spell name="Mage's Lucubration" level="6" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="Instantaneous" save="DC 25 " resist="" dc="25" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Transmutation, Void Elemental" subschooltext="" descriptortext="" castsleft="0">
+                <spell name="Mage's Lucubration" level="6" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="Instantaneous" save="" resist="" dc="25" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Transmutation, Void Elemental" subschooltext="" descriptortext="" castsleft="0">
                     <description>You instantly prepare any one spell of 5th level or lower that you have used during the past 24 hours. The spell must have been actually cast during that period. The chosen spell is stored in your mind as through prepared in the normal fashion. If the recalled spell requires material components, you must provide them. The recovered spell is not usable until the material components are available.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellcomp>Somatic</spellcomp>
@@ -2652,7 +2622,7 @@ Light can be used to counter or dispel any darkness spell of equal or lower spel
                     <spellschool>Evocation</spellschool>
                     <spelldescript>Force</spelldescript>
                 </spell>
-                <spell name="Mending" level="0" class="Wizard" casttime="10 minutes" range="10 ft." target="One object of up to 1 lb./level" area="" effect="" duration="Instantaneous" save="DC 19 Will negates (harmless, object)" resist="Yes (harmless, object)" dc="19" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Transmutation, Metal Elemental" subschooltext="" descriptortext="" useradded="no" castsleft="0">
+                <spell name="Mending" level="0" class="Wizard" casttime="10 minutes" range="10 ft." target="One object of up to 1 lb./level" area="" effect="" duration="Instantaneous" save="Will negates (harmless, object)" resist="Yes (harmless, object)" dc="19" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Transmutation, Metal Elemental" subschooltext="" descriptortext="" useradded="no" castsleft="0">
                     <description>This spell repairs damaged objects, restoring 1d4 hit points to the object. If the object has the broken condition, this condition is removed if the object is restored to at least half its original hit points. All of the pieces of an object must be present for this spell to function. Magic items can be repaired by this spell, but you must have a caster level equal to or higher than that of the object. Magic items that are destroyed (at 0 hit points or less) can be repaired with this spell, but this spell does not restore their magic abilities. This spell does not affect creatures (including constructs). This spell has no effect on objects that have been warped or otherwise transmuted, but it can still repair damage done to such items.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellcomp>Somatic</spellcomp>
@@ -2751,7 +2721,7 @@ Prismatic wall can be made permanent with a permanency spell.</description>
                     <spellschool>Water Elemental</spellschool>
                     <spelldescript>Cold</spelldescript>
                 </spell>
-                <spell name="Read Magic" level="0" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="DC 19 " resist="" dc="19" casterlevel="20" componenttext="Verbal, Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" useradded="no" castsleft="0">
+                <spell name="Read Magic" level="0" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="" resist="" dc="19" casterlevel="20" componenttext="Verbal, Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" useradded="no" castsleft="0">
                     <description>You can decipher magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be unintelligible. This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed or trapped scroll. Furthermore, once the spell is cast and you have read the magical inscription, you are thereafter able to read that particular writing without recourse to the use of read magic. You can read at the rate of one page (250 words) per minute. The spell allows you to identify a glyph of warding with a DC 13 Spellcraft check, a greater glyph of warding with a DC 16 Spellcraft check, or any symbol spell with a Spellcraft check (DC 10 + spell level).
 
 Read magic can be made permanent with a permanency spell.</description>
@@ -2792,7 +2762,7 @@ Resistance can be made permanent with a permanency spell.</description>
                     <spellschool>Fire Elemental</spellschool>
                     <spelldescript>Fire</spelldescript>
                 </spell>
-                <spell name="Shield" level="1" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 min./level (D)" save="DC 20 " resist="" dc="20" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Abjuration, Void Elemental" subschooltext="" descriptortext="Force" castsleft="0">
+                <spell name="Shield" level="1" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 min./level (D)" save="" resist="" dc="20" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Abjuration, Void Elemental" subschooltext="" descriptortext="Force" castsleft="0">
                     <description>Shield creates an invisible shield of force that hovers in front of you. It negates magic missile attacks directed at you. The disk also provides a +4 shield bonus to AC. This bonus applies against incorporeal touch attacks, since it is a force effect. The shield has no armor check penalty or arcane spell failure chance.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellcomp>Somatic</spellcomp>
@@ -2838,7 +2808,7 @@ False destination - - - - - 81-92 - 93-100</description>
                     <spellschool>Void Elemental</spellschool>
                     <spellsubschool>Teleport</spellsubschool>
                 </spell>
-                <spell name="Time Stop" level="9" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1d4+1 rounds (apparent time); see text" save="DC 28 " resist="" dc="28" casterlevel="20" componenttext="Verbal" schooltext="Transmutation, Void Elemental" subschooltext="" descriptortext="" castsleft="0">
+                <spell name="Time Stop" level="9" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1d4+1 rounds (apparent time); see text" save="" resist="" dc="28" casterlevel="20" componenttext="Verbal" schooltext="Transmutation, Void Elemental" subschooltext="" descriptortext="" castsleft="0">
                     <description>This spell seems to make time cease to flow for everyone but you. In fact, you speed up so greatly that all other creatures seem frozen, though they are actually still moving at their normal speeds. You are free to act for 1d4+1 rounds of apparent time. Normal and magical fire, cold, gas, and the like can still harm you. While the time stop is in effect, other creatures are invulnerable to your attacks and spells; you cannot target such creatures with any attack or spell. A spell that affects an area and has a duration longer than the remaining duration of the time stop have their normal effects on other creatures once the time stop ends. Most spellcasters use the additional time to improve their defenses, summon allies, or flee from combat. You cannot move or harm items held, carried, or worn by a creature stuck in normal time, but you can affect any item that is not in another creature's possession. You are undetectable while time stop lasts. You cannot enter an area protected by an antimagic field while under the effect of time stop.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellschool>Transmutation</spellschool>
@@ -2853,7 +2823,7 @@ This spell has no effect on a creature that is already fatigued. Unlike with nor
                     <spellcomp>Material</spellcomp>
                     <spellschool>Necromancy</spellschool>
                 </spell>
-                <spell name="True Strike" level="1" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="See text" save="DC 20 " resist="" dc="20" casterlevel="20" componenttext="Verbal, Focus" schooltext="Divination, Void Elemental" subschooltext="" descriptortext="" castsleft="0">
+                <spell name="True Strike" level="1" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="See text" save="" resist="" dc="20" casterlevel="20" componenttext="Verbal, Focus" schooltext="Divination, Void Elemental" subschooltext="" descriptortext="" castsleft="0">
                     <description>You gain temporary, intuitive insight into the immediate future during your next attack. Your next single attack roll (if it is made before the end of the next round) gains a +20 insight bonus. Additionally, you are not affected by the miss chance that applies to attackers trying to strike a concealed target.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellcomp>Focus</spellcomp>
@@ -2903,7 +2873,7 @@ Wall of force can be made permanent with a permanency spell.</description>
                 <validmessage>Error: Kelish: Language may not be taken as starting language.</validmessage>
                 <validmessage>Error: Tien: Language may not be taken as starting language.</validmessage>
             </validation>
-            <settings summary="Advanced Player's Guide: Advanced Player's Guide, Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Pirates of the Inner Sea; Campaign Setting: Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited, Rival Guide; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
+            <settings summary="Advanced Player's Guide: Advanced Player's Guide, Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Pirates of the Inner Sea, Varisia, Birthplace of Legends; Campaign Setting: Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited, Rival Guide; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
             <npc>
                 <description></description>
                 <basics></basics>
@@ -2913,7 +2883,7 @@ Wall of force can be made permanent with a permanency spell.</description>
             </npc>
             <minions></minions>
         </character>
-        <character active="yes" nature="normal" role="npc" relationship="ally" type="Hero" name="Inaris Jerveel" playername="">
+        <character nature="normal" role="npc" relationship="ally" type="Hero" name="Inaris Jerveel" playername="">
             <race racetext="Human" name="Human" ethnicity=""></race>
             <alignment name="Chaotic Neutral"></alignment>
             <templates summary=""></templates>
@@ -2938,7 +2908,7 @@ Wall of force can be made permanent with a permanency spell.</description>
             <favoredclasses></favoredclasses>
             <health hitdice="20d8+20" hitpoints="133" damage="0" nonlethal="0" currenthp="133"></health>
             <xp total="0"></xp>
-            <money total="0" pp="0" gp="1884" sp="0" cp="0" valuables="3000"></money>
+            <money total="0" pp="0" gp="1900" sp="0" cp="0" valuables="3000"></money>
             <personal gender="Female" age="18" hair="" eyes="" skin="">
                 <description>Inaris trained as a priestess of Gorum from the time that she was 12 years old. Always a bully as a child, she eventually decided it was better to focus those energies and efforts against worthy foes. She often starts fights with others out of no other provocation than boredom.
 </description>
@@ -2986,7 +2956,7 @@ Wall of force can be made permanent with a permanency spell.</description>
             <weaknesses></weaknesses>
             <armorclass ac="28" touch="14" flatfooted="27" fromarmor="+14" fromshield="" fromdexterity="+1" fromsize="" fromnatural="" fromdeflect="+3" fromdodge="" frommisc=""></armorclass>
             <penalties>
-                <penalty name="Armor Check Penalty" text="-6" value="-6"></penalty>
+                <penalty name="Armor Check Penalty" text="-5" value="-5"></penalty>
                 <penalty name="Max Dex Bonus" text="1" value="1"></penalty>
             </penalties>
             <maneuvers cmb="+17" cmd="31" cmdflatfooted="30">
@@ -3005,9 +2975,9 @@ Wall of force can be made permanent with a permanency spell.</description>
                 <speed text="20'" value="20"></speed>
                 <basespeed text="30'" value="30"></basespeed>
             </movement>
-            <encumbrance carried="119.68" encumstr="14" light="58" medium="116" heavy="175" level="Heavy Load"></encumbrance>
+            <encumbrance carried="100" encumstr="14" light="58" medium="116" heavy="175" level="Medium Load"></encumbrance>
             <skills>
-                <skill name="Acrobatics" ranks="0" attrbonus="1" attrname="Dexterity" value="-5" armorcheck="yes">
+                <skill name="Acrobatics" ranks="0" attrbonus="1" attrname="Dexterity" value="-4" armorcheck="yes">
                     <description>You can keep your balance while traversing narrow or treacherous surfaces. You can also dive, flip, jump, and roll to avoid attacks and overcome obstacles.
 
 Check: You can use Acrobatics to move on narrow surfaces and uneven ground without falling. A successful check allows you to move at half speed across such surfaces - only one check is needed per round. Use the following table to determine the base DC, which is then modified by the Acrobatics skill modifiers noted on page 89. While you are using Acrobatics in this way, you are considered flat-footed and lose your Dexterity bonus to your AC (if any). If you take damage while using Acrobatics, you must immediately make another Acrobatics check at the same DC to avoid falling or being knocked prone.
@@ -3045,7 +3015,7 @@ Feint: You can use Bluff to feint in combat, causing your opponent to be denied 
 
 Continued - Core Rulebook, pg. 90</description>
                 </skill>
-                <skill name="Climb" ranks="0" attrbonus="2" attrname="Strength" value="-4" armorcheck="yes" tools="uses">
+                <skill name="Climb" ranks="0" attrbonus="2" attrname="Strength" value="-3" armorcheck="yes" tools="uses">
                     <description>You are skilled at scaling vertical surfaces, from smooth city walls to rocky cliffs.
 
 Check: With a successful Climb check, you can advance up, down, or across a slope, wall, or other steep incline (or even across a ceiling, provided it has handholds) at one-quarter your normal speed. A slope is considered to be any incline at an angle measuring less than 60 degrees; a wall is any incline at an angle measuring 60 degrees or more.
@@ -3063,7 +3033,7 @@ Check: You can change the initial attitudes of nonplayer characters with a succe
 
 Continued - Core Rulebook, pg. 93.</description>
                 </skill>
-                <skill name="Disable Device" ranks="0" attrbonus="1" attrname="Dexterity" value="-7" armorcheck="yes" trainedonly="yes" usable="no" tools="needs">
+                <skill name="Disable Device" ranks="0" attrbonus="1" attrname="Dexterity" value="-6" armorcheck="yes" trainedonly="yes" usable="no" tools="needs">
                     <description>You are skilled at disarming traps and opening locks. In addition, this skill lets you sabotage simple mechanical devices, such as catapults, wagon wheels, and doors.
 
 Check: When disarming a trap or other device, the Disable Device check is made secretly, so that you don't necessarily know whether you've succeeded.
@@ -3085,7 +3055,7 @@ The effectiveness of your disguise depends on how much you're changing your appe
 
 Continued - Core Rulebook, pg. 95.</description>
                 </skill>
-                <skill name="Escape Artist" ranks="0" attrbonus="1" attrname="Dexterity" value="-5" armorcheck="yes">
+                <skill name="Escape Artist" ranks="0" attrbonus="1" attrname="Dexterity" value="-4" armorcheck="yes">
                     <description>Your training allows you to slip out of bonds and escape from grapples.
 
 Check: The table below gives the DCs needed to escape various forms of restraints.
@@ -3096,7 +3066,7 @@ Grappler: You can make an Escape Artist check in place of a combat maneuver chec
 
 Continued - Core Rulebook, pg. 95.</description>
                 </skill>
-                <skill name="Fly" ranks="0" attrbonus="1" attrname="Dexterity" value="-5" armorcheck="yes">
+                <skill name="Fly" ranks="0" attrbonus="1" attrname="Dexterity" value="-4" armorcheck="yes">
                     <description>You are skilled at flying, through either the use of wings or magic, and can perform daring or complex maneuvers while airborne. Note that this skill does not give you the ability to fly.
 
 Check: You generally need only make a Fly check when you are attempting a complex maneuver. Without making a check, a flying creature can remain flying at the end of its turn so long as it moves a distance greater than half its speed. It can also turn up to 45 degrees by sacrificing 5 feet of movement, can rise at half speed at an angle of 45 degrees, and can descend at any angle at normal speed. Note that these restrictions only apply to movement taken during your current turn. At the beginning of the next turn, you can move in a different direction than you did the previous turn without making a check. Taking any action that violates these rules requires a Fly check.
@@ -3146,7 +3116,7 @@ Demoralize: You can use this skill to cause an opponent to become shaken for a n
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (History)" ranks="5" attrbonus="-1" attrname="Intelligence" value="7" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (history)" ranks="5" attrbonus="-1" attrname="Intelligence" value="7" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -3161,7 +3131,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Nobility)" ranks="2" attrbonus="-1" attrname="Intelligence" value="4" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (nobility)" ranks="2" attrbonus="-1" attrname="Intelligence" value="4" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -3176,7 +3146,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Planes)" ranks="4" attrbonus="-1" attrname="Intelligence" value="6" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (planes)" ranks="4" attrbonus="-1" attrname="Intelligence" value="6" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -3191,7 +3161,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Religion)" ranks="15" attrbonus="-1" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
+                <skill name="Knowledge (religion)" ranks="15" attrbonus="-1" attrname="Intelligence" value="17" classskill="yes" trainedonly="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -3224,7 +3194,7 @@ Perception is also used to notice fine details in the environment. The DC to not
 
 Continued - Core Rulebook, pg. 102.</description>
                 </skill>
-                <skill name="Ride" ranks="0" attrbonus="1" attrname="Dexterity" value="-5" armorcheck="yes">
+                <skill name="Ride" ranks="0" attrbonus="1" attrname="Dexterity" value="-4" armorcheck="yes">
                     <description>You are skilled at riding mounts, usually a horse, but possibly something more exotic, like a griffon or pegasus. If you attempt to ride a creature that is ill suited as a mount, you take a -5 penalty on your Ride checks.
 
 Check: Typical riding actions don't require checks. You can saddle, mount, ride, and dismount from a mount without a problem. The following tasks do require checks.
@@ -3264,7 +3234,7 @@ Sense Enchantment: You can tell that someone's behavior is being influenced by a
 
 Continued - Core Rulebook, pg. 104.</description>
                 </skill>
-                <skill name="Sleight of Hand" ranks="0" attrbonus="1" attrname="Dexterity" value="-5" armorcheck="yes" trainedonly="yes" usable="no">
+                <skill name="Sleight of Hand" ranks="0" attrbonus="1" attrname="Dexterity" value="-4" armorcheck="yes" trainedonly="yes" usable="no">
                     <description>Your training allows you to pick pockets, draw hidden weapons, and take a variety of actions without being noticed.
 
 Check: A DC 10 Sleight of Hand check lets you palm a coin-sized, unattended object. Performing a minor feat of legerdemain, such as making a coin disappear, also has a DC of 10 unless an observer is determined to note where the item went.
@@ -3282,7 +3252,7 @@ Action: Identifying a spell as it is being cast requires no action, but you must
 
 Continued - Core Rulebook, pg. 106.</description>
                 </skill>
-                <skill name="Stealth" ranks="0" attrbonus="1" attrname="Dexterity" value="-5" armorcheck="yes">
+                <skill name="Stealth" ranks="0" attrbonus="1" attrname="Dexterity" value="-4" armorcheck="yes">
                     <description>You are skilled at avoiding detection, allowing you to slip past foes or strike from an unseen position. This skill covers hiding and moving silently.
 
 Check: Your Stealth check is opposed by the Perception check of anyone who might notice you. You can move up to half your normal speed and use Stealth at no penalty. When moving at a speed greater than half but less than your normal speed, you take a -5 penalty. It's impossible to use Stealth while attacking, running, or charging.
@@ -3306,7 +3276,7 @@ Survival DC: Task
 
 Continued - Core Rulebook, pg. 107.</description>
                 </skill>
-                <skill name="Swim" ranks="0" attrbonus="2" attrname="Strength" value="-4" armorcheck="yes">
+                <skill name="Swim" ranks="0" attrbonus="2" attrname="Strength" value="-3" armorcheck="yes">
                     <description>You know how to swim and can do so even in stormy water.
 
 Check: Make a Swim check once per round while you are in the water. Success means you may swim at up to half your speed (as a full-round action) or at a quarter of your speed (as a move action). If you fail by 4 or less, you make no progress. If you fail by 5 or more, you go underwater.
@@ -3361,6 +3331,11 @@ Benefit: As a standard action, you can make a single attack at your full base at
 Addition from Great Cleave: You may use Cleave against any number of opponents per round.</description>
                     <featcategory>Combat</featcategory>
                 </feat>
+                <feat name="Combat Casting" categorytext="">
+                    <description>You are adept at spellcasting when threatened or distracted.
+
+Benefit: You get a +4 bonus on concentration checks made to cast a spell or use a spell-like ability when casting on the defensive or while grappled.</description>
+                </feat>
                 <feat name="Extra Channel" categorytext="">
                     <description>You can channel divine energy more often.
 
@@ -3385,7 +3360,7 @@ Benefit: As a standard action, you can make a single attack at your full base at
 
 Benefit: You get a +2 bonus on all Fortitude saving throws.</description>
                 </feat>
-                <feat name="Improved Critical: Greatsword" categorytext="Combat">
+                <feat name="Improved Critical (Greatsword)" categorytext="Combat">
                     <description>Attacks made with your chosen weapon are quite deadly.
 
 Prerequisite: Proficient with weapon, base attack bonus +8.
@@ -3406,18 +3381,6 @@ Benefit: You get a +2 bonus on all Will saving throws.</description>
                     <description>You have faster reflexes than normal.
 
 Benefit: You get a +2 bonus on all Reflex saving throws.</description>
-                </feat>
-                <feat name="Martial Weapon Proficiency: Glaive" categorytext="Combat">
-                    <description>Choose a type of martial weapon. You understand how to use that type of martial weapon in combat.
-
-Benefit: You make attack rolls with the selected weapon normally (without the non-proficient penalty).
-
-Normal: When using a weapon with which you are not proficient, you take a &#8211;4 penalty on attack rolls.
-
-Special: Barbarians, fighters, paladins, and rangers are proficient with all martial weapons. They need not select this feat.
-
-You can gain Martial Weapon Proficiency multiple times. Each time you take the feat, it applies to a new type of weapon.</description>
-                    <featcategory>Combat</featcategory>
                 </feat>
                 <feat name="Power Attack -4/+8" categorytext="Combat">
                     <description>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.
@@ -3461,7 +3424,7 @@ Normal: When using a weapon with which you are not proficient, you take a &#8211
 Special: All characters except for druids, monks, and wizards are automatically proficient with all simple weapons. They need not select this feat.</description>
                     <featcategory>Combat</featcategory>
                 </feat>
-                <feat name="Weapon Focus: Greatsword" categorytext="Combat">
+                <feat name="Weapon Focus (Greatsword)" categorytext="Combat">
                     <description>Choose one type of weapon. You can also choose unarmed strike or grapple (or ray, if you are a spellcaster) as your weapon for the purposes of this feat.
 
 Prerequisites: Proficiency with selected weapon, base attack bonus +1.
@@ -3493,42 +3456,6 @@ Special: You can gain this feat multiple times. Its effects do not stack. Each t
                     <description>This immense two-handed sword is about 5 feet in length.</description>
                     <wepcategory>Melee Weapon</wepcategory>
                     <weptype>Slashing</weptype>
-                </weapon>
-                <weapon name="Gauntlet (from Armor)" categorytext="Melee Weapon, Unarmed Attack" typetext="B" attack="+12/+7/+2" damage="1d3+2" crit="20/x2" useradded="no" quantity="1">
-                    <weight text="1 lb" value="1"></weight>
-                    <cost text="" value="0"></cost>
-                    <description>(One or more of the pieces of armor you have available includes Gauntlets.)
-
-This metal glove lets you deal lethal damage rather than nonlethal damage with unarmed strikes. A strike with a gauntlet is otherwise considered an unarmed attack. The cost and weight given are for a single gauntlet. Medium and heavy armors (except breastplate) come with gauntlets. Your opponent cannot use a disarm action to disarm you of gauntlets.</description>
-                    <wepcategory>Melee Weapon</wepcategory>
-                    <wepcategory>Unarmed Attack</wepcategory>
-                    <weptype>Bludgeoning</weptype>
-                </weapon>
-                <weapon name="Glaive" categorytext="Melee Weapon, Reach Weapon" typetext="S" attack="+12/+7/+2" damage="1d10+3" crit="20/x3" equipped="offhand" quantity="1">
-                    <weight text="10 lbs" value="10"></weight>
-                    <cost text="8 GP" value="8"></cost>
-                    <description>A glaive is a simple blade, mounted to the end of a pole about 7 feet in length.</description>
-                    <wepcategory>Melee Weapon</wepcategory>
-                    <wepcategory>Reach Weapon</wepcategory>
-                    <weptype>Slashing</weptype>
-                </weapon>
-                <weapon name="Glaive" categorytext="Melee Weapon, Reach Weapon" typetext="S" attack="+12/+7/+2" damage="1d10+3" crit="20/x3" quantity="1">
-                    <weight text="10 lbs" value="10"></weight>
-                    <cost text="8 GP" value="8"></cost>
-                    <description>A glaive is a simple blade, mounted to the end of a pole about 7 feet in length.</description>
-                    <wepcategory>Melee Weapon</wepcategory>
-                    <wepcategory>Reach Weapon</wepcategory>
-                    <weptype>Slashing</weptype>
-                </weapon>
-                <weapon name="Unarmed Strike" categorytext="Melee Weapon, Unarmed Attack" typetext="B" attack="+12/+7/+2" damage="1d3+2" crit="20/x2" useradded="no" quantity="1">
-                    <weight text="" value="0"></weight>
-                    <cost text="" value="0"></cost>
-                    <description>A Medium character deals 1d3 points of nonlethal damage with an unarmed strike. A Small character deals 1d2 points of nonlethal damage. A monk or any character with the Improved Unarmed Strike feat can deal lethal or nonlethal damage with unarmed strikes, at his discretion. The damage from an unarmed strike is considered weapon damage for the purposes of effects that give you a bonus on weapon damage rolls.
-
-An unarmed strike is always considered a light weapon. Therefore, you can use the Weapon Finesse feat to apply your Dexterity modifier instead of your Strength modifier to attack rolls with an unarmed strike. Unarmed strikes do not count as natural weapons (see Chapter 8).</description>
-                    <wepcategory>Melee Weapon</wepcategory>
-                    <wepcategory>Unarmed Attack</wepcategory>
-                    <weptype>Bludgeoning</weptype>
                 </weapon>
             </melee>
             <ranged></ranged>
@@ -3600,16 +3527,6 @@ Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level
                     <weight text="" value="0"></weight>
                     <cost text="3000 GP" value="3000"></cost>
                     <description>This item can be customized to represent valuable items you have, like gems, jewelry, artwork, etc. The total value of all of these items will be reported with the character's cash.</description>
-                </item>
-                <item name="Glaive" quantity="1">
-                    <weight text="10 lbs" value="10"></weight>
-                    <cost text="8 GP" value="8"></cost>
-                    <description>A glaive is a simple blade, mounted to the end of a pole about 7 feet in length.</description>
-                </item>
-                <item name="Glaive" quantity="1">
-                    <weight text="10 lbs" value="10"></weight>
-                    <cost text="8 GP" value="8"></cost>
-                    <description>A glaive is a simple blade, mounted to the end of a pole about 7 feet in length.</description>
                 </item>
                 <item name="golden bracelet (focus for sacred bond spell with Derrack)" quantity="1">
                     <weight text="1 lb" value="1"></weight>
@@ -3827,7 +3744,7 @@ Daylight counters or dispels any darkness spell of equal or lower level, such as
                     <spellschool>Evocation</spellschool>
                     <spelldescript>Light</spelldescript>
                 </spell>
-                <spell name="Death Ward" level="4" class="Cleric" casttime="1 action" range="Touch" target="Living creature touched" area="" effect="" duration="1 min./level" save="DC 23 Will negates (harmless)" resist="Yes (harmless)" dc="23" casterlevel="20" componenttext="Verbal, Somatic, Divine Focus" schooltext="Necromancy" subschooltext="" descriptortext="" castsleft="1">
+                <spell name="Death Ward" level="4" class="Cleric" casttime="1 action" range="Touch" target="Living creature touched" area="" effect="" duration="1 min./level" save="Will negates (harmless)" resist="Yes (harmless)" dc="23" casterlevel="20" componenttext="Verbal, Somatic, Divine Focus" schooltext="Necromancy" subschooltext="" descriptortext="" castsleft="1">
                     <description>The subject gains a +4 morale bonus on saves against all death spells and magical death effects. The subject is granted a save to negate such effects even if one is not normally allowed. The subject is immune to energy drain and any negative energy effects, including channeled negative energy. This spell does not remove negative levels that the subject has already gained, but it does remove the penalties from negative levels for the duration of its effect.
 
 Death ward does not protect against other sorts of attacks, even if those attacks might be lethal.</description>
@@ -3889,7 +3806,7 @@ Counterspell: This functions as dispel magic, but you receive a +4 bonus on your
                     <spellschool>Abjuration</spellschool>
                     <spellschool>Void Elemental</spellschool>
                 </spell>
-                <spell name="Divine Power" level="4" class="" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 round/level" save="DC 23 " resist="" dc="23" casterlevel="20" componenttext="Verbal, Somatic, Divine Focus" schooltext="Evocation" subschooltext="" descriptortext="" castsleft="1">
+                <spell name="Divine Power" level="4" class="" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 round/level" save="" resist="" dc="23" casterlevel="20" componenttext="Verbal, Somatic, Divine Focus" schooltext="Evocation" subschooltext="" descriptortext="" castsleft="1">
                     <description>Calling upon the divine power of your patron, you imbue yourself with strength and skill in combat. You gain a +1 luck bonus on attack rolls, weapon damage rolls, Strength checks, and Strength-based skill checks for every three caster levels you have (maximum +6). You also gain 1 temporary hit point per caster level. Whenever you make a full-attack action, you can make an additional attack at your full base attack bonus, plus any appropriate modifiers. This additional attack is not cumulative with similar effects, such as haste or weapons with the speed special ability.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellcomp>Somatic</spellcomp>
@@ -4060,7 +3977,7 @@ Heal does not remove negative levels or restore permanently drained ability scor
                     <spellcomp>Divine Focus</spellcomp>
                     <spellschool>Transmutation</spellschool>
                 </spell>
-                <spell name="Mending" level="0" class="Cleric" casttime="10 minutes" range="10 ft." target="One object of up to 1 lb./level" area="" effect="" duration="Instantaneous" save="DC 19 Will negates (harmless, object)" resist="Yes (harmless, object)" dc="19" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Transmutation, Metal Elemental" subschooltext="" descriptortext="" unlimited="yes">
+                <spell name="Mending" level="0" class="Cleric" casttime="10 minutes" range="10 ft." target="One object of up to 1 lb./level" area="" effect="" duration="Instantaneous" save="Will negates (harmless, object)" resist="Yes (harmless, object)" dc="19" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Transmutation, Metal Elemental" subschooltext="" descriptortext="" unlimited="yes">
                     <description>This spell repairs damaged objects, restoring 1d4 hit points to the object. If the object has the broken condition, this condition is removed if the object is restored to at least half its original hit points. All of the pieces of an object must be present for this spell to function. Magic items can be repaired by this spell, but you must have a caster level equal to or higher than that of the object. Magic items that are destroyed (at 0 hit points or less) can be repaired with this spell, but this spell does not restore their magic abilities. This spell does not affect creatures (including constructs). This spell has no effect on objects that have been warped or otherwise transmuted, but it can still repair damage done to such items.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellcomp>Somatic</spellcomp>
@@ -4188,7 +4105,7 @@ Restoration cures all temporary ability damage, and it restores all points perma
                     <spellschool>Evocation</spellschool>
                     <spelldescript>Force</spelldescript>
                 </spell>
-                <spell name="Stabilize" level="0" class="Cleric" casttime="1 action" range="Close (25 + 5 ft./2 levels)" target="One living creature" area="" effect="" duration="Instantaneous" save="DC 19 Will negates (harmless)" resist="Yes (harmless)" dc="19" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Conjuration" subschooltext="Healing" descriptortext="" unlimited="yes">
+                <spell name="Stabilize" level="0" class="Cleric" casttime="1 action" range="Close (25 + 5 ft./2 levels)" target="One living creature" area="" effect="" duration="Instantaneous" save="Will negates (harmless)" resist="Yes (harmless)" dc="19" casterlevel="20" componenttext="Verbal, Somatic" schooltext="Conjuration" subschooltext="Healing" descriptortext="" unlimited="yes">
                     <description>Upon casting this spell, you target a living creature that has -1 or fewer hit points. That creature is automatically stabilized and does not lose any further hit points. If the creature later takes damage, it continues dying normally.</description>
                     <spellcomp>Verbal</spellcomp>
                     <spellcomp>Somatic</spellcomp>
@@ -4279,12 +4196,10 @@ You can't cast this spell on a natural weapon, but you can cast it on an unarmed
             </journals>
             <images></images>
             <validation>
-                <report>+5 Greatsword: Too many weapons equipped in primary hand.; Glaive: Too many weapons equipped in primary hand.; Cleric: Memorize more spells!</report>
-                <validmessage>Error: +5 Greatsword: Too many weapons equipped in primary hand.</validmessage>
-                <validmessage>Error: Glaive: Too many weapons equipped in primary hand.</validmessage>
+                <report>Cleric: Memorize more spells!</report>
                 <validmessage>Error: Cleric: Memorize more spells!</validmessage>
             </validation>
-            <settings summary="Advanced Player's Guide: Advanced Player's Guide, Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Pirates of the Inner Sea; Campaign Setting: Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
+            <settings summary="Advanced Player's Guide: Advanced Player's Guide, Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Pirates of the Inner Sea, Varisia, Birthplace of Legends; Campaign Setting: Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
             <npc>
                 <description></description>
                 <basics></basics>
@@ -4488,7 +4403,7 @@ The DC of the check depends on the conditions of the climb.
 
 Continued - Core Rulebook, pg. 90</description>
                 </skill>
-                <skill name="Craft (Alchemy)" ranks="6" attrbonus="1" attrname="Intelligence" value="10" classskill="yes" tools="uses">
+                <skill name="Craft (alchemy)" ranks="6" attrbonus="1" attrname="Intelligence" value="10" classskill="yes" tools="uses">
                     <description>You are skilled in the creation of a specific group of items, such as armor or weapons. Like Knowledge, Perform, and Profession, Craft is actually a number of separate skills. You could have several Craft skills, each with its own ranks. The most common Craft skills are alchemy, armor, baskets, books, bows, calligraphy, carpentry, cloth, clothing, glass, jewelry, leather, locks, paintings, pottery, sculptures, ships, shoes, stonemasonry, traps, and weapons.
 
 A Craft skill is specifically focused on creating something. If nothing is created by the endeavor, it probably falls under the heading of a Profession skill.
@@ -4587,7 +4502,7 @@ Demoralize: You can use this skill to cause an opponent to become shaken for a n
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Arcana)" ranks="1" attrbonus="1" attrname="Intelligence" value="6" classskill="yes">
+                <skill name="Knowledge (arcana)" ranks="1" attrbonus="1" attrname="Intelligence" value="6" classskill="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -4602,7 +4517,7 @@ Check: Answering a question within your field of study has a DC of 10 (for reall
 
 Continued - Core Rulebook, pg. 99.</description>
                 </skill>
-                <skill name="Knowledge (Nature)" ranks="6" attrbonus="1" attrname="Intelligence" value="13" classskill="yes">
+                <skill name="Knowledge (nature)" ranks="6" attrbonus="1" attrname="Intelligence" value="13" classskill="yes">
                     <description>You are educated in a field of study and can answer both simple and complex questions. Like the Craft, Perform, and Profession skills, Knowledge actually encompasses a number of different specialties. Below are listed typical fields of study.
 &#8226; Arcana (ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts)
 &#8226; Dungeoneering (aberrations, caverns, oozes, spelunking) &#8226; Engineering (buildings, aqueducts, bridges, fortifications)
@@ -4635,7 +4550,7 @@ Perception is also used to notice fine details in the environment. The DC to not
 
 Continued - Core Rulebook, pg. 102.</description>
                 </skill>
-                <skill name="Profession (Gardener)" ranks="1" attrbonus="3" attrname="Wisdom" value="7" classskill="yes" trainedonly="yes">
+                <skill name="Profession (gardener)" ranks="1" attrbonus="3" attrname="Wisdom" value="7" classskill="yes" trainedonly="yes">
                     <description>You are skilled at a specific job. Like Craft, Knowledge, and Perform, Profession is actually a number of separate skills. You could have several Profession skills, each with its own ranks. While a Craft skill represents ability in creating an item, a Profession skill represents an aptitude in a vocation requiring a broader range of less specific knowledge. The most common Profession skills are architect, baker, barrister, brewer, butcher, clerk, cook, courtesan, driver, engineer, farmer, fisherman, gambler, gardener, herbalist, innkeeper, librarian, merchant, midwife, miller, miner, porter, sailor, scribe, shepherd, stable master, soldier, tanner, trapper, and woodcutter.
 
 Check: You can earn half your Profession check result in gold pieces per week of dedicated work. You know how to use the tools of your trade, how to perform the profession's daily tasks, how to supervise helpers, and how to handle common problems. You can also answer questions about your Profession. Basic questions are DC 10, while more complex questions are DC 15 or higher.
@@ -4644,7 +4559,7 @@ Action: Not applicable. A single check generally represents a week of work.
 
 Continued - Core Rulebook, pg. 103</description>
                 </skill>
-                <skill name="Profession (Herbalist)" ranks="1" attrbonus="3" attrname="Wisdom" value="7" classskill="yes" trainedonly="yes">
+                <skill name="Profession (herbalist)" ranks="1" attrbonus="3" attrname="Wisdom" value="7" classskill="yes" trainedonly="yes">
                     <description>You are skilled at a specific job. Like Craft, Knowledge, and Perform, Profession is actually a number of separate skills. You could have several Profession skills, each with its own ranks. While a Craft skill represents ability in creating an item, a Profession skill represents an aptitude in a vocation requiring a broader range of less specific knowledge. The most common Profession skills are architect, baker, barrister, brewer, butcher, clerk, cook, courtesan, driver, engineer, farmer, fisherman, gambler, gardener, herbalist, innkeeper, librarian, merchant, midwife, miller, miner, porter, sailor, scribe, shepherd, stable master, soldier, tanner, trapper, and woodcutter.
 
 Check: You can earn half your Profession check result in gold pieces per week of dedicated work. You know how to use the tools of your trade, how to perform the profession's daily tasks, how to supervise helpers, and how to handle common problems. You can also answer questions about your Profession. Basic questions are DC 10, while more complex questions are DC 15 or higher.
@@ -4812,7 +4727,7 @@ Normal: When using a weapon with which you are not proficient, you are at -4 to 
 
 Benefit: You can cast any spell with a material component costing 1 gp or less without needing that component. The casting of the spell still provokes attacks of opportunity as normal. If the spell requires a material component that costs more than 1 gp, you must have the material component on hand to cast the spell, as normal.</description>
                 </feat>
-                <feat name="Expanded Arcana: Sorcerer" categorytext="">
+                <feat name="Expanded Arcana (Sorcerer)" categorytext="">
                     <description>Your research has revealed new spells.
 
 Prerequisites: Caster level 1st, see Special.
@@ -4981,16 +4896,6 @@ Note: Either activation checkbox on the in-play tab will apply the to-hit and AC
                     <weptype>Piercing</weptype>
                     <weptype>Slashing</weptype>
                 </weapon>
-                <weapon name="Unarmed Strike" categorytext="Melee Weapon, Unarmed Attack" typetext="B" attack="+9/+4" damage="1d3-1" crit="20/x2" useradded="no" quantity="1">
-                    <weight text="" value="0"></weight>
-                    <cost text="" value="0"></cost>
-                    <description>A Medium character deals 1d3 points of nonlethal damage with an unarmed strike. A Small character deals 1d2 points of nonlethal damage. A monk or any character with the Improved Unarmed Strike feat can deal lethal or nonlethal damage with unarmed strikes, at his discretion. The damage from an unarmed strike is considered weapon damage for the purposes of effects that give you a bonus on weapon damage rolls.
-
-An unarmed strike is always considered a light weapon. Therefore, you can use the Weapon Finesse feat to apply your Dexterity modifier instead of your Strength modifier to attack rolls with an unarmed strike. Unarmed strikes do not count as natural weapons (see Chapter 8).</description>
-                    <wepcategory>Melee Weapon</wepcategory>
-                    <wepcategory>Unarmed Attack</wepcategory>
-                    <weptype>Bludgeoning</weptype>
-                </weapon>
             </melee>
             <ranged></ranged>
             <defenses>
@@ -5071,7 +4976,7 @@ Requirements Craft Rod, Lingering Spell; Cost 1,500 gp</description>
             <trackedresources>
                 <trackedresource name="Acid Cloud (1d6+1) (4/day) (DC 12) (Su)" text="0/4" used="0" left="4" min="0" max="4"></trackedresource>
                 <trackedresource name="Bardic Performance (standard action) (12 rounds/day)" text="0/12" used="0" left="0" min="0" max="12"></trackedresource>
-                <trackedresource name="Bonded Object: -Choose- (1/day) (Sp)" text="0/1" used="0" left="1" min="0" max="1"></trackedresource>
+                <trackedresource name="Bonded Object (-Choose-) (1/day) (Sp)" text="0/1" used="0" left="1" min="0" max="1"></trackedresource>
                 <trackedresource name="Cleric Channel Negative Energy 1d6 (9/day) (DC 17) (Su)" text="0/9" used="0" left="9" min="0" max="9"></trackedresource>
                 <trackedresource name="Dagger" text="0/1" used="0" left="1" min="0" max="1"></trackedresource>
                 <trackedresource name="Destructive Smite +1 (6/day) (Su)" text="0/6" used="0" left="6" min="0" max="6"></trackedresource>
@@ -5106,7 +5011,7 @@ If you are within 1 mile of your familiar, you may gain other benefits.</descrip
                     <description>A bard adds half his class level (minimum 1) to all Knowledge skill checks and may make all Knowledge skill checks untrained.</description>
                     <specsource>Bard</specsource>
                 </special>
-                <special name="Bonded Object: -Choose- (1/day) (Sp)" shortname="Bonded Object (-Choose-) (1/day)" type="Spell-Like Ability" sourcetext="Wizard">
+                <special name="Bonded Object (-Choose-) (1/day) (Sp)" shortname="Bonded Object (-Choose-) (1/day)" type="Spell-Like Ability" sourcetext="Wizard">
                     <description>Wizards who select a bonded object begin play with one at no cost. Objects that are the subject of an arcane bond must fall into one of the following categories: amulet, ring, staff, wand, or weapon. These objects are always masterwork quality. Weapons acquired at 1st level are not made of any special material. If the object is an amulet or ring, it must be worn to have effect, while staves, wands, and weapons must be wielded. If a wizard attempts to cast a spell without his bonded object worn or in hand, he must make a concentration check or lose the spell. The DC for this check is equal to 20 + the spell's level. If the object is a ring or amulet, it occupies the ring or neck slot accordingly.
 
 A bonded object can be used once per day to cast any one spell that the wizard has in his spellbook and is capable of casting, even if the spell is not prepared. This spell is treated like any other spell cast by the wizard, including casting time, duration, and other effects dependent on the wizard's level. This spell cannot be modified by metamagic feats or other abilities. The bonded object cannot be used to cast spells from the wizard's opposition schools (see arcane school).
@@ -5159,22 +5064,6 @@ Domain Spells: 1st - detect aberration**, 2nd - stone call**, 3rd - deeper darkn
 
 Because of this empathic link, the master has the same connection to an item or place that his familiar does.</description>
                     <specsource>Witch</specsource>
-                </special>
-                <special name="Metamagic Rod, Lingering, Lesser" shortname="Metamagic Rod, Lingering, Lesser">
-                    <description>Metamagic rods hold the essence of a metamagic feat, allowing the user to apply metamagic effects to spells (but not spell like abilities) as they are cast. This does not change the spell slot of the altered spell. All the rods described here are use-activated (but casting spells in a threatened area still draws an attack of opportunity). A caster may only use one metamagic rod on any given spell, but it is permissible to combine a rod with metamagic feats possessed by the rod's wielder. In this case, only the feats possessed by the wielder adjust the spell slot of the spell being cast.
-
-Possession of a metamagic rod does not confer the associated feat on the owner, only the ability to use the given feat a specified number of times per day. A sorcerer still must take a full-round action when using a metamagic rod, just as if using a metamagic feat he possesses (except for quicken metamagic rods, which can be used as a swift action).
-
-The wielder can cast up to three spells per day that linger for 1 round as though using the Lingering Spell feat.
-
-Metamagic rods hold the essence of a metamagic feat, allowing the user to apply metamagic effects to spells as they are cast. This does not change the spell slot of the altered spell. All the rods described here are use-activated (but casting spells in a threatened area still draws an attack of opportunity). A caster may only use one metamagic rod on any given spell, but it is permissible to combine a rod with metamagic feats possessed by the rod&#8217;s wielder. In this case, only the feats possessed by the wielder adjust the spell slot of the spell being cast.
-
-Possession of a metamagic rod does not confer the associated feat on the owner, only the ability to use the given feat a specified number of times per day. A sorcerer still must take a full-round action when using a metamagic rod, just as if using a metamagic feat he possesses (except for quicken metamagic rods, which can be used as a swift action).
-
-Lesser and Greater Metamagic Rods: Normal metamagic rods can be used with spells of 6th level or lower. Lesser rods can be used with spells of 3rd level or lower, while greater rods can be used with spells of 9th level or lower.
-
-Construction
-Requirements Craft Rod, Lingering Spell; Cost 1,500 gp</description>
                 </special>
                 <special name="Share Spells with Familiar" shortname="Share Spells with Familiar" sourcetext="Witch">
                     <description>The wizard may cast a spell with a target of "You" on his familiar (as a touch spell) instead of on himself. A wizard may cast spells on his familiar even if the spells do not normally affect creatures of the familiar's type (magical beast).</description>
@@ -5272,7 +5161,7 @@ Thorns, briars, and overgrown areas that have been magically manipulated to impe
                     <spellsubschool>Compulsion</spellsubschool>
                     <spelldescript>Mind-Affecting</spelldescript>
                 </spell>
-                <spell name="Blink" level="3" class="Sorcerer" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 round/level (D)" save="DC 19 " resist="" dc="19" casterlevel="5" componenttext="Somatic" schooltext="Transmutation" subschooltext="" descriptortext="" spontaneous="yes">
+                <spell name="Blink" level="3" class="Sorcerer" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 round/level (D)" save="" resist="" dc="19" casterlevel="5" componenttext="Somatic" schooltext="Transmutation" subschooltext="" descriptortext="" spontaneous="yes">
                     <description>You "blink" quickly back and forth between the Material Plane and the Ethereal Plane and look as though you're winking in and out of reality at random. Blink has several effects, as follows. Physical attacks against you have a 50% miss chance, and the Blind-Fight feat doesn't help opponents, since you're ethereal and not merely invisible. If the attack is capable of striking ethereal creatures, the miss chance is only 20% (for concealment). If the attacker can see invisible creatures, the miss chance is also only 20%. (For an attacker who can both see and strike ethereal creatures, there is no miss chance.) Likewise, your own attacks have a 20% miss chance, since you sometimes go ethereal just as you are about to strike. Any individually targeted spell has a 50% chance to fail against you while you're blinking unless your attacker can target invisible, ethereal creatures. Your own spells have a 20% chance to activate just as you go ethereal, in which case they typically do not affect the Material Plane (but they might affect targets on the Ethereal Plane). While blinking, you take only half damage from area attacks (but full damage from those that extend onto the Ethereal Plane). Although you are only partially visible, you are not considered invisible and targets retain their Dexterity bonus to AC against your attacks. You do receive a +2 bonus on attack rolls made against enemies that cannot see invisible creatures. You take only half damage from falling, since you fall only while you are material. While blinking, you can step through (but not see through) solid objects. For each 5 feet of solid material you walk through, there is a 50% chance that you become material. If this occurs, you are shunted off to the nearest open space and take 1d6 points of damage per 5 feet so traveled. Since you spend about half your time on the Ethereal Plane, you can see and even attack ethereal creatures. You interact with ethereal creatures roughly the same way you interact with material ones. An ethereal creature is invisible, incorporeal, and capable of moving in any direction, even up or down. As an incorporeal creature, you can move through solid objects, including living creatures. An ethereal creature can see and hear the Material Plane, but everything looks gray and insubstantial. Sight and hearing on the Material Plane are limited to 60 feet. Force effects and abjurations affect you normally. Their effects extend onto the Ethereal Plane from the Material Plane, but not vice versa. An ethereal creature can't attack material creatures, and spells you cast while ethereal affect only other ethereal things. Certain material creatures or objects have attacks or effects that work on the Ethereal Plane. Treat other ethereal creatures and objects as material.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Transmutation</spellschool>
@@ -5408,7 +5297,7 @@ Counterspell: When dispel magic is used in this way, the spell targets a spellca
                     <spellschool>Abjuration</spellschool>
                     <spellschool>Void Elemental</spellschool>
                 </spell>
-                <spell name="Endure Elements" level="1" class="Sorcerer" casttime="1 action" range="Touch" target="Creature touched" area="" effect="" duration="24 hours" save="DC 17 Will negates (harmless)" resist="Yes (harmless)" dc="17" casterlevel="5" componenttext="Somatic" schooltext="Abjuration" subschooltext="" descriptortext="" spontaneous="yes">
+                <spell name="Endure Elements" level="1" class="Sorcerer" casttime="1 action" range="Touch" target="Creature touched" area="" effect="" duration="24 hours" save="Will negates (harmless)" resist="Yes (harmless)" dc="17" casterlevel="5" componenttext="Somatic" schooltext="Abjuration" subschooltext="" descriptortext="" spontaneous="yes">
                     <description>A creature protected by endure elements suffers no harm from being in a hot or cold environment. It can exist comfortably in conditions between -50 and 140 degrees Fahrenheit without having to make Fortitude saves. The creature's equipment is likewise protected.
 
 Endure elements doesn't provide any protection from fire or cold damage, nor does it protect against other environmental hazards such as smoke, lack of air, and so forth.</description>
@@ -5422,7 +5311,7 @@ Endure elements doesn't provide any protection from fire or cold damage, nor doe
                     <spellschool>Transmutation</spellschool>
                     <spellschool>Wood Elemental</spellschool>
                 </spell>
-                <spell name="False Life" level="2" class="Sorcerer" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 hour/level or until discharged; see text" save="DC 18 " resist="" dc="18" casterlevel="5" componenttext="Somatic, Material" schooltext="Necromancy" subschooltext="" descriptortext="" spontaneous="yes">
+                <spell name="False Life" level="2" class="Sorcerer" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 hour/level or until discharged; see text" save="" resist="" dc="18" casterlevel="5" componenttext="Somatic, Material" schooltext="Necromancy" subschooltext="" descriptortext="" spontaneous="yes">
                     <description>You harness the power of unlife to grant yourself a limited ability to avoid death. While this spell is in effect, you gain temporary hit points equal to 1d10 + 1 per caster level (maximum +10).</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellcomp>Material</spellcomp>
@@ -5458,13 +5347,13 @@ Ghost sound can be made permanent with a permanency spell.</description>
                     <spellschool>Illusion</spellschool>
                     <spellsubschool>Figment</spellsubschool>
                 </spell>
-                <spell name="Greensight" level="2" class="Sorcerer" casttime="1 action" range="Touch" target="" area="" effect="" duration="10 minutes/level" save="DC 18 Will negates (harmless)" resist="No" dc="18" casterlevel="5" componenttext="Somatic, Material" schooltext="Transmutation" subschooltext="" descriptortext="" spontaneous="yes">
+                <spell name="Greensight" level="2" class="Sorcerer" casttime="1 action" range="Touch" target="" area="" effect="" duration="10 minutes/level" save="Will negates (harmless)" resist="No" dc="18" casterlevel="5" componenttext="Somatic, Material" schooltext="Transmutation" subschooltext="" descriptortext="" spontaneous="yes">
                     <description>Upon casting this spell, the recipient is empowered to see up to 60 feet through thick plant matter as though it were transparent. Leaves, vines, and greenery&#8212;even moss, lichen, and slime&#8212;offer no concealment to the recipient&#8217;s sight, though her vision still can be blocked by solid wood, as if from trees or wooden structures. Undergrowth does not grant concealment to a creature against a recipient of the effects of greensight.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellcomp>Material</spellcomp>
                     <spellschool>Transmutation</spellschool>
                 </spell>
-                <spell name="Guidance" level="0" class="Oracle" casttime="1 action" range="Touch" target="Creature touched" area="" effect="" duration="1 minute or until discharged" save="DC 16 Will negates (harmless)" resist="Yes" dc="16" casterlevel="2" componenttext="Somatic" schooltext="Divination, Void Elemental" subschooltext="" descriptortext="" spontaneous="yes">
+                <spell name="Guidance" level="0" class="Oracle" casttime="1 action" range="Touch" target="Creature touched" area="" effect="" duration="1 minute or until discharged" save="Will negates (harmless)" resist="Yes" dc="16" casterlevel="2" componenttext="Somatic" schooltext="Divination, Void Elemental" subschooltext="" descriptortext="" spontaneous="yes">
                     <description>This spell imbues the subject with a touch of divine guidance. The creature gets a +1 competence bonus on a single attack roll, saving throw, or skill check. It must choose to use the bonus before making the roll to which it applies.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Divination</spellschool>
@@ -5502,7 +5391,7 @@ All of the hasted creature's modes of movement (including land movement, burrow,
                     <spellcomp>Material</spellcomp>
                     <spellschool>Transmutation</spellschool>
                 </spell>
-                <spell name="Know Direction" level="0" class="Bard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="Instantaneous" save="DC 16 " resist="" dc="16" casterlevel="2" componenttext="Somatic" schooltext="Divination" subschooltext="" descriptortext="" spontaneous="yes">
+                <spell name="Know Direction" level="0" class="Bard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="Instantaneous" save="" resist="" dc="16" casterlevel="2" componenttext="Somatic" schooltext="Divination" subschooltext="" descriptortext="" spontaneous="yes">
                     <description>When you cast this spell, you instantly know the direction of north from your current position. The spell is effective in any environment in which "north" exists, but it may not work in extraplanar settings. Your knowledge of north is correct at the moment of casting, but you can get lost again within moments if you don't find some external reference point to help you keep track of direction.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Divination</spellschool>
@@ -5535,7 +5424,7 @@ Light can be used to counter or dispel any darkness spell of equal or lower spel
                     <spellschool>Evocation</spellschool>
                     <spelldescript>Force</spelldescript>
                 </spell>
-                <spell name="Mending" level="0" class="Sorcerer" casttime="10 minutes" range="10 ft." target="One object of up to 1 lb./level" area="" effect="" duration="Instantaneous" save="DC 16 Will negates (harmless, object)" resist="Yes (harmless, object)" dc="16" casterlevel="5" componenttext="Somatic" schooltext="Transmutation, Metal Elemental" subschooltext="" descriptortext="" spontaneous="yes">
+                <spell name="Mending" level="0" class="Sorcerer" casttime="10 minutes" range="10 ft." target="One object of up to 1 lb./level" area="" effect="" duration="Instantaneous" save="Will negates (harmless, object)" resist="Yes (harmless, object)" dc="16" casterlevel="5" componenttext="Somatic" schooltext="Transmutation, Metal Elemental" subschooltext="" descriptortext="" spontaneous="yes">
                     <description>This spell repairs damaged objects, restoring 1d4 hit points to the object. If the object has the broken condition, this condition is removed if the object is restored to at least half its original hit points. All of the pieces of an object must be present for this spell to function. Magic items can be repaired by this spell, but you must have a caster level equal to or higher than that of the object. Magic items that are destroyed (at 0 hit points or less) can be repaired with this spell, but this spell does not restore their magic abilities. This spell does not affect creatures (including constructs). This spell has no effect on objects that have been warped or otherwise transmuted, but it can still repair damage done to such items.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Transmutation</spellschool>
@@ -5549,7 +5438,7 @@ Light can be used to counter or dispel any darkness spell of equal or lower spel
                     <spellschool>Air Elemental</spellschool>
                     <spelldescript>language-dependent</spelldescript>
                 </spell>
-                <spell name="Mirror Image" level="2" class="Sorcerer" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 min./level" save="DC 18 " resist="" dc="18" casterlevel="5" componenttext="Somatic" schooltext="Illusion" subschooltext="Figment" descriptortext="" spontaneous="yes">
+                <spell name="Mirror Image" level="2" class="Sorcerer" casttime="1 action" range="Personal" target="You" area="" effect="" duration="1 min./level" save="" resist="" dc="18" casterlevel="5" componenttext="Somatic" schooltext="Illusion" subschooltext="Figment" descriptortext="" spontaneous="yes">
                     <description>This spell creates a number of illusory doubles of you that inhabit your square. These doubles make it difficult for enemies to precisely locate and attack you. When mirror image is cast, 1d4 images plus one image per three caster levels (maximum eight images total) are created. These images remain in your space and move with you, mimicking your movements, sounds, and actions exactly. Whenever you are attacked or are the target of a spell that requires an attack roll, there is a possibility that the attack targets one of your images instead. If the attack is a hit, roll randomly to see whether the selected target is real or a figment. If it is a figment, the figment is destroyed. If the attack misses by 5 or less, one of your figments is destroyed by the near miss. Area spells affect you normally and do not destroy any of your figments. Spells and effects that do not require an attack roll affect you normally and do not destroy any of your figments. Spells that require a touch attack are harmlessly discharged if used to destroy a figment. An attacker must be able to see the figments to be fooled. If you are invisible or the attacker is blind, the spell has no effect (although the normal miss chances still apply).</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Illusion</spellschool>
@@ -5568,7 +5457,7 @@ Prestidigitation can create small objects, but they look crude and artificial. T
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Universal</spellschool>
                 </spell>
-                <spell name="Read Magic" level="0" class="Sorcerer" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="DC 16 " resist="" dc="16" casterlevel="5" componenttext="Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" spontaneous="yes">
+                <spell name="Read Magic" level="0" class="Sorcerer" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="" resist="" dc="16" casterlevel="5" componenttext="Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" spontaneous="yes">
                     <description>You can decipher magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be unintelligible. This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed or trapped scroll. Furthermore, once the spell is cast and you have read the magical inscription, you are thereafter able to read that particular writing without recourse to the use of read magic. You can read at the rate of one page (250 words) per minute. The spell allows you to identify a glyph of warding with a DC 13 Spellcraft check, a greater glyph of warding with a DC 16 Spellcraft check, or any symbol spell with a Spellcraft check (DC 10 + spell level).
 
 Read magic can be made permanent with a permanency spell.</description>
@@ -5619,7 +5508,7 @@ Shadow conjurations are only one-fifth (20%) as strong as the real things, thoug
                     <spellschool>Fire Elemental</spellschool>
                     <spelldescript>Fire</spelldescript>
                 </spell>
-                <spell name="Stabilize" level="0" class="Oracle" casttime="1 action" range="Close (25 + 5 ft./2 levels)" target="One living creature" area="" effect="" duration="Instantaneous" save="DC 16 Will negates (harmless)" resist="Yes (harmless)" dc="16" casterlevel="2" componenttext="Somatic" schooltext="Conjuration" subschooltext="Healing" descriptortext="" spontaneous="yes">
+                <spell name="Stabilize" level="0" class="Oracle" casttime="1 action" range="Close (25 + 5 ft./2 levels)" target="One living creature" area="" effect="" duration="Instantaneous" save="Will negates (harmless)" resist="Yes (harmless)" dc="16" casterlevel="2" componenttext="Somatic" schooltext="Conjuration" subschooltext="Healing" descriptortext="" spontaneous="yes">
                     <description>Upon casting this spell, you target a living creature that has -1 or fewer hit points. That creature is automatically stabilized and does not lose any further hit points. If the creature later takes damage, it continues dying normally.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Conjuration</spellschool>
@@ -5988,7 +5877,7 @@ Gust of wind can be made permanent with a permanency spell.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Necromancy</spellschool>
                 </spell>
-                <spell name="Know Direction" level="0" class="Druid" casttime="1 action" range="Personal" target="You" area="" effect="" duration="Instantaneous" save="DC 13 " resist="" dc="13" casterlevel="2" componenttext="Somatic" schooltext="Divination" subschooltext="" descriptortext="" unlimited="yes">
+                <spell name="Know Direction" level="0" class="Druid" casttime="1 action" range="Personal" target="You" area="" effect="" duration="Instantaneous" save="" resist="" dc="13" casterlevel="2" componenttext="Somatic" schooltext="Divination" subschooltext="" descriptortext="" unlimited="yes">
                     <description>When you cast this spell, you instantly know the direction of north from your current position. The spell is effective in any environment in which "north" exists, but it may not work in extraplanar settings. Your knowledge of north is correct at the moment of casting, but you can get lost again within moments if you don't find some external reference point to help you keep track of direction.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Divination</spellschool>
@@ -6008,7 +5897,7 @@ Negate aroma does not prevent the target from acquiring outside smells or odors.
                     <spellschool>Water Elemental</spellschool>
                     <spelldescript>Cold</spelldescript>
                 </spell>
-                <spell name="Read Magic" level="0" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="DC 11 " resist="" dc="11" casterlevel="3" componenttext="Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" unlimited="yes">
+                <spell name="Read Magic" level="0" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="" resist="" dc="11" casterlevel="3" componenttext="Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" unlimited="yes">
                     <description>You can decipher magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be unintelligible. This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed or trapped scroll. Furthermore, once the spell is cast and you have read the magical inscription, you are thereafter able to read that particular writing without recourse to the use of read magic. You can read at the rate of one page (250 words) per minute. The spell allows you to identify a glyph of warding with a DC 13 Spellcraft check, a greater glyph of warding with a DC 16 Spellcraft check, or any symbol spell with a Spellcraft check (DC 10 + spell level).
 
 Read magic can be made permanent with a permanency spell.</description>
@@ -6016,7 +5905,7 @@ Read magic can be made permanent with a permanency spell.</description>
                     <spellcomp>Focus</spellcomp>
                     <spellschool>Divination</spellschool>
                 </spell>
-                <spell name="Read Magic" level="1" class="Antipaladin" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="DC 17 " resist="" dc="17" casterlevel="0" componenttext="Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" castsleft="1">
+                <spell name="Read Magic" level="1" class="Antipaladin" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="" resist="" dc="17" casterlevel="0" componenttext="Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" castsleft="1">
                     <description>You can decipher magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be unintelligible. This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed or trapped scroll. Furthermore, once the spell is cast and you have read the magical inscription, you are thereafter able to read that particular writing without recourse to the use of read magic. You can read at the rate of one page (250 words) per minute. The spell allows you to identify a glyph of warding with a DC 13 Spellcraft check, a greater glyph of warding with a DC 16 Spellcraft check, or any symbol spell with a Spellcraft check (DC 10 + spell level).
 
 Read magic can be made permanent with a permanency spell.</description>
@@ -6120,7 +6009,7 @@ Halt: The subject stands in place for 1 round. It may not take any actions but i
                     <spelldescript>Mind-Affecting</spelldescript>
                     <spelldescript>language-dependent</spelldescript>
                 </spell>
-                <spell name="Comprehend Languages" level="1" class="Witch" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="DC 12 " resist="" dc="12" casterlevel="2" componenttext="Somatic, Material or Divine Focus" schooltext="Divination" subschooltext="" descriptortext="" castsleft="0">
+                <spell name="Comprehend Languages" level="1" class="Witch" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="" resist="" dc="12" casterlevel="2" componenttext="Somatic, Material or Divine Focus" schooltext="Divination" subschooltext="" descriptortext="" castsleft="0">
                     <description>You can understand the spoken words of creatures or read otherwise incomprehensible written messages. The ability to read does not necessarily impart insight into the material, merely its literal meaning. The spell enables you to understand or read an unknown language, not speak or write it. Written material can be read at the rate of one page (250 words) per minute. Magical writing cannot be read, though the spell reveals that it is magical. This spell can be foiled by certain warding magic (such as the secret page and illusory script spells). It does not decipher codes or reveal messages concealed in otherwise normal text.
 
 Comprehend languages can be made permanent with a permanency spell.</description>
@@ -6283,7 +6172,7 @@ Ghost sound can be made permanent with a permanency spell.</description>
                     <spellschool>Illusion</spellschool>
                     <spellsubschool>Figment</spellsubschool>
                 </spell>
-                <spell name="Guidance" level="0" class="Witch" casttime="1 action" range="Touch" target="Creature touched" area="" effect="" duration="1 minute or until discharged" save="DC 11 Will negates (harmless)" resist="Yes" dc="11" casterlevel="2" componenttext="Somatic" schooltext="Divination, Void Elemental" subschooltext="" descriptortext="" useradded="no" castsleft="0">
+                <spell name="Guidance" level="0" class="Witch" casttime="1 action" range="Touch" target="Creature touched" area="" effect="" duration="1 minute or until discharged" save="Will negates (harmless)" resist="Yes" dc="11" casterlevel="2" componenttext="Somatic" schooltext="Divination, Void Elemental" subschooltext="" descriptortext="" useradded="no" castsleft="0">
                     <description>This spell imbues the subject with a touch of divine guidance. The creature gets a +1 competence bonus on a single attack roll, saving throw, or skill check. It must choose to use the bonus before making the roll to which it applies.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Divination</spellschool>
@@ -6331,13 +6220,13 @@ Light can be used to counter or dispel any darkness spell of equal or lower spel
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Transmutation</spellschool>
                 </spell>
-                <spell name="Mending" level="0" class="Wizard" casttime="10 minutes" range="10 ft." target="One object of up to 1 lb./level" area="" effect="" duration="Instantaneous" save="DC 11 Will negates (harmless, object)" resist="Yes (harmless, object)" dc="11" casterlevel="3" componenttext="Somatic" schooltext="Transmutation, Metal Elemental" subschooltext="" descriptortext="" useradded="no" castsleft="0">
+                <spell name="Mending" level="0" class="Wizard" casttime="10 minutes" range="10 ft." target="One object of up to 1 lb./level" area="" effect="" duration="Instantaneous" save="Will negates (harmless, object)" resist="Yes (harmless, object)" dc="11" casterlevel="3" componenttext="Somatic" schooltext="Transmutation, Metal Elemental" subschooltext="" descriptortext="" useradded="no" castsleft="0">
                     <description>This spell repairs damaged objects, restoring 1d4 hit points to the object. If the object has the broken condition, this condition is removed if the object is restored to at least half its original hit points. All of the pieces of an object must be present for this spell to function. Magic items can be repaired by this spell, but you must have a caster level equal to or higher than that of the object. Magic items that are destroyed (at 0 hit points or less) can be repaired with this spell, but this spell does not restore their magic abilities. This spell does not affect creatures (including constructs). This spell has no effect on objects that have been warped or otherwise transmuted, but it can still repair damage done to such items.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Transmutation</spellschool>
                     <spellschool>Metal Elemental</spellschool>
                 </spell>
-                <spell name="Mending" level="0" class="Witch" casttime="10 minutes" range="10 ft." target="One object of up to 1 lb./level" area="" effect="" duration="Instantaneous" save="DC 11 Will negates (harmless, object)" resist="Yes (harmless, object)" dc="11" casterlevel="2" componenttext="Somatic" schooltext="Transmutation, Metal Elemental" subschooltext="" descriptortext="" useradded="no" castsleft="0">
+                <spell name="Mending" level="0" class="Witch" casttime="10 minutes" range="10 ft." target="One object of up to 1 lb./level" area="" effect="" duration="Instantaneous" save="Will negates (harmless, object)" resist="Yes (harmless, object)" dc="11" casterlevel="2" componenttext="Somatic" schooltext="Transmutation, Metal Elemental" subschooltext="" descriptortext="" useradded="no" castsleft="0">
                     <description>This spell repairs damaged objects, restoring 1d4 hit points to the object. If the object has the broken condition, this condition is removed if the object is restored to at least half its original hit points. All of the pieces of an object must be present for this spell to function. Magic items can be repaired by this spell, but you must have a caster level equal to or higher than that of the object. Magic items that are destroyed (at 0 hit points or less) can be repaired with this spell, but this spell does not restore their magic abilities. This spell does not affect creatures (including constructs). This spell has no effect on objects that have been warped or otherwise transmuted, but it can still repair damage done to such items.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Transmutation</spellschool>
@@ -6378,7 +6267,7 @@ Although potions and elixirs are unaffected by the normal use of the spell, you 
                     <spellschool>Water Elemental</spellschool>
                     <spelldescript>Cold</spelldescript>
                 </spell>
-                <spell name="Read Magic" level="0" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="DC 11 " resist="" dc="11" casterlevel="3" componenttext="Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" useradded="no" castsleft="0">
+                <spell name="Read Magic" level="0" class="Wizard" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="" resist="" dc="11" casterlevel="3" componenttext="Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" useradded="no" castsleft="0">
                     <description>You can decipher magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be unintelligible. This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed or trapped scroll. Furthermore, once the spell is cast and you have read the magical inscription, you are thereafter able to read that particular writing without recourse to the use of read magic. You can read at the rate of one page (250 words) per minute. The spell allows you to identify a glyph of warding with a DC 13 Spellcraft check, a greater glyph of warding with a DC 16 Spellcraft check, or any symbol spell with a Spellcraft check (DC 10 + spell level).
 
 Read magic can be made permanent with a permanency spell.</description>
@@ -6386,7 +6275,7 @@ Read magic can be made permanent with a permanency spell.</description>
                     <spellcomp>Focus</spellcomp>
                     <spellschool>Divination</spellschool>
                 </spell>
-                <spell name="Read Magic" level="0" class="Witch" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="DC 11 " resist="" dc="11" casterlevel="2" componenttext="Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" useradded="no" castsleft="0">
+                <spell name="Read Magic" level="0" class="Witch" casttime="1 action" range="Personal" target="You" area="" effect="" duration="10 min./level" save="" resist="" dc="11" casterlevel="2" componenttext="Somatic, Focus" schooltext="Divination" subschooltext="" descriptortext="" useradded="no" castsleft="0">
                     <description>You can decipher magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be unintelligible. This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed or trapped scroll. Furthermore, once the spell is cast and you have read the magical inscription, you are thereafter able to read that particular writing without recourse to the use of read magic. You can read at the rate of one page (250 words) per minute. The spell allows you to identify a glyph of warding with a DC 13 Spellcraft check, a greater glyph of warding with a DC 16 Spellcraft check, or any symbol spell with a Spellcraft check (DC 10 + spell level).
 
 Read magic can be made permanent with a permanency spell.</description>
@@ -6422,7 +6311,7 @@ Resistance can be made permanent with a permanency spell.</description>
                     <spellschool>Fire Elemental</spellschool>
                     <spelldescript>Fire</spelldescript>
                 </spell>
-                <spell name="Stabilize" level="0" class="Witch" casttime="1 action" range="Close (25 + 5 ft./2 levels)" target="One living creature" area="" effect="" duration="Instantaneous" save="DC 11 Will negates (harmless)" resist="Yes (harmless)" dc="11" casterlevel="2" componenttext="Somatic" schooltext="Conjuration" subschooltext="Healing" descriptortext="" useradded="no" castsleft="0">
+                <spell name="Stabilize" level="0" class="Witch" casttime="1 action" range="Close (25 + 5 ft./2 levels)" target="One living creature" area="" effect="" duration="Instantaneous" save="Will negates (harmless)" resist="Yes (harmless)" dc="11" casterlevel="2" componenttext="Somatic" schooltext="Conjuration" subschooltext="Healing" descriptortext="" useradded="no" castsleft="0">
                     <description>Upon casting this spell, you target a living creature that has -1 or fewer hit points. That creature is automatically stabilized and does not lose any further hit points. If the creature later takes damage, it continues dying normally.</description>
                     <spellcomp>Somatic</spellcomp>
                     <spellschool>Conjuration</spellschool>
@@ -6506,7 +6395,7 @@ This spell has no effect on a creature that is already fatigued. Unlike with nor
                 <validmessage>Error: Druid: Alignment not permitted. Required alignments: Any Neutral (Good/Evil axis) / Any Neutral (Law/Chaos axis)</validmessage>
                 <validmessage>Error: Druid: Alignment not permitted. Required alignments: Any Neutral (Good/Evil axis) / Any Neutral (Law/Chaos axis)</validmessage>
             </validation>
-            <settings summary="Advanced Player's Guide: Advanced Player's Guide, Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Faiths of Corruption, Pirates of the Inner Sea; Campaign Setting: Book of the Damned 3: Horsemen of the Apocalypse, Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lands of the Linnorm Kings, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited, Rival Guide; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
+            <settings summary="Advanced Player's Guide: Advanced Player's Guide, Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Faiths of Corruption, Pirates of the Inner Sea, Varisia, Birthplace of Legends; Campaign Setting: Book of the Damned 3: Horsemen of the Apocalypse, Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lands of the Linnorm Kings, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited, Rival Guide; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
             <npc>
                 <description></description>
                 <basics></basics>
@@ -6933,7 +6822,7 @@ Prerequisites: Str 13, base attack bonus +1.
 Benefit: You can choose to take a &#8211;1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (&#8211;50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by &#8211;1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</description>
                             <featcategory>Combat</featcategory>
                         </feat>
-                        <feat name="Weapon Focus: Slam" categorytext="Combat" useradded="no">
+                        <feat name="Weapon Focus (Slam)" categorytext="Combat" useradded="no">
                             <description>Choose one type of weapon. You can also choose unarmed strike or grapple (or ray, if you are a spellcaster) as your weapon for the purposes of this feat.
 
 Prerequisites: Proficiency with selected weapon, base attack bonus +1.
@@ -6959,24 +6848,14 @@ Unless otherwise noted, grab works only against opponents no larger than the sam
                         </special>
                     </attack>
                     <melee>
-                        <weapon name="Constrict (Shambling Mound)" categorytext="Melee Weapon" typetext="B" attack="+10" damage="2d6+5" crit="20/x2" useradded="no">
+                        <weapon name="Constrict (Shambling Mound)" categorytext="Melee Weapon" typetext="B" attack="+10" damage="2d6+5" crit="x2" useradded="no">
                             <description>A creature with this special attack can crush an opponent, dealing bludgeoning damage, when it makes a successful grapple check (in addition to any other effects caused by a successful check, including additional damage). The amount of damage is given in the creature's entry and is typically equal to the amount of damage caused by the creature's melee attack.</description>
                             <wepcategory>Melee Weapon</wepcategory>
                             <weptype>Bludgeoning</weptype>
                         </weapon>
-                        <weapon name="Slam x2 (Shambling Mound)" categorytext="Melee Weapon" typetext="B" attack="+11 x2" damage="2d6+5" crit="20/x2" useradded="no">
+                        <weapon name="Slam x2 (Shambling Mound)" categorytext="Melee Weapon" typetext="B" attack="+11 x2" damage="2d6+5" crit="x2" useradded="no">
                             <description>A creature's natural Slam attack.</description>
                             <wepcategory>Melee Weapon</wepcategory>
-                            <weptype>Bludgeoning</weptype>
-                        </weapon>
-                        <weapon name="Unarmed Strike" categorytext="Melee Weapon, Unarmed Attack" typetext="B" attack="+10/+5" damage="1d4+5" crit="20/x2" useradded="no" quantity="1">
-                            <weight text="" value="0"></weight>
-                            <cost text="" value="0"></cost>
-                            <description>A Medium character deals 1d3 points of nonlethal damage with an unarmed strike. A Small character deals 1d2 points of nonlethal damage. A monk or any character with the Improved Unarmed Strike feat can deal lethal or nonlethal damage with unarmed strikes, at his discretion. The damage from an unarmed strike is considered weapon damage for the purposes of effects that give you a bonus on weapon damage rolls.
-
-An unarmed strike is always considered a light weapon. Therefore, you can use the Weapon Finesse feat to apply your Dexterity modifier instead of your Strength modifier to attack rolls with an unarmed strike. Unarmed strikes do not count as natural weapons (see Chapter 8).</description>
-                            <wepcategory>Melee Weapon</wepcategory>
-                            <wepcategory>Unarmed Attack</wepcategory>
                             <weptype>Bludgeoning</weptype>
                         </weapon>
                     </melee>
@@ -7015,12 +6894,12 @@ An unarmed strike is always considered a light weapon. Therefore, you can use th
                     <validation>
                         <report></report>
                     </validation>
-                    <settings summary="Advanced Player's Guide: Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary, Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Faiths of Corruption, Pirates of the Inner Sea; Campaign Setting: Book of the Damned 3: Horsemen of the Apocalypse, Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lands of the Linnorm Kings, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
+                    <settings summary="Advanced Player's Guide: Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary, Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Faiths of Corruption, Pirates of the Inner Sea, Varisia, Birthplace of Legends; Campaign Setting: Book of the Damned 3: Horsemen of the Apocalypse, Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lands of the Linnorm Kings, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
                     <minions></minions>
                 </character>
             </minions>
         </character>
-        <character nature="normal" role="npc" relationship="enemy" type="Hero" name="Wotywina Turncoin" playername="">
+        <character active="yes" nature="normal" role="npc" relationship="enemy" type="Hero" name="Wotywina Turncoin" playername="">
             <race racetext="Halfling" name="Halfling" ethnicity=""></race>
             <alignment name="Chaotic Evil"></alignment>
             <templates summary=""></templates>
@@ -7470,7 +7349,7 @@ Prerequisites: Dex 13, Small size or smaller.
 
 Benefit: During the first round of combat, flat-footed opponents are considered not to have noticed you yet for the purposes of Stealth skill checks, allowing you to make a Stealth check that round to hide from them.</description>
                 </feat>
-                <feat name="Improved Critical: Rapier" categorytext="Combat">
+                <feat name="Improved Critical (Rapier)" categorytext="Combat">
                     <description>Attacks made with your chosen weapon are quite deadly.
 
 Prerequisite: Proficient with weapon, base attack bonus +8.
@@ -7572,16 +7451,6 @@ The character must be able to see the target well enough to pick out a vital spo
                     <description>You can use the Weapon Finesse feat to apply your Dexterity modifier instead of your Strength modifier to attack rolls with a rapier sized for you, even though it isn't a light weapon. You can't wield a rapier in two hands in order to apply 1-1/2 times your Strength bonus to damage.</description>
                     <wepcategory>Melee Weapon</wepcategory>
                     <weptype>Piercing</weptype>
-                </weapon>
-                <weapon name="Unarmed Strike" categorytext="Melee Weapon, Unarmed Attack" typetext="B" attack="+25/+20/+15" damage="1d2+3" crit="20/x2" useradded="no" quantity="1">
-                    <weight text="" value="0"></weight>
-                    <cost text="" value="0"></cost>
-                    <description>A Medium character deals 1d3 points of nonlethal damage with an unarmed strike. A Small character deals 1d2 points of nonlethal damage. A monk or any character with the Improved Unarmed Strike feat can deal lethal or nonlethal damage with unarmed strikes, at his discretion. The damage from an unarmed strike is considered weapon damage for the purposes of effects that give you a bonus on weapon damage rolls.
-
-An unarmed strike is always considered a light weapon. Therefore, you can use the Weapon Finesse feat to apply your Dexterity modifier instead of your Strength modifier to attack rolls with an unarmed strike. Unarmed strikes do not count as natural weapons (see Chapter 8).</description>
-                    <wepcategory>Melee Weapon</wepcategory>
-                    <wepcategory>Unarmed Attack</wepcategory>
-                    <weptype>Bludgeoning</weptype>
                 </weapon>
             </melee>
             <ranged>
@@ -7686,7 +7555,7 @@ Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level
                     <description>This ability allows a rogue to move along narrow surfaces at full speed using the Acrobatics skill without penalty. In addition, a rogue with this talent is not flat-footed when using Acrobatics to move along narrow surfaces.</description>
                     <specsource>Rogue</specsource>
                 </special>
-                <special name="Skill Mastery: Acrobatics/Climb/Disable Dev/Esc Artist/Stealth" shortname="Skill Mastery (Acrobatics/Climb/Disable Dev/Esc Ar" sourcetext="Rogue">
+                <special name="Skill Mastery (Acrobatics/Climb/Disable Dev/Esc Artist/Stealth)" shortname="Skill Mastery (Acrobatics/Climb/Disable Dev/Esc Ar" sourcetext="Rogue">
                     <description>The rogue becomes so confident in the use of certain skills that she can use them reliably even under adverse conditions.
 
 Upon gaining this ability, she selects a number of skills equal to 3 + her Intelligence modifier. When making a skill check with one of these skills, she may take 10 even if stress and distractions would normally prevent her from doing so. A rogue may gain this special ability multiple times, selecting additional skills for skill mastery to apply to each time.</description>
@@ -7723,7 +7592,7 @@ Normal: Standing up is a move action.</description>
             <validation>
                 <report></report>
             </validation>
-            <settings summary="Advanced Player's Guide: Advanced Player's Guide, Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Pirates of the Inner Sea; Campaign Setting: Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited, Rival Guide; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
+            <settings summary="Advanced Player's Guide: Advanced Player's Guide, Advanced Player's Guide Familiars; Advanced Race Guide: Advanced Race Guide, Race Builder; Ultimate Magic: Ultimate Magic Familiars; Bestiary: Bestiary 3; Player Companion: Blood of Angels, Blood of Fiends, Dragon Empires Primer, Pirates of the Inner Sea, Varisia, Birthplace of Legends; Campaign Setting: Distant Worlds, Dragon Empires Gazetteer, Giants Revisited, Inner Sea Magic, Inner Sea World Guide, Isles of the Shackles, Lost Kingdoms, Magnimar, City of Monuments, Mythical Monsters Revisited, Rival Guide; Miscellaneous Content: Character Traits Web Enhancement, Core Rulebook Deities, GameMastery Guide, Paizo Blog; Advancement Speed: Medium Advancement; Firearm Availability: Emerging Guns; Output Options: Hide Ammo (in weapons), Hide Unusable Skills, Hide Validation Messages, Show Hero Portrait"></settings>
             <npc>
                 <description></description>
                 <basics></basics>
