@@ -10,7 +10,7 @@ public class WeaponImpl {
     Damage damage;
     String damageDice;
     String category;
-    int critFloor = 100;
+    int critFloor = 20;
     int critMultiplier;
     String equipped;
     int numFullAttacks = 0;
@@ -61,6 +61,21 @@ public class WeaponImpl {
         if (matcher.matches()) {
             critFloor = Integer.parseInt(matcher.group(1));
             critMultiplier = Integer.parseInt(matcher.group(2));
+        }
+        else {
+            //version 4 of Herolab changed the crit format so that, if its a weapon that
+            //crits on 20, the crit string is simply "x2" or "x3" (instead of 20/x2)
+            regex = Pattern.compile("^x(\\d+)$");
+            matcher = regex.matcher(crit);
+            if (matcher.matches()) {
+                critFloor = 20;
+                critMultiplier = Integer.parseInt( matcher.group(1));
+            }
+            else {    //hmm, a very strange weapon...
+                critFloor = 20;
+                critMultiplier = 2; //TODO: probably throw an exception here
+            }
+
         }
     }
 

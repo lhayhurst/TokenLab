@@ -7,6 +7,8 @@ $SELF
 [h: AttackNumber = "$SUBSTITUTE_ATTACK_NUMBER_HERE"]
 
 [h: AttackName  = Name]
+[h: CharacterName = token.name]
+
 [h:Weapon = json.get(weaponJSON, Name)]
 [h:Damage = json.get(Weapon, "damage")]
 [h:Attacks = json.get(Weapon, "attacks")]
@@ -28,7 +30,7 @@ $SELF
 <table border="2" bordercolor="#ffffff" cellpadding="2" cellspacing="2" >
 	<tr>
         <td colspan="2" style="text-align:center;color:#ffffff;background-color:#009900;">
-        <b>Attack [r:IF( AttackBonus >= 0, "+", "")][r:AttackBonus]</b></td>
+        <b>[r:CharacterName] Attack [r:IF( AttackBonus >= 0, "+", "")][r:AttackBonus]</b></td>
         <td colspan="2" style="text-align:center;color:#ffffff;background-color:#777777;"><p> <b>
         [r:AttackName] ([r:WeaponCritsOn ]-20/x[r:CritMultiplier]) </b> </p></td>
     </tr>

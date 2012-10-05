@@ -10,17 +10,18 @@ $SELF
     [h: TempConModifier = json.get( Con, "tempModifier" )]
     [h: ConScore = ConValue + ConBonus + ConDamage + TempConModifier]
     [h: MinConScore = ConScore * -1]
-
     [HpReport1 = "<font color=red>Lost</font> "]
     [HpReport2 = "<font color=blue>HP</font>!<br />"]
     [CurrentHP = max(CurrentHP - HPChange + TempHP,MinConScore)]
 </span>
 
 
-
-[r:HpReport1] [r:HPChange] [r:HpReport2]
+[h: Name = token.name]
+<b>[r:Name]</b> [r:HpReport1] [r:HPChange] [r:HpReport2]
 [r: CurrentHP] / [r:MaxHP] HP remaining...
 [h: setBar("Health",CurrentHP/MaxHP)]
+
+
 
 [h:text = ""]
 

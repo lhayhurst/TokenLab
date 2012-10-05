@@ -848,7 +848,7 @@ public class PathfinderToken implements ICharacter, ITokenizable {
 
             String attributeName   = s.getAttrname();
             String attribShortName = CharacterAttribute.getShortName( attributeName );
-            SkillReplacer replacer = new SkillReplacer( mungedSkillName, attribShortName  );
+            SkillReplacer replacer = new SkillReplacer( isNPC(), mungedSkillName, attribShortName  );
             MacroDigester.MacroEntry macroEntry = skillMacros.get("Skill Check");
 
            boolean disableButton = false;

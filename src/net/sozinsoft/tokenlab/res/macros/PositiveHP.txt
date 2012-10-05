@@ -7,6 +7,7 @@ $SELF
 [TempHP   = getProperty("TempHP")]
 
 
+
 [HpReport1 = "<font color=green>Gained</font> "]
 [CurrentHP = min(CurrentHP + HPChange + TempHP,MaxHP)]
 [HpReport2 = "<font color=blue>HP</font>!<br />"]
@@ -14,7 +15,8 @@ $SELF
 </span>
 
 [h: setBar("Health",CurrentHP/MaxHP)]
-[r:HpReport1] [r:HPChange] [r:HpReport2]
+[h: Name = token.name]
+<b>[r:Name]</b> [r:HpReport1] [r:HPChange] [r:HpReport2]
 
 <!-- IF THEY ARE ALRIGHT -->
 [h,if(CurrentHP > Bloodied), CODE:

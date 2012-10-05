@@ -37,7 +37,6 @@
     "blah | <html><br><b>Hero Points</b></html> | | LABEL | SPAN=TRUE",
     	"HeroPoints | " + HeroPoints + "| Current Hero Points | TEXT | WIDTH=4",
     "blah | <html><br><b>Feats</b></html> | | LABEL | SPAN=TRUE",
-    	"Feats | " + Feats + "| Feats | TEXT | WIDTH=30",
    "tab3 | Defenses || TAB",
     "blah  | <html><br><b>AC</b></html> | | LABEL | SPAN=TRUE",
     	"ACArmorBonus | " + ACArmorBonus + " | Armor Bonus | TEXT | WIDTH=4",

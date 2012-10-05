@@ -112,8 +112,14 @@
 	[text = "<br /><b>You are disabled!</b>"]
 }]
 
+[h: Constitution = getProperty( "Constitution" )]
+[h: ConBonus = json.get( Constitution, "bonus" )
+[h: ConDamage = json.get( Constitution, "damage" )]
+[h: TempConModifier = json.get( Constitution, "tempModifier" )]
+[h: ConScore = ConBonus + ConDamage + TempConModifier]
+
 <!-- IF THEY DROP TO DYING -->
-[h,if(CurrentHP < 0 && CurrentHP > -10), CODE:
+[h,if(CurrentHP < 0 && CurrentHP > -ConScore), CODE:
 {
     [state.Bloodied = 1]
 	[state.Disabled = 1]
@@ -124,7 +130,7 @@
 }]
 
 <!-- IF THEY DROP TO DEAD -->
-[h,if(CurrentHP <= -10), CODE:
+[h,if(CurrentHP <= -ConScore), CODE:
 {
     [state.Bloodied = 1]
 	[state.Disabled = 1]
