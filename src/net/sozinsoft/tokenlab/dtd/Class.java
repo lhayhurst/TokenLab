@@ -34,6 +34,15 @@ public class Class {
     protected String casterlevel;
     @XmlAttribute
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    protected String concentrationcheck;
+    @XmlAttribute
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    protected String overcomespellresistance;
+    @XmlAttribute
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    protected String basespelldc;
+    @XmlAttribute
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String castersource;
     protected Arcanespellfailure arcanespellfailure;
 
@@ -131,6 +140,78 @@ public class Class {
      */
     public void setCasterlevel(String value) {
         this.casterlevel = value;
+    }
+
+    /**
+     * Gets the value of the concentrationcheck property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getConcentrationcheck() {
+        return concentrationcheck;
+    }
+
+    /**
+     * Sets the value of the concentrationcheck property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setConcentrationcheck(String value) {
+        this.concentrationcheck = value;
+    }
+
+    /**
+     * Gets the value of the overcomespellresistance property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getOvercomespellresistance() {
+        return overcomespellresistance;
+    }
+
+    /**
+     * Sets the value of the overcomespellresistance property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setOvercomespellresistance(String value) {
+        this.overcomespellresistance = value;
+    }
+
+    /**
+     * Gets the value of the basespelldc property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getBasespelldc() {
+        return basespelldc;
+    }
+
+    /**
+     * Sets the value of the basespelldc property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBasespelldc(String value) {
+        this.basespelldc = value;
     }
 
     /**

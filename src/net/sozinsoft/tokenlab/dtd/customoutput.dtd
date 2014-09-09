@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- DTD for Hero Lab custom output for the Pathfinder Roleplaying Game -->
+        <!-- DTD for Hero Lab custom output for the Pathfinder Roleplaying Game -->
 <!ELEMENT document ((public))>
 
 <!ELEMENT public ((program, localization, character+))>
@@ -27,7 +27,7 @@
 	units CDATA #REQUIRED
 >
 
-<!ELEMENT character ((pathfindersociety?, race, alignment, templates, size, deity, classes, factions, types, subtypes, heropoints, senses, auras, favoredclasses, health, xp, money, personal, languages, attributes, saves, defensive, damagereduction, immunities, resistances, weaknesses, armorclass, penalties, maneuvers, initiative, movement, encumbrance, skills, skillabilities, feats, traits, flaws, skilltricks, animaltricks, attack, melee, ranged, defenses, magicitems, gear, spelllike, trackedresources, otherspecials, spellsknown, spellsmemorized, spellbook, spellclasses, journals, images?, validation, settings, npc?, minions))>
+<!ELEMENT character ((bookinfo?, pathfindersociety?, race, alignment, templates, size, deity, challengerating, xpaward, classes, factions, types, subtypes, heropoints, senses, auras, favoredclasses, health, xp, money, personal, languages, attributes, saves, defensive, damagereduction, immunities, resistances, weaknesses, armorclass, penalties, maneuvers, initiative, movement, encumbrance, skills, skillabilities, feats, traits, flaws, skilltricks, animaltricks, attack, melee, ranged, defenses, magicitems, gear, spelllike, trackedresources, otherspecials, spellsknown, spellsmemorized, spellbook, spellclasses, journals, images?, validation, settings, npc?, minions))>
 <!ATTLIST character
 	active (yes | no) "no"
 	name CDATA #REQUIRED
@@ -36,6 +36,12 @@
 	role (pc | npc) "pc"
 	relationship (ally | enemy) "ally"
 	type CDATA "Hero"
+>
+
+<!ELEMENT bookinfo EMPTY>
+<!ATTLIST bookinfo
+	name CDATA #IMPLIED
+	id CDATA #IMPLIED
 >
 
 <!ELEMENT pathfindersociety EMPTY>
@@ -82,6 +88,17 @@
 	name CDATA #IMPLIED
 >
 
+<!ELEMENT challengerating EMPTY>
+<!ATTLIST challengerating
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT xpaward EMPTY>
+<!ATTLIST xpaward
+	text CDATA #REQUIRED
+	value CDATA #REQUIRED
+>
 <!ELEMENT classes ((class*))>
 <!ATTLIST classes
 	level CDATA #REQUIRED
@@ -94,6 +111,9 @@
 	name CDATA #REQUIRED
 	spells CDATA #IMPLIED
 	casterlevel CDATA #IMPLIED
+	concentrationcheck CDATA #IMPLIED
+	overcomespellresistance CDATA #IMPLIED
+	basespelldc CDATA #IMPLIED
 	castersource CDATA #IMPLIED
 >
 
@@ -109,6 +129,7 @@
 	name CDATA #REQUIRED
 	tpa CDATA #REQUIRED
 	cpa CDATA #REQUIRED
+    retired (yes | no) "no"
 >
 
 <!ELEMENT types ((type*))>
@@ -179,7 +200,7 @@
 <!ATTLIST personal
 	age CDATA #IMPLIED
 	eyes CDATA #IMPLIED
-	gender (Male | Female | No Gender) #REQUIRED
+	gender (Male | Female) #IMPLIED
 	hair CDATA #IMPLIED
 	skin CDATA #IMPLIED
 >
@@ -204,7 +225,7 @@
 >
 
 <!ELEMENT attributes ((attribute+))>
-<!ELEMENT attribute ((attrvalue, attrbonus))>
+<!ELEMENT attribute ((attrvalue, attrbonus, situationalmodifiers))>
 <!ATTLIST attribute
 	name CDATA #REQUIRED
 >
@@ -223,8 +244,8 @@
 	modified CDATA #REQUIRED
 >
 
-<!ELEMENT saves ((save+))>
-<!ELEMENT save EMPTY>
+<!ELEMENT saves ((save+,allsaves))>
+<!ELEMENT save ((situationalmodifiers))>
 <!ATTLIST save
 	name CDATA #REQUIRED
 	abbr CDATA #REQUIRED
@@ -233,6 +254,23 @@
 	fromattr CDATA #IMPLIED
 	frommisc CDATA #IMPLIED
 	fromresist CDATA #IMPLIED
+>
+<!ELEMENT allsaves ((situationalmodifiers))>
+<!ATTLIST allsaves
+	save CDATA #REQUIRED
+	base CDATA #REQUIRED
+	frommisc CDATA #IMPLIED
+	fromresist CDATA #IMPLIED
+>
+<!ELEMENT situationalmodifiers ((situationalmodifier*))>
+<!ATTLIST situationalmodifiers
+	text CDATA #REQUIRED
+>
+
+<!ELEMENT situationalmodifier EMPTY>
+<!ATTLIST situationalmodifier
+	text CDATA #REQUIRED
+	source CDATA #REQUIRED
 >
 
 <!ELEMENT defensive ((special*))>
@@ -245,7 +283,7 @@
 
 <!ELEMENT weaknesses ((special*))>
 
-<!ELEMENT armorclass EMPTY>
+<!ELEMENT armorclass ((situationalmodifiers))>
 <!ATTLIST armorclass
 	ac CDATA #REQUIRED
 	flatfooted CDATA #REQUIRED
@@ -269,14 +307,14 @@
 	value CDATA #REQUIRED
 >
 
-<!ELEMENT maneuvers ((maneuvertype+))>
+<!ELEMENT maneuvers ((situationalmodifiers, maneuvertype+))>
 <!ATTLIST maneuvers
 	cmb CDATA #REQUIRED
 	cmd CDATA #REQUIRED
 	cmdflatfooted CDATA #REQUIRED
 >
 
-<!ELEMENT maneuvertype EMPTY>
+<!ELEMENT maneuvertype ((situationalmodifiers))>
 <!ATTLIST maneuvertype
 	name CDATA #REQUIRED
 	bonus CDATA #REQUIRED
@@ -284,7 +322,7 @@
 	cmd CDATA #REQUIRED
 >
 
-<!ELEMENT initiative EMPTY>
+<!ELEMENT initiative ((situationalmodifiers))>
 <!ATTLIST initiative
 	total CDATA #REQUIRED
 	attrtext CDATA #REQUIRED
@@ -317,7 +355,7 @@
 >
 
 <!ELEMENT skills ((skill*))>
-<!ELEMENT skill ((description))>
+<!ELEMENT skill ((description, situationalmodifiers))>
 <!ATTLIST skill
 	name CDATA #REQUIRED
 	value CDATA #REQUIRED
@@ -384,7 +422,7 @@
 >
 
 <!ELEMENT melee ((weapon*))>
-<!ELEMENT weapon ((rangedattack?, weight?, cost?, description, itemslot?, itempower*, wepcategory*, weptype*))>
+<!ELEMENT weapon ((rangedattack?, weight?, cost?, description, itemslot?, itempower*, wepcategory*, weptype*, situationalmodifiers))>
 <!ATTLIST weapon
 	name CDATA #REQUIRED
 	attack CDATA #REQUIRED
@@ -393,6 +431,7 @@
 	categorytext CDATA #IMPLIED
 	typetext CDATA #IMPLIED
 	size CDATA #IMPLIED
+	flurryattack CDATA #IMPLIED
 	equipped (double | bothhands | mainhand | offhand | no) "no"
 	useradded (yes | no) "yes"
 	quantity CDATA "1"
@@ -413,6 +452,7 @@
 <!ELEMENT rangedattack EMPTY>
 <!ATTLIST rangedattack
 	attack CDATA #REQUIRED
+	flurryattack CDATA #IMPLIED
 	rangeinctext CDATA #REQUIRED
 	rangeincvalue CDATA #REQUIRED
 >
@@ -491,6 +531,8 @@
 	schooltext CDATA #IMPLIED
 	subschooltext CDATA #IMPLIED
 	descriptortext CDATA #IMPLIED
+	savetext CDATA #IMPLIED
+	resisttext CDATA #IMPLIED
 	target CDATA #IMPLIED
 	useradded (yes | no) "yes"
 	spontaneous (yes | no) "no"

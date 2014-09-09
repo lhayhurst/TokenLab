@@ -17,7 +17,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "attrvalue",
-    "attrbonus"
+    "attrbonus",
+    "situationalmodifiers"
 })
 @XmlRootElement(name = "attribute")
 public class Attribute {
@@ -29,6 +30,8 @@ public class Attribute {
     protected Attrvalue attrvalue;
     @XmlElement(required = true)
     protected Attrbonus attrbonus;
+    @XmlElement(required = true)
+    protected Situationalmodifiers situationalmodifiers;
 
     /**
      * Gets the value of the name property.
@@ -100,6 +103,30 @@ public class Attribute {
      */
     public void setAttrbonus(Attrbonus value) {
         this.attrbonus = value;
+    }
+
+    /**
+     * Gets the value of the situationalmodifiers property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Situationalmodifiers }
+     *     
+     */
+    public Situationalmodifiers getSituationalmodifiers() {
+        return situationalmodifiers;
+    }
+
+    /**
+     * Sets the value of the situationalmodifiers property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Situationalmodifiers }
+     *     
+     */
+    public void setSituationalmodifiers(Situationalmodifiers value) {
+        this.situationalmodifiers = value;
     }
 
 }

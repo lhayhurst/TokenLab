@@ -84,6 +84,12 @@ public class Spell {
     protected String descriptortext;
     @XmlAttribute
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    protected String savetext;
+    @XmlAttribute
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    protected String resisttext;
+    @XmlAttribute
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String target;
     @XmlAttribute
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -531,6 +537,54 @@ public class Spell {
      */
     public void setDescriptortext(String value) {
         this.descriptortext = value;
+    }
+
+    /**
+     * Gets the value of the savetext property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSavetext() {
+        return savetext;
+    }
+
+    /**
+     * Sets the value of the savetext property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSavetext(String value) {
+        this.savetext = value;
+    }
+
+    /**
+     * Gets the value of the resisttext property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getResisttext() {
+        return resisttext;
+    }
+
+    /**
+     * Sets the value of the resisttext property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setResisttext(String value) {
+        this.resisttext = value;
     }
 
     /**

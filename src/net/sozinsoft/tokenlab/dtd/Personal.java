@@ -30,7 +30,7 @@ public class Personal {
     @XmlAttribute
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String eyes;
-    @XmlAttribute(required = true)
+    @XmlAttribute
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String gender;
     @XmlAttribute

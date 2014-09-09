@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "itemslot",
     "itempower",
     "wepcategory",
-    "weptype"
+    "weptype",
+    "situationalmodifiers"
 })
 @XmlRootElement(name = "weapon")
 public class Weapon {
@@ -53,6 +54,9 @@ public class Weapon {
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String size;
     @XmlAttribute
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    protected String flurryattack;
+    @XmlAttribute
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String equipped;
     @XmlAttribute
@@ -70,6 +74,8 @@ public class Weapon {
     protected List<Itempower> itempower;
     protected List<Wepcategory> wepcategory;
     protected List<Weptype> weptype;
+    @XmlElement(required = true)
+    protected Situationalmodifiers situationalmodifiers;
 
     /**
      * Gets the value of the name property.
@@ -237,6 +243,30 @@ public class Weapon {
      */
     public void setSize(String value) {
         this.size = value;
+    }
+
+    /**
+     * Gets the value of the flurryattack property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFlurryattack() {
+        return flurryattack;
+    }
+
+    /**
+     * Sets the value of the flurryattack property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFlurryattack(String value) {
+        this.flurryattack = value;
     }
 
     /**
@@ -528,6 +558,30 @@ public class Weapon {
             weptype = new ArrayList<Weptype>();
         }
         return this.weptype;
+    }
+
+    /**
+     * Gets the value of the situationalmodifiers property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Situationalmodifiers }
+     *     
+     */
+    public Situationalmodifiers getSituationalmodifiers() {
+        return situationalmodifiers;
+    }
+
+    /**
+     * Sets the value of the situationalmodifiers property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Situationalmodifiers }
+     *     
+     */
+    public void setSituationalmodifiers(Situationalmodifiers value) {
+        this.situationalmodifiers = value;
     }
 
 }

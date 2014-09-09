@@ -21,6 +21,9 @@ public class Rangedattack {
     @XmlAttribute(required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String attack;
+    @XmlAttribute
+    @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
+    protected String flurryattack;
     @XmlAttribute(required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String rangeinctext;
@@ -50,6 +53,30 @@ public class Rangedattack {
      */
     public void setAttack(String value) {
         this.attack = value;
+    }
+
+    /**
+     * Gets the value of the flurryattack property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFlurryattack() {
+        return flurryattack;
+    }
+
+    /**
+     * Sets the value of the flurryattack property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFlurryattack(String value) {
+        this.flurryattack = value;
     }
 
     /**

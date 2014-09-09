@@ -4,6 +4,7 @@ package net.sozinsoft.tokenlab.dtd;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
@@ -14,7 +15,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "")
+@XmlType(name = "", propOrder = {
+    "situationalmodifiers"
+})
 @XmlRootElement(name = "maneuvertype")
 public class Maneuvertype {
 
@@ -30,6 +33,8 @@ public class Maneuvertype {
     @XmlAttribute(required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String cmd;
+    @XmlElement(required = true)
+    protected Situationalmodifiers situationalmodifiers;
 
     /**
      * Gets the value of the name property.
@@ -125,6 +130,30 @@ public class Maneuvertype {
      */
     public void setCmd(String value) {
         this.cmd = value;
+    }
+
+    /**
+     * Gets the value of the situationalmodifiers property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Situationalmodifiers }
+     *     
+     */
+    public Situationalmodifiers getSituationalmodifiers() {
+        return situationalmodifiers;
+    }
+
+    /**
+     * Sets the value of the situationalmodifiers property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Situationalmodifiers }
+     *     
+     */
+    public void setSituationalmodifiers(Situationalmodifiers value) {
+        this.situationalmodifiers = value;
     }
 
 }

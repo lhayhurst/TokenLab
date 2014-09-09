@@ -1,6 +1,8 @@
 package net.sozinsoft.tokenlab;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class CharacterAttribute {
 	
@@ -53,19 +55,34 @@ public class CharacterAttribute {
 		
 	}
 	
-	private static HashMap<String, String> attributeShortNameMap = new HashMap<String,String>();
-	private static HashMap<String, String> saveShortNameMap = new HashMap<String,String>();
+	private static Map<String, String> attributeShortNameMap = new TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER);
+	private static Map<String, String> saveShortNameMap = new TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER);
 	static {
+
+        //it looks like the 5.3 version of Herolab took out the long names, and now it is just short name
+        //so just stash short name to short name
 		attributeShortNameMap.put("Strength", "Str" );
-		attributeShortNameMap.put("Constitution", "Con" );
-		attributeShortNameMap.put("Wisdom", "Wis" );
-		attributeShortNameMap.put("Dexterity", "Dex" );
+        attributeShortNameMap.put("Str", "Str" );
+
+        attributeShortNameMap.put("Constitution", "Con" );
+        attributeShortNameMap.put("Con", "Con" );
+
+        attributeShortNameMap.put("Wisdom", "Wis" );
+        attributeShortNameMap.put("Wis", "Wis" );
+
+        attributeShortNameMap.put("Dexterity", "Dex" );
+        attributeShortNameMap.put("Dex", "Dex" );
+
 		attributeShortNameMap.put("Charisma", "Cha" );
+        attributeShortNameMap.put("Cha", "Cha" );
+
 		attributeShortNameMap.put("Intelligence", "Int" );
-		
+        attributeShortNameMap.put("Int", "Int" );
+
 		saveShortNameMap.put("Constitution", "Fort");
 		saveShortNameMap.put("Wisdom", "Will");
 		saveShortNameMap.put("Dexterity", "Dex");
+
 	}
 
 	public static String getSaveShortName(String name) {

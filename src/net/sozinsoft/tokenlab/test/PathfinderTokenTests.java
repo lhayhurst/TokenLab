@@ -554,6 +554,22 @@ public class PathfinderTokenTests {
     }
 
     @Test
+    public void testSosiel() throws Exception, SAXException {
+        dig = new HeroLabPathfinderDigester();
+        dig.parse( new File( "src/net/sozinsoft/tokenlab/test/xml/Sosiel_Vaenic.xml"));
+        Config config = newConfig();
+        config.setOutputTokenDirectory("src/net/sozinsoft/tokenlab/test/tokens");
+        config.addConfigEntry( "Sosiel Vaenic", "src/net/sozinsoft/tokenlab/test/img/Cyllio Shyraki_pog.png",
+                "src/net/sozinsoft/tokenlab/test/img/Cyllio Shyraki.jpg",
+                "src/net/sozinsoft/tokenlab/test/tokens/Sosiel_Vaenic.rptok");
+        List<net.sozinsoft.tokenlab.dtd.Character> characters = dig.getCharacters();
+        for (Character c : characters) {
+            dig.saveCharacter(config, c);
+        }
+    }
+
+
+    @Test
     public void testBison() throws Exception, SAXException {
 
         dig = new HeroLabPathfinderDigester();

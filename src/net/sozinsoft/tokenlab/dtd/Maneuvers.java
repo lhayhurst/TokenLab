@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
+    "situationalmodifiers",
     "maneuvertype"
 })
 @XmlRootElement(name = "maneuvers")
@@ -32,6 +33,8 @@ public class Maneuvers {
     @XmlAttribute(required = true)
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String cmdflatfooted;
+    @XmlElement(required = true)
+    protected Situationalmodifiers situationalmodifiers;
     @XmlElement(required = true)
     protected List<Maneuvertype> maneuvertype;
 
@@ -105,6 +108,30 @@ public class Maneuvers {
      */
     public void setCmdflatfooted(String value) {
         this.cmdflatfooted = value;
+    }
+
+    /**
+     * Gets the value of the situationalmodifiers property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Situationalmodifiers }
+     *     
+     */
+    public Situationalmodifiers getSituationalmodifiers() {
+        return situationalmodifiers;
+    }
+
+    /**
+     * Sets the value of the situationalmodifiers property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Situationalmodifiers }
+     *     
+     */
+    public void setSituationalmodifiers(Situationalmodifiers value) {
+        this.situationalmodifiers = value;
     }
 
     /**

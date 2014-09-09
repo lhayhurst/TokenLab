@@ -15,13 +15,16 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "save"
+    "save",
+    "allsaves"
 })
 @XmlRootElement(name = "saves")
 public class Saves {
 
     @XmlElement(required = true)
     protected List<Save> save;
+    @XmlElement(required = true)
+    protected Allsaves allsaves;
 
     /**
      * Gets the value of the save property.
@@ -50,6 +53,30 @@ public class Saves {
             save = new ArrayList<Save>();
         }
         return this.save;
+    }
+
+    /**
+     * Gets the value of the allsaves property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Allsaves }
+     *     
+     */
+    public Allsaves getAllsaves() {
+        return allsaves;
+    }
+
+    /**
+     * Sets the value of the allsaves property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Allsaves }
+     *     
+     */
+    public void setAllsaves(Allsaves value) {
+        this.allsaves = value;
     }
 
 }

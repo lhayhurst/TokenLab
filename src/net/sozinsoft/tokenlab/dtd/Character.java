@@ -17,12 +17,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
+    "bookinfo",
     "pathfindersociety",
     "race",
     "alignment",
     "templates",
     "size",
     "deity",
+    "challengerating",
+    "xpaward",
     "classes",
     "factions",
     "types",
@@ -100,6 +103,7 @@ public class Character {
     @XmlAttribute
     @XmlJavaTypeAdapter(NormalizedStringAdapter.class)
     protected String type;
+    protected Bookinfo bookinfo;
     protected Pathfindersociety pathfindersociety;
     @XmlElement(required = true)
     protected Race race;
@@ -111,6 +115,10 @@ public class Character {
     protected Size size;
     @XmlElement(required = true)
     protected Deity deity;
+    @XmlElement(required = true)
+    protected Challengerating challengerating;
+    @XmlElement(required = true)
+    protected Xpaward xpaward;
     @XmlElement(required = true)
     protected Classes classes;
     @XmlElement(required = true)
@@ -253,7 +261,7 @@ public class Character {
     public String getName() {
         return name;
     }
-    
+
     public String toString() {
         return this.getName();
     }
@@ -407,6 +415,30 @@ public class Character {
     }
 
     /**
+     * Gets the value of the bookinfo property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Bookinfo }
+     *     
+     */
+    public Bookinfo getBookinfo() {
+        return bookinfo;
+    }
+
+    /**
+     * Sets the value of the bookinfo property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Bookinfo }
+     *     
+     */
+    public void setBookinfo(Bookinfo value) {
+        this.bookinfo = value;
+    }
+
+    /**
      * Gets the value of the pathfindersociety property.
      * 
      * @return
@@ -548,6 +580,54 @@ public class Character {
      */
     public void setDeity(Deity value) {
         this.deity = value;
+    }
+
+    /**
+     * Gets the value of the challengerating property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Challengerating }
+     *     
+     */
+    public Challengerating getChallengerating() {
+        return challengerating;
+    }
+
+    /**
+     * Sets the value of the challengerating property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Challengerating }
+     *     
+     */
+    public void setChallengerating(Challengerating value) {
+        this.challengerating = value;
+    }
+
+    /**
+     * Gets the value of the xpaward property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Xpaward }
+     *     
+     */
+    public Xpaward getXpaward() {
+        return xpaward;
+    }
+
+    /**
+     * Sets the value of the xpaward property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Xpaward }
+     *     
+     */
+    public void setXpaward(Xpaward value) {
+        this.xpaward = value;
     }
 
     /**

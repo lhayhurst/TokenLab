@@ -17,7 +17,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "description"
+    "description",
+    "situationalmodifiers"
 })
 @XmlRootElement(name = "skill")
 public class Skill {
@@ -54,6 +55,8 @@ public class Skill {
     protected String usable;
     @XmlElement(required = true)
     protected String description;
+    @XmlElement(required = true)
+    protected Situationalmodifiers situationalmodifiers;
 
     /**
      * Gets the value of the name property.
@@ -333,6 +336,30 @@ public class Skill {
      */
     public void setDescription(String value) {
         this.description = value;
+    }
+
+    /**
+     * Gets the value of the situationalmodifiers property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Situationalmodifiers }
+     *     
+     */
+    public Situationalmodifiers getSituationalmodifiers() {
+        return situationalmodifiers;
+    }
+
+    /**
+     * Sets the value of the situationalmodifiers property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Situationalmodifiers }
+     *     
+     */
+    public void setSituationalmodifiers(Situationalmodifiers value) {
+        this.situationalmodifiers = value;
     }
 
 }
